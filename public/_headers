@@ -1,0 +1,14 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  X-XSS-Protection: 1; mode=block
+
+# 对静态资源启用长缓存（哈希文件名，改动后自动更新）
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 对页面 HTML 使用较短缓存，便于内容更新
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ------------------------------------------------------------------
+     浅色清新配色方案（参考《伊莫》自然奇幻清新基调）
+     RGB 三元组形式，供 tailwind.config.ts 引用（支持透明度语法）。
+  ------------------------------------------------------------------ */
+  :root {
+    /* 品牌色 */
+    --color-primary: 74 157 236; /* #4A9DEC 天空蓝 */
+    --color-primary-hover: 58 139 216; /* 加深 */
+    --color-primary-light: 59 130 246; /* #3B82F6 可读蓝（浅底 AA 对比度） */
+    --color-secondary: 63 185 80; /* #3FB950 草原绿 */
+    --color-secondary-hover: 52 158 66;
+    --color-secondary-light: 34 122 48; /* #227A30 可读绿 */
+    --color-accent: 245 166 35; /* #F5A623 琥珀橙 */
+    --color-accent-hover: 230 148 22;
+    --color-accent-light: 217 119 6; /* #D97706 可读琥珀（浅底 AA 对比度） */
+
+    /* 背景 / 卡片 */
+    --color-bg: 247 249 252; /* #F7F9FC 晨雾白 */
+    --color-bg-soft: 238 242 247; /* #EEF2F7 次级背景 */
+    --color-card: 255 255 255; /* #FFFFFF 卡片 */
+    --color-border: 229 233 242; /* #E5E9F2 边框 */
+
+    /* 文字 */
+    --color-text: 31 41 55; /* #1F2937 主文字 */
+    --color-text-secondary: 75 85 99; /* #4B5563 次文字 */
+    --color-text-muted: 107 114 128; /* #6B7280 弱化文字 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-text-primary antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary text-white;
+  }
+}

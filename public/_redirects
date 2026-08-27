@@ -1,0 +1,18 @@
+# Cloudflare Pages _redirects 规则（从上到下匹配，优先使用第一匹配）
+
+# 旧路由迁移：Twine 反查已从 /twine 迁移到 /tools/twine（301 永久重定向）
+/twine  /tools/twine  301
+/twine/*  /tools/twine/:splat  301
+
+# 元素克制：/elements 快捷入口指向工具页的克制矩阵
+/elements  /tools/type-chart  301
+
+# 无 trailing slash 的目录访问重定向到带斜杠版本（与 next.config trailingSlash 一致）
+/dex  /dex/  308
+/tools  /tools/  308
+/guide  /guide/  308
+
+# 兜底 404：静态导出下不存在对应 HTML 时返回 404 页（不做 SPA fallback）
+# 注意：纯静态站点每个路由都是真实文件，无需 SPA fallback。
+# 如需 SPA 单页回退，可取消下行注释（会牺牲真实 404）：
+# /*  /404.html  404
