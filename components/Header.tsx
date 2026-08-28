@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -26,11 +27,20 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-ink-border bg-white/80 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-lg font-bold text-white shadow-glow">
-            A
+        <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105">
+          <div className="relative h-9 w-9 overflow-hidden rounded-xl shadow-glow">
+            <Image
+              src="/images/logo-mascot.jpg"
+              alt="AniimoDex mascot"
+              fill
+              sizes="36px"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-lg font-bold tracking-tight text-transparent">
+            AniimoDex
           </span>
-          <span className="text-lg font-bold tracking-tight text-text-primary">AniimoDex</span>
         </Link>
 
         {/* 桌面端导航 */}

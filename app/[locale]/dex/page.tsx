@@ -6,15 +6,16 @@ import { Link } from '@/i18n/navigation';
 import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
 import {
   ELEMENTS,
-  ELEMENT_ICONS,
   ELEMENT_BADGE_CLASSES,
   ELEMENT_GRADIENTS,
+  ELEMENT_ICON_COLORS,
   ROLE_ICONS,
   ROLE_BADGE_CLASSES,
   ROLES,
   TWINE_ABILITIES,
   TWINE_ICONS,
 } from '@/lib/aniimo-ui';
+import ElementIcon from '@/components/ui/ElementIcons';
 import type { AniimoEntry, Element, Role, TwineAbility } from '@/types/aniimo';
 import { cn } from '@/lib/utils';
 
@@ -33,7 +34,7 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
   return (
     <Link
       href={`/dex/${aniimo.number}`}
-      className="group rounded-xl border border-ink-border bg-ink-card p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-glow"
+      className="group rounded-2xl border border-ink-border bg-ink-card p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-glow"
     >
       {/* 头部：编号 + Twine 图标 */}
       <div className="flex items-start justify-between">
@@ -46,11 +47,11 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
       {/* 头像占位（渐变） */}
       <div
         className={cn(
-          'mx-auto mt-3 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br text-4xl transition-transform duration-300 group-hover:scale-110',
+          'mx-auto mt-3 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br transition-transform duration-300 group-hover:scale-110',
           ELEMENT_GRADIENTS[aniimo.element]
         )}
       >
-        {ELEMENT_ICONS[aniimo.element]}
+        <ElementIcon element={aniimo.element} className={ELEMENT_ICON_COLORS[aniimo.element]} size={36} />
       </div>
 
       {/* 名称 */}
@@ -189,13 +190,13 @@ export default function DexPage() {
                   title={t(`elements.${el}`)}
                   aria-label={td('filterElementAria', { element: t(`elements.${el}`) })}
                   className={cn(
-                    'flex h-9 w-9 items-center justify-center rounded-lg border text-base transition-all',
+                    'flex h-9 w-9 items-center justify-center rounded-xl border transition-all',
                     active
                       ? 'border-primary bg-primary/20 shadow-glow'
                       : 'border-ink-border bg-ink-soft hover:border-primary-light hover:bg-primary/10'
                   )}
                 >
-                  {ELEMENT_ICONS[el]}
+                  <ElementIcon element={el} className={ELEMENT_ICON_COLORS[el]} size={18} />
                 </button>
               );
             })}

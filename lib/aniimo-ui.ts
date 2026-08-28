@@ -80,7 +80,21 @@ export const TWINE_BADGE_CLASSES: Record<TwineAbility, string> = {
   无: 'bg-ink-border/40 text-text-muted border-ink-border',
 };
 
-// ---- 元素图标（单字，用于图标按钮）----
+// ---- 元素图标（SVG 组件，风格统一、跨平台一致）----
+// 注意：这些在客户端组件中通过 <ElementIcon element={el} /> 渲染
+export const ELEMENT_ICON_COLORS: Record<Element, string> = {
+  Light: 'text-yellow-500',
+  Fire: 'text-rose-500',
+  Ice: 'text-sky-500',
+  Dark: 'text-purple-500',
+  Lightning: 'text-lime-500',
+  Grass: 'text-green-500',
+  Water: 'text-blue-500',
+  Earth: 'text-amber-600',
+  Wind: 'text-teal-500',
+};
+
+// 保留旧版字符串映射作为服务端/纯文本场景的 fallback
 export const ELEMENT_ICONS: Record<Element, string> = {
   Light: '☀',
   Fire: '🔥',

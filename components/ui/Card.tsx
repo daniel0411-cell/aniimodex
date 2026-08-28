@@ -20,8 +20,8 @@ export default function Card({
   return (
     <div
       className={cn(
-        'rounded-xl border border-ink-border bg-ink-card p-5 shadow-card',
-        interactive && 'transition-all hover:border-primary-light hover:shadow-card-hover',
+        'rounded-2xl border border-ink-border bg-ink-card p-5 shadow-card',
+        interactive && 'transition-all hover:border-primary-light hover:shadow-card-hover hover:-translate-y-0.5',
         className
       )}
     >

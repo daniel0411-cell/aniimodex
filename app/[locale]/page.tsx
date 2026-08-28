@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -92,22 +93,46 @@ const jsonLd = {
 
 // 快捷入口卡片（链接不变，文案走 messages）
 const quickLinkKeys = [
-  { href: '/dex', icon: '🃏', key: 'dex', accent: 'from-primary/20 to-primary/5' },
+  { href: '/dex', icon: 'BookOpen', key: 'dex', accent: 'from-primary/20 to-primary/5' },
   {
     href: '/tools/twine',
-    icon: '🔗',
+    icon: 'Link2',
     key: 'twine',
     accent: 'from-accent/20 to-accent/5',
     recommended: true,
   },
   {
     href: '/tools/type-chart',
-    icon: '⚡',
+    icon: 'Zap',
     key: 'typeChart',
     accent: 'from-primary/20 to-primary/5',
   },
-  { href: '/guide', icon: '📖', key: 'guide', accent: 'from-accent/20 to-accent/5' },
+  { href: '/guide', icon: 'Compass', key: 'guide', accent: 'from-accent/20 to-accent/5' },
 ];
+
+// Lucide 图标映射
+const iconMap: Record<string, React.FC<{ className?: string; size?: number }>> = {
+  BookOpen: ({ className, size = 24 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+    </svg>
+  ),
+  Link2: ({ className, size = 24 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/>
+    </svg>
+  ),
+  Zap: ({ className, size = 24 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  ),
+  Compass: ({ className, size = 24 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+    </svg>
+  ),
+};
 
 export default async function HomePage({
   params,
@@ -136,12 +161,30 @@ export default async function HomePage({
       />
 
       {/* Hero 区域 */}
-      <section className="space-y-8 rounded-3xl bg-gradient-to-b from-primary/20 via-primary/5 to-transparent px-4 py-12 text-center sm:py-20">
-        <div className="space-y-4">
-          <span className="inline-block rounded-full border border-primary/40 bg-white/70 px-3 py-1 text-xs font-medium text-primary-hover shadow-card">
+      <section className="relative overflow-hidden rounded-3xl px-4 py-12 text-center sm:py-20">
+        {/* 卡通背景图 */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/hero-bg.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/70" />
+        </div>
+        {/* 浮动装饰 */}
+        <div className="pointer-events-none absolute left-[10%] top-[15%] h-3 w-3 rounded-full bg-primary/30 animate-bounce" style={{ animationDuration: '3s' }} />
+        <div className="pointer-events-none absolute right-[15%] top-[20%] h-2 w-2 rounded-full bg-accent/40 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }} />
+        <div className="pointer-events-none absolute left-[20%] bottom-[25%] h-2.5 w-2.5 rounded-full bg-primary-light/30 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
+        <div className="pointer-events-none absolute right-[10%] bottom-[20%] h-3 w-3 rounded-full bg-accent/25 animate-bounce" style={{ animationDuration: '5s', animationDelay: '2s' }} />
+
+        <div className="relative space-y-4">
+          <span className="inline-block rounded-full border border-primary/40 bg-white/80 px-3 py-1 text-xs font-medium text-primary-hover shadow-card backdrop-blur-sm">
             {th('heroBadge')}
           </span>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight text-text-primary drop-shadow-sm sm:text-5xl lg:text-6xl">
             AniimoDex{' '}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               {th('heroTitleGradient')}
@@ -153,7 +196,7 @@ export default async function HomePage({
         </div>
 
         {/* 搜索入口 */}
-        <div className="mx-auto w-full max-w-xl">
+        <div className="relative mx-auto mt-8 w-full max-w-xl">
           <HeroSearch />
         </div>
       </section>
@@ -165,13 +208,19 @@ export default async function HomePage({
             <Card className="relative h-full transition-all hover:-translate-y-0.5 hover:border-primary-light hover:shadow-glow">
               {link.recommended && (
                 <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-accent/20 px-2 py-0.5 text-xs font-semibold text-accent-light ring-1 ring-accent/40">
-                  ⭐ {th('recommended')}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-accent">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  {th('recommended')}
                 </span>
               )}
               <div
-                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br text-2xl ${link.accent}`}
+                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br text-primary ${link.accent}`}
               >
-                {link.icon}
+                {(() => {
+                  const Icon = iconMap[link.icon];
+                  return Icon ? <Icon size={22} /> : null;
+                })()}
               </div>
               <h3 className="font-semibold text-text-primary transition-colors group-hover:text-primary-light">
                 {t(`home.quickLinks.${link.key}.title`)}
