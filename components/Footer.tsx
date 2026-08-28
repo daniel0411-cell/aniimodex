@@ -26,22 +26,24 @@ export default async function Footer() {
             <p className="text-sm text-text-muted">{t('disclaimer', { year })}</p>
           </div>
 
-          {/* 友情链接占位 */}
-          <div>
-            <h4 className="mb-3 text-sm font-semibold text-text-secondary">{t('friends')}</h4>
-            <ul className="space-y-2">
-              {friendLinks.map((link) => (
-                <li key={link.labelKey}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-text-muted transition-colors hover:text-primary-light"
-                  >
-                    {t('friendLinks.' + link.labelKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* 友情链接（暂时隐藏） */}
+          {false && (
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-text-secondary">{t('friends')}</h4>
+              <ul className="space-y-2">
+                {friendLinks.map((link) => (
+                  <li key={link.labelKey}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-text-muted transition-colors hover:text-primary-light"
+                    >
+                      {t('friendLinks.' + link.labelKey)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </footer>
