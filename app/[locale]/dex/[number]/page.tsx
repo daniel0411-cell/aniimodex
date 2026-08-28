@@ -1,65 +1,78 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { cn } from '@/lib/utils';
 import { getAllAniimos, getAniimoByNumber } from '@/lib/aniimo';
 import {
   ELEMENT_ICONS,
-  ELEMENT_LABELS,
   ELEMENT_BADGE_CLASSES,
   ELEMENT_GRADIENTS,
   ROLE_ICONS,
-  ROLE_LABELS,
   ROLE_BADGE_CLASSES,
   TWINE_ICONS,
-  TWINE_LABELS,
   TWINE_BADGE_CLASSES,
 } from '@/lib/aniimo-ui';
+import { Link } from '@/i18n/navigation';
+import { localizedLanguages } from '@/lib/i18n-metadata';
+import { locales } from '@/i18n/routing';
 import type { AniimoEntry, BaseStats, EvolutionStage, Potential } from '@/types/aniimo';
 
 interface PageProps {
-  params: { number: string };
-}
-
-// 静态导出：预生成全部编号路由
-export function generateStaticParams() {
-  return getAllAniimos().map((a) => ({ number: a.number }));
+  params: Promise<{ locale: string; number: string }>;
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const aniimo = getAniimoByNumber(params.number);
+// 静态导出：预生成全部 locale × 编号路由
+export function generateStaticParams() {
+  const numbers = getAllAniimos().map((a) => ({ number: a.number }));
+  return locales.flatMap((locale) => numbers.map((n) => ({ locale, ...n })));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale, number } = await params;
+  const aniimo = getAniimoByNumber(number);
+  const t = await getTranslations({ locale, namespace: 'dexDetail' });
+  const meta = await getTranslations({ locale, namespace: 'meta' });
+  const td = await getTranslations({ locale, namespace: 'dex' });
+  const elements = await getTranslations({ locale, namespace: 'elements' });
+  const roles = await getTranslations({ locale, namespace: 'roles' });
+  const twineAb = await getTranslations({ locale, namespace: 'twineAbility' });
+  const siteName = meta('siteName');
+
   if (!aniimo) {
-    return {
-      title: '未找到伊莫 | AniimoDex',
-    };
+    return { title: `${t('notFound')} | ${siteName}` };
   }
-  const title = `${aniimo.name} 图鉴：属性、技能、Twine 与获取方式 | AniimoDex`;
-  const habitatText = aniimo.spawn.habitats.map((h) => h.region).join('、') || '未知区域';
-  const twineText = TWINE_LABELS[aniimo.twineAbility];
-  const description =
-    `查看 ${aniimo.name}（${aniimo.enName}，#${aniimo.number}）的完整图鉴资料，` +
-    `包括${ELEMENT_LABELS[aniimo.element]}属性、${ROLE_LABELS[aniimo.role]}定位、` +
-    `Twine 能力「${twineText}」、出现位置（${habitatText}）、捕获方法和培养建议。`;
-  const url = `${SITE_URL}/dex/${aniimo.number}/`;
+
+  const habitatText =
+    aniimo.spawn.habitats.map((h) => h.region).join('、') || t('unknownCondition');
+  const twineText = twineAb(aniimo.twineAbility);
+  const title = `${aniimo.name} Dex | ${siteName}`;
+  const description = `${td('title')}: ${aniimo.name} (${aniimo.enName}, #${aniimo.number}), ${
+    elements(aniimo.element)
+  } ${roles(aniimo.role)}, Twine ${twineText}, ${habitatText}.`;
+  const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
+
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: localizedLanguages(`/dex/${aniimo.number}/`),
+    },
     openGraph: {
       title,
       description,
       url,
       type: 'website',
-      siteName: 'AniimoDex',
-      locale: 'zh_CN',
+      siteName,
+      locale: locale === 'zh-Hant' ? 'zh_TW' : locale === 'zh-Hans' ? 'zh_CN' : 'en_US',
       images: [
         {
           url: `${SITE_URL}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: `${aniimo.name} 图鉴 - AniimoDex`,
+          alt: `${aniimo.name} Dex - ${siteName}`,
         },
       ],
     },
@@ -98,7 +111,10 @@ function StatBar({ label, value, max }: { label: string; value: number; max: num
     <div className="flex items-center gap-2">
       <span className="w-12 shrink-0 text-xs font-medium text-text-muted">{label}</span>
       <div className="h-2 flex-1 overflow-hidden rounded-full bg-ink-soft">
-        <div className={cn('h-full rounded-full transition-all', STAT_COLORS[key])} style={{ width: `${pct}%` }} />
+        <div
+          className={cn('h-full rounded-full transition-all', STAT_COLORS[key])}
+          style={{ width: `${pct}%` }}
+        />
       </div>
       <span className="w-8 shrink-0 text-right font-mono text-xs text-text-primary">{value}</span>
     </div>
@@ -108,11 +124,10 @@ function StatBar({ label, value, max }: { label: string; value: number; max: num
 // ---- 进化阶段节点 ----
 const STAGE_ORDER: EvolutionStage[] = ['Lumin', 'Gamma', 'Nova'];
 
-function EvolutionPanel({ aniimo }: { aniimo: AniimoEntry }) {
+async function EvolutionPanel({ aniimo }: { aniimo: AniimoEntry }) {
+  const t = await getTranslations('dexDetail');
   const stages = STAGE_ORDER.slice(STAGE_ORDER.indexOf(aniimo.evolution.startStage));
-  const allTargets = aniimo.evolution.branches.map((b) => b.target);
 
-  // 建立进化目标 → 分支的映射
   return (
     <div className="flex flex-wrap items-center gap-2">
       {/* 自身节点 */}
@@ -138,11 +153,11 @@ function EvolutionPanel({ aniimo }: { aniimo: AniimoEntry }) {
             const parts: string[] = [];
             if (p.level) parts.push(`Lv.${p.level}`);
             if (p.item) parts.push(p.item);
-            if (p.timeOfDay) parts.push(p.timeOfDay === 'day' ? '白天' : '夜晚');
+            if (p.timeOfDay) parts.push(p.timeOfDay === 'day' ? t('timeDay') : t('timeNight'));
             if (p.weather) parts.push(p.weather);
-            return parts.join(' + ') || '未知条件';
+            return parts.join(' + ') || t('unknownCondition');
           })
-          .join(' 且 ');
+          .join(` ${t('and')} `);
         return (
           <div key={branch.target} className="flex items-center gap-2">
             {/* 箭头 + 条件 */}
@@ -165,7 +180,7 @@ function EvolutionPanel({ aniimo }: { aniimo: AniimoEntry }) {
                 <span className="text-[10px] text-text-muted">{branch.stage}</span>
               </div>
             ) : (
-              <span className="text-xs text-text-muted">未知 → {branch.target}</span>
+              <span className="text-xs text-text-muted">? → {branch.target}</span>
             )}
           </div>
         );
@@ -174,7 +189,7 @@ function EvolutionPanel({ aniimo }: { aniimo: AniimoEntry }) {
       {/* 无可进化分支 */}
       {aniimo.evolution.branches.length === 0 && (
         <span className="ml-2 rounded-full border border-ink-border px-3 py-1 text-xs text-text-muted">
-          最终形态
+          {t('finalForm')}
         </span>
       )}
     </div>
@@ -210,8 +225,9 @@ function PotentialBar({ label, value }: { label: string; value: number | 'unavai
 }
 
 // ---- 相关推荐 ----
-function RelatedAniimos({ aniimo }: { aniimo: AniimoEntry }) {
+async function RelatedAniimos({ aniimo }: { aniimo: AniimoEntry }) {
   const all = getAllAniimos();
+  const t = await getTranslations();
   const related = all
     .filter((a) => a.number !== aniimo.number)
     .map((a) => {
@@ -246,7 +262,7 @@ function RelatedAniimos({ aniimo }: { aniimo: AniimoEntry }) {
               {a.name}
             </p>
             <p className="text-xs text-text-muted">
-              #{a.number} · {ELEMENT_LABELS[a.element]} · {ROLE_LABELS[a.role]}
+              #{a.number} · {t(`elements.${a.element}`)} · {t(`roles.${a.role}`)}
             </p>
           </div>
         </Link>
@@ -255,13 +271,21 @@ function RelatedAniimos({ aniimo }: { aniimo: AniimoEntry }) {
   );
 }
 
-export default function DexDetailPage({ params }: PageProps) {
-  const aniimo = getAniimoByNumber(params.number);
+export default async function DexDetailPage({ params }: PageProps) {
+  const { locale, number } = await params;
+  setRequestLocale(locale);
+  const aniimo = getAniimoByNumber(number);
   if (!aniimo) notFound();
 
-  const maxStat = Math.max(...Object.values(aniimo.stats).map((v) => v ?? 0));
+  const t = await getTranslations('dexDetail');
+  const tr = await getTranslations();
+  const elementLabel = tr(`elements.${aniimo.element}`);
+  const roleLabel = tr(`roles.${aniimo.role}`);
+  const twineLabel = tr(`twineAbility.${aniimo.twineAbility}`);
 
-  const url = `${SITE_URL}/dex/${aniimo.number}/`;
+  const maxStat = Math.max(...Object.values(aniimo.stats).map((v) => v ?? 0));
+  const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
+
   // JSON-LD 结构化数据：WebPage + BreadcrumbList
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -270,11 +294,8 @@ export default function DexDetailPage({ params }: PageProps) {
         '@type': 'WebPage',
         '@id': `${url}#webpage`,
         url,
-        name: `${aniimo.name} 图鉴 - AniimoDex`,
-        description:
-          `查看 ${aniimo.name} 的完整图鉴资料，包括${ELEMENT_LABELS[aniimo.element]}属性、` +
-          `Twine 能力、出现位置、捕获方法和培养建议。`,
-        inLanguage: 'zh-CN',
+        name: `${aniimo.name} Dex - AniimoDex`,
+        description: `${aniimo.name} ${elementLabel} ${roleLabel}, Twine ${twineLabel}.`,
         isPartOf: { '@id': `${SITE_URL}/#website` },
       },
       {
@@ -283,14 +304,14 @@ export default function DexDetailPage({ params }: PageProps) {
           {
             '@type': 'ListItem',
             position: 1,
-            name: '首页',
-            item: `${SITE_URL}/`,
+            name: tr('breadcrumb.home'),
+            item: `${SITE_URL}/${locale}/`,
           },
           {
             '@type': 'ListItem',
             position: 2,
-            name: '图鉴',
-            item: `${SITE_URL}/dex/`,
+            name: tr('breadcrumb.dex'),
+            item: `${SITE_URL}/${locale}/dex/`,
           },
           {
             '@type': 'ListItem',
@@ -312,10 +333,14 @@ export default function DexDetailPage({ params }: PageProps) {
       />
 
       {/* 面包屑 */}
-      <nav aria-label="面包屑导航" className="text-sm text-text-muted">
-        <Link href="/" className="hover:text-primary-light">首页</Link>
+      <nav aria-label="Breadcrumb" className="text-sm text-text-muted">
+        <Link href="/" className="hover:text-primary-light">
+          {tr('breadcrumb.home')}
+        </Link>
         <span className="mx-2">/</span>
-        <Link href="/dex" className="hover:text-primary-light">图鉴</Link>
+        <Link href="/dex" className="hover:text-primary-light">
+          {tr('breadcrumb.dex')}
+        </Link>
         <span className="mx-2">/</span>
         <span className="text-text-secondary">{aniimo.name}</span>
       </nav>
@@ -345,7 +370,7 @@ export default function DexDetailPage({ params }: PageProps) {
               )}
             >
               {ELEMENT_ICONS[aniimo.element]}
-              {ELEMENT_LABELS[aniimo.element]}
+              {elementLabel}
             </span>
             <span
               className={cn(
@@ -354,7 +379,7 @@ export default function DexDetailPage({ params }: PageProps) {
               )}
             >
               {ROLE_ICONS[aniimo.role]}
-              {ROLE_LABELS[aniimo.role]}
+              {roleLabel}
             </span>
           </div>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-text-secondary">
@@ -362,7 +387,7 @@ export default function DexDetailPage({ params }: PageProps) {
           </p>
           {aniimo.dataSource === 'placeholder' && (
             <p className="mt-2 text-xs text-accent-light">
-              ⚠ 部分数据为占位（{aniimo.note ?? '待确认'}）
+              ⚠ {t('placeholderData', { note: aniimo.note ?? '?' })}
             </p>
           )}
         </div>
@@ -370,7 +395,7 @@ export default function DexDetailPage({ params }: PageProps) {
 
       {/* 基础属性面板 */}
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">基础属性</h2>
+        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('baseStats')}</h2>
         <div className="space-y-2.5">
           {(Object.keys(STAT_LABELS) as (keyof BaseStats)[])
             .filter((k) => aniimo.stats[k] !== undefined)
@@ -382,14 +407,14 @@ export default function DexDetailPage({ params }: PageProps) {
 
       {/* 进化路线 */}
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">进化路线</h2>
+        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('evolution')}</h2>
         <EvolutionPanel aniimo={aniimo} />
       </section>
 
       {/* Twine 能力 + 出现条件 */}
       <div className="grid gap-6 md:grid-cols-2">
         <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-          <h2 className="mb-4 text-lg font-semibold text-text-primary">Twine 能力</h2>
+          <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('twineAbility')}</h2>
           <div
             className={cn(
               'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm',
@@ -397,35 +422,35 @@ export default function DexDetailPage({ params }: PageProps) {
             )}
           >
             <span>{TWINE_ICONS[aniimo.twineAbility]}</span>
-            {TWINE_LABELS[aniimo.twineAbility]}
+            {twineLabel}
           </div>
           <p className="mt-3 text-sm text-text-muted">
             {aniimo.twineAbility === '无'
-              ? '不具备特殊场地移动能力。'
-              : `可进行「${TWINE_LABELS[aniimo.twineAbility]}」相关的场地互动。`}
+              ? t('noSpecialMove')
+              : t('canInteract', { ability: twineLabel })}
           </p>
         </section>
 
         <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-          <h2 className="mb-4 text-lg font-semibold text-text-primary">出现条件</h2>
+          <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('spawnConditions')}</h2>
           <dl className="space-y-3 text-sm">
             <div className="flex gap-2">
-              <dt className="w-16 shrink-0 text-text-muted">栖息地</dt>
+              <dt className="w-16 shrink-0 text-text-muted">{t('habitat')}</dt>
               <dd className="text-text-primary">
-                {aniimo.spawn.habitats.map((h) => h.region).join('、') || '未知'}
+                {aniimo.spawn.habitats.map((h) => h.region).join('、') || t('unknownCondition')}
               </dd>
             </div>
             <div className="flex gap-2">
-              <dt className="w-16 shrink-0 text-text-muted">天气</dt>
+              <dt className="w-16 shrink-0 text-text-muted">{t('weather')}</dt>
               <dd className="text-text-primary">{aniimo.spawn.weather}</dd>
             </div>
             <div className="flex gap-2">
-              <dt className="w-16 shrink-0 text-text-muted">时段</dt>
+              <dt className="w-16 shrink-0 text-text-muted">{t('time')}</dt>
               <dd className="text-text-primary">{aniimo.spawn.time}</dd>
             </div>
             {aniimo.spawn.phenomenon && (
               <div className="flex gap-2">
-                <dt className="w-16 shrink-0 text-text-muted">现象</dt>
+                <dt className="w-16 shrink-0 text-text-muted">{t('phenomenon')}</dt>
                 <dd className="text-accent-light">
                   {aniimo.spawn.phenomenon.name}（{aniimo.spawn.phenomenon.description}）
                 </dd>
@@ -438,7 +463,7 @@ export default function DexDetailPage({ params }: PageProps) {
       {/* 形态列表 */}
       {aniimo.forms.length > 1 && (
         <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-          <h2 className="mb-4 text-lg font-semibold text-text-primary">形态列表</h2>
+          <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('forms')}</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {aniimo.forms.map((form) => (
               <div key={form.name} className="rounded-lg border border-ink-border bg-ink-soft p-4">
@@ -451,7 +476,7 @@ export default function DexDetailPage({ params }: PageProps) {
                         ELEMENT_BADGE_CLASSES[form.element]
                       )}
                     >
-                      {ELEMENT_LABELS[form.element]}
+                      {tr(`elements.${form.element}`)}
                     </span>
                     <span
                       className={cn(
@@ -459,7 +484,7 @@ export default function DexDetailPage({ params }: PageProps) {
                         ROLE_BADGE_CLASSES[form.role]
                       )}
                     >
-                      {ROLE_LABELS[form.role]}
+                      {tr(`roles.${form.role}`)}
                     </span>
                   </span>
                 </div>
@@ -474,7 +499,7 @@ export default function DexDetailPage({ params }: PageProps) {
 
       {/* 潜力分布 */}
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">潜力分布</h2>
+        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('potential')}</h2>
         <div className="space-y-2.5">
           {POTENTIAL_ORDER.map((p) => (
             <PotentialBar key={p} label={p} value={aniimo.potential[p]} />
@@ -484,32 +509,41 @@ export default function DexDetailPage({ params }: PageProps) {
 
       {/* 相关推荐 */}
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">相关伊莫</h2>
+        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('related')}</h2>
         <RelatedAniimos aniimo={aniimo} />
       </section>
 
       {/* 相关工具与延伸阅读 */}
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-3 text-lg font-semibold text-text-primary">相关工具</h2>
+        <h2 className="mb-3 text-lg font-semibold text-text-primary">{t('relatedTools')}</h2>
         <ul className="space-y-2 text-sm">
           <li>
             <Link href="/dex" className="text-primary-light transition-colors hover:text-primary">
-              浏览完整伊莫图鉴，查看全部{aniimo.element}系伊莫
+              {t('browseAll', { element: elementLabel })}
             </Link>
           </li>
           <li>
-            <Link href="/tools/twine" className="text-primary-light transition-colors hover:text-primary">
-              使用 Twine 反查工具，按机动能力查找伊莫
+            <Link
+              href="/tools/twine"
+              className="text-primary-light transition-colors hover:text-primary"
+            >
+              {t('browseTwine')}
             </Link>
           </li>
           <li>
-            <Link href="/tools/type-chart" className="text-primary-light transition-colors hover:text-primary">
-              查看伊莫元素克制表，了解{aniimo.element}属性的相克关系
+            <Link
+              href="/tools/type-chart"
+              className="text-primary-light transition-colors hover:text-primary"
+            >
+              {t('browseTypeChart', { element: elementLabel })}
             </Link>
           </li>
           <li>
-            <Link href="/tools/catch" className="text-primary-light transition-colors hover:text-primary">
-              使用伊莫捕获估算器，估算{aniimo.name}的捕获成功率
+            <Link
+              href="/tools/catch"
+              className="text-primary-light transition-colors hover:text-primary"
+            >
+              {t('browseCatch', { name: aniimo.name })}
             </Link>
           </li>
         </ul>

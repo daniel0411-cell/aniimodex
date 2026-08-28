@@ -1,8 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { getAllAniimos } from '@/lib/aniimo';
+import { locales, defaultLocale } from '@/i18n/routing';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
-// 若部署到自定义域名，可通过 NEXT_PUBLIC_SITE_URL 覆盖
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
 // output: 'export' 静态导出模式下，metadata route 需提供静态参数生成
@@ -10,13 +10,15 @@ export function generateStaticParams() {
   return [{ __metadata_id__: [] }];
 }
 
-// 站点内容最近更新日期（对应首页"最新更新"中的真实数据更新日期）
-// 使用固定日期而非构建时间，避免每次构建都把所有 URL 的 lastmod 伪造成当天。
+// 站点内容最近更新日期
 const SITE_LAST_MODIFIED = '2026-08-20';
 
-// 静态页面路由（不含图鉴详情，详情在下方动态生成）
-// 注意：站点配置了 trailingSlash: true，所有目录路径均带尾斜杠（首页 "/" 除外）。
-const STATIC_ROUTES: { path: string; priority: number; changefreq?: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
+// 静态页面路由（不含图鉴详情）
+const STATIC_ROUTES: {
+  path: string;
+  priority: number;
+  changefreq?: MetadataRoute.Sitemap[number]['changeFrequency'];
+}[] = [
   { path: '/', priority: 1.0, changefreq: 'weekly' },
   { path: '/dex/', priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', priority: 0.8, changefreq: 'monthly' },
@@ -26,22 +28,45 @@ const STATIC_ROUTES: { path: string; priority: number; changefreq?: MetadataRout
   { path: '/guide/', priority: 0.6, changefreq: 'monthly' },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // 静态页面
-  const staticUrls = STATIC_ROUTES.map((route) => ({
-    url: `${SITE_URL}${route.path}`,
-    lastModified: SITE_LAST_MODIFIED,
-    changeFrequency: route.changefreq,
-    priority: route.priority,
-  }));
+// 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates
+function buildLocalizedUrls(
+  path: string,
+  priority: number,
+  changefreq: MetadataRoute.Sitemap[number]['changeFrequency']
+): MetadataRoute.Sitemap {
+  const fullPath = path === '/' ? '/' : path; // 路径本身带尾斜杠
+  // 各 locale 完整 URL
+  const localizedUrls = locales.map((locale) => `${SITE_URL}/${locale}${fullPath}`);
 
-  // 图鉴详情页（每只伊莫一个 URL，trailingSlash 模式带尾斜杠）
-  const dexUrls = getAllAniimos().map((aniimo) => ({
-    url: `${SITE_URL}/dex/${aniimo.number}/`,
-    lastModified: SITE_LAST_MODIFIED,
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }));
+  return locales.map((locale) => {
+    const url = `${SITE_URL}/${locale}${fullPath}`;
+    // 构建当前 URL 对应的 hreflang 语言版本（含 x-default → defaultLocale）
+    const languages: Record<string, string> = {};
+    locales.forEach((l) => {
+      languages[l] = `${SITE_URL}/${l}${fullPath}`;
+    });
+    languages['x-default'] = `${SITE_URL}/${defaultLocale}${fullPath}`;
+
+    return {
+      url,
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: changefreq,
+      priority,
+      alternates: { languages },
+    };
+  });
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  // 静态页面（每个页面 × 每个 locale）
+  const staticUrls = STATIC_ROUTES.flatMap((route) =>
+    buildLocalizedUrls(route.path, route.priority, route.changefreq ?? 'monthly')
+  );
+
+  // 图鉴详情页（每只伊莫 × 每个 locale）
+  const dexUrls = getAllAniimos().flatMap((aniimo) =>
+    buildLocalizedUrls(`/dex/${aniimo.number}/`, 0.6, 'weekly')
+  );
 
   return [...staticUrls, ...dexUrls];
 }

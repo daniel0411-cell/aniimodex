@@ -1,16 +1,24 @@
 # Cloudflare Pages _redirects 规则（从上到下匹配，优先使用第一匹配）
 
-# 旧路由迁移：Twine 反查已从 /twine 迁移到 /tools/twine（301 永久重定向）
-/twine  /tools/twine  301
-/twine/*  /tools/twine/:splat  301
+# 根路径：重定向到默认 locale（localePrefix: 'always'）
+/  /en/  308
 
-# 元素克制：/elements 快捷入口指向工具页的克制矩阵
-/elements  /tools/type-chart  301
+# 旧路由迁移（多语言后所有路径带 locale 前缀）：
+# 无 locale 前缀的旧路径 301 重定向到默认语言（en）版本，保护既有收录
+/twine  /en/tools/twine/  301
+/twine/*  /en/tools/twine/:splat  301
+/elements  /en/tools/type-chart/  301
+/dex  /en/dex/  301
+/dex/*  /en/dex/:splat  301
+/tools  /en/tools/  301
+/tools/*  /en/tools/:splat  301
+/guide  /en/guide/  301
+/guide/*  /en/guide/:splat  301
 
 # 无 trailing slash 的目录访问重定向到带斜杠版本（与 next.config trailingSlash 一致）
-/dex  /dex/  308
-/tools  /tools/  308
-/guide  /guide/  308
+/en/dex  /en/dex/  308
+/en/tools  /en/tools/  308
+/en/guide  /en/guide/  308
 
 # 兜底 404：静态导出下不存在对应 HTML 时返回 404 页（不做 SPA fallback）
 # 注意：纯静态站点每个路由都是真实文件，无需 SPA fallback。

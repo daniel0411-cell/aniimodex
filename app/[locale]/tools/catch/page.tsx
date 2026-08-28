@@ -1,30 +1,16 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { getAllAniimos } from '@/lib/aniimo';
 import type { AniimoEntry } from '@/types/aniimo';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import Button from '@/components/ui/Button';
-import { ELEMENT_LABELS, ELEMENT_BADGE_CLASSES } from '@/lib/aniimo-ui';
+import { ELEMENT_BADGE_CLASSES } from '@/lib/aniimo-ui';
 
-// ---------------------------------------------------------------------------
-// 表单常量
-// ---------------------------------------------------------------------------
-const TRAPS = [
-  { id: 'normal', label: '普通', bonus: 0 },
-  { id: 'advanced', label: '高级', bonus: 15 },
-  { id: 'master', label: '大师', bonus: 30 },
-] as const;
-
-const TIME_SLOTS = [
-  { id: 'day', label: '白天', bonus: 0 },
-  { id: 'night', label: '夜晚', bonus: 5 },
-  { id: 'dusk', label: '黄昏', bonus: 10 },
-] as const;
-
-type TrapId = (typeof TRAPS)[number]['id'];
-type TimeId = (typeof TIME_SLOTS)[number]['id'];
+type TrapId = 'normal' | 'advanced' | 'master';
+type TimeId = 'day' | 'night' | 'dusk';
 
 // ---------------------------------------------------------------------------
 // 计算逻辑（简化占位公式，可在后续接入真实数据）
@@ -43,8 +29,8 @@ function computeRate(
   time: TimeId
 ) {
   const base = baseCatchRate(aniimo);
-  const trapBonus = TRAPS.find((t) => t.id === trap)!.bonus;
-  const timeBonus = TIME_SLOTS.find((t) => t.id === time)!.bonus;
+  const trapBonus = trap === 'master' ? 30 : trap === 'advanced' ? 15 : 0;
+  const timeBonus = time === 'dusk' ? 10 : time === 'night' ? 5 : 0;
   const podBonus = (podLevel / 50) * 15; // 等级越高加成越多，最高 +15%
 
   let rate = base + podBonus + trapBonus + (broken ? 25 : 0) + timeBonus;
@@ -52,7 +38,9 @@ function computeRate(
   return { rate, base, trapBonus, timeBonus, podBonus };
 }
 
+// 生成策略建议（接收翻译函数）
 function buildStrategy(
+  t: (key: string, values?: Record<string, string | number | Date>) => string,
   aniimo: AniimoEntry,
   podLevel: number,
   trap: TrapId,
@@ -62,35 +50,20 @@ function buildStrategy(
   const { rate } = computeRate(aniimo, podLevel, trap, broken, time);
   const tips: string[] = [];
 
-  if (!broken) {
-    tips.push('建议先使用 BREAK 破防，大幅提升捕获率');
-  }
-  if (trap === 'normal') {
-    tips.push('建议改用高级陷阱或大师陷阱');
-  }
-  if (rate < 30) {
-    tips.push('该伊莫较稀有，建议备好高级/大师陷阱并趁破防状态出手');
-  }
-  if (time !== 'dusk') {
-    tips.push('黄昏时段捕获率最高，可考虑延后捕获');
-  }
-  if (tips.length === 0) {
-    tips.push('当前配置已处于理想捕获状态，祝捕获顺利！');
-  }
+  if (!broken) tips.push(t('strategyBreak'));
+  if (trap === 'normal') tips.push(t('strategyTrap'));
+  if (rate < 30) tips.push(t('strategyRare'));
+  if (time !== 'dusk') tips.push(t('strategyDusk'));
+  if (tips.length === 0) tips.push(t('strategyIdeal'));
   return tips.join('；');
-}
-
-function trapLabel(id: TrapId) {
-  return TRAPS.find((t) => t.id === id)!.label;
-}
-function timeLabel(id: TimeId) {
-  return TIME_SLOTS.find((t) => t.id === id)!.label;
 }
 
 // ---------------------------------------------------------------------------
 // 页面
 // ---------------------------------------------------------------------------
 export default function CatchPage() {
+  const t = useTranslations('catchTool');
+  const tr = useTranslations();
   const allAniimos = useMemo(() => getAllAniimos(), []);
 
   const [aniimoNumber, setAniimoNumber] = useState<string>(allAniimos[0]?.number ?? '001');
@@ -105,41 +78,54 @@ export default function CatchPage() {
 
   const aniimo = allAniimos.find((a) => a.number === aniimoNumber);
 
+  const trapLabel = (id: TrapId) => t(`trap${id.charAt(0).toUpperCase()}${id.slice(1)}`);
+  const timeLabel = (id: TimeId) => t(`time${id.charAt(0).toUpperCase()}${id.slice(1)}`);
+
   const handleCalculate = () => {
     if (!aniimo) return;
     setResult(computeRate(aniimo, podLevel, trap, broken, time));
-    setStrategy(buildStrategy(aniimo, podLevel, trap, broken, time));
+    setStrategy(buildStrategy(t, aniimo, podLevel, trap, broken, time));
   };
 
   const handleShare = async () => {
     if (!aniimo || !result) return;
     const text = [
-      `【Aniimo 捕获计算】`,
-      `伊莫：${aniimo.name}（${aniimo.enName}）#${aniimo.number}`,
-      `Aniipod 等级：${podLevel} / 50`,
-      `陷阱：${trapLabel(trap)}`,
-      `BREAK 破防：${broken ? '是' : '否'}`,
-      `时段：${timeLabel(time)}`,
-      `基础捕获率：${result.rate}%`,
-      `推荐策略：${strategy}`,
+      t('shareTitle'),
+      t('shareAniimo', { name: aniimo.name, enName: aniimo.enName, number: aniimo.number }),
+      t('sharePod', { level: podLevel }),
+      t('shareTrap', { trap: trapLabel(trap) }),
+      t('shareBreak', { break: broken ? t('breakYes') : t('breakNo') }),
+      t('shareTime', { time: timeLabel(time) }),
+      t('shareBaseRate', { rate: result.rate }),
+      t('shareStrategy', { strategy }),
     ].join('\n');
     try {
       await navigator.clipboard.writeText(text);
-      alert('已复制捕获方案到剪贴板');
+      alert(t('copied'));
     } catch {
-      alert('复制失败，请手动复制');
+      alert(t('copyFailed'));
     }
   };
 
+  const traps: { id: TrapId; bonus: number }[] = [
+    { id: 'normal', bonus: 0 },
+    { id: 'advanced', bonus: 15 },
+    { id: 'master', bonus: 30 },
+  ];
+
+  const timeSlots: { id: TimeId; bonus: number }[] = [
+    { id: 'day', bonus: 0 },
+    { id: 'night', bonus: 5 },
+    { id: 'dusk', bonus: 10 },
+  ];
+
   return (
     <div className="mx-auto max-w-3xl space-y-8">
-      <Breadcrumb items={[{ label: '工具', href: '/tools' }, { label: '捕获条件工具' }]} />
+      <Breadcrumb items={[{ label: tr('breadcrumb.tools'), href: '/tools' }, { label: t('title') }]} />
 
       <header className="space-y-2">
-        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">捕获条件工具</h1>
-        <p className="text-sm text-text-secondary sm:text-base">
-          根据伊莫、Aniipod 等级、陷阱与时段，估算基础捕获率并获取推荐策略。
-        </p>
+        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
+        <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-5">
@@ -147,7 +133,9 @@ export default function CatchPage() {
         <section className="space-y-5 rounded-xl border border-ink-border bg-ink-card p-5 lg:col-span-3">
           {/* 伊莫选择 */}
           <label className="block">
-            <span className="mb-1.5 block text-sm font-medium text-text-secondary">伊莫选择</span>
+            <span className="mb-1.5 block text-sm font-medium text-text-secondary">
+              {t('selectAniimo')}
+            </span>
             <select
               value={aniimoNumber}
               onChange={(e) => {
@@ -158,7 +146,7 @@ export default function CatchPage() {
             >
               {allAniimos.map((a) => (
                 <option key={a.number} value={a.number}>
-                  #{a.number} · {a.name}（{ELEMENT_LABELS[a.element]}）
+                  #{a.number} · {a.name}（{tr(`elements.${a.element}`)}）
                 </option>
               ))}
             </select>
@@ -167,7 +155,7 @@ export default function CatchPage() {
           {/* Aniipod 等级滑块 */}
           <label className="block">
             <div className="mb-1.5 flex items-center justify-between">
-              <span className="text-sm font-medium text-text-secondary">Aniipod 等级</span>
+              <span className="text-sm font-medium text-text-secondary">{t('podLevel')}</span>
               <span className="text-sm font-semibold text-primary-light">{podLevel}</span>
             </div>
             <input
@@ -189,24 +177,26 @@ export default function CatchPage() {
 
           {/* 陷阱类型 */}
           <fieldset>
-            <legend className="mb-1.5 block text-sm font-medium text-text-secondary">陷阱类型</legend>
+            <legend className="mb-1.5 block text-sm font-medium text-text-secondary">
+              {t('trapType')}
+            </legend>
             <div className="flex flex-wrap gap-2">
-              {TRAPS.map((t) => (
+              {traps.map((tr2) => (
                 <button
-                  key={t.id}
+                  key={tr2.id}
                   type="button"
                   onClick={() => {
-                    setTrap(t.id);
+                    setTrap(tr2.id);
                     setResult(null);
                   }}
                   className={cn(
                     'rounded-lg border px-4 py-2 text-sm font-medium transition-all',
-                    trap === t.id
+                    trap === tr2.id
                       ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                       : 'border-ink-border bg-ink-soft text-text-secondary hover:border-primary-light/60'
                   )}
                 >
-                  {t.label}
+                  {trapLabel(tr2.id)}
                 </button>
               ))}
             </div>
@@ -223,43 +213,45 @@ export default function CatchPage() {
               }}
               className="h-4 w-4 accent-primary"
             />
-            <span className="text-sm text-text-secondary">BREAK 状态（是否破防）</span>
+            <span className="text-sm text-text-secondary">{t('breakState')}</span>
           </label>
 
           {/* 时段 */}
           <fieldset>
-            <legend className="mb-1.5 block text-sm font-medium text-text-secondary">时段</legend>
+            <legend className="mb-1.5 block text-sm font-medium text-text-secondary">
+              {t('timeSlot')}
+            </legend>
             <div className="flex flex-wrap gap-2">
-              {TIME_SLOTS.map((t) => (
+              {timeSlots.map((ts) => (
                 <button
-                  key={t.id}
+                  key={ts.id}
                   type="button"
                   onClick={() => {
-                    setTime(t.id);
+                    setTime(ts.id);
                     setResult(null);
                   }}
                   className={cn(
                     'rounded-lg border px-4 py-2 text-sm font-medium transition-all',
-                    time === t.id
+                    time === ts.id
                       ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                       : 'border-ink-border bg-ink-soft text-text-secondary hover:border-primary-light/60'
                   )}
                 >
-                  {t.label}
+                  {timeLabel(ts.id)}
                 </button>
               ))}
             </div>
           </fieldset>
 
           <Button variant="primary" size="lg" className="w-full" onClick={handleCalculate}>
-            计算捕获率
+            {t('calculate')}
           </Button>
         </section>
 
         {/* 结果区 */}
         <section className="space-y-4 lg:col-span-2">
           <div className="rounded-xl border border-ink-border bg-ink-card p-5">
-            <h2 className="text-sm font-medium text-text-secondary">计算结果</h2>
+            <h2 className="text-sm font-medium text-text-secondary">{t('result')}</h2>
 
             {result && aniimo ? (
               <div className="mt-4 space-y-4">
@@ -277,7 +269,7 @@ export default function CatchPage() {
                   >
                     {result.rate}%
                   </div>
-                  <p className="mt-2 text-xs text-text-muted">基础捕获率</p>
+                  <p className="mt-2 text-xs text-text-muted">{t('baseCatchRate')}</p>
                 </div>
 
                 {/* 伊莫摘要 */}
@@ -293,36 +285,34 @@ export default function CatchPage() {
                       ELEMENT_BADGE_CLASSES[aniimo.element]
                     )}
                   >
-                    {ELEMENT_LABELS[aniimo.element]}
+                    {tr(`elements.${aniimo.element}`)}
                   </span>
                 </div>
 
                 {/* 推荐策略 */}
                 <div className="rounded-lg border border-primary/30 bg-primary/10 px-4 py-3">
                   <p className="text-xs font-semibold uppercase tracking-wide text-primary-light">
-                    推荐策略
+                    {t('recommendedStrategy')}
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-text-primary">{strategy}</p>
                 </div>
 
                 {/* 复制分享 */}
                 <Button variant="secondary" size="md" className="w-full" onClick={handleShare}>
-                  📋 复制分享方案
+                  📋 {t('copyShare')}
                 </Button>
               </div>
             ) : (
               <div className="mt-4 rounded-lg border border-dashed border-ink-border px-4 py-10 text-center text-sm text-text-muted">
-                填写左侧条件后，点击「计算捕获率」查看结果。
+                {t('placeholder')}
               </div>
             )}
           </div>
 
           {/* 公式说明 */}
           <div className="rounded-xl border border-ink-border bg-ink-card px-5 py-4 text-xs leading-relaxed text-text-muted">
-            <p className="mb-1 font-semibold text-text-secondary">计算说明（简化占位公式）</p>
-            <p>
-              捕获率 = 伊莫基础值 + Aniipod 等级加成 + 陷阱加成 + 破防加成 + 时段加成，最终限制在 1% ~ 98% 之间。数值为占位，真实公式待接入游戏数据。
-            </p>
+            <p className="mb-1 font-semibold text-text-secondary">{t('calculationNote')}</p>
+            <p>{t('calculationDetail')}</p>
           </div>
         </section>
       </div>

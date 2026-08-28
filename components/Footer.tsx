@@ -1,12 +1,14 @@
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 const friendLinks = [
-  { href: 'https://example.com', label: '友情链接一' },
-  { href: 'https://example.com', label: '友情链接二' },
-  { href: 'https://example.com', label: '友情链接三' },
+  { href: 'https://example.com', labelKey: 'f1' },
+  { href: 'https://example.com', labelKey: 'f2' },
+  { href: 'https://example.com', labelKey: 'f3' },
 ];
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations('footer');
   const year = new Date().getFullYear();
 
   return (
@@ -21,22 +23,20 @@ export default function Footer() {
               </span>
               <span className="font-semibold text-text-primary">AniimoDex</span>
             </div>
-            <p className="text-sm text-text-muted">
-              © {year} AniimoDex · 仅供学习交流使用，非官方产品。
-            </p>
+            <p className="text-sm text-text-muted">{t('disclaimer', { year })}</p>
           </div>
 
           {/* 友情链接占位 */}
           <div>
-            <h4 className="mb-3 text-sm font-semibold text-text-secondary">友情链接</h4>
+            <h4 className="mb-3 text-sm font-semibold text-text-secondary">{t('friends')}</h4>
             <ul className="space-y-2">
               {friendLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <Link
                     href={link.href}
                     className="text-sm text-text-muted transition-colors hover:text-primary-light"
                   >
-                    {link.label}
+                    {t('friendLinks.' + link.labelKey)}
                   </Link>
                 </li>
               ))}

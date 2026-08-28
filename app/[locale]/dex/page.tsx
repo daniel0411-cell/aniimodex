@@ -1,21 +1,19 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
 import {
   ELEMENTS,
   ELEMENT_ICONS,
-  ELEMENT_LABELS,
   ELEMENT_BADGE_CLASSES,
   ELEMENT_GRADIENTS,
   ROLE_ICONS,
-  ROLE_LABELS,
   ROLE_BADGE_CLASSES,
   ROLES,
   TWINE_ABILITIES,
   TWINE_ICONS,
-  TWINE_LABELS,
 } from '@/lib/aniimo-ui';
 import type { AniimoEntry, Element, Role, TwineAbility } from '@/types/aniimo';
 import { cn } from '@/lib/utils';
@@ -27,6 +25,11 @@ const VALID_TWINE = TWINE_ABILITIES as string[];
 
 /** 卡片组件 */
 function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
+  const t = useTranslations();
+  const elementLabel = t(`elements.${aniimo.element}`);
+  const roleLabel = t(`roles.${aniimo.role}`);
+  const twineLabel = t(`twineAbility.${aniimo.twineAbility}`);
+
   return (
     <Link
       href={`/dex/${aniimo.number}`}
@@ -35,7 +38,7 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
       {/* 头部：编号 + Twine 图标 */}
       <div className="flex items-start justify-between">
         <span className="text-xs font-mono text-text-muted">#{aniimo.number}</span>
-        <span title={`Twine：${TWINE_LABELS[aniimo.twineAbility]}`} className="text-sm opacity-70">
+        <span title={t('dex.twineTitle', { name: twineLabel })} className="text-sm opacity-70">
           {TWINE_ICONS[aniimo.twineAbility]}
         </span>
       </div>
@@ -64,7 +67,7 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
             ELEMENT_BADGE_CLASSES[aniimo.element]
           )}
         >
-          {ELEMENT_LABELS[aniimo.element]}
+          {elementLabel}
         </span>
         <span
           className={cn(
@@ -73,7 +76,7 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
           )}
         >
           {ROLE_ICONS[aniimo.role]}
-          {ROLE_LABELS[aniimo.role]}
+          {roleLabel}
         </span>
       </div>
     </Link>
@@ -88,6 +91,8 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
  * canonical 始终指向 /dex/（无参数基础页面）。
  */
 export default function DexPage() {
+  const t = useTranslations();
+  const td = useTranslations('dex');
   const [element, setElement] = useState<Element | ''>('');
   const [role, setRole] = useState<Role | ''>('');
   const [twine, setTwine] = useState<TwineAbility | ''>('');
@@ -128,14 +133,13 @@ export default function DexPage() {
     '@graph': [
       {
         '@type': 'CollectionPage',
-        name: 'Aniimo 图鉴',
-        description: '浏览完整伊莫图鉴，查询每只伊莫的属性、技能、Twine 能力、出现位置、捕获方法和培养信息。',
+        name: 'Aniimo Dex',
+        description: td('title'),
         url: `${SITE_URL}/dex/`,
-        inLanguage: 'zh-CN',
       },
       {
         '@type': 'ItemList',
-        name: '伊莫图鉴列表',
+        name: 'Aniimo Dex list',
         itemListElement: getAllAniimos().map((a, i) => ({
           '@type': 'ListItem',
           position: i + 1,
@@ -154,8 +158,10 @@ export default function DexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <header className="space-y-1">
-        <h1 className="text-2xl font-bold text-text-primary">Aniimo 图鉴</h1>
-        <p className="text-sm text-text-secondary">共 {filtered.length} / {getAllAniimos().length} 只伊莫</p>
+        <h1 className="text-2xl font-bold text-text-primary">{td('title')}</h1>
+        <p className="text-sm text-text-secondary">
+          {td('subtitle', { filtered: filtered.length, total: getAllAniimos().length })}
+        </p>
       </header>
 
       {/* 筛选栏 */}
@@ -165,13 +171,13 @@ export default function DexPage() {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="搜索名称、编号、关键词…"
+          placeholder={td('searchPlaceholder')}
           className="w-full rounded-lg border border-ink-border bg-ink-soft px-3 py-2 text-sm text-text-primary focus:border-primary-light focus:outline-none"
         />
 
         {/* 元素筛选（图标按钮） */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="w-10 shrink-0 text-xs text-text-muted">元素</span>
+          <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterElement')}</span>
           <div className="flex flex-wrap gap-1.5">
             {ELEMENTS.map((el) => {
               const active = element === el;
@@ -180,8 +186,8 @@ export default function DexPage() {
                   key={el}
                   type="button"
                   onClick={() => setElement(active ? '' : el)}
-                  title={ELEMENT_LABELS[el]}
-                  aria-label={`筛选${ELEMENT_LABELS[el]}系伊莫`}
+                  title={t(`elements.${el}`)}
+                  aria-label={td('filterElementAria', { element: t(`elements.${el}`) })}
                   className={cn(
                     'flex h-9 w-9 items-center justify-center rounded-lg border text-base transition-all',
                     active
@@ -198,7 +204,7 @@ export default function DexPage() {
 
         {/* 角色筛选 */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="w-10 shrink-0 text-xs text-text-muted">角色</span>
+          <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterRole')}</span>
           <div className="flex flex-wrap gap-1.5">
             {ROLES.map((r) => {
               const active = role === r;
@@ -215,7 +221,7 @@ export default function DexPage() {
                   )}
                 >
                   {ROLE_ICONS[r]}
-                  {ROLE_LABELS[r]}
+                  {t(`roles.${r}`)}
                 </button>
               );
             })}
@@ -224,16 +230,16 @@ export default function DexPage() {
 
         {/* Twine 能力筛选（下拉） */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="w-10 shrink-0 text-xs text-text-muted">Twine</span>
+          <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterTwine')}</span>
           <select
             value={twine}
             onChange={(e) => setTwine(e.target.value as TwineAbility | '')}
             className="rounded-lg border border-ink-border bg-ink-soft px-3 py-1.5 text-xs text-text-primary focus:border-primary-light focus:outline-none"
           >
-            <option value="">全部能力</option>
-            {TWINE_ABILITIES.map((t) => (
-              <option key={t} value={t}>
-                {TWINE_LABELS[t]}
+            <option value="">{td('allTwine')}</option>
+            {TWINE_ABILITIES.map((tw) => (
+              <option key={tw} value={tw}>
+                {t(`twineAbility.${tw}`)}
               </option>
             ))}
           </select>
@@ -246,7 +252,7 @@ export default function DexPage() {
             onClick={resetFilters}
             className="text-xs text-primary-light hover:text-primary"
           >
-            ✕ 清除全部筛选
+            ✕ {td('clearAll')}
           </button>
         )}
       </div>
@@ -261,14 +267,14 @@ export default function DexPage() {
       ) : (
         <div className="rounded-xl border border-ink-border bg-ink-card py-16 text-center">
           <p className="text-3xl">🔍</p>
-          <p className="mt-3 text-text-secondary">没有找到符合条件的伊莫</p>
-          <p className="mt-1 text-sm text-text-muted">试试调整筛选条件或更换关键词</p>
+          <p className="mt-3 text-text-secondary">{td('emptyTitle')}</p>
+          <p className="mt-1 text-sm text-text-muted">{td('emptyHint')}</p>
           <button
             type="button"
             onClick={resetFilters}
             className="mt-4 text-sm text-primary-light hover:text-primary"
           >
-            重置全部筛选
+            {td('resetAll')}
           </button>
         </div>
       )}

@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import type { Element } from '@/types/aniimo';
-import { ELEMENTS, ELEMENT_LABELS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
+import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 // ---------------------------------------------------------------------------
@@ -34,15 +35,9 @@ const MULTIPLIER_STYLE: Record<number, string> = {
   0: 'bg-slate-900 text-slate-100',
 };
 
-// 倍率 → 说明（用于底部图例）
-const LEGEND: { value: number; label: string }[] = [
-  { value: 2, label: '克制' },
-  { value: 1, label: '普通' },
-  { value: 0.5, label: '抵抗' },
-  { value: 0, label: '免疫' },
-];
-
 export default function TypeChartPage() {
+  const t = useTranslations('typeChartTool');
+  const tr = useTranslations();
   // 当前高亮的攻击 / 防御元素（null 表示未选中）
   const [attackEl, setAttackEl] = useState<Element | null>(null);
   const [defendEl, setDefendEl] = useState<Element | null>(null);
@@ -50,25 +45,33 @@ export default function TypeChartPage() {
   const toggleAttack = (el: Element) => setAttackEl((cur) => (cur === el ? null : el));
   const toggleDefend = (el: Element) => setDefendEl((cur) => (cur === el ? null : el));
 
+  const elLabel = (el: Element) => tr(`elements.${el}`);
+
+  // 图例
+  const legend: { value: number; labelKey: string }[] = [
+    { value: 2, labelKey: 'superEffective' },
+    { value: 1, labelKey: 'neutral' },
+    { value: 0.5, labelKey: 'resisted' },
+    { value: 0, labelKey: 'immune' },
+  ];
+
   return (
     <div className="mx-auto max-w-5xl space-y-8">
-      <Breadcrumb items={[{ label: '工具', href: '/tools' }, { label: '元素克制矩阵' }]} />
+      <Breadcrumb items={[{ label: tr('breadcrumb.tools'), href: '/tools' }, { label: t('title') }]} />
 
       <header className="space-y-2">
-        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">元素克制矩阵</h1>
-        <p className="text-sm text-text-secondary sm:text-base">
-          行 = 攻击方元素 · 列 = 防御方元素。点击行/列表头可高亮查看对应元素的克制关系。
-        </p>
+        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
+        <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
       {/* 图例 */}
       <div className="flex flex-wrap items-center gap-3">
-        {LEGEND.map((item) => (
+        {legend.map((item) => (
           <span key={item.value} className="flex items-center gap-1.5 text-xs text-text-secondary">
             <span
               className={cn('inline-block h-3.5 w-3.5 rounded', MULTIPLIER_STYLE[item.value])}
             />
-            {item.label} {item.value}x
+            {t(item.labelKey)} {item.value}x
           </span>
         ))}
       </div>
@@ -78,8 +81,8 @@ export default function TypeChartPage() {
         <table className="w-full border-collapse text-center">
           <thead>
             <tr>
-              <th className="p-2 text-xs font-medium text-text-muted" aria-label="攻击方 / 防御方">
-                攻\防
+              <th className="p-2 text-xs font-medium text-text-muted" aria-label={t('attackDefend')}>
+                {t('attackDefend')}
               </th>
               {ELEMENTS.map((el) => {
                 const active = defendEl === el;
@@ -94,12 +97,12 @@ export default function TypeChartPage() {
                           ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                           : 'border-ink-border bg-ink-soft text-text-secondary hover:border-primary-light/60'
                       )}
-                      title={`防御方：${ELEMENT_LABELS[el]}`}
+                      title={t('defenderTitle', { element: elLabel(el) })}
                     >
                       <span className="text-base sm:text-lg" aria-hidden>
                         {ELEMENT_ICONS[el]}
                       </span>
-                      <span className="text-xs">{ELEMENT_LABELS[el]}</span>
+                      <span className="text-xs">{elLabel(el)}</span>
                     </button>
                   </th>
                 );
@@ -122,23 +125,22 @@ export default function TypeChartPage() {
                           ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                           : 'border-ink-border bg-ink-soft text-text-secondary group-hover:border-primary-light/60'
                       )}
-                      title={`攻击方：${ELEMENT_LABELS[atk]}`}
+                      title={t('attackerTitle', { element: elLabel(atk) })}
                     >
                       <span className="text-base sm:text-lg" aria-hidden>
                         {ELEMENT_ICONS[atk]}
                       </span>
-                      <span className="text-xs">{ELEMENT_LABELS[atk]}</span>
+                      <span className="text-xs">{elLabel(atk)}</span>
                     </button>
                   </th>
 
                   {ELEMENTS.map((def) => {
                     const value = effective(atk, def);
-                    const highlighted =
-                      attackEl === atk || defendEl === def || (attackEl === atk && defendEl === def);
+                    const highlighted = attackEl === atk || defendEl === def;
                     return (
                       <td key={def} className="p-1">
                         <div
-                          title={`${ELEMENT_LABELS[atk]} 攻击 ${ELEMENT_LABELS[def]}：${value}x`}
+                          title={`${elLabel(atk)} ${t('attackText')} ${elLabel(def)}: ${value}x`}
                           className={cn(
                             'flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-sm transition-all sm:h-12 sm:w-12',
                             MULTIPLIER_STYLE[value],
@@ -162,47 +164,30 @@ export default function TypeChartPage() {
       <div className="rounded-xl border border-ink-border bg-ink-card px-5 py-4 text-sm text-text-secondary">
         {attackEl && defendEl ? (
           <p>
-            <span className="font-semibold text-primary-light">{ELEMENT_LABELS[attackEl]}</span>{' '}
-            攻击{' '}
-            <span className="font-semibold text-primary-light">{ELEMENT_LABELS[defendEl]}</span>{' '}
-            的伤害倍率为{' '}
-            <span className="font-semibold text-text-primary">
-              {effective(attackEl, defendEl)}x
-            </span>
-            。
+            {t.rich('multiplierOf', {
+              attacker: elLabel(attackEl),
+              defender: elLabel(defendEl),
+              value: effective(attackEl, defendEl),
+            })}
           </p>
         ) : attackEl ? (
-          <p>
-            已选中攻击方 <span className="font-semibold text-primary-light">{ELEMENT_LABELS[attackEl]}</span>，
-            再点击一个防御方元素查看倍率。
-          </p>
+          <p>{t('selectedAttack', { element: elLabel(attackEl) })}</p>
         ) : defendEl ? (
-          <p>
-            已选中防御方 <span className="font-semibold text-primary-light">{ELEMENT_LABELS[defendEl]}</span>，
-            再点击一个攻击方元素查看倍率。
-          </p>
+          <p>{t('selectedDefend', { element: elLabel(defendEl) })}</p>
         ) : (
-          <p>点击任意表头的元素图标即可选中并高亮该行 / 列。</p>
+          <p>{t('clickToSelect')}</p>
         )}
       </div>
 
       {/* 底部说明：克制关系规则 */}
       <section className="space-y-2">
-        <h2 className="text-lg font-semibold text-text-primary">克制关系规则</h2>
+        <h2 className="text-lg font-semibold text-text-primary">{t('rulesTitle')}</h2>
         <ul className="list-inside list-disc space-y-1.5 rounded-xl border border-ink-border bg-ink-card px-5 py-4 text-sm text-text-secondary">
-          <li>
-            <span className="font-semibold text-red-600">2x（克制）</span>：攻击方元素克制防御方元素，伤害翻倍。
-          </li>
-          <li>
-            <span className="font-semibold text-sky-600">½x（抵抗）</span>：防御方元素抵抗攻击方元素，伤害减半。
-          </li>
-          <li>
-            <span className="font-semibold text-text-muted">0x（免疫）</span>：防御方完全免疫该元素攻击，不造成伤害。
-          </li>
-          <li>
-            <span className="font-semibold text-text-secondary">1x（普通）</span>：无特殊克制关系，造成正常伤害。
-          </li>
-          <li>同一元素之间的攻击通常效果减半（½x）。</li>
+          <li>{t('rule2x')}</li>
+          <li>{t('ruleHalf')}</li>
+          <li>{t('rule0')}</li>
+          <li>{t('rule1')}</li>
+          <li>{t('ruleSame')}</li>
         </ul>
       </section>
     </div>

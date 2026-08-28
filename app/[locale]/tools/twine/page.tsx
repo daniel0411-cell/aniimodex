@@ -1,26 +1,25 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { getAllAniimos, filterByTwineAbilities } from '@/lib/aniimo';
 import type { AniimoEntry, TwineAbility } from '@/types/aniimo';
-import { ELEMENT_LABELS, ELEMENT_BADGE_CLASSES, TWINE_ICONS, TWINE_BADGE_CLASSES } from '@/lib/aniimo-ui';
+import { ELEMENT_BADGE_CLASSES, TWINE_ICONS, TWINE_BADGE_CLASSES } from '@/lib/aniimo-ui';
 
-// ---------------------------------------------------------------------------
-// 能力选项定义（英文标识用于匹配，中文用于 TwineAbility 匹配）
-// ---------------------------------------------------------------------------
+// 能力选项定义（英文标识用于匹配，值用于 TwineAbility 匹配）
 interface AbilityOption {
   id: string;
-  label: TwineAbility;
+  value: TwineAbility;
 }
 
 const ABILITY_OPTIONS: AbilityOption[] = [
-  { id: 'fly', label: '飞行' },
-  { id: 'swim', label: '游泳' },
-  { id: 'dig', label: '遁地' },
-  { id: 'climb', label: '攀岩' },
-  { id: 'ram', label: '冲撞' },
+  { id: 'fly', value: '飞行' },
+  { id: 'swim', value: '游泳' },
+  { id: 'dig', value: '遁地' },
+  { id: 'climb', value: '攀岩' },
+  { id: 'ram', value: '冲撞' },
 ];
 
 /**
@@ -30,6 +29,8 @@ const ABILITY_OPTIONS: AbilityOption[] = [
  * 由于站点为静态导出，筛选状态不写入 URL，canonical 指向 /tools/twine/ 基础页。
  */
 export default function TwinePage() {
+  const t = useTranslations('twineTool');
+  const tr = useTranslations();
   // 选中能力 id 列表（空 = 全部）
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -38,7 +39,7 @@ export default function TwinePage() {
   // 依并集过滤：匹配任一选中能力
   const results = useMemo(() => {
     const abilities = selected
-      .map((id) => ABILITY_OPTIONS.find((o) => o.id === id)?.label)
+      .map((id) => ABILITY_OPTIONS.find((o) => o.id === id)?.value)
       .filter((a): a is TwineAbility => Boolean(a));
     return filterByTwineAbilities(abilities);
   }, [selected]);
@@ -60,15 +61,13 @@ export default function TwinePage() {
   return (
     <div className="mx-auto max-w-4xl space-y-8">
       <header className="space-y-2">
-        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">Twine 能力反查器</h1>
-        <p className="text-sm text-text-secondary sm:text-base">
-          选择你需要的机动能力，找到对应的伊莫
-        </p>
+        <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
+        <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
       {/* 能力选择区 */}
       <section className="space-y-3">
-        <h2 className="text-sm font-medium text-text-secondary">选择机动能力</h2>
+        <h2 className="text-sm font-medium text-text-secondary">{t('selectAbility')}</h2>
         <div className="flex flex-wrap gap-2.5">
           {/* 全部按钮 */}
           <button
@@ -82,7 +81,7 @@ export default function TwinePage() {
                 : 'border-ink-border bg-ink-card text-text-secondary hover:border-primary/50 hover:text-text-primary'
             )}
           >
-            全部
+            {t('all')}
           </button>
 
           {ABILITY_OPTIONS.map((opt) => {
@@ -100,8 +99,8 @@ export default function TwinePage() {
                     : 'border-ink-border bg-ink-card text-text-secondary hover:border-primary/50 hover:text-text-primary'
                 )}
               >
-                <span aria-hidden>{TWINE_ICONS[opt.label]}</span>
-                {opt.label}
+                <span aria-hidden>{TWINE_ICONS[opt.value]}</span>
+                {tr(`twineAbility.${opt.value}`)}
               </button>
             );
           })}
@@ -111,7 +110,7 @@ export default function TwinePage() {
       {/* 结果统计 */}
       <div className="flex items-center justify-between">
         <p className="text-sm text-text-secondary">
-          找到 <span className="font-semibold text-primary-light">{results.length}</span> 只伊莫
+          {t.rich('found', { count: results.length, b: (chunks) => <b>{chunks}</b> })}
         </p>
         {!allSelected && (
           <button
@@ -119,7 +118,7 @@ export default function TwinePage() {
             onClick={selectAll}
             className="text-sm text-primary-light transition-colors hover:text-primary"
           >
-            清空筛选
+            {t('clear')}
           </button>
         )}
       </div>
@@ -135,19 +134,18 @@ export default function TwinePage() {
         </ul>
       ) : (
         <div className="rounded-xl border border-dashed border-ink-border bg-ink-card px-6 py-12 text-center">
-          <p className="text-text-muted">没有符合条件的结果，试试调整能力选择。</p>
+          <p className="text-text-muted">{t('empty')}</p>
         </div>
       )}
     </div>
   );
 }
 
-// ---------------------------------------------------------------------------
 // 单只伊莫结果卡片
-// ---------------------------------------------------------------------------
 function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: string[] }) {
+  const tr = useTranslations();
   const highlighted = activeIds.some(
-    (id) => aniimo.twineAbility === ABILITY_OPTIONS.find((o) => o.id === id)?.label
+    (id) => aniimo.twineAbility === ABILITY_OPTIONS.find((o) => o.id === id)?.value
   );
   return (
     <Link
@@ -172,7 +170,7 @@ function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: stri
               ELEMENT_BADGE_CLASSES[aniimo.element]
             )}
           >
-            {ELEMENT_LABELS[aniimo.element]}
+            {tr(`elements.${aniimo.element}`)}
           </span>
         </div>
       </div>
@@ -186,7 +184,7 @@ function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: stri
         )}
       >
         <span aria-hidden>{TWINE_ICONS[aniimo.twineAbility]}</span>
-        {aniimo.twineAbility}
+        {tr(`twineAbility.${aniimo.twineAbility}`)}
       </span>
     </Link>
   );

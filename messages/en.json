@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "siteName": "AniimoDex",
+    "defaultTitle": "AniimoDex - Aniimo Dex, Twine Lookup & Type Chart Tools",
+    "defaultDescription": "AniimoDex is your all-in-one Aniimo companion: browse the full dex, look up Twine abilities, check elemental matchups and plan your captures."
+  },
+  "nav": {
+    "home": "Home",
+    "dex": "Dex",
+    "twine": "Twine",
+    "typeChart": "Type Chart",
+    "guide": "Guide",
+    "tools": "Tools"
+  },
+  "common": {
+    "all": "All",
+    "unknown": "Unknown",
+    "loading": "Loading…",
+    "backToHome": "Home"
+  },
+  "home": {
+    "heroBadge": "Your Aniimo Companion",
+    "heroTitleGradient": "- Your Aniimo Companion",
+    "heroSubtitle": "Your one-stop Aniimo dex & tools: browse creature data, look up Twine abilities, check elemental matchups and more.",
+    "searchPlaceholder": "Search Aniimo by name, number or keyword…",
+    "recommended": "Recommended",
+    "latestUpdates": "Latest Updates",
+    "viewAllGuide": "View all guides",
+    "loadMore": "Load More",
+    "quickLinks": {
+      "dex": { "title": "Dex", "desc": "Browse detailed dex entries for every Aniimo" },
+      "twine": {
+        "title": "Twine Lookup",
+        "desc": "Pick a movement ability to find matching Aniimo"
+      },
+      "typeChart": {
+        "title": "Type Chart",
+        "desc": "Check matchups between the 9 elements"
+      },
+      "guide": { "title": "Beginner Guide", "desc": "Tutorials and practical tips collection" }
+    }
+  },
+  "footer": {
+    "disclaimer": "© {year} AniimoDex · For learning purposes only, not an official product.",
+    "friends": "Friend Links",
+    "friendLinks": {
+      "f1": "Friend Site 1",
+      "f2": "Friend Site 2",
+      "f3": "Friend Site 3"
+    }
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "tools": "Tools",
+    "guide": "Guide",
+    "dex": "Dex"
+  },
+  "dex": {
+    "title": "Aniimo Dex",
+    "subtitle": "{filtered} / {total} Aniimo",
+    "searchPlaceholder": "Search by name, number or keyword…",
+    "filterElement": "Element",
+    "filterRole": "Role",
+    "filterTwine": "Twine",
+    "allTwine": "All abilities",
+    "clearAll": "Clear all filters",
+    "emptyTitle": "No Aniimo found",
+    "emptyHint": "Try adjusting your filters or keywords",
+    "resetAll": "Reset all filters",
+    "filterElementAria": "Filter {element} Aniimo",
+    "twineTitle": "Twine: {name}"
+  },
+  "dexDetail": {
+    "notFound": "Aniimo not found",
+    "baseStats": "Base Stats",
+    "evolution": "Evolution",
+    "twineAbility": "Twine Ability",
+    "spawnConditions": "Spawn Conditions",
+    "habitat": "Habitat",
+    "weather": "Weather",
+    "time": "Time",
+    "phenomenon": "Phenomenon",
+    "forms": "Forms",
+    "potential": "Potential",
+    "related": "Related Aniimo",
+    "relatedTools": "Related Tools",
+    "finalForm": "Final form",
+    "noSpecialMove": "No special field-movement ability.",
+    "canInteract": "Can perform {ability}-related field interactions.",
+    "placeholderData": "Some data is placeholder ({note})",
+    "browseAll": "Browse the full dex, view all {element} Aniimo",
+    "browseTwine": "Use the Twine lookup tool to find Aniimo by ability",
+    "browseTypeChart": "Check the type chart for {element} matchups",
+    "browseCatch": "Use the catch estimator to estimate {name}'s catch rate",
+    "linkHome": "Home",
+    "linkDex": "Dex",
+    "unknownCondition": "Unknown condition",
+    "and": "and",
+    "timeDay": "Day",
+    "timeNight": "Night"
+  },
+  "tools": {
+    "title": "Tools Center",
+    "subtitle": "A collection of practical tools: lookup, matchup matrix and catch estimator for your Aniimo adventure.",
+    "twineTitle": "Twine Ability Lookup",
+    "twineDesc": "Pick a movement ability to find matching Aniimo.",
+    "twineTags": ["Lookup", "Movement"],
+    "typeChartTitle": "Type Matchup Matrix",
+    "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
+    "typeChartTags": ["Matrix", "Matchup"],
+    "catchTitle": "Catch Condition Tool",
+    "catchDesc": "Estimate catch rates based on level, trap, time and more, with strategic tips.",
+    "catchTags": ["Capture", "Strategy"]
+  },
+  "twineTool": {
+    "title": "Twine Ability Lookup",
+    "subtitle": "Pick the movement abilities you need to find matching Aniimo.",
+    "selectAbility": "Select movement abilities",
+    "all": "All",
+    "found": "Found <b>{count}</b> Aniimo",
+    "clear": "Clear filters",
+    "empty": "No matching results. Try adjusting your ability selection."
+  },
+  "typeChartTool": {
+    "title": "Elemental Type Chart",
+    "subtitle": "Rows = attacking element · Columns = defending element. Click a header to highlight matchups.",
+    "attackDefend": "Atk\\Def",
+    "defenderTitle": "Defender: {element}",
+    "attackerTitle": "Attacker: {element}",
+    "attackText": "attacks",
+    "multiplierOf": "{attacker} {attackText} {defender}: damage multiplier {value}x.",
+    "selectedAttack": "Attacker selected: {element}. Click a defender to see the multiplier.",
+    "selectedDefend": "Defender selected: {element}. Click an attacker to see the multiplier.",
+    "clickToSelect": "Click any header element icon to select and highlight that row / column.",
+    "rulesTitle": "Matchup Rules",
+    "rule2x": "2x (super effective): attacking element overcomes the defender, damage doubled.",
+    "ruleHalf": "½x (not very effective): defender resists, damage halved.",
+    "rule0": "0x (immune): defender is immune, no damage dealt.",
+    "rule1": "1x (neutral): no special relation, normal damage.",
+    "ruleSame": "Attacks between the same element are usually halved (½x).",
+    "superEffective": "Super effective",
+    "neutral": "Neutral",
+    "resisted": "Resisted",
+    "immune": "Immune"
+  },
+  "catchTool": {
+    "title": "Catch Condition Tool",
+    "subtitle": "Estimate base catch rates and get strategy tips based on Aniimo, Aniipod level, trap and time.",
+    "selectAniimo": "Select Aniimo",
+    "podLevel": "Aniipod Level",
+    "trapType": "Trap Type",
+    "breakState": "BREAK state (broken)",
+    "timeSlot": "Time Slot",
+    "calculate": "Calculate Catch Rate",
+    "result": "Result",
+    "baseCatchRate": "Base catch rate",
+    "recommendedStrategy": "Recommended Strategy",
+    "copyShare": "Copy & share plan",
+    "placeholder": "Fill in the conditions on the left, then click “Calculate Catch Rate”.",
+    "calculationNote": "Calculation note (simplified placeholder formula)",
+    "calculationDetail": "Catch rate = base value + Aniipod level bonus + trap bonus + break bonus + time bonus, capped between 1% and 98%. Values are placeholders until real game data is integrated.",
+    "trapNormal": "Normal",
+    "trapAdvanced": "Advanced",
+    "trapMaster": "Master",
+    "timeDay": "Day",
+    "timeNight": "Night",
+    "timeDusk": "Dusk",
+    "shareTitle": "【Aniimo Catch Calc】",
+    "shareAniimo": "Aniimo: {name} ({enName}) #{number}",
+    "sharePod": "Aniipod level: {level} / 50",
+    "shareTrap": "Trap: {trap}",
+    "shareBreak": "BREAK: {break}",
+    "shareTime": "Time: {time}",
+    "shareBaseRate": "Base catch rate: {rate}%",
+    "shareStrategy": "Strategy: {strategy}",
+    "breakYes": "Yes",
+    "breakNo": "No",
+    "copied": "Catch plan copied to clipboard",
+    "copyFailed": "Copy failed, please copy manually",
+    "strategyBreak": "Consider using BREAK first to greatly boost your catch rate",
+    "strategyTrap": "Consider switching to an advanced or master trap",
+    "strategyRare": "This Aniimo is rare; prepare advanced/master traps and strike while broken",
+    "strategyDusk": "Dusk gives the highest catch rate; consider waiting",
+    "strategyIdeal": "Your current setup is ideal — good luck catching!"
+  },
+  "guide": {
+    "title": "Aniimo Guide",
+    "subtitle": "Tutorials & advanced guides",
+    "relatedTools": "Related Tools",
+    "relatedDesc": "Combine these tools to plan your exploration and team:",
+    "browseDex": "Browse the full dex for stats and locations",
+    "browseTwine": "Use the Twine lookup to find Aniimo by ability",
+    "browseTypeChart": "Check the type chart for matchups",
+    "browseCatch": "Use the catch estimator to prepare resources"
+  },
+  "elements": {
+    "Light": "Light",
+    "Fire": "Fire",
+    "Ice": "Ice",
+    "Dark": "Dark",
+    "Lightning": "Lightning",
+    "Grass": "Grass",
+    "Water": "Water",
+    "Earth": "Earth",
+    "Wind": "Wind"
+  },
+  "roles": {
+    "DPS": "Attacker",
+    "Heal": "Healer",
+    "Support": "Support",
+    "Break": "Breaker",
+    "Regen": "Regenerator"
+  },
+  "twineAbility": {
+    "飞行": "Fly",
+    "游泳": "Swim",
+    "遁地": "Dig",
+    "攀岩": "Climb",
+    "冲撞": "Ram",
+    "无": "None"
+  },
+  "localeSwitcher": {
+    "label": "Language"
+  }
+}

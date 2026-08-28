@@ -1,19 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 const navItems = [
-  { href: '/', label: '首页' },
-  { href: '/dex', label: '图鉴' },
-  { href: '/tools/twine', label: 'Twine 反查' },
-  { href: '/tools/type-chart', label: '元素克制' },
-  { href: '/guide', label: '攻略' },
-];
+  { href: '/', key: 'home' },
+  { href: '/dex', key: 'dex' },
+  { href: '/tools/twine', key: 'twine' },
+  { href: '/tools/type-chart', key: 'typeChart' },
+  { href: '/guide', key: 'guide' },
+] as const;
 
 export default function Header() {
+  const t = useTranslations('nav');
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -44,34 +46,40 @@ export default function Header() {
                     : 'text-text-secondary hover:bg-ink-soft hover:text-primary-hover'
                 )}
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             </li>
           ))}
+          <li className="ml-2">
+            <LocaleSwitcher />
+          </li>
         </ul>
 
         {/* 移动端汉堡按钮 */}
-        <button
-          type="button"
-          aria-label={open ? '关闭菜单' : '打开菜单'}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-text-secondary transition-colors hover:bg-ink-card hover:text-text-primary md:hidden"
-        >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        <div className="flex items-center gap-1 md:hidden">
+          <LocaleSwitcher />
+          <button
+            type="button"
+            aria-label={open ? 'closeMenu' : 'openMenu'}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-text-secondary transition-colors hover:bg-ink-card hover:text-text-primary"
           >
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* 移动端下拉菜单 */}
@@ -89,7 +97,7 @@ export default function Header() {
                     : 'text-text-secondary hover:bg-ink-soft hover:text-primary-hover'
                 )}
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             </li>
           ))}

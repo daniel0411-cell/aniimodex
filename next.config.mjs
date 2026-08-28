@@ -1,3 +1,5 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 静态导出：将站点预渲染为纯静态文件（out/），适配 Cloudflare Pages
@@ -10,4 +12,7 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-module.exports = nextConfig;
+// 多语言支持：next-intl 插件（i18n/request.ts 提供 messages 加载）
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
+export default withNextIntl(nextConfig);
