@@ -30,3 +30,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python 缓存与虚拟环境（skill 脚本运行产生）
+__pycache__/
+*.pyc
+.venv/
+
+# SEO 凭据目录（绝勿提交，含 GSC/Bing API 密钥）
+.seo/

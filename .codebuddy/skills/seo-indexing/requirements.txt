@@ -1,0 +1,4 @@
+# seo-indexing skill 依赖
+# 仅 gsc_indexing.py 需要 cryptography（用于 RS256 JWT 签名）
+# check_sitemap.py 和 bing_submit.py 为纯标准库，无需安装
+cryptography>=42.0.0
