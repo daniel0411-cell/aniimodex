@@ -31,6 +31,12 @@ SUBMIT_BATCH = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch"
 BATCH_MAX = 200  # 单次批量最多 200 个 URL
 
 
+def auth_url(endpoint, api_key):
+    """返回带 apikey 查询参数的 URL（Bing Webmaster API 的认证方式是 URL 查询参数）。"""
+    sep = "&" if "?" in endpoint else "?"
+    return f"{endpoint}{sep}apikey={api_key}"
+
+
 def http_post_json(url, headers, body, timeout=30):
     """POST JSON 请求，返回 (status_code, text)。"""
     data = json.dumps(body).encode("utf-8")
@@ -72,15 +78,15 @@ def read_url_list(path):
 
 
 def submit_single(api_key, site_url, url):
-    """提交单个 URL。"""
-    headers = {"Ocp-Apim-Subscription-Key": api_key}
-    return http_post_json(SUBMIT_URL, headers, {"siteUrl": site_url, "url": url})
+    """提交单个 URL。Bing Webmaster API 认证使用 URL 查询参数 apikey。"""
+    headers = {"Content-Type": "application/json"}
+    return http_post_json(auth_url(SUBMIT_URL, api_key), headers, {"siteUrl": site_url, "url": url})
 
 
 def submit_batch(api_key, site_url, url_list):
-    """批量提交 URL（单次最多 200 个）。"""
-    headers = {"Ocp-Apim-Subscription-Key": api_key}
-    return http_post_json(SUBMIT_BATCH, headers, {"siteUrl": site_url, "urlList": url_list})
+    """批量提交 URL（单次最多 200 个）。认证使用 URL 查询参数 apikey。"""
+    headers = {"Content-Type": "application/json"}
+    return http_post_json(auth_url(SUBMIT_BATCH, api_key), headers, {"siteUrl": site_url, "urlList": url_list})
 
 
 def main():

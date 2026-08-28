@@ -1,15 +1,14 @@
 'use client';
 
-import { Suspense, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { getAllAniimos, filterByTwineAbilities } from '@/lib/aniimo';
 import type { AniimoEntry, TwineAbility } from '@/types/aniimo';
 import { ELEMENT_LABELS, ELEMENT_BADGE_CLASSES, TWINE_ICONS, TWINE_BADGE_CLASSES } from '@/lib/aniimo-ui';
 
 // ---------------------------------------------------------------------------
-// 能力选项定义（英文标识用于 URL 参数，中文用于 TwineAbility 匹配）
+// 能力选项定义（英文标识用于匹配，中文用于 TwineAbility 匹配）
 // ---------------------------------------------------------------------------
 interface AbilityOption {
   id: string;
@@ -24,64 +23,38 @@ const ABILITY_OPTIONS: AbilityOption[] = [
   { id: 'ram', label: '冲撞' },
 ];
 
-// ---------------------------------------------------------------------------
-// URL 参数与能力映射
-// ---------------------------------------------------------------------------
-const ID_TO_ABILITY = new Map(ABILITY_OPTIONS.map((o) => [o.id, o.label]));
-
-/** 从 URL 解析选中能力 id 列表（忽略非法值） */
-function parseAbilities(searchParams: URLSearchParams): string[] {
-  const raw = searchParams.get('abilities');
-  if (!raw) return [];
-  return raw
-    .split(',')
-    .map((s) => s.trim())
-    .filter((s) => ID_TO_ABILITY.has(s));
-}
-
-/** 把能力 id 列表编码回 URL 参数 */
-function buildQuery(ids: string[]): string {
-  const params = new URLSearchParams();
-  if (ids.length > 0) params.set('abilities', ids.join(','));
-  const qs = params.toString();
-  return qs ? `?${qs}` : '';
-}
-
-// ---------------------------------------------------------------------------
-// 客户端主体（依赖 useSearchParams，须放在 Suspense 内）
-// ---------------------------------------------------------------------------
-function TwineClient() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
-  // 选中能力 id 列表（初始值来自 URL，实时同步）
-  const [selected, setSelected] = useState<string[]>(() => parseAbilities(searchParams));
+/**
+ * Twine 能力反查器。
+ * 使用客户端 useState 管理选中能力，避免 useSearchParams 导致静态导出 bailout，
+ * 从而保证全量伊莫列表（主要可索引内容）在服务端 HTML 中可见。
+ * 由于站点为静态导出，筛选状态不写入 URL，canonical 指向 /tools/twine/ 基础页。
+ */
+export default function TwinePage() {
+  // 选中能力 id 列表（空 = 全部）
+  const [selected, setSelected] = useState<string[]>([]);
 
   const allAniimos = useMemo(() => getAllAniimos(), []);
 
   // 依并集过滤：匹配任一选中能力
   const results = useMemo(() => {
     const abilities = selected
-      .map((id) => ID_TO_ABILITY.get(id))
+      .map((id) => ABILITY_OPTIONS.find((o) => o.id === id)?.label)
       .filter((a): a is TwineAbility => Boolean(a));
     return filterByTwineAbilities(abilities);
   }, [selected]);
 
   const allSelected = selected.length === 0;
 
-  /** 切换某个能力（选中/取消），并同步 URL */
+  /** 切换某个能力（选中/取消） */
   function toggle(id: string) {
-    const next = selected.includes(id)
-      ? selected.filter((s) => s !== id)
-      : [...selected, id];
-    setSelected(next);
-    router.replace(`/tools/twine${buildQuery(next)}`, { scroll: false });
+    setSelected((prev) =>
+      prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]
+    );
   }
 
   /** 清空所有选择 */
   function selectAll() {
     setSelected([]);
-    router.replace('/tools/twine', { scroll: false });
   }
 
   return (
@@ -173,7 +146,9 @@ function TwineClient() {
 // 单只伊莫结果卡片
 // ---------------------------------------------------------------------------
 function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: string[] }) {
-  const highlighted = activeIds.some((id) => aniimo.twineAbility === ID_TO_ABILITY.get(id));
+  const highlighted = activeIds.some(
+    (id) => aniimo.twineAbility === ABILITY_OPTIONS.find((o) => o.id === id)?.label
+  );
   return (
     <Link
       href={`/dex/${aniimo.number}`}
@@ -214,16 +189,5 @@ function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: stri
         {aniimo.twineAbility}
       </span>
     </Link>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// 页面导出：用 Suspense 包裹以适配静态导出（output: 'export'）
-// ---------------------------------------------------------------------------
-export default function TwinePage() {
-  return (
-    <Suspense fallback={<div className="py-24 text-center text-text-muted">加载中…</div>}>
-      <TwineClient />
-    </Suspense>
   );
 }

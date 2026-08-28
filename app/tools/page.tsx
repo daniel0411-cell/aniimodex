@@ -1,5 +1,39 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/ui/Breadcrumb';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+
+export const metadata: Metadata = {
+  title: '工具中心：Twine 反查、元素克制与捕获估算 | AniimoDex',
+  description:
+    'AniimoDex 实用工具合集：Twine 能力反查、元素克制矩阵、捕获条件估算，助力你的伊莫冒险。',
+  alternates: {
+    canonical: `${SITE_URL}/tools/`,
+  },
+  openGraph: {
+    type: 'website',
+    url: `${SITE_URL}/tools/`,
+    title: '工具中心：Twine 反查、元素克制与捕获估算 | AniimoDex',
+    description:
+      'AniimoDex 实用工具合集：Twine 能力反查、元素克制矩阵、捕获条件估算，助力你的伊莫冒险。',
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'AniimoDex 工具中心',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '工具中心：Twine 反查、元素克制与捕获估算 | AniimoDex',
+    description:
+      'AniimoDex 实用工具合集：Twine 能力反查、元素克制矩阵、捕获条件估算，助力你的伊莫冒险。',
+    images: [`${SITE_URL}/og-image.png`],
+  },
+};
 
 const tools = [
   {

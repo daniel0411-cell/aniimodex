@@ -3,29 +3,43 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import HeroSearch from '@/components/HeroSearch';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.pages.dev';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
-// JSON-LD 结构化数据：GameService
+// JSON-LD 结构化数据：WebSite + SearchAction + Organization
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'GameService',
-  name: 'AniimoDex',
-  alternateName: 'Your Aniimo Companion',
-  description:
-    '一站式 Aniimo 图鉴与工具站：查询精灵资料、Twine 反查、元素克制关系与捕获估算，助力 Aniimo 冒险。',
-  url: SITE_URL,
-  inLanguage: 'zh-CN',
-  provider: {
-    '@type': 'Organization',
-    name: 'AniimoDex',
-  },
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'CNY',
-    category: 'Free',
-  },
-  areaServed: 'Worldwide',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: 'AniimoDex',
+      alternateName: '伊莫图鉴与工具站',
+      description:
+        'AniimoDex 是中文伊莫图鉴与工具站，提供伊莫精灵资料、Twine 反查、元素克制表、捕获估算和新手攻略。',
+      inLanguage: 'zh-CN',
+      publisher: {
+        '@id': `${SITE_URL}/#organization`,
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE_URL}/dex?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      url: `${SITE_URL}/`,
+      name: 'AniimoDex',
+      alternateName: '伊莫图鉴与工具站',
+      description:
+        'AniimoDex 是中文伊莫图鉴与工具站，提供伊莫精灵资料、Twine 反查、元素克制表、捕获估算和新手攻略。',
+    },
+  ],
 };
 
 const quickLinks: {
@@ -135,7 +149,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold text-text-primary">最新更新</h2>
           <Link href="/guide" className="text-sm text-primary-light transition-colors hover:text-primary">
-            查看全部 →
+            查看全部攻略 →
           </Link>
         </div>
         <div className="divide-y divide-ink-border rounded-xl border border-ink-border bg-ink-card">

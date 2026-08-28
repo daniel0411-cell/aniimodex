@@ -1,11 +1,8 @@
 'use client';
 
-import { Suspense, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { cn } from '@/lib/utils';
 import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
-import SearchInput from '@/components/ui/SearchInput';
 import {
   ELEMENTS,
   ELEMENT_ICONS,
@@ -21,6 +18,7 @@ import {
   TWINE_LABELS,
 } from '@/lib/aniimo-ui';
 import type { AniimoEntry, Element, Role, TwineAbility } from '@/types/aniimo';
+import { cn } from '@/lib/utils';
 
 // 元素/角色/能力选项（用于参数校验）
 const VALID_ELEMENTS = ELEMENTS as string[];
@@ -82,31 +80,22 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
   );
 }
 
-/** 列表页主体（内部组件，包裹于 Suspense 以支持 useSearchParams） */
-function DexContent() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+/**
+ * 图鉴列表页。
+ * 使用客户端 useState 管理筛选，避免 useSearchParams 导致静态导出 bailout，
+ * 从而保证完整伊莫列表（主要可索引内容）在服务端 HTML 中可见。
+ * 由于站点为静态导出（output: 'export'），筛选状态不写入 URL，
+ * canonical 始终指向 /dex/（无参数基础页面）。
+ */
+export default function DexPage() {
+  const [element, setElement] = useState<Element | ''>('');
+  const [role, setRole] = useState<Role | ''>('');
+  const [twine, setTwine] = useState<TwineAbility | ''>('');
+  const [q, setQ] = useState('');
 
-  // 从 URL 读取筛选状态
-  const element = (searchParams.get('element') ?? '') as Element | '';
-  const role = (searchParams.get('role') ?? '') as Role | '';
-  const twine = (searchParams.get('twine') ?? '') as TwineAbility | '';
-  const q = searchParams.get('q') ?? '';
-
-  /** 更新 URL 参数并保持其他参数 */
-  const updateParams = (updates: Record<string, string>) => {
-    const params = new URLSearchParams(searchParams.toString());
-    for (const [key, value] of Object.entries(updates)) {
-      if (value) params.set(key, value);
-      else params.delete(key);
-    }
-    router.replace(`/dex?${params.toString()}`);
-  };
-
-  // 过滤数据
+  // 过滤数据（初始无筛选 = 全量，服务端预渲染时即可见全部伊莫）
   const filtered = useMemo(() => {
     let list = getAllAniimos();
-
     if (element && VALID_ELEMENTS.includes(element)) {
       list = list.filter((a) => a.element === element || a.forms.some((f) => f.element === element));
     }
@@ -125,9 +114,45 @@ function DexContent() {
   }, [element, role, twine, q]);
 
   const hasActiveFilter = Boolean(element || role || twine || q);
+  const resetFilters = () => {
+    setElement('');
+    setRole('');
+    setTwine('');
+    setQ('');
+  };
+
+  // JSON-LD 结构化数据：CollectionPage + ItemList（基于完整图鉴数据）
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: 'Aniimo 图鉴',
+        description: '浏览完整伊莫图鉴，查询每只伊莫的属性、技能、Twine 能力、出现位置、捕获方法和培养信息。',
+        url: `${SITE_URL}/dex/`,
+        inLanguage: 'zh-CN',
+      },
+      {
+        '@type': 'ItemList',
+        name: '伊莫图鉴列表',
+        itemListElement: getAllAniimos().map((a, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: a.name,
+          url: `${SITE_URL}/dex/${a.number}/`,
+        })),
+      },
+    ],
+  };
 
   return (
     <div className="space-y-6">
+      {/* JSON-LD 结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="space-y-1">
         <h1 className="text-2xl font-bold text-text-primary">Aniimo 图鉴</h1>
         <p className="text-sm text-text-secondary">共 {filtered.length} / {getAllAniimos().length} 只伊莫</p>
@@ -136,10 +161,12 @@ function DexContent() {
       {/* 筛选栏 */}
       <div className="space-y-3 rounded-xl border border-ink-border bg-ink-card p-4">
         {/* 搜索框 */}
-        <SearchInput
+        <input
+          type="search"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
           placeholder="搜索名称、编号、关键词…"
-          delay={300}
-          onSearch={(value) => updateParams({ q: value })}
+          className="w-full rounded-lg border border-ink-border bg-ink-soft px-3 py-2 text-sm text-text-primary focus:border-primary-light focus:outline-none"
         />
 
         {/* 元素筛选（图标按钮） */}
@@ -152,8 +179,9 @@ function DexContent() {
                 <button
                   key={el}
                   type="button"
-                  onClick={() => updateParams({ element: active ? '' : el })}
+                  onClick={() => setElement(active ? '' : el)}
                   title={ELEMENT_LABELS[el]}
+                  aria-label={`筛选${ELEMENT_LABELS[el]}系伊莫`}
                   className={cn(
                     'flex h-9 w-9 items-center justify-center rounded-lg border text-base transition-all',
                     active
@@ -178,7 +206,7 @@ function DexContent() {
                 <button
                   key={r}
                   type="button"
-                  onClick={() => updateParams({ role: active ? '' : r })}
+                  onClick={() => setRole(active ? '' : r)}
                   className={cn(
                     'inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium transition-all',
                     active
@@ -199,7 +227,7 @@ function DexContent() {
           <span className="w-10 shrink-0 text-xs text-text-muted">Twine</span>
           <select
             value={twine}
-            onChange={(e) => updateParams({ twine: e.target.value })}
+            onChange={(e) => setTwine(e.target.value as TwineAbility | '')}
             className="rounded-lg border border-ink-border bg-ink-soft px-3 py-1.5 text-xs text-text-primary focus:border-primary-light focus:outline-none"
           >
             <option value="">全部能力</option>
@@ -215,7 +243,7 @@ function DexContent() {
         {hasActiveFilter && (
           <button
             type="button"
-            onClick={() => router.replace('/dex')}
+            onClick={resetFilters}
             className="text-xs text-primary-light hover:text-primary"
           >
             ✕ 清除全部筛选
@@ -237,7 +265,7 @@ function DexContent() {
           <p className="mt-1 text-sm text-text-muted">试试调整筛选条件或更换关键词</p>
           <button
             type="button"
-            onClick={() => router.replace('/dex')}
+            onClick={resetFilters}
             className="mt-4 text-sm text-primary-light hover:text-primary"
           >
             重置全部筛选
@@ -245,13 +273,5 @@ function DexContent() {
         </div>
       )}
     </div>
-  );
-}
-
-export default function DexPage() {
-  return (
-    <Suspense fallback={<div className="py-16 text-center text-text-muted">加载中…</div>}>
-      <DexContent />
-    </Suspense>
   );
 }

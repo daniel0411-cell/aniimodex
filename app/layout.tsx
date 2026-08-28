@@ -4,25 +4,25 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.pages.dev';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: 'AniimoDex - Your Aniimo Companion',
-    template: '%s | AniimoDex',
-  },
+  title: 'AniimoDex - 伊莫图鉴、Twine 反查与元素克制工具',
   description:
-    'AniimoDex - Your Aniimo Companion · 一站式 Aniimo 图鉴与工具站：精灵资料、Twine 反查、元素克制、捕获估算，尽在这里。',
+    'AniimoDex 是中文伊莫图鉴与工具站，提供伊莫精灵资料、Twine 反查、元素克制表、捕获估算和新手攻略。',
+  alternates: {
+    canonical: '/',
+  },
   applicationName: 'AniimoDex',
-  keywords: ['Aniimo', '图鉴', '精灵', 'Twine 反查', '元素克制', '游戏工具'],
+  keywords: ['Aniimo', '伊莫', '图鉴', '精灵', 'Twine 反查', '元素克制', '游戏工具'],
   authors: [{ name: 'AniimoDex' }],
   openGraph: {
     type: 'website',
     siteName: 'AniimoDex',
-    title: 'AniimoDex - Your Aniimo Companion',
+    title: 'AniimoDex - 伊莫图鉴、Twine 反查与元素克制工具',
     description:
-      '一站式 Aniimo 图鉴与工具站：精灵资料、Twine 反查、元素克制、捕获估算，尽在这里。',
+      'AniimoDex 是中文伊莫图鉴与工具站，提供伊莫精灵资料、Twine 反查、元素克制表、捕获估算和新手攻略。',
     url: SITE_URL,
     locale: 'zh_CN',
     images: [
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'AniimoDex',
+        alt: 'AniimoDex - 伊莫图鉴与工具站',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AniimoDex - Your Aniimo Companion',
+    title: 'AniimoDex - 伊莫图鉴、Twine 反查与元素克制工具',
     description:
-      '一站式 Aniimo 图鉴与工具站：精灵资料、Twine 反查、元素克制、捕获估算，尽在这里。',
+      'AniimoDex 是中文伊莫图鉴与工具站，提供伊莫精灵资料、Twine 反查、元素克制表、捕获估算和新手攻略。',
     images: ['/og-image.png'],
   },
   robots: {

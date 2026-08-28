@@ -26,14 +26,23 @@ export function generateStaticParams() {
   return getAllAniimos().map((a) => ({ number: a.number }));
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.pages.dev';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const aniimo = getAniimoByNumber(params.number);
-  if (!aniimo) return { title: '未找到伊莫' };
-  const title = `${aniimo.name} (${aniimo.enName}) #${aniimo.number}`;
-  const description = `${aniimo.name} · ${ELEMENT_LABELS[aniimo.element]}系 · ${ROLE_LABELS[aniimo.role]}定位。${aniimo.description}`;
-  const url = `${SITE_URL}/dex/${aniimo.number}`;
+  if (!aniimo) {
+    return {
+      title: '未找到伊莫 | AniimoDex',
+    };
+  }
+  const title = `${aniimo.name} 图鉴：属性、技能、Twine 与获取方式 | AniimoDex`;
+  const habitatText = aniimo.spawn.habitats.map((h) => h.region).join('、') || '未知区域';
+  const twineText = TWINE_LABELS[aniimo.twineAbility];
+  const description =
+    `查看 ${aniimo.name}（${aniimo.enName}，#${aniimo.number}）的完整图鉴资料，` +
+    `包括${ELEMENT_LABELS[aniimo.element]}属性、${ROLE_LABELS[aniimo.role]}定位、` +
+    `Twine 能力「${twineText}」、出现位置（${habitatText}）、捕获方法和培养建议。`;
+  const url = `${SITE_URL}/dex/${aniimo.number}/`;
   return {
     title,
     description,
@@ -45,13 +54,20 @@ export function generateMetadata({ params }: PageProps): Metadata {
       type: 'website',
       siteName: 'AniimoDex',
       locale: 'zh_CN',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: aniimo.name }],
+      images: [
+        {
+          url: `${SITE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: `${aniimo.name} 图鉴 - AniimoDex`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.png'],
+      images: [`${SITE_URL}/og-image.png`],
     },
   };
 }
@@ -245,10 +261,60 @@ export default function DexDetailPage({ params }: PageProps) {
 
   const maxStat = Math.max(...Object.values(aniimo.stats).map((v) => v ?? 0));
 
+  const url = `${SITE_URL}/dex/${aniimo.number}/`;
+  // JSON-LD 结构化数据：WebPage + BreadcrumbList
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: `${aniimo.name} 图鉴 - AniimoDex`,
+        description:
+          `查看 ${aniimo.name} 的完整图鉴资料，包括${ELEMENT_LABELS[aniimo.element]}属性、` +
+          `Twine 能力、出现位置、捕获方法和培养建议。`,
+        inLanguage: 'zh-CN',
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '图鉴',
+            item: `${SITE_URL}/dex/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: aniimo.name,
+            item: url,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="space-y-8">
+      {/* JSON-LD 结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* 面包屑 */}
-      <nav className="text-sm text-text-muted">
+      <nav aria-label="面包屑导航" className="text-sm text-text-muted">
+        <Link href="/" className="hover:text-primary-light">首页</Link>
+        <span className="mx-2">/</span>
         <Link href="/dex" className="hover:text-primary-light">图鉴</Link>
         <span className="mx-2">/</span>
         <span className="text-text-secondary">{aniimo.name}</span>
@@ -420,6 +486,33 @@ export default function DexDetailPage({ params }: PageProps) {
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
         <h2 className="mb-4 text-lg font-semibold text-text-primary">相关伊莫</h2>
         <RelatedAniimos aniimo={aniimo} />
+      </section>
+
+      {/* 相关工具与延伸阅读 */}
+      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
+        <h2 className="mb-3 text-lg font-semibold text-text-primary">相关工具</h2>
+        <ul className="space-y-2 text-sm">
+          <li>
+            <Link href="/dex" className="text-primary-light transition-colors hover:text-primary">
+              浏览完整伊莫图鉴，查看全部{aniimo.element}系伊莫
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/twine" className="text-primary-light transition-colors hover:text-primary">
+              使用 Twine 反查工具，按机动能力查找伊莫
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/type-chart" className="text-primary-light transition-colors hover:text-primary">
+              查看伊莫元素克制表，了解{aniimo.element}属性的相克关系
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/catch" className="text-primary-light transition-colors hover:text-primary">
+              使用伊莫捕获估算器，估算{aniimo.name}的捕获成功率
+            </Link>
+          </li>
+        </ul>
       </section>
     </div>
   );

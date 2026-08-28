@@ -47,7 +47,7 @@ pnpm format
 
 | 变量 | 说明 | 默认值 |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | 站点正式域名，用于 sitemap / canonical / Open Graph | `https://aniimodex.pages.dev` |
+| `NEXT_PUBLIC_SITE_URL` | 站点正式域名，用于 sitemap / canonical / Open Graph | `https://aniimodex.com` |
 
 ## 构建与静态预览
 
