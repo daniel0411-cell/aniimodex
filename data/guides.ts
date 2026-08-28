@@ -16,6 +16,8 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 5,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: ['getting-started'],
+    image: '/images/guides/game-info.jpg',
+    imageAlt: 'Aniimo open world landscape with floating islands and elemental creatures',
   },
   {
     slug: 'getting-started',
@@ -27,6 +29,8 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/twine', '/tools/catch'],
     relatedSlugs: ['element-types'],
+    image: '/images/guides/getting-started.jpg',
+    imageAlt: 'A young trainer with a flame-bird companion starting their adventure',
   },
   {
     slug: 'element-types',
@@ -38,6 +42,8 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 6,
     relatedToolHrefs: ['/tools/type-chart', '/tools/twine'],
     relatedSlugs: ['getting-started', 'dex-and-shiny'],
+    image: '/images/guides/element-types.jpg',
+    imageAlt: 'Elemental creatures clashing with glowing element symbol orbs',
   },
   {
     slug: 'dex-and-shiny',
@@ -49,6 +55,8 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 4,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: ['game-info'],
+    image: '/images/guides/dex-and-shiny.jpg',
+    imageAlt: 'A trainer holding a dex device beside a rare shiny creature',
   },
 ];
 

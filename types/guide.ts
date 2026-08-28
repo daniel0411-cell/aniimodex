@@ -23,4 +23,8 @@ export interface GuidePost {
   relatedToolHrefs?: string[];
   /** 相关文章 slug 列表（站内互链） */
   relatedSlugs?: string[];
+  /** 文章横幅图路径（相对于 public） */
+  image: string;
+  /** 图片 alt 文本 */
+  imageAlt: string;
 }

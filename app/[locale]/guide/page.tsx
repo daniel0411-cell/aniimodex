@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Card from '@/components/ui/Card';
@@ -107,7 +108,17 @@ export default async function GuidePage({
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {guidePosts.map((post) => (
           <Link key={post.slug} href={`/guide/${post.slug}`} className="group">
-            <Card className="flex h-full flex-col" interactive>
+            <Card className="flex h-full flex-col overflow-hidden" interactive>
+              {/* 卡片缩略图 */}
+              <div className="relative mb-3 aspect-[16/8] w-full overflow-hidden rounded-lg">
+                <Image
+                  src={post.image}
+                  alt={post.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <div className="flex items-center gap-2">
                 <Badge label={tp(`${post.titleKey}.tag`)} />
                 {post.element && <Badge label={post.element} element={post.element} />}

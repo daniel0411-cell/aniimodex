@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Breadcrumb from '@/components/ui/Breadcrumb';
@@ -56,10 +57,10 @@ export async function generateMetadata({
       publishedTime: post.date,
       images: [
         {
-          url: `${SITE_URL}/og-image.png`,
+          url: `${SITE_URL}${post.image}`,
           width: 1200,
-          height: 630,
-          alt: title,
+          height: 760,
+          alt: post.imageAlt,
         },
       ],
     },
@@ -67,7 +68,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [`${SITE_URL}${post.image}`],
     },
   };
 }
@@ -120,6 +121,7 @@ export default async function GuidePostPage({
         description: subtitle,
         datePublished: post.date,
         inLanguage: locale,
+        image: [`${SITE_URL}${post.image}`],
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,
         publisher: {
           '@type': 'Organization',
@@ -250,6 +252,17 @@ export default async function GuidePostPage({
       />
 
       <article>
+        {/* 文章横幅图 */}
+        <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-ink-border">
+          <Image
+            src={post.image}
+            alt={post.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 100vw, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
         <header className="space-y-3 border-b border-ink-border pb-6">
           <div className="flex flex-wrap items-center gap-2">
             <Badge label={tag} />
