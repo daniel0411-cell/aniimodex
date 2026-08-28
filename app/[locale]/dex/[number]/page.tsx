@@ -16,6 +16,7 @@ import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import type { AniimoEntry, BaseStats, EvolutionStage, Potential } from '@/types/aniimo';
+import { sourceById } from '@/data/sources';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const habitatText =
     aniimo.spawn.habitats.map((h) => h.region).join('、') || t('unknownCondition');
   const twineText = twineAb(aniimo.twineAbility);
-  const title = `${aniimo.name} Dex | ${siteName}`;
+  const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
+  const title = `${displayName} Aniimo Dex | ${siteName}`;
   const description = `${td('title')}: ${aniimo.name} (${aniimo.enName}, #${aniimo.number}), ${
     elements(aniimo.element)
   } ${roles(aniimo.role)}, Twine ${twineText}, ${habitatText}.`;
@@ -56,6 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: url,
       languages: localizedLanguages(`/dex/${aniimo.number}/`),
@@ -398,11 +401,25 @@ export default async function DexDetailPage({ params }: PageProps) {
               {t('shinyAvailable')}
             </span>
           )}
-          {aniimo.dataSource === 'placeholder' && (
+          {aniimo.dataSource !== 'official' && (
             <p className="mt-2 text-xs text-accent-light">
-              ⚠ {t('placeholderData', { note: aniimo.note ?? '?' })}
+              ⚠ {t('unverifiedData')}
             </p>
           )}
+          {(aniimo.sourceIds ?? [])
+            .map((sourceId) => sourceById.get(sourceId))
+            .filter(Boolean)
+            .map((source) => (
+              <a
+                key={source!.id}
+                href={source!.url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 block text-xs text-primary-light underline"
+              >
+                {t('source')}: {source!.title} ({source!.accessedAt})
+              </a>
+            ))}
         </div>
       </header>
 

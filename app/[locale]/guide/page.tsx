@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import { localizedLanguages } from '@/lib/i18n-metadata';
-import { guidePosts } from '@/data/guides';
+import { getPublishedGuidePosts } from '@/data/guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -61,6 +61,7 @@ export default async function GuidePage({
   const t = await getTranslations('guide');
   const tp = await getTranslations('guide.posts');
   const tb = await getTranslations('breadcrumb');
+  const guidePosts = getPublishedGuidePosts();
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
   const jsonLd = {
@@ -120,14 +121,14 @@ export default async function GuidePage({
                 />
               </div>
               <div className="flex items-center gap-2">
-                <Badge label={tp(`${post.titleKey}.tag`)} />
+                <Badge label={tp(`${post.slug}.tag`)} />
                 {post.element && <Badge label={post.element} element={post.element} />}
               </div>
               <h3 className="mt-3 font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                {tp(`${post.titleKey}.title`)}
+                {tp(`${post.slug}.title`)}
               </h3>
               <p className="mt-1 line-clamp-2 text-sm text-text-secondary">
-                {tp(`${post.titleKey}.subtitle`)}
+                {tp(`${post.slug}.subtitle`)}
               </p>
               <div className="mt-auto flex items-center justify-between pt-3 text-xs text-text-muted">
                 <span>{post.date}</span>

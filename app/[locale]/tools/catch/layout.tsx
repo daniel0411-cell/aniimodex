@@ -20,6 +20,7 @@ export async function generateMetadata({
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}/tools/catch/`,
       languages: localizedLanguages('/tools/catch/'),

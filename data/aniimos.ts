@@ -1,6 +1,6 @@
 // ============================================================================
 // Aniimo 种子数据（编号 001-020）
-// 基于 CBT3 已知信息构建，未确认字段以 placeholder / '待确认' 标注。
+// 早期内容草稿。当前所有条目均无可追溯的一手来源，不可作为已确认游戏数据。
 // ============================================================================
 
 import type {
@@ -46,6 +46,8 @@ function entry(seed: EntrySeed): AniimoEntry {
     flavorText: seed.flavorText ?? seed.description,
     shiny: seed.shiny ?? false,
     personality: defaultPersonality(personalityStat),
+    dataSource: 'unknown',
+    sourceIds: [],
   };
 }
 
@@ -126,7 +128,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Fire, role: ROLES.DPS, stats: S(45, 55, 40, 60), twineAbility: TWINE.None }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '002',
@@ -157,7 +159,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Fire, role: ROLES.DPS, stats: S(65, 82, 55, 85), twineAbility: TWINE.Fly }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '003',
@@ -182,7 +184,7 @@ const aniimos: AniimoEntry[] = [
       phenomenon: { name: '火山喷发', description: '喷发时才有极低概率出现' },
     },
     forms: [{ name: '普通', element: ELEMENTS.Fire, role: ROLES.DPS, stats: S(85, 110, 75, 100), twineAbility: TWINE.Fly }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
     note: '最终形态数值为占位，待 CBT3 进一步确认',
   }),
   entry({
@@ -207,7 +209,7 @@ const aniimos: AniimoEntry[] = [
       time: '全天',
     },
     forms: [{ name: '普通', element: ELEMENTS.Water, role: ROLES.Support, stats: S(50, 40, 50, 55), twineAbility: TWINE.Swim }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '005',
@@ -231,7 +233,7 @@ const aniimos: AniimoEntry[] = [
       time: '全天',
     },
     forms: [{ name: '普通', element: ELEMENTS.Water, role: ROLES.Support, stats: S(70, 55, 75, 70), twineAbility: TWINE.Swim }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '006',
@@ -256,7 +258,7 @@ const aniimos: AniimoEntry[] = [
       phenomenon: { name: '月相盈满', description: '满月之夜概率提升' },
     },
     forms: [{ name: '普通', element: ELEMENTS.Water, role: ROLES.Heal, stats: S(120, 70, 90, 45), twineAbility: TWINE.Swim }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
     note: '高 HP 治愈定位，具体技能数值占位',
   }),
   entry({
@@ -281,7 +283,7 @@ const aniimos: AniimoEntry[] = [
       time: '黎明',
     },
     forms: [{ name: '普通', element: ELEMENTS.Grass, role: ROLES.Regen, stats: S(55, 45, 55, 40), twineAbility: TWINE.Climb }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '008',
@@ -305,7 +307,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Grass, role: ROLES.Regen, stats: S(75, 70, 70, 65), twineAbility: TWINE.Climb }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '009',
@@ -329,7 +331,7 @@ const aniimos: AniimoEntry[] = [
       time: '黎明',
     },
     forms: [{ name: '普通', element: ELEMENTS.Grass, role: ROLES.Heal, stats: S(110, 60, 100, 40), twineAbility: TWINE.Climb }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
   }),
   entry({
     number: '010',
@@ -353,7 +355,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Earth, role: ROLES.Break, stats: S(70, 60, 90, 35), twineAbility: TWINE.Dig }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   // ---- 011-020：进阶 / 特殊栖息地 ----
   entry({
@@ -378,7 +380,7 @@ const aniimos: AniimoEntry[] = [
       time: '夜',
     },
     forms: [{ name: '普通', element: ELEMENTS.Earth, role: ROLES.Break, stats: S(95, 85, 120, 40), twineAbility: TWINE.Ram }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '012',
@@ -403,7 +405,7 @@ const aniimos: AniimoEntry[] = [
       phenomenon: { name: '大地震', description: '地震时低概率出现' },
     },
     forms: [{ name: '普通', element: ELEMENTS.Earth, role: ROLES.Break, stats: S(130, 100, 140, 30), twineAbility: TWINE.Ram }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
   }),
   entry({
     number: '013',
@@ -427,7 +429,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Wind, role: ROLES.DPS, stats: S(40, 50, 35, 85), twineAbility: TWINE.Fly }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '014',
@@ -451,7 +453,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Wind, role: ROLES.DPS, stats: S(60, 75, 50, 120), twineAbility: TWINE.Fly }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '015',
@@ -475,7 +477,7 @@ const aniimos: AniimoEntry[] = [
       time: '黄昏',
     },
     forms: [{ name: '普通', element: ELEMENTS.Wind, role: ROLES.DPS, stats: S(80, 100, 70, 140), twineAbility: TWINE.Fly }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
   }),
   entry({
     number: '016',
@@ -499,7 +501,7 @@ const aniimos: AniimoEntry[] = [
       time: '夜',
     },
     forms: [{ name: '普通', element: ELEMENTS.Lightning, role: ROLES.DPS, stats: S(48, 58, 42, 78), twineAbility: TWINE.Ram }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '017',
@@ -523,7 +525,7 @@ const aniimos: AniimoEntry[] = [
       time: '夜',
     },
     forms: [{ name: '普通', element: ELEMENTS.Lightning, role: ROLES.DPS, stats: S(70, 88, 60, 110), twineAbility: TWINE.Ram }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '018',
@@ -548,7 +550,7 @@ const aniimos: AniimoEntry[] = [
       phenomenon: { name: '落雷', description: '连续落雷时有极低概率现身' },
     },
     forms: [{ name: '普通', element: ELEMENTS.Lightning, role: ROLES.DPS, stats: S(90, 115, 80, 130), twineAbility: TWINE.Fly }],
-    dataSource: 'placeholder',
+    dataSource: 'unknown',
   }),
   entry({
     number: '019',
@@ -572,7 +574,7 @@ const aniimos: AniimoEntry[] = [
       time: '昼',
     },
     forms: [{ name: '普通', element: ELEMENTS.Ice, role: ROLES.Support, stats: S(55, 52, 55, 80), twineAbility: TWINE.Climb }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
   entry({
     number: '020',
@@ -596,7 +598,7 @@ const aniimos: AniimoEntry[] = [
       time: '夜',
     },
     forms: [{ name: '普通', element: ELEMENTS.Ice, role: ROLES.Break, stats: S(80, 78, 72, 100), twineAbility: TWINE.Dig }],
-    dataSource: 'confirmed',
+    dataSource: 'unknown',
   }),
 ];
 

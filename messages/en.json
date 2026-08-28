@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - Aniimo Dex, Twine Lookup & Type Chart Tools",
-    "defaultDescription": "AniimoDex is your all-in-one Aniimo companion: browse the full dex, look up Twine abilities, check elemental matchups and plan your captures."
+    "defaultDescription": "AniimoDex is an unofficial community companion with a developing Aniimo dex, guides and experimental tools."
   },
   "nav": {
     "home": "Home",
@@ -21,7 +21,7 @@
   "home": {
     "heroBadge": "Your Aniimo Companion",
     "heroTitleGradient": "- Your Aniimo Companion",
-    "heroSubtitle": "Your one-stop Aniimo dex & tools: browse creature data, look up Twine abilities, check elemental matchups and more.",
+    "heroSubtitle": "An unofficial community reference for developing Aniimo dex data, guides and experimental tools. Details are verified as official information becomes available.",
     "searchPlaceholder": "Search Aniimo by name, number or keyword…",
     "recommended": "Recommended",
     "latestUpdates": "Latest Updates",
@@ -30,7 +30,7 @@
     "quickLinks": {
       "dex": {
         "title": "Dex",
-        "desc": "Browse detailed dex entries for every Aniimo"
+        "desc": "Browse community-compiled Aniimo entries under verification"
       },
       "twine": {
         "title": "Twine Lookup",
@@ -63,7 +63,7 @@
   },
   "dex": {
     "title": "Aniimo Dex",
-    "subtitle": "{filtered} / {total} Aniimo",
+    "subtitle": "{filtered} / {total} community entries · data under verification",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
     "filterRole": "Role",
@@ -94,6 +94,8 @@
     "noSpecialMove": "No special field-movement ability.",
     "canInteract": "Can perform {ability}-related field interactions.",
     "placeholderData": "Some data is placeholder ({note})",
+    "unverifiedData": "Unverified draft data. Do not treat names, stats, evolutions, spawn conditions or rates as official.",
+    "source": "Source",
     "browseAll": "Browse the full dex, view all {element} Aniimo",
     "browseTwine": "Use the Twine lookup tool to find Aniimo by ability",
     "browseTypeChart": "Check the type chart for {element} matchups",
@@ -230,40 +232,15 @@
           },
           {
             "t": "p",
-            "c": "As of now, Aniimo is in closed beta (CBT3). A full release date has not been confirmed by the developer. Fans are actively tracking announcements, so check back here — we update this page the moment a launch window is revealed."
+            "c": "A full release date has not been confirmed in the sources maintained by this site. This page will be updated after an official announcement is verified."
           },
           {
             "t": "h",
-            "c": "Platforms"
+            "c": "Platforms and system requirements"
           },
           {
-            "t": "table",
-            "head": [
-              "Platform",
-              "Status"
-            ],
-            "rows": [
-              [
-                "PC / Steam",
-                "Planned"
-              ],
-              [
-                "PlayStation 5",
-                "Planned"
-              ],
-              [
-                "Xbox Series X|S",
-                "Planned"
-              ],
-              [
-                "Nintendo Switch",
-                "Under evaluation"
-              ],
-              [
-                "Mobile",
-                "Not announced"
-              ]
-            ]
+            "t": "p",
+            "c": "This site does not currently have verified official platform or PC requirement data. Earlier placeholder specifications have been removed rather than presented as facts."
           },
           {
             "t": "h",
@@ -271,7 +248,7 @@
           },
           {
             "t": "p",
-            "c": "No. Aniimo focuses on capturing creatures in the wild rather than gacha-style loot boxes. All Aniimo can, in principle, be obtained through exploration and gameplay."
+            "c": "The final monetization model has not been verified by this site. Check official announcements before treating any gacha or purchase information as confirmed."
           },
           {
             "t": "h",
@@ -279,50 +256,11 @@
           },
           {
             "t": "p",
-            "c": "Yes — the game features a companion AI that assists with navigation, tracking rare Aniimo and reading habitat conditions. More details will be shared closer to launch."
-          },
-          {
-            "t": "h",
-            "c": "System requirements"
-          },
-          {
-            "t": "table",
-            "head": [
-              "Component",
-              "Minimum",
-              "Recommended"
-            ],
-            "rows": [
-              [
-                "OS",
-                "Windows 10 64-bit",
-                "Windows 11 64-bit"
-              ],
-              [
-                "CPU",
-                "Intel i5-9400F / Ryzen 5 3600",
-                "Intel i7-12700 / Ryzen 7 5800X"
-              ],
-              [
-                "GPU",
-                "GTX 1060 / RX 580",
-                "RTX 3060 / RX 6600 XT"
-              ],
-              [
-                "RAM",
-                "8 GB",
-                "16 GB"
-              ],
-              [
-                "Storage",
-                "40 GB SSD",
-                "40 GB NVMe SSD"
-              ]
-            ]
+            "c": "No verified official AI companion feature is documented by this site yet. This section remains pending source review."
           },
           {
             "t": "quote",
-            "c": "Requirements and dates are placeholders until the developer releases official specifications."
+            "c": "Unverified placeholder specifications have been removed. Only source-backed details should be added here."
           }
         ]
       },

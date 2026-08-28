@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import HeroSearch from '@/components/HeroSearch';
 import { localizedLanguages } from '@/lib/i18n-metadata';
@@ -53,43 +52,6 @@ export async function generateMetadata({
     },
   };
 }
-
-// JSON-LD 结构化数据：WebSite + SearchAction + Organization
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebSite',
-      '@id': `${SITE_URL}/#website`,
-      url: `${SITE_URL}/`,
-      name: 'AniimoDex',
-      alternateName: 'Aniimo Dex & Tools',
-      description:
-        'AniimoDex is an all-in-one Aniimo companion: browse the dex, look up Twine abilities, check elemental matchups and plan captures.',
-      inLanguage: ['en', 'zh-Hant', 'zh-Hans'],
-      publisher: {
-        '@id': `${SITE_URL}/#organization`,
-      },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${SITE_URL}/dex?q={search_term_string}`,
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    },
-    {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/#organization`,
-      url: `${SITE_URL}/`,
-      name: 'AniimoDex',
-      alternateName: 'Aniimo Dex & Tools',
-      description:
-        'AniimoDex is an all-in-one Aniimo companion: browse the dex, look up Twine abilities, check elemental matchups and plan captures.',
-    },
-  ],
-};
 
 // 快捷入口卡片（链接不变，文案走 messages）
 const quickLinkKeys = [
@@ -144,13 +106,22 @@ export default async function HomePage({
 
   const t = await getTranslations();
   const th = await getTranslations('home');
-
-  // 占位数据：最新更新（标题为内容型，先保留简体，后续可本地化）
-  const latestUpdates = [
-    { title: '图鉴数据补充：新增区域形态', date: '2026-08-20', tag: '图鉴' },
-    { title: '元素克制表 v1.0 上线', date: '2026-08-12', tag: '工具' },
-    { title: 'Twine 反查功能开放测试', date: '2026-08-05', tag: '工具' },
-  ];
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: `${SITE_URL}/${locale}/`,
+    name: 'AniimoDex',
+    inLanguage: locale,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/${locale}/dex/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
 
   return (
     <div className="space-y-16">
@@ -233,31 +204,11 @@ export default async function HomePage({
         ))}
       </section>
 
-      {/* 最新更新 */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold text-text-primary">{th('latestUpdates')}</h2>
-          <Link href="/guide" className="text-sm text-primary-light transition-colors hover:text-primary">
-            {th('viewAllGuide')} →
-          </Link>
-        </div>
-        <div className="divide-y divide-ink-border rounded-xl border border-ink-border bg-ink-card">
-          {latestUpdates.map((item) => (
-            <div key={item.title} className="flex items-center gap-3 px-5 py-4">
-              <span className="rounded bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary-light">
-                {item.tag}
-              </span>
-              <span className="flex-1 text-sm text-text-primary">{item.title}</span>
-              <time className="shrink-0 text-xs text-text-muted">{item.date}</time>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center pt-2">
-          <Button variant="secondary" size="sm">
-            {th('loadMore')}
-          </Button>
-        </div>
-      </section>
+      <div className="text-center">
+        <Link href="/guide" className="text-sm text-primary-light transition-colors hover:text-primary">
+          {th('viewAllGuide')} →
+        </Link>
+      </div>
     </div>
   );
 }

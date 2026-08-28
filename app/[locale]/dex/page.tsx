@@ -1,7 +1,7 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useEffect, useMemo, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
 import {
@@ -94,10 +94,15 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
 export default function DexPage() {
   const t = useTranslations();
   const td = useTranslations('dex');
+  const locale = useLocale();
   const [element, setElement] = useState<Element | ''>('');
   const [role, setRole] = useState<Role | ''>('');
   const [twine, setTwine] = useState<TwineAbility | ''>('');
   const [q, setQ] = useState('');
+
+  useEffect(() => {
+    setQ(new URLSearchParams(window.location.search).get('q')?.trim() ?? '');
+  }, []);
 
   // 过滤数据（初始无筛选 = 全量，服务端预渲染时即可见全部伊莫）
   const filtered = useMemo(() => {
@@ -136,7 +141,7 @@ export default function DexPage() {
         '@type': 'CollectionPage',
         name: 'Aniimo Dex',
         description: td('title'),
-        url: `${SITE_URL}/dex/`,
+        url: `${SITE_URL}/${locale}/dex/`,
       },
       {
         '@type': 'ItemList',
@@ -145,7 +150,7 @@ export default function DexPage() {
           '@type': 'ListItem',
           position: i + 1,
           name: a.name,
-          url: `${SITE_URL}/dex/${a.number}/`,
+          url: `${SITE_URL}/${locale}/dex/${a.number}/`,
         })),
       },
     ],

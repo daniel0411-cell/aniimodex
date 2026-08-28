@@ -31,7 +31,8 @@ export default function LocaleSwitcher() {
             type="button"
             aria-pressed={active}
             onClick={() => {
-              router.replace(pathname, { locale: loc });
+              const query = window.location.search;
+              router.replace(`${pathname}${query}`, { locale: loc });
             }}
             className={cn(
               'rounded-md px-2 py-1 text-xs font-medium transition-colors',

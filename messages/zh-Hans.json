@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - 伊莫图鉴、Twine 反查与元素克制工具",
-    "defaultDescription": "AniimoDex 是伊莫的随身助手：浏览完整图鉴、反查 Twine 能力、查询元素克制并规划捕获。"
+    "defaultDescription": "AniimoDex 是非官方社区资料站，提供持续核验中的伊莫图鉴、攻略与实验性工具。"
   },
   "nav": {
     "home": "首页",
@@ -21,7 +21,7 @@
   "home": {
     "heroBadge": "伊莫的随身助手",
     "heroTitleGradient": "- 伊莫图鉴与工具",
-    "heroSubtitle": "一站式伊莫图鉴与工具：浏览生物数据、反查 Twine 能力、查询元素克制并规划捕获。",
+    "heroSubtitle": "非官方社区资料站，整理持续核验中的伊莫图鉴、攻略与实验性工具；官方资料发布后会逐步更新。",
     "searchPlaceholder": "按名称、编号或关键词搜索伊莫…",
     "recommended": "推荐工具",
     "latestUpdates": "最新更新",
@@ -30,7 +30,7 @@
     "quickLinks": {
       "dex": {
         "title": "图鉴库",
-        "desc": "浏览 Aniimo 精灵的详细图鉴信息"
+        "desc": "浏览社区整理、仍在核验中的伊莫条目"
       },
       "twine": {
         "title": "Twine 反查",
@@ -63,7 +63,7 @@
   },
   "dex": {
     "title": "伊莫图鉴",
-    "subtitle": "{filtered} / {total} 只伊莫",
+    "subtitle": "{filtered} / {total} 条社区资料 · 数据仍在核验",
     "searchPlaceholder": "按名称、编号或关键词搜索…",
     "filterElement": "元素",
     "filterRole": "定位",
@@ -94,6 +94,8 @@
     "noSpecialMove": "无特殊场地移动能力。",
     "canInteract": "可进行与「{ability}」相关的场地互动。",
     "placeholderData": "部分数据为占位（{note}）",
+    "unverifiedData": "未核验的草稿数据，请勿将名称、数值、进化、出现条件或概率视为官方资料。",
+    "source": "来源",
     "browseAll": "浏览完整图鉴，查看全部 {element} 属性伊莫",
     "browseTwine": "使用 Twine 反查工具，按能力查找伊莫",
     "browseTypeChart": "查看元素克制表，了解 {element} 的相克关系",

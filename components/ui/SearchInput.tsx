@@ -1,42 +1,30 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface SearchInputProps {
-  /** 防抖延迟（毫秒），默认 300 */
-  delay?: number;
   placeholder?: string;
   className?: string;
-  /** 防抖后的值变化时触发 */
   onSearch?: (value: string) => void;
 }
 
 export default function SearchInput({
-  delay = 300,
   placeholder = '搜索…',
   className,
   onSearch,
 }: SearchInputProps) {
   const [value, setValue] = useState('');
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const next = e.target.value;
-    setValue(next);
-
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => onSearch?.(next.trim()), delay);
-  };
 
   return (
-    <div className={cn('relative w-full', className)}>
+    <form
+      role="search"
+      className={cn('relative w-full', className)}
+      onSubmit={(event) => {
+        event.preventDefault();
+        onSearch?.(value.trim());
+      }}
+    >
       <svg
         className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted"
         fill="none"
@@ -53,10 +41,17 @@ export default function SearchInput({
       <input
         type="search"
         value={value}
-        onChange={handleChange}
+        onChange={(event) => setValue(event.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-lg border border-ink-border bg-ink-soft py-2.5 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-muted transition-colors focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary/20"
+        className="w-full rounded-lg border border-ink-border bg-ink-soft py-2.5 pl-10 pr-12 text-sm text-text-primary placeholder:text-text-muted transition-colors focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary/20"
       />
-    </div>
+      <button
+        type="submit"
+        aria-label="Search"
+        className="absolute right-1.5 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md bg-primary text-white transition-colors hover:bg-primary-hover"
+      >
+        <span aria-hidden>→</span>
+      </button>
+    </form>
   );
 }

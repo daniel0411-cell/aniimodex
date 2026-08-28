@@ -1,20 +1,21 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 import { localizedLanguages } from '@/lib/i18n-metadata';
-import { guidePosts, getGuidePost } from '@/data/guides';
+import { getGuidePost, getPublishedGuidePosts } from '@/data/guides';
 import { locales } from '@/i18n/routing';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
-    guidePosts.map((post) => ({ locale, slug: post.slug }))
+    getPublishedGuidePosts().map((post) => ({ locale, slug: post.slug }))
   );
 }
 
@@ -34,17 +35,18 @@ export async function generateMetadata({
   const meta = await getTranslations({ locale, namespace: 'meta' });
   const siteName = meta('siteName');
 
-  if (!post) {
+  if (!post || post.published === false) {
     return { title: siteName };
   }
 
-  const title = `${t(`${post.titleKey}.title`)} | ${siteName}`;
-  const description = t(`${post.titleKey}.subtitle`);
+  const title = `${t(`${post.slug}.title`)} | ${siteName}`;
+  const description = t(`${post.slug}.subtitle`);
   const path = `/guide/${slug}/`;
 
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
       languages: localizedLanguages(path),
@@ -87,15 +89,13 @@ export default async function GuidePostPage({
   const meta = await getTranslations('meta');
   const siteName = meta('siteName');
 
-  if (!post) {
-    return null;
-  }
+  if (!post || post.published === false) notFound();
 
   // 文章标题与正文（正文为结构化块数组，直接从原始 messages 读取避免 next-intl 干扰）
-  const title = tp(`${post.titleKey}.title`);
-  const subtitle = tp(`${post.titleKey}.subtitle`);
-  const tag = tp(`${post.titleKey}.tag`);
-  const lead = tp(`${post.titleKey}.lead`);
+  const title = tp(`${post.slug}.title`);
+  const subtitle = tp(`${post.slug}.subtitle`);
+  const tag = tp(`${post.slug}.tag`);
+  const lead = tp(`${post.slug}.lead`);
   const messages = await getMessages();
   const body = (messages.guide.posts[post.slug].body ?? []) as Block[];
 
@@ -314,12 +314,12 @@ export default async function GuidePostPage({
               return (
                 <Link key={relSlug} href={`/guide/${relSlug}`} className="group">
                   <Card className="flex h-full flex-col" interactive>
-                    <Badge label={tp(`${rel.titleKey}.tag`)} />
+                    <Badge label={tp(`${rel.slug}.tag`)} />
                     <h3 className="mt-3 font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                      {tp(`${rel.titleKey}.title`)}
+                      {tp(`${rel.slug}.title`)}
                     </h3>
                     <p className="mt-1 line-clamp-2 text-sm text-text-muted">
-                      {tp(`${rel.titleKey}.subtitle`)}
+                      {tp(`${rel.slug}.subtitle`)}
                     </p>
                   </Card>
                 </Link>

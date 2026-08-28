@@ -8,9 +8,6 @@ import type { GuidePost } from '@/types/guide';
 export const guidePosts: GuidePost[] = [
   {
     slug: 'game-info',
-    titleKey: 'game-info.title',
-    subtitleKey: 'game-info.subtitle',
-    tagKey: 'game-info.tag',
     element: '暗',
     date: '2026-08-28',
     readMinutes: 5,
@@ -18,12 +15,10 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['getting-started'],
     image: '/images/guides/game-info.jpg',
     imageAlt: 'Aniimo open world landscape with floating islands and elemental creatures',
+    published: false,
   },
   {
     slug: 'getting-started',
-    titleKey: 'getting-started.title',
-    subtitleKey: 'getting-started.subtitle',
-    tagKey: 'getting-started.tag',
     element: '风',
     date: '2026-08-28',
     readMinutes: 7,
@@ -34,9 +29,6 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'element-types',
-    titleKey: 'element-types.title',
-    subtitleKey: 'element-types.subtitle',
-    tagKey: 'element-types.tag',
     element: '雷',
     date: '2026-08-28',
     readMinutes: 6,
@@ -47,9 +39,6 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'dex-and-shiny',
-    titleKey: 'dex-and-shiny.title',
-    subtitleKey: 'dex-and-shiny.subtitle',
-    tagKey: 'dex-and-shiny.tag',
     element: '光',
     date: '2026-08-28',
     readMinutes: 4,
@@ -68,4 +57,8 @@ export function getGuidePost(slug: string): GuidePost | undefined {
 /** 全部文章 slug（供 generateStaticParams 使用） */
 export function getAllGuideSlugs(): string[] {
   return guidePosts.map((p) => p.slug);
+}
+
+export function getPublishedGuidePosts(): GuidePost[] {
+  return guidePosts.filter((post) => post.published !== false);
 }

@@ -17,6 +17,9 @@ export type Potential = 'Common' | 'Good' | 'Elite' | 'Perfect';
 /** 进化阶段 */
 export type EvolutionStage = 'Lumin' | 'Gamma' | 'Nova';
 
+/** 内容证据等级：仅有可追溯的一手资料时才能标为 official。 */
+export type EvidenceStatus = 'official' | 'community' | 'unknown';
+
 /** MBTI 式性格：影响属性加成。数值占位，具体效果待定。 */
 export type Personality =
   | 'Analyst' // 分析家
@@ -166,8 +169,10 @@ export interface AniimoEntry {
   personality: Record<Personality, PersonalityBonus>;
   /** 形态列表（至少包含第一形态） */
   forms: AniimoForm[];
-  /** 数据可靠性标注：'confirmed' 已知 / 'placeholder' 占位待补 */
-  dataSource: 'confirmed' | 'placeholder';
+  /** 整条记录的最低证据等级；具体结论在 data/verification.ts 中逐项核验。 */
+  dataSource: EvidenceStatus;
+  /** 支撑本条记录的来源 ID；official 状态至少需要一个来源。 */
+  sourceIds?: string[];
   /** 备注（占位项说明） */
   note?: string;
 }
