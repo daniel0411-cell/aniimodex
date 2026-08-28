@@ -28,7 +28,10 @@
     "viewAllGuide": "View all guides",
     "loadMore": "Load More",
     "quickLinks": {
-      "dex": { "title": "Dex", "desc": "Browse detailed dex entries for every Aniimo" },
+      "dex": {
+        "title": "Dex",
+        "desc": "Browse detailed dex entries for every Aniimo"
+      },
       "twine": {
         "title": "Twine Lookup",
         "desc": "Pick a movement ability to find matching Aniimo"
@@ -37,7 +40,10 @@
         "title": "Type Chart",
         "desc": "Check matchups between the 9 elements"
       },
-      "guide": { "title": "Beginner Guide", "desc": "Tutorials and practical tips collection" }
+      "guide": {
+        "title": "Beginner Guide",
+        "desc": "Tutorials and practical tips collection"
+      }
     }
   },
   "footer": {
@@ -97,20 +103,30 @@
     "unknownCondition": "Unknown condition",
     "and": "and",
     "timeDay": "Day",
-    "timeNight": "Night"
+    "timeNight": "Night",
+    "shinyAvailable": "Shiny form available"
   },
   "tools": {
     "title": "Tools Center",
     "subtitle": "A collection of practical tools: lookup, matchup matrix and catch estimator for your Aniimo adventure.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
-    "twineTags": ["Lookup", "Movement"],
+    "twineTags": [
+      "Lookup",
+      "Movement"
+    ],
     "typeChartTitle": "Type Matchup Matrix",
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
-    "typeChartTags": ["Matrix", "Matchup"],
+    "typeChartTags": [
+      "Matrix",
+      "Matchup"
+    ],
     "catchTitle": "Catch Condition Tool",
     "catchDesc": "Estimate catch rates based on level, trap, time and more, with strategic tips.",
-    "catchTags": ["Capture", "Strategy"]
+    "catchTags": [
+      "Capture",
+      "Strategy"
+    ]
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
@@ -191,7 +207,303 @@
     "browseDex": "Browse the full dex for stats and locations",
     "browseTwine": "Use the Twine lookup to find Aniimo by ability",
     "browseTypeChart": "Check the type chart for matchups",
-    "browseCatch": "Use the catch estimator to prepare resources"
+    "browseCatch": "Use the catch estimator to prepare resources",
+    "minRead": "min read",
+    "posts": {
+      "game-info": {
+        "title": "Aniimo Overview: Platforms, Release & System Requirements",
+        "subtitle": "Everything you need to know about Aniimo before launch.",
+        "tag": "Info",
+        "lead": "Aniimo is an upcoming creature-collecting adventure in which you befriend, train and battle elemental Aniimo across a vast open world. Here is the central hub for the most-asked questions.",
+        "body": [
+          {
+            "t": "h",
+            "c": "What is Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Aniimo is a monster-capture RPG that blends open-world exploration, creature collection and elemental turn-based combat. You start with a beginner companion, then wander diverse habitats to meet, befriend and evolve dozens of elemental creatures."
+          },
+          {
+            "t": "h",
+            "c": "Release date"
+          },
+          {
+            "t": "p",
+            "c": "As of now, Aniimo is in closed beta (CBT3). A full release date has not been confirmed by the developer. Fans are actively tracking announcements, so check back here — we update this page the moment a launch window is revealed."
+          },
+          {
+            "t": "h",
+            "c": "Platforms"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Platform",
+              "Status"
+            ],
+            "rows": [
+              [
+                "PC / Steam",
+                "Planned"
+              ],
+              [
+                "PlayStation 5",
+                "Planned"
+              ],
+              [
+                "Xbox Series X|S",
+                "Planned"
+              ],
+              [
+                "Nintendo Switch",
+                "Under evaluation"
+              ],
+              [
+                "Mobile",
+                "Not announced"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo a gacha game?"
+          },
+          {
+            "t": "p",
+            "c": "No. Aniimo focuses on capturing creatures in the wild rather than gacha-style loot boxes. All Aniimo can, in principle, be obtained through exploration and gameplay."
+          },
+          {
+            "t": "h",
+            "c": "Is there an AI companion?"
+          },
+          {
+            "t": "p",
+            "c": "Yes — the game features a companion AI that assists with navigation, tracking rare Aniimo and reading habitat conditions. More details will be shared closer to launch."
+          },
+          {
+            "t": "h",
+            "c": "System requirements"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Component",
+              "Minimum",
+              "Recommended"
+            ],
+            "rows": [
+              [
+                "OS",
+                "Windows 10 64-bit",
+                "Windows 11 64-bit"
+              ],
+              [
+                "CPU",
+                "Intel i5-9400F / Ryzen 5 3600",
+                "Intel i7-12700 / Ryzen 7 5800X"
+              ],
+              [
+                "GPU",
+                "GTX 1060 / RX 580",
+                "RTX 3060 / RX 6600 XT"
+              ],
+              [
+                "RAM",
+                "8 GB",
+                "16 GB"
+              ],
+              [
+                "Storage",
+                "40 GB SSD",
+                "40 GB NVMe SSD"
+              ]
+            ]
+          },
+          {
+            "t": "quote",
+            "c": "Requirements and dates are placeholders until the developer releases official specifications."
+          }
+        ]
+      },
+      "getting-started": {
+        "title": "Getting Started: Aniimo Beginner Guide",
+        "subtitle": "How to play Aniimo from your very first capture.",
+        "tag": "Beginner",
+        "lead": "New to Aniimo? This quick-start guide walks you through your first steps: choosing a companion, exploring habitats, catching and evolving your first Aniimo.",
+        "body": [
+          {
+            "t": "h",
+            "c": "Pick your starter"
+          },
+          {
+            "t": "p",
+            "c": "Early on you will be offered a beginner companion. Your choice shapes your opening team's element balance, so consider picking one that covers a type you find tricky."
+          },
+          {
+            "t": "h",
+            "c": "Explore by habitat and weather"
+          },
+          {
+            "t": "p",
+            "c": "Each Aniimo appears in specific habitats, weather and times of day. Open the dex and filter by element or location to plan your routes. Use the Twine lookup to find creatures by movement ability."
+          },
+          {
+            "t": "li",
+            "c": "Check the weather forecast before heading out — rare Aniimo often appear in storms or fog."
+          },
+          {
+            "t": "li",
+            "c": "Some final forms only show up during special phenomena, such as volcanic eruptions."
+          },
+          {
+            "t": "h",
+            "c": "Catching basics"
+          },
+          {
+            "t": "p",
+            "c": "Weaken an Aniimo to lower its catch resistance, then use an Aniipod. Higher Aniipod levels and advanced traps improve your odds. Use the catch estimator to plan your resources."
+          },
+          {
+            "t": "h",
+            "c": "Build a balanced team"
+          },
+          {
+            "t": "p",
+            "c": "Keep a mix of roles — attacker, healer, support and breaker — and avoid stacking the same element. Check the type chart to understand matchups before battle."
+          },
+          {
+            "t": "quote",
+            "c": "Tip: an early balanced team of three different elements lets you adapt to almost any encounter."
+          }
+        ]
+      },
+      "element-types": {
+        "title": "Element Type Chart: Advanced Matchup Guide",
+        "subtitle": "Master the 9 elemental relationships to win battles.",
+        "tag": "Advanced",
+        "lead": "Aniimo features nine elements with a full offensive and defensive multiplier matrix. Understanding these relationships is the key to building a strong team.",
+        "body": [
+          {
+            "t": "h",
+            "c": "The nine elements"
+          },
+          {
+            "t": "p",
+            "c": "Fire, Water, Grass, Earth, Wind, Lightning, Ice, Light and Dark. Every Aniimo belongs to at least one element, and matchups are decided by both attacker and defender."
+          },
+          {
+            "t": "h",
+            "c": "How multipliers work"
+          },
+          {
+            "t": "li",
+            "c": "2x — Super effective: damage is doubled."
+          },
+          {
+            "t": "li",
+            "c": "1x — Neutral: normal damage."
+          },
+          {
+            "t": "li",
+            "c": "0.5x — Resisted: damage is halved."
+          },
+          {
+            "t": "li",
+            "c": "0x — Immune: no damage at all."
+          },
+          {
+            "t": "p",
+            "c": "Attacks between the same element are usually resisted, so avoid mirroring your opponent's type."
+          },
+          {
+            "t": "h",
+            "c": "Practical team advice"
+          },
+          {
+            "t": "p",
+            "c": "Cover your weaknesses: if your team relies on Water, add a Grass or Lightning attacker to handle opposing Water types. Use the interactive type chart to preview every matchup before you commit."
+          },
+          {
+            "t": "h",
+            "c": "Evolving changes typing"
+          },
+          {
+            "t": "p",
+            "c": "Some Aniimo change their element (or gain a secondary one) when they evolve. Always re-check the dex after evolving to update your matchup plan."
+          },
+          {
+            "t": "quote",
+            "c": "Pro tip: build around a core element, then fill the two empty slots with Aniimo that beat your core's natural counters."
+          }
+        ]
+      },
+      "dex-and-shiny": {
+        "title": "Using the Dex: Stats, Habitats & Shiny Aniimo",
+        "subtitle": "Read dex entries like a pro and hunt shiny forms.",
+        "tag": "Dex",
+        "lead": "The dex is your most important tool in Aniimo. Learn how to read entries, spot valuable data and hunt rare shiny variants.",
+        "body": [
+          {
+            "t": "h",
+            "c": "How to read a dex entry"
+          },
+          {
+            "t": "p",
+            "c": "Each entry shows base stats, potential distribution, evolution path, spawn conditions and available forms. Base stats tell you the creature's strengths, while potential hints at how well it can grow."
+          },
+          {
+            "t": "h",
+            "c": "Base stats at a glance"
+          },
+          {
+            "t": "li",
+            "c": "HP — how much damage it can take."
+          },
+          {
+            "t": "li",
+            "c": "ATK / DEF — offense and defense."
+          },
+          {
+            "t": "li",
+            "c": "SPD — determines turn order in battle."
+          },
+          {
+            "t": "li",
+            "c": "Heal / Break — support strength when applicable."
+          },
+          {
+            "t": "h",
+            "c": "Spawn conditions"
+          },
+          {
+            "t": "p",
+            "c": "Habitat, weather and time of day narrow down where to look. Final forms often require special phenomena. Revisit the dex right before hunting to confirm the current conditions."
+          },
+          {
+            "t": "h",
+            "c": "Shiny forms"
+          },
+          {
+            "t": "p",
+            "c": "Some Aniimo have a rare shiny form with an alternate colour. Shiny rates are extremely low, so plan long hunts, bring high-level Aniipods and use advanced traps."
+          },
+          {
+            "t": "li",
+            "c": "Shiny forms are cosmetic-only and do not change stats or typing."
+          },
+          {
+            "t": "li",
+            "c": "Legendary final forms are the most commonly shiny-hunted due to their visual impact."
+          },
+          {
+            "t": "quote",
+            "c": "Patience pays: shiny hunting is a marathon, not a sprint."
+          }
+        ]
+      }
+    },
+    "relatedArticles": "Related guides"
   },
   "elements": {
     "Light": "Light",

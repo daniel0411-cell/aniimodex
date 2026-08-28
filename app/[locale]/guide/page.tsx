@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Card from '@/components/ui/Card';
-import Badge, { type Element } from '@/components/ui/Badge';
+import Badge from '@/components/ui/Badge';
 import { localizedLanguages } from '@/lib/i18n-metadata';
+import { guidePosts } from '@/data/guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -49,13 +50,6 @@ export async function generateMetadata({
   };
 }
 
-// 攻略文章（内容型：标题与标签目前为简体占位，多语言内容为后续工作）
-const guideArticles: { title: string; tag: string; element: Element; href: string }[] = [
-  { title: '快速上手：认识 Aniimo 的基础玩法', tag: '入门', element: '风', href: '/dex' },
-  { title: '元素克制详解：如何搭配阵容', tag: '进阶', element: '雷', href: '/tools/type-chart' },
-  { title: 'Twine 反查的使用技巧', tag: '工具', element: '光', href: '/tools/twine' },
-];
-
 export default async function GuidePage({
   params,
 }: {
@@ -64,6 +58,7 @@ export default async function GuidePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('guide');
+  const tp = await getTranslations('guide.posts');
   const tb = await getTranslations('breadcrumb');
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
@@ -110,16 +105,25 @@ export default async function GuidePage({
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {guideArticles.map((article) => (
-          <Link key={article.title} href={article.href} className="group">
-            <Card className="h-full" interactive>
+        {guidePosts.map((post) => (
+          <Link key={post.slug} href={`/guide/${post.slug}`} className="group">
+            <Card className="flex h-full flex-col" interactive>
               <div className="flex items-center gap-2">
-                <Badge label={article.tag} />
-                <Badge label={article.element} element={article.element} />
+                <Badge label={tp(`${post.titleKey}.tag`)} />
+                {post.element && <Badge label={post.element} element={post.element} />}
               </div>
               <h3 className="mt-3 font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                {article.title}
+                {tp(`${post.titleKey}.title`)}
               </h3>
+              <p className="mt-1 line-clamp-2 text-sm text-text-secondary">
+                {tp(`${post.titleKey}.subtitle`)}
+              </p>
+              <div className="mt-auto flex items-center justify-between pt-3 text-xs text-text-muted">
+                <span>{post.date}</span>
+                <span>
+                  {post.readMinutes} {t('minRead')}
+                </span>
+              </div>
             </Card>
           </Link>
         ))}

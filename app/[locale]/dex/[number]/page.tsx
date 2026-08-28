@@ -385,6 +385,19 @@ export default async function DexDetailPage({ params }: PageProps) {
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-text-secondary">
             {aniimo.description}
           </p>
+          {/* 英文图鉴简介（flavor text） */}
+          {aniimo.flavorText && (
+            <p className="mt-2 max-w-xl text-sm italic text-text-muted">
+              &ldquo;{aniimo.flavorText}&rdquo;
+            </p>
+          )}
+          {/* 闪亮形态标记 */}
+          {aniimo.shiny && (
+            <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
+              <span aria-hidden>✦</span>
+              {t('shinyAvailable')}
+            </span>
+          )}
           {aniimo.dataSource === 'placeholder' && (
             <p className="mt-2 text-xs text-accent-light">
               ⚠ {t('placeholderData', { note: aniimo.note ?? '?' })}

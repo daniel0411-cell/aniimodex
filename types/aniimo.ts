@@ -144,6 +144,10 @@ export interface AniimoEntry {
   enName: string;
   /** 描述 */
   description: string;
+  /** 英文图鉴简介（flavor text，承接 'aniimo dex' 等英文搜索） */
+  flavorText: string;
+  /** 是否拥有闪亮形态（承接 'aniimo shiny' 搜索） */
+  shiny: boolean;
   /** 基础元素（第一形态） */
   element: Element;
   /** 基础角色 */
