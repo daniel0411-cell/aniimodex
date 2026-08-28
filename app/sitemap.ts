@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllAniimos } from '@/lib/aniimo';
+import { guidePosts } from '@/data/guides';
 import { locales, defaultLocale } from '@/i18n/routing';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
@@ -11,7 +12,7 @@ export function generateStaticParams() {
 }
 
 // 站点内容最近更新日期
-const SITE_LAST_MODIFIED = '2026-08-20';
+const SITE_LAST_MODIFIED = '2026-08-28';
 
 // 静态页面路由（不含图鉴详情）
 const STATIC_ROUTES: {
@@ -68,5 +69,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     buildLocalizedUrls(`/dex/${aniimo.number}/`, 0.6, 'weekly')
   );
 
-  return [...staticUrls, ...dexUrls];
+  // 攻略文章详情页（每篇文章 × 每个 locale）
+  const guideUrls = guidePosts.flatMap((post) =>
+    buildLocalizedUrls(`/guide/${post.slug}/`, 0.6, 'monthly')
+  );
+
+  return [...staticUrls, ...dexUrls, ...guideUrls];
 }
