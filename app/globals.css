@@ -9,21 +9,21 @@
   ------------------------------------------------------------------ */
   :root {
     /* 品牌色 */
-    --color-primary: 74 157 236; /* #4A9DEC 天空蓝 */
-    --color-primary-hover: 58 139 216; /* 加深 */
-    --color-primary-light: 59 130 246; /* #3B82F6 可读蓝（浅底 AA 对比度） */
+    --color-primary: 34 139 230; /* 天空蓝 */
+    --color-primary-hover: 22 112 190;
+    --color-primary-light: 28 117 201;
     --color-secondary: 63 185 80; /* #3FB950 草原绿 */
     --color-secondary-hover: 52 158 66;
     --color-secondary-light: 34 122 48; /* #227A30 可读绿 */
-    --color-accent: 245 166 35; /* #F5A623 琥珀橙 */
-    --color-accent-hover: 230 148 22;
-    --color-accent-light: 217 119 6; /* #D97706 可读琥珀（浅底 AA 对比度） */
+    --color-accent: 241 101 86; /* 珊瑚红 */
+    --color-accent-hover: 210 74 62;
+    --color-accent-light: 195 62 52;
 
     /* 背景 / 卡片 */
-    --color-bg: 247 249 252; /* #F7F9FC 晨雾白 */
-    --color-bg-soft: 238 242 247; /* #EEF2F7 次级背景 */
+    --color-bg: 247 250 249; /* 带自然气息的雾白 */
+    --color-bg-soft: 236 243 242;
     --color-card: 255 255 255; /* #FFFFFF 卡片 */
-    --color-border: 229 233 242; /* #E5E9F2 边框 */
+    --color-border: 218 228 228;
 
     /* 文字 */
     --color-text: 31 41 55; /* #1F2937 主文字 */
@@ -37,9 +37,21 @@
 
   body {
     @apply bg-ink text-text-primary antialiased;
+    background-image: linear-gradient(180deg, rgb(225 244 249 / 0.55) 0, transparent 32rem);
   }
 
   ::selection {
     @apply bg-primary text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

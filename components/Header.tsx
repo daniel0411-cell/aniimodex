@@ -20,12 +20,11 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const isActive = (href: string) =>
-    href === '/' ? pathname === '/' : pathname.startsWith(href);
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-border bg-white/80 backdrop-blur">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <header className="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105">
           <div className="relative h-9 w-9 overflow-hidden rounded-xl shadow-glow">
@@ -38,9 +37,7 @@ export default function Header() {
               priority
             />
           </div>
-          <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-lg font-bold tracking-tight text-transparent">
-            AniimoDex
-          </span>
+          <span className="text-lg font-bold text-text-primary">AniimoDex</span>
         </Link>
 
         {/* 桌面端导航 */}

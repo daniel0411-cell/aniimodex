@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import Card from '@/components/ui/Card';
 import HeroSearch from '@/components/HeroSearch';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 
@@ -55,52 +54,90 @@ export async function generateMetadata({
 
 // 快捷入口卡片（链接不变，文案走 messages）
 const quickLinkKeys = [
-  { href: '/dex', icon: 'BookOpen', key: 'dex', accent: 'from-primary/20 to-primary/5' },
   {
     href: '/tools/twine',
     icon: 'Link2',
     key: 'twine',
-    accent: 'from-accent/20 to-accent/5',
-    recommended: true,
+    accent: 'bg-emerald-100 text-emerald-700',
   },
   {
     href: '/tools/type-chart',
     icon: 'Zap',
     key: 'typeChart',
-    accent: 'from-primary/20 to-primary/5',
+    accent: 'bg-sky-100 text-sky-700',
   },
-  { href: '/guide', icon: 'Compass', key: 'guide', accent: 'from-accent/20 to-accent/5' },
+  { href: '/guide', icon: 'Compass', key: 'guide', accent: 'bg-rose-100 text-rose-700' },
 ];
 
 // Lucide 图标映射
 const iconMap: Record<string, React.FC<{ className?: string; size?: number }>> = {
   BookOpen: ({ className, size = 24 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
     </svg>
   ),
   Link2: ({ className, size = 24 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M9 17H7A5 5 0 0 1 7 7h2" />
+      <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
+      <line x1="8" x2="16" y1="12" y2="12" />
     </svg>
   ),
   Zap: ({ className, size = 24 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
     </svg>
   ),
   Compass: ({ className, size = 24 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
     </svg>
   ),
 };
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -124,7 +161,7 @@ export default async function HomePage({
   };
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-10 sm:space-y-14">
       {/* JSON-LD 结构化数据 */}
       <script
         type="application/ld+json"
@@ -132,83 +169,111 @@ export default async function HomePage({
       />
 
       {/* Hero 区域 */}
-      <section className="relative overflow-hidden rounded-3xl px-4 py-12 text-center sm:py-20">
-        {/* 卡通背景图 */}
+      <section className="relative min-h-[32rem] overflow-hidden rounded-lg sm:min-h-[38rem]">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/hero-bg.jpg"
             alt=""
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
         </div>
-        {/* 浮动装饰 */}
-        <div className="pointer-events-none absolute left-[10%] top-[15%] h-3 w-3 rounded-full bg-primary/30 animate-bounce" style={{ animationDuration: '3s' }} />
-        <div className="pointer-events-none absolute right-[15%] top-[20%] h-2 w-2 rounded-full bg-accent/40 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }} />
-        <div className="pointer-events-none absolute left-[20%] bottom-[25%] h-2.5 w-2.5 rounded-full bg-primary-light/30 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-        <div className="pointer-events-none absolute right-[10%] bottom-[20%] h-3 w-3 rounded-full bg-accent/25 animate-bounce" style={{ animationDuration: '5s', animationDelay: '2s' }} />
 
-        <div className="relative space-y-4">
-          <span className="inline-block rounded-full border border-primary/40 bg-white/80 px-3 py-1 text-xs font-medium text-primary-hover shadow-card backdrop-blur-sm">
+        <div className="relative flex min-h-[32rem] max-w-2xl flex-col justify-end px-5 py-8 sm:min-h-[38rem] sm:px-10 sm:py-12 lg:px-14">
+          <span className="mb-4 w-fit rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
             {th('heroBadge')}
           </span>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-text-primary drop-shadow-sm sm:text-5xl lg:text-6xl">
-            AniimoDex{' '}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              {th('heroTitleGradient')}
-            </span>
+          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+            AniimoDex
           </h1>
-          <p className="mx-auto max-w-2xl text-base text-text-secondary sm:text-lg">
+          <p className="mt-3 max-w-xl text-sm leading-6 text-white/85 sm:text-base">
             {th('heroSubtitle')}
           </p>
-        </div>
-
-        {/* 搜索入口 */}
-        <div className="relative mx-auto mt-8 w-full max-w-xl">
-          <HeroSearch />
-        </div>
-      </section>
-
-      {/* 快捷入口卡片 */}
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {quickLinkKeys.map((link) => (
-          <Link key={link.href} href={link.href} className="group">
-            <Card className="relative h-full transition-all hover:-translate-y-0.5 hover:border-primary-light hover:shadow-glow">
-              {link.recommended && (
-                <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-accent/20 px-2 py-0.5 text-xs font-semibold text-accent-light ring-1 ring-accent/40">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-accent">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                  </svg>
-                  {th('recommended')}
-                </span>
-              )}
-              <div
-                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br text-primary ${link.accent}`}
-              >
-                {(() => {
-                  const Icon = iconMap[link.icon];
-                  return Icon ? <Icon size={22} /> : null;
-                })()}
-              </div>
-              <h3 className="font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                {t(`home.quickLinks.${link.key}.title`)}
-              </h3>
-              <p className="mt-1 text-sm text-text-secondary">
-                {t(`home.quickLinks.${link.key}.desc`)}
-              </p>
-            </Card>
+          <div className="mt-6 w-full max-w-xl">
+            <HeroSearch />
+          </div>
+          <Link
+            href="/dex"
+            className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white hover:text-white/80"
+          >
+            {t('home.quickLinks.dex.title')} <span aria-hidden>→</span>
           </Link>
-        ))}
+        </div>
       </section>
 
-      <div className="text-center">
-        <Link href="/guide" className="text-sm text-primary-light transition-colors hover:text-primary">
-          {th('viewAllGuide')} →
+      <section className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
+        <Link
+          href="/dex"
+          className="group relative min-h-64 overflow-hidden rounded-lg bg-sky-100 p-6 sm:p-8"
+        >
+          <div className="relative z-10 max-w-md">
+            <span className="text-xs font-semibold uppercase text-primary-light">01 / DEX</span>
+            <h2 className="mt-3 text-2xl font-bold text-text-primary sm:text-3xl">
+              {t('home.quickLinks.dex.title')}
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-text-secondary">
+              {t('home.quickLinks.dex.desc')}
+            </p>
+            <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-light">
+              {th('exploreDex')} <span aria-hidden>→</span>
+            </span>
+          </div>
+          <div className="absolute -bottom-12 -right-5 h-56 w-56 rounded-full border-[28px] border-white/50 transition-transform duration-300 group-hover:scale-105" />
+          <div className="absolute bottom-9 right-10 text-7xl font-black text-white/80" aria-hidden>
+            ?
+          </div>
         </Link>
-      </div>
+
+        <div className="divide-y divide-ink-border border-y border-ink-border">
+          {quickLinkKeys.map((link) => {
+            const Icon = iconMap[link.icon];
+            return (
+              <Link key={link.href} href={link.href} className="group flex items-center gap-4 py-5">
+                <span
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg ${link.accent}`}
+                >
+                  {Icon ? <Icon size={21} /> : null}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold text-text-primary group-hover:text-primary-light">
+                    {t(`home.quickLinks.${link.key}.title`)}
+                  </span>
+                  <span className="mt-0.5 block text-sm text-text-muted">
+                    {t(`home.quickLinks.${link.key}.desc`)}
+                  </span>
+                </span>
+                <span className="text-text-muted group-hover:text-primary-light" aria-hidden>
+                  →
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="border-l-4 border-secondary bg-white px-5 py-4 shadow-card sm:flex sm:items-center sm:justify-between">
+        <div>
+          <p className="text-xs font-semibold uppercase text-secondary-light">
+            {th('verificationLabel')}
+          </p>
+          <h2 className="mt-1 text-lg font-semibold text-text-primary">
+            {th('verificationTitle')}
+          </h2>
+          <p className="mt-1 text-sm text-text-muted">{th('verificationDescription')}</p>
+        </div>
+        <a
+          href="https://www.aniimo.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex shrink-0 text-sm font-semibold text-primary-light hover:text-primary-hover sm:mt-0"
+        >
+          {th('officialSource')} ↗
+        </a>
+      </section>
     </div>
   );
 }

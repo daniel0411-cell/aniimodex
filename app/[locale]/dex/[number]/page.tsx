@@ -50,9 +50,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const twineText = twineAb(aniimo.twineAbility);
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
   const title = `${displayName} Aniimo Dex | ${siteName}`;
-  const description = `${td('title')}: ${aniimo.name} (${aniimo.enName}, #${aniimo.number}), ${
-    elements(aniimo.element)
-  } ${roles(aniimo.role)}, Twine ${twineText}, ${habitatText}.`;
+  const description = `${td('title')}: ${aniimo.name} (${aniimo.enName}, #${aniimo.number}), ${elements(
+    aniimo.element
+  )} ${roles(aniimo.role)}, Twine ${twineText}, ${habitatText}.`;
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
   return {
@@ -328,7 +328,7 @@ export default async function DexDetailPage({ params }: PageProps) {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-8">
       {/* JSON-LD 结构化数据 */}
       <script
         type="application/ld+json"
@@ -349,23 +349,34 @@ export default async function DexDetailPage({ params }: PageProps) {
       </nav>
 
       {/* 头部 */}
-      <header className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
-        {/* 大图占位（渐变） */}
+      <header className="grid overflow-hidden rounded-lg border border-ink-border bg-white shadow-card md:grid-cols-[minmax(18rem,0.85fr)_1.15fr]">
         <div
           className={cn(
-            'flex h-40 w-40 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-7xl shadow-glow',
+            'relative flex min-h-72 items-center justify-center overflow-hidden bg-gradient-to-br md:min-h-[30rem]',
             ELEMENT_GRADIENTS[aniimo.element]
           )}
         >
-          {ELEMENT_ICONS[aniimo.element]}
+          <span className="h-48 w-48 rounded-[45%_55%_50%_50%] bg-white/45 blur-[1px] md:h-64 md:w-64" />
+          <span className="absolute text-7xl font-black text-white/90" aria-hidden>
+            ?
+          </span>
+          <span className="absolute bottom-5 left-5 text-xs font-semibold uppercase text-white/80">
+            {t('visualPending')}
+          </span>
         </div>
-        <div className="flex-1 text-center sm:text-left">
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
-            <span className="font-mono text-sm text-text-muted">#{aniimo.number}</span>
-            <h1 className="text-3xl font-bold text-text-primary">{aniimo.name}</h1>
+        <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-xs font-semibold text-text-muted">
+              #{aniimo.number}
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-semibold text-amber-800">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              {t('reviewing')}
+            </span>
           </div>
-          <p className="text-text-secondary">{aniimo.enName}</p>
-          <div className="mt-3 flex items-center justify-center gap-2 sm:justify-start">
+          <h1 className="mt-3 text-3xl font-bold text-text-primary sm:text-4xl">{aniimo.name}</h1>
+          <p className="mt-1 text-text-secondary">{aniimo.enName}</p>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
             <span
               className={cn(
                 'inline-flex items-center gap-1 rounded-full border px-3 py-1 text-sm',
@@ -385,7 +396,7 @@ export default async function DexDetailPage({ params }: PageProps) {
               {roleLabel}
             </span>
           </div>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-text-secondary">
+          <p className="mt-5 max-w-xl text-sm leading-6 text-text-secondary">
             {aniimo.description}
           </p>
           {/* 英文图鉴简介（flavor text） */}
@@ -402,9 +413,9 @@ export default async function DexDetailPage({ params }: PageProps) {
             </span>
           )}
           {aniimo.dataSource !== 'official' && (
-            <p className="mt-2 text-xs text-accent-light">
-              ⚠ {t('unverifiedData')}
-            </p>
+            <div className="mt-5 border-l-4 border-amber-400 bg-amber-50 px-4 py-3 text-xs leading-5 text-amber-900">
+              {t('unverifiedData')}
+            </div>
           )}
           {(aniimo.sourceIds ?? [])
             .map((sourceId) => sourceById.get(sourceId))
@@ -423,27 +434,8 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      {/* 基础属性面板 */}
-      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('baseStats')}</h2>
-        <div className="space-y-2.5">
-          {(Object.keys(STAT_LABELS) as (keyof BaseStats)[])
-            .filter((k) => aniimo.stats[k] !== undefined)
-            .map((k) => (
-              <StatBar key={k} label={STAT_LABELS[k]} value={aniimo.stats[k]!} max={maxStat} />
-            ))}
-        </div>
-      </section>
-
-      {/* 进化路线 */}
-      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('evolution')}</h2>
-        <EvolutionPanel aniimo={aniimo} />
-      </section>
-
-      {/* Twine 能力 + 出现条件 */}
-      <div className="grid gap-6 md:grid-cols-2">
-        <section className="rounded-xl border border-ink-border bg-ink-card p-5">
+      <div className="grid gap-5 md:grid-cols-2">
+        <section className="rounded-lg border border-ink-border bg-ink-card p-5">
           <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('twineAbility')}</h2>
           <div
             className={cn(
@@ -461,7 +453,7 @@ export default async function DexDetailPage({ params }: PageProps) {
           </p>
         </section>
 
-        <section className="rounded-xl border border-ink-border bg-ink-card p-5">
+        <section className="rounded-lg border border-ink-border bg-ink-card p-5">
           <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('spawnConditions')}</h2>
           <dl className="space-y-3 text-sm">
             <div className="flex gap-2">
@@ -489,6 +481,46 @@ export default async function DexDetailPage({ params }: PageProps) {
           </dl>
         </section>
       </div>
+
+      <details className="group rounded-lg border border-amber-200 bg-amber-50/50">
+        <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-text-primary marker:hidden">
+          <span className="flex items-center justify-between gap-4">
+            <span>
+              {t('draftData')}
+              <span className="mt-1 block text-xs font-normal text-text-muted">
+                {t('draftDataHint')}
+              </span>
+            </span>
+            <span className="text-amber-700 transition-transform group-open:rotate-180" aria-hidden>
+              ⌄
+            </span>
+          </span>
+        </summary>
+        <div className="grid gap-6 border-t border-amber-200 p-5 lg:grid-cols-2">
+          <section>
+            <h2 className="mb-4 text-base font-semibold text-text-primary">{t('baseStats')}</h2>
+            <div className="space-y-2.5">
+              {(Object.keys(STAT_LABELS) as (keyof BaseStats)[])
+                .filter((k) => aniimo.stats[k] !== undefined)
+                .map((k) => (
+                  <StatBar key={k} label={STAT_LABELS[k]} value={aniimo.stats[k]!} max={maxStat} />
+                ))}
+            </div>
+          </section>
+          <section>
+            <h2 className="mb-4 text-base font-semibold text-text-primary">{t('evolution')}</h2>
+            <EvolutionPanel aniimo={aniimo} />
+          </section>
+          <section>
+            <h2 className="mb-4 text-base font-semibold text-text-primary">{t('potential')}</h2>
+            <div className="space-y-2.5">
+              {POTENTIAL_ORDER.map((p) => (
+                <PotentialBar key={p} label={p} value={aniimo.potential[p]} />
+              ))}
+            </div>
+          </section>
+        </div>
+      </details>
 
       {/* 形态列表 */}
       {aniimo.forms.length > 1 && (
@@ -527,24 +559,14 @@ export default async function DexDetailPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* 潜力分布 */}
-      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
-        <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('potential')}</h2>
-        <div className="space-y-2.5">
-          {POTENTIAL_ORDER.map((p) => (
-            <PotentialBar key={p} label={p} value={aniimo.potential[p]} />
-          ))}
-        </div>
-      </section>
-
       {/* 相关推荐 */}
-      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
+      <section className="rounded-lg border border-ink-border bg-ink-card p-5">
         <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('related')}</h2>
         <RelatedAniimos aniimo={aniimo} />
       </section>
 
       {/* 相关工具与延伸阅读 */}
-      <section className="rounded-xl border border-ink-border bg-ink-card p-5">
+      <section className="rounded-lg border border-ink-border bg-ink-card p-5">
         <h2 className="mb-3 text-lg font-semibold text-text-primary">{t('relatedTools')}</h2>
         <ul className="space-y-2 text-sm">
           <li>

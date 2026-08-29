@@ -49,7 +49,9 @@ export default async function LocaleLayout({
       <body className="flex min-h-screen flex-col bg-ink text-text-primary">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
+          <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 sm:py-8">
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>

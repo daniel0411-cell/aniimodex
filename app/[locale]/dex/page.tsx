@@ -34,51 +34,67 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
   return (
     <Link
       href={`/dex/${aniimo.number}`}
-      className="group rounded-2xl border border-ink-border bg-ink-card p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-glow"
+      className="group min-w-0 overflow-hidden rounded-lg border border-ink-border bg-ink-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover"
     >
-      {/* 头部：编号 + Twine 图标 */}
-      <div className="flex items-start justify-between">
-        <span className="text-xs font-mono text-text-muted">#{aniimo.number}</span>
-        <span title={t('dex.twineTitle', { name: twineLabel })} className="text-sm opacity-70">
-          {TWINE_ICONS[aniimo.twineAbility]}
+      <div className="flex items-center justify-between px-3 pt-3">
+        <span className="font-mono text-[11px] font-semibold text-text-muted">
+          #{aniimo.number}
+        </span>
+        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-amber-700">
+          <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+          {t('dex.unverified')}
         </span>
       </div>
 
-      {/* 头像占位（渐变） */}
       <div
         className={cn(
-          'mx-auto mt-3 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br transition-transform duration-300 group-hover:scale-110',
+          'relative mt-2 flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br transition-transform duration-300',
           ELEMENT_GRADIENTS[aniimo.element]
         )}
       >
-        <ElementIcon element={aniimo.element} className={ELEMENT_ICON_COLORS[aniimo.element]} size={36} />
+        <span className="absolute h-24 w-24 rounded-[45%_55%_50%_50%] bg-white/45 blur-[1px] transition-transform duration-300 group-hover:scale-105 sm:h-28 sm:w-28" />
+        <span className="relative text-4xl font-black text-white/90" aria-hidden>
+          ?
+        </span>
+        <ElementIcon
+          element={aniimo.element}
+          className={cn(
+            'absolute bottom-3 right-3 opacity-70',
+            ELEMENT_ICON_COLORS[aniimo.element]
+          )}
+          size={22}
+        />
       </div>
 
-      {/* 名称 */}
-      <h3 className="mt-3 text-center font-semibold text-text-primary group-hover:text-primary-light">
-        {aniimo.name}
-      </h3>
-      <p className="text-center text-xs text-text-muted">{aniimo.enName}</p>
-
-      {/* 标签：元素 + 角色 */}
-      <div className="mt-3 flex items-center justify-center gap-1.5">
-        <span
-          className={cn(
-            'inline-flex items-center rounded-full border px-2 py-0.5 text-xs',
-            ELEMENT_BADGE_CLASSES[aniimo.element]
-          )}
-        >
-          {elementLabel}
-        </span>
-        <span
-          className={cn(
-            'inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs',
-            ROLE_BADGE_CLASSES[aniimo.role]
-          )}
-        >
-          {ROLE_ICONS[aniimo.role]}
-          {roleLabel}
-        </span>
+      <div className="p-3 sm:p-4">
+        <h3 className="truncate font-semibold text-text-primary group-hover:text-primary-light">
+          {aniimo.name}
+        </h3>
+        <p className="truncate text-xs text-text-muted">{aniimo.enName}</p>
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+          <span
+            className={cn(
+              'inline-flex items-center rounded-full border px-2 py-0.5 text-[10px]',
+              ELEMENT_BADGE_CLASSES[aniimo.element]
+            )}
+          >
+            {elementLabel}
+          </span>
+          <span
+            className={cn(
+              'inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px]',
+              ROLE_BADGE_CLASSES[aniimo.role]
+            )}
+          >
+            {ROLE_ICONS[aniimo.role]} {roleLabel}
+          </span>
+          <span
+            title={t('dex.twineTitle', { name: twineLabel })}
+            className="ml-auto text-xs text-text-muted"
+          >
+            {TWINE_ICONS[aniimo.twineAbility]}
+          </span>
+        </div>
       </div>
     </Link>
   );
@@ -108,7 +124,9 @@ export default function DexPage() {
   const filtered = useMemo(() => {
     let list = getAllAniimos();
     if (element && VALID_ELEMENTS.includes(element)) {
-      list = list.filter((a) => a.element === element || a.forms.some((f) => f.element === element));
+      list = list.filter(
+        (a) => a.element === element || a.forms.some((f) => f.element === element)
+      );
     }
     if (role && VALID_ROLES.includes(role)) {
       list = list.filter((a) => a.role === role || a.forms.some((f) => f.role === role));
@@ -157,28 +175,31 @@ export default function DexPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-8">
       {/* JSON-LD 结构化数据 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="space-y-1">
-        <h1 className="text-2xl font-bold text-text-primary">{td('title')}</h1>
-        <p className="text-sm text-text-secondary">
+      <header className="border-b border-ink-border pb-5 pt-2 sm:flex sm:items-end sm:justify-between">
+        <div>
+          <span className="text-xs font-semibold uppercase text-primary-light">ANIIMO ARCHIVE</span>
+          <h1 className="mt-1 text-3xl font-bold text-text-primary sm:text-4xl">{td('title')}</h1>
+        </div>
+        <p className="mt-2 text-sm text-text-secondary sm:mt-0">
           {td('subtitle', { filtered: filtered.length, total: getAllAniimos().length })}
         </p>
       </header>
 
       {/* 筛选栏 */}
-      <div className="space-y-3 rounded-xl border border-ink-border bg-ink-card p-4">
+      <div className="space-y-3 rounded-lg border border-white/80 bg-white/90 p-3 shadow-card backdrop-blur-xl sm:sticky sm:top-16 sm:z-30 sm:p-4">
         {/* 搜索框 */}
         <input
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={td('searchPlaceholder')}
-          className="w-full rounded-lg border border-ink-border bg-ink-soft px-3 py-2 text-sm text-text-primary focus:border-primary-light focus:outline-none"
+          className="h-10 w-full rounded-md border border-ink-border bg-white px-3 text-sm text-text-primary focus:border-primary-light focus:outline-none"
         />
 
         {/* 元素筛选（图标按钮） */}
@@ -195,7 +216,7 @@ export default function DexPage() {
                   title={t(`elements.${el}`)}
                   aria-label={td('filterElementAria', { element: t(`elements.${el}`) })}
                   className={cn(
-                    'flex h-9 w-9 items-center justify-center rounded-xl border transition-all',
+                    'flex h-9 w-9 items-center justify-center rounded-md border transition-all',
                     active
                       ? 'border-primary bg-primary/20 shadow-glow'
                       : 'border-ink-border bg-ink-soft hover:border-primary-light hover:bg-primary/10'
@@ -265,7 +286,7 @@ export default function DexPage() {
 
       {/* 卡片网格 / 空状态 */}
       {filtered.length > 0 ? (
-        <section className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {filtered.map((aniimo) => (
             <DexCard key={aniimo.number} aniimo={aniimo} />
           ))}

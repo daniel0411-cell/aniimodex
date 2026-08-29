@@ -24,6 +24,11 @@
     "heroSubtitle": "非官方社群資料站，整理持續核驗中的伊莫圖鑑、攻略與實驗性工具；官方資料發布後會逐步更新。",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋伊莫…",
     "recommended": "推薦工具",
+    "exploreDex": "探索圖鑑",
+    "verificationLabel": "資料狀態",
+    "verificationTitle": "官方資料核驗正在進行",
+    "verificationDescription": "核心玩法與已公布平台已有來源；圖鑑條目和計算公式仍在逐項核驗。",
+    "officialSource": "查看官方來源",
     "latestUpdates": "最新更新",
     "viewAllGuide": "查看全部攻略",
     "loadMore": "載入更多",
@@ -74,7 +79,8 @@
     "emptyHint": "試試調整篩選條件或關鍵字",
     "resetAll": "重設全部篩選",
     "filterElementAria": "篩選 {element} 屬性的伊莫",
-    "twineTitle": "Twine：{name}"
+    "twineTitle": "Twine：{name}",
+    "unverified": "核驗中"
   },
   "dexDetail": {
     "notFound": "未找到該伊莫",
@@ -106,29 +112,24 @@
     "and": "和",
     "timeDay": "白天",
     "timeNight": "夜晚",
-    "shinyAvailable": "擁有閃亮形態"
+    "shinyAvailable": "擁有閃亮形態",
+    "reviewing": "核驗中",
+    "visualPending": "官方形象待確認",
+    "draftData": "社群草稿資料",
+    "draftDataHint": "屬性、進化和潛力尚未核驗，預設摺疊顯示。"
   },
   "tools": {
     "title": "工具中心",
     "subtitle": "一系列實用工具：反查、剋制矩陣與捕捉估算，助力你的伊莫冒險。",
     "twineTitle": "Twine 能力反查",
     "twineDesc": "選擇場地移動能力，反查對應的伊莫。",
-    "twineTags": [
-      "反查",
-      "移動"
-    ],
+    "twineTags": ["反查", "移動"],
     "typeChartTitle": "元素剋制矩陣",
     "typeChartDesc": "9×9 元素倍率表：一眼看清攻防剋制關係。",
-    "typeChartTags": [
-      "矩陣",
-      "剋制"
-    ],
+    "typeChartTags": ["矩陣", "剋制"],
     "catchTitle": "捕捉條件工具",
     "catchDesc": "根據等級、陷阱、時段等估算捕捉率，並給出策略建議。",
-    "catchTags": [
-      "捕捉",
-      "策略"
-    ]
+    "catchTags": ["捕捉", "策略"]
   },
   "twineTool": {
     "title": "Twine 能力反查",
@@ -240,31 +241,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "平台",
-              "狀態"
-            ],
+            "head": ["平台", "狀態"],
             "rows": [
-              [
-                "PC / Steam",
-                "規劃中"
-              ],
-              [
-                "PlayStation 5",
-                "規劃中"
-              ],
-              [
-                "Xbox Series X|S",
-                "規劃中"
-              ],
-              [
-                "Nintendo Switch",
-                "評估中"
-              ],
-              [
-                "行動裝置",
-                "未公布"
-              ]
+              ["PC / Steam", "規劃中"],
+              ["PlayStation 5", "規劃中"],
+              ["Xbox Series X|S", "規劃中"],
+              ["Nintendo Switch", "評估中"],
+              ["行動裝置", "未公布"]
             ]
           },
           {
@@ -289,37 +272,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "元件",
-              "最低",
-              "建議"
-            ],
+            "head": ["元件", "最低", "建議"],
             "rows": [
-              [
-                "作業系統",
-                "Windows 10 64-bit",
-                "Windows 11 64-bit"
-              ],
-              [
-                "CPU",
-                "Intel i5-9400F / Ryzen 5 3600",
-                "Intel i7-12700 / Ryzen 7 5800X"
-              ],
-              [
-                "GPU",
-                "GTX 1060 / RX 580",
-                "RTX 3060 / RX 6600 XT"
-              ],
-              [
-                "記憶體",
-                "8 GB",
-                "16 GB"
-              ],
-              [
-                "儲存空間",
-                "40 GB SSD",
-                "40 GB NVMe SSD"
-              ]
+              ["作業系統", "Windows 10 64-bit", "Windows 11 64-bit"],
+              ["CPU", "Intel i5-9400F / Ryzen 5 3600", "Intel i7-12700 / Ryzen 7 5800X"],
+              ["GPU", "GTX 1060 / RX 580", "RTX 3060 / RX 6600 XT"],
+              ["記憶體", "8 GB", "16 GB"],
+              ["儲存空間", "40 GB SSD", "40 GB NVMe SSD"]
             ]
           },
           {

@@ -43,12 +43,12 @@ export default function SearchInput({
         value={value}
         onChange={(event) => setValue(event.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-lg border border-ink-border bg-ink-soft py-2.5 pl-10 pr-12 text-sm text-text-primary placeholder:text-text-muted transition-colors focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary/20"
+        className="h-12 w-full rounded-lg border border-white/80 bg-white/95 py-2.5 pl-10 pr-14 text-sm text-text-primary shadow-card placeholder:text-text-muted transition-colors focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary/20"
       />
       <button
         type="submit"
         aria-label="Search"
-        className="absolute right-1.5 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md bg-primary text-white transition-colors hover:bg-primary-hover"
+        className="absolute right-1.5 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-md bg-accent text-white transition-colors hover:bg-accent-hover"
       >
         <span aria-hidden>→</span>
       </button>

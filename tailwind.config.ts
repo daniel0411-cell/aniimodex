@@ -53,10 +53,9 @@ const config: Config = {
       boxShadow: {
         // 柔和浅色阴影（适配白色卡片）
         glow: '0 4px 20px rgba(74, 157, 236, 0.18)',
-        'glow-accent': '0 4px 20px rgba(245, 166, 35, 0.18)',
+        'glow-accent': '0 4px 20px rgba(241, 101, 86, 0.18)',
         card: '0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04)',
-        'card-hover':
-          '0 4px 6px rgba(15, 23, 42, 0.06), 0 10px 20px rgba(15, 23, 42, 0.08)',
+        'card-hover': '0 4px 6px rgba(15, 23, 42, 0.06), 0 10px 20px rgba(15, 23, 42, 0.08)',
       },
     },
   },

@@ -24,6 +24,11 @@
     "heroSubtitle": "An unofficial community reference for developing Aniimo dex data, guides and experimental tools. Details are verified as official information becomes available.",
     "searchPlaceholder": "Search Aniimo by name, number or keyword…",
     "recommended": "Recommended",
+    "exploreDex": "Explore the dex",
+    "verificationLabel": "Source status",
+    "verificationTitle": "Official-source review is in progress",
+    "verificationDescription": "Core game details and announced platforms are sourced; creature records and formulas remain under review.",
+    "officialSource": "View official source",
     "latestUpdates": "Latest Updates",
     "viewAllGuide": "View all guides",
     "loadMore": "Load More",
@@ -74,7 +79,8 @@
     "emptyHint": "Try adjusting your filters or keywords",
     "resetAll": "Reset all filters",
     "filterElementAria": "Filter {element} Aniimo",
-    "twineTitle": "Twine: {name}"
+    "twineTitle": "Twine: {name}",
+    "unverified": "Reviewing"
   },
   "dexDetail": {
     "notFound": "Aniimo not found",
@@ -106,29 +112,24 @@
     "and": "and",
     "timeDay": "Day",
     "timeNight": "Night",
-    "shinyAvailable": "Shiny form available"
+    "shinyAvailable": "Shiny form available",
+    "reviewing": "Under review",
+    "visualPending": "Official visual pending",
+    "draftData": "Community draft data",
+    "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default."
   },
   "tools": {
     "title": "Tools Center",
     "subtitle": "A collection of practical tools: lookup, matchup matrix and catch estimator for your Aniimo adventure.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
-    "twineTags": [
-      "Lookup",
-      "Movement"
-    ],
+    "twineTags": ["Lookup", "Movement"],
     "typeChartTitle": "Type Matchup Matrix",
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
-    "typeChartTags": [
-      "Matrix",
-      "Matchup"
-    ],
+    "typeChartTags": ["Matrix", "Matchup"],
     "catchTitle": "Catch Condition Tool",
     "catchDesc": "Estimate catch rates based on level, trap, time and more, with strategic tips.",
-    "catchTags": [
-      "Capture",
-      "Strategy"
-    ]
+    "catchTags": ["Capture", "Strategy"]
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
