@@ -51,11 +51,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function GuidePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function GuidePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('guide');
@@ -111,15 +107,17 @@ export default async function GuidePage({
           <Link key={post.slug} href={`/guide/${post.slug}`} className="group">
             <Card className="flex h-full flex-col overflow-hidden" interactive>
               {/* 卡片缩略图 */}
-              <div className="relative mb-3 aspect-[16/8] w-full overflow-hidden rounded-lg">
-                <Image
-                  src={post.image}
-                  alt={post.imageAlt}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              {post.image && (
+                <div className="relative mb-3 aspect-[16/8] w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={post.image}
+                    alt={post.imageAlt ?? ''}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <Badge label={tp(`${post.slug}.tag`)} />
                 {post.element && <Badge label={post.element} element={post.element} />}

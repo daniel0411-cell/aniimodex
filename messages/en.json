@@ -29,6 +29,8 @@
     "verificationTitle": "Official-source review is in progress",
     "verificationDescription": "Core game details and announced platforms are sourced; creature records and formulas remain under review.",
     "officialSource": "View official source",
+    "officialGuidesLabel": "Official-source guides",
+    "officialGuidesTitle": "Answers to the most searched Aniimo questions",
     "latestUpdates": "Latest Updates",
     "viewAllGuide": "View all guides",
     "loadMore": "Load More",
@@ -212,232 +214,159 @@
     "browseTypeChart": "Check the type chart for matchups",
     "browseCatch": "Use the catch estimator to prepare resources",
     "minRead": "min read",
+    "verifiedOfficial": "Verified against official sources",
+    "lastVerified": "Last verified: {date}",
+    "officialSources": "Official sources",
     "posts": {
-      "game-info": {
-        "title": "Aniimo Overview: Platforms, Release & System Requirements",
-        "subtitle": "Everything you need to know about Aniimo before launch.",
-        "tag": "Info",
-        "lead": "Aniimo is an upcoming creature-collecting adventure in which you befriend, train and battle elemental Aniimo across a vast open world. Here is the central hub for the most-asked questions.",
+      "aniimo-release-date": {
+        "title": "Aniimo Release Date: Global Launch Time and Pre-Registration",
+        "subtitle": "Aniimo launches globally on September 16, 2026 at 10:00 UTC+8.",
+        "tag": "Release",
+        "lead": "Aniimo is scheduled to launch globally on September 16, 2026 at 10:00 UTC+8 as a free-to-play title. Steam may show September 15 because storefront dates vary by region and time zone.",
         "body": [
           {
             "t": "h",
-            "c": "What is Aniimo?"
+            "c": "What is the Aniimo release date?"
           },
           {
             "t": "p",
-            "c": "Aniimo is a monster-capture RPG that blends open-world exploration, creature collection and elemental turn-based combat. You start with a beginner companion, then wander diverse habitats to meet, befriend and evolve dozens of elemental creatures."
+            "c": "The PlayStation Store states that Aniimo will officially launch on September 16, 2026 at 10:00 UTC+8. That is September 16 at 02:00 UTC and September 15 at 10:00 PM Eastern Daylight Time."
           },
           {
             "t": "h",
-            "c": "Release date"
+            "c": "Why does Steam show September 15?"
           },
           {
             "t": "p",
-            "c": "A full release date has not been confirmed in the sources maintained by this site. This page will be updated after an official announcement is verified."
+            "c": "The Steam listing checked in the United States displays Sep 15, 2026. This is consistent with a simultaneous global launch crossing calendar dates in different time zones; the UTC+8 time above is the explicit launch time published by PlayStation."
           },
           {
             "t": "h",
-            "c": "Platforms and system requirements"
+            "c": "Is Aniimo free to play?"
           },
           {
             "t": "p",
-            "c": "This site does not currently have verified official platform or PC requirement data. Earlier placeholder specifications have been removed rather than presented as facts."
+            "c": "Yes. PlayStation, Xbox and Steam describe Aniimo as free-to-play. Optional pre-order packs and in-app purchases are separate from access to the base game."
           },
           {
             "t": "h",
-            "c": "Is Aniimo a gacha game?"
+            "c": "Can I pre-register now?"
           },
           {
             "t": "p",
-            "c": "The final monetization model has not been verified by this site. Check official announcements before treating any gacha or purchase information as confirmed."
-          },
-          {
-            "t": "h",
-            "c": "Is there an AI companion?"
-          },
-          {
-            "t": "p",
-            "c": "No verified official AI companion feature is documented by this site yet. This section remains pending source review."
+            "c": "The official Aniimo website currently offers pre-registration and links to its supported storefronts. Use the official site or the store page for your platform rather than unofficial download sites."
           },
           {
             "t": "quote",
-            "c": "Unverified placeholder specifications have been removed. Only source-backed details should be added here."
+            "c": "Release information was last checked on August 29, 2026. Store dates can display differently by region."
           }
         ]
       },
-      "getting-started": {
-        "title": "Getting Started: Aniimo Beginner Guide",
-        "subtitle": "How to play Aniimo from your very first capture.",
-        "tag": "Beginner",
-        "lead": "New to Aniimo? This quick-start guide walks you through your first steps: choosing a companion, exploring habitats, catching and evolving your first Aniimo.",
+      "aniimo-platforms": {
+        "title": "Aniimo Platforms: PC, PS5, Xbox and Mobile",
+        "subtitle": "Official store links and current platform availability for Aniimo.",
+        "tag": "Platforms",
+        "lead": "The official Aniimo website links PlayStation 5, Xbox, Steam, iOS, Google Play and Epic Games Store. The verified store listings below clarify what is currently confirmed for each platform.",
         "body": [
           {
             "t": "h",
-            "c": "Pick your starter"
+            "c": "Which platforms will Aniimo be on?"
           },
           {
-            "t": "p",
-            "c": "Early on you will be offered a beginner companion. Your choice shapes your opening team's element balance, so consider picking one that covers a type you find tricky."
-          },
-          {
-            "t": "h",
-            "c": "Explore by habitat and weather"
-          },
-          {
-            "t": "p",
-            "c": "Each Aniimo appears in specific habitats, weather and times of day. Open the dex and filter by element or location to plan your routes. Use the Twine lookup to find creatures by movement ability."
-          },
-          {
-            "t": "li",
-            "c": "Check the weather forecast before heading out — rare Aniimo often appear in storms or fog."
-          },
-          {
-            "t": "li",
-            "c": "Some final forms only show up during special phenomena, such as volcanic eruptions."
+            "t": "table",
+            "head": ["Platform", "Official status"],
+            "rows": [
+              ["PlayStation 5", "Official PlayStation Store page"],
+              ["Xbox Series X|S", "Xbox product page lists Xbox Series X|S"],
+              ["Windows PC", "Steam and Xbox product pages list Windows/PC"],
+              ["iOS", "Linked by the official Aniimo website"],
+              ["Google Play", "Linked by the official Aniimo website"],
+              ["Epic Games Store", "Linked by the official Aniimo website"]
+            ]
           },
           {
             "t": "h",
-            "c": "Catching basics"
+            "c": "Is Aniimo on Steam?"
           },
           {
             "t": "p",
-            "c": "Weaken an Aniimo to lower its catch resistance, then use an Aniipod. Higher Aniipod levels and advanced traps improve your odds. Use the catch estimator to plan your resources."
+            "c": "Yes. Steam App 4126040 is the official listing linked by Aniimo. It currently lists Windows support, free-to-play access and Pawprint Studio as developer and publisher."
           },
           {
             "t": "h",
-            "c": "Build a balanced team"
+            "c": "Is Aniimo on PS5 and Xbox?"
           },
           {
             "t": "p",
-            "c": "Keep a mix of roles — attacker, healer, support and breaker — and avoid stacking the same element. Check the type chart to understand matchups before battle."
+            "c": "Yes. The official site links a PlayStation Store concept page and an Xbox store page. Xbox currently lists PC and Xbox Series X|S."
           },
           {
-            "t": "quote",
-            "c": "Tip: an early balanced team of three different elements lets you adapt to almost any encounter."
+            "t": "h",
+            "c": "Is Aniimo coming to iPhone and Android?"
+          },
+          {
+            "t": "p",
+            "c": "The official website links both the App Store and Google Play. Availability, compatibility and download timing can vary by country, device and storefront."
+          },
+          {
+            "t": "h",
+            "c": "Is Nintendo Switch confirmed?"
+          },
+          {
+            "t": "p",
+            "c": "No Nintendo Switch listing appears among the official platform links checked for this page. Treat Switch claims as unconfirmed unless Aniimo or Nintendo publishes an official listing."
           }
         ]
       },
-      "element-types": {
-        "title": "Element Type Chart: Advanced Matchup Guide",
-        "subtitle": "Master the 9 elemental relationships to win battles.",
-        "tag": "Advanced",
-        "lead": "Aniimo features nine elements with a full offensive and defensive multiplier matrix. Understanding these relationships is the key to building a strong team.",
+      "what-is-aniimo": {
+        "title": "What Is Aniimo? Gameplay, Twine and Open-World Features",
+        "subtitle": "An official-source overview of Aniimo and how its core gameplay works.",
+        "tag": "Overview",
+        "lead": "Aniimo is a free-to-play creature-catching open-world RPG from Pawprint Studio. Players explore Idyll, capture Aniimo, Twine with collected creatures and take part in solo, multiplayer and competitive activities.",
         "body": [
           {
             "t": "h",
-            "c": "The nine elements"
+            "c": "What kind of game is Aniimo?"
           },
           {
             "t": "p",
-            "c": "Fire, Water, Grass, Earth, Wind, Lightning, Ice, Light and Dark. Every Aniimo belongs to at least one element, and matchups are decided by both attacker and defender."
+            "c": "Official store descriptions call Aniimo a next-generation creature-catching open-world RPG. Its core loop combines exploration, collecting creatures, using their abilities, solving puzzles and taking part in real-time battles and challenges."
           },
           {
             "t": "h",
-            "c": "How multipliers work"
-          },
-          {
-            "t": "li",
-            "c": "2x — Super effective: damage is doubled."
-          },
-          {
-            "t": "li",
-            "c": "1x — Neutral: normal damage."
-          },
-          {
-            "t": "li",
-            "c": "0.5x — Resisted: damage is halved."
-          },
-          {
-            "t": "li",
-            "c": "0x — Immune: no damage at all."
+            "c": "What does Twine mean in Aniimo?"
           },
           {
             "t": "p",
-            "c": "Attacks between the same element are usually resisted, so avoid mirroring your opponent's type."
+            "c": "Twine lets a Pathfinder become an Aniimo they have collected and use that creature’s abilities. Official examples include gliding, diving and burrowing to explore, solve puzzles, battle and overcome environmental challenges."
           },
           {
             "t": "h",
-            "c": "Practical team advice"
+            "c": "How does catching work?"
           },
           {
             "t": "p",
-            "c": "Cover your weaknesses: if your team relies on Water, add a Grass or Lightning attacker to handle opposing Water types. Use the interactive type chart to preview every matchup before you commit."
+            "c": "Official store text says players catch Aniimo with Aniipods, can set traps and must time catches. Creatures may appear according to environment, weather, phenomena and time of day. Exact probability formulas are not published in the sources used here."
           },
           {
             "t": "h",
-            "c": "Evolving changes typing"
+            "c": "Does Aniimo have multiplayer?"
           },
           {
             "t": "p",
-            "c": "Some Aniimo change their element (or gain a secondary one) when they evolve. Always re-check the dex after evolving to update your matchup plan."
+            "c": "Yes. Steam lists multiplayer, PvP, online co-op and cross-platform multiplayer. Xbox describes Egg Heist as a real-time PVEVP activity for three-player teams, alongside solo and multiplayer play."
+          },
+          {
+            "t": "h",
+            "c": "Who makes Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Steam lists Pawprint Studio as both developer and publisher."
           },
           {
             "t": "quote",
-            "c": "Pro tip: build around a core element, then fill the two empty slots with Aniimo that beat your core's natural counters."
-          }
-        ]
-      },
-      "dex-and-shiny": {
-        "title": "Using the Dex: Stats, Habitats & Shiny Aniimo",
-        "subtitle": "Read dex entries like a pro and hunt shiny forms.",
-        "tag": "Dex",
-        "lead": "The dex is your most important tool in Aniimo. Learn how to read entries, spot valuable data and hunt rare shiny variants.",
-        "body": [
-          {
-            "t": "h",
-            "c": "How to read a dex entry"
-          },
-          {
-            "t": "p",
-            "c": "Each entry shows base stats, potential distribution, evolution path, spawn conditions and available forms. Base stats tell you the creature's strengths, while potential hints at how well it can grow."
-          },
-          {
-            "t": "h",
-            "c": "Base stats at a glance"
-          },
-          {
-            "t": "li",
-            "c": "HP — how much damage it can take."
-          },
-          {
-            "t": "li",
-            "c": "ATK / DEF — offense and defense."
-          },
-          {
-            "t": "li",
-            "c": "SPD — determines turn order in battle."
-          },
-          {
-            "t": "li",
-            "c": "Heal / Break — support strength when applicable."
-          },
-          {
-            "t": "h",
-            "c": "Spawn conditions"
-          },
-          {
-            "t": "p",
-            "c": "Habitat, weather and time of day narrow down where to look. Final forms often require special phenomena. Revisit the dex right before hunting to confirm the current conditions."
-          },
-          {
-            "t": "h",
-            "c": "Shiny forms"
-          },
-          {
-            "t": "p",
-            "c": "Some Aniimo have a rare shiny form with an alternate colour. Shiny rates are extremely low, so plan long hunts, bring high-level Aniipods and use advanced traps."
-          },
-          {
-            "t": "li",
-            "c": "Shiny forms are cosmetic-only and do not change stats or typing."
-          },
-          {
-            "t": "li",
-            "c": "Legendary final forms are the most commonly shiny-hunted due to their visual impact."
-          },
-          {
-            "t": "quote",
-            "c": "Patience pays: shiny hunting is a marathon, not a sprint."
+            "c": "This overview separates verified official features from dex stats, type multipliers and catch-rate formulas that remain under review."
           }
         ]
       }

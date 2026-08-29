@@ -10,6 +10,7 @@ import Card from '@/components/ui/Card';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getGuidePost, getPublishedGuidePosts } from '@/data/guides';
 import { locales } from '@/i18n/routing';
+import { sourceById } from '@/data/sources';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -46,7 +47,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    robots: { index: false, follow: true },
+    robots: { index: Boolean(post.sourceIds?.length), follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
       languages: localizedLanguages(path),
@@ -57,20 +58,13 @@ export async function generateMetadata({
       title,
       description,
       publishedTime: post.date,
-      images: [
-        {
-          url: `${SITE_URL}${post.image}`,
-          width: 1200,
-          height: 760,
-          alt: post.imageAlt,
-        },
-      ],
+      images: post.image ? [{ url: `${SITE_URL}${post.image}` }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}${post.image}`],
+      images: post.image ? [`${SITE_URL}${post.image}`] : undefined,
     },
   };
 }
@@ -98,6 +92,9 @@ export default async function GuidePostPage({
   const lead = tp(`${post.slug}.lead`);
   const messages = await getMessages();
   const body = (messages.guide.posts[post.slug].body ?? []) as Block[];
+  const sources = (post.sourceIds ?? [])
+    .map((sourceId) => sourceById.get(sourceId))
+    .filter((source) => source !== undefined);
 
   // 相关工具：href → 翻译 key 映射
   const toolLinkKeys: Record<string, string> = {
@@ -121,7 +118,7 @@ export default async function GuidePostPage({
         description: subtitle,
         datePublished: post.date,
         inLanguage: locale,
-        image: [`${SITE_URL}${post.image}`],
+        image: post.image ? [`${SITE_URL}${post.image}`] : undefined,
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,
         publisher: {
           '@type': 'Organization',
@@ -210,10 +207,7 @@ export default async function GuidePostPage({
             <thead>
               <tr className="bg-ink-card">
                 {block.head.map((cell, ci) => (
-                  <th
-                    key={ci}
-                    className="px-4 py-2 text-left font-semibold text-primary-light"
-                  >
+                  <th key={ci} className="px-4 py-2 text-left font-semibold text-primary-light">
                     {cell}
                   </th>
                 ))}
@@ -244,25 +238,22 @@ export default async function GuidePostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Breadcrumb
-        items={[
-          { label: t('title'), href: '/guide/' },
-          { label: title },
-        ]}
-      />
+      <Breadcrumb items={[{ label: t('title'), href: '/guide/' }, { label: title }]} />
 
       <article>
         {/* 文章横幅图 */}
-        <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-ink-border">
-          <Image
-            src={post.image}
-            alt={post.imageAlt}
-            fill
-            sizes="(min-width: 1024px) 100vw, 100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
+        {post.image && (
+          <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-ink-border">
+            <Image
+              src={post.image}
+              alt={post.imageAlt ?? ''}
+              fill
+              sizes="(min-width: 1024px) 100vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
         <header className="space-y-3 border-b border-ink-border pb-6">
           <div className="flex flex-wrap items-center gap-2">
             <Badge label={tag} />
@@ -276,10 +267,37 @@ export default async function GuidePostPage({
               {post.readMinutes} {t('minRead')}
             </span>
           </div>
+          {sources.length > 0 && (
+            <div className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm text-emerald-950">
+              <strong>{t('verifiedOfficial')}</strong>
+              <span className="ml-2">{t('lastVerified', { date: post.date })}</span>
+            </div>
+          )}
           <p className="mt-3 text-base leading-relaxed text-text-primary">{lead}</p>
         </header>
 
         <div className="pt-2">{renderedBody}</div>
+
+        {sources.length > 0 && (
+          <section className="mt-8 border-t border-ink-border pt-6">
+            <h2 className="text-lg font-bold text-text-primary">{t('officialSources')}</h2>
+            <ul className="mt-3 space-y-3">
+              {sources.map((source) => (
+                <li key={source.id}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-primary-light hover:text-primary-hover"
+                  >
+                    {source.title} ↗
+                  </a>
+                  <p className="mt-1 text-xs leading-5 text-text-muted">{source.evidence}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </article>
 
       {/* 相关工具 */}
@@ -304,9 +322,7 @@ export default async function GuidePostPage({
       {/* 相关文章 */}
       {post.relatedSlugs && post.relatedSlugs.length > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold text-text-primary">
-            {t('relatedArticles')}
-          </h2>
+          <h2 className="mb-3 text-lg font-bold text-text-primary">{t('relatedArticles')}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {post.relatedSlugs.map((relSlug) => {
               const rel = getGuidePost(relSlug);

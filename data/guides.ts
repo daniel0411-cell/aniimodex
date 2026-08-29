@@ -26,6 +26,7 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['element-types'],
     image: '/images/guides/getting-started.jpg',
     imageAlt: 'A young trainer with a flame-bird companion starting their adventure',
+    published: false,
   },
   {
     slug: 'element-types',
@@ -36,6 +37,7 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['getting-started', 'dex-and-shiny'],
     image: '/images/guides/element-types.jpg',
     imageAlt: 'Elemental creatures clashing with glowing element symbol orbs',
+    published: false,
   },
   {
     slug: 'dex-and-shiny',
@@ -46,6 +48,38 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['game-info'],
     image: '/images/guides/dex-and-shiny.jpg',
     imageAlt: 'A trainer holding a dex device beside a rare shiny creature',
+    published: false,
+  },
+  {
+    slug: 'aniimo-release-date',
+    date: '2026-08-29',
+    readMinutes: 4,
+    relatedSlugs: ['what-is-aniimo', 'aniimo-platforms'],
+    sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
+  },
+  {
+    slug: 'aniimo-platforms',
+    date: '2026-08-29',
+    readMinutes: 5,
+    relatedSlugs: ['aniimo-release-date', 'what-is-aniimo'],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-steam-4126040',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+    ],
+  },
+  {
+    slug: 'what-is-aniimo',
+    date: '2026-08-29',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex'],
+    relatedSlugs: ['aniimo-release-date', 'aniimo-platforms'],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+    ],
   },
 ];
 

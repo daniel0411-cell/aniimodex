@@ -274,6 +274,41 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           {th('officialSource')} ↗
         </a>
       </section>
+
+      <section>
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-xs font-semibold uppercase text-primary-light">
+              {th('officialGuidesLabel')}
+            </p>
+            <h2 className="mt-1 text-2xl font-bold text-text-primary">
+              {th('officialGuidesTitle')}
+            </h2>
+          </div>
+          <Link
+            href="/guide"
+            className="text-sm font-semibold text-primary-light hover:text-primary-hover"
+          >
+            {th('viewAllGuide')} →
+          </Link>
+        </div>
+        <div className="grid gap-3 md:grid-cols-3">
+          {(['what-is-aniimo', 'aniimo-release-date', 'aniimo-platforms'] as const).map((slug) => (
+            <Link
+              key={slug}
+              href={`/guide/${slug}`}
+              className="group border-t-2 border-ink-border bg-white px-5 py-5 shadow-card transition-colors hover:border-primary"
+            >
+              <h3 className="font-semibold text-text-primary group-hover:text-primary-light">
+                {t(`guide.posts.${slug}.title`)}
+              </h3>
+              <p className="mt-2 text-sm leading-5 text-text-muted">
+                {t(`guide.posts.${slug}.subtitle`)}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

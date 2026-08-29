@@ -20,7 +20,9 @@ export interface GuidePost {
   /** 相关文章 slug 列表（站内互链） */
   relatedSlugs?: string[];
   /** 文章横幅图路径（相对于 public） */
-  image: string;
+  image?: string;
   /** 图片 alt 文本 */
-  imageAlt: string;
+  imageAlt?: string;
+  /** 支撑页面结论的官方来源 ID */
+  sourceIds?: string[];
 }
