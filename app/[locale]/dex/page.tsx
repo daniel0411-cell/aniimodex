@@ -8,22 +8,17 @@ import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
 import {
   ELEMENTS,
   ELEMENT_BADGE_CLASSES,
-  ELEMENT_GRADIENTS,
   ELEMENT_ICON_COLORS,
   ROLE_ICONS,
-  ROLE_BADGE_CLASSES,
   ROLES,
-  TWINE_ABILITIES,
-  TWINE_ICONS,
 } from '@/lib/aniimo-ui';
 import ElementIcon from '@/components/ui/ElementIcons';
-import type { AniimoEntry, Element, Role, TwineAbility } from '@/types/aniimo';
+import type { AniimoEntry, Element, Role } from '@/types/aniimo';
 import { cn } from '@/lib/utils';
 
 // 元素/角色/能力选项（用于参数校验）
 const VALID_ELEMENTS = ELEMENTS as string[];
 const VALID_ROLES = ROLES as string[];
-const VALID_TWINE = TWINE_ABILITIES as string[];
 
 /** 卡片组件 */
 function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
@@ -60,6 +55,23 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
         <h3 className="truncate font-semibold text-text-primary group-hover:text-primary-light">
           {aniimo.name}
         </h3>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {aniimo.officialElements?.map((item) => (
+            <span key={item} className={cn('rounded border px-1.5 py-0.5 text-[10px]', ELEMENT_BADGE_CLASSES[item])}>
+              {t(`elements.${item}`)}
+            </span>
+          ))}
+          {aniimo.officialRole && (
+            <span className="rounded border border-ink-border bg-white px-1.5 py-0.5 text-[10px] text-text-secondary">
+              {ROLE_ICONS[aniimo.officialRole]} {t(`roles.${aniimo.officialRole}`)}
+            </span>
+          )}
+          {aniimo.officialStage !== 'Unknown' && (
+            <span className="rounded border border-ink-border bg-white px-1.5 py-0.5 text-[10px] text-text-secondary">
+              {aniimo.officialStage}
+            </span>
+          )}
+        </div>
         <p className="mt-1 line-clamp-2 min-h-8 text-xs leading-4 text-text-muted">
           {aniimo.description}
         </p>
@@ -81,7 +93,6 @@ export default function DexPage() {
   const locale = useLocale();
   const [element, setElement] = useState<Element | ''>('');
   const [role, setRole] = useState<Role | ''>('');
-  const [twine, setTwine] = useState<TwineAbility | ''>('');
   const [q, setQ] = useState('');
   const [filtersOpen, setFiltersOpen] = useState(true);
 
@@ -93,29 +104,21 @@ export default function DexPage() {
   const filtered = useMemo(() => {
     let list = getAllAniimos();
     if (element && VALID_ELEMENTS.includes(element)) {
-      list = list.filter(
-        (a) => a.element === element || a.forms.some((f) => f.element === element)
-      );
+      list = list.filter((a) => a.officialElements?.includes(element));
     }
     if (role && VALID_ROLES.includes(role)) {
-      list = list.filter((a) => a.role === role || a.forms.some((f) => f.role === role));
-    }
-    if (twine && VALID_TWINE.includes(twine)) {
-      list = list.filter(
-        (a) => a.twineAbility === twine || a.forms.some((f) => f.twineAbility === twine)
-      );
+      list = list.filter((a) => a.officialRole === role);
     }
     if (q) {
       list = searchAniimos(q);
     }
     return list;
-  }, [element, role, twine, q]);
+  }, [element, role, q]);
 
-  const hasActiveFilter = Boolean(element || role || twine || q);
+  const hasActiveFilter = Boolean(element || role || q);
   const resetFilters = () => {
     setElement('');
     setRole('');
-    setTwine('');
     setQ('');
   };
 
@@ -180,7 +183,6 @@ export default function DexPage() {
           {td('officialScope')}
         </div>
 
-        <div className="hidden" aria-hidden="true">
         {/* 元素筛选（图标按钮） */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterElement')}</span>
@@ -207,7 +209,6 @@ export default function DexPage() {
             })}
           </div>
         </div>
-        </div>
 
         {/* 角色筛选 */}
         <div className="flex flex-wrap items-center gap-2">
@@ -233,23 +234,6 @@ export default function DexPage() {
               );
             })}
           </div>
-        </div>
-
-        {/* Twine 能力筛选（下拉） */}
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterTwine')}</span>
-          <select
-            value={twine}
-            onChange={(e) => setTwine(e.target.value as TwineAbility | '')}
-            className="rounded-lg border border-ink-border bg-ink-soft px-3 py-1.5 text-xs text-text-primary focus:border-primary-light focus:outline-none"
-          >
-            <option value="">{td('allTwine')}</option>
-            {TWINE_ABILITIES.map((tw) => (
-              <option key={tw} value={tw}>
-                {t(`twineAbility.${tw}`)}
-              </option>
-            ))}
-          </select>
         </div>
 
           {hasActiveFilter && (

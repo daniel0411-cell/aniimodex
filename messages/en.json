@@ -71,7 +71,7 @@
   },
   "dex": {
     "title": "Aniimo Dex",
-    "subtitle": "{filtered} / {total} community entries · data under verification",
+    "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
     "filterRole": "Role",
@@ -86,7 +86,9 @@
     "unverified": "Reviewing",
     "officialBasic": "Official basics",
     "searchLabel": "Search the official index",
-    "officialScope": "Verified from the official Wiki: number, English name, artwork and description. Detailed filters return as element, role, stage and ability fields are checked individually."
+    "officialScope": "Verified from the official Wiki: number, English name, artwork, description, element, role and stage. Stats, abilities, evolution and locations remain withheld.",
+    "elementNames": { "Light": "Light", "Fire": "Fire", "Ice": "Ice", "Dark": "Dark", "Lightning": "Lightning", "Grass": "Grass", "Water": "Water", "Earth": "Earth", "Wind": "Wind" },
+    "roleNames": { "DPS": "DPS", "Heal": "Healer", "Support": "Support", "Break": "Breaker", "Regen": "Regenerator" }
   },
   "dexDetail": {
     "notFound": "Aniimo not found",
@@ -124,7 +126,8 @@
     "draftData": "Community draft data",
     "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default.",
     "officialBasic": "Official Wiki basics",
-    "officialScope": "Number, English name, artwork and description were verified from the official Aniimo Wiki snapshot. Stats, element, role, stage, abilities, evolution and locations are not shown until individually checked."
+    "officialScope": "Number, English name, artwork, description, element, role and stage were verified from the official Aniimo Wiki snapshot. Stats, abilities, evolution and locations are not shown until individually checked.",
+    "stageUnlisted": "Stage not listed"
   },
   "tools": {
     "title": "Tools Center",
@@ -516,12 +519,84 @@
         "lead": "AniimoDex currently tracks 92 numbered entries from the official Aniimo Wiki snapshot checked on August 30, 2026. Only fields present in that snapshot are published as verified.",
         "body": [
           { "t": "h", "c": "What is verified now?" },
-          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number", "Verified from official Wiki index"], ["English name", "Verified from official Wiki index"], ["Artwork", "Official Aniimo CDN image"], ["Description", "Verified official Wiki text"], ["Element, role and stage", "Held back pending field-level import checks"], ["Stats, evolution and abilities", "Not published as verified yet"], ["Locations and catch conditions", "Not published as verified yet"]] },
-          { "t": "h", "c": "Why are some filters unavailable?" },
-          { "t": "p", "c": "AniimoDex removed the earlier community draft mappings rather than mixing them with official records. Element, role, stage and ability filters will return only after those fields are imported and checked separately." },
+          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number and English name", "Verified from official Wiki index"], ["Artwork and description", "Verified official Wiki content"], ["Element, role and stage", "Verified from the official Wiki payload"], ["Stats, evolution and abilities", "Not published as verified yet"], ["Locations and catch conditions", "Not published as verified yet"]] },
+          { "t": "h", "c": "Which filters are available?" },
+          { "t": "p", "c": "Element and role filters use the official Wiki fields, including dual-element entries. Twine abilities, stats, evolution and location filters remain unavailable until their source data is verified." },
           { "t": "h", "c": "How is the data refreshed?" },
           { "t": "p", "c": "A repeatable parser reads the public official Wiki index, validates unique numbered records and stores a dated snapshot. Changes can then be reviewed before publication instead of silently replacing live data." },
           { "t": "quote", "c": "A verified label applies only to the named fields, not to every possible fact about that Aniimo." }
+        ]
+      },
+      "aniimo-launch-time-preload": {
+        "title": "Aniimo Launch Time and Preload Status by Region",
+        "subtitle": "Confirmed global launch time, regional date conversion and current preload status.",
+        "tag": "Launch",
+        "lead": "PlayStation lists Aniimo's launch for September 16, 2026 at 10:00 UTC+8. This page separates that confirmed time from preload details that have not yet been officially published.",
+        "body": [
+          { "t": "h", "c": "When does Aniimo launch?" },
+          { "t": "table", "head": ["Region", "Local time"], "rows": [["China / Singapore (UTC+8)", "September 16, 10:00 AM"], ["UTC", "September 16, 2:00 AM"], ["US Eastern (EDT)", "September 15, 10:00 PM"], ["US Pacific (PDT)", "September 15, 7:00 PM"], ["Central Europe (CEST)", "September 16, 4:00 AM"]] },
+          { "t": "h", "c": "Can I preload Aniimo?" },
+          { "t": "p", "c": "The official sources checked for this page do not state a universal preload date or download unlock time. Store availability may differ by platform and region, so a wishlist or pre-registration button should not be treated as preload confirmation." },
+          { "t": "h", "c": "Why does Steam show September 15?" },
+          { "t": "p", "c": "A simultaneous launch can fall on September 15 in the Americas and September 16 in Asia. The explicit PlayStation UTC+8 time is used for the conversions above." },
+          { "t": "quote", "c": "This page will add platform-specific preload sizes and unlock times only after an official store publishes them." }
+        ]
+      },
+      "aniimo-crossplay-cross-save": {
+        "title": "Aniimo Crossplay and Cross-Save: Confirmed Status",
+        "subtitle": "What official listings confirm about multiplayer across platforms and account progression.",
+        "tag": "Multiplayer",
+        "lead": "Steam lists cross-platform multiplayer for Aniimo. Cross-save and cross-progression are separate features and are not confirmed by the sources registered for this page.",
+        "body": [
+          { "t": "h", "c": "Does Aniimo support crossplay?" },
+          { "t": "p", "c": "Steam lists cross-platform multiplayer. That confirms cross-platform play as a product feature, but the listing does not specify every supported platform pairing or activity." },
+          { "t": "h", "c": "Does Aniimo have cross-save or cross-progression?" },
+          { "t": "p", "c": "No complete account-linking or progression-transfer policy appears in the official sources used here. Crossplay does not automatically mean that saves, purchases or rewards transfer between platforms." },
+          { "t": "h", "c": "What still needs confirmation?" },
+          { "t": "li", "c": "Which PC, console and mobile combinations can play together" },
+          { "t": "li", "c": "Whether one account shares progress on every platform" },
+          { "t": "li", "c": "Whether paid currency or packs transfer between stores" },
+          { "t": "quote", "c": "AniimoDex will update this page when Pawprint Studio publishes an account or cross-progression FAQ." }
+        ]
+      },
+      "aniimo-language-controller-support": {
+        "title": "Aniimo Languages, Controller and Steam Deck Support",
+        "subtitle": "Current official status for language options, gamepads and portable PC compatibility.",
+        "tag": "Compatibility",
+        "lead": "Aniimo has official PC and console listings, but not every compatibility detail is stable before launch. This page records only what can be verified and identifies the remaining checks.",
+        "body": [
+          { "t": "h", "c": "Does Aniimo support controllers?" },
+          { "t": "p", "c": "Console releases necessarily use their platform controllers. The sources used here do not provide a final PC controller matrix, button-layout list or confirmation for every third-party gamepad." },
+          { "t": "h", "c": "Is Aniimo Steam Deck verified?" },
+          { "t": "p", "c": "No Steam Deck compatibility rating is confirmed in the registered official sources. Windows support on Steam does not by itself establish Deck verification or performance." },
+          { "t": "h", "c": "Which languages are supported?" },
+          { "t": "p", "c": "Store language tables can change before release and may distinguish interface, subtitles and audio. Use the live language section on your official storefront until a stable launch list is published." },
+          { "t": "h", "c": "What will be tested at launch?" },
+          { "t": "li", "c": "Keyboard and mouse rebinding" },
+          { "t": "li", "c": "Xbox, DualSense and generic controller behavior on PC" },
+          { "t": "li", "c": "Steam Deck launch, controls and performance" },
+          { "t": "li", "c": "Interface, subtitle and voice language options" }
+        ]
+      },
+      "aniimo-launch-coverage-status": {
+        "title": "Aniimo Launch Coverage: Guides, Builds and Data Status",
+        "subtitle": "A transparent roadmap for launch-day testing and post-launch guides.",
+        "tag": "Coverage status",
+        "lead": "AniimoDex will not publish invented walkthroughs, tier lists, builds or catch rates before the live game can be tested. This tracker shows what is ready and the evidence required for each next content area.",
+        "body": [
+          { "t": "h", "c": "Available before launch" },
+          { "t": "table", "head": ["Area", "Status"], "rows": [["Release, platforms and download", "Official-source guides live"], ["92-entry Aniimo index", "Number, name, artwork, description, element, role and stage live"], ["Twine, catching and multiplayer overviews", "Official mechanics only"], ["Launch time and compatibility", "Confirmed facts plus clearly marked unknowns"]] },
+          { "t": "h", "c": "Launch-week testing queue" },
+          { "t": "li", "c": "First-hour route and system unlock order" },
+          { "t": "li", "c": "Catching tutorial, Aniipods and trap behavior" },
+          { "t": "li", "c": "Regions, maps, quests, currencies and upgrade systems" },
+          { "t": "li", "c": "Egg Heist access, team size and match flow" },
+          { "t": "li", "c": "Login errors, PC settings, mobile and console performance" },
+          { "t": "h", "c": "When will tier lists and builds be published?" },
+          { "t": "p", "c": "Only after the live version exposes complete skills, stats, progression and repeatable combat results. Every recommendation will name the tested game version and will be revised after balance changes." },
+          { "t": "h", "c": "When will locations and catch rates be published?" },
+          { "t": "p", "c": "Locations require reproducible in-game observations. Exact catch-rate claims require an official formula or a sufficiently documented sample; calculator estimates will not be presented as official probabilities." },
+          { "t": "quote", "c": "No source or reproducible test means no verified claim." }
         ]
       }
     },

@@ -13,7 +13,7 @@ export const sources: SourceReference[] = [
     title: 'Official Aniimo Wiki - Complete Aniimo Index',
     accessedAt: '2026-08-30',
     evidence:
-      'The official Aniimo Wiki index publicly lists Aniimo numbers, English names, official artwork, descriptions, elements, roles and stages. AniimoDex only imports fields explicitly present in the checked source snapshot.',
+      'The official Aniimo Wiki index payload lists Aniimo numbers, English names, official artwork, descriptions, elements, roles and stages. AniimoDex imports only these explicitly published fields.',
   },
   {
     id: 'aniimo-official-home-2026-08-28',

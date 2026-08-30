@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAllAniimos, getAniimoByNumber } from '@/lib/aniimo';
+import { ELEMENT_BADGE_CLASSES, ROLE_BADGE_CLASSES, ROLE_ICONS } from '@/lib/aniimo-ui';
+import { cn } from '@/lib/utils';
 import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
@@ -34,7 +36,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
   const title = `${displayName} Aniimo Dex | ${siteName}`;
-  const description = `${td('title')}: ${aniimo.enName} (#${aniimo.number}). ${aniimo.description}`;
+  const elements = aniimo.officialElements?.map((element) => td(`elementNames.${element}`)).join(', ');
+  const role = aniimo.officialRole ? td(`roleNames.${aniimo.officialRole}`) : '';
+  const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;
+  const description = `${td('title')}: ${aniimo.enName} (#${aniimo.number})${elements ? `, ${elements}` : ''}${role ? `, ${role}` : ''}${stage ? `, ${stage}` : ''}. ${aniimo.description}`;
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
   return {
@@ -167,6 +172,21 @@ export default async function DexDetailPage({ params }: PageProps) {
           </div>
           <h1 className="mt-3 text-3xl font-bold text-text-primary sm:text-4xl">{aniimo.name}</h1>
           <p className="mt-1 text-text-secondary">{aniimo.enName}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {aniimo.officialElements?.map((element) => (
+              <span key={element} className={cn('rounded border px-2.5 py-1 text-xs', ELEMENT_BADGE_CLASSES[element])}>
+                {tr(`elements.${element}`)}
+              </span>
+            ))}
+            {aniimo.officialRole && (
+              <span className={cn('rounded border px-2.5 py-1 text-xs', ROLE_BADGE_CLASSES[aniimo.officialRole])}>
+                {ROLE_ICONS[aniimo.officialRole]} {tr(`roles.${aniimo.officialRole}`)}
+              </span>
+            )}
+            <span className="rounded border border-ink-border bg-ink-soft px-2.5 py-1 text-xs text-text-secondary">
+              {aniimo.officialStage === 'Unknown' ? t('stageUnlisted') : aniimo.officialStage}
+            </span>
+          </div>
           <p className="mt-5 max-w-xl text-sm leading-6 text-text-secondary">
             {aniimo.description}
           </p>

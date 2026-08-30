@@ -1,21 +1,71 @@
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const SOURCE_URL = 'https://wiki.aniimo.com/';
 const OUTPUT_URL = new URL('../data/official-wiki-snapshot.json', import.meta.url);
-const RECORD_PATTERN =
-  /"(\d{3})",(\d+),"([^"]+)","(https:\/\/worldx-website-cdn\.aniimo\.com\/[^"]+)","((?:[^"\\]|\\.)*)"/g;
+const NUXT_DATA_PATTERN = /<script[^>]+id="__NUXT_DATA__"[^>]*>([\s\S]*?)<\/script>/;
 
-const response = await fetch(SOURCE_URL);
-if (!response.ok) throw new Error(`Official Wiki request failed: ${response.status}`);
+const STAGES = { '1': 'Lumin', '2': 'Gamma', '3': 'Nova', '0': 'Unknown' };
+const POSITIONS = {
+  'position-dps': 'DPS',
+  'position-heal': 'Heal',
+  'position-sup': 'Support',
+  'position-break': 'Break',
+  'position-energy': 'Regen',
+};
+const ATTRIBUTES = {
+  'attributes-holy': 'Light',
+  'attributes-fire': 'Fire',
+  'attributes-ice': 'Ice',
+  'attributes-dark': 'Dark',
+  'attributes-electric': 'Lightning',
+  'attributes-grass': 'Grass',
+  'attributes-water': 'Water',
+  'attributes-rock': 'Earth',
+  'attributes-wind': 'Wind',
+};
 
-const html = await response.text();
-const entries = [...html.matchAll(RECORD_PATTERN)].map((match) => ({
-  number: match[1],
-  officialId: match[2],
-  name: match[3],
-  imageUrl: match[4],
-  description: JSON.parse(`"${match[5]}"`),
-}));
+function resolve(payload, value) {
+  if (typeof value === 'number') return payload[value];
+  if (Array.isArray(value)) return value.map((item) => resolve(payload, item));
+  return value;
+}
+
+function field(payload, record, key) {
+  const ref = record[key];
+  return resolve(payload, ref);
+}
+
+const inputPath = process.argv[2];
+const html = inputPath
+  ? await readFile(inputPath, 'utf8')
+  : await fetch(SOURCE_URL, { signal: AbortSignal.timeout(30000) }).then(async (response) => {
+      if (!response.ok) throw new Error(`Official Wiki request failed: ${response.status}`);
+      return response.text();
+    });
+const nuxtMatch = html.match(NUXT_DATA_PATTERN);
+if (!nuxtMatch) throw new Error('Official Wiki Nuxt payload was not found');
+const payload = JSON.parse(nuxtMatch[1]);
+const listRef = payload[3]['aniimo-wiki-list-en'];
+const entryRefs = payload[listRef];
+const entries = entryRefs
+  .map((entryRef) => {
+    const wrapper = payload[entryRef];
+    const record = payload[wrapper.searchKey];
+    const get = (key) => field(payload, record, key);
+    return {
+      number: get('entryId'),
+      officialId: String(get('sortOrder')),
+      name: get('name'),
+      imageUrl: get('imageUrl'),
+      description: get('description'),
+      stage: STAGES[get('currentStage')] ?? 'Unknown',
+      role: POSITIONS[resolve(payload, get('position'))] ?? 'Unknown',
+      elements: get('attributes')
+        .map((attribute) => ATTRIBUTES[resolve(payload, attribute)])
+        .filter(Boolean),
+    };
+  })
+  .filter((entry) => /^\d{3}$/.test(entry.number));
 
 if (entries.length < 80) {
   throw new Error(`Official Wiki parse returned only ${entries.length} entries`);
@@ -27,7 +77,7 @@ if (uniqueNumbers.size !== entries.length) throw new Error('Official Wiki contai
 const snapshot = {
   source: SOURCE_URL,
   checkedAt: new Date().toISOString().slice(0, 10),
-  fieldScope: ['number', 'officialId', 'name', 'imageUrl', 'description'],
+  fieldScope: ['number', 'officialId', 'name', 'imageUrl', 'description', 'stage', 'role', 'elements'],
   entries,
 };
 

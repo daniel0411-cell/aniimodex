@@ -17,6 +17,9 @@ export type Potential = 'Common' | 'Good' | 'Elite' | 'Perfect';
 /** 进化阶段 */
 export type EvolutionStage = 'Lumin' | 'Gamma' | 'Nova';
 
+/** 官方 Wiki 当前公开的基础分类字段。 */
+export type OfficialStage = EvolutionStage | 'Unknown';
+
 /** 内容证据等级：仅有可追溯的一手资料时才能标为 official。 */
 export type EvidenceStatus = 'official' | 'community' | 'unknown';
 
@@ -149,6 +152,12 @@ export interface AniimoEntry {
   officialWikiId?: string;
   /** 官方公开图片 URL */
   imageUrl?: string;
+  /** 官方 Wiki 元素列表（可能为双元素）。 */
+  officialElements?: Element[];
+  /** 官方 Wiki 战斗定位。 */
+  officialRole?: Role;
+  /** 官方 Wiki 阶段；Unknown 表示官方 payload 未标注。 */
+  officialStage?: OfficialStage;
   /** 描述 */
   description: string;
   /** 英文图鉴简介（flavor text，承接 'aniimo dex' 等英文搜索） */

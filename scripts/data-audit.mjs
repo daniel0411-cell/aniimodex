@@ -22,6 +22,15 @@ for (const entry of wikiSnapshot.entries) {
   if (!entry.imageUrl.startsWith('https://worldx-website-cdn.aniimo.com/')) {
     errors.push(`Unofficial image host: ${entry.number}`);
   }
+  if (!['Lumin', 'Gamma', 'Nova', 'Unknown'].includes(entry.stage)) {
+    errors.push(`Invalid official stage: ${entry.number}`);
+  }
+  if (!['DPS', 'Heal', 'Support', 'Break', 'Regen'].includes(entry.role)) {
+    errors.push(`Invalid official role: ${entry.number}`);
+  }
+  if (!entry.elements.length || entry.elements.some((element) => !['Light', 'Fire', 'Ice', 'Dark', 'Lightning', 'Grass', 'Water', 'Earth', 'Wind'].includes(element))) {
+    errors.push(`Invalid official elements: ${entry.number}`);
+  }
 }
 if (!aniimos.includes("dataSource: 'official'") || !aniimos.includes('aniimo-official-wiki-index-2026-08-30')) {
   errors.push('Aniimo data layer is not bound to the official Wiki source');

@@ -153,6 +153,35 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained'],
     sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
   },
+  {
+    slug: 'aniimo-launch-time-preload',
+    date: '2026-08-30',
+    readMinutes: 5,
+    relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
+    sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
+  },
+  {
+    slug: 'aniimo-crossplay-cross-save',
+    date: '2026-08-30',
+    readMinutes: 5,
+    relatedSlugs: ['aniimo-multiplayer', 'aniimo-platforms'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
+  },
+  {
+    slug: 'aniimo-language-controller-support',
+    date: '2026-08-30',
+    readMinutes: 5,
+    relatedSlugs: ['aniimo-platforms', 'aniimo-system-requirements'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
+  },
+  {
+    slug: 'aniimo-launch-coverage-status',
+    date: '2026-08-30',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex'],
+    relatedSlugs: ['official-aniimo-dex-status', 'aniimo-launch-time-preload'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-official-wiki-index-2026-08-30'],
+  },
 ];
 
 /** 按 slug 查找文章元数据 */

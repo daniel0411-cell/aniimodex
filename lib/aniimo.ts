@@ -28,9 +28,7 @@ export function getAniimoByName(name: string): AniimoEntry | undefined {
 
 /** 按元素筛选（返回与元素匹配的全部伊莫） */
 export function filterByElement(element: Element): AniimoEntry[] {
-  return aniimos.filter(
-    (a) => a.element === element || a.forms.some((f) => f.element === element)
-  );
+  return aniimos.filter((a) => a.officialElements?.includes(element));
 }
 
 /** 按 Twine 能力筛选（单选：精确匹配该能力） */

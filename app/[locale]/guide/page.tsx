@@ -59,9 +59,9 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const tb = await getTranslations('breadcrumb');
   const guidePosts = getPublishedGuidePosts();
   const groups = [
-    { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-platforms', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
-    { key: 'gameplay', slugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer'] },
-    { key: 'updates', slugs: ['official-aniimo-dex-status', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
+    { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-launch-time-preload', 'aniimo-platforms', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
+    { key: 'gameplay', slugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer', 'aniimo-crossplay-cross-save'] },
+    { key: 'updates', slugs: ['official-aniimo-dex-status', 'aniimo-launch-coverage-status', 'aniimo-language-controller-support', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
   ];
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
