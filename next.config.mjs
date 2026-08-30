@@ -7,6 +7,9 @@ const nextConfig = {
   // 静态导出下 Next.js 图片优化器不可用，必须关闭图片优化
   images: {
     unoptimized: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'worldx-website-cdn.aniimo.com' },
+    ],
   },
   // 生成 /pokedex/ 形式的路径，配合 Cloudflare Pages 的目录路由更稳定
   trailingSlash: true,

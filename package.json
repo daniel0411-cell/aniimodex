@@ -8,6 +8,7 @@
     "lint": "next lint",
     "seo:audit": "node scripts/seo-audit.mjs",
     "data:audit": "node scripts/data-audit.mjs",
+    "data:sync-wiki": "node scripts/sync-official-wiki.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "pages:build": "next build",

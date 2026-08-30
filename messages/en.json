@@ -83,7 +83,10 @@
     "resetAll": "Reset all filters",
     "filterElementAria": "Filter {element} Aniimo",
     "twineTitle": "Twine: {name}",
-    "unverified": "Reviewing"
+    "unverified": "Reviewing",
+    "officialBasic": "Official basics",
+    "searchLabel": "Search the official index",
+    "officialScope": "Verified from the official Wiki: number, English name, artwork and description. Detailed filters return as element, role, stage and ability fields are checked individually."
   },
   "dexDetail": {
     "notFound": "Aniimo not found",
@@ -119,7 +122,9 @@
     "reviewing": "Under review",
     "visualPending": "Official visual pending",
     "draftData": "Community draft data",
-    "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default."
+    "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default.",
+    "officialBasic": "Official Wiki basics",
+    "officialScope": "Number, English name, artwork and description were verified from the official Aniimo Wiki snapshot. Stats, element, role, stage, abilities, evolution and locations are not shown until individually checked."
   },
   "tools": {
     "title": "Tools Center",
@@ -502,6 +507,21 @@
           { "t": "p", "c": "The sources registered for this guide do not provide a stable, complete set of hardware requirements suitable for republishing. Check the system requirements section on Steam before downloading." },
           { "t": "h", "c": "Is macOS supported?" },
           { "t": "p", "c": "The Steam listing checked for this page identifies Windows support. No official macOS version is confirmed in these sources." }
+        ]
+      },
+      "official-aniimo-dex-status": {
+        "title": "Official Aniimo Dex Coverage: What AniimoDex Has Verified",
+        "subtitle": "A field-by-field status report for the official Aniimo Wiki snapshot used by AniimoDex.",
+        "tag": "Data status",
+        "lead": "AniimoDex currently tracks 92 numbered entries from the official Aniimo Wiki snapshot checked on August 30, 2026. Only fields present in that snapshot are published as verified.",
+        "body": [
+          { "t": "h", "c": "What is verified now?" },
+          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number", "Verified from official Wiki index"], ["English name", "Verified from official Wiki index"], ["Artwork", "Official Aniimo CDN image"], ["Description", "Verified official Wiki text"], ["Element, role and stage", "Held back pending field-level import checks"], ["Stats, evolution and abilities", "Not published as verified yet"], ["Locations and catch conditions", "Not published as verified yet"]] },
+          { "t": "h", "c": "Why are some filters unavailable?" },
+          { "t": "p", "c": "AniimoDex removed the earlier community draft mappings rather than mixing them with official records. Element, role, stage and ability filters will return only after those fields are imported and checked separately." },
+          { "t": "h", "c": "How is the data refreshed?" },
+          { "t": "p", "c": "A repeatable parser reads the public official Wiki index, validates unique numbered records and stores a dated snapshot. Changes can then be reviewed before publication instead of silently replacing live data." },
+          { "t": "quote", "c": "A verified label applies only to the named fields, not to every possible fact about that Aniimo." }
         ]
       }
     },

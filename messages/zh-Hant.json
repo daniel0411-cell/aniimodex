@@ -83,7 +83,10 @@
     "resetAll": "重設全部篩選",
     "filterElementAria": "篩選 {element} 屬性的伊莫",
     "twineTitle": "Twine：{name}",
-    "unverified": "核驗中"
+    "unverified": "核驗中",
+    "officialBasic": "官方基礎資料",
+    "searchLabel": "搜尋官方圖鑑",
+    "officialScope": "已從官方 Wiki 核驗編號、英文名、圖片和描述；元素、定位、階段與能力逐項核驗後再恢復詳細篩選。"
   },
   "dexDetail": {
     "notFound": "未找到該伊莫",
@@ -119,7 +122,9 @@
     "reviewing": "核驗中",
     "visualPending": "官方形象待確認",
     "draftData": "社群草稿資料",
-    "draftDataHint": "屬性、進化和潛力尚未核驗，預設摺疊顯示。"
+    "draftDataHint": "屬性、進化和潛力尚未核驗，預設摺疊顯示。",
+    "officialBasic": "官方 Wiki 基礎資料",
+    "officialScope": "編號、英文名、圖片和描述已透過官方 Aniimo Wiki 快照核驗；屬性、定位、階段、能力、進化與地點逐項確認前不會展示。"
   },
   "tools": {
     "title": "工具中心",
@@ -384,7 +389,8 @@
       "aniimo-catching-guide": { "title": "Aniimo 伊莫怎麼捕獲？Aniipod、陷阱與出現條件", "subtitle": "根據官方資料整理目前已確認的捕獲機制。", "tag": "玩法", "lead": "官方商店確認玩家會使用 Aniipod、陷阱和時機判斷捕獲伊莫；環境、天氣、特殊現象和時段會影響伊莫出現。", "body": [{"t":"h","c":"Aniimo 怎麼捕獲伊莫？"},{"t":"p","c":"玩家在生態環境中發現伊莫，並使用 Aniipod 捕獲。官方文案還提到設置陷阱和把握捕獲時機。"},{"t":"h","c":"什麼會影響伊莫出現？"},{"t":"li","c":"環境與棲息地"},{"t":"li","c":"天氣"},{"t":"li","c":"特殊現象"},{"t":"li","c":"時間段"},{"t":"h","c":"捕獲率公式公布了嗎？"},{"t":"p","c":"沒有。目前官方來源沒有提供可驗證的機率公式或完整物種捕獲率表，在官方資料公布前，任何計算器結果都只能視為實驗性估算。"}] },
       "aniimo-multiplayer": { "title": "Aniimo 伊莫能連線嗎？合作、PvP 與 Egg Heist 玩法", "subtitle": "官方商店確認多人、線上合作、PvP 和跨平台多人功能。", "tag": "多人", "lead": "Aniimo 同時包含單人和多人活動。Steam 列出 PvP、線上合作及跨平台多人，Xbox 則公布了三人組隊的 Egg Heist PVEVP 模式。", "body": [{"t":"h","c":"Aniimo 支援連線合作嗎？"},{"t":"p","c":"支援。Steam 頁面列出線上合作與多人模式，具體活動可能受到平台、帳號與上線版本影響。"},{"t":"h","c":"有 PvP 嗎？"},{"t":"p","c":"Steam 列出了 PvP；Xbox 將 Egg Heist 描述為即時 PVEVP 活動，三人隊伍需要在對抗環境威脅的同時展開競爭。"},{"t":"h","c":"支援跨平台連線嗎？"},{"t":"p","c":"Steam 標註跨平台多人，但目前官方資料尚未說明所有平台組合、跨平台存檔和帳號綁定細節。"}] },
       "aniimo-pre-registration": { "title": "Aniimo 伊莫預約指南：官方入口與上線時間", "subtitle": "透過 Aniimo 官網提供的商店連結進行預約或加入願望清單。", "tag": "更新", "lead": "Aniimo 官網提供預約和各平台商店入口，不同平台與地區可能分別顯示預約、願望清單或預購。", "body": [{"t":"h","c":"Aniimo 怎麼預約？"},{"t":"p","c":"進入 Aniimo 官網，選擇你的平台並開啟官方商店連結。根據平台不同，按鈕可能顯示為預約、加入願望清單或預購。"},{"t":"h","c":"預約有什麼獎勵？"},{"t":"p","c":"獎勵細節可能隨活動和地區變化，請只採用官網或官方商店當時展示的資訊。"},{"t":"h","c":"什麼時候上線？"},{"t":"p","c":"PlayStation Store 公布的全球上線時間為 2026 年 9 月 16 日 10:00（UTC+8）；部分時區的商店可能顯示前一天。"}] },
-      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置需求：目前官方確認的資訊", "subtitle": "Steam 已確認 Windows 平台，完整硬體需求應以商店即時頁面為準。", "tag": "PC", "lead": "Aniimo 已有 Windows PC 的 Steam 官方頁面。由於上線前配置可能調整，硬體和儲存需求應以 Steam 或官方商店即時資訊為準。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩嗎？"},{"t":"p","c":"可以。Steam 將 Aniimo 列為 Windows 遊戲，Xbox 頁面也列出了 PC 平台。"},{"t":"h","c":"最低配置和建議配置是什麼？"},{"t":"p","c":"目前註冊來源沒有提供適合穩定轉載的完整硬體需求，請在下載前查看 Steam 頁面中的系統需求欄位。"},{"t":"h","c":"支援 macOS 嗎？"},{"t":"p","c":"本頁核驗的 Steam 頁面僅確認 Windows，目前官方資料沒有確認 macOS 版本。"}] }
+      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置需求：目前官方確認的資訊", "subtitle": "Steam 已確認 Windows 平台，完整硬體需求應以商店即時頁面為準。", "tag": "PC", "lead": "Aniimo 已有 Windows PC 的 Steam 官方頁面。由於上線前配置可能調整，硬體和儲存需求應以 Steam 或官方商店即時資訊為準。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩嗎？"},{"t":"p","c":"可以。Steam 將 Aniimo 列為 Windows 遊戲，Xbox 頁面也列出了 PC 平台。"},{"t":"h","c":"最低配置和建議配置是什麼？"},{"t":"p","c":"目前註冊來源沒有提供適合穩定轉載的完整硬體需求，請在下載前查看 Steam 頁面中的系統需求欄位。"},{"t":"h","c":"支援 macOS 嗎？"},{"t":"p","c":"本頁核驗的 Steam 頁面僅確認 Windows，目前官方資料沒有確認 macOS 版本。"}] },
+      "official-aniimo-dex-status": { "title": "Aniimo 官方圖鑑覆蓋：AniimoDex 已核驗哪些欄位", "subtitle": "公開說明 AniimoDex 使用的官方 Wiki 快照和逐欄位核驗狀態。", "tag": "資料狀態", "lead": "AniimoDex 目前收錄 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 條編號記錄，只將快照中明確存在的欄位標為已核驗。", "body": [{"t":"h","c":"目前已核驗什麼？"},{"t":"table","head":["欄位","狀態"],"rows":[["圖鑑編號","來自官方 Wiki 索引"],["英文名稱","來自官方 Wiki 索引"],["圖片","Aniimo 官方 CDN 圖片"],["描述","官方 Wiki 原始描述"],["元素、定位、階段","等待欄位級匯入核驗"],["數值、進化和能力","尚未作為已核驗資料發布"],["地點與捕獲條件","尚未作為已核驗資料發布"]]},{"t":"h","c":"為什麼部分篩選暫時不可用？"},{"t":"p","c":"AniimoDex 已移除早期社群草稿映射，避免與官方記錄混在一起。元素、定位、階段和能力經過獨立匯入核驗後，詳細篩選才會恢復。"},{"t":"h","c":"資料如何更新？"},{"t":"p","c":"可重複執行的解析腳本讀取官方 Wiki 公開索引，驗證編號唯一性並保存帶日期的快照。官方資料變化會先經過差異檢查，再發布到線上。"},{"t":"quote","c":"已核驗標籤只適用於明確列出的欄位，不代表該伊莫的所有資訊都已確認。"}] }
     },
     "relatedArticles": "相關攻略"
   },

@@ -61,7 +61,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const groups = [
     { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-platforms', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
     { key: 'gameplay', slugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer'] },
-    { key: 'updates', slugs: ['aniimo-pre-registration', 'aniimo-system-requirements'] },
+    { key: 'updates', slugs: ['official-aniimo-dex-status', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
   ];
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）

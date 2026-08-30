@@ -145,6 +145,14 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['aniimo-platforms', 'how-to-download-aniimo'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
   },
+  {
+    slug: 'official-aniimo-dex-status',
+    date: '2026-08-30',
+    readMinutes: 5,
+    relatedToolHrefs: ['/dex'],
+    relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained'],
+    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+  },
 ];
 
 /** 按 slug 查找文章元数据 */

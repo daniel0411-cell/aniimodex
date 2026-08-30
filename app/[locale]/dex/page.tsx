@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getAllAniimos, searchAniimos } from '@/lib/aniimo';
@@ -27,9 +28,6 @@ const VALID_TWINE = TWINE_ABILITIES as string[];
 /** 卡片组件 */
 function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
   const t = useTranslations();
-  const elementLabel = t(`elements.${aniimo.element}`);
-  const roleLabel = t(`roles.${aniimo.role}`);
-  const twineLabel = t(`twineAbility.${aniimo.twineAbility}`);
 
   return (
     <Link
@@ -40,61 +38,31 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
         <span className="font-mono text-[11px] font-semibold text-text-muted">
           #{aniimo.number}
         </span>
-        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-amber-700">
-          <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-          {t('dex.unverified')}
+        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+          {t('dex.officialBasic')}
         </span>
       </div>
 
-      <div
-        className={cn(
-          'relative mt-2 flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br transition-transform duration-300',
-          ELEMENT_GRADIENTS[aniimo.element]
+      <div className="relative mt-2 flex aspect-[4/3] items-center justify-center overflow-hidden bg-sky-50">
+        {aniimo.imageUrl && (
+          <Image
+            src={aniimo.imageUrl}
+            alt={aniimo.enName}
+            fill
+            sizes="(min-width: 1024px) 25vw, 50vw"
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         )}
-      >
-        <span className="absolute h-24 w-24 rounded-[45%_55%_50%_50%] bg-white/45 blur-[1px] transition-transform duration-300 group-hover:scale-105 sm:h-28 sm:w-28" />
-        <span className="relative text-4xl font-black text-white/90" aria-hidden>
-          ?
-        </span>
-        <ElementIcon
-          element={aniimo.element}
-          className={cn(
-            'absolute bottom-3 right-3 opacity-70',
-            ELEMENT_ICON_COLORS[aniimo.element]
-          )}
-          size={22}
-        />
       </div>
 
       <div className="p-3 sm:p-4">
         <h3 className="truncate font-semibold text-text-primary group-hover:text-primary-light">
           {aniimo.name}
         </h3>
-        <p className="truncate text-xs text-text-muted">{aniimo.enName}</p>
-        <div className="mt-3 flex flex-wrap items-center gap-1.5">
-          <span
-            className={cn(
-              'inline-flex items-center rounded-full border px-2 py-0.5 text-[10px]',
-              ELEMENT_BADGE_CLASSES[aniimo.element]
-            )}
-          >
-            {elementLabel}
-          </span>
-          <span
-            className={cn(
-              'inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px]',
-              ROLE_BADGE_CLASSES[aniimo.role]
-            )}
-          >
-            {ROLE_ICONS[aniimo.role]} {roleLabel}
-          </span>
-          <span
-            title={t('dex.twineTitle', { name: twineLabel })}
-            className="ml-auto text-xs text-text-muted"
-          >
-            {TWINE_ICONS[aniimo.twineAbility]}
-          </span>
-        </div>
+        <p className="mt-1 line-clamp-2 min-h-8 text-xs leading-4 text-text-muted">
+          {aniimo.description}
+        </p>
       </div>
     </Link>
   );
@@ -195,7 +163,7 @@ export default function DexPage() {
       {/* 筛选栏 */}
       <div className="rounded-md border border-ink-border bg-white/90 p-3 shadow-card backdrop-blur-xl sm:sticky sm:top-16 sm:z-30 sm:p-4">
         <button type="button" onClick={() => setFiltersOpen((open) => !open)} className="flex w-full items-center justify-between text-left sm:hidden">
-          <span className="text-sm font-semibold text-text-primary">{td('filterElement')} + {td('filterRole')}</span>
+          <span className="text-sm font-semibold text-text-primary">{td('searchLabel')}</span>
           <span className="text-xs text-text-muted">{filtersOpen ? '−' : '+'}</span>
         </button>
         <div className={cn('space-y-3', !filtersOpen && 'hidden sm:block')}>
@@ -208,6 +176,11 @@ export default function DexPage() {
           className="h-10 w-full rounded-md border border-ink-border bg-white px-3 text-sm text-text-primary focus:border-primary-light focus:outline-none"
         />
 
+        <div className="border-l-4 border-secondary bg-emerald-50 px-3 py-2 text-xs leading-5 text-emerald-950">
+          {td('officialScope')}
+        </div>
+
+        <div className="hidden" aria-hidden="true">
         {/* 元素筛选（图标按钮） */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="w-10 shrink-0 text-xs text-text-muted">{td('filterElement')}</span>
@@ -233,6 +206,7 @@ export default function DexPage() {
               );
             })}
           </div>
+        </div>
         </div>
 
         {/* 角色筛选 */}
@@ -281,9 +255,6 @@ export default function DexPage() {
           {hasActiveFilter && (
             <div className="flex flex-wrap items-center gap-2 border-t border-ink-border pt-3">
               {q && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">“{q}”</span>}
-              {element && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`elements.${element}`)}</span>}
-              {role && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`roles.${role}`)}</span>}
-              {twine && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`twineAbility.${twine}`)}</span>}
               <button type="button" onClick={resetFilters} className="text-xs font-semibold text-primary-light hover:text-primary">{td('clearAll')}</button>
             </div>
           )}

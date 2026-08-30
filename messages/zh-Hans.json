@@ -83,7 +83,10 @@
     "resetAll": "重置全部筛选",
     "filterElementAria": "筛选 {element} 属性的伊莫",
     "twineTitle": "Twine：{name}",
-    "unverified": "核验中"
+    "unverified": "核验中",
+    "officialBasic": "官方基础资料",
+    "searchLabel": "搜索官方图鉴",
+    "officialScope": "已从官方 Wiki 核验编号、英文名、图片和描述；元素、定位、阶段与能力逐项核验后再恢复详细筛选。"
   },
   "dexDetail": {
     "notFound": "未找到该伊莫",
@@ -119,7 +122,9 @@
     "reviewing": "核验中",
     "visualPending": "官方形象待确认",
     "draftData": "社区草稿数据",
-    "draftDataHint": "属性、进化和潜力尚未核验，默认折叠显示。"
+    "draftDataHint": "属性、进化和潜力尚未核验，默认折叠显示。",
+    "officialBasic": "官方 Wiki 基础资料",
+    "officialScope": "编号、英文名、图片和描述已通过官方 Aniimo Wiki 快照核验；属性、定位、阶段、能力、进化与地点逐项确认前不会展示。"
   },
   "tools": {
     "title": "工具中心",
@@ -384,7 +389,8 @@
       "aniimo-catching-guide": { "title": "Aniimo 伊莫怎么捕获？Aniipod、陷阱与出现条件", "subtitle": "根据官方资料整理目前已确认的捕获机制。", "tag": "玩法", "lead": "官方商店确认玩家会使用 Aniipod、陷阱和时机判断捕获伊莫；环境、天气、特殊现象和时段会影响伊莫出现。", "body": [{"t":"h","c":"Aniimo 怎么捕获伊莫？"},{"t":"p","c":"玩家在生态环境中发现伊莫，并使用 Aniipod 捕获。官方文案还提到设置陷阱和把握捕获时机。"},{"t":"h","c":"什么会影响伊莫出现？"},{"t":"li","c":"环境与栖息地"},{"t":"li","c":"天气"},{"t":"li","c":"特殊现象"},{"t":"li","c":"时间段"},{"t":"h","c":"捕获率公式公布了吗？"},{"t":"p","c":"没有。当前官方来源没有提供可验证的概率公式或完整物种捕获率表，在官方数据公布前，任何计算器结果都只能视为实验性估算。"}] },
       "aniimo-multiplayer": { "title": "Aniimo 伊莫能联机吗？合作、PvP 与 Egg Heist 玩法", "subtitle": "官方商店确认多人、在线合作、PvP 和跨平台多人功能。", "tag": "多人", "lead": "Aniimo 同时包含单人和多人活动。Steam 列出 PvP、在线合作及跨平台多人，Xbox 则公布了三人组队的 Egg Heist PVEVP 模式。", "body": [{"t":"h","c":"Aniimo 支持联机合作吗？"},{"t":"p","c":"支持。Steam 页面列出在线合作与多人模式，具体活动可能受到平台、账号与上线版本影响。"},{"t":"h","c":"有 PvP 吗？"},{"t":"p","c":"Steam 列出了 PvP；Xbox 将 Egg Heist 描述为实时 PVEVP 活动，三人队伍需要在对抗环境威胁的同时展开竞争。"},{"t":"h","c":"支持跨平台联机吗？"},{"t":"p","c":"Steam 标注跨平台多人，但当前官方资料尚未说明所有平台组合、跨平台存档和账号绑定细节。"}] },
       "aniimo-pre-registration": { "title": "Aniimo 伊莫预约指南：官方入口与上线时间", "subtitle": "通过 Aniimo 官网提供的商店链接进行预约或加入愿望单。", "tag": "更新", "lead": "Aniimo 官网提供预约和各平台商店入口，不同平台与地区可能分别显示预约、愿望单或预购。", "body": [{"t":"h","c":"Aniimo 怎么预约？"},{"t":"p","c":"进入 Aniimo 官网，选择你的平台并打开官方商店链接。根据平台不同，按钮可能显示为预约、加入愿望单或预购。"},{"t":"h","c":"预约有什么奖励？"},{"t":"p","c":"奖励细节可能随活动和地区变化，请只采用官网或官方商店当时展示的信息。"},{"t":"h","c":"什么时候上线？"},{"t":"p","c":"PlayStation Store 公布的全球上线时间为 2026 年 9 月 16 日 10:00（UTC+8）；部分时区的商店可能显示前一天。"}] },
-      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置要求：目前官方确认的信息", "subtitle": "Steam 已确认 Windows 平台，完整硬件要求应以商店实时页面为准。", "tag": "PC", "lead": "Aniimo 已有 Windows PC 的 Steam 官方页面。由于上线前配置可能调整，硬件和存储要求应以 Steam 或官方商店实时信息为准。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩吗？"},{"t":"p","c":"可以。Steam 将 Aniimo 列为 Windows 游戏，Xbox 页面也列出了 PC 平台。"},{"t":"h","c":"最低配置和推荐配置是什么？"},{"t":"p","c":"当前注册来源没有提供适合稳定转载的完整硬件要求，请在下载前查看 Steam 页面中的系统需求栏目。"},{"t":"h","c":"支持 macOS 吗？"},{"t":"p","c":"本页核验的 Steam 页面仅确认 Windows，当前官方资料没有确认 macOS 版本。"}] }
+      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置要求：目前官方确认的信息", "subtitle": "Steam 已确认 Windows 平台，完整硬件要求应以商店实时页面为准。", "tag": "PC", "lead": "Aniimo 已有 Windows PC 的 Steam 官方页面。由于上线前配置可能调整，硬件和存储要求应以 Steam 或官方商店实时信息为准。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩吗？"},{"t":"p","c":"可以。Steam 将 Aniimo 列为 Windows 游戏，Xbox 页面也列出了 PC 平台。"},{"t":"h","c":"最低配置和推荐配置是什么？"},{"t":"p","c":"当前注册来源没有提供适合稳定转载的完整硬件要求，请在下载前查看 Steam 页面中的系统需求栏目。"},{"t":"h","c":"支持 macOS 吗？"},{"t":"p","c":"本页核验的 Steam 页面仅确认 Windows，当前官方资料没有确认 macOS 版本。"}] },
+      "official-aniimo-dex-status": { "title": "Aniimo 官方图鉴覆盖：AniimoDex 已核验哪些字段", "subtitle": "公开说明 AniimoDex 使用的官方 Wiki 快照和逐字段核验状态。", "tag": "数据状态", "lead": "AniimoDex 当前收录 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 条编号记录，只将快照中明确存在的字段标为已核验。", "body": [{"t":"h","c":"目前已核验什么？"},{"t":"table","head":["字段","状态"],"rows":[["图鉴编号","来自官方 Wiki 索引"],["英文名称","来自官方 Wiki 索引"],["图片","Aniimo 官方 CDN 图片"],["描述","官方 Wiki 原始描述"],["元素、定位、阶段","等待字段级导入核验"],["数值、进化和能力","尚未作为已核验数据发布"],["地点与捕获条件","尚未作为已核验数据发布"]]},{"t":"h","c":"为什么部分筛选暂时不可用？"},{"t":"p","c":"AniimoDex 已移除早期社区草稿映射，避免与官方记录混在一起。元素、定位、阶段和能力经过独立导入核验后，详细筛选才会恢复。"},{"t":"h","c":"数据如何更新？"},{"t":"p","c":"可重复运行的解析脚本读取官方 Wiki 公开索引，验证编号唯一性并保存带日期的快照。官方数据变化会先经过差异检查，再发布到线上。"},{"t":"quote","c":"已核验标签只适用于明确列出的字段，不代表该伊莫的所有信息都已确认。"}] }
     },
     "relatedArticles": "相关攻略"
   },

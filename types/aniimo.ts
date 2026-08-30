@@ -145,6 +145,10 @@ export interface AniimoEntry {
   name: string;
   /** 英文名 */
   enName: string;
+  /** 官方 Wiki 条目 ID（列表页未提供时可为空） */
+  officialWikiId?: string;
+  /** 官方公开图片 URL */
+  imageUrl?: string;
   /** 描述 */
   description: string;
   /** 英文图鉴简介（flavor text，承接 'aniimo dex' 等英文搜索） */

@@ -4,10 +4,27 @@ const sources = readFileSync(new URL('../data/sources.ts', import.meta.url), 'ut
 const verification = readFileSync(new URL('../data/verification.ts', import.meta.url), 'utf8');
 const aniimos = readFileSync(new URL('../data/aniimos.ts', import.meta.url), 'utf8');
 const guides = readFileSync(new URL('../data/guides.ts', import.meta.url), 'utf8');
+const wikiSnapshot = JSON.parse(
+  readFileSync(new URL('../data/official-wiki-snapshot.json', import.meta.url), 'utf8')
+);
 const errors = [];
 
-if (!/dataSource:\s*'unknown',[\s\S]*?sourceIds:\s*\[\]/.test(aniimos)) {
-  errors.push('Aniimo constructor does not enforce unknown data status');
+if (wikiSnapshot.source !== 'https://wiki.aniimo.com/' || wikiSnapshot.entries.length < 80) {
+  errors.push('Official Wiki snapshot source or entry count is invalid');
+}
+if (new Set(wikiSnapshot.entries.map((entry) => entry.number)).size !== wikiSnapshot.entries.length) {
+  errors.push('Official Wiki snapshot contains duplicate numbers');
+}
+for (const entry of wikiSnapshot.entries) {
+  if (!/^\d{3}$/.test(entry.number) || !entry.name || !entry.description) {
+    errors.push(`Invalid official Wiki entry: ${entry.number}`);
+  }
+  if (!entry.imageUrl.startsWith('https://worldx-website-cdn.aniimo.com/')) {
+    errors.push(`Unofficial image host: ${entry.number}`);
+  }
+}
+if (!aniimos.includes("dataSource: 'official'") || !aniimos.includes('aniimo-official-wiki-index-2026-08-30')) {
+  errors.push('Aniimo data layer is not bound to the official Wiki source');
 }
 
 for (const claim of verification.matchAll(

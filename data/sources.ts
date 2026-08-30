@@ -8,6 +8,14 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-official-wiki-index-2026-08-30',
+    url: 'https://wiki.aniimo.com/',
+    title: 'Official Aniimo Wiki - Complete Aniimo Index',
+    accessedAt: '2026-08-30',
+    evidence:
+      'The official Aniimo Wiki index publicly lists Aniimo numbers, English names, official artwork, descriptions, elements, roles and stages. AniimoDex only imports fields explicitly present in the checked source snapshot.',
+  },
+  {
     id: 'aniimo-official-home-2026-08-28',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo Official Website - Global Launch Announced!',

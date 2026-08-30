@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { getPublishedGuidePosts } from '@/data/guides';
+import { getAllAniimos } from '@/lib/aniimo';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
@@ -63,5 +64,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guideUrls = getPublishedGuidePosts()
     .filter((post) => post.sourceIds?.length)
     .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.date, 0.8, 'weekly'));
-  return [...staticUrls, ...guideUrls];
+  const dexUrls = getAllAniimos().flatMap((aniimo) =>
+    buildLocalizedUrls(`/dex/${aniimo.number}/`, '2026-08-30', 0.75, 'weekly')
+  );
+  return [...staticUrls, ...guideUrls, ...dexUrls];
 }
