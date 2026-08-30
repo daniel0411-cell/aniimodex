@@ -124,6 +124,7 @@ export default async function DexDetailPage({ params }: PageProps) {
 
   const t = await getTranslations('dexDetail');
   const tr = await getTranslations();
+  const collections = await getTranslations('collections');
   const allAniimos = getAllAniimos();
   const currentIndex = allAniimos.findIndex((entry) => entry.number === aniimo.number);
   const previous = currentIndex > 0 ? allAniimos[currentIndex - 1] : undefined;
@@ -327,6 +328,9 @@ export default async function DexDetailPage({ params }: PageProps) {
               {t('officialBasic')}
             </Link>
           </li>
+          <li><Link href="/evolutions" className="text-primary-light transition-colors hover:text-primary">{collections('evolutions.title')}</Link></li>
+          <li><Link href="/locations" className="text-primary-light transition-colors hover:text-primary">{collections('locations.title')}</Link></li>
+          <li><Link href="/abilities" className="text-primary-light transition-colors hover:text-primary">{collections('abilities.title')}</Link></li>
         </ul>
       </section>
     </div>

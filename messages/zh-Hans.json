@@ -407,6 +407,11 @@
     },
     "relatedArticles": "相关攻略"
   },
+  "collections": {
+    "evolutions": { "title": "Aniimo 伊莫进化图与进化家族", "description": "查看官方 Aniimo Wiki 当前公布的全部进化家族，包括分支进化路线。", "sourceNote": "进化关系来自 2026 年 8 月 30 日核验的官方 Aniimo Wiki 详情快照。", "family": "进化家族" },
+    "locations": { "title": "Aniimo 伊莫地点与栖息地", "description": "按官方栖息地查找对应伊莫，覆盖 Nimbus Fields、Mistwoods、Crescent Bay 等区域。", "sourceNote": "这里展示官方 Wiki 栖息地，不代表准确坐标、天气条件或捕获概率。", "count": "{count} 只伊莫" },
+    "abilities": { "title": "Aniimo 伊莫移动与探索能力", "description": "反查 Hustle、Tunnel、Take Off、Cloak、Glow 等官方移动和探索能力。", "sourceNote": "能力名称、说明与伊莫对应关系来自官方 Wiki 详情页。", "count": "{count} 只伊莫" }
+  },
   "elements": {
     "Light": "光",
     "Fire": "火",

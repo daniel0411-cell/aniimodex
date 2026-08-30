@@ -608,6 +608,11 @@
     },
     "relatedArticles": "Related guides"
   },
+  "collections": {
+    "evolutions": { "title": "Aniimo Evolution Chart and Families", "description": "Browse every evolution family currently published by the official Aniimo Wiki, including branching evolution lines.", "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.", "family": "evolution family" },
+    "locations": { "title": "Aniimo Locations and Habitats", "description": "Find which Aniimo are officially listed for each habitat, from Nimbus Fields to Tideblossom Coast.", "sourceNote": "These are official Wiki habitat listings, not guaranteed spawn coordinates, weather conditions or catch rates.", "count": "{count} Aniimo" },
+    "abilities": { "title": "Aniimo Mobility Abilities", "description": "Look up official movement and exploration abilities such as Hustle, Tunnel, Take Off, Cloak and Glow.", "sourceNote": "Ability names, descriptions and Aniimo mappings come from official Wiki detail pages.", "count": "{count} Aniimo" }
+  },
   "elements": {
     "Light": "Light",
     "Fire": "Fire",

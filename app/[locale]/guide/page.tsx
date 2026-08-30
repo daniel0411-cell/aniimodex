@@ -57,6 +57,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations('guide');
   const tp = await getTranslations('guide.posts');
   const tb = await getTranslations('breadcrumb');
+  const tc = await getTranslations('collections');
   const guidePosts = getPublishedGuidePosts();
   const groups = [
     { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-launch-time-preload', 'aniimo-platforms', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
@@ -93,6 +94,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     { href: '/tools/twine', key: 'browseTwine' },
     { href: '/tools/type-chart', key: 'browseTypeChart' },
     { href: '/tools/catch', key: 'browseCatch' },
+  ];
+  const collectionLinks = [
+    { href: '/evolutions', label: tc('evolutions.title') },
+    { href: '/locations', label: tc('locations.title') },
+    { href: '/abilities', label: tc('abilities.title') },
   ];
 
   return (
@@ -165,6 +171,9 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
                 {t(link.key)}
               </Link>
             </li>
+          ))}
+          {collectionLinks.map((link) => (
+            <li key={link.href}><Link href={link.href} className="text-primary-light transition-colors hover:text-primary">{link.label}</Link></li>
           ))}
         </ul>
       </section>

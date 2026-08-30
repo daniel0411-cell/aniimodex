@@ -22,6 +22,9 @@ const STATIC_ROUTES: {
   { path: '/dex/', lastModified: '2026-08-28', priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', lastModified: '2026-08-28', priority: 0.8, changefreq: 'monthly' },
   { path: '/guide/', lastModified: '2026-08-28', priority: 0.7, changefreq: 'monthly' },
+  { path: '/evolutions/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
+  { path: '/locations/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
+  { path: '/abilities/', lastModified: '2026-08-30', priority: 0.8, changefreq: 'weekly' },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates
