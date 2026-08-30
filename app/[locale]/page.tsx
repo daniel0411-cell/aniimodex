@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import HeroSearch from '@/components/HeroSearch';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getAllAniimos } from '@/lib/aniimo';
-import { sources } from '@/data/sources';
+import { evolutionFamilies, habitatGroups, mobilityGroups } from '@/data/aniimo-collections';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
-// 首页 metadata（locale 感知）
 export async function generateMetadata({
   params,
 }: {
@@ -18,10 +16,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const meta = await getTranslations({ locale, namespace: 'meta' });
-  const siteName = meta('siteName');
   const title = meta('defaultTitle');
   const description = meta('defaultDescription');
-
   return {
     title,
     description,
@@ -31,19 +27,12 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      siteName,
+      siteName: meta('siteName'),
       title,
       description,
       url: `${SITE_URL}/${locale}/`,
       locale: locale === 'zh-Hant' ? 'zh_TW' : locale === 'zh-Hans' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: `${SITE_URL}/og-image.png`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -54,102 +43,23 @@ export async function generateMetadata({
   };
 }
 
-// 快捷入口卡片（链接不变，文案走 messages）
-const quickLinkKeys = [
-  {
-    href: '/tools/twine',
-    icon: 'Link2',
-    key: 'twine',
-    accent: 'bg-emerald-100 text-emerald-700',
-  },
-  {
-    href: '/tools/type-chart',
-    icon: 'Zap',
-    key: 'typeChart',
-    accent: 'bg-sky-100 text-sky-700',
-  },
-  { href: '/guide', icon: 'Compass', key: 'guide', accent: 'bg-rose-100 text-rose-700' },
-];
-
-// Lucide 图标映射
-const iconMap: Record<string, React.FC<{ className?: string; size?: number }>> = {
-  BookOpen: ({ className, size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-    </svg>
-  ),
-  Link2: ({ className, size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M9 17H7A5 5 0 0 1 7 7h2" />
-      <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
-      <line x1="8" x2="16" y1="12" y2="12" />
-    </svg>
-  ),
-  Zap: ({ className, size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-    </svg>
-  ),
-  Compass: ({ className, size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-    </svg>
-  ),
-};
+const featuredNumbers = ['001', '002', '005', '007', '011', '016'];
+const guideSlugs = ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-twine-explained', 'official-aniimo-dex-status'] as const;
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-
   const t = await getTranslations();
   const th = await getTranslations('home');
-  const stats = [
-    { value: getAllAniimos().length, label: th('stats.dexEntries'), tone: 'text-primary-light' },
-    { value: sources.length, label: th('stats.sources'), tone: 'text-secondary-light' },
-    { value: 3, label: th('stats.tools'), tone: 'text-accent-light' },
-    { value: '2026.08', label: th('stats.updated'), tone: 'text-text-primary' },
+  const allAniimos = getAllAniimos();
+  const featured = featuredNumbers
+    .map((number) => allAniimos.find((aniimo) => aniimo.number === number))
+    .filter((aniimo) => aniimo !== undefined);
+  const metrics = [
+    { value: allAniimos.length, label: th('stats.dexEntries'), href: '/dex' },
+    { value: evolutionFamilies.length, label: th('stats.evolutions'), href: '/evolutions' },
+    { value: habitatGroups.length, label: th('stats.habitats'), href: '/locations' },
+    { value: mobilityGroups.length, label: th('stats.abilities'), href: '/abilities' },
   ];
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -169,163 +79,37 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   };
 
   return (
-    <div className="space-y-10 sm:space-y-14">
-      {/* JSON-LD 结构化数据 */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      {/* Hero 区域 */}
-      <section className="relative min-h-[32rem] overflow-hidden rounded-lg sm:min-h-[38rem]">
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
-        </div>
-
-        <div className="relative flex min-h-[32rem] max-w-2xl flex-col justify-end px-5 py-8 sm:min-h-[38rem] sm:px-10 sm:py-12 lg:px-14">
-          <span className="mb-4 w-fit rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-            {th('heroBadge')}
-          </span>
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-            AniimoDex
-          </h1>
-          <p className="mt-3 max-w-xl text-sm leading-6 text-white/85 sm:text-base">
-            {th('heroSubtitle')}
-          </p>
-          <div className="mt-6 w-full max-w-xl">
-            <HeroSearch />
-          </div>
-          <Link
-            href="/dex"
-            className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white hover:text-white/80"
-          >
-            {t('home.quickLinks.dex.title')} <span aria-hidden>→</span>
-          </Link>
+    <div className="space-y-12 sm:space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <section className="relative min-h-[30rem] overflow-hidden rounded-lg sm:min-h-[34rem]">
+        <div className="absolute inset-0 -z-10"><Image src="/images/hero-bg.jpg" alt="" fill sizes="100vw" className="object-cover object-center" priority /><div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/45 to-transparent" /><div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" /></div>
+        <div className="relative flex min-h-[30rem] max-w-2xl flex-col justify-end px-5 py-8 sm:min-h-[34rem] sm:px-10 sm:py-12 lg:px-14">
+          <span className="mb-4 text-xs font-bold uppercase text-emerald-200">{th('heroBadge')}</span><h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">AniimoDex</h1><p className="mt-3 max-w-xl text-sm leading-6 text-white/85 sm:text-base">{th('heroSubtitle')}</p><div className="mt-6 w-full max-w-xl"><HeroSearch /></div>
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-white"><Link href="/dex" className="hover:text-white/75">{th('exploreDex')} →</Link><Link href="/evolutions" className="hover:text-white/75">{t('collections.evolutions.title')}</Link><Link href="/locations" className="hover:text-white/75">{t('collections.locations.title')}</Link></div>
         </div>
       </section>
-
-      <section className="grid grid-cols-2 divide-x divide-y divide-ink-border border-y border-ink-border bg-white/70 sm:grid-cols-4 sm:divide-y-0">
-        {stats.map((stat) => (
-          <div key={stat.label} className="px-4 py-4 sm:px-5">
-            <p className={`font-mono text-xl font-bold ${stat.tone}`}>{stat.value}</p>
-            <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-text-muted">{stat.label}</p>
-          </div>
-        ))}
-      </section>
-
-      <section className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
-        <Link
-          href="/dex"
-          className="group relative min-h-64 overflow-hidden rounded-lg bg-sky-100 p-6 sm:p-8"
-        >
-          <div className="relative z-10 max-w-md">
-            <span className="text-xs font-semibold uppercase text-primary-light">01 / DEX</span>
-            <h2 className="mt-3 text-2xl font-bold text-text-primary sm:text-3xl">
-              {t('home.quickLinks.dex.title')}
-            </h2>
-            <p className="mt-2 text-sm leading-6 text-text-secondary">
-              {t('home.quickLinks.dex.desc')}
-            </p>
-            <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-light">
-              {th('exploreDex')} <span aria-hidden>→</span>
-            </span>
-          </div>
-          <div className="absolute -bottom-12 -right-5 h-56 w-56 rounded-full border-[28px] border-white/50 transition-transform duration-300 group-hover:scale-105" />
-          <div className="absolute bottom-9 right-10 text-7xl font-black text-white/80" aria-hidden>
-            ?
-          </div>
-        </Link>
-
-        <div className="divide-y divide-ink-border border-y border-ink-border">
-          {quickLinkKeys.map((link) => {
-            const Icon = iconMap[link.icon];
-            return (
-              <Link key={link.href} href={link.href} className="group flex items-center gap-4 py-5">
-                <span
-                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg ${link.accent}`}
-                >
-                  {Icon ? <Icon size={21} /> : null}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold text-text-primary group-hover:text-primary-light">
-                    {t(`home.quickLinks.${link.key}.title`)}
-                  </span>
-                  <span className="mt-0.5 block text-sm text-text-muted">
-                    {t(`home.quickLinks.${link.key}.desc`)}
-                  </span>
-                </span>
-                <span className="text-text-muted group-hover:text-primary-light" aria-hidden>
-                  →
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="border-l-4 border-secondary bg-white px-5 py-4 shadow-card sm:flex sm:items-center sm:justify-between">
-        <div>
-          <p className="text-xs font-semibold uppercase text-secondary-light">
-            {th('verificationLabel')}
-          </p>
-          <h2 className="mt-1 text-lg font-semibold text-text-primary">
-            {th('verificationTitle')}
-          </h2>
-          <p className="mt-1 text-sm text-text-muted">{th('verificationDescription')}</p>
-        </div>
-        <a
-          href="https://www.aniimo.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 inline-flex shrink-0 text-sm font-semibold text-primary-light hover:text-primary-hover sm:mt-0"
-        >
-          {th('officialSource')} ↗
-        </a>
-      </section>
-
+      <section className="grid grid-cols-2 divide-x divide-y divide-ink-border border-y border-ink-border bg-white/70 sm:grid-cols-4 sm:divide-y-0">{metrics.map((metric) => <Link key={metric.label} href={metric.href} className="px-4 py-4 hover:bg-white sm:px-5"><p className="font-mono text-2xl font-bold text-primary-light">{metric.value}</p><p className="mt-1 text-[11px] font-medium uppercase text-text-muted">{metric.label}</p></Link>)}</section>
       <section>
-        <div className="mb-5 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase text-primary-light">
-              {th('officialGuidesLabel')}
-            </p>
-            <h2 className="mt-1 text-2xl font-bold text-text-primary">
-              {th('officialGuidesTitle')}
-            </h2>
-          </div>
-          <Link
-            href="/guide"
-            className="text-sm font-semibold text-primary-light hover:text-primary-hover"
-          >
-            {th('viewAllGuide')} →
-          </Link>
-        </div>
-        <div className="grid gap-3 md:grid-cols-3">
-          {(['aniimo-release-date', 'how-to-download-aniimo', 'what-is-aniimo'] as const).map((slug) => (
-            <Link
-              key={slug}
-              href={`/guide/${slug}`}
-              className="group border-t-2 border-ink-border bg-white px-5 py-5 shadow-card transition-colors hover:border-primary"
-            >
-              <h3 className="font-semibold text-text-primary group-hover:text-primary-light">
-                {t(`guide.posts.${slug}.title`)}
-              </h3>
-              <p className="mt-2 text-sm leading-5 text-text-muted">
-                {t(`guide.posts.${slug}.subtitle`)}
-              </p>
-            </Link>
-          ))}
+        <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-primary-light">{th('databaseLabel')}</p><h2 className="mt-1 text-2xl font-bold text-text-primary sm:text-3xl">{th('databaseTitle')}</h2></div><Link href="/dex" className="text-sm font-semibold text-primary-light">{th('viewAllData')} →</Link></div>
+        <div className="grid gap-4 lg:grid-cols-[1.25fr_1fr_1fr]">
+          <Link href="/dex" className="group relative min-h-56 overflow-hidden border-t-4 border-primary bg-sky-50 p-6"><h3 className="text-2xl font-bold text-text-primary">{t('home.quickLinks.dex.title')}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-text-secondary">{t('home.quickLinks.dex.desc')}</p><span className="absolute bottom-6 text-sm font-semibold text-primary-light">{allAniimos.length} {th('entries')} →</span><div className="absolute -bottom-10 -right-8 h-40 w-40 rounded-full border-[24px] border-white/70" /></Link>
+          <Link href="/evolutions" className="relative min-h-56 border-t-4 border-secondary bg-emerald-50 p-6"><h3 className="text-xl font-bold text-text-primary">{t('collections.evolutions.title')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('collections.evolutions.description')}</p><span className="absolute bottom-6 text-sm font-semibold text-emerald-700">{evolutionFamilies.length} {th('families')} →</span></Link>
+          <Link href="/locations" className="relative min-h-56 border-t-4 border-accent bg-rose-50 p-6"><h3 className="text-xl font-bold text-text-primary">{t('collections.locations.title')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('collections.locations.description')}</p><span className="absolute bottom-6 text-sm font-semibold text-rose-700">{habitatGroups.length} {th('habitats')} →</span></Link>
         </div>
       </section>
+      <section className="-mx-4 bg-slate-900 px-4 py-12 text-white sm:-mx-6 sm:px-6 lg:rounded-lg">
+        <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-emerald-300">{th('featuredLabel')}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{th('featuredTitle')}</h2></div><Link href="/dex" className="text-sm font-semibold text-white/80">{th('viewAllAniimo')} →</Link></div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{featured.map((aniimo) => <Link key={aniimo.number} href={`/dex/${aniimo.number}`} className="group overflow-hidden rounded-md bg-white p-2 text-text-primary"><div className="relative aspect-square bg-sky-50"><Image src={aniimo.imageUrl!} alt={aniimo.name} fill sizes="(min-width: 1024px) 16vw, 50vw" className="object-contain transition-transform group-hover:scale-105" /></div><p className="mt-2 truncate text-sm font-semibold">{aniimo.name}</p><p className="text-[10px] text-text-muted">#{aniimo.number} · {aniimo.officialElements?.map((element) => t(`elements.${element}`)).join(' / ')}</p></Link>)}</div>
+      </section>
+      <section className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+        <div><p className="text-xs font-semibold uppercase text-emerald-700">{th('verificationLabel')}</p><h2 className="mt-2 text-2xl font-bold text-text-primary sm:text-3xl">{th('verificationTitle')}</h2><p className="mt-3 text-sm leading-7 text-text-secondary">{th('verificationDescription')}</p><Link href="/guide/official-aniimo-dex-status" className="mt-4 inline-flex text-sm font-semibold text-primary-light">{th('coverageLink')} →</Link></div>
+        <div className="border-t border-ink-border">{(['basics', 'classification', 'details', 'skills', 'pending'] as const).map((key) => <div key={key} className="flex items-center justify-between gap-4 border-b border-ink-border py-4 text-sm"><span className="text-text-primary">{th(`coverage.${key}.label`)}</span><span className={key === 'pending' ? 'font-semibold text-amber-700' : 'font-semibold text-emerald-700'}>{th(`coverage.${key}.status`)}</span></div>)}</div>
+      </section>
+      <section>
+        <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-primary-light">{th('officialGuidesLabel')}</p><h2 className="mt-1 text-2xl font-bold text-text-primary">{th('guideSectionTitle')}</h2></div><Link href="/guide" className="text-sm font-semibold text-primary-light">{th('viewAllGuide')} →</Link></div>
+        <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]"><Link href="/guide/aniimo-launch-time-preload" className="border-t-4 border-primary bg-white p-6 shadow-card"><span className="text-xs font-semibold uppercase text-primary-light">{t('guide.posts.aniimo-launch-time-preload.tag')}</span><h3 className="mt-3 text-2xl font-bold text-text-primary">{t('guide.posts.aniimo-launch-time-preload.title')}</h3><p className="mt-3 text-sm leading-6 text-text-secondary">{t('guide.posts.aniimo-launch-time-preload.subtitle')}</p><span className="mt-6 inline-flex text-sm font-semibold text-primary-light">{th('readGuide')} →</span></Link><div className="border-t border-ink-border">{guideSlugs.map((slug) => <Link key={slug} href={`/guide/${slug}`} className="block border-b border-ink-border py-4"><span className="text-[10px] font-semibold uppercase text-primary-light">{t(`guide.posts.${slug}.tag`)}</span><h3 className="mt-1 text-sm font-semibold text-text-primary">{t(`guide.posts.${slug}.title`)}</h3></Link>)}</div></div>
+      </section>
+      <section className="grid gap-4 border-y border-ink-border py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-center"><p className="font-mono text-xs text-text-muted">{th('latestUpdateLabel')}<br />2026.08.30</p><div><h2 className="text-sm font-semibold text-text-primary">{th('latestUpdateTitle')}</h2><p className="mt-1 text-xs leading-5 text-text-muted">{th('latestUpdateDescription')}</p></div><Link href="/guide/official-aniimo-dex-status" className="text-sm font-semibold text-primary-light">{th('viewUpdate')} →</Link></section>
     </div>
   );
 }
