@@ -115,6 +115,7 @@ export default function DexPage() {
   const [role, setRole] = useState<Role | ''>('');
   const [twine, setTwine] = useState<TwineAbility | ''>('');
   const [q, setQ] = useState('');
+  const [filtersOpen, setFiltersOpen] = useState(true);
 
   useEffect(() => {
     setQ(new URLSearchParams(window.location.search).get('q')?.trim() ?? '');
@@ -186,13 +187,18 @@ export default function DexPage() {
           <span className="text-xs font-semibold uppercase text-primary-light">ANIIMO ARCHIVE</span>
           <h1 className="mt-1 text-3xl font-bold text-text-primary sm:text-4xl">{td('title')}</h1>
         </div>
-        <p className="mt-2 text-sm text-text-secondary sm:mt-0">
+        <p className="mt-2 font-mono text-sm text-text-secondary sm:mt-0">
           {td('subtitle', { filtered: filtered.length, total: getAllAniimos().length })}
         </p>
       </header>
 
       {/* 筛选栏 */}
-      <div className="space-y-3 rounded-lg border border-white/80 bg-white/90 p-3 shadow-card backdrop-blur-xl sm:sticky sm:top-16 sm:z-30 sm:p-4">
+      <div className="rounded-md border border-ink-border bg-white/90 p-3 shadow-card backdrop-blur-xl sm:sticky sm:top-16 sm:z-30 sm:p-4">
+        <button type="button" onClick={() => setFiltersOpen((open) => !open)} className="flex w-full items-center justify-between text-left sm:hidden">
+          <span className="text-sm font-semibold text-text-primary">{td('filterElement')} + {td('filterRole')}</span>
+          <span className="text-xs text-text-muted">{filtersOpen ? '−' : '+'}</span>
+        </button>
+        <div className={cn('space-y-3', !filtersOpen && 'hidden sm:block')}>
         {/* 搜索框 */}
         <input
           type="search"
@@ -272,16 +278,16 @@ export default function DexPage() {
           </select>
         </div>
 
-        {/* 清除筛选 */}
-        {hasActiveFilter && (
-          <button
-            type="button"
-            onClick={resetFilters}
-            className="text-xs text-primary-light hover:text-primary"
-          >
-            ✕ {td('clearAll')}
-          </button>
-        )}
+          {hasActiveFilter && (
+            <div className="flex flex-wrap items-center gap-2 border-t border-ink-border pt-3">
+              {q && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">“{q}”</span>}
+              {element && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`elements.${element}`)}</span>}
+              {role && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`roles.${role}`)}</span>}
+              {twine && <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary-hover">{t(`twineAbility.${twine}`)}</span>}
+              <button type="button" onClick={resetFilters} className="text-xs font-semibold text-primary-light hover:text-primary">{td('clearAll')}</button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* 卡片网格 / 空状态 */}

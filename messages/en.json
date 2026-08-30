@@ -34,6 +34,7 @@
     "latestUpdates": "Latest Updates",
     "viewAllGuide": "View all guides",
     "loadMore": "Load More",
+    "stats": { "dexEntries": "Dex entries", "sources": "Official sources", "tools": "Live tools", "updated": "Last updated" },
     "quickLinks": {
       "dex": {
         "title": "Dex",

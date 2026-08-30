@@ -285,6 +285,10 @@ export default async function DexDetailPage({ params }: PageProps) {
   const elementLabel = tr(`elements.${aniimo.element}`);
   const roleLabel = tr(`roles.${aniimo.role}`);
   const twineLabel = tr(`twineAbility.${aniimo.twineAbility}`);
+  const allAniimos = getAllAniimos();
+  const currentIndex = allAniimos.findIndex((entry) => entry.number === aniimo.number);
+  const previous = currentIndex > 0 ? allAniimos[currentIndex - 1] : undefined;
+  const next = currentIndex >= 0 ? allAniimos[currentIndex + 1] : undefined;
 
   const maxStat = Math.max(...Object.values(aniimo.stats).map((v) => v ?? 0));
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
@@ -347,6 +351,12 @@ export default async function DexDetailPage({ params }: PageProps) {
         <span className="mx-2">/</span>
         <span className="text-text-secondary">{aniimo.name}</span>
       </nav>
+
+      <div className="flex items-center justify-between border-y border-ink-border py-3 text-sm">
+        {previous ? <Link href={`/dex/${previous.number}`} className="text-primary-light hover:text-primary">← #{previous.number} {previous.name}</Link> : <span />}
+        <Link href="/dex" className="font-semibold text-text-secondary hover:text-primary-light">{tr('breadcrumb.dex')}</Link>
+        {next ? <Link href={`/dex/${next.number}`} className="text-primary-light hover:text-primary">{next.name} #{next.number} →</Link> : <span />}
+      </div>
 
       {/* 头部 */}
       <header className="grid overflow-hidden rounded-lg border border-ink-border bg-white shadow-card md:grid-cols-[minmax(18rem,0.85fr)_1.15fr]">
@@ -435,7 +445,7 @@ export default async function DexDetailPage({ params }: PageProps) {
       </header>
 
       <div className="grid gap-5 md:grid-cols-2">
-        <section className="rounded-lg border border-ink-border bg-ink-card p-5">
+        <section className="border-l-4 border-secondary bg-emerald-50/70 p-5">
           <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('twineAbility')}</h2>
           <div
             className={cn(
@@ -453,7 +463,7 @@ export default async function DexDetailPage({ params }: PageProps) {
           </p>
         </section>
 
-        <section className="rounded-lg border border-ink-border bg-ink-card p-5">
+        <section className="border border-ink-border bg-white p-5">
           <h2 className="mb-4 text-lg font-semibold text-text-primary">{t('spawnConditions')}</h2>
           <dl className="space-y-3 text-sm">
             <div className="flex gap-2">

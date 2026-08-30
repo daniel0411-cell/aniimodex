@@ -59,6 +59,7 @@ export default async function ToolsPage({
       titleKey: 'twineTitle',
       descKey: 'twineDesc',
       tagsKey: 'twineTags',
+      tone: 'border-secondary bg-emerald-50/70',
     },
     {
       href: '/tools/type-chart',
@@ -66,6 +67,7 @@ export default async function ToolsPage({
       titleKey: 'typeChartTitle',
       descKey: 'typeChartDesc',
       tagsKey: 'typeChartTags',
+      tone: 'border-primary bg-sky-50/70',
     },
     {
       href: '/tools/catch',
@@ -73,27 +75,28 @@ export default async function ToolsPage({
       titleKey: 'catchTitle',
       descKey: 'catchDesc',
       tagsKey: 'catchTags',
+      tone: 'border-accent bg-rose-50/70',
     },
   ];
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8">
+    <div className="mx-auto max-w-5xl space-y-8">
       <Breadcrumb items={[{ label: tb('tools') }]} />
 
-      <header className="space-y-2">
+      <header className="max-w-2xl space-y-2 border-b border-ink-border pb-5">
         <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
-      <section className="grid gap-4 sm:grid-cols-2">
+      <section className="grid gap-4 md:grid-cols-3">
         {tools.map((tool) => (
           <Link
             key={tool.href}
             href={tool.href}
-            className="group rounded-xl border border-ink-border bg-ink-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary-light hover:shadow-glow"
+            className={`group rounded-md border-t-4 p-5 transition-all hover:-translate-y-0.5 hover:shadow-card-hover ${tool.tone}`}
           >
             <div className="flex items-center justify-between">
-              <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 text-2xl">
+              <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white/80 text-2xl shadow-sm">
                 {tool.icon}
               </span>
               <span className="text-text-muted transition-all group-hover:translate-x-1 group-hover:text-primary-light">

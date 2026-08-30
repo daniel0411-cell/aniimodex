@@ -5,6 +5,8 @@ import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import HeroSearch from '@/components/HeroSearch';
 import { localizedLanguages } from '@/lib/i18n-metadata';
+import { getAllAniimos } from '@/lib/aniimo';
+import { sources } from '@/data/sources';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -143,6 +145,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   const t = await getTranslations();
   const th = await getTranslations('home');
+  const stats = [
+    { value: getAllAniimos().length, label: th('stats.dexEntries'), tone: 'text-primary-light' },
+    { value: sources.length, label: th('stats.sources'), tone: 'text-secondary-light' },
+    { value: 3, label: th('stats.tools'), tone: 'text-accent-light' },
+    { value: '2026.08', label: th('stats.updated'), tone: 'text-text-primary' },
+  ];
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -203,6 +211,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {t('home.quickLinks.dex.title')} <span aria-hidden>→</span>
           </Link>
         </div>
+      </section>
+
+      <section className="grid grid-cols-2 divide-x divide-y divide-ink-border border-y border-ink-border bg-white/70 sm:grid-cols-4 sm:divide-y-0">
+        {stats.map((stat) => (
+          <div key={stat.label} className="px-4 py-4 sm:px-5">
+            <p className={`font-mono text-xl font-bold ${stat.tone}`}>{stat.value}</p>
+            <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-text-muted">{stat.label}</p>
+          </div>
+        ))}
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">

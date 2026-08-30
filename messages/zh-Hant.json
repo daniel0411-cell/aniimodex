@@ -34,6 +34,7 @@
     "latestUpdates": "最新更新",
     "viewAllGuide": "查看全部攻略",
     "loadMore": "載入更多",
+    "stats": { "dexEntries": "圖鑑條目", "sources": "官方來源", "tools": "可用工具", "updated": "最近更新" },
     "quickLinks": {
       "dex": {
         "title": "圖鑑庫",
