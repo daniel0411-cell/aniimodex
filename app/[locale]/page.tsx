@@ -310,7 +310,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Link>
         </div>
         <div className="grid gap-3 md:grid-cols-3">
-          {(['what-is-aniimo', 'aniimo-release-date', 'aniimo-platforms'] as const).map((slug) => (
+          {(['aniimo-release-date', 'how-to-download-aniimo', 'what-is-aniimo'] as const).map((slug) => (
             <Link
               key={slug}
               href={`/guide/${slug}`}

@@ -218,6 +218,11 @@
     "verifiedOfficial": "已根據官方來源核驗",
     "lastVerified": "最後核驗：{date}",
     "officialSources": "官方來源",
+    "groups": {
+      "playDownload": { "title": "上線、下載與平台", "description": "上線時間、價格、官方下載管道和支援裝置。" },
+      "gameplay": { "title": "玩法機制說明", "description": "Twine、捕獲和多人玩法中已獲官方確認的資訊。" },
+      "updates": { "title": "官方狀態與更新", "description": "上線前需要關注的預約和 PC 配置狀態。" }
+    },
     "posts": {
       "aniimo-release-date": {
         "title": "Aniimo 發售日期：全球上線時間与预注册信息",
@@ -370,7 +375,16 @@
             "c": "本页只整理已核驗的官方玩法；图鉴数值、元素倍率和捕获機率仍在核驗中。"
           }
         ]
-      }
+      },
+      "is-aniimo-free-to-play": { "title": "Aniimo 伊莫是免費遊戲嗎？價格與內購說明", "subtitle": "Steam、PlayStation 與 Xbox 官方頁面均將 Aniimo 標為免費遊玩。", "tag": "價格", "lead": "是的，Aniimo 是免費遊玩遊戲，基礎遊戲無需先付費購買。", "body": [{"t":"h","c":"Aniimo 伊莫需要付費購買嗎？"},{"t":"p","c":"Steam、PlayStation 和 Xbox 的官方商店頁面均標註免費遊玩，玩家可以免費下載並開始基礎遊戲。"},{"t":"h","c":"遊戲內會有付費內容嗎？"},{"t":"p","c":"商店頁面提到遊戲內購買或可選禮包，具體價格和商業模式可能因平台、地區和上線版本不同，請以上線時的官方商店為準。"},{"t":"h","c":"去哪裡取得遊戲？"},{"t":"p","c":"請從 Aniimo 官網進入對應平台商店，不要使用第三方安裝包、修改版客戶端或所謂的搶先下載頁面。"}] },
+      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎麼下載？PC、PS5、Xbox 與手機版指南", "subtitle": "從 Aniimo 官網和官方商店頁面安全下載遊戲。", "tag": "下載", "lead": "下載 Aniimo 最安全的方式是先進入官方網站，再選擇對應平台的商店連結；不要下載第三方 APK 或安裝程式。", "body": [{"t":"h","c":"Aniimo 官方下載管道"},{"t":"table","head":["平台","官方管道"],"rows":[["Windows PC","Steam、Epic Games Store 或官網連結的 PC 商店"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官網連結的 App Store"],["Android","官網連結的 Google Play"]]},{"t":"h","c":"上線前可以下載嗎？"},{"t":"p","c":"預約或加入願望清單不等於客戶端已經開放下載，請查看你所在地區官方商店顯示的實際狀態。"},{"t":"quote","c":"不要在非官方下載頁面輸入遊戲帳號或商店帳號密碼。"}] },
+      "aniimo-mobile": { "title": "Aniimo 伊莫手機版：iOS 與 Android 上線情況", "subtitle": "Aniimo 官網已經提供 App Store 和 Google Play 入口。", "tag": "手機版", "lead": "Aniimo 已有 iOS 與 Android 官方商店入口，但預約、下載和裝置相容情況可能因地區而異。", "body": [{"t":"h","c":"Aniimo 有手機版嗎？"},{"t":"p","c":"有。Aniimo 官網同時列出了 App Store 和 Google Play，並與主機及 PC 商店入口並列。"},{"t":"h","c":"現在能下載手機版嗎？"},{"t":"p","c":"請查看你所在地區的官方商店頁面。正式上線前，頁面可能顯示預約、預購或暫不可用。"},{"t":"h","c":"哪些手機可以執行？"},{"t":"p","c":"目前引用的官方資料沒有提供完整裝置相容清單，不應採用未經來源確認的最低規格說法。"}] },
+      "aniimo-nintendo-switch": { "title": "Aniimo 伊莫會登上 Nintendo Switch 嗎？官方狀態說明", "subtitle": "Nintendo Switch 尚未出現在 Aniimo 目前官方平台清單中。", "tag": "平台", "lead": "截至本頁核驗時間，沒有官方資料確認 Aniimo 會登上 Nintendo Switch。", "body": [{"t":"h","c":"Aniimo 有 Switch 版嗎？"},{"t":"p","c":"目前沒有。Aniimo 官網列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但沒有 Nintendo Switch。"},{"t":"h","c":"以後可能推出 Switch 版嗎？"},{"t":"p","c":"平台計畫未來可能變化，但現在沒有可以核實的官方消息。只有 Aniimo 或任天堂正式公布後，本頁才會更新為已確認。"}] },
+      "aniimo-twine-explained": { "title": "Aniimo Twine 玩法是什麼？變身、探索與戰鬥說明", "subtitle": "Twine 允許探索者變成已經收集的伊莫並使用牠們的能力。", "tag": "玩法", "lead": "Twine 是 Aniimo 的核心系統之一：探索者可以變成已收集的伊莫，在探索、解謎和戰鬥中使用對應能力。", "body": [{"t":"h","c":"Twine 是什麼意思？"},{"t":"p","c":"官方描述稱玩家可以與已收集的伊莫 Twine。已公布的例子包括滑翔、潛水和鑽地，並利用不同能力探索世界。"},{"t":"h","c":"Twine 能做什麼？"},{"t":"li","c":"穿越地形並到達新區域"},{"t":"li","c":"解決環境謎題"},{"t":"li","c":"在即時戰鬥中使用伊莫能力"},{"t":"h","c":"哪些伊莫擁有對應能力？"},{"t":"p","c":"目前引用的官方資料沒有公布完整的伊莫與能力對應表，社群圖鑑中的映射仍處於核驗狀態。"}] },
+      "aniimo-catching-guide": { "title": "Aniimo 伊莫怎麼捕獲？Aniipod、陷阱與出現條件", "subtitle": "根據官方資料整理目前已確認的捕獲機制。", "tag": "玩法", "lead": "官方商店確認玩家會使用 Aniipod、陷阱和時機判斷捕獲伊莫；環境、天氣、特殊現象和時段會影響伊莫出現。", "body": [{"t":"h","c":"Aniimo 怎麼捕獲伊莫？"},{"t":"p","c":"玩家在生態環境中發現伊莫，並使用 Aniipod 捕獲。官方文案還提到設置陷阱和把握捕獲時機。"},{"t":"h","c":"什麼會影響伊莫出現？"},{"t":"li","c":"環境與棲息地"},{"t":"li","c":"天氣"},{"t":"li","c":"特殊現象"},{"t":"li","c":"時間段"},{"t":"h","c":"捕獲率公式公布了嗎？"},{"t":"p","c":"沒有。目前官方來源沒有提供可驗證的機率公式或完整物種捕獲率表，在官方資料公布前，任何計算器結果都只能視為實驗性估算。"}] },
+      "aniimo-multiplayer": { "title": "Aniimo 伊莫能連線嗎？合作、PvP 與 Egg Heist 玩法", "subtitle": "官方商店確認多人、線上合作、PvP 和跨平台多人功能。", "tag": "多人", "lead": "Aniimo 同時包含單人和多人活動。Steam 列出 PvP、線上合作及跨平台多人，Xbox 則公布了三人組隊的 Egg Heist PVEVP 模式。", "body": [{"t":"h","c":"Aniimo 支援連線合作嗎？"},{"t":"p","c":"支援。Steam 頁面列出線上合作與多人模式，具體活動可能受到平台、帳號與上線版本影響。"},{"t":"h","c":"有 PvP 嗎？"},{"t":"p","c":"Steam 列出了 PvP；Xbox 將 Egg Heist 描述為即時 PVEVP 活動，三人隊伍需要在對抗環境威脅的同時展開競爭。"},{"t":"h","c":"支援跨平台連線嗎？"},{"t":"p","c":"Steam 標註跨平台多人，但目前官方資料尚未說明所有平台組合、跨平台存檔和帳號綁定細節。"}] },
+      "aniimo-pre-registration": { "title": "Aniimo 伊莫預約指南：官方入口與上線時間", "subtitle": "透過 Aniimo 官網提供的商店連結進行預約或加入願望清單。", "tag": "更新", "lead": "Aniimo 官網提供預約和各平台商店入口，不同平台與地區可能分別顯示預約、願望清單或預購。", "body": [{"t":"h","c":"Aniimo 怎麼預約？"},{"t":"p","c":"進入 Aniimo 官網，選擇你的平台並開啟官方商店連結。根據平台不同，按鈕可能顯示為預約、加入願望清單或預購。"},{"t":"h","c":"預約有什麼獎勵？"},{"t":"p","c":"獎勵細節可能隨活動和地區變化，請只採用官網或官方商店當時展示的資訊。"},{"t":"h","c":"什麼時候上線？"},{"t":"p","c":"PlayStation Store 公布的全球上線時間為 2026 年 9 月 16 日 10:00（UTC+8）；部分時區的商店可能顯示前一天。"}] },
+      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置需求：目前官方確認的資訊", "subtitle": "Steam 已確認 Windows 平台，完整硬體需求應以商店即時頁面為準。", "tag": "PC", "lead": "Aniimo 已有 Windows PC 的 Steam 官方頁面。由於上線前配置可能調整，硬體和儲存需求應以 Steam 或官方商店即時資訊為準。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩嗎？"},{"t":"p","c":"可以。Steam 將 Aniimo 列為 Windows 遊戲，Xbox 頁面也列出了 PC 平台。"},{"t":"h","c":"最低配置和建議配置是什麼？"},{"t":"p","c":"目前註冊來源沒有提供適合穩定轉載的完整硬體需求，請在下載前查看 Steam 頁面中的系統需求欄位。"},{"t":"h","c":"支援 macOS 嗎？"},{"t":"p","c":"本頁核驗的 Steam 頁面僅確認 Windows，目前官方資料沒有確認 macOS 版本。"}] }
     },
     "relatedArticles": "相關攻略"
   },

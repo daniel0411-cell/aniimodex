@@ -58,6 +58,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const tp = await getTranslations('guide.posts');
   const tb = await getTranslations('breadcrumb');
   const guidePosts = getPublishedGuidePosts();
+  const groups = [
+    { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-platforms', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
+    { key: 'gameplay', slugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer'] },
+    { key: 'updates', slugs: ['aniimo-pre-registration', 'aniimo-system-requirements'] },
+  ];
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
   const jsonLd = {
@@ -102,8 +107,14 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <p className="text-sm text-text-secondary">{t('subtitle')}</p>
       </header>
 
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {guidePosts.map((post) => (
+      {groups.map((group) => (
+        <section key={group.key}>
+          <div className="mb-4 border-b border-ink-border pb-3">
+            <h2 className="text-xl font-bold text-text-primary">{t(`groups.${group.key}.title`)}</h2>
+            <p className="mt-1 text-sm text-text-muted">{t(`groups.${group.key}.description`)}</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).map((post) => (
           <Link key={post.slug} href={`/guide/${post.slug}`} className="group">
             <Card className="flex h-full flex-col overflow-hidden" interactive>
               {/* 卡片缩略图 */}
@@ -136,8 +147,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               </div>
             </Card>
           </Link>
-        ))}
-      </section>
+          ))}
+          </div>
+        </section>
+      ))}
 
       <section className="rounded-xl border border-ink-border bg-ink-card p-5">
         <h2 className="text-lg font-bold text-text-primary">{t('relatedTools')}</h2>

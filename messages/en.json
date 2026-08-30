@@ -218,6 +218,11 @@
     "verifiedOfficial": "Verified against official sources",
     "lastVerified": "Last verified: {date}",
     "officialSources": "Official sources",
+    "groups": {
+      "playDownload": { "title": "Play, download and platforms", "description": "Release date, price, official downloads and supported devices." },
+      "gameplay": { "title": "Gameplay explained", "description": "Officially confirmed details about Twine, catching and multiplayer." },
+      "updates": { "title": "Official status and updates", "description": "Pre-registration and PC requirement information to check before launch." }
+    },
     "posts": {
       "aniimo-release-date": {
         "title": "Aniimo Release Date: Global Launch Time and Pre-Registration",
@@ -369,6 +374,134 @@
             "t": "quote",
             "c": "This overview separates verified official features from dex stats, type multipliers and catch-rate formulas that remain under review."
           }
+        ]
+      },
+      "is-aniimo-free-to-play": {
+        "title": "Is Aniimo Free to Play? Price and Optional Purchases",
+        "subtitle": "Aniimo is officially listed as a free-to-play game on major storefronts.",
+        "tag": "Price",
+        "lead": "Yes. Steam, PlayStation and Xbox describe Aniimo as free-to-play, so the base game does not require an upfront purchase.",
+        "body": [
+          { "t": "h", "c": "Does Aniimo cost money?" },
+          { "t": "p", "c": "The official Steam, PlayStation and Xbox listings label Aniimo as free-to-play. Players should be able to download and start the base game without buying it first." },
+          { "t": "h", "c": "Are there in-game purchases?" },
+          { "t": "p", "c": "Store listings mention in-game purchases or optional packs. Exact prices and the full monetization model may vary by platform and region and should be checked on the official storefront at launch." },
+          { "t": "h", "c": "Where should I get Aniimo?" },
+          { "t": "p", "c": "Use the storefront links on Aniimo's official website. Avoid websites offering unofficial installers, modified clients or early access downloads." }
+        ]
+      },
+      "how-to-download-aniimo": {
+        "title": "How to Download Aniimo Safely on PC, PS5, Xbox and Mobile",
+        "subtitle": "Use Aniimo's official website and verified storefront listings for downloads.",
+        "tag": "Download",
+        "lead": "The safe way to download Aniimo is to begin at the official Aniimo website and follow its platform links. Do not use third-party APK, installer or account-download pages.",
+        "body": [
+          { "t": "h", "c": "Official Aniimo download options" },
+          { "t": "table", "head": ["Platform", "Official route"], "rows": [["Windows PC", "Steam, Epic Games Store or the linked PC store"], ["PlayStation 5", "PlayStation Store"], ["Xbox Series X|S", "Xbox Store"], ["iPhone and iPad", "Apple App Store link on the official website"], ["Android", "Google Play link on the official website"]] },
+          { "t": "h", "c": "Can I download Aniimo before launch?" },
+          { "t": "p", "c": "Pre-registration and wishlisting do not always mean the full game client is available. Follow the status shown by the official store in your country." },
+          { "t": "quote", "c": "Never enter your game or store credentials on an unofficial download page." }
+        ]
+      },
+      "aniimo-mobile": {
+        "title": "Aniimo Mobile: iOS and Android Availability",
+        "subtitle": "The official Aniimo website links both the App Store and Google Play.",
+        "tag": "Mobile",
+        "lead": "Aniimo has official mobile storefront links for iOS and Android. Actual availability, pre-registration and device compatibility can differ by region.",
+        "body": [
+          { "t": "h", "c": "Is Aniimo coming to iPhone and Android?" },
+          { "t": "p", "c": "Yes. The official Aniimo website includes links for Apple's App Store and Google Play alongside console and PC storefronts." },
+          { "t": "h", "c": "Can I download the mobile version now?" },
+          { "t": "p", "c": "Check the official store page available in your region. A store may show pre-registration, pre-order or unavailable status before the game launches." },
+          { "t": "h", "c": "What phones will run Aniimo?" },
+          { "t": "p", "c": "The official sources used for this page do not provide a complete device compatibility list. Do not rely on unofficial minimum-spec claims." }
+        ]
+      },
+      "aniimo-nintendo-switch": {
+        "title": "Is Aniimo Coming to Nintendo Switch? Current Official Status",
+        "subtitle": "Nintendo Switch is not listed among Aniimo's current official platform links.",
+        "tag": "Platforms",
+        "lead": "Aniimo has not been officially confirmed for Nintendo Switch in the sources checked for this page.",
+        "body": [
+          { "t": "h", "c": "Is Aniimo on Nintendo Switch?" },
+          { "t": "p", "c": "No Nintendo Switch listing appears on the official Aniimo website, which currently links PlayStation, Xbox, PC, iOS and Android storefronts." },
+          { "t": "h", "c": "Could a Switch version be announced later?" },
+          { "t": "p", "c": "It is possible for platform plans to change, but there is no official confirmation to report now. This page will be updated only when Aniimo or Nintendo publishes a verifiable announcement." }
+        ]
+      },
+      "aniimo-twine-explained": {
+        "title": "Aniimo Twine Explained: Transformations, Exploration and Combat",
+        "subtitle": "Twine lets Pathfinders become collected Aniimo and use their abilities.",
+        "tag": "Gameplay",
+        "lead": "Twine is one of Aniimo's defining systems: a Pathfinder can become an Aniimo they have collected and use that creature's abilities in exploration, puzzles and battles.",
+        "body": [
+          { "t": "h", "c": "What does Twine mean in Aniimo?" },
+          { "t": "p", "c": "Official descriptions say players can Twine with collected Aniimo. Examples include gliding, diving and burrowing through the world while using creature-specific abilities." },
+          { "t": "h", "c": "What is Twine used for?" },
+          { "t": "li", "c": "Exploring terrain and reaching new areas" },
+          { "t": "li", "c": "Solving environmental puzzles" },
+          { "t": "li", "c": "Using Aniimo abilities in real-time combat" },
+          { "t": "h", "c": "Which Aniimo have each Twine ability?" },
+          { "t": "p", "c": "A complete official ability-by-creature list has not been published in the sources used here. Community dex mappings remain under review." }
+        ]
+      },
+      "aniimo-catching-guide": {
+        "title": "How to Catch Aniimo: Aniipods, Traps and Spawn Conditions",
+        "subtitle": "An official-source guide to the catching mechanics confirmed so far.",
+        "tag": "Gameplay",
+        "lead": "Official store descriptions confirm that players use Aniipods, traps and timing to catch Aniimo, while environment, weather, phenomena and time of day affect appearances.",
+        "body": [
+          { "t": "h", "c": "How does catching work in Aniimo?" },
+          { "t": "p", "c": "Players explore habitats, encounter Aniimo and use Aniipods to catch them. Official text also mentions setting traps and choosing the right timing." },
+          { "t": "h", "c": "What affects where Aniimo appear?" },
+          { "t": "li", "c": "Environment and habitat" },
+          { "t": "li", "c": "Weather" },
+          { "t": "li", "c": "Special phenomena" },
+          { "t": "li", "c": "Time of day" },
+          { "t": "h", "c": "Are catch rates known?" },
+          { "t": "p", "c": "No verified probability formula or complete species catch-rate table appears in the official sources used here. Any calculator result should be treated as experimental until official data is available." }
+        ]
+      },
+      "aniimo-multiplayer": {
+        "title": "Is Aniimo Multiplayer? Co-op, PvP and Egg Heist Explained",
+        "subtitle": "Official listings confirm multiplayer, online co-op, PvP and cross-platform play.",
+        "tag": "Multiplayer",
+        "lead": "Aniimo supports solo and multiplayer activities. Steam lists PvP, online co-op and cross-platform multiplayer, while Xbox describes the three-player Egg Heist PVEVP mode.",
+        "body": [
+          { "t": "h", "c": "Does Aniimo have co-op?" },
+          { "t": "p", "c": "Yes. Steam lists online co-op and multiplayer. The final availability of specific activities may depend on platform, account and launch version." },
+          { "t": "h", "c": "Does Aniimo have PvP?" },
+          { "t": "p", "c": "Steam lists PvP, and Xbox describes Egg Heist as a real-time PVEVP activity where three-player teams compete while facing environmental threats." },
+          { "t": "h", "c": "Is Aniimo cross-platform?" },
+          { "t": "p", "c": "Steam lists cross-platform multiplayer. Official sources checked here do not yet explain every cross-save, account-linking or platform-combination detail." }
+        ]
+      },
+      "aniimo-pre-registration": {
+        "title": "Aniimo Pre-Registration Guide: Official Links and Launch Status",
+        "subtitle": "Pre-register or wishlist Aniimo through the links on its official website.",
+        "tag": "Updates",
+        "lead": "Aniimo's official website provides pre-registration and storefront links. Availability and the wording of each action can differ by platform and region.",
+        "body": [
+          { "t": "h", "c": "How do I pre-register for Aniimo?" },
+          { "t": "p", "c": "Open Aniimo's official website, choose your platform and follow the linked storefront. Depending on the platform, the action may appear as pre-register, wishlist or pre-order." },
+          { "t": "h", "c": "Does pre-registration give rewards?" },
+          { "t": "p", "c": "Reward details can change and may vary by campaign or region. Confirm any reward on the official Aniimo site or storefront before relying on it." },
+          { "t": "h", "c": "When does Aniimo launch?" },
+          { "t": "p", "c": "The PlayStation Store states September 16, 2026 at 10:00 UTC+8. Storefront dates may display the previous calendar day in some time zones." }
+        ]
+      },
+      "aniimo-system-requirements": {
+        "title": "Aniimo PC System Requirements: What Is Officially Confirmed",
+        "subtitle": "Steam confirms Windows support, but complete hardware requirements need storefront verification.",
+        "tag": "PC",
+        "lead": "Aniimo has an official Steam listing for Windows PC. Players should use the current Steam or official store listing for hardware and storage requirements because specifications can change before launch.",
+        "body": [
+          { "t": "h", "c": "Can Aniimo run on PC?" },
+          { "t": "p", "c": "Yes. Steam lists Aniimo for Windows, and Xbox lists PC as a supported platform." },
+          { "t": "h", "c": "What are the minimum and recommended specs?" },
+          { "t": "p", "c": "The sources registered for this guide do not provide a stable, complete set of hardware requirements suitable for republishing. Check the system requirements section on Steam before downloading." },
+          { "t": "h", "c": "Is macOS supported?" },
+          { "t": "p", "c": "The Steam listing checked for this page identifies Windows support. No official macOS version is confirmed in these sources." }
         ]
       }
     },
