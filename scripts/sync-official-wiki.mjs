@@ -67,6 +67,14 @@ const entries = entryRefs
   })
   .filter((entry) => /^\d{3}$/.test(entry.number));
 
+const pageIds = new Map(
+  [...html.matchAll(/href="\/item\/(\d+)"[\s\S]*?NO\.(\d{3})/g)].map((match) => [
+    match[2],
+    match[1],
+  ])
+);
+for (const entry of entries) entry.wikiPageId = pageIds.get(entry.number);
+
 if (entries.length < 80) {
   throw new Error(`Official Wiki parse returned only ${entries.length} entries`);
 }

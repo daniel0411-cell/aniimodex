@@ -22,7 +22,8 @@
       "role": "DPS",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002767"
     },
     {
       "number": "002",
@@ -34,7 +35,8 @@
       "role": "DPS",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002859"
     },
     {
       "number": "003",
@@ -46,7 +48,8 @@
       "role": "DPS",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002760"
     },
     {
       "number": "004",
@@ -59,7 +62,8 @@
       "elements": [
         "Fire",
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002753"
     },
     {
       "number": "005",
@@ -71,7 +75,8 @@
       "role": "DPS",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002903"
     },
     {
       "number": "006",
@@ -83,7 +88,8 @@
       "role": "DPS",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002742"
     },
     {
       "number": "007",
@@ -95,7 +101,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002813"
     },
     {
       "number": "008",
@@ -107,7 +114,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002873"
     },
     {
       "number": "009",
@@ -119,7 +127,8 @@
       "role": "DPS",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002799"
     },
     {
       "number": "010",
@@ -131,7 +140,8 @@
       "role": "Break",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002792"
     },
     {
       "number": "011",
@@ -143,7 +153,8 @@
       "role": "DPS",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002717"
     },
     {
       "number": "012",
@@ -155,7 +166,8 @@
       "role": "DPS",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002835"
     },
     {
       "number": "014",
@@ -167,7 +179,8 @@
       "role": "Heal",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002802"
     },
     {
       "number": "015",
@@ -179,7 +192,8 @@
       "role": "Heal",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002894"
     },
     {
       "number": "016",
@@ -192,7 +206,8 @@
       "elements": [
         "Water",
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002795"
     },
     {
       "number": "017",
@@ -205,7 +220,8 @@
       "elements": [
         "Grass",
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002788"
     },
     {
       "number": "018",
@@ -217,7 +233,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002793"
     },
     {
       "number": "019",
@@ -229,7 +246,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002690"
     },
     {
       "number": "020",
@@ -241,7 +259,8 @@
       "role": "Support",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002786"
     },
     {
       "number": "021",
@@ -253,7 +272,8 @@
       "role": "Break",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002746"
     },
     {
       "number": "022",
@@ -266,7 +286,8 @@
       "elements": [
         "Dark",
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002739"
     },
     {
       "number": "023",
@@ -278,7 +299,8 @@
       "role": "Break",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002729"
     },
     {
       "number": "024",
@@ -291,7 +313,8 @@
       "elements": [
         "Earth",
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002892"
     },
     {
       "number": "025",
@@ -304,7 +327,8 @@
       "elements": [
         "Earth",
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002787"
     },
     {
       "number": "026",
@@ -316,7 +340,8 @@
       "role": "Break",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002876"
     },
     {
       "number": "027",
@@ -328,7 +353,8 @@
       "role": "Regen",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002734"
     },
     {
       "number": "028",
@@ -340,7 +366,8 @@
       "role": "Regen",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002832"
     },
     {
       "number": "029",
@@ -352,7 +379,8 @@
       "role": "Heal",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002867"
     },
     {
       "number": "030",
@@ -364,7 +392,8 @@
       "role": "Heal",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002765"
     },
     {
       "number": "031",
@@ -377,7 +406,8 @@
       "elements": [
         "Wind",
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002888"
     },
     {
       "number": "032",
@@ -389,7 +419,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002693"
     },
     {
       "number": "033",
@@ -401,7 +432,8 @@
       "role": "Support",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002688"
     },
     {
       "number": "034",
@@ -413,7 +445,8 @@
       "role": "DPS",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002840"
     },
     {
       "number": "035",
@@ -425,7 +458,8 @@
       "role": "DPS",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002821"
     },
     {
       "number": "036",
@@ -437,7 +471,8 @@
       "role": "Support",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002703"
     },
     {
       "number": "037",
@@ -449,7 +484,8 @@
       "role": "Break",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002781"
     },
     {
       "number": "038",
@@ -461,7 +497,8 @@
       "role": "Support",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002699"
     },
     {
       "number": "039",
@@ -473,7 +510,8 @@
       "role": "Break",
       "elements": [
         "Grass"
-      ]
+      ],
+      "wikiPageId": "10002768"
     },
     {
       "number": "040",
@@ -485,7 +523,8 @@
       "role": "Support",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002828"
     },
     {
       "number": "041",
@@ -497,7 +536,8 @@
       "role": "Support",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002846"
     },
     {
       "number": "042",
@@ -509,7 +549,8 @@
       "role": "DPS",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002833"
     },
     {
       "number": "043",
@@ -521,7 +562,8 @@
       "role": "DPS",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002694"
     },
     {
       "number": "044",
@@ -533,7 +575,8 @@
       "role": "DPS",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002826"
     },
     {
       "number": "045",
@@ -545,7 +588,8 @@
       "role": "DPS",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002747"
     },
     {
       "number": "046",
@@ -557,7 +601,8 @@
       "role": "DPS",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002900"
     },
     {
       "number": "047",
@@ -569,7 +614,8 @@
       "role": "DPS",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002740"
     },
     {
       "number": "048",
@@ -581,7 +627,8 @@
       "role": "Break",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002849"
     },
     {
       "number": "049",
@@ -593,7 +640,8 @@
       "role": "Break",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002800"
     },
     {
       "number": "050",
@@ -605,7 +653,8 @@
       "role": "Break",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002848"
     },
     {
       "number": "051",
@@ -617,7 +666,8 @@
       "role": "Break",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002723"
     },
     {
       "number": "052",
@@ -629,7 +679,8 @@
       "role": "Support",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002841"
     },
     {
       "number": "053",
@@ -641,7 +692,8 @@
       "role": "Break",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002891"
     },
     {
       "number": "054",
@@ -653,7 +705,8 @@
       "role": "DPS",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002778"
     },
     {
       "number": "055",
@@ -665,7 +718,8 @@
       "role": "DPS",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002902"
     },
     {
       "number": "056",
@@ -677,7 +731,8 @@
       "role": "DPS",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002895"
     },
     {
       "number": "057",
@@ -689,7 +744,8 @@
       "role": "DPS",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002890"
     },
     {
       "number": "058",
@@ -701,7 +757,8 @@
       "role": "DPS",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002801"
     },
     {
       "number": "059",
@@ -713,7 +770,8 @@
       "role": "Support",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002791"
     },
     {
       "number": "060",
@@ -725,7 +783,8 @@
       "role": "DPS",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002704"
     },
     {
       "number": "061",
@@ -737,7 +796,8 @@
       "role": "DPS",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002701"
     },
     {
       "number": "062",
@@ -749,7 +809,8 @@
       "role": "Break",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002868"
     },
     {
       "number": "063",
@@ -761,7 +822,8 @@
       "role": "DPS",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002882"
     },
     {
       "number": "064",
@@ -773,7 +835,8 @@
       "role": "Break",
       "elements": [
         "Dark"
-      ]
+      ],
+      "wikiPageId": "10002847"
     },
     {
       "number": "065",
@@ -785,7 +848,8 @@
       "role": "Break",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002904"
     },
     {
       "number": "066",
@@ -797,7 +861,8 @@
       "role": "Break",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002714"
     },
     {
       "number": "067",
@@ -809,7 +874,8 @@
       "role": "Break",
       "elements": [
         "Wind"
-      ]
+      ],
+      "wikiPageId": "10002861"
     },
     {
       "number": "068",
@@ -821,7 +887,8 @@
       "role": "DPS",
       "elements": [
         "Fire"
-      ]
+      ],
+      "wikiPageId": "10002854"
     },
     {
       "number": "069",
@@ -833,7 +900,8 @@
       "role": "DPS",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002758"
     },
     {
       "number": "070",
@@ -845,7 +913,8 @@
       "role": "DPS",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002752"
     },
     {
       "number": "071",
@@ -857,7 +926,8 @@
       "role": "Break",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002730"
     },
     {
       "number": "072",
@@ -870,7 +940,8 @@
       "elements": [
         "Fire",
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002850"
     },
     {
       "number": "073",
@@ -883,7 +954,8 @@
       "elements": [
         "Fire",
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002724"
     },
     {
       "number": "074",
@@ -895,7 +967,8 @@
       "role": "Break",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002843"
     },
     {
       "number": "075",
@@ -907,7 +980,8 @@
       "role": "Break",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002718"
     },
     {
       "number": "076",
@@ -919,7 +993,8 @@
       "role": "Support",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002711"
     },
     {
       "number": "077",
@@ -931,7 +1006,8 @@
       "role": "Support",
       "elements": [
         "Earth"
-      ]
+      ],
+      "wikiPageId": "10002772"
     },
     {
       "number": "078",
@@ -943,7 +1019,8 @@
       "role": "Support",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002822"
     },
     {
       "number": "079",
@@ -955,7 +1032,8 @@
       "role": "Support",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002804"
     },
     {
       "number": "080",
@@ -967,7 +1045,8 @@
       "role": "Support",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002713"
     },
     {
       "number": "081",
@@ -979,7 +1058,8 @@
       "role": "Regen",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002754"
     },
     {
       "number": "082",
@@ -991,7 +1071,8 @@
       "role": "Regen",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002755"
     },
     {
       "number": "083",
@@ -1003,7 +1084,8 @@
       "role": "Regen",
       "elements": [
         "Lightning"
-      ]
+      ],
+      "wikiPageId": "10002874"
     },
     {
       "number": "084",
@@ -1016,7 +1098,8 @@
       "elements": [
         "Earth",
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002819"
     },
     {
       "number": "085",
@@ -1029,7 +1112,8 @@
       "elements": [
         "Earth",
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002811"
     },
     {
       "number": "086",
@@ -1041,7 +1125,8 @@
       "role": "Break",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002855"
     },
     {
       "number": "087",
@@ -1053,7 +1138,8 @@
       "role": "Break",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002782"
     },
     {
       "number": "088",
@@ -1066,7 +1152,8 @@
       "elements": [
         "Grass",
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002748"
     },
     {
       "number": "089",
@@ -1079,7 +1166,8 @@
       "elements": [
         "Grass",
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002744"
     },
     {
       "number": "090",
@@ -1091,7 +1179,8 @@
       "role": "DPS",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002735"
     },
     {
       "number": "091",
@@ -1103,7 +1192,8 @@
       "role": "DPS",
       "elements": [
         "Water"
-      ]
+      ],
+      "wikiPageId": "10002834"
     },
     {
       "number": "092",
@@ -1115,7 +1205,8 @@
       "role": "DPS",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002738"
     },
     {
       "number": "093",
@@ -1127,7 +1218,8 @@
       "role": "DPS",
       "elements": [
         "Ice"
-      ]
+      ],
+      "wikiPageId": "10002732"
     }
   ]
 }

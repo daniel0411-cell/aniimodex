@@ -7,6 +7,9 @@ const guides = readFileSync(new URL('../data/guides.ts', import.meta.url), 'utf8
 const wikiSnapshot = JSON.parse(
   readFileSync(new URL('../data/official-wiki-snapshot.json', import.meta.url), 'utf8')
 );
+const wikiDetails = JSON.parse(
+  readFileSync(new URL('../data/official-wiki-details.json', import.meta.url), 'utf8')
+);
 const errors = [];
 
 if (wikiSnapshot.source !== 'https://wiki.aniimo.com/' || wikiSnapshot.entries.length < 80) {
@@ -15,8 +18,21 @@ if (wikiSnapshot.source !== 'https://wiki.aniimo.com/' || wikiSnapshot.entries.l
 if (new Set(wikiSnapshot.entries.map((entry) => entry.number)).size !== wikiSnapshot.entries.length) {
   errors.push('Official Wiki snapshot contains duplicate numbers');
 }
+if (wikiDetails.details.length !== wikiSnapshot.entries.length || wikiDetails.failures.length) {
+  errors.push('Official Wiki detail snapshot is incomplete');
+}
+for (const detail of wikiDetails.details) {
+  if (!/^\d{3}$/.test(detail.number) || !detail.wikiId || !detail.evolution || !detail.traits.length || !detail.skills.length) {
+    errors.push(`Invalid official Wiki detail: ${detail.number}`);
+  }
+  for (const skill of [...detail.mobility, ...detail.traits, ...detail.skills]) {
+    if (!skill.name || (!skill.description && !skill.iconUrl) || (skill.iconUrl && !skill.iconUrl.startsWith('https://worldx-website-cdn.aniimo.com/'))) {
+      errors.push(`Invalid official skill: ${detail.number}`);
+    }
+  }
+}
 for (const entry of wikiSnapshot.entries) {
-  if (!/^\d{3}$/.test(entry.number) || !entry.name || !entry.description) {
+  if (!/^\d{3}$/.test(entry.number) || !entry.name || !entry.description || !/^\d+$/.test(entry.wikiPageId)) {
     errors.push(`Invalid official Wiki entry: ${entry.number}`);
   }
   if (!entry.imageUrl.startsWith('https://worldx-website-cdn.aniimo.com/')) {

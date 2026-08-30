@@ -9,12 +9,52 @@ import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
+import { getOfficialAniimoDetail, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+
+function EvolutionTree({ node }: { node: OfficialEvolutionNode }) {
+  return (
+    <div>
+      <div className="inline-flex items-center gap-2 rounded border border-ink-border bg-white px-3 py-2 text-sm">
+        <span className="font-semibold text-text-primary">{node.name}</span>
+        {node.stage > 0 && <span className="text-xs text-text-muted">Stage {node.stage}</span>}
+      </div>
+      {node.children.length > 0 && (
+        <div className="ml-4 mt-2 space-y-2 border-l-2 border-ink-border pl-4">
+          {node.children.map((child) => <EvolutionTree key={`${child.name}-${child.stage}`} node={child} />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SkillList({ skills }: { skills: OfficialSkill[] }) {
+  return (
+    <div className="grid gap-3 md:grid-cols-2">
+      {skills.map((skill) => (
+        <article key={`${skill.group ?? 'ability'}-${skill.name}`} className="flex gap-3 border-t border-ink-border pt-3">
+          {skill.iconUrl && (
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded bg-ink-soft">
+              <Image src={skill.iconUrl} alt="" fill sizes="48px" className="object-contain" />
+            </div>
+          )}
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="text-sm font-semibold text-text-primary">{skill.name}</h3>
+              {skill.group && <span className="text-[10px] uppercase text-text-muted">{skill.group}</span>}
+            </div>
+            {skill.description && <p className="mt-1 text-xs leading-5 text-text-secondary">{skill.description}</p>}
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
 
 // 静态导出：预生成全部 locale × 编号路由
 export function generateStaticParams() {
@@ -80,6 +120,7 @@ export default async function DexDetailPage({ params }: PageProps) {
   setRequestLocale(locale);
   const aniimo = getAniimoByNumber(number);
   if (!aniimo) notFound();
+  const detail = getOfficialAniimoDetail(aniimo.number);
 
   const t = await getTranslations('dexDetail');
   const tr = await getTranslations();
@@ -220,6 +261,54 @@ export default async function DexDetailPage({ params }: PageProps) {
             ))}
         </div>
       </header>
+
+      {detail && (
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="space-y-8">
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">{t('officialEvolution')}</h2>
+              <EvolutionTree node={detail.evolution} />
+            </section>
+
+            {detail.habitats.length > 0 && (
+              <section>
+                <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialHabitats')}</h2>
+                <div className="flex flex-wrap gap-2">
+                  {detail.habitats.map((habitat) => (
+                    <span key={habitat} className="rounded border border-ink-border bg-white px-2.5 py-1 text-xs text-text-secondary">
+                      {habitat}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            <section>
+              <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialForms')}</h2>
+              <ul className="space-y-1 text-sm text-text-secondary">
+                {detail.morphologyList.map((form) => <li key={form.wikiId}>{form.name}</li>)}
+              </ul>
+            </section>
+          </div>
+
+          <div className="space-y-8">
+            {detail.mobility.length > 0 && (
+              <section>
+                <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialMobility')}</h2>
+                <SkillList skills={detail.mobility} />
+              </section>
+            )}
+            <section>
+              <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialTraits')}</h2>
+              <SkillList skills={detail.traits} />
+            </section>
+            <section>
+              <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialSkills')}</h2>
+              <SkillList skills={detail.skills} />
+            </section>
+          </div>
+        </div>
+      )}
 
       {/* 相关工具与延伸阅读 */}
       <section className="rounded-lg border border-ink-border bg-ink-card p-5">

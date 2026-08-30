@@ -126,8 +126,14 @@
     "draftData": "Community draft data",
     "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default.",
     "officialBasic": "Official Wiki basics",
-    "officialScope": "Number, English name, artwork, description, element, role and stage were verified from the official Aniimo Wiki snapshot. Stats, abilities, evolution and locations are not shown until individually checked.",
-    "stageUnlisted": "Stage not listed"
+    "officialScope": "Number, name, artwork, description, element, role, stage, evolution, habitats, forms, mobility, traits and skills were imported from the official Aniimo Wiki. Numeric stats and catch conditions remain withheld.",
+    "stageUnlisted": "Stage not listed",
+    "officialEvolution": "Evolution",
+    "officialHabitats": "Habitats",
+    "officialForms": "Forms",
+    "officialMobility": "Mobility",
+    "officialTraits": "Traits",
+    "officialSkills": "Skills"
   },
   "tools": {
     "title": "Tools Center",
@@ -519,9 +525,9 @@
         "lead": "AniimoDex currently tracks 92 numbered entries from the official Aniimo Wiki snapshot checked on August 30, 2026. Only fields present in that snapshot are published as verified.",
         "body": [
           { "t": "h", "c": "What is verified now?" },
-          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number and English name", "Verified from official Wiki index"], ["Artwork and description", "Verified official Wiki content"], ["Element, role and stage", "Verified from the official Wiki payload"], ["Stats, evolution and abilities", "Not published as verified yet"], ["Locations and catch conditions", "Not published as verified yet"]] },
+          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number, name and artwork", "Verified from official Wiki index"], ["Description, element, role and stage", "Verified from official Wiki data"], ["Evolution, habitats and forms", "Verified from official Wiki detail pages"], ["Mobility, traits and skills", "Verified from official Wiki detail pages"], ["Numeric stats and catch conditions", "Not published as verified yet"]] },
           { "t": "h", "c": "Which filters are available?" },
-          { "t": "p", "c": "Element and role filters use the official Wiki fields, including dual-element entries. Twine abilities, stats, evolution and location filters remain unavailable until their source data is verified." },
+          { "t": "p", "c": "Element and role filters use official Wiki fields, including dual-element entries. Evolution, habitats, forms, mobility, traits and skills now appear on each detail page. Numeric stats and exact catch conditions remain withheld." },
           { "t": "h", "c": "How is the data refreshed?" },
           { "t": "p", "c": "A repeatable parser reads the public official Wiki index, validates unique numbered records and stores a dated snapshot. Changes can then be reviewed before publication instead of silently replacing live data." },
           { "t": "quote", "c": "A verified label applies only to the named fields, not to every possible fact about that Aniimo." }
