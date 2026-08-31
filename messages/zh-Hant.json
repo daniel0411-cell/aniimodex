@@ -135,6 +135,7 @@
     "forms": "型態",
     "potential": "個體潛力",
     "related": "相關伊莫",
+    "relatedReason": "根據官方進化家族、共同棲息地或共同移動能力關聯。",
     "relatedTools": "相關工具",
     "finalForm": "最終型態",
     "noSpecialMove": "無特殊場地移動能力。",
@@ -453,9 +454,9 @@
     "relatedArticles": "相關攻略"
   },
   "collections": {
-    "evolutions": { "title": "Aniimo 伊莫進化圖與進化家族", "description": "查看官方 Aniimo Wiki 目前公布的全部進化家族，包括分支進化路線。", "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。", "family": "進化家族" },
-    "locations": { "title": "Aniimo 伊莫地點與棲息地", "description": "依官方棲息地查找對應伊莫，涵蓋 Nimbus Fields、Mistwoods、Crescent Bay 等區域。", "sourceNote": "這裡顯示官方 Wiki 棲息地，不代表準確座標、天氣條件或捕獲機率。", "count": "{count} 隻伊莫" },
-    "abilities": { "title": "Aniimo 伊莫移動與探索能力", "description": "反查 Hustle、Tunnel、Take Off、Cloak、Glow 等官方移動和探索能力。", "sourceNote": "能力名稱、說明與伊莫對應關係來自官方 Wiki 詳情頁。", "count": "{count} 隻伊莫" }
+    "evolutions": { "title": "Aniimo 伊莫進化圖與進化家族", "description": "查看官方 Aniimo Wiki 目前公布的全部進化家族，包括分支進化路線。", "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。", "family": "進化家族", "howToTitle": "如何使用伊莫進化圖鑑", "howToDescription": "每個家族把官方關聯階段整理成一條路線。開啟任意成員即可比較元素、定位、棲息地、型態、特性與技能。", "faq": { "branching": { "question": "伊莫有分支進化嗎？", "answer": "有。官方 Wiki 快照中部分家族擁有多個子分支，本站按原始關係保留。" }, "requirements": { "question": "這裡會顯示進化條件嗎？", "answer": "不會。目前只確認官方公開的家族關係；等級、道具、任務等條件必須有官方明確資料才會展示。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseLocations": "比較官方棲息地" },
+    "locations": { "title": "Aniimo 伊莫地點與棲息地", "description": "依官方棲息地查找對應伊莫，涵蓋 Nimbus Fields、Mistwoods、Crescent Bay 等區域。", "sourceNote": "這裡顯示官方 Wiki 棲息地，不代表準確座標、天氣條件或捕獲機率。", "count": "{count} 隻伊莫", "howToTitle": "伊莫棲息地資料代表什麼", "howToDescription": "棲息地表示官方 Wiki 將某隻伊莫與一個命名區域關聯。可用分組發現同環境伊莫，再進入圖鑑查看其他核驗欄位。", "faq": { "coordinates": { "question": "這些是伊莫的精確刷新座標嗎？", "answer": "不是。棲息地名稱只確認官方區域關聯，不代表精確地圖座標或必定刷新的位置。" }, "conditions": { "question": "棲息地能確認天氣、時段或捕捉條件嗎？", "answer": "不能。天氣、時段、現象和捕捉機率是獨立資訊，不能從棲息地反推。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseEvolutions": "比較進化家族" },
+    "abilities": { "title": "Aniimo 伊莫移動與探索能力", "description": "反查 Hustle、Tunnel、Take Off、Cloak、Glow 等官方移動和探索能力。", "sourceNote": "能力名稱、說明與伊莫對應關係來自官方 Wiki 詳情頁。", "count": "{count} 隻伊莫", "howToTitle": "移動能力如何幫助探索", "howToDescription": "這些官方場地能力用於識別能支援特定移動方式或環境互動的伊莫。按能力分組即可比較對應成員。", "faq": { "combat": { "question": "移動能力和戰鬥技能一樣嗎？", "answer": "不一樣。移動能力用於探索和場地互動；特性與戰鬥技能會在每隻伊莫詳情頁單獨展示。" }, "complete": { "question": "每隻伊莫都有移動能力嗎？", "answer": "不是。這裡只顯示官方 Wiki 詳情快照明確列出的對應關係，不會為未列出的伊莫猜測能力。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseLocations": "比較官方棲息地" }
   },
   "elements": {
     "Light": "光",

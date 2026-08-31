@@ -10,6 +10,8 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
 import { getOfficialAniimoDetail, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
+import { flattenEvolution } from '@/data/aniimo-collections';
+import AniimoLinkList from '@/components/dex/AniimoLinkList';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
@@ -129,6 +131,22 @@ export default async function DexDetailPage({ params }: PageProps) {
   const currentIndex = allAniimos.findIndex((entry) => entry.number === aniimo.number);
   const previous = currentIndex > 0 ? allAniimos[currentIndex - 1] : undefined;
   const next = currentIndex >= 0 ? allAniimos[currentIndex + 1] : undefined;
+  const relatedNumbers = new Set<string>();
+  if (detail) {
+    const relatedNames = new Set(flattenEvolution(detail.evolution));
+    for (const entry of allAniimos) {
+      const candidate = getOfficialAniimoDetail(entry.number);
+      if (
+        entry.number !== aniimo.number &&
+        (relatedNames.has(entry.enName) ||
+          candidate?.habitats.some((habitat) => detail.habitats.includes(habitat)) ||
+          candidate?.mobility.some((ability) =>
+            detail.mobility.some((current) => current.name === ability.name)
+          ))
+      ) relatedNumbers.add(entry.number);
+    }
+  }
+  const relatedAniimos = allAniimos.filter((entry) => relatedNumbers.has(entry.number)).slice(0, 8);
 
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
@@ -309,6 +327,14 @@ export default async function DexDetailPage({ params }: PageProps) {
             </section>
           </div>
         </div>
+      )}
+
+      {relatedAniimos.length > 0 && (
+        <section className="border-t border-ink-border pt-6">
+          <h2 className="text-xl font-bold text-text-primary">{t('related')}</h2>
+          <p className="mt-2 text-sm text-text-secondary">{t('relatedReason')}</p>
+          <AniimoLinkList aniimos={relatedAniimos} />
+        </section>
       )}
 
       {/* 相关工具与延伸阅读 */}
