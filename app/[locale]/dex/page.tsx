@@ -266,6 +266,52 @@ export default function DexPage() {
           </button>
         </div>
       )}
+
+      <section className="border-t border-ink-border pt-8">
+        <h2 className="text-xl font-semibold text-text-primary">{td('browseTitle')}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
+          {td('browseDescription')}
+        </p>
+        <div className="mt-5 grid gap-6 md:grid-cols-2">
+          <div>
+            <h3 className="text-sm font-semibold text-text-primary">{td('browseElements')}</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {ELEMENTS.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => setElement(item)}
+                  className="inline-flex items-center gap-1.5 rounded border border-ink-border bg-white px-2.5 py-1.5 text-xs text-text-secondary hover:border-primary-light"
+                >
+                  <ElementIcon element={item} className={ELEMENT_ICON_COLORS[item]} size={14} />
+                  {t(`elements.${item}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-text-primary">{td('browseRoles')}</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {ROLES.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => setRole(item)}
+                  className="rounded border border-ink-border bg-white px-2.5 py-1.5 text-xs text-text-secondary hover:border-primary-light"
+                >
+                  {ROLE_ICONS[item]} {t(`roles.${item}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <nav className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light">
+          <Link href="/evolutions">{td('browseEvolutions')} →</Link>
+          <Link href="/locations">{td('browseLocations')} →</Link>
+          <Link href="/abilities">{td('browseAbilities')} →</Link>
+          <Link href="/tools/type-chart">{td('browseMatchups')} →</Link>
+        </nav>
+      </section>
     </div>
   );
 }

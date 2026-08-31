@@ -17,7 +17,7 @@ export async function generateMetadata({
   const siteName = meta('siteName');
 
   const title = `${t('title')} | ${siteName}`;
-  const description = t('title');
+  const description = t('metaDescription');
 
   return {
     title,
