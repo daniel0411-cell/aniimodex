@@ -200,7 +200,20 @@
     "superEffective": "效果拔群",
     "neutral": "普通",
     "resisted": "效果不佳",
-    "immune": "免疫"
+    "immune": "免疫",
+    "summaryTitle": "Aniimo 元素克制关系摘要",
+    "summaryIntro": "结合上方矩阵查看各元素造成双倍伤害、伤害减半或无效的关系。",
+    "elementMatchups": "{element}克制关系",
+    "strongAgainst": "克制：{elements}。",
+    "resistedBy": "被抵抗：{elements}。",
+    "noEffectAgainst": "无效：{elements}。",
+    "none": "无",
+    "faqTitle": "Aniimo 元素克制常见问题",
+    "faq": {
+      "readChart": { "question": "Aniimo 元素克制表怎么看？", "answer": "从行中选择攻击元素，从列中选择防守元素，两者交叉位置就是伤害倍率。" },
+      "multiplierMeaning": { "question": "2x、1x、½x 和 0x 分别代表什么？", "answer": "2x 表示克制，1x 表示普通伤害，½x 表示被抵抗，0x 表示防守元素免疫。" },
+      "officialStatus": { "question": "这份 Aniimo 元素克制表是官方确认的吗？", "answer": "九种元素名称来自官方 Aniimo Wiki；克制倍率仍在等待官方战斗资料核验，在此之前仅作为参考。" }
+    }
   },
   "catchTool": {
     "title": "捕获条件工具",

@@ -200,7 +200,20 @@
     "superEffective": "效果絕佳",
     "neutral": "普通",
     "resisted": "效果不佳",
-    "immune": "免疫"
+    "immune": "免疫",
+    "summaryTitle": "Aniimo 元素剋制關係摘要",
+    "summaryIntro": "結合上方矩陣查看各元素造成雙倍傷害、傷害減半或無效的關係。",
+    "elementMatchups": "{element}剋制關係",
+    "strongAgainst": "剋制：{elements}。",
+    "resistedBy": "被抵抗：{elements}。",
+    "noEffectAgainst": "無效：{elements}。",
+    "none": "無",
+    "faqTitle": "Aniimo 元素剋制常見問題",
+    "faq": {
+      "readChart": { "question": "Aniimo 元素剋制表怎麼看？", "answer": "從列中選擇攻擊元素，從欄中選擇防守元素，兩者交叉位置就是傷害倍率。" },
+      "multiplierMeaning": { "question": "2x、1x、½x 和 0x 分別代表什麼？", "answer": "2x 表示剋制，1x 表示普通傷害，½x 表示被抵抗，0x 表示防守元素免疫。" },
+      "officialStatus": { "question": "這份 Aniimo 元素剋制表是官方確認的嗎？", "answer": "九種元素名稱來自官方 Aniimo Wiki；剋制倍率仍在等待官方戰鬥資料核驗，在此之前僅作為參考。" }
+    }
   },
   "catchTool": {
     "title": "捕捉條件工具",

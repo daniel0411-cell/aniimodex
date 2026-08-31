@@ -190,6 +190,56 @@ export default function TypeChartPage() {
           <li>{t('ruleSame')}</li>
         </ul>
       </section>
+
+      <section className="space-y-4 border-t border-ink-border pt-8">
+        <div>
+          <h2 className="text-xl font-semibold text-text-primary">{t('summaryTitle')}</h2>
+          <p className="mt-2 text-sm leading-6 text-text-secondary">{t('summaryIntro')}</p>
+        </div>
+        <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+          {ELEMENTS.map((attacker) => {
+            const strong = ELEMENTS.filter((defender) => effective(attacker, defender) === 2);
+            const resisted = ELEMENTS.filter((defender) => effective(attacker, defender) === 0.5);
+            const immune = ELEMENTS.filter((defender) => effective(attacker, defender) === 0);
+            return (
+              <article key={attacker} className="border-t border-ink-border pt-4">
+                <h3 className="font-semibold text-text-primary">
+                  {ELEMENT_ICONS[attacker]} {t('elementMatchups', { element: elLabel(attacker) })}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-text-secondary">
+                  {t('strongAgainst', {
+                    elements: strong.map(elLabel).join(', ') || t('none'),
+                  })}
+                </p>
+                <p className="text-sm leading-6 text-text-secondary">
+                  {t('resistedBy', {
+                    elements: resisted.map(elLabel).join(', ') || t('none'),
+                  })}
+                </p>
+                {immune.length > 0 && (
+                  <p className="text-sm leading-6 text-text-secondary">
+                    {t('noEffectAgainst', { elements: immune.map(elLabel).join(', ') })}
+                  </p>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="space-y-4 border-t border-ink-border pt-8">
+        <h2 className="text-xl font-semibold text-text-primary">{t('faqTitle')}</h2>
+        {(['readChart', 'multiplierMeaning', 'officialStatus'] as const).map((key) => (
+          <details key={key} className="border-b border-ink-border pb-4">
+            <summary className="cursor-pointer font-semibold text-text-primary">
+              {t(`faq.${key}.question`)}
+            </summary>
+            <p className="mt-2 text-sm leading-6 text-text-secondary">
+              {t(`faq.${key}.answer`)}
+            </p>
+          </details>
+        ))}
+      </section>
     </div>
   );
 }

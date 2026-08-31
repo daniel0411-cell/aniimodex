@@ -200,7 +200,20 @@
     "superEffective": "Super effective",
     "neutral": "Neutral",
     "resisted": "Resisted",
-    "immune": "Immune"
+    "immune": "Immune",
+    "summaryTitle": "Aniimo element matchup summary",
+    "summaryIntro": "Use this text summary with the matrix above to answer which Aniimo elements deal double damage, are resisted or have no effect.",
+    "elementMatchups": "{element} matchups",
+    "strongAgainst": "Strong against: {elements}.",
+    "resistedBy": "Resisted by: {elements}.",
+    "noEffectAgainst": "No effect against: {elements}.",
+    "none": "none",
+    "faqTitle": "Aniimo type chart FAQ",
+    "faq": {
+      "readChart": { "question": "How do I read the Aniimo type chart?", "answer": "Choose the attacking element from a row and the defending element from a column. Their intersection shows the damage multiplier." },
+      "multiplierMeaning": { "question": "What do 2x, 1x, ½x and 0x mean?", "answer": "2x is super effective, 1x is neutral, ½x is resisted and 0x means the defending element is immune." },
+      "officialStatus": { "question": "Is this Aniimo element chart officially confirmed?", "answer": "The nine element names are confirmed by the official Aniimo Wiki. The matchup multipliers remain under source review and should be treated as a reference until official combat documentation is available." }
+    }
   },
   "catchTool": {
     "title": "Catch Condition Tool",

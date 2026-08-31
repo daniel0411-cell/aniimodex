@@ -25,6 +25,7 @@ const STATIC_ROUTES: {
   { path: '/evolutions/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
   { path: '/locations/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
   { path: '/abilities/', lastModified: '2026-08-30', priority: 0.8, changefreq: 'weekly' },
+  { path: '/tools/type-chart/', lastModified: '2026-08-31', priority: 0.85, changefreq: 'weekly' },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates
