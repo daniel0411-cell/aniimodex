@@ -79,6 +79,7 @@ export default async function GuidePostPage({
   const post = getGuidePost(slug);
   const t = await getTranslations('guide');
   const tp = await getTranslations('guide.posts');
+  const tg = await getTranslations('guide');
   const tb = await getTranslations('breadcrumb');
   const meta = await getTranslations('meta');
   const siteName = meta('siteName');
@@ -91,7 +92,12 @@ export default async function GuidePostPage({
   const tag = tp(`${post.slug}.tag`);
   const lead = tp(`${post.slug}.lead`);
   const messages = await getMessages();
-  const body = (messages.guide.posts[post.slug].body ?? []) as Block[];
+  const body = post.dataTopic
+    ? (['meaning', 'confirmed', 'unknown'] as const).flatMap((key) => [
+        { t: 'h', c: tg(`dataTopics.${post.dataTopic}.${key}.heading`) },
+        { t: 'p', c: tg(`dataTopics.${post.dataTopic}.${key}.content`) },
+      ] as Block[])
+    : (messages.guide.posts[post.slug].body ?? []) as Block[];
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);

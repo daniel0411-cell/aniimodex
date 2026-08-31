@@ -25,4 +25,5 @@ export interface GuidePost {
   imageAlt?: string;
   /** 支撑页面结论的官方来源 ID */
   sourceIds?: string[];
+  dataTopic?: 'elements' | 'roles' | 'evolution' | 'mobility' | 'habitats';
 }

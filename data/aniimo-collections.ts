@@ -1,6 +1,7 @@
 import detailsSnapshot from '@/data/official-wiki-details.json';
 import { getAllAniimos } from '@/lib/aniimo';
 import type { OfficialAniimoDetail, OfficialEvolutionNode } from '@/data/aniimo-details';
+import type { Element } from '@/types/aniimo';
 
 const details = detailsSnapshot.details as OfficialAniimoDetail[];
 const aniimoByNumber = new Map(getAllAniimos().map((aniimo) => [aniimo.number, aniimo]));
@@ -32,6 +33,17 @@ export const mobilityGroups = Array.from(
     return groups;
   }, new Map<string, { description?: string; members: ReturnType<typeof getAllAniimos> }>())
 ).sort((a, b) => b[1].members.length - a[1].members.length || a[0].localeCompare(b[0]));
+
+export const elementGroups = Array.from(
+  getAllAniimos().reduce((groups, aniimo) => {
+    for (const element of aniimo.officialElements ?? []) {
+      const members = groups.get(element) ?? [];
+      members.push(aniimo);
+      groups.set(element, members);
+    }
+    return groups;
+  }, new Map<Element, ReturnType<typeof getAllAniimos>>())
+).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
 
 export function flattenEvolution(node: OfficialEvolutionNode): string[] {
   return [node.name, ...node.children.flatMap(flattenEvolution)];

@@ -182,6 +182,14 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: ['official-aniimo-dex-status', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-official-wiki-index-2026-08-30'],
   },
+  ...([['aniimo-elements-explained', 'elements'], ['aniimo-roles-explained', 'roles'], ['aniimo-evolution-system', 'evolution'], ['aniimo-mobility-abilities', 'mobility'], ['aniimo-habitats-locations', 'habitats']] as const).map(([slug, dataTopic]) => ({
+    slug, dataTopic,
+    date: '2026-08-31',
+    readMinutes: 5,
+    relatedToolHrefs: slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
+    relatedSlugs: ['official-aniimo-dex-status'],
+    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+  })),
 ];
 
 /** 按 slug 查找文章元数据 */

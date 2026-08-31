@@ -131,22 +131,17 @@ export default async function DexDetailPage({ params }: PageProps) {
   const currentIndex = allAniimos.findIndex((entry) => entry.number === aniimo.number);
   const previous = currentIndex > 0 ? allAniimos[currentIndex - 1] : undefined;
   const next = currentIndex >= 0 ? allAniimos[currentIndex + 1] : undefined;
-  const relatedNumbers = new Set<string>();
-  if (detail) {
-    const relatedNames = new Set(flattenEvolution(detail.evolution));
-    for (const entry of allAniimos) {
-      const candidate = getOfficialAniimoDetail(entry.number);
-      if (
-        entry.number !== aniimo.number &&
-        (relatedNames.has(entry.enName) ||
-          candidate?.habitats.some((habitat) => detail.habitats.includes(habitat)) ||
-          candidate?.mobility.some((ability) =>
-            detail.mobility.some((current) => current.name === ability.name)
-          ))
-      ) relatedNumbers.add(entry.number);
-    }
-  }
-  const relatedAniimos = allAniimos.filter((entry) => relatedNumbers.has(entry.number)).slice(0, 8);
+  const familyNames = new Set(detail ? flattenEvolution(detail.evolution) : []);
+  const familyAniimos = allAniimos.filter((entry) => entry.number !== aniimo.number && familyNames.has(entry.enName));
+  const habitatAniimos = allAniimos.filter((entry) => {
+    const candidate = getOfficialAniimoDetail(entry.number);
+    return entry.number !== aniimo.number && !familyNames.has(entry.enName) && candidate?.habitats.some((habitat) => detail?.habitats.includes(habitat));
+  }).slice(0, 8);
+  const similarAniimos = allAniimos.filter((entry) =>
+    entry.number !== aniimo.number &&
+    !familyNames.has(entry.enName) &&
+    (entry.officialRole === aniimo.officialRole || entry.officialElements?.some((element) => aniimo.officialElements?.includes(element)))
+  ).slice(0, 8);
 
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
@@ -234,9 +229,9 @@ export default async function DexDetailPage({ params }: PageProps) {
           <p className="mt-1 text-text-secondary">{aniimo.enName}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {aniimo.officialElements?.map((element) => (
-              <span key={element} className={cn('rounded border px-2.5 py-1 text-xs', ELEMENT_BADGE_CLASSES[element])}>
+              <Link key={element} href={`/elements/${element.toLowerCase()}`} className={cn('rounded border px-2.5 py-1 text-xs', ELEMENT_BADGE_CLASSES[element])}>
                 {tr(`elements.${element}`)}
-              </span>
+              </Link>
             ))}
             {aniimo.officialRole && (
               <span className={cn('rounded border px-2.5 py-1 text-xs', ROLE_BADGE_CLASSES[aniimo.officialRole])}>
@@ -332,13 +327,7 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       )}
 
-      {relatedAniimos.length > 0 && (
-        <section className="border-t border-ink-border pt-6">
-          <h2 className="text-xl font-bold text-text-primary">{t('related')}</h2>
-          <p className="mt-2 text-sm text-text-secondary">{t('relatedReason')}</p>
-          <AniimoLinkList aniimos={relatedAniimos} />
-        </section>
-      )}
+      {(familyAniimos.length > 0 || habitatAniimos.length > 0 || similarAniimos.length > 0) && <section className="space-y-6 border-t border-ink-border pt-6"><div><h2 className="text-xl font-bold text-text-primary">{t('related')}</h2><p className="mt-2 text-sm text-text-secondary">{t('relatedReason')}</p></div>{familyAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedFamily')}</h3><AniimoLinkList aniimos={familyAniimos} /></div>}{habitatAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedHabitat')}</h3><AniimoLinkList aniimos={habitatAniimos} /></div>}{similarAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedElementRole')}</h3><AniimoLinkList aniimos={similarAniimos} /></div>}</section>}
 
       {/* 相关工具与延伸阅读 */}
       <section className="rounded-lg border border-ink-border bg-ink-card p-5">
