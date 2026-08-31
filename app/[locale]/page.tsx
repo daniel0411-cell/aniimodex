@@ -101,9 +101,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-emerald-300">{th('featuredLabel')}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{th('featuredTitle')}</h2></div><Link href="/dex" className="text-sm font-semibold text-white/80">{th('viewAllAniimo')} →</Link></div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{featured.map((aniimo) => <Link key={aniimo.number} href={`/dex/${aniimo.number}`} className="group overflow-hidden rounded-md bg-white p-2 text-text-primary"><div className="relative aspect-square bg-sky-50"><Image src={aniimo.imageUrl!} alt={aniimo.name} fill sizes="(min-width: 1024px) 16vw, 50vw" className="object-contain transition-transform group-hover:scale-105" /></div><p className="mt-2 truncate text-sm font-semibold">{aniimo.name}</p><p className="text-[10px] text-text-muted">#{aniimo.number} · {aniimo.officialElements?.map((element) => t(`elements.${element}`)).join(' / ')}</p></Link>)}</div>
       </section>
-      <section className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
-        <div><p className="text-xs font-semibold uppercase text-emerald-700">{th('verificationLabel')}</p><h2 className="mt-2 text-2xl font-bold text-text-primary sm:text-3xl">{th('verificationTitle')}</h2><p className="mt-3 text-sm leading-7 text-text-secondary">{th('verificationDescription')}</p><Link href="/guide/official-aniimo-dex-status" className="mt-4 inline-flex text-sm font-semibold text-primary-light">{th('coverageLink')} →</Link></div>
-        <div className="border-t border-ink-border">{(['basics', 'classification', 'details', 'skills', 'pending'] as const).map((key) => <div key={key} className="flex items-center justify-between gap-4 border-b border-ink-border py-4 text-sm"><span className="text-text-primary">{th(`coverage.${key}.label`)}</span><span className={key === 'pending' ? 'font-semibold text-amber-700' : 'font-semibold text-emerald-700'}>{th(`coverage.${key}.status`)}</span></div>)}</div>
+      <section className="border-y border-ink-border py-5 sm:flex sm:items-center sm:gap-5">
+        <div className="flex shrink-0 items-center gap-2 text-sm font-semibold text-emerald-800">
+          <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          {th('verificationTitle')}
+        </div>
+        <p className="mt-2 flex-1 text-sm leading-6 text-text-secondary sm:mt-0">
+          {th('verificationDescription')}
+        </p>
+        <Link href="/guide/official-aniimo-dex-status" className="mt-3 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">
+          {th('coverageLink')} →
+        </Link>
       </section>
       <section>
         <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-primary-light">{th('officialGuidesLabel')}</p><h2 className="mt-1 text-2xl font-bold text-text-primary">{th('guideSectionTitle')}</h2></div><Link href="/guide" className="text-sm font-semibold text-primary-light">{th('viewAllGuide')} →</Link></div>
