@@ -59,23 +59,24 @@ export default function TwinePage() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8">
+    <div className="mx-auto max-w-6xl space-y-8">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
+      <div className="grid items-start gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
       {/* 能力选择区 */}
-      <section className="space-y-3">
+      <section className="space-y-3 border-t-4 border-primary bg-white p-4 lg:sticky lg:top-20">
         <h2 className="text-sm font-medium text-text-secondary">{t('selectAbility')}</h2>
-        <div className="flex flex-wrap gap-2.5">
+        <div className="grid gap-2">
           {/* 全部按钮 */}
           <button
             type="button"
             onClick={selectAll}
             aria-pressed={allSelected}
             className={cn(
-              'inline-flex min-w-[72px] items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium transition-all',
+              'inline-flex min-w-[72px] items-center justify-start gap-2 rounded-md border px-3 py-2.5 text-sm font-medium transition-all',
               allSelected
                 ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                 : 'border-ink-border bg-ink-card text-text-secondary hover:border-primary/50 hover:text-text-primary'
@@ -93,7 +94,7 @@ export default function TwinePage() {
                 onClick={() => toggle(opt.id)}
                 aria-pressed={active}
                 className={cn(
-                  'inline-flex min-w-[72px] items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium transition-all',
+                  'inline-flex min-w-[72px] items-center justify-start gap-2 rounded-md border px-3 py-2.5 text-sm font-medium transition-all',
                   active
                     ? 'border-primary bg-primary/20 text-primary-light shadow-glow'
                     : 'border-ink-border bg-ink-card text-text-secondary hover:border-primary/50 hover:text-text-primary'
@@ -105,7 +106,10 @@ export default function TwinePage() {
             );
           })}
         </div>
+        <Link href="/abilities" className="inline-flex text-sm font-semibold text-primary-light">{t('browseAbilities')} →</Link>
       </section>
+
+      <div className="min-w-0 space-y-4">
 
       {/* 结果统计 */}
       <div className="flex items-center justify-between">
@@ -133,10 +137,13 @@ export default function TwinePage() {
           ))}
         </ul>
       ) : (
-        <div className="rounded-xl border border-dashed border-ink-border bg-ink-card px-6 py-12 text-center">
+        <div className="rounded-md border border-dashed border-ink-border bg-ink-card px-6 py-12 text-center">
           <p className="text-text-muted">{t('empty')}</p>
+          <button type="button" onClick={selectAll} className="mt-3 text-sm font-semibold text-primary-light">{t('clear')}</button>
         </div>
       )}
+      </div>
+      </div>
     </div>
   );
 }
@@ -150,7 +157,7 @@ function AniimoRow({ aniimo, activeIds }: { aniimo: AniimoEntry; activeIds: stri
   return (
     <Link
       href={`/dex/${aniimo.number}`}
-      className="group flex items-center gap-3 rounded-xl border border-ink-border bg-ink-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary-light hover:shadow-glow"
+      className="group flex items-center gap-3 rounded-md border border-ink-border bg-ink-card p-4 transition-all hover:border-primary-light hover:shadow-card"
     >
       {/* 编号 */}
       <span className="shrink-0 text-sm font-semibold text-text-muted">#{aniimo.number}</span>

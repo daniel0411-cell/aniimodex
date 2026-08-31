@@ -95,6 +95,7 @@ export default function DexPage() {
   const [role, setRole] = useState<Role | ''>('');
   const [q, setQ] = useState('');
   const [filtersOpen, setFiltersOpen] = useState(true);
+  const [sort, setSort] = useState<'number' | 'name' | 'element' | 'stage'>('number');
 
   useEffect(() => {
     setQ(new URLSearchParams(window.location.search).get('q')?.trim() ?? '');
@@ -112,8 +113,13 @@ export default function DexPage() {
     if (q) {
       list = searchAniimos(q);
     }
-    return list;
-  }, [element, role, q]);
+    return [...list].sort((a, b) => {
+      if (sort === 'name') return a.name.localeCompare(b.name);
+      if (sort === 'element') return (a.officialElements?.[0] ?? '').localeCompare(b.officialElements?.[0] ?? '') || a.number.localeCompare(b.number);
+      if (sort === 'stage') return (a.officialStage ?? '').localeCompare(b.officialStage ?? '') || a.number.localeCompare(b.number);
+      return a.number.localeCompare(b.number);
+    });
+  }, [element, role, q, sort]);
 
   const hasActiveFilter = Boolean(element || role || q);
   const resetFilters = () => {
@@ -163,8 +169,9 @@ export default function DexPage() {
         </p>
       </header>
 
+      <div className="grid items-start gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
       {/* 筛选栏 */}
-      <div className="rounded-md border border-ink-border bg-white/90 p-3 shadow-card backdrop-blur-xl sm:sticky sm:top-16 sm:z-30 sm:p-4">
+      <aside className="rounded-md border border-ink-border bg-white/90 p-3 shadow-card backdrop-blur-xl lg:sticky lg:top-20 lg:p-4">
         <button type="button" onClick={() => setFiltersOpen((open) => !open)} className="flex w-full items-center justify-between text-left sm:hidden">
           <span className="text-sm font-semibold text-text-primary">{td('searchLabel')}</span>
           <span className="text-xs text-text-muted">{filtersOpen ? '−' : '+'}</span>
@@ -178,6 +185,16 @@ export default function DexPage() {
           placeholder={td('searchPlaceholder')}
           className="h-10 w-full rounded-md border border-ink-border bg-white px-3 text-sm text-text-primary focus:border-primary-light focus:outline-none"
         />
+
+        <label className="block text-xs text-text-muted">
+          {td('sortLabel')}
+          <select value={sort} onChange={(event) => setSort(event.target.value as typeof sort)} className="mt-1 h-9 w-full rounded-md border border-ink-border bg-white px-2 text-sm text-text-primary">
+            <option value="number">{td('sortNumber')}</option>
+            <option value="name">{td('sortName')}</option>
+            <option value="element">{td('sortElement')}</option>
+            <option value="stage">{td('sortStage')}</option>
+          </select>
+        </label>
 
         <div className="border-l-4 border-secondary bg-emerald-50 px-3 py-2 text-xs leading-5 text-emerald-950">
           {td('officialScope')}
@@ -243,11 +260,13 @@ export default function DexPage() {
             </div>
           )}
         </div>
-      </div>
+      </aside>
+
+      <div className="min-w-0 space-y-6">
 
       {/* 卡片网格 / 空状态 */}
       {filtered.length > 0 ? (
-        <section className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-4">
           {filtered.map((aniimo) => (
             <DexCard key={aniimo.number} aniimo={aniimo} />
           ))}
@@ -312,6 +331,8 @@ export default function DexPage() {
           <Link href="/tools/type-chart">{td('browseMatchups')} →</Link>
         </nav>
       </section>
+      </div>
+      </div>
     </div>
   );
 }

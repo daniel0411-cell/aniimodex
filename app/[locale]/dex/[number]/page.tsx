@@ -210,9 +210,9 @@ export default async function DexDetailPage({ params }: PageProps) {
       </nav>
 
       <div className="flex items-center justify-between border-y border-ink-border py-3 text-sm">
-        {previous ? <Link href={`/dex/${previous.number}`} className="text-primary-light hover:text-primary">← #{previous.number} {previous.name}</Link> : <span />}
+        {previous ? <Link href={`/dex/${previous.number}`} className="text-primary-light hover:text-primary">← #{previous.number}<span className="hidden sm:inline"> {previous.name}</span></Link> : <span />}
         <Link href="/dex" className="font-semibold text-text-secondary hover:text-primary-light">{tr('breadcrumb.dex')}</Link>
-        {next ? <Link href={`/dex/${next.number}`} className="text-primary-light hover:text-primary">{next.name} #{next.number} →</Link> : <span />}
+        {next ? <Link href={`/dex/${next.number}`} className="text-primary-light hover:text-primary"><span className="hidden sm:inline">{next.name} </span>#{next.number} →</Link> : <span />}
       </div>
 
       {/* 头部 */}
@@ -264,6 +264,7 @@ export default async function DexDetailPage({ params }: PageProps) {
             </span>
           )}
           <div className="mt-5 border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-xs leading-5 text-emerald-950">{t('officialScope')}</div>
+          {detail && <dl className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 border-t border-ink-border pt-4 text-xs"><div><dt className="text-text-muted">{t('officialEvolution')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.evolution.name}</dd></div><div><dt className="text-text-muted">{t('officialHabitats')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.habitats.length}</dd></div><div><dt className="text-text-muted">{t('officialForms')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.morphologyList.length}</dd></div><div><dt className="text-text-muted">{t('officialMobility')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.mobility.length}</dd></div></dl>}
           {(aniimo.sourceIds ?? [])
             .map((sourceId) => sourceById.get(sourceId))
             .filter(Boolean)
@@ -281,16 +282,18 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       </header>
 
+      {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a><a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
+
       {detail && (
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-8">
-            <section>
+            <section id="evolution" className="scroll-mt-24">
               <h2 className="mb-4 text-xl font-bold text-text-primary">{t('officialEvolution')}</h2>
               <EvolutionTree node={detail.evolution} />
             </section>
 
             {detail.habitats.length > 0 && (
-              <section>
+              <section id="habitats" className="scroll-mt-24">
                 <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialHabitats')}</h2>
                 <div className="flex flex-wrap gap-2">
                   {detail.habitats.map((habitat) => (
@@ -312,16 +315,16 @@ export default async function DexDetailPage({ params }: PageProps) {
 
           <div className="space-y-8">
             {detail.mobility.length > 0 && (
-              <section>
+              <section id="mobility" className="scroll-mt-24">
                 <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialMobility')}</h2>
                 <SkillList skills={detail.mobility} />
               </section>
             )}
-            <section>
+            <section id="traits" className="scroll-mt-24">
               <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialTraits')}</h2>
               <SkillList skills={detail.traits} />
             </section>
-            <section>
+            <section id="skills" className="scroll-mt-24">
               <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialSkills')}</h2>
               <SkillList skills={detail.skills} />
             </section>

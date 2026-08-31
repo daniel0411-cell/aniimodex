@@ -10,7 +10,10 @@
     "twine": "Twine",
     "typeChart": "元素克制",
     "guide": "攻略",
-    "tools": "工具"
+    "tools": "工具",
+    "evolutions": "进化",
+    "locations": "地点",
+    "abilities": "能力"
   },
   "common": {
     "all": "全部",
@@ -99,6 +102,11 @@
     "searchPlaceholder": "按名称、编号或关键词搜索…",
     "filterElement": "元素",
     "filterRole": "定位",
+    "sortLabel": "结果排序",
+    "sortNumber": "编号",
+    "sortName": "名称",
+    "sortElement": "元素",
+    "sortStage": "阶段",
     "filterTwine": "Twine 能力",
     "allTwine": "全部能力",
     "clearAll": "清除全部筛选",
@@ -188,7 +196,8 @@
     "all": "全部",
     "found": "找到 <b>{count}</b> 只伊莫",
     "clear": "清除筛选",
-    "empty": "无匹配结果，请调整能力选择。"
+    "empty": "无匹配结果，请调整能力选择。",
+    "browseAbilities": "浏览官方移动能力目录"
   },
   "typeChartTool": {
     "title": "元素克制表",
@@ -211,6 +220,11 @@
     "neutral": "普通",
     "resisted": "效果不佳",
     "immune": "免疫",
+    "mobileAttacker": "攻击元素",
+    "mobileDefender": "防守元素",
+    "selectElement": "选择元素",
+    "mobilePrompt": "选择攻击和防守元素后查看伤害倍率。",
+    "mobileResult": "{attacker} 攻击 {defender}：{value}x 伤害。",
     "summaryTitle": "Aniimo 元素克制关系摘要",
     "summaryIntro": "结合上方矩阵查看各元素造成双倍伤害、伤害减半或无效的关系。",
     "elementMatchups": "{element}克制关系",
@@ -275,6 +289,8 @@
     "browseTypeChart": "查看元素克制表，了解相克关系",
     "browseCatch": "使用捕获估算器，提前准备资源",
     "minRead": "分钟阅读",
+    "sources": "个来源",
+    "tableOfContents": "本文目录",
     "verifiedOfficial": "已根据官方来源核验",
     "lastVerified": "最后核验：{date}",
     "officialSources": "官方来源",

@@ -64,6 +64,24 @@ export default function TypeChartPage() {
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
+      <div className="grid gap-3 sm:hidden">
+        <label className="text-xs font-medium text-text-secondary">{t('mobileAttacker')}
+          <select value={attackEl ?? ''} onChange={(event) => setAttackEl((event.target.value || null) as Element | null)} className="mt-1 h-11 w-full rounded-md border border-ink-border bg-white px-3 text-sm">
+            <option value="">{t('selectElement')}</option>
+            {ELEMENTS.map((element) => <option key={element} value={element}>{elLabel(element)}</option>)}
+          </select>
+        </label>
+        <label className="text-xs font-medium text-text-secondary">{t('mobileDefender')}
+          <select value={defendEl ?? ''} onChange={(event) => setDefendEl((event.target.value || null) as Element | null)} className="mt-1 h-11 w-full rounded-md border border-ink-border bg-white px-3 text-sm">
+            <option value="">{t('selectElement')}</option>
+            {ELEMENTS.map((element) => <option key={element} value={element}>{elLabel(element)}</option>)}
+          </select>
+        </label>
+        <div className="border-l-4 border-primary bg-sky-50 px-4 py-3 text-sm text-text-primary">
+          {attackEl && defendEl ? t('mobileResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl), value: effective(attackEl, defendEl) }) : t('mobilePrompt')}
+        </div>
+      </div>
+
       {/* 图例 */}
       <div className="flex flex-wrap items-center gap-3">
         {legend.map((item) => (
@@ -77,17 +95,17 @@ export default function TypeChartPage() {
       </div>
 
       {/* 克制表格 */}
-      <div className="overflow-x-auto rounded-xl border border-ink-border bg-ink-card p-3">
+      <div className="hidden overflow-x-auto rounded-md border border-ink-border bg-ink-card p-3 sm:block">
         <table className="w-full border-collapse text-center">
           <thead>
             <tr>
-              <th className="p-2 text-xs font-medium text-text-muted" aria-label={t('attackDefend')}>
+              <th className="sticky left-0 top-0 z-20 bg-ink-card p-2 text-xs font-medium text-text-muted" aria-label={t('attackDefend')}>
                 {t('attackDefend')}
               </th>
               {ELEMENTS.map((el) => {
                 const active = defendEl === el;
                 return (
-                  <th key={el} className="p-1">
+                  <th key={el} className="sticky top-0 z-10 bg-ink-card p-1">
                     <button
                       type="button"
                       onClick={() => toggleDefend(el)}
@@ -115,7 +133,7 @@ export default function TypeChartPage() {
               return (
                 <tr key={atk} className="group">
                   {/* 攻击方表头 */}
-                  <th className="p-1">
+                  <th className="sticky left-0 z-10 bg-ink-card p-1">
                     <button
                       type="button"
                       onClick={() => toggleAttack(atk)}

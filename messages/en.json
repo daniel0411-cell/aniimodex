@@ -10,7 +10,10 @@
     "twine": "Twine",
     "typeChart": "Type Chart",
     "guide": "Guide",
-    "tools": "Tools"
+    "tools": "Tools",
+    "evolutions": "Evolutions",
+    "locations": "Locations",
+    "abilities": "Abilities"
   },
   "common": {
     "all": "All",
@@ -99,6 +102,11 @@
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
     "filterRole": "Role",
+    "sortLabel": "Sort results",
+    "sortNumber": "Number",
+    "sortName": "Name",
+    "sortElement": "Element",
+    "sortStage": "Stage",
     "filterTwine": "Twine",
     "allTwine": "All abilities",
     "clearAll": "Clear all filters",
@@ -188,7 +196,8 @@
     "all": "All",
     "found": "Found <b>{count}</b> Aniimo",
     "clear": "Clear filters",
-    "empty": "No matching results. Try adjusting your ability selection."
+    "empty": "No matching results. Try adjusting your ability selection.",
+    "browseAbilities": "Browse the official mobility directory"
   },
   "typeChartTool": {
     "title": "Elemental Type Chart",
@@ -211,6 +220,11 @@
     "neutral": "Neutral",
     "resisted": "Resisted",
     "immune": "Immune",
+    "mobileAttacker": "Attacking element",
+    "mobileDefender": "Defending element",
+    "selectElement": "Select an element",
+    "mobilePrompt": "Select an attacking and defending element to see the multiplier.",
+    "mobileResult": "{attacker} attacking {defender}: {value}x damage.",
     "summaryTitle": "Aniimo element matchup summary",
     "summaryIntro": "Use this text summary with the matrix above to answer which Aniimo elements deal double damage, are resisted or have no effect.",
     "elementMatchups": "{element} matchups",
@@ -275,6 +289,8 @@
     "browseTypeChart": "Check the type chart for matchups",
     "browseCatch": "Use the catch estimator to prepare resources",
     "minRead": "min read",
+    "sources": "sources",
+    "tableOfContents": "On this page",
     "verifiedOfficial": "Verified against official sources",
     "lastVerified": "Last verified: {date}",
     "officialSources": "Official sources",

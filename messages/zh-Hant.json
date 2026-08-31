@@ -10,7 +10,10 @@
     "twine": "Twine",
     "typeChart": "元素剋制",
     "guide": "攻略",
-    "tools": "工具"
+    "tools": "工具",
+    "evolutions": "進化",
+    "locations": "地點",
+    "abilities": "能力"
   },
   "common": {
     "all": "全部",
@@ -99,6 +102,11 @@
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋…",
     "filterElement": "元素",
     "filterRole": "定位",
+    "sortLabel": "結果排序",
+    "sortNumber": "編號",
+    "sortName": "名稱",
+    "sortElement": "元素",
+    "sortStage": "階段",
     "filterTwine": "Twine 能力",
     "allTwine": "全部能力",
     "clearAll": "清除全部篩選",
@@ -188,7 +196,8 @@
     "all": "全部",
     "found": "找到 <b>{count}</b> 隻伊莫",
     "clear": "清除篩選",
-    "empty": "無相符結果，請調整能力選擇。"
+    "empty": "無相符結果，請調整能力選擇。",
+    "browseAbilities": "瀏覽官方移動能力目錄"
   },
   "typeChartTool": {
     "title": "元素剋制表",
@@ -211,6 +220,11 @@
     "neutral": "普通",
     "resisted": "效果不佳",
     "immune": "免疫",
+    "mobileAttacker": "攻擊元素",
+    "mobileDefender": "防守元素",
+    "selectElement": "選擇元素",
+    "mobilePrompt": "選擇攻擊和防守元素後查看傷害倍率。",
+    "mobileResult": "{attacker} 攻擊 {defender}：{value}x 傷害。",
     "summaryTitle": "Aniimo 元素剋制關係摘要",
     "summaryIntro": "結合上方矩陣查看各元素造成雙倍傷害、傷害減半或無效的關係。",
     "elementMatchups": "{element}剋制關係",
@@ -275,6 +289,8 @@
     "browseTypeChart": "查看元素剋制表，了解相剋關係",
     "browseCatch": "使用捕捉估算器，提前準備資源",
     "minRead": "分鐘閱讀",
+    "sources": "個來源",
+    "tableOfContents": "本文目錄",
     "verifiedOfficial": "已根據官方來源核驗",
     "lastVerified": "最後核驗：{date}",
     "officialSources": "官方來源",

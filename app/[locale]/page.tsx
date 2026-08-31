@@ -79,7 +79,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   };
 
   return (
-    <div className="space-y-12 sm:space-y-16">
+    <div className="space-y-10 sm:space-y-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="relative min-h-[30rem] overflow-hidden rounded-lg sm:min-h-[34rem]">
         <div className="absolute inset-0 -z-10"><Image src="/images/hero-bg.jpg" alt="" fill sizes="100vw" className="object-cover object-center" priority /><div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/45 to-transparent" /><div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" /></div>
@@ -117,7 +117,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-primary-light">{th('officialGuidesLabel')}</p><h2 className="mt-1 text-2xl font-bold text-text-primary">{th('guideSectionTitle')}</h2></div><Link href="/guide" className="text-sm font-semibold text-primary-light">{th('viewAllGuide')} →</Link></div>
         <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]"><Link href="/guide/aniimo-launch-time-preload" className="border-t-4 border-primary bg-white p-6 shadow-card"><span className="text-xs font-semibold uppercase text-primary-light">{t('guide.posts.aniimo-launch-time-preload.tag')}</span><h3 className="mt-3 text-2xl font-bold text-text-primary">{t('guide.posts.aniimo-launch-time-preload.title')}</h3><p className="mt-3 text-sm leading-6 text-text-secondary">{t('guide.posts.aniimo-launch-time-preload.subtitle')}</p><span className="mt-6 inline-flex text-sm font-semibold text-primary-light">{th('readGuide')} →</span></Link><div className="border-t border-ink-border">{guideSlugs.map((slug) => <Link key={slug} href={`/guide/${slug}`} className="block border-b border-ink-border py-4"><span className="text-[10px] font-semibold uppercase text-primary-light">{t(`guide.posts.${slug}.tag`)}</span><h3 className="mt-1 text-sm font-semibold text-text-primary">{t(`guide.posts.${slug}.title`)}</h3></Link>)}</div></div>
       </section>
-      <section className="grid gap-4 border-y border-ink-border py-5 sm:grid-cols-[10rem_1fr_auto] sm:items-center"><p className="font-mono text-xs text-text-muted">{th('latestUpdateLabel')}<br />2026.08.30</p><div><h2 className="text-sm font-semibold text-text-primary">{th('latestUpdateTitle')}</h2><p className="mt-1 text-xs leading-5 text-text-muted">{th('latestUpdateDescription')}</p></div><Link href="/guide/official-aniimo-dex-status" className="text-sm font-semibold text-primary-light">{th('viewUpdate')} →</Link></section>
     </div>
   );
 }

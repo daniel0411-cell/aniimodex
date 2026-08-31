@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import Card from '@/components/ui/Card';
-import Badge from '@/components/ui/Badge';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getPublishedGuidePosts } from '@/data/guides';
 
@@ -119,41 +116,23 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <h2 className="text-xl font-bold text-text-primary">{t(`groups.${group.key}.title`)}</h2>
             <p className="mt-1 text-sm text-text-muted">{t(`groups.${group.key}.description`)}</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).map((post) => (
-          <Link key={post.slug} href={`/guide/${post.slug}`} className="group">
-            <Card className="flex h-full flex-col overflow-hidden" interactive>
-              {/* 卡片缩略图 */}
-              {post.image && (
-                <div className="relative mb-3 aspect-[16/8] w-full overflow-hidden rounded-lg">
-                  <Image
-                    src={post.image}
-                    alt={post.imageAlt ?? ''}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              )}
-              <div className="flex items-center gap-2">
-                <Badge label={tp(`${post.slug}.tag`)} />
-                {post.element && <Badge label={post.element} element={post.element} />}
-              </div>
-              <h3 className="mt-3 font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                {tp(`${post.slug}.title`)}
-              </h3>
-              <p className="mt-1 line-clamp-2 text-sm text-text-secondary">
-                {tp(`${post.slug}.subtitle`)}
-              </p>
-              <div className="mt-auto flex items-center justify-between pt-3 text-xs text-text-muted">
-                <span>{post.date}</span>
-                <span>
-                  {post.readMinutes} {t('minRead')}
-                </span>
-              </div>
-            </Card>
-          </Link>
-          ))}
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(0, 1).map((post) => (
+              <Link key={post.slug} href={`/guide/${post.slug}`} className="border-t-4 border-primary bg-white p-5 shadow-card">
+                <span className="text-xs font-semibold uppercase text-primary-light">{tp(`${post.slug}.tag`)}</span>
+                <h3 className="mt-2 text-xl font-bold text-text-primary">{tp(`${post.slug}.title`)}</h3>
+                <p className="mt-2 text-sm leading-6 text-text-secondary">{tp(`${post.slug}.subtitle`)}</p>
+                <p className="mt-4 text-xs text-text-muted">{post.date} · {post.readMinutes} {t('minRead')} · {post.sourceIds?.length ?? 0} {t('sources')}</p>
+              </Link>
+            ))}
+            <div className="border-t border-ink-border">
+              {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(1).map((post) => (
+                <Link key={post.slug} href={`/guide/${post.slug}`} className="grid gap-1 border-b border-ink-border py-3 sm:grid-cols-[1fr_auto] sm:items-center">
+                  <span className="text-sm font-semibold text-text-primary">{tp(`${post.slug}.title`)}</span>
+                  <span className="text-xs text-text-muted">{post.date} · {post.sourceIds?.length ?? 0} {t('sources')}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       ))}

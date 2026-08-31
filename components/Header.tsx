@@ -8,11 +8,17 @@ import { cn } from '@/lib/utils';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 
 const navItems = [
-  { href: '/', key: 'home' },
   { href: '/dex', key: 'dex' },
+  { href: '/evolutions', key: 'evolutions' },
+  { href: '/locations', key: 'locations' },
+  { href: '/abilities', key: 'abilities' },
+  { href: '/guide', key: 'guide' },
+  { href: '/tools', key: 'tools' },
+] as const;
+
+const mobileToolItems = [
   { href: '/tools/twine', key: 'twine' },
   { href: '/tools/type-chart', key: 'typeChart' },
-  { href: '/guide', key: 'guide' },
 ] as const;
 
 export default function Header() {
@@ -104,6 +110,13 @@ export default function Header() {
                     : 'text-text-secondary hover:bg-ink-soft hover:text-primary-hover'
                 )}
               >
+                {t(item.key)}
+              </Link>
+            </li>
+          ))}
+          {mobileToolItems.map((item) => (
+            <li key={item.href} className="pl-4">
+              <Link href={item.href} onClick={() => setOpen(false)} className="block px-3 py-2 text-sm text-text-muted">
                 {t(item.key)}
               </Link>
             </li>

@@ -95,6 +95,9 @@ export default async function GuidePostPage({
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);
+  const outline = body
+    .map((block, index) => block.t === 'h' || block.t === 'h3' ? { index, label: block.c, level: block.t } : null)
+    .filter((item) => item !== null);
 
   // 相关工具：href → 翻译 key 映射
   const toolLinkKeys: Record<string, string> = {
@@ -175,13 +178,13 @@ export default async function GuidePostPage({
     flushList(`list-${i}`);
     if (block.t === 'h') {
       renderedBody.push(
-        <h2 key={i} className="mb-3 mt-8 text-xl font-bold text-text-primary">
+        <h2 id={`section-${i}`} key={i} className="scroll-mt-24 mb-3 mt-8 text-xl font-bold text-text-primary">
           {block.c}
         </h2>
       );
     } else if (block.t === 'h3') {
       renderedBody.push(
-        <h3 key={i} className="mb-2 mt-6 text-lg font-semibold text-text-primary">
+        <h3 id={`section-${i}`} key={i} className="scroll-mt-24 mb-2 mt-6 text-lg font-semibold text-text-primary">
           {block.c}
         </h3>
       );
@@ -240,6 +243,7 @@ export default async function GuidePostPage({
       />
       <Breadcrumb items={[{ label: t('title'), href: '/guide/' }, { label: title }]} />
 
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_15rem]">
       <article>
         {/* 文章横幅图 */}
         {post.image && (
@@ -299,6 +303,13 @@ export default async function GuidePostPage({
           </section>
         )}
       </article>
+      {outline.length > 0 && (
+        <aside className="lg:sticky lg:top-20">
+          <details className="border-y border-ink-border py-3 lg:hidden"><summary className="cursor-pointer text-sm font-semibold text-text-primary">{t('tableOfContents')}</summary><nav className="mt-3 space-y-2">{outline.map((item) => <a key={item.index} href={`#section-${item.index}`} className="block text-sm text-primary-light">{item.label}</a>)}</nav></details>
+          <nav className="hidden border-t border-ink-border lg:block"><p className="py-3 text-sm font-semibold text-text-primary">{t('tableOfContents')}</p>{outline.map((item) => <a key={item.index} href={`#section-${item.index}`} className={`block border-t border-ink-border py-2 text-xs text-text-secondary hover:text-primary-light ${item.level === 'h3' ? 'pl-3' : ''}`}>{item.label}</a>)}</nav>
+        </aside>
+      )}
+      </div>
 
       {/* 相关工具 */}
       {toolLinks.length > 0 && (
