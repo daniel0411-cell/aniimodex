@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
-import { getOfficialAniimoDetail, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
+import { getOfficialAniimoDetail, isSuspiciousOfficialDescription, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
 import { flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 
@@ -50,7 +50,7 @@ function SkillList({ skills }: { skills: OfficialSkill[] }) {
               <h3 className="text-sm font-semibold text-text-primary">{skill.name}</h3>
               {skill.group && <span className="text-[10px] uppercase text-text-muted">{skill.group}</span>}
             </div>
-            {skill.description && <p className="mt-1 text-xs leading-5 text-text-secondary">{skill.description}</p>}
+            {skill.description && !isSuspiciousOfficialDescription(skill.description) && <p className="mt-1 text-xs leading-5 text-text-secondary">{skill.description}</p>}
           </div>
         </article>
       ))}

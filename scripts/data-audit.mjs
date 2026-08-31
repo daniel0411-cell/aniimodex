@@ -4,6 +4,7 @@ const sources = readFileSync(new URL('../data/sources.ts', import.meta.url), 'ut
 const verification = readFileSync(new URL('../data/verification.ts', import.meta.url), 'utf8');
 const aniimos = readFileSync(new URL('../data/aniimos.ts', import.meta.url), 'utf8');
 const guides = readFileSync(new URL('../data/guides.ts', import.meta.url), 'utf8');
+const detailPage = readFileSync(new URL('../app/[locale]/dex/[number]/page.tsx', import.meta.url), 'utf8');
 const wikiSnapshot = JSON.parse(
   readFileSync(new URL('../data/official-wiki-snapshot.json', import.meta.url), 'utf8')
 );
@@ -29,7 +30,10 @@ for (const detail of wikiDetails.details) {
     if (!skill.name || (!skill.description && !skill.iconUrl) || (skill.iconUrl && !skill.iconUrl.startsWith('https://worldx-website-cdn.aniimo.com/'))) {
       errors.push(`Invalid official skill: ${detail.number}`);
     }
+    if ((/\b(?:every|for)\s+[3-9]\d{2,}\s*s\b/i.test(skill.description ?? '') || /\b(?:total of|costs?|gains?)\s+(?:EP|HP)\b/i.test(skill.description ?? '')) && !detailPage.includes('isSuspiciousOfficialDescription(skill.description)')) errors.push(`Unfiltered suspicious skill: ${detail.number} ${skill.name}`);
   }
+  const skillKeys = [...detail.mobility, ...detail.traits, ...detail.skills].map((skill) => `${skill.group ?? ''}:${skill.name}:${skill.description ?? ''}`);
+  if (new Set(skillKeys).size !== skillKeys.length) errors.push(`Duplicate official skill: ${detail.number}`);
 }
 for (const entry of wikiSnapshot.entries) {
   if (!/^\d{3}$/.test(entry.number) || !entry.name || !entry.description || !/^\d+$/.test(entry.wikiPageId)) {

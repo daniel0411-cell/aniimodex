@@ -24,6 +24,11 @@ export interface OfficialAniimoDetail {
   morphologyList: { wikiId: string; name: string }[];
 }
 
+export function isSuspiciousOfficialDescription(description?: string): boolean {
+  if (!description) return false;
+  return /\b(?:every|for)\s+[3-9]\d{2,}\s*s\b/i.test(description) || /\b(?:total of|costs?|gains?)\s+(?:EP|HP)\b/i.test(description);
+}
+
 const details = snapshot.details as OfficialAniimoDetail[];
 const detailByNumber = new Map(details.map((detail) => [detail.number, detail]));
 

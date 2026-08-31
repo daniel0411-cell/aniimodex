@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - 伊莫圖鑑、Twine 反查與元素剋制工具",
-    "defaultDescription": "AniimoDex 是非官方社群資料站，提供持續核驗中的伊莫圖鑑、攻略與實驗性工具。"
+    "defaultDescription": "瀏覽 92 條官方來源伊莫圖鑑，以及元素、進化家族、棲息地、移動能力、特性、技能和已核驗攻略。"
   },
   "nav": {
     "home": "首頁",
@@ -46,6 +46,7 @@
     "habitats": "個棲息地",
     "featuredLabel": "精選伊莫",
     "featuredTitle": "認識艾迪爾大陸的夥伴",
+    "exploreData": "探索官方伊莫資料",
     "viewAllAniimo": "瀏覽全部伊莫",
     "coverageLink": "查看資料涵蓋範圍",
     "coverage": {
@@ -181,16 +182,16 @@
   },
   "tools": {
     "title": "工具中心",
-    "subtitle": "一系列實用工具：反查、剋制矩陣與捕捉估算，助力你的伊莫冒險。",
+    "subtitle": "基於官方資料的伊莫能力、元素和捕捉資訊查詢工具。",
     "twineTitle": "Twine 能力反查",
     "twineDesc": "選擇場地移動能力，反查對應的伊莫。",
     "twineTags": ["反查", "移動"],
     "typeChartTitle": "元素剋制矩陣",
     "typeChartDesc": "9×9 元素倍率表：一眼看清攻防剋制關係。",
     "typeChartTags": ["矩陣", "剋制"],
-    "catchTitle": "捕捉條件工具",
-    "catchDesc": "根據等級、陷阱、時段等估算捕捉率，並給出策略建議。",
-    "catchTags": ["捕捉", "策略"]
+    "catchTitle": "捕捉資料狀態",
+    "catchDesc": "查詢已公布棲息地，以及捕捉條件和機率的官方資料狀態。",
+    "catchTags": ["官方狀態", "棲息地"]
   },
   "twineTool": {
     "title": "Twine 能力反查",
@@ -243,8 +244,22 @@
     }
   },
   "catchTool": {
-    "title": "捕捉條件工具",
-    "subtitle": "根據伊莫、安尼寶等級、陷阱和時段，估算基礎捕捉率並給出策略建議。",
+    "title": "伊莫捕捉資料狀態",
+    "subtitle": "查詢官方棲息地資料和仍待公布的捕捉資訊。",
+    "formulaPendingTitle": "官方尚未公布捕捉率公式",
+    "formulaPendingDescription": "AniimoDex 不輸出估算百分比。準確機率、Aniipod 修正、陷阱加成和時機影響將在有官方來源或可重現實測前保持未公布。",
+    "selectorHelp": "選擇一隻伊莫，查看已核驗圖鑑欄位和官方棲息地。",
+    "officialStatus": "官方來源欄位",
+    "elementsLabel": "元素",
+    "roleLabel": "戰鬥定位",
+    "habitatsLabel": "官方棲息地",
+    "habitatsUnknown": "目前官方快照沒有列出棲息地。",
+    "catchRateLabel": "準確捕捉率",
+    "conditionsLabel": "捕捉修正與條件",
+    "notPublished": "官方尚未公布",
+    "openDex": "開啟圖鑑詳情",
+    "browseLocations": "瀏覽棲息地",
+    "readGuide": "閱讀捕捉攻略",
     "selectAniimo": "選擇伊莫",
     "podLevel": "安尼寶等級",
     "trapType": "陷阱類型",

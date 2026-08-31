@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - Aniimo Dex, Twine Lookup & Type Chart Tools",
-    "defaultDescription": "AniimoDex is an unofficial community companion with a developing Aniimo dex, guides and experimental tools."
+    "defaultDescription": "Browse 92 official-source Aniimo entries with elements, evolution families, habitats, mobility abilities, traits, skills and verified guides."
   },
   "nav": {
     "home": "Home",
@@ -46,6 +46,7 @@
     "habitats": "habitats",
     "featuredLabel": "Featured Aniimo",
     "featuredTitle": "Meet the creatures of Idyll",
+    "exploreData": "Explore official Aniimo data",
     "viewAllAniimo": "Browse all Aniimo",
     "coverageLink": "View data coverage",
     "coverage": {
@@ -181,16 +182,16 @@
   },
   "tools": {
     "title": "Tools Center",
-    "subtitle": "A collection of practical tools: lookup, matchup matrix and catch estimator for your Aniimo adventure.",
+    "subtitle": "Official-data lookup tools for Aniimo abilities, elements and current catch information.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
     "twineTags": ["Lookup", "Movement"],
     "typeChartTitle": "Type Matchup Matrix",
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
     "typeChartTags": ["Matrix", "Matchup"],
-    "catchTitle": "Catch Condition Tool",
-    "catchDesc": "Estimate catch rates based on level, trap, time and more, with strategic tips.",
-    "catchTags": ["Capture", "Strategy"]
+    "catchTitle": "Catch Data Status",
+    "catchDesc": "Check published habitats and the current official status of catch conditions and rates.",
+    "catchTags": ["Official status", "Habitats"]
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
@@ -243,8 +244,22 @@
     }
   },
   "catchTool": {
-    "title": "Catch Condition Tool",
-    "subtitle": "Estimate base catch rates and get strategy tips based on Aniimo, Aniipod level, trap and time.",
+    "title": "Aniimo Catch Data Status",
+    "subtitle": "Check official habitat data and see which catch details still await publication.",
+    "formulaPendingTitle": "No official catch-rate formula is available",
+    "formulaPendingDescription": "AniimoDex does not output estimated percentages. Exact rates, Aniipod modifiers, trap bonuses and timing effects remain unlisted until supported by an official source or reproducible testing.",
+    "selectorHelp": "Select an Aniimo to review its verified index fields and published habitats.",
+    "officialStatus": "Official-source fields",
+    "elementsLabel": "Elements",
+    "roleLabel": "Combat role",
+    "habitatsLabel": "Published habitats",
+    "habitatsUnknown": "No habitat is listed in the current official snapshot.",
+    "catchRateLabel": "Exact catch rate",
+    "conditionsLabel": "Catch modifiers and conditions",
+    "notPublished": "Not officially published",
+    "openDex": "Open Dex entry",
+    "browseLocations": "Browse habitats",
+    "readGuide": "Read the catching guide",
     "selectAniimo": "Select Aniimo",
     "podLevel": "Aniipod Level",
     "trapType": "Trap Type",
