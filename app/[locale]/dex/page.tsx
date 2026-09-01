@@ -163,6 +163,7 @@ export default function DexPage() {
         <div>
           <span className="text-xs font-semibold uppercase text-primary-light">ANIIMO ARCHIVE</span>
           <h1 className="mt-1 text-3xl font-bold text-text-primary sm:text-4xl">{td('title')}</h1>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">{td('intro')}</p>
         </div>
         <p className="mt-2 font-mono text-sm text-text-secondary sm:mt-0">
           {td('subtitle', { filtered: filtered.length, total: getAllAniimos().length })}

@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "AniimoDex",
-    "defaultTitle": "AniimoDex - Aniimo Dex, Twine Lookup & Type Chart Tools",
+    "defaultTitle": "AniimoDex - Official-Source Aniimo Database & Tools",
     "defaultDescription": "Browse 92 official-source Aniimo entries with elements, evolution families, habitats, mobility abilities, traits, skills and verified guides."
   },
   "nav": {
@@ -97,8 +97,9 @@
     "dex": "Dex"
   },
   "dex": {
-    "title": "Aniimo Dex",
+    "title": "Aniimo Game Dex: All 92 Official-Source Entries",
     "metaDescription": "Browse 92 Aniimo from the official Wiki by name, number, element, role and stage, with evolution families, habitats, forms, mobility, traits and skills.",
+    "intro": "Browse the Aniimo game dex with 92 official-source entries. Search by English name or number, filter by element and combat role, and open each entry for evolution, habitat, form, mobility, trait and skill data.",
     "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
@@ -204,8 +205,8 @@
     "browseAbilities": "Browse the official mobility directory"
   },
   "typeChartTool": {
-    "title": "Elemental Type Chart",
-    "subtitle": "Rows = attacking element · Columns = defending element. Click a header to highlight matchups.",
+    "title": "Aniimo Type Chart: Element Matchups",
+    "subtitle": "Compare all 9 Aniimo elements in an attack-versus-defense chart. Check 2x, 1x, ½x and 0x matchup references, with source status clearly labeled.",
     "attackDefend": "Atk\\Def",
     "defenderTitle": "Defender: {element}",
     "attackerTitle": "Attacker: {element}",
@@ -230,7 +231,7 @@
     "mobilePrompt": "Select an attacking and defending element to see the multiplier.",
     "mobileResult": "{attacker} attacking {defender}: {value}x damage.",
     "summaryTitle": "Aniimo element matchup summary",
-    "summaryIntro": "Use this text summary with the matrix above to answer which Aniimo elements deal double damage, are resisted or have no effect.",
+    "summaryIntro": "Use this element chart with the matrix above to check which Aniimo matchups deal double damage, are resisted or have no effect. Multipliers remain a reference while official combat documentation is unavailable.",
     "elementMatchups": "{element} matchups",
     "strongAgainst": "Strong against: {elements}.",
     "resistedBy": "Resisted by: {elements}.",
@@ -635,6 +636,8 @@
         "tag": "Multiplayer",
         "lead": "Steam lists cross-platform multiplayer for Aniimo. Cross-save and cross-progression are separate features and are not confirmed by the sources registered for this page.",
         "body": [
+          { "t": "h", "c": "Aniimo cross-platform status at a glance" },
+          { "t": "table", "head": ["Feature", "Current official status"], "rows": [["Cross-platform multiplayer", "Listed on Steam"], ["Specific platform pairings", "Not fully documented"], ["Cross-save", "Not confirmed"], ["Cross-progression", "Not confirmed"], ["Purchases and paid currency transfer", "Not confirmed"]] },
           { "t": "h", "c": "Does Aniimo support crossplay?" },
           { "t": "p", "c": "Steam lists cross-platform multiplayer. That confirms cross-platform play as a product feature, but the listing does not specify every supported platform pairing or activity." },
           { "t": "h", "c": "Does Aniimo have cross-save or cross-progression?" },
@@ -643,6 +646,8 @@
           { "t": "li", "c": "Which PC, console and mobile combinations can play together" },
           { "t": "li", "c": "Whether one account shares progress on every platform" },
           { "t": "li", "c": "Whether paid currency or packs transfer between stores" },
+          { "t": "h", "c": "What should players plan for before launch?" },
+          { "t": "p", "c": "Choose a primary platform until Pawprint Studio publishes account-linking details. Do not assume that a shared multiplayer session also transfers saves, achievements, purchases or premium currency." },
           { "t": "quote", "c": "AniimoDex will update this page when Pawprint Studio publishes an account or cross-progression FAQ." }
         ]
       },

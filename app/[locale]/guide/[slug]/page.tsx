@@ -104,6 +104,11 @@ export default async function GuidePostPage({
   const outline = body
     .map((block, index) => block.t === 'h' || block.t === 'h3' ? { index, label: block.c, level: block.t } : null)
     .filter((item) => item !== null);
+  const faqItems = body.flatMap((block, index) => {
+    if ((block.t !== 'h' && block.t !== 'h3') || !block.c.endsWith('?')) return [];
+    const answer = body[index + 1];
+    return answer?.t === 'p' ? [{ question: block.c, answer: answer.c }] : [];
+  });
 
   // 相关工具：href → 翻译 key 映射
   const toolLinkKeys: Record<string, string> = {
@@ -157,6 +162,14 @@ export default async function GuidePostPage({
           },
         ],
       },
+      ...(faqItems.length > 0 ? [{
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      }] : []),
     ],
   };
 
