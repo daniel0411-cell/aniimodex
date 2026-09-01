@@ -20,7 +20,7 @@ const STATIC_ROUTES: {
   changefreq?: MetadataRoute.Sitemap[number]['changeFrequency'];
 }[] = [
   { path: '/', lastModified: '2026-08-31', priority: 1.0, changefreq: 'weekly' },
-  { path: '/dex/', lastModified: '2026-08-28', priority: 0.9, changefreq: 'weekly' },
+  { path: '/dex/', lastModified: '2026-09-01', priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', lastModified: '2026-08-28', priority: 0.8, changefreq: 'monthly' },
   { path: '/guide/', lastModified: '2026-08-30', priority: 0.7, changefreq: 'monthly' },
   { path: '/evolutions/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((post) => post.sourceIds?.length)
     .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.date, 0.8, 'weekly'));
   const dexUrls = getAllAniimos().flatMap((aniimo) =>
-    buildLocalizedUrls(`/dex/${aniimo.number}/`, '2026-08-30', 0.75, 'weekly')
+    buildLocalizedUrls(`/dex/${aniimo.number}/`, '2026-09-01', 0.75, 'weekly')
   );
   const elementUrls = ELEMENTS.flatMap((element) =>
     buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, '2026-08-31', 0.8, 'weekly')

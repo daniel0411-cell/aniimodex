@@ -61,7 +61,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-platforms',
     date: '2026-08-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-release-date', 'what-is-aniimo'],
+    relatedSlugs: ['aniimo-release-date', 'aniimo-crossplay-cross-save'],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
@@ -128,7 +128,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-multiplayer',
     date: '2026-08-30',
     readMinutes: 5,
-    relatedSlugs: ['what-is-aniimo', 'aniimo-platforms'],
+    relatedSlugs: ['aniimo-crossplay-cross-save', 'aniimo-platforms'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
   },
   {
@@ -142,7 +142,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-system-requirements',
     date: '2026-08-30',
     readMinutes: 4,
-    relatedSlugs: ['aniimo-platforms', 'how-to-download-aniimo'],
+    relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
   },
   {
@@ -164,7 +164,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-crossplay-cross-save',
     date: '2026-08-30',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-multiplayer', 'aniimo-platforms'],
+    relatedSlugs: ['aniimo-multiplayer', 'aniimo-platforms', 'how-to-download-aniimo', 'aniimo-system-requirements'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
   },
   {

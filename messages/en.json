@@ -124,6 +124,7 @@
     "browseTitle": "Browse the Aniimo database",
     "browseDescription": "This unofficial Aniimo wiki companion indexes 92 official Wiki entries. Filter the dex by element or combat role, then continue to evolution, habitat, mobility and matchup references.",
     "browseElements": "Browse by element",
+    "elementDirectory": "Aniimo",
     "browseRoles": "Browse by role",
     "browseEvolutions": "Evolution families",
     "browseLocations": "Aniimo habitats",

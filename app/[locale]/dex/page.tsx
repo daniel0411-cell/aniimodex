@@ -326,6 +326,9 @@ export default function DexPage() {
           </div>
         </div>
         <nav className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light">
+          {ELEMENTS.map((item) => (
+            <Link key={item} href={`/elements/${item.toLowerCase()}`}>{t(`elements.${item}`)} {td('elementDirectory')} →</Link>
+          ))}
           <Link href="/evolutions">{td('browseEvolutions')} →</Link>
           <Link href="/locations">{td('browseLocations')} →</Link>
           <Link href="/abilities">{td('browseAbilities')} →</Link>

@@ -124,6 +124,7 @@
     "browseTitle": "浏览伊莫资料库",
     "browseDescription": "这份非官方伊莫 Wiki 辅助图鉴收录 92 条官方 Wiki 资料。可按元素或战斗定位筛选，并继续查看进化、栖息地、移动能力和元素克制。",
     "browseElements": "按元素浏览",
+    "elementDirectory": "伊莫",
     "browseRoles": "按定位浏览",
     "browseEvolutions": "进化家族",
     "browseLocations": "伊莫栖息地",

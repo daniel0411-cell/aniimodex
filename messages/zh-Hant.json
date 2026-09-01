@@ -124,6 +124,7 @@
     "browseTitle": "瀏覽伊莫資料庫",
     "browseDescription": "這份非官方伊莫 Wiki 輔助圖鑑收錄 92 筆官方 Wiki 資料。可按元素或戰鬥定位篩選，並繼續查看進化、棲息地、移動能力和元素剋制。",
     "browseElements": "按元素瀏覽",
+    "elementDirectory": "伊莫",
     "browseRoles": "按定位瀏覽",
     "browseEvolutions": "進化家族",
     "browseLocations": "伊莫棲息地",
