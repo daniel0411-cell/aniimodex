@@ -99,7 +99,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-mobile',
     date: '2026-08-30',
     readMinutes: 4,
-    relatedSlugs: ['aniimo-platforms', 'aniimo-release-date'],
+    relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
@@ -135,7 +135,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-pre-registration',
     date: '2026-08-30',
     readMinutes: 4,
-    relatedSlugs: ['how-to-download-aniimo', 'aniimo-release-date'],
+    relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
@@ -157,7 +157,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-launch-time-preload',
     date: '2026-08-30',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
+    relatedSlugs: ['aniimo-release-date', 'aniimo-pre-registration', 'aniimo-mobile'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
   },
   {

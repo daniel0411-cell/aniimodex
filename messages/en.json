@@ -501,11 +501,13 @@
         ]
       },
       "aniimo-mobile": {
-        "title": "Aniimo Mobile: iOS and Android Availability",
-        "subtitle": "The official Aniimo website links both the App Store and Google Play.",
+        "title": "Aniimo Mobile: iOS, Android, Download and Pre-Registration Status",
+        "subtitle": "Check Aniimo mobile availability, official App Store and Google Play links, pre-registration and device requirements.",
         "tag": "Mobile",
         "lead": "Aniimo has official mobile storefront links for iOS and Android. Actual availability, pre-registration and device compatibility can differ by region.",
         "body": [
+          { "t": "h", "c": "Aniimo mobile status at a glance" },
+          { "t": "table", "head": ["Question", "Current status"], "rows": [["iOS version", "Official App Store link available"], ["Android version", "Official Google Play link available"], ["Download availability", "Varies by region before launch"], ["Device requirements", "Complete official list not published"]] },
           { "t": "h", "c": "Is Aniimo coming to iPhone and Android?" },
           { "t": "p", "c": "Yes. The official Aniimo website includes links for Apple's App Store and Google Play alongside console and PC storefronts." },
           { "t": "h", "c": "Can I download the mobile version now?" },
@@ -617,8 +619,8 @@
         ]
       },
       "aniimo-launch-time-preload": {
-        "title": "Aniimo Launch Time and Preload Status by Region",
-        "subtitle": "Confirmed global launch time, regional date conversion and current preload status.",
+        "title": "Aniimo Release Time: Global Launch Date, Time Zones and Preload",
+        "subtitle": "Aniimo launches September 16 at 10:00 UTC+8; compare regional release times and current preload status.",
         "tag": "Launch",
         "lead": "PlayStation lists Aniimo's launch for September 16, 2026 at 10:00 UTC+8. This page separates that confirmed time from preload details that have not yet been officially published.",
         "body": [
@@ -632,8 +634,8 @@
         ]
       },
       "aniimo-crossplay-cross-save": {
-        "title": "Aniimo Crossplay and Cross-Save: Confirmed Status",
-        "subtitle": "What official listings confirm about multiplayer across platforms and account progression.",
+        "title": "Aniimo Crossplay: Cross-Platform, Cross-Save and Cross-Progression Status",
+        "subtitle": "Aniimo supports cross-platform multiplayer; check what is confirmed for crossplay, cross-save, platform pairings and cross-progression.",
         "tag": "Multiplayer",
         "lead": "Steam lists cross-platform multiplayer for Aniimo. Cross-save and cross-progression are separate features and are not confirmed by the sources registered for this page.",
         "body": [
