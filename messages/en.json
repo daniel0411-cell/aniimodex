@@ -208,6 +208,10 @@
   "typeChartTool": {
     "title": "Aniimo Type Chart: Element Matchups",
     "subtitle": "Compare all 9 Aniimo elements in an attack-versus-defense chart. Check 2x, 1x, ½x and 0x matchup references, with source status clearly labeled.",
+    "sourceStatusTitle": "What is official in this Aniimo type chart?",
+    "sourceStatusDescription": "The nine element names and each Aniimo's element labels come from the official Aniimo Wiki. The matchup multipliers are a reference under source review, not a confirmed official combat table.",
+    "browseElements": "Browse official Aniimo element directories",
+    "browseElement": "Browse {element} Aniimo",
     "attackDefend": "Atk\\Def",
     "defenderTitle": "Defender: {element}",
     "attackerTitle": "Attacker: {element}",
@@ -576,8 +580,8 @@
         ]
       },
       "aniimo-pre-registration": {
-        "title": "Aniimo Pre-Registration Guide: Official Links and Launch Status",
-        "subtitle": "Pre-register or wishlist Aniimo through the links on its official website.",
+        "title": "Aniimo Pre-Registration: Official Links, Platforms and Release Date",
+        "subtitle": "Pre-register or wishlist Aniimo on official PC, PS5, Xbox, iOS and Android stores before the September 16 launch.",
         "tag": "Updates",
         "lead": "Aniimo's official website provides pre-registration and storefront links. Availability and the wording of each action can differ by platform and region.",
         "body": [

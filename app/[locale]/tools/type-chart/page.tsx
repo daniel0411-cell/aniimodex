@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { Element } from '@/types/aniimo';
 import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
@@ -63,6 +64,11 @@ export default function TypeChartPage() {
         <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{t('title')}</h1>
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
+
+      <section className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-950">
+        <h2 className="font-semibold">{t('sourceStatusTitle')}</h2>
+        <p>{t('sourceStatusDescription')}</p>
+      </section>
 
       <div className="grid gap-3 sm:hidden">
         <label className="text-xs font-medium text-text-secondary">{t('mobileAttacker')}
@@ -258,6 +264,12 @@ export default function TypeChartPage() {
           </details>
         ))}
       </section>
+
+      <nav className="flex flex-wrap gap-x-5 gap-y-2 border-t border-ink-border pt-6 text-sm font-semibold text-primary-light" aria-label={t('browseElements')}>
+        {ELEMENTS.map((element) => (
+          <Link key={element} href={`/elements/${element.toLowerCase()}`}>{t('browseElement', { element: elLabel(element) })} →</Link>
+        ))}
+      </nav>
     </div>
   );
 }

@@ -208,6 +208,10 @@
   "typeChartTool": {
     "title": "元素克制表",
     "subtitle": "行 = 攻击方元素 · 列 = 防守方元素。点击表头高亮对应的行或列。",
+    "sourceStatusTitle": "这张伊莫元素表中哪些是官方资料？",
+    "sourceStatusDescription": "九种元素名称与每只伊莫的元素标签来自官方 Wiki；克制倍率仍在来源核验中，不属于已确认的官方战斗表。",
+    "browseElements": "浏览官方伊莫元素目录",
+    "browseElement": "浏览{element}伊莫",
     "attackDefend": "攻\\守",
     "defenderTitle": "防守方：{element}",
     "attackerTitle": "攻击方：{element}",
