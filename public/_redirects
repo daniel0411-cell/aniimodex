@@ -1,5 +1,8 @@
 # Cloudflare Pages _redirects 规则（从上到下匹配，优先使用第一匹配）
 
+# 统一主域名，避免 www 与非 www 分散索引信号
+https://www.aniimodex.com/*  https://aniimodex.com/:splat  301
+
 # 根路径：重定向到默认 locale（localePrefix: 'always'）
 /  /en/  308
 

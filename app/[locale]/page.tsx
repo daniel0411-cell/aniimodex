@@ -44,7 +44,7 @@ export async function generateMetadata({
 }
 
 const featuredNumbers = ['001', '002', '005', '007', '011', '016'];
-const guideSlugs = ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-twine-explained', 'official-aniimo-dex-status'] as const;
+const guideSlugs = ['aniimo-pre-registration', 'aniimo-mobile', 'aniimo-launch-time-preload', 'aniimo-platforms'] as const;
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
