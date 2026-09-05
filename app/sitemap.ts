@@ -6,6 +6,7 @@ import { ELEMENTS } from '@/lib/aniimo-ui';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+const LAST_PUBLISHED = '2026-09-05';
 
 // output: 'export' 静态导出模式下，metadata route 需提供静态参数生成
 export function generateStaticParams() {
@@ -19,14 +20,14 @@ const STATIC_ROUTES: {
   priority: number;
   changefreq?: MetadataRoute.Sitemap[number]['changeFrequency'];
 }[] = [
-  { path: '/', lastModified: '2026-08-31', priority: 1.0, changefreq: 'weekly' },
-  { path: '/dex/', lastModified: '2026-09-01', priority: 0.9, changefreq: 'weekly' },
-  { path: '/tools/', lastModified: '2026-08-28', priority: 0.8, changefreq: 'monthly' },
-  { path: '/guide/', lastModified: '2026-08-30', priority: 0.7, changefreq: 'monthly' },
-  { path: '/evolutions/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
-  { path: '/locations/', lastModified: '2026-08-30', priority: 0.85, changefreq: 'weekly' },
-  { path: '/abilities/', lastModified: '2026-08-30', priority: 0.8, changefreq: 'weekly' },
-  { path: '/tools/type-chart/', lastModified: '2026-08-31', priority: 0.85, changefreq: 'weekly' },
+  { path: '/', lastModified: LAST_PUBLISHED, priority: 1.0, changefreq: 'weekly' },
+  { path: '/dex/', lastModified: LAST_PUBLISHED, priority: 0.9, changefreq: 'weekly' },
+  { path: '/tools/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'monthly' },
+  { path: '/guide/', lastModified: LAST_PUBLISHED, priority: 0.7, changefreq: 'monthly' },
+  { path: '/evolutions/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  { path: '/abilities/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'weekly' },
+  { path: '/tools/type-chart/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates
@@ -70,10 +71,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((post) => post.sourceIds?.length)
     .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.date, 0.8, 'weekly'));
   const dexUrls = getAllAniimos().flatMap((aniimo) =>
-    buildLocalizedUrls(`/dex/${aniimo.number}/`, '2026-09-01', 0.75, 'weekly')
+    buildLocalizedUrls(`/dex/${aniimo.number}/`, LAST_PUBLISHED, 0.75, 'weekly')
   );
   const elementUrls = ELEMENTS.flatMap((element) =>
-    buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, '2026-08-31', 0.8, 'weekly')
+    buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, LAST_PUBLISHED, 0.8, 'weekly')
   );
   return [...staticUrls, ...guideUrls, ...dexUrls, ...elementUrls];
 }
