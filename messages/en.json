@@ -56,7 +56,7 @@
       "skills": { "label": "Mobility, traits and skills", "status": "Verified" },
       "pending": { "label": "Numeric stats and catch conditions", "status": "Pending" }
     },
-    "guideSectionTitle": "Plan for launch",
+    "guideSectionTitle": "Plan for Aniimo launch",
     "readGuide": "Read the guide",
     "latestUpdateLabel": "Latest update",
     "latestUpdateTitle": "Official Wiki detail coverage expanded",
@@ -580,7 +580,7 @@
         ]
       },
       "aniimo-pre-registration": {
-        "title": "Aniimo Pre-Registration: Official Links, Platforms and Release Date",
+        "title": "Aniimo Pre-Registration: Official Links, Platforms and Launch Date",
         "subtitle": "Pre-register or wishlist Aniimo on official PC, PS5, Xbox, iOS and Android stores before the September 16 launch.",
         "tag": "Updates",
         "lead": "Aniimo's official website provides pre-registration and storefront links. Availability and the wording of each action can differ by platform and region.",
