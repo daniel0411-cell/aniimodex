@@ -54,7 +54,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-release-date',
     date: '2026-08-29',
     readMinutes: 4,
-    relatedSlugs: ['what-is-aniimo', 'aniimo-platforms'],
+    relatedSlugs: ['what-is-aniimo', 'aniimo-platforms', 'is-aniimo-free-to-play'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
   },
   {
@@ -150,7 +150,7 @@ export const guidePosts: GuidePost[] = [
     date: '2026-08-30',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
-    relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained'],
+    relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-launch-coverage-status'],
     sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
   },
   {
