@@ -109,9 +109,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <p className="mt-2 flex-1 text-sm leading-6 text-text-secondary sm:mt-0">
           {th('verificationDescription')}
         </p>
-        <Link href="/guide/official-aniimo-dex-status" className="mt-3 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">
+        <Link href="/guide/how-we-verify" className="mt-3 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">
           {th('coverageLink')} →
         </Link>
+      </section>
+      <section className="grid gap-4 border-y border-ink-border py-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div><p className="text-xs font-semibold uppercase text-text-muted">{th('launchStatus')}</p><p className="mt-1 font-semibold text-text-primary">{th('pcLaunch')}</p><p className="text-sm text-text-secondary">{th('pcLaunchDate')}</p></div>
+        <div><p className="text-xs font-semibold uppercase text-text-muted">{th('mobileStatus')}</p><p className="mt-1 font-semibold text-text-primary">{th('mobileLaunch')}</p><p className="text-sm text-text-secondary">{th('mobileLaunchDate')}</p></div>
+        <div><p className="text-xs font-semibold uppercase text-text-muted">{th('priceStatus')}</p><p className="mt-1 font-semibold text-text-primary">{th('freeToPlay')}</p><p className="text-sm text-text-secondary">{th('priceNote')}</p></div>
+        <div><p className="text-xs font-semibold uppercase text-text-muted">{th('dataUpdated')}</p><p className="mt-1 font-semibold text-text-primary">{th('dataUpdatedDate')}</p><Link href="/guide/how-we-verify" className="text-sm font-semibold text-primary-light">{th('methodLink')} →</Link></div>
+      </section>
+      <section className="border-t-4 border-secondary bg-emerald-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+        <div><p className="text-xs font-semibold uppercase text-emerald-700">{th('latestUpdateLabel')}</p><h2 className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">{th('latestUpdateDescription')}</p></div>
+        <Link href="/guide/official-aniimo-dex-status" className="mt-4 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">{th('viewUpdate')} →</Link>
       </section>
       <section>
         <div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-semibold uppercase text-primary-light">{th('officialGuidesLabel')}</p><h2 className="mt-1 text-2xl font-bold text-text-primary">{th('guideSectionTitle')}</h2></div><Link href="/guide" className="text-sm font-semibold text-primary-light">{th('viewAllGuide')} →</Link></div>

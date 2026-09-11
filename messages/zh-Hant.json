@@ -62,6 +62,18 @@
     "latestUpdateTitle": "官方 Wiki 詳細資料涵蓋範圍擴大",
     "latestUpdateDescription": "已為 92 筆伊莫圖鑑補充進化樹、棲息地、型態、移動能力、特性與技能。",
     "viewUpdate": "查看更新",
+    "launchStatus": "上線狀態",
+    "pcLaunch": "PC 與主機上線",
+    "pcLaunchDate": "2026 年 9 月 16 日 · UTC+8 10:00",
+    "mobileStatus": "行動版上線",
+    "mobileLaunch": "iOS 與 Android",
+    "mobileLaunchDate": "2026 年 9 月 23 日",
+    "priceStatus": "價格",
+    "freeToPlay": "免費遊玩",
+    "priceNote": "已核驗官方商店頁面",
+    "dataUpdated": "圖鑑資料",
+    "dataUpdatedDate": "2026 年 8 月 30 日核驗",
+    "methodLink": "查看核驗方法",
     "quickLinks": {
       "dex": {
         "title": "圖鑑庫",
@@ -96,6 +108,23 @@
     "guide": "攻略",
     "dex": "圖鑑"
   },
+  "verification": {
+    "eyebrow": "AniimoDex 方法",
+    "title": "我們如何核驗伊莫資料",
+    "description": "AniimoDex 是非官方粉絲資料站。我們只發布能追溯到明確官方來源的欄位，對未知資訊明確標註，不進行猜測。",
+    "tiers": {
+      "official": { "title": "官方 Wiki", "body": "名稱、編號、圖片、元素、定位、階段和已發布的詳細欄位來自官方 Aniimo Wiki 快照。" },
+      "store": { "title": "官方商店頁面", "body": "上線時間、平台和免費遊玩資訊會對照官方網站及官方平台商店頁面核驗。" },
+      "unknown": { "title": "尚未公布", "body": "如果已登記來源沒有提供數值屬性、準確捕捉率、座標等欄位，就保持為未知。" },
+      "testing": { "title": "後續實測", "body": "上線後的觀察會標註版本、日期和方法，並且不會冒充官方事實。" }
+    },
+    "sourcesTitle": "已登記來源",
+    "sourcesDescription": "以下是一手來源清單。每個頁面都會記錄來源的核驗日期。",
+    "checkedOn": "核驗日期：{date}",
+    "correctionsTitle": "更正機制",
+    "correctionsBody": "官方來源發生變化時，我們會更新受影響記錄和核驗日期；無法支持的說法會刪除或標記為未知。",
+    "backToGuides": "返回攻略"
+  },
   "dex": {
     "title": "伊莫圖鑑",
     "intro": "瀏覽 92 條依據官方資料整理的伊莫圖鑑。可按名稱或編號搜尋，按元素與戰鬥定位篩選，並進入詳情查看進化、棲息地、形態、移動能力、特性和技能。",
@@ -109,6 +138,8 @@
     "sortName": "名稱",
     "sortElement": "元素",
     "sortStage": "階段",
+    "filterStage": "進化階段",
+    "allStages": "全部階段",
     "filterTwine": "Twine 能力",
     "allTwine": "全部能力",
     "clearAll": "清除全部篩選",
@@ -180,7 +211,15 @@
     "officialForms": "型態",
     "officialMobility": "移動能力",
     "officialTraits": "特性",
-    "officialSkills": "技能"
+    "officialSkills": "技能",
+    "dataStatus": "資料狀態",
+    "lastVerified": "最近核驗：{date}",
+    "continueExploring": "繼續探索",
+    "checkMatchup": "查看{element}剋制",
+    "checkHabitats": "瀏覽共同棲息地",
+    "checkEvolution": "開啟進化圖表",
+    "checkMobility": "瀏覽移動能力",
+    "openTwine": "開啟 Twine 反查"
   },
   "tools": {
     "title": "工具中心",
@@ -235,6 +274,12 @@
     "selectElement": "選擇元素",
     "mobilePrompt": "選擇攻擊和防守元素後查看傷害倍率。",
     "mobileResult": "{attacker} 攻擊 {defender}：{value}x 傷害。",
+    "aniimoLookupTitle": "查詢一隻伊莫的剋制",
+    "aniimoLookupDescription": "選擇官方 Wiki 條目，查看針對其已公布元素標籤的參考剋制元素。",
+    "selectAniimo": "伊莫",
+    "selectAniimoPlaceholder": "選擇伊莫",
+    "countersFor": "針對 {name}（{elements}）的參考攻擊元素",
+    "lookupReferenceNote": "剋制倍率仍在來源核驗中，不屬於已確認的官方戰鬥表。",
     "summaryTitle": "Aniimo 元素剋制關係摘要",
     "summaryIntro": "結合上方矩陣查看各元素造成雙倍傷害、傷害減半或無效的關係。",
     "elementMatchups": "{element}剋制關係",
@@ -318,6 +363,7 @@
     "verifiedOfficial": "已根據官方來源核驗",
     "lastVerified": "最後核驗：{date}",
     "officialSources": "官方來源",
+    "howWeVerify": "查看資料核驗方法",
     "groups": {
       "playDownload": { "title": "上線、下載與平台", "description": "上線時間、價格、官方下載管道和支援裝置。" },
       "gameplay": { "title": "玩法機制說明", "description": "Twine、捕獲和多人玩法中已獲官方確認的資訊。" },

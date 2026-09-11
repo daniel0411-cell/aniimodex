@@ -259,6 +259,9 @@ export default async function DexDetailPage({ params }: PageProps) {
             </span>
           )}
           <div className="mt-5 border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-xs leading-5 text-emerald-950">{t('officialScope')}</div>
+          <div className="mt-4 border-t border-ink-border pt-3 text-xs text-text-muted">
+            <span className="font-semibold text-text-secondary">{t('dataStatus')}</span> · {t('lastVerified', { date: '2026-08-30' })}
+          </div>
           {detail && <dl className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 border-t border-ink-border pt-4 text-xs"><div><dt className="text-text-muted">{t('officialEvolution')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.evolution.name}</dd></div><div><dt className="text-text-muted">{t('officialHabitats')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.habitats.length}</dd></div><div><dt className="text-text-muted">{t('officialForms')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.morphologyList.length}</dd></div><div><dt className="text-text-muted">{t('officialMobility')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.mobility.length}</dd></div></dl>}
           {(aniimo.sourceIds ?? [])
             .map((sourceId) => sourceById.get(sourceId))
@@ -278,6 +281,17 @@ export default async function DexDetailPage({ params }: PageProps) {
       </header>
 
       {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a><a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
+
+      <section className="border-t border-ink-border pt-5">
+        <h2 className="text-lg font-bold text-text-primary">{t('continueExploring')}</h2>
+        <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light">
+          {aniimo.officialElements?.map((element) => <Link key={element} href={`/tools/type-chart?defender=${element.toLowerCase()}`}>{t('checkMatchup', { element: tr(`elements.${element}`) })} →</Link>)}
+          <Link href="/locations">{t('checkHabitats')} →</Link>
+          <Link href="/evolutions">{t('checkEvolution')} →</Link>
+          <Link href="/abilities">{t('checkMobility')} →</Link>
+          <Link href="/tools/twine">{t('openTwine')} →</Link>
+        </div>
+      </section>
 
       {detail && (
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">

@@ -62,6 +62,18 @@
     "latestUpdateTitle": "Official Wiki detail coverage expanded",
     "latestUpdateDescription": "Added evolution trees, habitats, forms, mobility, traits and skills across 92 indexed Aniimo.",
     "viewUpdate": "View update",
+    "launchStatus": "Launch status",
+    "pcLaunch": "PC & console launch",
+    "pcLaunchDate": "September 16, 2026 · 10:00 UTC+8",
+    "mobileStatus": "Mobile launch",
+    "mobileLaunch": "iOS and Android",
+    "mobileLaunchDate": "September 23, 2026",
+    "priceStatus": "Price",
+    "freeToPlay": "Free to play",
+    "priceNote": "Official store listings checked",
+    "dataUpdated": "Dex data",
+    "dataUpdatedDate": "Checked August 30, 2026",
+    "methodLink": "View verification method",
     "quickLinks": {
       "dex": {
         "title": "Dex",
@@ -96,6 +108,23 @@
     "guide": "Guide",
     "dex": "Dex"
   },
+  "verification": {
+    "eyebrow": "AniimoDex method",
+    "title": "How We Verify Aniimo Data",
+    "description": "AniimoDex is an unofficial fan resource. We publish only fields that can be traced to a named official source, and we label unknowns instead of guessing.",
+    "tiers": {
+      "official": { "title": "Official Wiki", "body": "Names, numbers, artwork, elements, roles, stages and published detail fields are imported from the official Aniimo Wiki snapshots." },
+      "store": { "title": "Official storefronts", "body": "Release, platform and free-to-play claims are checked against official website and platform store pages." },
+      "unknown": { "title": "Not published", "body": "Numeric stats, exact catch rates, coordinates and other fields remain marked unknown when the registered sources do not provide them." },
+      "testing": { "title": "Future testing", "body": "Post-launch observations will be labeled as testing with a version, date and method. They will not be presented as official facts." }
+    },
+    "sourcesTitle": "Registered sources",
+    "sourcesDescription": "These are the current first-party sources used by the site. Each page records when its source was checked.",
+    "checkedOn": "Checked {date}",
+    "correctionsTitle": "Corrections",
+    "correctionsBody": "When an official source changes, we update the affected record and its verification date. Unsupported claims are removed or marked unknown.",
+    "backToGuides": "Back to Guide"
+  },
   "dex": {
     "title": "Aniimo Game Dex: All 92 Official-Source Entries",
     "metaDescription": "Browse 92 Aniimo from the official Wiki by name, number, element, role and stage, with evolution families, habitats, forms, mobility, traits and skills.",
@@ -109,6 +138,8 @@
     "sortName": "Name",
     "sortElement": "Element",
     "sortStage": "Stage",
+    "filterStage": "Evolution stage",
+    "allStages": "All stages",
     "filterTwine": "Twine",
     "allTwine": "All abilities",
     "clearAll": "Clear all filters",
@@ -180,7 +211,15 @@
     "officialForms": "Forms",
     "officialMobility": "Mobility",
     "officialTraits": "Traits",
-    "officialSkills": "Skills"
+    "officialSkills": "Skills",
+    "dataStatus": "Data status",
+    "lastVerified": "Last verified: {date}",
+    "continueExploring": "Continue exploring",
+    "checkMatchup": "Check {element} matchups",
+    "checkHabitats": "Browse shared habitats",
+    "checkEvolution": "Open the evolution chart",
+    "checkMobility": "Browse mobility abilities",
+    "openTwine": "Open Twine lookup"
   },
   "tools": {
     "title": "Tools Center",
@@ -235,6 +274,12 @@
     "selectElement": "Select an element",
     "mobilePrompt": "Select an attacking and defending element to see the multiplier.",
     "mobileResult": "{attacker} attacking {defender}: {value}x damage.",
+    "aniimoLookupTitle": "Check counters for an Aniimo",
+    "aniimoLookupDescription": "Select an official Wiki entry to see the strongest reference elements against its published element labels.",
+    "selectAniimo": "Aniimo",
+    "selectAniimoPlaceholder": "Select an Aniimo",
+    "countersFor": "Best reference attackers for {name} ({elements})",
+    "lookupReferenceNote": "Matchup multipliers are a reference under source review, not a confirmed official combat table.",
     "summaryTitle": "Aniimo element matchup summary",
     "summaryIntro": "Use this element chart with the matrix above to check which Aniimo matchups deal double damage, are resisted or have no effect. Multipliers remain a reference while official combat documentation is unavailable.",
     "elementMatchups": "{element} matchups",
@@ -318,6 +363,7 @@
     "verifiedOfficial": "Verified against official sources",
     "lastVerified": "Last verified: {date}",
     "officialSources": "Official sources",
+    "howWeVerify": "How we verify data",
     "groups": {
       "playDownload": { "title": "Play, download and platforms", "description": "Release date, price, official downloads and supported devices." },
       "gameplay": { "title": "Gameplay explained", "description": "Officially confirmed details about Twine, catching and multiplayer." },

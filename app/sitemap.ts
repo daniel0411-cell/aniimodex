@@ -24,6 +24,7 @@ const STATIC_ROUTES: {
   { path: '/dex/', lastModified: LAST_PUBLISHED, priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'monthly' },
   { path: '/guide/', lastModified: LAST_PUBLISHED, priority: 0.7, changefreq: 'monthly' },
+  { path: '/guide/how-we-verify/', lastModified: LAST_PUBLISHED, priority: 0.7, changefreq: 'monthly' },
   { path: '/evolutions/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
   { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
   { path: '/abilities/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'weekly' },

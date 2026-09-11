@@ -1,33 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { Element } from '@/types/aniimo';
 import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
+import { effectiveness } from '@/lib/type-chart';
+import { getAllAniimos } from '@/lib/aniimo';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 // ---------------------------------------------------------------------------
 // 克制矩阵数据：行 = 攻击方，列 = 防御方
 // 值：2 = 克制、1 = 普通、0.5 = 抵抗、0 = 免疫（未列出则默认为 1）
 // ---------------------------------------------------------------------------
-const CHART: Record<Element, Partial<Record<Element, number>>> = {
-  Fire: { Grass: 2, Ice: 2, Fire: 0.5, Water: 0.5, Earth: 0.5 },
-  Water: { Fire: 2, Earth: 2, Grass: 0.5, Water: 0.5, Lightning: 0.5 },
-  Grass: { Water: 2, Earth: 2, Fire: 0.5, Grass: 0.5, Wind: 0.5, Ice: 0.5 },
-  Lightning: { Water: 2, Wind: 2, Earth: 0, Grass: 0.5, Lightning: 0.5 },
-  Ice: { Grass: 2, Wind: 2, Earth: 2, Fire: 0.5, Water: 0.5, Ice: 0.5 },
-  Earth: { Fire: 2, Lightning: 2, Wind: 0, Water: 0.5, Ice: 0.5, Grass: 0.5 },
-  Wind: { Earth: 2, Grass: 2, Lightning: 0.5, Ice: 0.5, Water: 0.5 },
-  Light: { Dark: 2, Light: 0.5 },
-  Dark: { Light: 2, Dark: 0.5 },
-};
-
-function effective(attacker: Element, defender: Element): number {
-  return CHART[attacker][defender] ?? 1;
-}
-
 // 倍率 → 配色 / 文字（浅色背景下的深色文字，保证对比度）
 const MULTIPLIER_STYLE: Record<number, string> = {
   2: 'bg-red-100 text-red-700 font-bold border border-red-300',
@@ -42,11 +28,23 @@ export default function TypeChartPage() {
   // 当前高亮的攻击 / 防御元素（null 表示未选中）
   const [attackEl, setAttackEl] = useState<Element | null>(null);
   const [defendEl, setDefendEl] = useState<Element | null>(null);
+  const [aniimoNumber, setAniimoNumber] = useState('');
+
+  useEffect(() => {
+    const defender = new URLSearchParams(window.location.search).get('defender');
+    const match = ELEMENTS.find((element) => element.toLowerCase() === defender?.toLowerCase());
+    if (match) setDefendEl(match);
+  }, []);
 
   const toggleAttack = (el: Element) => setAttackEl((cur) => (cur === el ? null : el));
   const toggleDefend = (el: Element) => setDefendEl((cur) => (cur === el ? null : el));
 
   const elLabel = (el: Element) => tr(`elements.${el}`);
+  const selectedAniimo = getAllAniimos().find((aniimo) => aniimo.number === aniimoNumber);
+  const selectedElements = selectedAniimo?.officialElements ?? [];
+  const selectedCounters = selectedElements.length > 0
+    ? ELEMENTS.map((element) => ({ element, value: selectedElements.reduce((total, defender) => total * effectiveness(element, defender), 1) })).sort((a, b) => b.value - a.value)
+    : [];
 
   // 图例
   const legend: { value: number; labelKey: string }[] = [
@@ -70,6 +68,27 @@ export default function TypeChartPage() {
         <p>{t('sourceStatusDescription')}</p>
       </section>
 
+      <section className="border-t-4 border-primary bg-white p-4 sm:p-5">
+        <h2 className="text-lg font-semibold text-text-primary">{t('aniimoLookupTitle')}</h2>
+        <p className="mt-1 text-sm text-text-secondary">{t('aniimoLookupDescription')}</p>
+        <label className="mt-4 block text-xs font-medium text-text-secondary">
+          {t('selectAniimo')}
+          <select value={aniimoNumber} onChange={(event) => setAniimoNumber(event.target.value)} className="mt-1 h-11 w-full rounded-md border border-ink-border bg-white px-3 text-sm sm:max-w-md">
+            <option value="">{t('selectAniimoPlaceholder')}</option>
+            {getAllAniimos().map((aniimo) => <option key={aniimo.number} value={aniimo.number}>#{aniimo.number} {aniimo.name} ({aniimo.enName})</option>)}
+          </select>
+        </label>
+        {selectedAniimo && selectedElements.length > 0 && (
+          <div className="mt-4 border-l-4 border-primary bg-sky-50 px-4 py-3">
+            <p className="text-sm font-semibold text-text-primary">{t('countersFor', { name: selectedAniimo.name, elements: selectedElements.map(elLabel).join(' / ') })}</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {selectedCounters.slice(0, 4).map(({ element, value }) => <Link key={element} href={`/elements/${element.toLowerCase()}`} className={cn('rounded border px-2.5 py-1 text-xs font-semibold', value > 1 ? 'border-red-300 bg-red-100 text-red-700' : 'border-ink-border bg-white text-text-secondary')}>{ELEMENT_ICONS[element]} {elLabel(element)} {value}x</Link>)}
+            </div>
+            <p className="mt-2 text-xs text-text-muted">{t('lookupReferenceNote')}</p>
+          </div>
+        )}
+      </section>
+
       <div className="grid gap-3 sm:hidden">
         <label className="text-xs font-medium text-text-secondary">{t('mobileAttacker')}
           <select value={attackEl ?? ''} onChange={(event) => setAttackEl((event.target.value || null) as Element | null)} className="mt-1 h-11 w-full rounded-md border border-ink-border bg-white px-3 text-sm">
@@ -84,7 +103,7 @@ export default function TypeChartPage() {
           </select>
         </label>
         <div className="border-l-4 border-primary bg-sky-50 px-4 py-3 text-sm text-text-primary">
-          {attackEl && defendEl ? t('mobileResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl), value: effective(attackEl, defendEl) }) : t('mobilePrompt')}
+          {attackEl && defendEl ? t('mobileResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl), value: effectiveness(attackEl, defendEl) }) : t('mobilePrompt')}
         </div>
       </div>
 
@@ -159,7 +178,7 @@ export default function TypeChartPage() {
                   </th>
 
                   {ELEMENTS.map((def) => {
-                    const value = effective(atk, def);
+                    const value = effectiveness(atk, def);
                     const highlighted = attackEl === atk || defendEl === def;
                     return (
                       <td key={def} className="p-1">
@@ -167,12 +186,12 @@ export default function TypeChartPage() {
                           title={`${elLabel(atk)} ${t('attackText')} ${elLabel(def)}: ${value}x`}
                           className={cn(
                             'flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-sm transition-all sm:h-12 sm:w-12',
-                            MULTIPLIER_STYLE[value],
+                            MULTIPLIER_STYLE[effectiveness(atk, def)],
                             highlighted && 'ring-2 ring-primary/70',
                             !highlighted && 'opacity-80 hover:opacity-100'
                           )}
                         >
-                          {value === 0.5 ? '½' : value}
+                          {effectiveness(atk, def) === 0.5 ? '½' : effectiveness(atk, def)}
                         </div>
                       </td>
                     );
@@ -191,7 +210,7 @@ export default function TypeChartPage() {
             {t.rich('multiplierOf', {
               attacker: elLabel(attackEl),
               defender: elLabel(defendEl),
-              value: effective(attackEl, defendEl),
+              value: effectiveness(attackEl, defendEl),
             })}
           </p>
         ) : attackEl ? (
@@ -222,9 +241,9 @@ export default function TypeChartPage() {
         </div>
         <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
           {ELEMENTS.map((attacker) => {
-            const strong = ELEMENTS.filter((defender) => effective(attacker, defender) === 2);
-            const resisted = ELEMENTS.filter((defender) => effective(attacker, defender) === 0.5);
-            const immune = ELEMENTS.filter((defender) => effective(attacker, defender) === 0);
+            const strong = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 2);
+            const resisted = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 0.5);
+            const immune = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 0);
             return (
               <article key={attacker} className="border-t border-ink-border pt-4">
                 <h3 className="font-semibold text-text-primary">

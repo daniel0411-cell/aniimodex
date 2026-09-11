@@ -93,6 +93,7 @@ export default function DexPage() {
   const locale = useLocale();
   const [element, setElement] = useState<Element | ''>('');
   const [role, setRole] = useState<Role | ''>('');
+  const [stage, setStage] = useState<string>('');
   const [q, setQ] = useState('');
   const [filtersOpen, setFiltersOpen] = useState(true);
   const [sort, setSort] = useState<'number' | 'name' | 'element' | 'stage'>('number');
@@ -110,6 +111,7 @@ export default function DexPage() {
     if (role && VALID_ROLES.includes(role)) {
       list = list.filter((a) => a.officialRole === role);
     }
+    if (stage) list = list.filter((a) => a.officialStage === stage);
     if (q) {
       list = searchAniimos(q);
     }
@@ -119,12 +121,13 @@ export default function DexPage() {
       if (sort === 'stage') return (a.officialStage ?? '').localeCompare(b.officialStage ?? '') || a.number.localeCompare(b.number);
       return a.number.localeCompare(b.number);
     });
-  }, [element, role, q, sort]);
+  }, [element, role, stage, q, sort]);
 
-  const hasActiveFilter = Boolean(element || role || q);
+  const hasActiveFilter = Boolean(element || role || stage || q);
   const resetFilters = () => {
     setElement('');
     setRole('');
+    setStage('');
     setQ('');
   };
 
@@ -194,6 +197,17 @@ export default function DexPage() {
             <option value="name">{td('sortName')}</option>
             <option value="element">{td('sortElement')}</option>
             <option value="stage">{td('sortStage')}</option>
+          </select>
+        </label>
+
+        <label className="block text-xs text-text-muted">
+          {td('filterStage')}
+          <select value={stage} onChange={(event) => setStage(event.target.value)} className="mt-1 h-9 w-full rounded-md border border-ink-border bg-white px-2 text-sm text-text-primary">
+            <option value="">{td('allStages')}</option>
+            <option value="Lumin">Lumin</option>
+            <option value="Gamma">Gamma</option>
+            <option value="Nova">Nova</option>
+            <option value="Unknown">{t('common.unknown')}</option>
           </select>
         </label>
 

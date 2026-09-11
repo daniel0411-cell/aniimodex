@@ -157,6 +157,9 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           ))}
         </ul>
       </section>
+      <section className="border-t border-ink-border pt-5">
+        <Link href="/guide/how-we-verify" className="text-sm font-semibold text-primary-light">{t('howWeVerify')} →</Link>
+      </section>
     </div>
   );
 }
