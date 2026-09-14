@@ -57,6 +57,13 @@
       "pending": { "label": "數值屬性與捕獲條件", "status": "待確認" }
     },
     "guideSectionTitle": "Aniimo 上線準備",
+    "launchTasksTitle": "Aniimo 上線前先看這三項",
+    "launchTasksDescription": "快速確認上線時間、官方下載管道和預下載狀態。",
+    "launchTasks": {
+      "release": "上線日期與時間",
+      "download": "官方下載管道",
+      "preload": "預下載與解鎖狀態"
+    },
     "readGuide": "閱讀攻略",
     "latestUpdateLabel": "最新更新",
     "latestUpdateTitle": "官方 Wiki 詳細資料涵蓋範圍擴大",
@@ -72,7 +79,7 @@
     "freeToPlay": "免費遊玩",
     "priceNote": "已核驗官方商店頁面",
     "dataUpdated": "圖鑑資料",
-    "dataUpdatedDate": "2026 年 8 月 30 日核驗",
+    "dataUpdatedDate": "2026 年 9 月 14 日核驗",
     "methodLink": "查看核驗方法",
     "quickLinks": {
       "dex": {

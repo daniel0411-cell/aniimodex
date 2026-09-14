@@ -25,7 +25,7 @@ export const verifiedClaims: VerifiedClaim[] = [
     id: 'announced-platforms',
     claim: 'The official site links PS5, Xbox, Steam, iOS, Google Play and Epic Games Store.',
     status: 'official',
-    checkedAt: '2026-08-29',
+    checkedAt: '2026-09-14',
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',

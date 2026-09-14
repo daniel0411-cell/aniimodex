@@ -35,7 +35,7 @@ export const sources: SourceReference[] = [
     id: 'aniimo-playstation-10018491',
     url: 'https://store.playstation.com/concept/10018491',
     title: 'Aniimo on PlayStation Store',
-    accessedAt: '2026-08-29',
+    accessedAt: '2026-09-14',
     evidence:
       'The PlayStation Store states that Aniimo launches as a free-to-play title on September 16, 2026 at 10:00 UTC+8 and describes catching, Twine, open-world exploration and real-time challenges.',
   },

@@ -52,7 +52,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-release-date',
-    date: '2026-08-29',
+    date: '2026-09-14',
     readMinutes: 4,
     relatedSlugs: ['what-is-aniimo', 'aniimo-platforms', 'is-aniimo-free-to-play'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
@@ -155,7 +155,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
-    date: '2026-08-30',
+    date: '2026-09-14',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-pre-registration', 'aniimo-mobile'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],

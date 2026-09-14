@@ -57,6 +57,13 @@
       "pending": { "label": "数值属性与捕获条件", "status": "待确认" }
     },
     "guideSectionTitle": "Aniimo 上线准备",
+    "launchTasksTitle": "Aniimo 上线前先看这三项",
+    "launchTasksDescription": "快速确认上线时间、官方下载渠道和预下载状态。",
+    "launchTasks": {
+      "release": "上线日期与时间",
+      "download": "官方下载渠道",
+      "preload": "预下载与解锁状态"
+    },
     "readGuide": "阅读攻略",
     "latestUpdateLabel": "最新更新",
     "latestUpdateTitle": "官方 Wiki 详细资料覆盖范围扩大",
@@ -72,7 +79,7 @@
     "freeToPlay": "免费游玩",
     "priceNote": "已核验官方商店页面",
     "dataUpdated": "图鉴资料",
-    "dataUpdatedDate": "2026 年 8 月 30 日核验",
+    "dataUpdatedDate": "2026 年 9 月 14 日核验",
     "methodLink": "查看核验方法",
     "quickLinks": {
       "dex": {
@@ -524,7 +531,7 @@
         ]
       },
       "is-aniimo-free-to-play": { "title": "Aniimo 伊莫是免费游戏吗？价格与内购说明", "subtitle": "Steam、PlayStation 与 Xbox 官方页面均将 Aniimo 标为免费游玩。", "tag": "价格", "lead": "是的，Aniimo 是免费游玩游戏，基础游戏无需先付费购买。", "body": [{"t":"h","c":"Aniimo 伊莫需要付费购买吗？"},{"t":"p","c":"Steam、PlayStation 和 Xbox 的官方商店页面均标注免费游玩，玩家可以免费下载并开始基础游戏。"},{"t":"h","c":"游戏内会有付费内容吗？"},{"t":"p","c":"商店页面提到游戏内购买或可选礼包，具体价格和商业化方式可能因平台、地区和上线版本不同，请以上线时的官方商店为准。"},{"t":"h","c":"去哪里获取游戏？"},{"t":"p","c":"请从 Aniimo 官网进入对应平台商店，不要使用第三方安装包、修改版客户端或所谓的抢先下载页面。"}] },
-      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎么下载？PC、PS5、Xbox 与手机版下载指南", "subtitle": "从 Aniimo 官网和官方商店页面安全下载游戏。", "tag": "下载", "lead": "下载 Aniimo 最安全的方式是先进入官方网站，再选择对应平台的商店链接；不要下载第三方 APK 或安装器。", "body": [{"t":"h","c":"Aniimo 官方下载渠道"},{"t":"table","head":["平台","官方渠道"],"rows":[["Windows PC","Steam、Epic Games Store 或官网链接的 PC 商店"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官网链接的 App Store"],["Android","官网链接的 Google Play"]]},{"t":"h","c":"上线前可以下载吗？"},{"t":"p","c":"预约或加入愿望单不等于客户端已经开放下载，请查看你所在地区官方商店显示的实际状态。"},{"t":"quote","c":"不要在非官方下载页面输入游戏账号或商店账号密码。"}] },
+      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎么下载？PC、PS5、Xbox 与手机版下载指南", "subtitle": "从 Aniimo 官网和官方商店页面安全下载游戏。", "tag": "下载", "lead": "下载 Aniimo 最安全的方式是先进入官方网站，再选择对应平台的商店链接；不要下载第三方 APK 或安装器。", "body": [{"t":"h","c":"Aniimo 官方下载渠道"},{"t":"table","head":["平台","官方渠道"],"rows":[["Windows PC","Steam、Epic Games Store 或官网链接的 PC 商店"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官网链接的 App Store"],["Android","官网链接的 Google Play"]]},{"t":"h","c":"官方商店页面与预下载状态"},{"t":"p","c":"Steam：https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation：https://store.playstation.com/concept/10018491 · Xbox：https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6。这些是官方商店页面；预约或愿望单按钮不代表预下载已开放。"},{"t":"h","c":"上线前可以下载吗？"},{"t":"p","c":"请查看你所在地区官方商店显示的实际状态。"},{"t":"quote","c":"不要在非官方下载页面输入游戏账号或商店账号密码。"}] },
       "aniimo-mobile": { "title": "Aniimo 伊莫手游：iOS 与安卓上线情况", "subtitle": "Aniimo 官网已经提供 App Store 和 Google Play 入口。", "tag": "手游", "lead": "Aniimo 已有 iOS 与 Android 官方商店入口，但预约、下载和设备兼容情况可能因地区而异。", "body": [{"t":"h","c":"Aniimo 有手机版吗？"},{"t":"p","c":"有。Aniimo 官网同时列出了 App Store 和 Google Play，并与主机及 PC 商店入口并列。"},{"t":"h","c":"现在能下载手游吗？"},{"t":"p","c":"请查看你所在地区的官方商店页面。正式上线前，页面可能显示预约、预购或暂不可用。"},{"t":"h","c":"哪些手机可以运行？"},{"t":"p","c":"当前引用的官方资料没有提供完整设备兼容清单，不应采用未经来源确认的最低配置说法。"}] },
       "aniimo-nintendo-switch": { "title": "Aniimo 伊莫会上 Nintendo Switch 吗？官方状态说明", "subtitle": "Nintendo Switch 尚未出现在 Aniimo 当前官方平台列表中。", "tag": "平台", "lead": "截至本页核验时间，没有官方资料确认 Aniimo 会登陆 Nintendo Switch。", "body": [{"t":"h","c":"Aniimo 有 Switch 版吗？"},{"t":"p","c":"目前没有。Aniimo 官网列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但没有 Nintendo Switch。"},{"t":"h","c":"以后可能推出 Switch 版吗？"},{"t":"p","c":"平台计划未来可能变化，但现在没有可以核实的官方消息。只有 Aniimo 或任天堂正式公布后，本页才会更新为已确认。"}] },
       "aniimo-twine-explained": { "title": "Aniimo Twine 玩法是什么？变身、探索与战斗说明", "subtitle": "Twine 允许探索者变成已经收集的伊莫并使用它们的能力。", "tag": "玩法", "lead": "Twine 是 Aniimo 的核心系统之一：探索者可以变成已收集的伊莫，在探索、解谜和战斗中使用对应能力。", "body": [{"t":"h","c":"Twine 是什么意思？"},{"t":"p","c":"官方描述称玩家可以与已收集的伊莫 Twine。已公布的例子包括滑翔、潜水和钻地，并利用不同能力探索世界。"},{"t":"h","c":"Twine 能做什么？"},{"t":"li","c":"穿越地形并到达新区域"},{"t":"li","c":"解决环境谜题"},{"t":"li","c":"在实时战斗中使用伊莫能力"},{"t":"h","c":"哪些伊莫拥有对应能力？"},{"t":"p","c":"当前引用的官方资料没有公布完整的伊莫与能力对应表，社区图鉴中的映射仍处于核验状态。"}] },
