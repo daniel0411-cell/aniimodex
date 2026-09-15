@@ -135,7 +135,7 @@
   },
   "dex": {
     "title": "伊莫圖鑑",
-    "intro": "瀏覽 92 條依據官方資料整理的伊莫圖鑑。可按名稱或編號搜尋，按元素與戰鬥定位篩選，並進入詳情查看進化、棲息地、形態、移動能力、特性和技能。",
+    "intro": "瀏覽 92 條依據官方資料整理的 Aniimo Wiki 式伊莫圖鑑。可按名稱或編號搜尋，按元素、戰鬥定位和階段篩選，並進入詳情查看進化、棲息地、形態、移動能力、特性和技能。",
     "metaDescription": "瀏覽官方 Wiki 中的 92 筆伊莫資料，可按名稱、編號、元素、定位和階段篩選，並查看進化、棲息地、型態、移動能力、特性與技能。",
     "subtitle": "{filtered} / {total} 筆官方 Wiki 圖鑑",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋…",
@@ -384,9 +384,9 @@
     "posts": {
       "aniimo-release-date": {
         "title": "Aniimo 發售日期：全球上線時間与预注册信息",
-        "subtitle": "Aniimo 将于 2026 年 9 月 16 日 10:00（UTC+8）全球上線。",
+        "subtitle": "Aniimo PC 與主機版將於 2026 年 9 月 16 日 10:00（UTC+8）上線。",
         "tag": "發售",
-        "lead": "Aniimo 计划于 2026 年 9 月 16 日 10:00（UTC+8）以免費游玩形式全球上線。Steam 因商店地区和時區差异，可能顯示为 9 月 15 日。",
+        "lead": "Aniimo PC 與主機版計畫於 2026 年 9 月 16 日 10:00（UTC+8）以免費遊玩形式上線。Steam 因地區和時區可能顯示 9 月 15 日；行動版日期不同。",
         "body": [
           {
             "t": "h",
@@ -440,11 +440,11 @@
             "t": "table",
             "head": ["平台", "官方状态"],
             "rows": [
-              ["PlayStation 5", "已有 PlayStation Store 官方頁面"],
+              ["PlayStation 5", "2026 年 9 月 16 日 10:00（UTC+8）"],
               ["Xbox Series X|S", "Xbox 商店明确列出"],
-              ["Windows PC", "Steam 与 Xbox 商店明确列出"],
-              ["iOS", "Aniimo 官网已提供 App Store 連結"],
-              ["Google Play", "Aniimo 官网已提供 Google Play 連結"],
+              ["Windows PC", "Steam 已開放預載，UTC+8 9 月 16 日解鎖"],
+              ["iOS", "App Store 標註 2026 年 9 月 23 日"],
+              ["Android", "已有官方 Google Play 入口，日期尚未確認"],
               ["Epic Games Store", "Aniimo 官网已提供 Epic 連結"]
             ]
           },
@@ -537,6 +537,8 @@
       "is-aniimo-free-to-play": { "title": "Aniimo 伊莫是免費遊戲嗎？價格與內購說明", "subtitle": "Steam、PlayStation 與 Xbox 官方頁面均將 Aniimo 標為免費遊玩。", "tag": "價格", "lead": "是的，Aniimo 是免費遊玩遊戲，基礎遊戲無需先付費購買。", "body": [{"t":"h","c":"Aniimo 伊莫需要付費購買嗎？"},{"t":"p","c":"Steam、PlayStation 和 Xbox 的官方商店頁面均標註免費遊玩，玩家可以免費下載並開始基礎遊戲。"},{"t":"h","c":"遊戲內會有付費內容嗎？"},{"t":"p","c":"商店頁面提到遊戲內購買或可選禮包，具體價格和商業模式可能因平台、地區和上線版本不同，請以上線時的官方商店為準。"},{"t":"h","c":"去哪裡取得遊戲？"},{"t":"p","c":"請從 Aniimo 官網進入對應平台商店，不要使用第三方安裝包、修改版客戶端或所謂的搶先下載頁面。"}] },
       "how-to-download-aniimo": { "title": "Aniimo 伊莫怎麼下載？PC、PS5、Xbox 與手機版指南", "subtitle": "從 Aniimo 官網和官方商店頁面安全下載遊戲。", "tag": "下載", "lead": "下載 Aniimo 最安全的方式是先進入官方網站，再選擇對應平台的商店連結；不要下載第三方 APK 或安裝程式。", "body": [{"t":"h","c":"Aniimo 官方下載管道"},{"t":"table","head":["平台","官方管道"],"rows":[["Windows PC","Steam、Epic Games Store 或官網連結的 PC 商店"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官網連結的 App Store"],["Android","官網連結的 Google Play"]]},{"t":"h","c":"上線前可以下載嗎？"},{"t":"p","c":"預約或加入願望清單不等於客戶端已經開放下載，請查看你所在地區官方商店顯示的實際狀態。"},{"t":"quote","c":"不要在非官方下載頁面輸入遊戲帳號或商店帳號密碼。"}] },
       "aniimo-mobile": { "title": "Aniimo 伊莫手機版：iOS 與 Android 上線情況", "subtitle": "iOS 商店標註 2026 年 9 月 23 日；Android 日期尚未確認。", "tag": "手機版", "lead": "目前核驗地區的官方 App Store 頁面顯示，Aniimo iPhone 與 iPad 版預計於 2026 年 9 月 23 日推出。官網也提供 Google Play 入口，但現有來源尚未確認 Android 的上線日期。", "body": [{"t":"h","c":"Aniimo 手機版什麼時候上線？"},{"t":"table","head":["平台","目前狀態"],"rows":[["iPhone / iPad","App Store 標註 2026 年 9 月 23 日"],["Android","已有官方 Google Play 入口，上線日期尚未確認"],["裝置需求","完整官方相容清單尚未公布"]]},{"t":"h","c":"Aniimo 有手機版嗎？"},{"t":"p","c":"有。Aniimo 官網同時列出了 App Store 和 Google Play，並與主機及 PC 商店入口並列。"},{"t":"h","c":"現在能下載手機版嗎？"},{"t":"p","c":"請查看你所在地區的官方商店頁面。iOS 目前標註 9 月 23 日，Android 開放情況可能因地區不同，日期仍待確認。"},{"t":"h","c":"哪些手機可以執行？"},{"t":"p","c":"目前引用的官方資料沒有提供完整裝置相容清單，不應採用未經來源確認的最低規格說法。"}] },
+      "aniimo-ps5": { "title": "Aniimo 伊莫會登上 PS5 嗎？發售日期與商店狀態", "subtitle": "會。Aniimo 已有官方 PS5 頁面，將於 2026 年 9 月 16 日 10:00（UTC+8）上線。", "tag": "PS5", "lead": "Aniimo 已確認登上 PlayStation 5。PlayStation Store 將免費遊玩本體上線時間列為 2026 年 9 月 16 日 10:00（UTC+8），上線前提供可選預購包。", "body": [{"t":"h","c":"Aniimo 會登上 PS5 嗎？"},{"t":"p","c":"會。Aniimo 已有由 Pawprint Interactive Entertainment 發布的官方 PS5 商店頁面。"},{"t":"h","c":"Aniimo PS5 版什麼時候上線？"},{"t":"p","c":"PlayStation Store 標註 2026 年 9 月 16 日 10:00（UTC+8），對應 UTC 時間 9 月 16 日 02:00。"},{"t":"h","c":"Aniimo PS5 版免費嗎？"},{"t":"p","c":"免費。基礎遊戲標註為免費遊玩；付費預購包包含可選遊戲內獎勵，不改變本體免費狀態。"},{"t":"h","c":"PS5 版需要連線嗎？"},{"t":"p","c":"PlayStation 頁面標註需要線上遊玩，並提示遊戲內購買和使用者互動；地區帳號或訂閱需求請以即時商店頁面為準。"}] },
+      "is-aniimo-a-gacha-game": { "title": "Aniimo 伊莫是抽卡遊戲嗎？官方資訊說明", "subtitle": "Aniimo 是免費遊戲並含內購，但官方商店沒有將其定義為抽卡遊戲。", "tag": "付費模式", "lead": "根據目前核驗的官方資料，還不能準確把 Aniimo 定義為抽卡遊戲。商店確認免費遊玩和遊戲內購買，官網也提到部分隨機伊莫蛋獎勵，但這些資訊本身不能證明存在付費角色抽取系統。", "body": [{"t":"h","c":"官方稱 Aniimo 是抽卡遊戲嗎？"},{"t":"p","c":"沒有。官網和主要商店將 Aniimo 描述為免費遊玩的捉寵開放世界 RPG，沒有使用抽卡遊戲這一分類。"},{"t":"h","c":"Aniimo 有遊戲內購買嗎？"},{"t":"p","c":"有。Steam、PlayStation 和 Xbox 披露了遊戲內購買或可選付費包，但尚不能據此確認上線後的完整付費機制。"},{"t":"h","c":"隨機伊莫蛋代表抽卡嗎？"},{"t":"p","c":"官方預約活動提到隨機完美伊莫蛋獎勵；一次活動獎勵不等於可反覆付費抽取的召喚系統。"},{"t":"h","c":"哪些內容仍未確認？"},{"t":"p","c":"目前來源沒有公布完整的付費抽取規則、卡池、貨幣或機率表。只有官方說明或上線後可重現實測能夠確認這些機制。"}] },
       "aniimo-nintendo-switch": { "title": "Aniimo 伊莫會登上 Nintendo Switch 嗎？官方狀態說明", "subtitle": "Nintendo Switch 尚未出現在 Aniimo 目前官方平台清單中。", "tag": "平台", "lead": "截至本頁核驗時間，沒有官方資料確認 Aniimo 會登上 Nintendo Switch。", "body": [{"t":"h","c":"Aniimo 有 Switch 版嗎？"},{"t":"p","c":"目前沒有。Aniimo 官網列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但沒有 Nintendo Switch。"},{"t":"h","c":"以後可能推出 Switch 版嗎？"},{"t":"p","c":"平台計畫未來可能變化，但現在沒有可以核實的官方消息。只有 Aniimo 或任天堂正式公布後，本頁才會更新為已確認。"}] },
       "aniimo-twine-explained": { "title": "Aniimo Twine 玩法是什麼？變身、探索與戰鬥說明", "subtitle": "Twine 允許探索者變成已經收集的伊莫並使用牠們的能力。", "tag": "玩法", "lead": "Twine 是 Aniimo 的核心系統之一：探索者可以變成已收集的伊莫，在探索、解謎和戰鬥中使用對應能力。", "body": [{"t":"h","c":"Twine 是什麼意思？"},{"t":"p","c":"官方描述稱玩家可以與已收集的伊莫 Twine。已公布的例子包括滑翔、潛水和鑽地，並利用不同能力探索世界。"},{"t":"h","c":"Twine 能做什麼？"},{"t":"li","c":"穿越地形並到達新區域"},{"t":"li","c":"解決環境謎題"},{"t":"li","c":"在即時戰鬥中使用伊莫能力"},{"t":"h","c":"哪些伊莫擁有對應能力？"},{"t":"p","c":"目前引用的官方資料沒有公布完整的伊莫與能力對應表，社群圖鑑中的映射仍處於核驗狀態。"}] },
       "aniimo-catching-guide": { "title": "Aniimo 伊莫怎麼捕獲？Aniipod、陷阱與出現條件", "subtitle": "根據官方資料整理目前已確認的捕獲機制。", "tag": "玩法", "lead": "官方商店確認玩家會使用 Aniipod、陷阱和時機判斷捕獲伊莫；環境、天氣、特殊現象和時段會影響伊莫出現。", "body": [{"t":"h","c":"Aniimo 怎麼捕獲伊莫？"},{"t":"p","c":"玩家在生態環境中發現伊莫，並使用 Aniipod 捕獲。官方文案還提到設置陷阱和把握捕獲時機。"},{"t":"h","c":"什麼會影響伊莫出現？"},{"t":"li","c":"環境與棲息地"},{"t":"li","c":"天氣"},{"t":"li","c":"特殊現象"},{"t":"li","c":"時間段"},{"t":"h","c":"捕獲率公式公布了嗎？"},{"t":"p","c":"沒有。目前官方來源沒有提供可驗證的機率公式或完整物種捕獲率表，在官方資料公布前，任何計算器結果都只能視為實驗性估算。"}] },

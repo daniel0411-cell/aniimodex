@@ -59,7 +59,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-platforms',
-    date: '2026-08-29',
+    date: '2026-09-15',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-crossplay-cross-save'],
     sourceIds: [
@@ -71,7 +71,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'what-is-aniimo',
-    date: '2026-08-29',
+    date: '2026-09-15',
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: ['aniimo-release-date', 'aniimo-platforms'],
@@ -90,7 +90,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'how-to-download-aniimo',
-    date: '2026-08-30',
+    date: '2026-09-15',
     readMinutes: 5,
     relatedSlugs: ['aniimo-platforms', 'aniimo-pre-registration'],
     sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
@@ -101,6 +101,20 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 4,
     relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-app-store-6759098797'],
+  },
+  {
+    slug: 'aniimo-ps5',
+    date: '2026-09-15',
+    readMinutes: 4,
+    relatedSlugs: ['aniimo-release-date', 'aniimo-platforms', 'how-to-download-aniimo'],
+    sourceIds: ['aniimo-playstation-10018491'],
+  },
+  {
+    slug: 'is-aniimo-a-gacha-game',
+    date: '2026-09-15',
+    readMinutes: 4,
+    relatedSlugs: ['what-is-aniimo', 'is-aniimo-free-to-play', 'aniimo-catching-guide'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
   },
   {
     slug: 'aniimo-nintendo-switch',

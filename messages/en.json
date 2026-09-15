@@ -136,7 +136,7 @@
   "dex": {
     "title": "Aniimo Game Dex: All 92 Official-Source Entries",
     "metaDescription": "Browse 92 Aniimo from the official Wiki by name, number, element, role and stage, with evolution families, habitats, forms, mobility, traits and skills.",
-    "intro": "Browse the Aniimo game dex with 92 official-source entries. Search by English name or number, filter by element and combat role, and open each entry for evolution, habitat, form, mobility, trait and skill data.",
+    "intro": "Browse the Aniimo Wiki-style game dex with 92 official-source creatures. Search by English name or number, filter by element, role and stage, and open each entry for evolution, habitat, form, mobility, trait and skill data.",
     "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
@@ -386,9 +386,9 @@
     "posts": {
       "aniimo-release-date": {
         "title": "Aniimo Release Date: Global Launch Time and Pre-Registration",
-        "subtitle": "Aniimo launches globally on September 16, 2026 at 10:00 UTC+8.",
+        "subtitle": "Aniimo launches on PC and console on September 16, 2026 at 10:00 UTC+8.",
         "tag": "Release",
-        "lead": "Aniimo is scheduled to launch globally on September 16, 2026 at 10:00 UTC+8 as a free-to-play title. Steam may show September 15 because storefront dates vary by region and time zone.",
+        "lead": "Aniimo is scheduled to launch on PC and console on September 16, 2026 at 10:00 UTC+8 as a free-to-play title. Steam may show September 15 because storefront dates vary by region and time zone; mobile dates differ.",
         "body": [
           {
             "t": "h",
@@ -442,11 +442,11 @@
             "t": "table",
             "head": ["Platform", "Official status"],
             "rows": [
-              ["PlayStation 5", "Official PlayStation Store page"],
-              ["Xbox Series X|S", "Xbox product page lists Xbox Series X|S"],
-              ["Windows PC", "Steam and Xbox product pages list Windows/PC"],
-              ["iOS", "Linked by the official Aniimo website"],
-              ["Google Play", "Linked by the official Aniimo website"],
+              ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
+              ["Xbox Series X|S", "Official listing; launch availability shown by Xbox Store"],
+              ["Windows PC", "Steam preload available before the September 16 UTC+8 unlock"],
+              ["iOS", "App Store lists September 23, 2026"],
+              ["Android", "Official Google Play route; date not confirmed"],
               ["Epic Games Store", "Linked by the official Aniimo website"]
             ]
           },
@@ -481,6 +481,14 @@
           {
             "t": "p",
             "c": "No Nintendo Switch listing appears among the official platform links checked for this page. Treat Switch claims as unconfirmed unless Aniimo or Nintendo publishes an official listing."
+          },
+          {
+            "t": "h",
+            "c": "Do all Aniimo platforms launch on the same date?"
+          },
+          {
+            "t": "p",
+            "c": "No single date should be assumed for every platform. PC and console listings point to the September 16 UTC+8 launch, while the App Store listing checked for iPhone and iPad shows September 23. The Android date remains unconfirmed."
           }
         ]
       },
@@ -531,6 +539,14 @@
             "c": "Steam lists Pawprint Studio as both developer and publisher."
           },
           {
+            "t": "h",
+            "c": "Is Aniimo a Pokemon-style game?"
+          },
+          {
+            "t": "p",
+            "c": "Both games involve collecting creatures, but Aniimo's official identity is its own open-world RPG built around Twine transformations, real-time catching and combat, multiplayer activities and exploration. It should not be treated as a Pokemon title or official spin-off."
+          },
+          {
             "t": "quote",
             "c": "This overview separates verified official features from dex stats, type multipliers and catch-rate formulas that remain under review."
           }
@@ -559,7 +575,9 @@
           { "t": "h", "c": "Official Aniimo download options" },
           { "t": "table", "head": ["Platform", "Official route"], "rows": [["Windows PC", "Steam, Epic Games Store or the linked PC store"], ["PlayStation 5", "PlayStation Store"], ["Xbox Series X|S", "Xbox Store"], ["iPhone and iPad", "Apple App Store link on the official website"], ["Android", "Google Play link on the official website"]] },
           { "t": "h", "c": "Official store pages and preload status" },
-          { "t": "p", "c": "Steam: https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation: https://store.playstation.com/concept/10018491 · Xbox: https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6. These are official store pages; a wishlist or pre-registration button does not confirm preload access." },
+          { "t": "p", "c": "Steam: https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation: https://store.playstation.com/concept/10018491 · Xbox: https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6 · App Store: https://apps.apple.com/us/app/aniimo/id6759098797. These are official store pages; use the button and availability shown for your region." },
+          { "t": "h", "c": "What is the current download and preload status?" },
+          { "t": "table", "head": ["Platform", "Status checked September 15"], "rows": [["Steam", "Preload available; unlock scheduled for September 16 at 10:00 UTC+8"], ["PS5", "Pre-order campaign active before the September 16 launch"], ["Xbox", "Coming soon and pre-order packs listed"], ["iOS", "App Store lists September 23"], ["Android", "Official route available; release date not confirmed"]] },
           { "t": "h", "c": "Can I download Aniimo before launch?" },
           { "t": "p", "c": "Pre-registration and wishlisting do not always mean the full game client is available. Follow the status shown by the official store in your country." },
           { "t": "quote", "c": "Never enter your game or store credentials on an unofficial download page." }
@@ -579,6 +597,38 @@
           { "t": "p", "c": "Check the official store page available in your region. The iOS listing currently shows September 23, while Android availability may differ by country and remains unconfirmed." },
           { "t": "h", "c": "What phones will run Aniimo?" },
           { "t": "p", "c": "The official sources used for this page do not provide a complete device compatibility list. Do not rely on unofficial minimum-spec claims." }
+        ]
+      },
+      "aniimo-ps5": {
+        "title": "Is Aniimo Coming to PS5? Release Date and Store Status",
+        "subtitle": "Yes. Aniimo has an official PS5 listing and launches September 16, 2026 at 10:00 UTC+8.",
+        "tag": "PS5",
+        "lead": "Aniimo is confirmed for PlayStation 5. The official PlayStation Store lists the free-to-play launch for September 16, 2026 at 10:00 UTC+8, with pre-order packs available before launch.",
+        "body": [
+          { "t": "h", "c": "Will Aniimo be on PS5?" },
+          { "t": "p", "c": "Yes. Aniimo has an official PlayStation Store listing for PS5 published by Pawprint Interactive Entertainment." },
+          { "t": "h", "c": "When does Aniimo release on PS5?" },
+          { "t": "p", "c": "The PlayStation Store states September 16, 2026 at 10:00 UTC+8. That is September 16 at 02:00 UTC and September 15 at 10:00 PM EDT." },
+          { "t": "h", "c": "Is Aniimo free on PS5?" },
+          { "t": "p", "c": "Yes. The base game is listed as free-to-play. Paid pre-order packs contain optional in-game rewards and do not change the base game's free-to-play status." },
+          { "t": "h", "c": "Does the PS5 version require online play?" },
+          { "t": "p", "c": "The PlayStation listing marks online play as required and identifies in-game purchases and user interaction. Check the live store page for regional account or subscription requirements." }
+        ]
+      },
+      "is-aniimo-a-gacha-game": {
+        "title": "Is Aniimo a Gacha Game? What Official Sources Confirm",
+        "subtitle": "Aniimo is free-to-play and has in-game purchases, but its official listings do not define it as a gacha game.",
+        "tag": "Monetization",
+        "lead": "It is not currently accurate to label Aniimo a gacha game from the official sources checked. The stores confirm free-to-play access and in-game purchases, while the official site mentions some random egg rewards; neither fact alone proves a character-gacha system.",
+        "body": [
+          { "t": "h", "c": "Is Aniimo officially described as a gacha game?" },
+          { "t": "p", "c": "No. Aniimo's official website and major store listings describe it as a free-to-play creature-catching open-world RPG, not as a gacha game." },
+          { "t": "h", "c": "Does Aniimo have in-game purchases?" },
+          { "t": "p", "c": "Yes. Steam, PlayStation and Xbox disclose in-game purchases or optional paid packs. That confirms monetization, but not the exact mechanics used after launch." },
+          { "t": "h", "c": "What about random Aniimo eggs?" },
+          { "t": "p", "c": "The official pre-registration campaign mentions a random Perfect Egg reward. A promotional random reward does not by itself establish a repeatable paid summoning system." },
+          { "t": "h", "c": "What remains unconfirmed?" },
+          { "t": "p", "c": "The registered sources do not publish a complete launch monetization system, paid draw rules, banners, currencies or probability tables. This page will only classify those systems after official documentation or reproducible launch testing is available." }
         ]
       },
       "aniimo-nintendo-switch": {
