@@ -131,6 +131,7 @@ export default async function GuidePostPage({
         headline: title,
         description: subtitle,
         datePublished: post.date,
+        dateModified: post.date,
         inLanguage: locale,
         image: post.image ? [`${SITE_URL}${post.image}`] : undefined,
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,

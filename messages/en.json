@@ -693,10 +693,10 @@
         ]
       },
       "aniimo-crossplay-cross-save": {
-        "title": "Aniimo Crossplay: Cross-Platform, Cross-Save and Cross-Progression Status",
-        "subtitle": "Aniimo supports cross-platform multiplayer; check what is confirmed for crossplay, cross-save, platform pairings and cross-progression.",
+        "title": "Does Aniimo Have Crossplay or Cross-Save? Current Status",
+        "subtitle": "Yes, Aniimo lists cross-platform multiplayer. Cross-save and cross-progression are not yet confirmed; see the current platform status.",
         "tag": "Multiplayer",
-        "lead": "Steam lists cross-platform multiplayer for Aniimo. Cross-save and cross-progression are separate features and are not confirmed by the sources registered for this page.",
+        "lead": "Yes, Aniimo supports cross-platform multiplayer according to Steam. Cross-save and cross-progression are separate features and remain unconfirmed in the official sources checked on September 15, 2026.",
         "body": [
           { "t": "h", "c": "Aniimo cross-platform status at a glance" },
           { "t": "table", "head": ["Feature", "Current official status"], "rows": [["Cross-platform multiplayer", "Listed on Steam"], ["Specific platform pairings", "Not fully documented"], ["Cross-save", "Not confirmed"], ["Cross-progression", "Not confirmed"], ["Purchases and paid currency transfer", "Not confirmed"]] },
