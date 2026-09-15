@@ -35,10 +35,17 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'global-launch-date',
-    claim: 'Aniimo launches globally on September 16, 2026 at 10:00 UTC+8.',
+    claim: 'Aniimo launches on PC and console on September 16, 2026 at 10:00 UTC+8.',
     status: 'official',
     checkedAt: '2026-08-29',
     sourceIds: ['aniimo-playstation-10018491'],
+  },
+  {
+    id: 'ios-launch-date',
+    claim: 'The Aniimo App Store listing shows September 23, 2026 for iPhone and iPad.',
+    status: 'official',
+    checkedAt: '2026-09-15',
+    sourceIds: ['aniimo-app-store-6759098797'],
   },
   {
     id: 'dex-001-020',

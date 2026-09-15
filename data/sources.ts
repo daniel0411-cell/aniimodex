@@ -47,6 +47,14 @@ export const sources: SourceReference[] = [
     evidence:
       'The Xbox product page lists Aniimo for PC and Xbox Series X|S and describes it as a free-to-play creature-catching open-world RPG with Twine, multiplayer and co-op play.',
   },
+  {
+    id: 'aniimo-app-store-6759098797',
+    url: 'https://apps.apple.com/us/app/aniimo/id6759098797',
+    title: 'Aniimo on the Apple App Store',
+    accessedAt: '2026-09-15',
+    evidence:
+      'The official Aniimo App Store listing shows September 23, 2026 for iPhone and iPad in the storefronts checked. This date does not confirm the Android release date.',
+  },
 ];
 
 export const sourceById = new Map(sources.map((source) => [source.id, source]));

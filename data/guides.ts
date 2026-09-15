@@ -97,10 +97,10 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-mobile',
-    date: '2026-08-30',
+    date: '2026-09-15',
     readMinutes: 4,
     relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
-    sourceIds: ['aniimo-official-home-2026-08-28'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-app-store-6759098797'],
   },
   {
     slug: 'aniimo-nintendo-switch',

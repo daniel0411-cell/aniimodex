@@ -74,8 +74,8 @@
     "pcLaunch": "PC & console launch",
     "pcLaunchDate": "September 16, 2026 · 10:00 UTC+8",
     "mobileStatus": "Mobile launch",
-    "mobileLaunch": "iOS and Android",
-    "mobileLaunchDate": "September 23, 2026",
+    "mobileLaunch": "iOS: September 23, 2026",
+    "mobileLaunchDate": "Android date not yet confirmed",
     "priceStatus": "Price",
     "freeToPlay": "Free to play",
     "priceNote": "Official store listings checked",
@@ -567,16 +567,16 @@
       },
       "aniimo-mobile": {
         "title": "Aniimo Mobile: iOS, Android, Download and Pre-Registration Status",
-        "subtitle": "Check Aniimo mobile availability, official App Store and Google Play links, pre-registration and device requirements.",
+        "subtitle": "iOS is listed for September 23, 2026; the Android date remains unconfirmed.",
         "tag": "Mobile",
-        "lead": "Aniimo has official mobile storefront links for iOS and Android. Actual availability, pre-registration and device compatibility can differ by region.",
+        "lead": "The official App Store listing shows September 23, 2026 for iPhone and iPad in the storefronts checked. Aniimo also has an official Google Play route, but the Android release date has not been confirmed by the sources checked.",
         "body": [
           { "t": "h", "c": "Aniimo mobile status at a glance" },
-          { "t": "table", "head": ["Question", "Current status"], "rows": [["iOS version", "Official App Store link available"], ["Android version", "Official Google Play link available"], ["Download availability", "Varies by region before launch"], ["Device requirements", "Complete official list not published"]] },
+          { "t": "table", "head": ["Platform", "Current status"], "rows": [["iPhone and iPad", "App Store lists September 23, 2026"], ["Android", "Official Google Play route available; release date not confirmed"], ["Device requirements", "Complete official list not published"]] },
           { "t": "h", "c": "Is Aniimo coming to iPhone and Android?" },
           { "t": "p", "c": "Yes. The official Aniimo website includes links for Apple's App Store and Google Play alongside console and PC storefronts." },
           { "t": "h", "c": "Can I download the mobile version now?" },
-          { "t": "p", "c": "Check the official store page available in your region. A store may show pre-registration, pre-order or unavailable status before the game launches." },
+          { "t": "p", "c": "Check the official store page available in your region. The iOS listing currently shows September 23, while Android availability may differ by country and remains unconfirmed." },
           { "t": "h", "c": "What phones will run Aniimo?" },
           { "t": "p", "c": "The official sources used for this page do not provide a complete device compatibility list. Do not rely on unofficial minimum-spec claims." }
         ]
