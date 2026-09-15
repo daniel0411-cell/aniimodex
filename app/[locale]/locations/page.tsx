@@ -30,8 +30,8 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
       })}</div>
       <section className="border-t border-ink-border pt-8">
         <h2 className="text-xl font-bold text-text-primary">{t('howToTitle')}</h2><p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{t('howToDescription')}</p>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2"><div className="border-t border-ink-border pt-4"><h3 className="font-semibold text-text-primary">{t('faq.coordinates.question')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('faq.coordinates.answer')}</p></div><div className="border-t border-ink-border pt-4"><h3 className="font-semibold text-text-primary">{t('faq.conditions.question')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('faq.conditions.answer')}</p></div></div>
-        <nav className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light"><Link href="/dex">{t('browseDex')} →</Link><Link href="/evolutions">{t('browseEvolutions')} →</Link></nav>
+        <div className="mt-5 grid gap-4 sm:grid-cols-3"><div className="border-t border-ink-border pt-4"><h3 className="font-semibold text-text-primary">{t('faq.map.question')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('faq.map.answer')}</p></div><div className="border-t border-ink-border pt-4"><h3 className="font-semibold text-text-primary">{t('faq.coordinates.question')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('faq.coordinates.answer')}</p></div><div className="border-t border-ink-border pt-4"><h3 className="font-semibold text-text-primary">{t('faq.conditions.question')}</h3><p className="mt-2 text-sm leading-6 text-text-secondary">{t('faq.conditions.answer')}</p></div></div>
+        <nav className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light"><Link href="/dex">{t('browseDex')} →</Link><Link href="/evolutions">{t('browseEvolutions')} →</Link><Link href="/abilities">{t('browseAbilities')} →</Link></nav>
       </section>
     </div>
   );
