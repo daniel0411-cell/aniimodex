@@ -62,7 +62,8 @@
     "launchTasks": {
       "release": "Release date and time",
       "download": "Official download links",
-      "preload": "Preload and unlock status"
+      "preload": "Preload and unlock status",
+      "platforms": "Platforms and availability"
     },
     "readGuide": "Read the guide",
     "latestUpdateLabel": "Latest update",
@@ -221,6 +222,8 @@
     "officialSkills": "Skills",
     "dataStatus": "Data status",
     "lastVerified": "Last verified: {date}",
+    "pageUpdated": "Page updated: {date}",
+    "sourceChecked": "Sources checked: {date}",
     "continueExploring": "Continue exploring",
     "checkMatchup": "Check {element} matchups",
     "checkHabitats": "Browse shared habitats",
@@ -369,8 +372,11 @@
     "tableOfContents": "On this page",
     "verifiedOfficial": "Verified against official sources",
     "lastVerified": "Last verified: {date}",
+    "pageUpdated": "Page updated: {date}",
+    "sourceChecked": "Sources checked: {date}",
     "officialSources": "Official sources",
     "howWeVerify": "How we verify data",
+    "launchHub": { "title": "Aniimo launch essentials", "description": "Release time, official downloads, preload status and supported platforms in one verified path.", "release": "Release date and time", "download": "Official download links", "preload": "Preload and unlock status", "platforms": "Platforms and availability" },
     "groups": {
       "playDownload": { "title": "Play, download and platforms", "description": "Release date, price, official downloads and supported devices." },
       "gameplay": { "title": "Gameplay explained", "description": "Officially confirmed details about Twine, catching and multiplayer." },
@@ -698,6 +704,8 @@
         "tag": "Multiplayer",
         "lead": "Yes, Aniimo supports cross-platform multiplayer according to Steam. Cross-save and cross-progression are separate features and remain unconfirmed in the official sources checked on September 15, 2026.",
         "body": [
+          { "t": "h", "c": "Which Aniimo platform combinations are confirmed?" },
+          { "t": "table", "head": ["Combination", "Current official status"], "rows": [["PC with other platforms", "Cross-platform multiplayer listed; exact pairings not documented"], ["PS5 with Xbox", "Not specifically confirmed"], ["PC / console with mobile", "Not specifically confirmed"], ["Shared saves and progression", "Not confirmed"]] },
           { "t": "h", "c": "Aniimo cross-platform status at a glance" },
           { "t": "table", "head": ["Feature", "Current official status"], "rows": [["Cross-platform multiplayer", "Listed on Steam"], ["Specific platform pairings", "Not fully documented"], ["Cross-save", "Not confirmed"], ["Cross-progression", "Not confirmed"], ["Purchases and paid currency transfer", "Not confirmed"]] },
           { "t": "h", "c": "Does Aniimo support crossplay?" },

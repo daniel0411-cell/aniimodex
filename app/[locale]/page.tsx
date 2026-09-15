@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import HeroSearch from '@/components/HeroSearch';
+import LaunchHub from '@/components/LaunchHub';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getAllAniimos } from '@/lib/aniimo';
 import { evolutionFamilies, habitatGroups, mobilityGroups } from '@/data/aniimo-collections';
@@ -63,19 +64,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   ];
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': `${SITE_URL}/#website`,
-    url: `${SITE_URL}/${locale}/`,
-    name: 'AniimoDex',
-    inLanguage: locale,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/${locale}/dex/?q={search_term_string}`,
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: `${SITE_URL}/${locale}/`,
+        name: 'AniimoDex',
+        inLanguage: locale,
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/${locale}/dex/?q={search_term_string}` },
+          'query-input': 'required name=search_term_string',
+        },
       },
-      'query-input': 'required name=search_term_string',
-    },
+      {
+        '@type': 'VideoGame',
+        '@id': `${SITE_URL}/#game`,
+        name: 'Aniimo',
+        genre: ['Action RPG', 'Creature collecting', 'Open world'],
+        gamePlatform: ['Windows PC', 'PlayStation 5', 'Xbox Series X|S', 'iOS', 'Android'],
+        isAccessibleForFree: true,
+        sameAs: ['https://www.aniimo.com/', 'https://wiki.aniimo.com/', 'https://store.steampowered.com/app/4126040/Aniimo/', 'https://store.playstation.com/concept/10018491', 'https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6'],
+      },
+    ],
   };
 
   return (
@@ -119,15 +130,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div><p className="text-xs font-semibold uppercase text-text-muted">{th('priceStatus')}</p><p className="mt-1 font-semibold text-text-primary">{th('freeToPlay')}</p><p className="text-sm text-text-secondary">{th('priceNote')}</p></div>
         <div><p className="text-xs font-semibold uppercase text-text-muted">{th('dataUpdated')}</p><p className="mt-1 font-semibold text-text-primary">{th('dataUpdatedDate')}</p><Link href="/guide/how-we-verify" className="text-sm font-semibold text-primary-light">{th('methodLink')} →</Link></div>
       </section>
-      <section className="border-y border-ink-border py-6">
-        <div className="mb-4"><h2 className="text-xl font-bold text-text-primary">{th('launchTasksTitle')}</h2><p className="mt-1 text-sm text-text-secondary">{th('launchTasksDescription')}</p></div>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {(['release', 'download', 'preload'] as const).map((task) => {
-            const slugs = { release: 'aniimo-release-date', download: 'how-to-download-aniimo', preload: 'aniimo-launch-time-preload' };
-            return <Link key={task} href={`/guide/${slugs[task]}`} className="border-l-4 border-primary bg-white px-4 py-4 text-sm font-semibold text-text-primary hover:bg-sky-50">{th(`launchTasks.${task}`)} <span className="text-primary-light">→</span></Link>;
-          })}
-        </div>
-      </section>
+      <LaunchHub title={th('launchTasksTitle')} description={th('launchTasksDescription')} labels={{ release: th('launchTasks.release'), download: th('launchTasks.download'), preload: th('launchTasks.preload'), platforms: th('launchTasks.platforms') }} />
       <section className="border-t-4 border-secondary bg-emerald-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
         <div><p className="text-xs font-semibold uppercase text-emerald-700">{th('latestUpdateLabel')}</p><h2 className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">{th('latestUpdateDescription')}</p></div>
         <Link href="/guide/official-aniimo-dex-status" className="mt-4 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">{th('viewUpdate')} →</Link>

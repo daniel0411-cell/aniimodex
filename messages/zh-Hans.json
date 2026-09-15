@@ -62,7 +62,8 @@
     "launchTasks": {
       "release": "上线日期与时间",
       "download": "官方下载渠道",
-      "preload": "预下载与解锁状态"
+      "preload": "预下载与解锁状态",
+      "platforms": "平台与可用状态"
     },
     "readGuide": "阅读攻略",
     "latestUpdateLabel": "最新更新",
@@ -369,8 +370,11 @@
     "tableOfContents": "本文目录",
     "verifiedOfficial": "已根据官方来源核验",
     "lastVerified": "最后核验：{date}",
+    "pageUpdated": "页面更新：{date}",
+    "sourceChecked": "来源检查：{date}",
     "officialSources": "官方来源",
     "howWeVerify": "查看资料核验方法",
+    "launchHub": { "title": "Aniimo 上线必看", "description": "集中查看上线时间、官方下载、预下载状态和支持平台。", "release": "上线日期与时间", "download": "官方下载渠道", "preload": "预下载与解锁状态", "platforms": "平台与可用状态" },
     "groups": {
       "playDownload": { "title": "上线、下载与平台", "description": "上线时间、价格、官方下载渠道和支持设备。" },
       "gameplay": { "title": "玩法机制说明", "description": "Twine、捕获和多人玩法中已经获得官方确认的信息。" },

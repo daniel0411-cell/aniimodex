@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getPublishedGuidePosts } from '@/data/guides';
+import LaunchHub from '@/components/LaunchHub';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -110,6 +111,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <h1 className="text-2xl font-bold text-text-primary">{t('title')}</h1>
         <p className="text-sm text-text-secondary">{t('subtitle')}</p>
       </header>
+
+      <LaunchHub title={t('launchHub.title')} description={t('launchHub.description')} labels={{ release: t('launchHub.release'), download: t('launchHub.download'), preload: t('launchHub.preload'), platforms: t('launchHub.platforms') }} />
 
       {groups.map((group) => (
         <section key={group.key}>

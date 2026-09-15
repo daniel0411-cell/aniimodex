@@ -101,6 +101,10 @@ export default async function GuidePostPage({
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);
+  const sourceCheckedAt = sources.reduce(
+    (latest, source) => source.accessedAt > latest ? source.accessedAt : latest,
+    ''
+  );
   const outline = body
     .map((block, index) => block.t === 'h' || block.t === 'h3' ? { index, label: block.c, level: block.t } : null)
     .filter((item) => item !== null);
@@ -286,7 +290,8 @@ export default async function GuidePostPage({
           <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{title}</h1>
           <p className="text-base text-text-muted">{subtitle}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-muted">
-            <span>{post.date}</span>
+            <span>{t('pageUpdated', { date: post.date })}</span>
+            {sourceCheckedAt && <span>{t('sourceChecked', { date: sourceCheckedAt })}</span>}
             <span>
               {post.readMinutes} {t('minRead')}
             </span>

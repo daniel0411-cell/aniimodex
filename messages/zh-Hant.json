@@ -62,7 +62,8 @@
     "launchTasks": {
       "release": "上線日期與時間",
       "download": "官方下載管道",
-      "preload": "預下載與解鎖狀態"
+      "preload": "預下載與解鎖狀態",
+      "platforms": "平台與可用狀態"
     },
     "readGuide": "閱讀攻略",
     "latestUpdateLabel": "最新更新",
@@ -369,8 +370,11 @@
     "tableOfContents": "本文目錄",
     "verifiedOfficial": "已根據官方來源核驗",
     "lastVerified": "最後核驗：{date}",
+    "pageUpdated": "頁面更新：{date}",
+    "sourceChecked": "來源檢查：{date}",
     "officialSources": "官方來源",
     "howWeVerify": "查看資料核驗方法",
+    "launchHub": { "title": "Aniimo 上線必看", "description": "集中查看上線時間、官方下載、預下載狀態和支援平台。", "release": "上線日期與時間", "download": "官方下載管道", "preload": "預下載與解鎖狀態", "platforms": "平台與可用狀態" },
     "groups": {
       "playDownload": { "title": "上線、下載與平台", "description": "上線時間、價格、官方下載管道和支援裝置。" },
       "gameplay": { "title": "玩法機制說明", "description": "Twine、捕獲和多人玩法中已獲官方確認的資訊。" },
