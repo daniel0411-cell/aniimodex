@@ -3,10 +3,32 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { getPublishedGuidePosts } from '@/data/guides';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
+import detailsSnapshot from '@/data/official-wiki-details.json';
+import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
-const LAST_PUBLISHED = '2026-09-15';
+const LAST_PUBLISHED = '2026-09-16';
+
+const FEATURED_DEX_NUMBERS = new Set(['001', '002', '005', '007', '011']);
+const details = detailsSnapshot.details as OfficialAniimoDetail[];
+const priorityDexNumbers = new Set(
+  details
+    .map((detail) => ({
+      number: detail.number,
+      score:
+        detail.habitats.length +
+        detail.mobility.length +
+        detail.traits.length +
+        detail.skills.length +
+        detail.morphologyList.length +
+        (detail.evolution.children.length > 0 ? 1 : 0),
+    }))
+    .sort((a, b) => b.score - a.score || a.number.localeCompare(b.number))
+    .slice(0, 30)
+    .map(({ number }) => number)
+);
+FEATURED_DEX_NUMBERS.forEach((number) => priorityDexNumbers.add(number));
 
 // output: 'export' 静态导出模式下，metadata route 需提供静态参数生成
 export function generateStaticParams() {
@@ -71,11 +93,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guideUrls = getPublishedGuidePosts()
     .filter((post) => post.sourceIds?.length)
     .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.date, 0.8, 'weekly'));
-  const dexUrls = getAllAniimos().flatMap((aniimo) =>
-    buildLocalizedUrls(`/dex/${aniimo.number}/`, LAST_PUBLISHED, 0.75, 'weekly')
-  );
+  // Keep all Dex pages crawlable, but submit only the strongest English entries
+  // while Google evaluates this new site's large multilingual detail set.
+  const dexUrls = getAllAniimos()
+    .filter((aniimo) => priorityDexNumbers.has(aniimo.number))
+    .map((aniimo) => ({
+      url: `${SITE_URL}/en/dex/${aniimo.number}/`,
+      lastModified: LAST_PUBLISHED,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+      alternates: { languages: localizedLanguagesForPath(`/dex/${aniimo.number}/`) },
+    }));
   const elementUrls = ELEMENTS.flatMap((element) =>
     buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, LAST_PUBLISHED, 0.8, 'weekly')
   );
   return [...staticUrls, ...guideUrls, ...dexUrls, ...elementUrls];
+}
+
+function localizedLanguagesForPath(path: string): Record<string, string> {
+  const languages = Object.fromEntries(
+    locales.map((locale) => [locale, `${SITE_URL}/${locale}${path}`])
+  );
+  return { ...languages, 'x-default': `${SITE_URL}/${defaultLocale}${path}` };
 }
