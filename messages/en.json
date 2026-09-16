@@ -56,13 +56,13 @@
       "skills": { "label": "Mobility, traits and skills", "status": "Verified" },
       "pending": { "label": "Numeric stats and catch conditions", "status": "Pending" }
     },
-    "guideSectionTitle": "Plan for Aniimo launch",
-    "launchTasksTitle": "Before you launch Aniimo",
-    "launchTasksDescription": "The fastest answers for release time, downloads and preload status.",
+    "guideSectionTitle": "Play Aniimo now",
+    "launchTasksTitle": "Aniimo launch and download status",
+    "launchTasksDescription": "Official release status, safe downloads and supported platforms.",
     "launchTasks": {
       "release": "Release date and time",
       "download": "Official download links",
-      "preload": "Preload and unlock status",
+      "preload": "Release and download status",
       "platforms": "Platforms and availability"
     },
     "readGuide": "Read the guide",
@@ -71,8 +71,8 @@
     "latestUpdateDescription": "Added evolution trees, habitats, forms, mobility, traits and skills across 92 indexed Aniimo.",
     "viewUpdate": "View update",
     "launchStatus": "Launch status",
-    "pcLaunch": "PC & console launch",
-    "pcLaunchDate": "September 16, 2026 · 10:00 UTC+8",
+    "pcLaunch": "PC and Xbox released",
+    "pcLaunchDate": "Steam and Xbox verified available · September 16",
     "mobileStatus": "Mobile launch",
     "mobileLaunch": "iOS: September 23, 2026",
     "mobileLaunchDate": "Android date not yet confirmed",
@@ -382,15 +382,15 @@
     "groups": {
       "playDownload": { "title": "Play, download and platforms", "description": "Release date, price, official downloads and supported devices." },
       "gameplay": { "title": "Gameplay explained", "description": "Officially confirmed details about Twine, catching and multiplayer." },
-      "updates": { "title": "Official status and updates", "description": "Pre-registration and PC requirement information to check before launch." },
+      "updates": { "title": "Official status and updates", "description": "Launch availability, mobile timing and verified PC requirements." },
       "dexData": { "title": "Dex systems and official data", "description": "Elements, roles, evolution families, mobility abilities and habitat records from the official Wiki." }
     },
     "posts": {
       "aniimo-release-date": {
-        "title": "Aniimo Release Date: Global Launch Time and Pre-Registration",
-        "subtitle": "Aniimo launches on PC and console on September 16, 2026 at 10:00 UTC+8.",
+        "title": "Aniimo Release Date: Global Launch and Current Platform Status",
+        "subtitle": "Aniimo launched September 16, 2026; Steam and Xbox availability is now verified.",
         "tag": "Release",
-        "lead": "Aniimo is scheduled to launch on PC and console on September 16, 2026 at 10:00 UTC+8 as a free-to-play title. Steam may show September 15 because storefront dates vary by region and time zone; mobile dates differ.",
+        "lead": "Aniimo reached its global launch time on September 16, 2026 at 10:00 UTC+8. Steam and Xbox now expose the free base game, while mobile release timing remains separate.",
         "body": [
           {
             "t": "h",
@@ -398,7 +398,7 @@
           },
           {
             "t": "p",
-            "c": "The PlayStation Store states that Aniimo will officially launch on September 16, 2026 at 10:00 UTC+8. That is September 16 at 02:00 UTC and September 15 at 10:00 PM Eastern Daylight Time."
+            "c": "Aniimo's announced global launch time was September 16, 2026 at 10:00 UTC+8. Steam now marks the game released and Xbox exposes the free base game. The PlayStation release time has passed; check the live regional store for its current download button."
           },
           {
             "t": "h",
@@ -418,15 +418,15 @@
           },
           {
             "t": "h",
-            "c": "Can I pre-register now?"
+            "c": "Where can I download Aniimo now?"
           },
           {
             "t": "p",
-            "c": "The official Aniimo website currently offers pre-registration and links to its supported storefronts. Use the official site or the store page for your platform rather than unofficial download sites."
+            "c": "The official website now provides Download Now and Official PC Launcher actions. Steam and Xbox are verified available; use the official regional store for PlayStation and wait for the listed mobile release status."
           },
           {
             "t": "quote",
-            "c": "Release information was last checked on August 29, 2026. Store dates can display differently by region."
+            "c": "Launch availability was checked on September 16, 2026. Store buttons can still vary by platform and region."
           }
         ]
       },
@@ -445,8 +445,8 @@
             "head": ["Platform", "Official status"],
             "rows": [
               ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
-              ["Xbox Series X|S", "Official listing; launch availability shown by Xbox Store"],
-              ["Windows PC", "Steam preload available before the September 16 UTC+8 unlock"],
+              ["Xbox Series X|S", "Free base game and purchase action available"],
+              ["Windows PC", "Released on Steam; official PC launcher also available"],
               ["iOS", "App Store lists September 23, 2026"],
               ["Android", "Official Google Play route; date not confirmed"],
               ["Epic Games Store", "Linked by the official Aniimo website"]
@@ -576,12 +576,12 @@
         "body": [
           { "t": "h", "c": "Official Aniimo download options" },
           { "t": "table", "head": ["Platform", "Official route"], "rows": [["Windows PC", "Official website PC download, Steam or Epic Games Store"], ["PlayStation 5", "PlayStation Store"], ["Xbox Series X|S", "Xbox Store"], ["iPhone and iPad", "Apple App Store link on the official website"], ["Android", "Google Play link on the official website"]] },
-          { "t": "h", "c": "Official store pages and preload status" },
+          { "t": "h", "c": "Official store pages and current status" },
           { "t": "p", "c": "Steam: https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation: https://store.playstation.com/concept/10018491 · Xbox: https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6 · App Store: https://apps.apple.com/us/app/aniimo/id6759098797. These are official store pages; use the button and availability shown for your region." },
-          { "t": "h", "c": "What is the current download and preload status?" },
-          { "t": "table", "head": ["Platform", "Status checked September 15"], "rows": [["Steam", "Preload available; unlock scheduled for September 16 at 10:00 UTC+8"], ["PS5", "Pre-order campaign active before the September 16 launch"], ["Xbox", "Coming soon and pre-order packs listed"], ["iOS", "App Store lists September 23"], ["Android", "Official route available; release date not confirmed"]] },
-          { "t": "h", "c": "Can I download Aniimo before launch?" },
-          { "t": "p", "c": "Pre-registration and wishlisting do not always mean the full game client is available. Follow the status shown by the official store in your country." },
+          { "t": "h", "c": "What is the current download status?" },
+          { "t": "table", "head": ["Platform", "Status checked September 16"], "rows": [["Official PC launcher", "Download Now available on Aniimo's website"], ["Steam", "Released and free to play"], ["Xbox", "Free base game and purchase action available"], ["PS5", "Published release time has passed; verify the current regional store button"], ["iOS", "App Store lists September 23"], ["Android", "Official route available; release date not confirmed"]] },
+          { "t": "h", "c": "Where should I download Aniimo?" },
+          { "t": "p", "c": "Use Aniimo's official website, Steam, PlayStation Store or Xbox Store. Mobile availability remains separate and can differ by country." },
           { "t": "quote", "c": "Never enter your game or store credentials on an unofficial download page." }
         ]
       },
@@ -603,9 +603,9 @@
       },
       "aniimo-ps5": {
         "title": "Is Aniimo Coming to PS5? Release Date and Store Status",
-        "subtitle": "Yes. Aniimo has an official PS5 listing and launches September 16, 2026 at 10:00 UTC+8.",
+        "subtitle": "Yes. Aniimo has an official PS5 listing; its published September 16 release time has passed.",
         "tag": "PS5",
-        "lead": "Aniimo is confirmed for PlayStation 5. The official PlayStation Store lists the free-to-play launch for September 16, 2026 at 10:00 UTC+8, with pre-order packs available before launch.",
+        "lead": "Aniimo is confirmed for PlayStation 5. Its official September 16, 2026 at 10:00 UTC+8 release time has passed; use the live regional store to verify the current download button.",
         "body": [
           { "t": "h", "c": "Will Aniimo be on PS5?" },
           { "t": "p", "c": "Yes. Aniimo has an official PlayStation Store listing for PS5 published by Pawprint Interactive Entertainment." },
@@ -741,18 +741,18 @@
         ]
       },
       "aniimo-launch-time-preload": {
-        "title": "Aniimo Release Time: Global Launch Date, Time Zones and Preload",
-        "subtitle": "Aniimo launches September 16 at 10:00 UTC+8; compare regional release times and current preload status.",
+        "title": "Aniimo Release Time: Global Launch and Download Status",
+        "subtitle": "Aniimo has launched; compare the global release time and current platform availability.",
         "tag": "Launch",
-        "lead": "PlayStation lists Aniimo's launch for September 16, 2026 at 10:00 UTC+8. This page separates that confirmed time from preload details that have not yet been officially published.",
+        "lead": "Aniimo reached its announced global launch time on September 16, 2026 at 10:00 UTC+8. Steam and Xbox availability is now verified, while mobile timing remains separate.",
         "body": [
           { "t": "h", "c": "When does Aniimo launch?" },
           { "t": "table", "head": ["Region", "Local time"], "rows": [["China / Singapore (UTC+8)", "September 16, 10:00 AM"], ["UTC", "September 16, 2:00 AM"], ["US Eastern (EDT)", "September 15, 10:00 PM"], ["US Pacific (PDT)", "September 15, 7:00 PM"], ["Central Europe (CEST)", "September 16, 4:00 AM"]] },
-          { "t": "h", "c": "Can I preload Aniimo?" },
-          { "t": "p", "c": "The official sources checked for this page do not state a universal preload date or download unlock time. Store availability may differ by platform and region, so a wishlist or pre-registration button should not be treated as preload confirmation." },
+          { "t": "h", "c": "Is Aniimo available now?" },
+          { "t": "p", "c": "Yes on the verified PC and Xbox routes: Steam marks Aniimo released, the official website offers its PC launcher, and Xbox exposes the free base game. Check the regional PlayStation page for its live button; iOS remains listed for September 23 and Android timing is unconfirmed." },
           { "t": "h", "c": "Why does Steam show September 15?" },
           { "t": "p", "c": "A simultaneous launch can fall on September 15 in the Americas and September 16 in Asia. The explicit PlayStation UTC+8 time is used for the conversions above." },
-          { "t": "quote", "c": "This page will add platform-specific preload sizes and unlock times only after an official store publishes them." }
+          { "t": "quote", "c": "Platform availability was checked on September 16, 2026 and may still vary by region." }
         ]
       },
       "aniimo-crossplay-cross-save": {

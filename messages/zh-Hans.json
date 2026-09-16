@@ -56,13 +56,13 @@
       "skills": { "label": "移动能力、特性与技能", "status": "已核验" },
       "pending": { "label": "数值属性与捕获条件", "status": "待确认" }
     },
-    "guideSectionTitle": "Aniimo 上线准备",
-    "launchTasksTitle": "Aniimo 上线前先看这三项",
-    "launchTasksDescription": "快速确认上线时间、官方下载渠道和预下载状态。",
+    "guideSectionTitle": "现在开始玩 Aniimo",
+    "launchTasksTitle": "Aniimo 上线与下载状态",
+    "launchTasksDescription": "查看正式发行状态、安全下载渠道和支持平台。",
     "launchTasks": {
       "release": "上线日期与时间",
       "download": "官方下载渠道",
-      "preload": "预下载与解锁状态",
+      "preload": "发行与下载状态",
       "platforms": "平台与可用状态"
     },
     "readGuide": "阅读攻略",
@@ -71,8 +71,8 @@
     "latestUpdateDescription": "已为 92 条伊莫图鉴补充进化树、栖息地、形态、移动能力、特性与技能。",
     "viewUpdate": "查看更新",
     "launchStatus": "上线状态",
-    "pcLaunch": "PC 与主机上线",
-    "pcLaunchDate": "2026 年 9 月 16 日 · UTC+8 10:00",
+    "pcLaunch": "PC 与 Xbox 已发行",
+    "pcLaunchDate": "Steam 与 Xbox 已核验开放 · 9 月 16 日",
     "mobileStatus": "移动端上线",
     "mobileLaunch": "iOS：2026 年 9 月 23 日",
     "mobileLaunchDate": "Android 日期尚未确认",
@@ -380,15 +380,15 @@
     "groups": {
       "playDownload": { "title": "上线、下载与平台", "description": "上线时间、价格、官方下载渠道和支持设备。" },
       "gameplay": { "title": "玩法机制说明", "description": "Twine、捕获和多人玩法中已经获得官方确认的信息。" },
-      "updates": { "title": "官方状态与更新", "description": "上线前需要关注的预约和 PC 配置状态。" },
+      "updates": { "title": "官方状态与更新", "description": "发行开放情况、移动端时间和已核验 PC 配置。" },
       "dexData": { "title": "图鉴系统与官方资料", "description": "官方 Wiki 中的元素、定位、进化家族、移动能力与栖息地资料。" }
     },
     "posts": {
       "aniimo-release-date": {
-        "title": "Aniimo 发售日期：全球上线时间与预注册信息",
-        "subtitle": "Aniimo PC 与主机版将于 2026 年 9 月 16 日 10:00（UTC+8）上线。",
+        "title": "Aniimo 发售日期：全球上线与当前平台状态",
+        "subtitle": "Aniimo 已于 2026 年 9 月 16 日上线，Steam 与 Xbox 已核验开放。",
         "tag": "发售",
-        "lead": "Aniimo PC 与主机版计划于 2026 年 9 月 16 日 10:00（UTC+8）以免费游玩形式上线。Steam 因地区和时区可能显示 9 月 15 日；移动端日期不同。",
+        "lead": "Aniimo 已于 2026 年 9 月 16 日 10:00（UTC+8）到达全球上线时间。Steam 与 Xbox 现已提供免费本体，移动端发行时间另行计算。",
         "body": [
           {
             "t": "h",
@@ -396,7 +396,7 @@
           },
           {
             "t": "p",
-            "c": "PlayStation Store 明确写明，Aniimo 将于 2026 年 9 月 16 日 10:00（UTC+8）正式上线，对应 UTC 时间 9 月 16 日 02:00。"
+            "c": "Aniimo 公布的全球上线时间为 2026 年 9 月 16 日 10:00（UTC+8）。Steam 已标记正式发行，Xbox 已开放免费本体；PlayStation 公布的发行时间也已到，请在当地商店确认当前下载按钮。"
           },
           {
             "t": "h",
@@ -416,15 +416,15 @@
           },
           {
             "t": "h",
-            "c": "现在可以预注册吗？"
+            "c": "现在去哪里下载 Aniimo？"
           },
           {
             "t": "p",
-            "c": "Aniimo 官网目前提供预注册，并链接各官方商店。建议只通过官网或对应平台商店操作，不要使用非官方下载站。"
+            "c": "Aniimo 官网现已提供立即下载和官方 PC 启动器。Steam 与 Xbox 已核验开放；PlayStation 请查看当地官方商店，移动端则按各自发行状态为准。"
           },
           {
             "t": "quote",
-            "c": "发售信息最后核验于 2026 年 8 月 29 日；商店日期可能因地区不同而变化。"
+            "c": "平台开放状态核验于 2026 年 9 月 16 日；商店按钮仍可能因平台和地区不同。"
           }
         ]
       },
@@ -443,8 +443,8 @@
             "head": ["平台", "官方状态"],
             "rows": [
               ["PlayStation 5", "2026 年 9 月 16 日 10:00（UTC+8）"],
-              ["Xbox Series X|S", "Xbox 商店明确列出"],
-              ["Windows PC", "Steam 已开放预载，UTC+8 9 月 16 日解锁"],
+              ["Xbox Series X|S", "免费本体和获取操作已开放"],
+              ["Windows PC", "Steam 已正式发行，官网 PC 启动器也可下载"],
               ["iOS", "App Store 标注 2026 年 9 月 23 日"],
               ["Android", "已有官方 Google Play 入口，日期尚未确认"],
               ["Epic Games Store", "Aniimo 官网已提供 Epic 链接"]
@@ -537,9 +537,9 @@
         ]
       },
       "is-aniimo-free-to-play": { "title": "Aniimo 伊莫是免费游戏吗？价格与内购说明", "subtitle": "Steam、PlayStation 与 Xbox 官方页面均将 Aniimo 标为免费游玩。", "tag": "价格", "lead": "是的，Aniimo 是免费游玩游戏，基础游戏无需先付费购买。", "body": [{"t":"h","c":"Aniimo 伊莫需要付费购买吗？"},{"t":"p","c":"Steam、PlayStation 和 Xbox 的官方商店页面均标注免费游玩，玩家可以免费下载并开始基础游戏。"},{"t":"h","c":"游戏内会有付费内容吗？"},{"t":"p","c":"商店页面提到游戏内购买或可选礼包，具体价格和商业化方式可能因平台、地区和上线版本不同，请以上线时的官方商店为准。"},{"t":"h","c":"去哪里获取游戏？"},{"t":"p","c":"请从 Aniimo 官网进入对应平台商店，不要使用第三方安装包、修改版客户端或所谓的抢先下载页面。"}] },
-      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎么下载？PC、PS5、Xbox 与手机版下载指南", "subtitle": "从 Aniimo 官网和官方商店页面安全下载游戏。", "tag": "下载", "lead": "Aniimo 官网现已提供 PC 官方下载入口，也可从对应平台商店获取游戏；不要下载第三方 APK 或安装器。", "body": [{"t":"h","c":"Aniimo 官方下载渠道"},{"t":"table","head":["平台","官方渠道"],"rows":[["Windows PC","官网 PC 下载、Steam 或 Epic Games Store"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官网链接的 App Store"],["Android","官网链接的 Google Play"]]},{"t":"h","c":"官方商店页面与预下载状态"},{"t":"p","c":"Steam：https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation：https://store.playstation.com/concept/10018491 · Xbox：https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6。官网 PC 客户端和 Steam 预载已经开放；各平台可玩状态仍以当地商店为准。"},{"t":"h","c":"上线前可以下载吗？"},{"t":"p","c":"PC 官网客户端与 Steam 已可提前下载，主机和移动端请查看你所在地区官方商店显示的实际状态。"},{"t":"quote","c":"不要在非官方下载页面输入游戏账号或商店账号密码。"}] },
+      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎么下载？PC、PS5、Xbox 与手机版下载指南", "subtitle": "从 Aniimo 官网和官方商店页面安全下载游戏。", "tag": "下载", "lead": "Aniimo 官网现已提供 PC 官方下载入口，也可从对应平台商店获取游戏；不要下载第三方 APK 或安装器。", "body": [{"t":"h","c":"Aniimo 官方下载渠道"},{"t":"table","head":["平台","官方渠道"],"rows":[["Windows PC","官网 PC 下载、Steam 或 Epic Games Store"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官网链接的 App Store"],["Android","官网链接的 Google Play"]]},{"t":"h","c":"当前下载状态"},{"t":"table","head":["平台","9 月 16 日核验状态"],"rows":[["官网 PC 启动器","官网已显示立即下载"],["Steam","已正式发行并免费游玩"],["Xbox","免费本体与获取操作已开放"],["PS5","公布的发行时间已到，请核对当地商店按钮"],["iOS","App Store 标注 9 月 23 日"],["Android","已有官方入口，发行日期尚未确认"]]},{"t":"h","c":"应该从哪里下载？"},{"t":"p","c":"请使用 Aniimo 官网、Steam、PlayStation Store 或 Xbox Store。移动端开放情况独立，且可能因地区不同。"},{"t":"quote","c":"不要在非官方下载页面输入游戏账号或商店账号密码。"}] },
       "aniimo-mobile": { "title": "Aniimo 伊莫手游：iOS 与安卓上线情况", "subtitle": "iOS 商店标注 2026 年 9 月 23 日；Android 日期尚未确认。", "tag": "手游", "lead": "当前核验地区的官方 App Store 页面显示，Aniimo iPhone 与 iPad 版预计于 2026 年 9 月 23 日发布。官网也提供 Google Play 入口，但现有来源尚未确认 Android 的上线日期。", "body": [{"t":"h","c":"Aniimo 手游什么时候上线？"},{"t":"table","head":["平台","当前状态"],"rows":[["iPhone / iPad","App Store 标注 2026 年 9 月 23 日"],["Android","已有官方 Google Play 入口，上线日期尚未确认"],["设备要求","完整官方兼容清单尚未公布"]]},{"t":"h","c":"Aniimo 有手机版吗？"},{"t":"p","c":"有。Aniimo 官网同时列出了 App Store 和 Google Play，并与主机及 PC 商店入口并列。"},{"t":"h","c":"现在能下载手游吗？"},{"t":"p","c":"请查看你所在地区的官方商店页面。iOS 当前标注 9 月 23 日，Android 开放情况可能因地区不同，日期仍待确认。"},{"t":"h","c":"哪些手机可以运行？"},{"t":"p","c":"当前引用的官方资料没有提供完整设备兼容清单，不应采用未经来源确认的最低配置说法。"}] },
-      "aniimo-ps5": { "title": "Aniimo 伊莫会登陆 PS5 吗？发售日期与商店状态", "subtitle": "会。Aniimo 已有官方 PS5 页面，将于 2026 年 9 月 16 日 10:00（UTC+8）上线。", "tag": "PS5", "lead": "Aniimo 已确认登陆 PlayStation 5。PlayStation Store 将免费游玩本体上线时间列为 2026 年 9 月 16 日 10:00（UTC+8），上线前提供可选预购包。", "body": [{"t":"h","c":"Aniimo 会登陆 PS5 吗？"},{"t":"p","c":"会。Aniimo 已有由 Pawprint Interactive Entertainment 发布的官方 PS5 商店页面。"},{"t":"h","c":"Aniimo PS5 版什么时候上线？"},{"t":"p","c":"PlayStation Store 标注 2026 年 9 月 16 日 10:00（UTC+8），对应 UTC 时间 9 月 16 日 02:00。"},{"t":"h","c":"Aniimo PS5 版免费吗？"},{"t":"p","c":"免费。基础游戏标注为免费游玩；付费预购包包含可选游戏内奖励，不改变本体免费状态。"},{"t":"h","c":"PS5 版需要联网吗？"},{"t":"p","c":"PlayStation 页面标注需要在线游玩，并提示游戏内购买和用户互动；地区账号或订阅要求请以实时商店页面为准。"}] },
+      "aniimo-ps5": { "title": "Aniimo 伊莫会登陆 PS5 吗？发售日期与商店状态", "subtitle": "会。Aniimo 已有官方 PS5 页面，公布的 9 月 16 日发行时间已经到达。", "tag": "PS5", "lead": "Aniimo 已确认登陆 PlayStation 5。官方公布的 2026 年 9 月 16 日 10:00（UTC+8）发行时间已经到达，请通过当地 PlayStation Store 核对当前下载按钮。", "body": [{"t":"h","c":"Aniimo 会登陆 PS5 吗？"},{"t":"p","c":"会。Aniimo 已有由 Pawprint Interactive Entertainment 发布的官方 PS5 商店页面。"},{"t":"h","c":"Aniimo PS5 版什么时候上线？"},{"t":"p","c":"PlayStation Store 标注 2026 年 9 月 16 日 10:00（UTC+8），对应 UTC 时间 9 月 16 日 02:00；该时间现已到达。"},{"t":"h","c":"Aniimo PS5 版免费吗？"},{"t":"p","c":"免费。基础游戏标注为免费游玩；付费礼包包含可选游戏内奖励，不改变本体免费状态。"},{"t":"h","c":"PS5 版需要联网吗？"},{"t":"p","c":"PlayStation 页面标注需要在线游玩，并提示游戏内购买和用户互动；下载按钮、地区账号或订阅要求请以实时商店页面为准。"}] },
       "is-aniimo-a-gacha-game": { "title": "Aniimo 伊莫是抽卡游戏吗？官方信息说明", "subtitle": "Aniimo 是免费游戏并含内购，但官方商店没有将其定义为抽卡游戏。", "tag": "付费模式", "lead": "根据当前核验的官方资料，还不能准确把 Aniimo 定义为抽卡游戏。商店确认免费游玩和游戏内购买，官网也提到部分随机伊莫蛋奖励，但这些信息本身不能证明存在付费角色抽取系统。", "body": [{"t":"h","c":"官方称 Aniimo 是抽卡游戏吗？"},{"t":"p","c":"没有。官网和主要商店将 Aniimo 描述为免费游玩的捉宠开放世界 RPG，没有使用抽卡游戏这一分类。"},{"t":"h","c":"Aniimo 有游戏内购买吗？"},{"t":"p","c":"有。Steam、PlayStation 和 Xbox 披露了游戏内购买或可选付费包，但尚不能据此确认上线后的完整付费机制。"},{"t":"h","c":"随机伊莫蛋代表抽卡吗？"},{"t":"p","c":"官方预约活动提到随机完美伊莫蛋奖励；一次活动奖励不等于可反复付费抽取的召唤系统。"},{"t":"h","c":"哪些内容仍未确认？"},{"t":"p","c":"当前来源没有公布完整的付费抽取规则、卡池、货币或概率表。只有官方说明或上线后可复现实测能够确认这些机制。"}] },
       "aniimo-nintendo-switch": { "title": "Aniimo 伊莫会上 Nintendo Switch 吗？官方状态说明", "subtitle": "Nintendo Switch 尚未出现在 Aniimo 当前官方平台列表中。", "tag": "平台", "lead": "截至本页核验时间，没有官方资料确认 Aniimo 会登陆 Nintendo Switch。", "body": [{"t":"h","c":"Aniimo 有 Switch 版吗？"},{"t":"p","c":"目前没有。Aniimo 官网列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但没有 Nintendo Switch。"},{"t":"h","c":"以后可能推出 Switch 版吗？"},{"t":"p","c":"平台计划未来可能变化，但现在没有可以核实的官方消息。只有 Aniimo 或任天堂正式公布后，本页才会更新为已确认。"}] },
       "aniimo-twine-explained": { "title": "Aniimo Twine 玩法是什么？变身、探索与战斗说明", "subtitle": "Twine 允许探索者变成已经收集的伊莫并使用它们的能力。", "tag": "玩法", "lead": "Twine 是 Aniimo 的核心系统之一：探索者可以变成已收集的伊莫，在探索、解谜和战斗中使用对应能力。", "body": [{"t":"h","c":"Twine 是什么意思？"},{"t":"p","c":"官方描述称玩家可以与已收集的伊莫 Twine。已公布的例子包括滑翔、潜水和钻地，并利用不同能力探索世界。"},{"t":"h","c":"Twine 能做什么？"},{"t":"li","c":"穿越地形并到达新区域"},{"t":"li","c":"解决环境谜题"},{"t":"li","c":"在实时战斗中使用伊莫能力"},{"t":"h","c":"哪些伊莫拥有对应能力？"},{"t":"p","c":"当前引用的官方资料没有公布完整的伊莫与能力对应表，社区图鉴中的映射仍处于核验状态。"}] },
@@ -548,7 +548,7 @@
       "aniimo-pre-registration": { "title": "Aniimo 伊莫预约指南：官方入口与上线时间", "subtitle": "通过 Aniimo 官网提供的商店链接进行预约或加入愿望单。", "tag": "更新", "lead": "Aniimo 官网提供预约和各平台商店入口，不同平台与地区可能分别显示预约、愿望单或预购。", "body": [{"t":"h","c":"Aniimo 怎么预约？"},{"t":"p","c":"进入 Aniimo 官网，选择你的平台并打开官方商店链接。根据平台不同，按钮可能显示为预约、加入愿望单或预购。"},{"t":"h","c":"预约有什么奖励？"},{"t":"p","c":"奖励细节可能随活动和地区变化，请只采用官网或官方商店当时展示的信息。"},{"t":"h","c":"什么时候上线？"},{"t":"p","c":"PlayStation Store 公布的全球上线时间为 2026 年 9 月 16 日 10:00（UTC+8）；部分时区的商店可能显示前一天。"}] },
       "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置要求：最低与推荐配置", "subtitle": "官方 Windows CPU、内存、显卡、DirectX 与 30 GB 存储要求。", "tag": "PC", "lead": "Epic Games Store 已公布 Aniimo 的完整 Windows 最低与推荐配置，两档均需要 30 GB，推荐配置要求 SSD。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩吗？"},{"t":"p","c":"可以。Steam、Epic 和 Xbox 页面均确认 PC/Windows 支持。"},{"t":"h","c":"Aniimo 最低配置是什么？"},{"t":"table","head":["项目","最低配置"],"rows":[["系统","Windows 10"],["处理器","Intel i5 第 9 代或 AMD Ryzen 7 2700"],["内存","8 GB"],["显卡","GTX 1060、RX 580 或 Intel Arc A580"],["DirectX","DirectX 11"],["存储","30 GB"]]},{"t":"h","c":"Aniimo 推荐配置是什么？"},{"t":"table","head":["项目","推荐配置"],"rows":[["系统","Windows 11"],["处理器","Intel i7 第 9 代或 AMD Ryzen 7 3700"],["内存","16 GB"],["显卡","RTX 3060 或 RX 6600 及以上"],["DirectX","DirectX 12"],["存储","30 GB SSD"]]},{"t":"h","c":"支持 macOS 吗？"},{"t":"p","c":"当前官方商店只确认 Windows，尚未确认 macOS 版本。"}] },
       "official-aniimo-dex-status": { "title": "Aniimo 官方图鉴覆盖：AniimoDex 已核验哪些字段", "subtitle": "公开说明 AniimoDex 使用的官方 Wiki 快照和逐字段核验状态。", "tag": "数据状态", "lead": "AniimoDex 当前收录 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 条编号记录，只将快照中明确存在的字段标为已核验。", "body": [{"t":"h","c":"目前已核验什么？"},{"t":"table","head":["字段","状态"],"rows":[["编号、名称与图片","来自官方 Wiki 索引"],["描述、元素、定位与阶段","来自官方 Wiki 数据"],["进化、栖息地与形态","来自官方 Wiki 详情页"],["移动能力、特性与技能","来自官方 Wiki 详情页"],["数值属性与捕获条件","尚未作为已核验数据发布"]]},{"t":"h","c":"目前图鉴可以查看什么？"},{"t":"p","c":"元素与定位筛选支持双元素伊莫。每个详情页现在还会展示官方进化、栖息地、形态、移动能力、特性与技能；数值属性和准确捕获条件仍暂不公开。"},{"t":"h","c":"数据如何更新？"},{"t":"p","c":"可重复运行的解析脚本读取官方 Wiki 公开索引与详情页，验证记录完整性并保存带日期的快照。官方数据变化会先经过差异检查，再发布到线上。"},{"t":"quote","c":"已核验标签只适用于明确列出的字段，不代表该伊莫的所有信息都已确认。"}] },
-      "aniimo-launch-time-preload": { "title": "Aniimo 伊莫全球上线时间与预下载状态", "subtitle": "已确认的全球开放时间、时区换算和当前预载状态。", "tag": "上线", "lead": "PlayStation 公布 Aniimo 将于 2026 年 9 月 16 日 10:00（UTC+8）上线；预下载日期仍未由当前官方来源统一公布。", "body": [{"t":"h","c":"Aniimo 几点上线？"},{"t":"table","head":["地区","当地时间"],"rows":[["中国/新加坡 UTC+8","9 月 16 日 10:00"],["UTC","9 月 16 日 02:00"],["美国东部 EDT","9 月 15 日 22:00"],["美国西部 PDT","9 月 15 日 19:00"],["欧洲中部 CEST","9 月 16 日 04:00"]]},{"t":"h","c":"可以预下载吗？"},{"t":"p","c":"当前核验的官方来源没有公布所有平台统一的预下载日期或解锁时间。预约和愿望单不等于已经确认预载。"},{"t":"h","c":"为什么 Steam 显示 9 月 15 日？"},{"t":"p","c":"同一全球开放时刻在美洲仍是 9 月 15 日，在亚洲已经是 9 月 16 日。上表以 PlayStation 明确公布的 UTC+8 时间换算。"},{"t":"quote","c":"各平台预载时间和安装大小只会在官方商店公布后补充。"}] },
+      "aniimo-launch-time-preload": { "title": "Aniimo 伊莫全球上线时间与当前下载状态", "subtitle": "Aniimo 已正式上线，查看全球发行时间和各平台当前开放情况。", "tag": "上线", "lead": "Aniimo 已于 2026 年 9 月 16 日 10:00（UTC+8）到达公布的全球上线时间。Steam 与 Xbox 已核验开放，移动端时间仍独立。", "body": [{"t":"h","c":"Aniimo 几点上线？"},{"t":"table","head":["地区","当地时间"],"rows":[["中国/新加坡 UTC+8","9 月 16 日 10:00"],["UTC","9 月 16 日 02:00"],["美国东部 EDT","9 月 15 日 22:00"],["美国西部 PDT","9 月 15 日 19:00"],["欧洲中部 CEST","9 月 16 日 04:00"]]},{"t":"h","c":"Aniimo 现在可以玩吗？"},{"t":"p","c":"已核验的 PC 与 Xbox 渠道可以：Steam 已标记发行，官网提供 PC 启动器，Xbox 已开放免费本体。PlayStation 请查看当地商店当前按钮；iOS 仍标注 9 月 23 日，Android 时间尚未确认。"},{"t":"h","c":"为什么 Steam 显示 9 月 15 日？"},{"t":"p","c":"同一全球开放时刻在美洲仍是 9 月 15 日，在亚洲已经是 9 月 16 日。上表以 PlayStation 明确公布的 UTC+8 时间换算。"},{"t":"quote","c":"平台开放状态核验于 2026 年 9 月 16 日，仍可能因地区不同。"}] },
       "aniimo-crossplay-cross-save": { "title": "Aniimo 伊莫支持跨平台联机和跨平台存档吗？", "subtitle": "支持跨平台多人；跨平台存档和进度互通尚未确认，查看当前官方状态。", "tag": "多人", "lead": "支持。Steam 已列出 Aniimo 的跨平台多人功能；跨平台存档和进度互通属于不同能力，截至 2026 年 9 月 15 日仍未获官方来源确认。", "body": [{"t":"h","c":"Aniimo 支持跨平台联机吗？"},{"t":"p","c":"Steam 页面列出跨平台多人，但没有说明每一种平台组合和活动的具体支持范围。"},{"t":"h","c":"支持跨平台存档吗？"},{"t":"p","c":"当前官方来源没有完整的账号绑定与进度转移政策。支持跨平台联机不代表存档、付费货币或礼包一定能在不同商店间转移。"},{"t":"h","c":"还有哪些信息待确认？"},{"t":"li","c":"PC、主机和手机之间的具体联机组合"},{"t":"li","c":"同一账号是否在所有平台共享进度"},{"t":"li","c":"付费货币和礼包是否跨商店共享"},{"t":"quote","c":"Pawprint Studio 公布账号或跨进度 FAQ 后，本页会更新。"}] },
       "aniimo-language-controller-support": { "title": "Aniimo 伊莫语言、手柄与 Steam Deck 支持状态", "subtitle": "整理语言选项、PC 手柄和掌机兼容性的当前官方状态。", "tag": "兼容性", "lead": "Aniimo 已有 PC 与主机官方页面，但上线前并非所有兼容性细节都已稳定公开。", "body": [{"t":"h","c":"Aniimo 支持手柄吗？"},{"t":"p","c":"主机版本会使用对应平台手柄，但当前来源没有提供最终 PC 手柄矩阵、完整键位表或所有第三方手柄兼容清单。"},{"t":"h","c":"支持 Steam Deck 吗？"},{"t":"p","c":"当前注册来源没有确认 Steam Deck 兼容等级。Steam 上支持 Windows 并不能直接证明 Deck 已验证或性能稳定。"},{"t":"h","c":"支持哪些语言？"},{"t":"p","c":"商店语言表在上线前可能变化，并会分别标注界面、字幕与语音。完整稳定清单公布前，请以对应官方商店实时页面为准。"},{"t":"h","c":"上线后会测试什么？"},{"t":"li","c":"键鼠按键自定义"},{"t":"li","c":"Xbox、DualSense 与通用 PC 手柄"},{"t":"li","c":"Steam Deck 启动、操作与性能"},{"t":"li","c":"界面、字幕和语音语言选项"}] },
       "aniimo-elements-explained": { "title": "Aniimo 伊莫元素详解：全部 9 种属性", "subtitle": "了解官方元素标签如何组织伊莫图鉴。", "tag": "元素", "lead": "官方 Aniimo Wiki 使用九种元素标签，AniimoDex 仅按这些标签整理图鉴，不据此推断强度排名。" },

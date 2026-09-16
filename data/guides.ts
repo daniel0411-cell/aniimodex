@@ -52,14 +52,14 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-release-date',
-    date: '2026-09-14',
+    date: '2026-09-16',
     readMinutes: 4,
     relatedSlugs: ['what-is-aniimo', 'aniimo-platforms', 'is-aniimo-free-to-play'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
   },
   {
     slug: 'aniimo-platforms',
-    date: '2026-09-15',
+    date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-crossplay-cross-save'],
     sourceIds: [
@@ -169,7 +169,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
-    date: '2026-09-14',
+    date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-pre-registration', 'aniimo-mobile'],
     sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
