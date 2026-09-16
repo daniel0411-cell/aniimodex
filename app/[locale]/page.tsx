@@ -7,6 +7,7 @@ import LaunchHub from '@/components/LaunchHub';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getAllAniimos } from '@/lib/aniimo';
 import { evolutionFamilies, habitatGroups, mobilityGroups } from '@/data/aniimo-collections';
+import { getLaunchGuide } from '@/data/launch-guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -46,6 +47,7 @@ export async function generateMetadata({
 
 const featuredNumbers = ['001', '002', '005', '007', '011'];
 const guideSlugs = ['aniimo-pre-registration', 'aniimo-mobile', 'aniimo-launch-time-preload', 'aniimo-platforms'] as const;
+const launchFeatureSlugs = ['aniimo-launch-checklist-known-issues', 'aniimo-choose-by-mobility-role', 'aniimo-launch-watchlist'] as const;
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -151,6 +153,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="pointer-events-none absolute -bottom-8 -right-5 hidden h-44 w-44 md:block"><Image src={aniimoByNumber.get('016')?.imageUrl ?? '/images/logo-mascot.jpg'} alt="" fill sizes="176px" className="object-contain opacity-90" /></div>
       </section>
       <LaunchHub title={th('launchTasksTitle')} description={th('launchTasksDescription')} labels={{ release: th('launchTasks.release'), download: th('launchTasks.download'), preload: th('launchTasks.preload'), platforms: th('launchTasks.platforms') }} />
+      <section className="border-y border-emerald-200 bg-emerald-50 px-5 py-7 sm:px-8">
+        <div className="mb-5"><p className="text-xs font-semibold uppercase text-emerald-700">Launch guides</p><h2 className="mt-1 text-2xl font-bold text-text-primary">{locale === 'en' ? 'Start with verified launch information' : locale === 'zh-Hant' ? '從已核驗的首發資料開始' : '从已核验的首发资料开始'}</h2></div>
+        <div className="grid gap-3 md:grid-cols-3">{launchFeatureSlugs.map((slug) => { const guide = getLaunchGuide(locale, slug)!; return <Link key={slug} href={`/guide/${slug}`} className="border-t-4 border-secondary bg-white p-5"><span className="text-xs font-semibold uppercase text-emerald-700">{guide.tag}</span><h3 className="mt-2 text-lg font-bold text-text-primary">{guide.title}</h3><p className="mt-2 line-clamp-3 text-sm leading-6 text-text-secondary">{guide.subtitle}</p><span className="mt-4 inline-flex text-sm font-semibold text-primary-light">{th('readGuide')} →</span></Link>; })}</div>
+      </section>
       <section className="border-t-4 border-secondary bg-emerald-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
         <div><p className="text-xs font-semibold uppercase text-emerald-700">{th('latestUpdateLabel')}</p><h2 className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">{th('latestUpdateDescription')}</p></div>
         <Link href="/guide/official-aniimo-dex-status" className="mt-4 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0">{th('viewUpdate')} →</Link>

@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getPublishedGuidePosts } from '@/data/guides';
 import LaunchHub from '@/components/LaunchHub';
+import { getLaunchGuide } from '@/data/launch-guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -61,7 +62,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-launch-time-preload', 'aniimo-platforms', 'aniimo-ps5', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
     { key: 'gameplay', slugs: ['what-is-aniimo', 'is-aniimo-a-gacha-game', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer', 'aniimo-crossplay-cross-save'] },
     { key: 'dexData', slugs: ['aniimo-elements-explained', 'aniimo-roles-explained', 'aniimo-evolution-system', 'aniimo-mobility-abilities', 'aniimo-habitats-locations'] },
-    { key: 'updates', slugs: ['official-aniimo-dex-status', 'aniimo-launch-coverage-status', 'aniimo-language-controller-support', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
+    { key: 'updates', slugs: ['aniimo-launch-checklist-known-issues', 'aniimo-choose-by-mobility-role', 'aniimo-launch-watchlist', 'official-aniimo-dex-status', 'aniimo-launch-coverage-status', 'aniimo-language-controller-support', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
   ];
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
@@ -123,16 +124,16 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(0, 1).map((post) => (
               <Link key={post.slug} href={`/guide/${post.slug}`} className="border-t-4 border-primary bg-white p-5 shadow-card">
-                <span className="text-xs font-semibold uppercase text-primary-light">{tp(`${post.slug}.tag`)}</span>
-                <h3 className="mt-2 text-xl font-bold text-text-primary">{tp(`${post.slug}.title`)}</h3>
-                <p className="mt-2 text-sm leading-6 text-text-secondary">{tp(`${post.slug}.subtitle`)}</p>
+                <span className="text-xs font-semibold uppercase text-primary-light">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.tag : tp(`${post.slug}.tag`)}</span>
+                <h3 className="mt-2 text-xl font-bold text-text-primary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.title : tp(`${post.slug}.title`)}</h3>
+                <p className="mt-2 text-sm leading-6 text-text-secondary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.subtitle : tp(`${post.slug}.subtitle`)}</p>
                 <p className="mt-4 text-xs text-text-muted">{post.date} · {post.readMinutes} {t('minRead')} · {post.sourceIds?.length ?? 0} {t('sources')}</p>
               </Link>
             ))}
             <div className="border-t border-ink-border">
               {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(1).map((post) => (
                 <Link key={post.slug} href={`/guide/${post.slug}`} className="grid gap-1 border-b border-ink-border py-3 sm:grid-cols-[1fr_auto] sm:items-center">
-                  <span className="text-sm font-semibold text-text-primary">{tp(`${post.slug}.title`)}</span>
+                  <span className="text-sm font-semibold text-text-primary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.title : tp(`${post.slug}.title`)}</span>
                   <span className="text-xs text-text-muted">{post.date} · {post.sourceIds?.length ?? 0} {t('sources')}</span>
                 </Link>
               ))}

@@ -11,6 +11,7 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getGuidePost, getPublishedGuidePosts } from '@/data/guides';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
+import { getLaunchGuide } from '@/data/launch-guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -40,8 +41,9 @@ export async function generateMetadata({
     return { title: siteName };
   }
 
-  const title = `${t(`${post.slug}.title`)} | ${siteName}`;
-  const description = t(`${post.slug}.subtitle`);
+  const launchGuide = getLaunchGuide(locale, post.slug);
+  const title = `${launchGuide?.title ?? t(`${post.slug}.title`)} | ${siteName}`;
+  const description = launchGuide?.subtitle ?? t(`${post.slug}.subtitle`);
   const path = `/guide/${slug}/`;
 
   return {
@@ -87,17 +89,18 @@ export default async function GuidePostPage({
   if (!post || post.published === false) notFound();
 
   // 文章标题与正文（正文为结构化块数组，直接从原始 messages 读取避免 next-intl 干扰）
-  const title = tp(`${post.slug}.title`);
-  const subtitle = tp(`${post.slug}.subtitle`);
-  const tag = tp(`${post.slug}.tag`);
-  const lead = tp(`${post.slug}.lead`);
+  const launchGuide = getLaunchGuide(locale, post.slug);
+  const title = launchGuide?.title ?? tp(`${post.slug}.title`);
+  const subtitle = launchGuide?.subtitle ?? tp(`${post.slug}.subtitle`);
+  const tag = launchGuide?.tag ?? tp(`${post.slug}.tag`);
+  const lead = launchGuide?.lead ?? tp(`${post.slug}.lead`);
   const messages = await getMessages();
   const body = post.dataTopic
     ? (['meaning', 'confirmed', 'unknown'] as const).flatMap((key) => [
         { t: 'h', c: tg(`dataTopics.${post.dataTopic}.${key}.heading`) },
         { t: 'p', c: tg(`dataTopics.${post.dataTopic}.${key}.content`) },
       ] as Block[])
-    : (messages.guide.posts[post.slug].body ?? []) as Block[];
+    : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);
@@ -363,15 +366,16 @@ export default async function GuidePostPage({
             {post.relatedSlugs.map((relSlug) => {
               const rel = getGuidePost(relSlug);
               if (!rel) return null;
+              const relatedLaunchGuide = getLaunchGuide(locale, rel.slug);
               return (
                 <Link key={relSlug} href={`/guide/${relSlug}`} className="group">
                   <Card className="flex h-full flex-col" interactive>
-                    <Badge label={tp(`${rel.slug}.tag`)} />
+                    <Badge label={relatedLaunchGuide ? relatedLaunchGuide.tag : tp(`${rel.slug}.tag`)} />
                     <h3 className="mt-3 font-semibold text-text-primary transition-colors group-hover:text-primary-light">
-                      {tp(`${rel.slug}.title`)}
+                      {relatedLaunchGuide ? relatedLaunchGuide.title : tp(`${rel.slug}.title`)}
                     </h3>
                     <p className="mt-1 line-clamp-2 text-sm text-text-muted">
-                      {tp(`${rel.slug}.subtitle`)}
+                      {relatedLaunchGuide ? relatedLaunchGuide.subtitle : tp(`${rel.slug}.subtitle`)}
                     </p>
                   </Card>
                 </Link>
