@@ -147,7 +147,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-pre-registration',
-    date: '2026-09-15',
+    date: '2026-09-16',
     readMinutes: 4,
     relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
@@ -176,10 +176,17 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
-    date: '2026-09-15',
+    date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-multiplayer', 'aniimo-platforms', 'how-to-download-aniimo', 'aniimo-system-requirements'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
+  },
+  {
+    slug: 'aniimo-face-data-import',
+    date: '2026-09-16',
+    readMinutes: 4,
+    relatedSlugs: ['aniimo-launch-checklist-known-issues', 'aniimo-language-controller-support', 'what-is-aniimo'],
+    sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
     slug: 'aniimo-language-controller-support',

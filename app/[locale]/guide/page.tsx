@@ -60,7 +60,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const guidePosts = getPublishedGuidePosts();
   const groups = [
     { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-launch-time-preload', 'aniimo-platforms', 'aniimo-ps5', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
-    { key: 'gameplay', slugs: ['what-is-aniimo', 'is-aniimo-a-gacha-game', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer', 'aniimo-crossplay-cross-save'] },
+    { key: 'gameplay', slugs: ['what-is-aniimo', 'is-aniimo-a-gacha-game', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer', 'aniimo-crossplay-cross-save', 'aniimo-face-data-import'] },
     { key: 'dexData', slugs: ['aniimo-elements-explained', 'aniimo-roles-explained', 'aniimo-evolution-system', 'aniimo-mobility-abilities', 'aniimo-habitats-locations'] },
     { key: 'updates', slugs: ['aniimo-launch-checklist-known-issues', 'aniimo-choose-by-mobility-role', 'aniimo-launch-watchlist', 'official-aniimo-dex-status', 'aniimo-launch-coverage-status', 'aniimo-language-controller-support', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
   ];

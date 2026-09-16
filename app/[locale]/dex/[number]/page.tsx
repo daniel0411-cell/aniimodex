@@ -77,7 +77,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
-  const title = `${displayName} Aniimo Dex | ${siteName}`;
+  const title = aniimo.number === '069'
+    ? `Cubbo Aniimo Dex #069: Evolution, Skills and Location | ${siteName}`
+    : `${displayName} Aniimo Dex | ${siteName}`;
   const elements = aniimo.officialElements?.map((element) => td(`elementNames.${element}`)).join(', ');
   const role = aniimo.officialRole ? td(`roleNames.${aniimo.officialRole}`) : '';
   const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;
@@ -227,6 +229,7 @@ export default async function DexDetailPage({ params }: PageProps) {
           </div>
           <h1 className="mt-3 text-3xl font-bold text-text-primary sm:text-4xl">{aniimo.name}</h1>
           <p className="mt-1 text-text-secondary">{aniimo.enName}</p>
+          {aniimo.number === '069' && <p className="mt-2 text-sm font-medium text-primary-light">{locale === 'en' ? 'Also searched as “Aniimo Cubbo” and “Cubbo Aniimo”.' : locale === 'zh-Hant' ? '玩家也會搜尋「Aniimo Cubbo」與「Cubbo Aniimo」。' : '玩家也会搜索“Aniimo Cubbo”和“Cubbo Aniimo”。'}</p>}
           <div className="mt-4 flex flex-wrap gap-2">
             {aniimo.officialElements?.map((element) => (
               <Link key={element} href={`/elements/${element.toLowerCase()}`} className={cn('rounded border px-2.5 py-1 text-xs', ELEMENT_BADGE_CLASSES[element])}>
