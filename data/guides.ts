@@ -90,7 +90,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'how-to-download-aniimo',
-    date: '2026-09-15',
+    date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-platforms', 'aniimo-pre-registration'],
     sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
@@ -133,10 +133,10 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-catching-guide',
-    date: '2026-08-30',
+    date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-twine-explained', 'what-is-aniimo'],
-    sourceIds: ['aniimo-playstation-10018491'],
+    sourceIds: ['aniimo-playstation-10018491', 'aniimo-official-probabilities-2026-09-16'],
   },
   {
     slug: 'aniimo-multiplayer',
@@ -154,10 +154,10 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-system-requirements',
-    date: '2026-08-30',
+    date: '2026-09-16',
     readMinutes: 4,
     relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-epic-759396'],
   },
   {
     slug: 'official-aniimo-dex-status',

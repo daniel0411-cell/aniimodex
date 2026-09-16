@@ -64,9 +64,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'catch-formula',
-    claim: 'Current base catch rates and catch probability formula.',
-    status: 'unknown',
-    checkedAt: '2026-08-28',
-    sourceIds: [],
+    claim: 'Catch formulas and their published modifiers are available in the official probability disclosure.',
+    status: 'official',
+    checkedAt: '2026-09-16',
+    sourceIds: ['aniimo-official-probabilities-2026-09-16'],
   },
 ];

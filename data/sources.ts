@@ -55,6 +55,22 @@ export const sources: SourceReference[] = [
     evidence:
       'The official Aniimo App Store listing shows September 23, 2026 for iPhone and iPad in the storefronts checked. This date does not confirm the Android release date.',
   },
+  {
+    id: 'aniimo-epic-759396',
+    url: 'https://store.epicgames.com/p/aniimo-759396',
+    title: 'Aniimo on the Epic Games Store',
+    accessedAt: '2026-09-16',
+    evidence:
+      'The Epic Games Store publishes the Windows minimum and recommended CPU, memory, GPU, DirectX and storage requirements for Aniimo.',
+  },
+  {
+    id: 'aniimo-official-probabilities-2026-09-16',
+    url: 'https://www.aniimo.com/zh-tw/formula-multipliers',
+    title: 'Aniimo Official Probability Disclosure',
+    accessedAt: '2026-09-16',
+    evidence:
+      'The official disclosure publishes catch formulas, regional base rates, level, cube, HP, backstrike and status multipliers, plus selected drop and shiny-style probabilities.',
+  },
 ];
 
 export const sourceById = new Map(sources.map((source) => [source.id, source]));
