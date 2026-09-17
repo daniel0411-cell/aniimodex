@@ -305,6 +305,12 @@ export default async function GuidePostPage({
               <span className="ml-2">{t('lastVerified', { date: post.date })}</span>
             </div>
           )}
+          {post.slug === 'aniimo-pre-registration' && (
+            <div className="border-l-4 border-accent bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-950">
+              <strong>{locale === 'en' ? 'Post-launch status:' : locale === 'zh-Hant' ? '上線後狀態：' : '上线后状态：'}</strong>{' '}
+              {locale === 'en' ? 'Use official store links to download the game. Pre-registration reward eligibility depends on the current campaign terms, account, region and platform.' : locale === 'zh-Hant' ? '請透過官方商店連結下載遊戲；預約獎勵資格以目前活動條款、帳號、地區和平台為準。' : '请通过官方商店链接下载游戏；预约奖励资格以当前活动条款、账号、地区和平台为准。'}
+            </div>
+          )}
           <p className="mt-3 text-base leading-relaxed text-text-primary">{lead}</p>
         </header>
 

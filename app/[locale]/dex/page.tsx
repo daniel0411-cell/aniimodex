@@ -174,6 +174,11 @@ export default function DexPage() {
         </p>
       </header>
 
+      <section className="border-l-4 border-secondary bg-emerald-50 px-5 py-4">
+        <h2 className="font-semibold text-emerald-950">{td('definitionTitle')}</h2>
+        <p className="mt-1 max-w-4xl text-sm leading-6 text-emerald-950">{td('definition')}</p>
+      </section>
+
       <div className="grid items-start gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
       {/* 筛选栏 */}
       <aside className="rounded-md border border-ink-border bg-white/90 p-3 shadow-card backdrop-blur-xl lg:sticky lg:top-20 lg:p-4">
