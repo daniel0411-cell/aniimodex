@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}/tools/twine/`,
       languages: localizedLanguages('/tools/twine/'),

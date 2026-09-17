@@ -65,6 +65,12 @@ export default function TwinePage() {
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
+      <section className="border-y border-ink-border bg-white px-5 py-4 text-sm leading-6 text-text-secondary">
+        <h2 className="font-semibold text-text-primary">{t('howItWorksTitle')}</h2>
+        <p className="mt-1">{t('howItWorksDescription')}</p>
+        <p className="mt-2 text-xs text-emerald-700">{t('sourceScope')}</p>
+      </section>
+
       <div className="grid items-start gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
       {/* 能力选择区 */}
       <section className="space-y-3 border-t-4 border-primary bg-white p-4 lg:sticky lg:top-20">
@@ -144,6 +150,18 @@ export default function TwinePage() {
       )}
       </div>
       </div>
+
+      <section className="border-t border-ink-border pt-6">
+        <h2 className="text-xl font-bold text-text-primary">{t('abilityGuideTitle')}</h2>
+        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {ABILITY_OPTIONS.map((option) => (
+            <article key={option.id} className="border-l-4 border-primary bg-white px-4 py-3">
+              <h3 className="font-semibold text-text-primary">{TWINE_ICONS[option.value]} {tr(`twineAbility.${option.value}`)}</h3>
+              <p className="mt-1 text-xs leading-5 text-text-secondary">{t(`abilityDescriptions.${option.id}`)}</p>
+            </article>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

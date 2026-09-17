@@ -19,6 +19,7 @@ import { cn } from '@/lib/utils';
 // 元素/角色/能力选项（用于参数校验）
 const VALID_ELEMENTS = ELEMENTS as string[];
 const VALID_ROLES = ROLES as string[];
+const FEATURED_DETAIL_NUMBERS = ['001', '003', '007', '009', '012', '019', '022', '024', '029', '035', '043', '080'];
 
 /** 卡片组件 */
 function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
@@ -348,6 +349,15 @@ export default function DexPage() {
           <Link href="/abilities">{td('browseAbilities')} →</Link>
           <Link href="/tools/type-chart">{td('browseMatchups')} →</Link>
         </nav>
+      </section>
+      <section className="border-t border-ink-border pt-8">
+        <h2 className="text-xl font-semibold text-text-primary">{td('featuredDetailsTitle')}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{td('featuredDetailsDescription')}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {getAllAniimos().filter((item) => FEATURED_DETAIL_NUMBERS.includes(item.number)).map((item) => (
+            <Link key={item.number} href={`/dex/${item.number}`} className="rounded border border-ink-border bg-white px-3 py-2 text-sm font-semibold text-text-secondary hover:border-primary-light hover:text-primary-light">#{item.number} {item.enName}</Link>
+          ))}
+        </div>
       </section>
       </div>
       </div>
