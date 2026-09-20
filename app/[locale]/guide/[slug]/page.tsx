@@ -12,6 +12,9 @@ import { getGuidePost, getPublishedGuidePosts } from '@/data/guides';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
 import { getLaunchGuide } from '@/data/launch-guides';
+import { formIndex } from '@/data/forms';
+import { getAniimoByNumber } from '@/lib/aniimo';
+import AniimoLinkList from '@/components/dex/AniimoLinkList';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -326,6 +329,31 @@ export default async function GuidePostPage({
         </header>
 
         <div className="pt-2">{renderedBody}</div>
+
+        {post.slug === 'aniimo-forms-explained' && (
+          <section className="mt-8 border-t border-ink-border pt-6">
+            <h2 className="text-xl font-bold text-text-primary">
+              {locale === 'en' ? 'Official Prismana and region form directory' : locale === 'zh-Hant' ? '官方 Prismana 與區域形態目錄' : '官方 Prismana 与区域形态目录'}
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-text-secondary">
+              {locale === 'en' ? 'Members below come directly from the official Wiki morphology snapshot. A listed form name does not establish stat, element or ability differences.' : locale === 'zh-Hant' ? '以下成員直接來自官方 Wiki 形態快照。列出形態名不代表已確認屬性、元素或能力差異。' : '以下成员直接来自官方 Wiki 形态快照。列出形态名不代表已确认属性、元素或能力差异。'}
+            </p>
+            <div className="mt-5 space-y-5">
+              {formIndex.filter((group) => group.kind !== 'basic').map((group) => {
+                const members = group.numbers.map(getAniimoByNumber).filter((entry) => entry !== undefined);
+                return (
+                  <div key={group.name} className="border-t border-ink-border pt-4">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="font-semibold text-text-primary">{group.name}</h3>
+                      <span className="text-xs text-text-muted">{members.length}</span>
+                    </div>
+                    <AniimoLinkList aniimos={members} />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {SUPPORT_GUIDE_SLUGS.has(post.slug) && (
           <nav className="mt-8 grid gap-3 border-y border-ink-border py-5 sm:grid-cols-2" aria-label={t('relatedArticles')}>

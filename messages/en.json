@@ -1141,6 +1141,23 @@
           {
             "t": "quote",
             "c": "A per-creature percentage still requires that Aniimo's configured base-rate group and current encounter conditions. AniimoDex does not guess an unmapped template rate."
+          },
+          {
+            "t": "h",
+            "c": "Three official-coefficient examples"
+          },
+          {
+            "t": "table",
+            "head": ["Scenario", "Published factors", "Relative multiplier before the unknown base rate"],
+            "rows": [
+              ["Out-of-battle standard cube with a valid backstrike", "Standard cube 1x; backstrike 1.5x", "1.5x"],
+              ["In battle at 0% HP with ordinary sleep", "HP 2x; ordinary sleep 2x", "4x"],
+              ["Target is 15 or more levels above the character", "Level coefficient 0.1x", "0.1x before other factors"]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "These examples compare published modifiers only. They are not final catch percentages because the Aniimo template base rate, region stage, evolution stage, cube and any other active factors must also be known."
           }
         ]
       },
@@ -1984,6 +2001,8 @@
       },
       "howToTitle": "How to use the Aniimo evolution chart",
       "howToDescription": "Each family groups the officially linked stages into one path. Open any member to compare its elements, role, habitats, forms, traits and skills.",
+      "branchingTitle": "Published branching evolution families",
+      "branchingDescription": "The official snapshot contains {count} families with more than one direct child branch. This confirms the branch relationship, not the requirement used to choose it.",
       "faq": {
         "branching": {
           "question": "Does Aniimo have branching evolutions?",
@@ -2051,10 +2070,20 @@
       "readGuide": "Read the elements guide"
     },
     "abilities": {
-      "title": "Aniimo Mobility Abilities",
-      "description": "Look up official movement and exploration abilities such as Hustle, Tunnel, Take Off, Cloak and Glow.",
-      "sourceNote": "Ability names, descriptions and Aniimo mappings come from official Wiki detail pages.",
+      "title": "Aniimo Abilities, Traits and Skills Directory",
+      "description": "Look up official mobility abilities, passive traits and combat skills, then open every Aniimo that carries the published entry.",
+      "sourceNote": "Names, descriptions and Aniimo mappings come from the official Wiki detail snapshot. This directory does not rank their strength.",
       "count": "{count} Aniimo",
+      "stats": { "mobility": "Mobility abilities", "traits": "Passive traits", "skills": "Combat skill names" },
+      "mobilityTitle": "Movement and exploration abilities",
+      "traitsTitle": "Passive traits",
+      "traitsDescription": "Search 51 published trait names and their mapped Aniimo. Descriptions are reproduced only where the official snapshot provides them.",
+      "skillsTitle": "Combat skills",
+      "skillsDescription": "Search 253 published skill names and their mapped Aniimo. Names do not establish damage, cooldown or tier ranking.",
+      "searchTraits": "Search traits or Aniimo names",
+      "searchSkills": "Search skills or Aniimo names",
+      "empty": "No matching official entry was found.",
+      "initial": "Showing the {count} most widely mapped entries. Search to inspect the complete directory.",
       "howToTitle": "How mobility abilities help exploration",
       "howToDescription": "These official field abilities identify Aniimo that can support particular movement or environmental interactions. Open an ability group to compare its listed members.",
       "faq": {

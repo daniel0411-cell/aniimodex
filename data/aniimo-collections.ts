@@ -34,6 +34,28 @@ export const mobilityGroups: [string, { description?: string; members: AniimoEnt
     { description: group.description, members: group.members },
   ]);
 
+function groupOfficialSkills(field: 'traits' | 'skills') {
+  const groups = new Map<string, { description?: string; members: AniimoEntry[] }>();
+  for (const detail of details) {
+    const aniimo = aniimoByNumber.get(detail.number);
+    if (!aniimo) continue;
+    for (const skill of detail[field] ?? []) {
+      const group = groups.get(skill.name) ?? { description: skill.description, members: [] };
+      if (!group.members.some((member) => member.number === aniimo.number)) {
+        group.members.push(aniimo);
+      }
+      if (!group.description && skill.description) group.description = skill.description;
+      groups.set(skill.name, group);
+    }
+  }
+  return [...groups.entries()].sort(
+    (a, b) => b[1].members.length - a[1].members.length || a[0].localeCompare(b[0])
+  );
+}
+
+export const traitGroups = groupOfficialSkills('traits');
+export const combatSkillGroups = groupOfficialSkills('skills');
+
 export const elementGroups = Array.from(
   getAllAniimos().reduce((groups, aniimo) => {
     for (const element of aniimo.officialElements ?? []) {
