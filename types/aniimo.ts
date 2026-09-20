@@ -8,9 +8,6 @@ export type Element = 'Light' | 'Fire' | 'Ice' | 'Dark' | 'Lightning' | 'Grass' 
 /** 5 种角色定位 */
 export type Role = 'DPS' | 'Heal' | 'Support' | 'Break' | 'Regen';
 
-/** Twine 能力：场地移动/互动能力 */
-export type TwineAbility = '飞行' | '游泳' | '遁地' | '攀岩' | '冲撞' | '无';
-
 /** 个体潜力等级（决定成长上限） */
 export type Potential = 'Common' | 'Good' | 'Elite' | 'Perfect';
 
@@ -134,8 +131,8 @@ export interface AniimoForm {
   role: Role;
   /** 基础属性 */
   stats: BaseStats;
-  /** 该形态可用 Twine 能力 */
-  twineAbility: TwineAbility;
+  /** 该形态可用的移动能力（官方英文能力名） */
+  mobility: string[];
   /** 形态说明 */
   description?: string;
 }
@@ -162,14 +159,16 @@ export interface AniimoEntry {
   description: string;
   /** 英文图鉴简介（flavor text，承接 'aniimo dex' 等英文搜索） */
   flavorText: string;
-  /** 是否拥有闪亮形态（承接 'aniimo shiny' 搜索） */
-  shiny: boolean;
   /** 基础元素（第一形态） */
   element: Element;
   /** 基础角色 */
   role: Role;
-  /** Twine 能力（第一形态） */
-  twineAbility: TwineAbility;
+  /**
+   * 移动能力（官方英文名称，第一形态）。
+   * 来源：data/official-wiki-details.json 的 detail.mobility；
+   * 仅部分伊莫在官方索引中公布该字段，未公布时为 []。
+   */
+  mobility: string[];
   /** 基础属性 */
   stats: BaseStats;
   /** 个体潜力分布（各等级对应概率/可解锁性） */

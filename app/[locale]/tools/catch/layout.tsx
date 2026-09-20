@@ -20,7 +20,8 @@ export async function generateMetadata({
   return {
     title,
     description,
-    robots: { index: false, follow: true },
+    // 该页已从占位说明页重建为基于官方公式的计算器，具备可索引的独有内容
+    robots: { index: true, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}/tools/catch/`,
       languages: localizedLanguages('/tools/catch/'),

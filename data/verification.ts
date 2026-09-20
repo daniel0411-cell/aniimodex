@@ -48,6 +48,55 @@ export const verifiedClaims: VerifiedClaim[] = [
     sourceIds: ['aniimo-app-store-6759098797'],
   },
   {
+    id: 'forms-and-sparkling-styles',
+    claim:
+      'The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.',
+    status: 'official',
+    checkedAt: '2026-09-18',
+    sourceIds: [
+      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-probabilities-2026-09-16',
+    ],
+  },
+  {
+    id: 'prismana-changes-element',
+    claim: 'A Prismana form changes an Aniimo element rather than its stats.',
+    status: 'community',
+    checkedAt: '2026-09-18',
+    sourceIds: [],
+  },
+  {
+    id: 'android-release-status',
+    claim:
+      'The official Google Play listing for Aniimo is live, currently offers a wishlist action instead of an install action, and publishes no Android release date.',
+    status: 'official',
+    checkedAt: '2026-09-18',
+    sourceIds: ['aniimo-google-play'],
+  },
+  {
+    id: 'mobile-shared-launch-date',
+    claim:
+      'Aniimo mobile launches on September 23, 2026 for both iOS and Android.',
+    status: 'community',
+    checkedAt: '2026-09-18',
+    sourceIds: [],
+  },
+  {
+    id: 'mobile-cross-progression',
+    claim: 'Aniimo mobile shares progress with the PC and console versions.',
+    status: 'community',
+    checkedAt: '2026-09-18',
+    sourceIds: [],
+  },
+  {
+    id: 'pre-registration-milestones',
+    claim:
+      'The official site shows 35,451,283 pre-registrations and all four published milestone rewards unlocked.',
+    status: 'official',
+    checkedAt: '2026-09-18',
+    sourceIds: ['aniimo-official-home-2026-08-28'],
+  },
+  {
     id: 'dex-001-020',
     claim:
       'Current Aniimo names, numbers, stats, elements, roles, evolutions and spawn conditions.',
@@ -57,14 +106,16 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'element-matchups',
-    claim: 'Current elemental matchup multipliers and immunities.',
-    status: 'unknown',
-    checkedAt: '2026-08-28',
-    sourceIds: [],
+    claim:
+      'Elemental matchup multipliers. No official combat table has been published, so the values shown are a community consensus (1.6x super effective, 0.625x resisted, no immunities), and a small number of cells still differ between community sources.',
+    status: 'community',
+    checkedAt: '2026-09-18',
+    sourceIds: ['aniimo-type-chart-community-2026-09'],
   },
   {
     id: 'catch-formula',
-    claim: 'Catch formulas and their published modifiers are available in the official probability disclosure.',
+    claim:
+      'The official probability disclosure publishes the catch formula for all three scenarios plus the region-stage base rate table and the level, cube, HP, backstrike and status coefficients. Per-species template base rates are not published.',
     status: 'official',
     checkedAt: '2026-09-16',
     sourceIds: ['aniimo-official-probabilities-2026-09-16'],

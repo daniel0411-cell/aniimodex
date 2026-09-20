@@ -37,7 +37,15 @@
     "latestUpdates": "最新更新",
     "viewAllGuide": "查看全部攻略",
     "loadMore": "載入更多",
-    "stats": { "dexEntries": "圖鑑條目", "sources": "官方來源", "tools": "可用工具", "updated": "最近更新", "evolutions": "進化家族", "habitats": "棲息地", "abilities": "移動能力" },
+    "stats": {
+      "dexEntries": "圖鑑條目",
+      "sources": "官方來源",
+      "tools": "可用工具",
+      "updated": "最近更新",
+      "evolutions": "進化家族",
+      "habitats": "棲息地",
+      "abilities": "移動能力"
+    },
     "databaseLabel": "探索資料庫",
     "databaseTitle": "從你需要的資料開始",
     "viewAllData": "查看全部資料",
@@ -50,11 +58,26 @@
     "viewAllAniimo": "瀏覽全部伊莫",
     "coverageLink": "查看資料涵蓋範圍",
     "coverage": {
-      "basics": { "label": "名稱、圖片與描述", "status": "已核驗" },
-      "classification": { "label": "元素、定位與階段", "status": "已核驗" },
-      "details": { "label": "進化、棲息地與型態", "status": "已核驗" },
-      "skills": { "label": "移動能力、特性與技能", "status": "已核驗" },
-      "pending": { "label": "數值屬性與捕獲條件", "status": "待確認" }
+      "basics": {
+        "label": "名稱、圖片與描述",
+        "status": "已核驗"
+      },
+      "classification": {
+        "label": "元素、定位與階段",
+        "status": "已核驗"
+      },
+      "details": {
+        "label": "進化、棲息地與型態",
+        "status": "已核驗"
+      },
+      "skills": {
+        "label": "移動能力、特性與技能",
+        "status": "已核驗"
+      },
+      "pending": {
+        "label": "數值屬性與捕獲條件",
+        "status": "待確認"
+      }
     },
     "guideSectionTitle": "現在開始玩 Aniimo",
     "launchTasksTitle": "Aniimo 上線與下載狀態",
@@ -121,13 +144,51 @@
     "title": "我們如何核驗伊莫資料",
     "description": "AniimoDex 是非官方粉絲資料站。我們只發布能追溯到明確官方來源的欄位，對未知資訊明確標註，不進行猜測。",
     "tiers": {
-      "official": { "title": "官方 Wiki", "body": "名稱、編號、圖片、元素、定位、階段和已發布的詳細欄位來自官方 Aniimo Wiki 快照。" },
-      "store": { "title": "官方商店頁面", "body": "上線時間、平台和免費遊玩資訊會對照官方網站及官方平台商店頁面核驗。" },
-      "unknown": { "title": "尚未公布", "body": "如果已登記來源沒有提供數值屬性、準確捕捉率、座標等欄位，就保持為未知。" },
-      "testing": { "title": "後續實測", "body": "上線後的觀察會標註版本、日期和方法，並且不會冒充官方事實。" }
+      "official": {
+        "title": "官方 Wiki",
+        "body": "名稱、編號、圖片、元素、定位、階段和已發布的詳細欄位來自官方 Aniimo Wiki 快照。"
+      },
+      "store": {
+        "title": "官方商店頁面",
+        "body": "上線時間、平台和免費遊玩資訊會對照官方網站及官方平台商店頁面核驗。"
+      },
+      "unknown": {
+        "title": "尚未公布",
+        "body": "如果已登記來源沒有提供數值屬性、準確捕捉率、座標等欄位，就保持為未知。"
+      },
+      "testing": {
+        "title": "後續實測",
+        "body": "上線後的觀察會標註版本、日期和方法，並且不會冒充官方事實。"
+      }
+    },
+    "tiersMapping": "上面的檔位說明的是結論「來自哪裡」。下方每條結論都會標註三檔證據等級之一：官方、社群回饋、未證實。官方 Wiki 與官方商店頁面的結論計入「官方」，上線後的玩家觀察計入「社群回饋」。",
+    "claimsTitle": "已核驗結論與證據等級",
+    "claimsDescription": "本站依賴的每條結論都記錄於此，並標註我們實際能達到的證據等級。沒有一手來源支撐的結論會被標記為「未證實」，而不是當作事實呈現。",
+    "statusLabels": {
+      "official": "官方",
+      "community": "社群回饋",
+      "unknown": "未證實"
+    },
+    "communitySourceLabel": "社群來源",
+    "claimCount": "{count} 條結論",
+    "claimNoSource": "該結論暫無一手指定的來源。",
+    "claims": {
+      "game-genre-and-core-loop": "Aniimo 是一款開放世界動作 RPG，包含生物捕捉、Twine、探索、組隊與任務。",
+      "announced-platforms": "官方網站已連結 PS5、Xbox、Steam、iOS、Google Play 與 Epic Games Store。",
+      "global-launch-date": "Aniimo 於 2026 年 9 月 16 日 10:00（UTC+8）在 PC 與主機平台上線。",
+      "ios-launch-date": "Aniimo 的 App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。",
+      "forms-and-sparkling-styles": "官方 Wiki 詳情快照公布了三種形態條目（基礎形態、虹彩形態與以地貌命名的區域形態）；官方機率公示則另行公布了閃耀樣式表，含 3 種樣式及其在各取得方式下的機率。",
+      "prismana-changes-element": "虹彩（Prismana）形態改變的是伊莫元素，而不是數值。",
+      "android-release-status": "Aniimo 的官方 Google Play 條目已上線，目前提供「加入願望清單」而非安裝，且未公布 Android 上線日期。",
+      "mobile-shared-launch-date": "Aniimo 手機版將於 2026 年 9 月 23 日在 iOS 與 Android 同步上線。",
+      "mobile-cross-progression": "Aniimo 手機版與 PC、主機版本共享遊戲進度。",
+      "pre-registration-milestones": "官方頁面顯示預約數為 35,451,283，四個已公布的里程碑獎勵全部解鎖。",
+      "dex-001-020": "目前收錄的伊莫名稱、編號、數值屬性、元素、定位、進化與出現條件。",
+      "element-matchups": "元素相剋倍率。官方未公布戰鬥剋制表，因此本站展示的數值是社群共識（剋制 1.6x、抵抗 0.625x、無免疫），且個別儲存格在社群來源之間仍存在分歧。",
+      "catch-formula": "官方機率公示已提供三類場景的捕捉公式、區域階段基礎機率表，以及等級、謎立方、生命值、背襲與特殊狀態係數；但每種伊莫的模板基礎率仍未公開。"
     },
     "sourcesTitle": "已登記來源",
-    "sourcesDescription": "以下是一手來源清單。每個頁面都會記錄來源的核驗日期。",
+    "sourcesDescription": "以下是本站使用的來源清單。官方來源為一手資料，社群來源會明確標註。每個頁面都會記錄來源的核驗日期。",
     "checkedOn": "核驗日期：{date}",
     "correctionsTitle": "更正機制",
     "correctionsBody": "官方來源發生變化時，我們會更新受影響記錄和核驗日期；無法支持的說法會刪除或標記為未知。",
@@ -173,8 +234,24 @@
     "browseMatchups": "元素剋制",
     "featuredDetailsTitle": "從資料更完整的伊莫開始",
     "featuredDetailsDescription": "這些條目在官方 Wiki 快照中包含進化、棲息地、移動能力、特性、技能或型態欄位。入選僅代表資料豐富，不代表強度或稀有度。",
-    "elementNames": { "Light": "光元素", "Fire": "火元素", "Ice": "冰元素", "Dark": "暗元素", "Lightning": "雷元素", "Grass": "草元素", "Water": "水元素", "Earth": "土元素", "Wind": "風元素" },
-    "roleNames": { "DPS": "輸出定位", "Heal": "治療定位", "Support": "輔助定位", "Break": "破防定位", "Regen": "再生定位" }
+    "elementNames": {
+      "Light": "光元素",
+      "Fire": "火元素",
+      "Ice": "冰元素",
+      "Dark": "暗元素",
+      "Lightning": "雷元素",
+      "Grass": "草元素",
+      "Water": "水元素",
+      "Earth": "土元素",
+      "Wind": "風元素"
+    },
+    "roleNames": {
+      "DPS": "輸出定位",
+      "Heal": "治療定位",
+      "Support": "輔助定位",
+      "Break": "破防定位",
+      "Regen": "再生定位"
+    }
   },
   "dexDetail": {
     "notFound": "未找到該伊莫",
@@ -210,7 +287,13 @@
     "and": "和",
     "timeDay": "白天",
     "timeNight": "夜晚",
-    "shinyAvailable": "擁有閃亮形態",
+    "formsCategory": {
+      "basic": "基礎形態",
+      "prismana": "虹彩形態",
+      "region": "區域形態"
+    },
+    "formsNote": "形態名稱為官方 Wiki 索引原文。官方來源沒有公布各形態之間的數值差異，因此本站也不公布。",
+    "formsReadMore": "伊莫形態與閃耀樣式說明",
     "reviewing": "核驗中",
     "visualPending": "官方形象待確認",
     "draftData": "社群草稿資料",
@@ -238,13 +321,22 @@
     "subtitle": "基於官方資料的伊莫能力、元素和捕捉資訊查詢工具。",
     "twineTitle": "Twine 能力反查",
     "twineDesc": "選擇場地移動能力，反查對應的伊莫。",
-    "twineTags": ["反查", "移動"],
+    "twineTags": [
+      "反查",
+      "移動"
+    ],
     "typeChartTitle": "元素剋制矩陣",
     "typeChartDesc": "9×9 元素倍率表：一眼看清攻防剋制關係。",
-    "typeChartTags": ["矩陣", "剋制"],
-    "catchTitle": "捕捉資料狀態",
-    "catchDesc": "查詢已公布棲息地，以及捕捉條件和機率的官方資料狀態。",
-    "catchTags": ["官方狀態", "棲息地"]
+    "typeChartTags": [
+      "矩陣",
+      "剋制"
+    ],
+    "catchTitle": "捕捉率計算器",
+    "catchDesc": "依官方機率公式估算捕捉率，並逐項展示每個係數。",
+    "catchTags": [
+      "官方公式",
+      "計算器"
+    ]
   },
   "twineTool": {
     "title": "Twine 能力反查",
@@ -253,19 +345,21 @@
     "all": "全部",
     "found": "找到 <b>{count}</b> 隻伊莫",
     "clear": "清除篩選",
-    "empty": "無相符結果，請調整能力選擇。",
+    "empty": "暫無移動能力資料。",
     "browseAbilities": "瀏覽官方移動能力目錄",
     "howItWorksTitle": "Aniimo Twine 能力反查如何使用",
-    "howItWorksDescription": "選擇飛行、游泳、遁地、攀岩或衝撞，從官方圖鑑中篩選對應場地能力的伊莫，再進入詳情比較元素、定位、進化和已公開資料。",
-    "sourceScope": "能力映射來自官方來源資料；本工具不會推斷戰鬥強度或未公開的移動能力。",
-    "abilityGuideTitle": "按 Twine 移動能力瀏覽伊莫",
-    "abilityDescriptions": { "fly": "查找與空中移動和飛行互動相關的伊莫。", "swim": "查找與游泳和水域移動相關的伊莫。", "dig": "查找與遁地或地下互動相關的伊莫。", "climb": "查找與攀岩和垂直移動相關的伊莫。", "ram": "查找與衝撞或可破壞場地互動相關的伊莫。" }
+    "howItWorksDescription": "下方選項全部取自官方 Wiki 詳情記錄，能力清單由資料動態產生，而非固定幾個名稱。可多選，從官方索引中反查被官方標註該場地能力的伊莫，再進入詳情比較元素、定位、進化與已公開資料。",
+    "sourceScope": "能力名稱與映射來自官方來源資料；本工具不會推斷戰鬥強度或未公開的移動能力。",
+    "coverage": "官方索引 {total} 筆中，{covered} 筆至少公布了 1 項移動能力；其餘條目如實留空，不做猜測。",
+    "noMobility": "未公布移動能力",
+    "abilityGuideTitle": "按移動能力瀏覽伊莫"
   },
   "typeChartTool": {
     "title": "元素剋制表",
     "subtitle": "行 = 攻擊方元素 · 列 = 防守方元素。點擊表頭以高亮對應的行或列。",
     "sourceStatusTitle": "這張伊莫元素表中哪些是官方資料？",
-    "sourceStatusDescription": "九種元素名稱與每隻伊莫的元素標籤來自官方 Wiki；剋制倍率仍在來源核驗中，不屬於已確認的官方戰鬥表。",
+    "sourceStatusDescription": "九種元素名稱與每隻伊莫的元素標籤來自官方 Wiki；剋制倍率是社群整理的參考，不屬於已確認的官方戰鬥表。",
+    "noEntriesNote": "目前收錄的伊莫中沒有任何一隻帶有：{elements}。由於該元素確實存在於遊戲中，此處保留其行與列並如實標註，而不是刪除。",
     "browseElements": "瀏覽官方伊莫元素目錄",
     "browseElement": "瀏覽{element}伊莫",
     "attackDefend": "攻\\守",
@@ -277,15 +371,14 @@
     "selectedDefend": "已選防守方：{element}。點擊攻擊方查看倍率。",
     "clickToSelect": "點擊任意表頭元素圖示以選中並高亮該行或列。",
     "rulesTitle": "剋制規則",
-    "rule2x": "2x（效果絕佳）：攻擊方元素剋制防守方，傷害加倍。",
-    "ruleHalf": "½x（效果不佳）：防守方抵抗，傷害減半。",
-    "rule0": "0x（免疫）：防守方免疫，不造成傷害。",
-    "rule1": "1x（普通）：無特殊關係，正常傷害。",
-    "ruleSame": "同元素之間的攻擊通常減半（½x）。",
+    "ruleSuper": "1.6x（效果絕佳）：攻擊方元素剋制防守方。",
+    "ruleResisted": "0.625x（效果不佳）：防守方抵抗攻擊方元素。",
+    "ruleNeutral": "1x（普通）：無特殊關係，正常傷害。",
+    "ruleNoImmune": "沒有免疫：任何元素對任何元素至少造成 0.625x 傷害。",
+    "ruleSame": "同元素之間的攻擊為抵抗（0.625x），但「暗 → 暗」例外，保持中性（1x）。",
     "superEffective": "效果絕佳",
     "neutral": "普通",
     "resisted": "效果不佳",
-    "immune": "免疫",
     "mobileAttacker": "攻擊元素",
     "mobileDefender": "防守元素",
     "selectElement": "選擇元素",
@@ -296,76 +389,105 @@
     "selectAniimo": "伊莫",
     "selectAniimoPlaceholder": "選擇伊莫",
     "countersFor": "針對 {name}（{elements}）的參考攻擊元素",
-    "lookupReferenceNote": "剋制倍率仍在來源核驗中，不屬於已確認的官方戰鬥表。",
+    "lookupReferenceNote": "剋制倍率是社群整理的參考，不屬於已確認的官方戰鬥表。",
     "summaryTitle": "Aniimo 元素剋制關係摘要",
-    "summaryIntro": "結合上方矩陣查看各元素造成雙倍傷害、傷害減半或無效的關係。",
+    "summaryIntro": "結合上方矩陣查看各元素剋制與被抵抗的關係。",
     "elementMatchups": "{element}剋制關係",
     "strongAgainst": "剋制：{elements}。",
     "resistedBy": "被抵抗：{elements}。",
-    "noEffectAgainst": "無效：{elements}。",
     "none": "無",
     "faqTitle": "Aniimo 元素剋制常見問題",
     "faq": {
-      "readChart": { "question": "Aniimo 元素剋制表怎麼看？", "answer": "從列中選擇攻擊元素，從欄中選擇防守元素，兩者交叉位置就是傷害倍率。" },
-      "multiplierMeaning": { "question": "2x、1x、½x 和 0x 分別代表什麼？", "answer": "2x 表示剋制，1x 表示普通傷害，½x 表示被抵抗，0x 表示防守元素免疫。" },
-      "officialStatus": { "question": "這份 Aniimo 元素剋制表是官方確認的嗎？", "answer": "九種元素名稱來自官方 Aniimo Wiki；剋制倍率仍在等待官方戰鬥資料核驗，在此之前僅作為參考。" }
+      "readChart": {
+        "question": "Aniimo 元素剋制表怎麼看？",
+        "answer": "從列中選擇攻擊元素，從欄中選擇防守元素，兩者交叉位置就是傷害倍率。"
+      },
+      "multiplierMeaning": {
+        "question": "1.6x、1x 和 0.625x 分別代表什麼？",
+        "answer": "1.6x 表示剋制，1x 表示普通傷害，0.625x 表示被抵抗，並且不存在免疫。"
+      },
+      "officialStatus": {
+        "question": "這份 Aniimo 元素剋制表是官方確認的嗎？",
+        "answer": "九種元素名稱來自官方 Aniimo Wiki；剋制倍率為社群整理，在官方戰鬥資料公布前請視作參考。"
+      }
     }
   },
   "catchTool": {
-    "title": "伊莫捕捉資料狀態",
-    "subtitle": "查詢官方棲息地資料和仍待公布的捕捉資訊。",
-    "formulaPendingTitle": "官方捕捉公式已公布",
-    "formulaPendingDescription": "官方機率公示已確認區域階段、等級差、謎立方、生命值、背襲和特殊狀態等公式與倍率。若尚未確定單隻伊莫使用的基礎機率模板，AniimoDex 仍不會輸出猜測百分比。",
-    "selectorHelp": "選擇一隻伊莫，查看已核驗圖鑑欄位和官方棲息地。",
-    "officialStatus": "官方來源欄位",
-    "elementsLabel": "元素",
-    "roleLabel": "戰鬥定位",
-    "habitatsLabel": "官方棲息地",
-    "habitatsUnknown": "目前官方快照沒有列出棲息地。",
-    "catchRateLabel": "準確捕捉率",
-    "conditionsLabel": "捕捉修正與條件",
-    "notPublished": "官方尚未公布",
-    "speciesRatePending": "單隻伊莫基礎機率模板尚未映射",
-    "formulaPublished": "官方公式與修正倍率已公布",
+    "title": "伊莫捕捉率計算器",
+    "subtitle": "使用官方公布的捕捉機率公式估算捕捉率。",
+    "sourceNote": "本頁所有係數均來自官方《機率公示》（核驗日期 2026-09-18）。由於每個物種的模板基礎機率未公開，最終結果仍是依你所選條件得出的估算。",
+    "templateCaveatTitle": "這個估算無法知道什麼",
+    "templateCaveatBody": "官方原文明確「具體使用係數由伊莫模板指定，不根據等級推算」。每種伊莫的模板基礎機率並未公開，因此本計算器依你選擇的區域階段與進化階段估算，不會聲稱代表某個物種的確切數值。",
+    "scenarioLabel": "場景",
+    "scenarioField": "戰鬥外",
+    "scenarioBattle": "戰鬥中",
+    "scenarioDefeated": "目標已死亡",
+    "defeatedNote": "目標死亡場景只乘「死亡基礎機率 × 謎立方係數 × 特殊狀態係數」，此處採用官方公布的普通頭目死亡後 6%。",
+    "regionLabel": "區域階段",
+    "regionStandard": "標準區域",
+    "regionEarlyMid": "前中期",
+    "regionMid": "中期",
+    "regionMidLate": "中後期",
+    "regionLate": "後期",
+    "regionTower": "捉寵爬塔",
+    "stageLabel": "目標進化階段",
+    "stage1": "1 階",
+    "stage2": "2 階",
+    "stage3": "3 階",
+    "playerLevelLabel": "人物等級",
+    "aniimoLevelLabel": "伊莫等級",
+    "levelDiffValue": "等級差：{diff}",
+    "playerBonusLabel": "人物基礎捕捉加成（%）",
+    "playerBonusHelp": "官方公式為「基礎機率 × (1 + 人物基礎捕捉加成)」。不知道具體數值時保持 0% 即可。",
+    "cubeLabel": "謎立方類型",
+    "cubeStandard": "謎立方",
+    "cubeAdvanced": "高級立方",
+    "cubeFast": "極速 / 追蹤 / 超級立方",
+    "cubeRemote": "遙控大白球",
+    "cubeRemoteMass": "遙控大白球（捕捉「大伊莫大量出沒」目標）",
+    "cubeUltimate": "終極立方",
+    "cubeSparkling": "閃耀立方",
+    "cubeGuaranteedNote": "只要目標可捕捉，該立方必定成功。",
+    "hpLabel": "目標生命值",
+    "hpHelp": "生命值係數僅在戰鬥中生效。官方為離散檔位，檔位之間不做插值。",
+    "backstrikeLabel": "伺服器確認的有效背襲",
+    "backstrikeHelp": "背襲僅在戰鬥外、使用普通謎立方且伺服器確認時生效。遙控大白球不享有背襲加成。",
+    "statusLabel": "特殊狀態",
+    "statusRuleNote": "官方規則：存在小於 1 的係數時取最低值；全部不低於 1 時取最高值。",
+    "statusBreak": "擊破",
+    "statusBreakBonus": "擊破狀態捕捉增益",
+    "statusCommon": "普通睡眠 / 暈眩 / 吃東西 / 醉酒 / 誘餌",
+    "statusSpecialStun": "特殊暈眩",
+    "statusHundredX": "深度睡眠 / 採集花蜜（部分特殊暈眩）",
+    "statusInvisible": "隱身",
+    "statusAlert": "警戒 / 凝視",
+    "statusLeaving": "離開",
+    "statusUncatchable": "暴走 / 泡泡阻隔 / 魔化 / 已有主人",
+    "resultTitle": "估算捕捉率",
+    "resultGuaranteed": "必定成功",
+    "resultUncatchable": "該狀態下目標不可捕捉。",
+    "breakdownTitle": "係數明細",
+    "breakdownBase": "基礎機率",
+    "breakdownLevel": "等級係數",
+    "breakdownCube": "謎立方係數",
+    "breakdownHp": "生命值係數",
+    "breakdownBackstrike": "背襲係數",
+    "breakdownStatus": "特殊狀態係數",
+    "doubleCheckNote": "普通目標 + 謎立方會拆成兩次判定，每次使用最終機率的平方根；兩次合併後的總成功率仍等於此處顯示的最終機率。",
+    "strategyTitle": "如何提升成功率",
+    "strategyBackstrike": "在戰鬥外使用普通謎立方從背後出手，可疊加 1.5 倍背襲係數。",
+    "strategyHp": "投擲前先把目標打殘：0% 生命值時係數為 2 倍，滿血時只有 0.8 倍。",
+    "strategyStatus": "先附加特殊狀態。深度睡眠、採集花蜜與部分特殊暈眩可達 100 倍係數。",
+    "strategyLevel": "等級差影響極大：高出人物 11 級係數降為 0.8 倍，15 級及以上降為 0.1 倍。",
+    "strategyCube": "更換更好的謎立方可整體放大：高級立方 1.5 倍，極速 / 追蹤 / 超級立方 2 倍。",
+    "officialStatus": "官方公式",
+    "referenceTitle": "官方係數對照表",
+    "referenceBody": "以下是計算器使用的官方公布數值。由於官方未公開每種伊莫的模板基礎率，請自行選擇區域階段與進化階段。",
+    "refLevelHeader": "等級差",
+    "refCoefficientHeader": "係數",
     "openDex": "開啟圖鑑詳情",
     "browseLocations": "瀏覽棲息地",
-    "readGuide": "閱讀捕捉攻略",
-    "selectAniimo": "選擇伊莫",
-    "podLevel": "安尼寶等級",
-    "trapType": "陷阱類型",
-    "breakState": "BREAK 狀態（破防）",
-    "timeSlot": "時段",
-    "calculate": "計算捕捉率",
-    "result": "計算結果",
-    "baseCatchRate": "基礎捕捉率",
-    "recommendedStrategy": "推薦策略",
-    "copyShare": "複製分享計畫",
-    "placeholder": "請先在左側填寫條件，然後點擊「計算捕捉率」。",
-    "calculationNote": "計算說明（簡化的占位公式）",
-    "calculationDetail": "捕捉率 = 基礎值 + 安尼寶等級加成 + 陷阱加成 + 破防加成 + 時段加成，並限制在 1% ~ 98% 之間。接入真實遊戲資料前，數值均為占位。",
-    "trapNormal": "普通",
-    "trapAdvanced": "高級",
-    "trapMaster": "大師",
-    "timeDay": "白天",
-    "timeNight": "夜晚",
-    "timeDusk": "黃昏",
-    "shareTitle": "【伊莫捕捉計算】",
-    "shareAniimo": "伊莫：{name}（{enName}）# {number}",
-    "sharePod": "安尼寶等級：{level} / 50",
-    "shareTrap": "陷阱：{trap}",
-    "shareBreak": "BREAK：{break}",
-    "shareTime": "時段：{time}",
-    "shareBaseRate": "基礎捕捉率：{rate}%",
-    "shareStrategy": "策略：{strategy}",
-    "breakYes": "是",
-    "breakNo": "否",
-    "copied": "捕捉計畫已複製到剪貼簿",
-    "copyFailed": "複製失敗，請手動複製",
-    "strategyBreak": "建議先使用 BREAK 大幅提升捕捉率",
-    "strategyTrap": "建議換用高級或大師陷阱",
-    "strategyRare": "該伊莫較為稀有，建議準備高級/大師陷阱並在破防時出手",
-    "strategyDusk": "黃昏時捕捉率最高，可考慮等待",
-    "strategyIdeal": "目前配置已很理想——祝你捕捉順利！"
+    "readGuide": "閱讀捕捉攻略"
   },
   "guide": {
     "title": "伊莫攻略",
@@ -385,12 +507,31 @@
     "sourceChecked": "來源檢查：{date}",
     "officialSources": "官方來源",
     "howWeVerify": "查看資料核驗方法",
-    "launchHub": { "title": "Aniimo 上線必看", "description": "集中查看上線時間、官方下載、預下載狀態和支援平台。", "release": "上線日期與時間", "download": "官方下載管道", "preload": "預下載與解鎖狀態", "platforms": "平台與可用狀態" },
+    "launchHub": {
+      "title": "Aniimo 上線必看",
+      "description": "集中查看上線時間、官方下載、預下載狀態和支援平台。",
+      "release": "上線日期與時間",
+      "download": "官方下載管道",
+      "preload": "預下載與解鎖狀態",
+      "platforms": "平台與可用狀態"
+    },
     "groups": {
-      "playDownload": { "title": "上線、下載與平台", "description": "上線時間、價格、官方下載管道和支援裝置。" },
-      "gameplay": { "title": "玩法機制說明", "description": "Twine、捕獲和多人玩法中已獲官方確認的資訊。" },
-      "updates": { "title": "官方狀態與更新", "description": "發行開放情況、行動版時間和已核驗 PC 配置。" },
-      "dexData": { "title": "圖鑑系統與官方資料", "description": "官方 Wiki 中的元素、定位、進化家族、移動能力與棲息地資料。" }
+      "playDownload": {
+        "title": "上線、下載與平台",
+        "description": "上線時間、價格、官方下載管道和支援裝置。"
+      },
+      "gameplay": {
+        "title": "玩法機制說明",
+        "description": "Twine、捕獲和多人玩法中已獲官方確認的資訊。"
+      },
+      "updates": {
+        "title": "官方狀態與更新",
+        "description": "發行開放情況、行動版時間和已核驗 PC 配置。"
+      },
+      "dexData": {
+        "title": "圖鑑系統與官方資料",
+        "description": "官方 Wiki 中的元素、定位、進化家族、移動能力與棲息地資料。"
+      }
     },
     "posts": {
       "aniimo-release-date": {
@@ -449,14 +590,35 @@
           },
           {
             "t": "table",
-            "head": ["平台", "官方状态"],
+            "head": [
+              "平台",
+              "官方状态"
+            ],
             "rows": [
-              ["PlayStation 5", "2026 年 9 月 16 日 10:00（UTC+8）"],
-              ["Xbox Series X|S", "免費本體和取得操作已開放"],
-              ["Windows PC", "Steam 已正式發行，官網 PC 啟動器也可下載"],
-              ["iOS", "App Store 標註 2026 年 9 月 23 日"],
-              ["Android", "已有官方 Google Play 入口，日期尚未確認"],
-              ["Epic Games Store", "Aniimo 官网已提供 Epic 連結"]
+              [
+                "PlayStation 5",
+                "2026 年 9 月 16 日 10:00（UTC+8）"
+              ],
+              [
+                "Xbox Series X|S",
+                "免費本體和取得操作已開放"
+              ],
+              [
+                "Windows PC",
+                "Steam 已正式發行，官網 PC 啟動器也可下載"
+              ],
+              [
+                "iOS",
+                "App Store 標註 2026 年 9 月 23 日"
+              ],
+              [
+                "Android",
+                "已有官方 Google Play 入口，日期尚未確認"
+              ],
+              [
+                "Epic Games Store",
+                "Aniimo 官网已提供 Epic 連結"
+              ]
             ]
           },
           {
@@ -545,42 +707,1500 @@
           }
         ]
       },
-      "is-aniimo-free-to-play": { "title": "Aniimo 伊莫是免費遊戲嗎？價格與內購說明", "subtitle": "Steam、PlayStation 與 Xbox 官方頁面均將 Aniimo 標為免費遊玩。", "tag": "價格", "lead": "是的，Aniimo 是免費遊玩遊戲，基礎遊戲無需先付費購買。", "body": [{"t":"h","c":"Aniimo 伊莫需要付費購買嗎？"},{"t":"p","c":"Steam、PlayStation 和 Xbox 的官方商店頁面均標註免費遊玩，玩家可以免費下載並開始基礎遊戲。"},{"t":"h","c":"遊戲內會有付費內容嗎？"},{"t":"p","c":"商店頁面提到遊戲內購買或可選禮包，具體價格和商業模式可能因平台、地區和上線版本不同，請以上線時的官方商店為準。"},{"t":"h","c":"去哪裡取得遊戲？"},{"t":"p","c":"請從 Aniimo 官網進入對應平台商店，不要使用第三方安裝包、修改版客戶端或所謂的搶先下載頁面。"}] },
-      "how-to-download-aniimo": { "title": "Aniimo 伊莫怎麼下載？PC、PS5、Xbox 與手機版指南", "subtitle": "從 Aniimo 官網和官方商店頁面安全下載遊戲。", "tag": "下載", "lead": "Aniimo 官網現已提供 PC 官方下載入口，也可從對應平台商店取得遊戲；不要下載第三方 APK 或安裝程式。", "body": [{"t":"h","c":"Aniimo 官方下載管道"},{"t":"table","head":["平台","官方管道"],"rows":[["Windows PC","官網 PC 下載、Steam 或 Epic Games Store"],["PlayStation 5","PlayStation Store"],["Xbox Series X|S","Xbox Store"],["iPhone / iPad","官網連結的 App Store"],["Android","官網連結的 Google Play"]]},{"t":"h","c":"目前下載狀態"},{"t":"table","head":["平台","9 月 16 日核驗狀態"],"rows":[["官網 PC 啟動器","官網已顯示立即下載"],["Steam","已正式發行並免費遊玩"],["Xbox","免費本體與取得操作已開放"],["PS5","公布的發行時間已到，請核對當地商店按鈕"],["iOS","App Store 標註 9 月 23 日"],["Android","已有官方入口，發行日期尚未確認"]]},{"t":"h","c":"應該從哪裡下載？"},{"t":"p","c":"請使用 Aniimo 官網、Steam、PlayStation Store 或 Xbox Store。行動版開放情況獨立，且可能因地區不同。"},{"t":"quote","c":"不要在非官方下載頁面輸入遊戲帳號或商店帳號密碼。"}] },
-      "aniimo-mobile": { "title": "Aniimo 伊莫手機版：iOS 與 Android 上線情況", "subtitle": "iOS 商店標註 2026 年 9 月 23 日；Android 日期尚未確認。", "tag": "手機版", "lead": "目前核驗地區的官方 App Store 頁面顯示，Aniimo iPhone 與 iPad 版預計於 2026 年 9 月 23 日推出。官網也提供 Google Play 入口，但現有來源尚未確認 Android 的上線日期。", "body": [{"t":"h","c":"Aniimo 手機版什麼時候上線？"},{"t":"table","head":["平台","目前狀態"],"rows":[["iPhone / iPad","App Store 標註 2026 年 9 月 23 日"],["Android","已有官方 Google Play 入口，上線日期尚未確認"],["裝置需求","完整官方相容清單尚未公布"]]},{"t":"h","c":"Aniimo 有手機版嗎？"},{"t":"p","c":"有。Aniimo 官網同時列出了 App Store 和 Google Play，並與主機及 PC 商店入口並列。"},{"t":"h","c":"現在能下載手機版嗎？"},{"t":"p","c":"請查看你所在地區的官方商店頁面。iOS 目前標註 9 月 23 日，Android 開放情況可能因地區不同，日期仍待確認。"},{"t":"h","c":"哪些手機可以執行？"},{"t":"p","c":"目前引用的官方資料沒有提供完整裝置相容清單，不應採用未經來源確認的最低規格說法。"}] },
-      "aniimo-ps5": { "title": "Aniimo 伊莫會登上 PS5 嗎？發售日期與商店狀態", "subtitle": "會。Aniimo 已有官方 PS5 頁面，公布的 9 月 16 日發行時間已經到達。", "tag": "PS5", "lead": "Aniimo 已確認登上 PlayStation 5。官方公布的 2026 年 9 月 16 日 10:00（UTC+8）發行時間已經到達，請透過當地 PlayStation Store 核對目前下載按鈕。", "body": [{"t":"h","c":"Aniimo 會登上 PS5 嗎？"},{"t":"p","c":"會。Aniimo 已有由 Pawprint Interactive Entertainment 發布的官方 PS5 商店頁面。"},{"t":"h","c":"Aniimo PS5 版什麼時候上線？"},{"t":"p","c":"PlayStation Store 標註 2026 年 9 月 16 日 10:00（UTC+8），對應 UTC 時間 9 月 16 日 02:00；該時間現已到達。"},{"t":"h","c":"Aniimo PS5 版免費嗎？"},{"t":"p","c":"免費。基礎遊戲標註為免費遊玩；付費禮包包含可選遊戲內獎勵，不改變本體免費狀態。"},{"t":"h","c":"PS5 版需要連線嗎？"},{"t":"p","c":"PlayStation 頁面標註需要線上遊玩，並提示遊戲內購買和使用者互動；下載按鈕、地區帳號或訂閱需求請以即時商店頁面為準。"}] },
-      "is-aniimo-a-gacha-game": { "title": "Aniimo 伊莫是抽卡遊戲嗎？官方資訊說明", "subtitle": "Aniimo 是免費遊戲並含內購，但官方商店沒有將其定義為抽卡遊戲。", "tag": "付費模式", "lead": "根據目前核驗的官方資料，還不能準確把 Aniimo 定義為抽卡遊戲。商店確認免費遊玩和遊戲內購買，官網也提到部分隨機伊莫蛋獎勵，但這些資訊本身不能證明存在付費角色抽取系統。", "body": [{"t":"h","c":"官方稱 Aniimo 是抽卡遊戲嗎？"},{"t":"p","c":"沒有。官網和主要商店將 Aniimo 描述為免費遊玩的捉寵開放世界 RPG，沒有使用抽卡遊戲這一分類。"},{"t":"h","c":"Aniimo 有遊戲內購買嗎？"},{"t":"p","c":"有。Steam、PlayStation 和 Xbox 披露了遊戲內購買或可選付費包，但尚不能據此確認上線後的完整付費機制。"},{"t":"h","c":"隨機伊莫蛋代表抽卡嗎？"},{"t":"p","c":"官方預約活動提到隨機完美伊莫蛋獎勵；一次活動獎勵不等於可反覆付費抽取的召喚系統。"},{"t":"h","c":"哪些內容仍未確認？"},{"t":"p","c":"目前來源沒有公布完整的付費抽取規則、卡池、貨幣或機率表。只有官方說明或上線後可重現實測能夠確認這些機制。"}] },
-      "aniimo-nintendo-switch": { "title": "Aniimo 伊莫會登上 Nintendo Switch 嗎？官方狀態說明", "subtitle": "Nintendo Switch 尚未出現在 Aniimo 目前官方平台清單中。", "tag": "平台", "lead": "截至本頁核驗時間，沒有官方資料確認 Aniimo 會登上 Nintendo Switch。", "body": [{"t":"h","c":"Aniimo 有 Switch 版嗎？"},{"t":"p","c":"目前沒有。Aniimo 官網列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但沒有 Nintendo Switch。"},{"t":"h","c":"以後可能推出 Switch 版嗎？"},{"t":"p","c":"平台計畫未來可能變化，但現在沒有可以核實的官方消息。只有 Aniimo 或任天堂正式公布後，本頁才會更新為已確認。"}] },
-      "aniimo-twine-explained": { "title": "Aniimo Twine 玩法是什麼？變身、探索與戰鬥說明", "subtitle": "Twine 允許探索者變成已經收集的伊莫並使用牠們的能力。", "tag": "玩法", "lead": "Twine 是 Aniimo 的核心系統之一：探索者可以變成已收集的伊莫，在探索、解謎和戰鬥中使用對應能力。", "body": [{"t":"h","c":"Twine 是什麼意思？"},{"t":"p","c":"官方描述稱玩家可以與已收集的伊莫 Twine。已公布的例子包括滑翔、潛水和鑽地，並利用不同能力探索世界。"},{"t":"h","c":"Twine 能做什麼？"},{"t":"li","c":"穿越地形並到達新區域"},{"t":"li","c":"解決環境謎題"},{"t":"li","c":"在即時戰鬥中使用伊莫能力"},{"t":"h","c":"哪些伊莫擁有對應能力？"},{"t":"p","c":"目前引用的官方資料沒有公布完整的伊莫與能力對應表，社群圖鑑中的映射仍處於核驗狀態。"}] },
-      "aniimo-catching-guide": { "title": "Aniimo 伊莫怎麼捕獲？官方公式、謎立方與狀態倍率", "subtitle": "根據官方機率公示整理捕獲公式、基礎機率和已確認修正倍率。", "tag": "玩法", "lead": "官方現已公布戰鬥外、戰鬥中和目標死亡後的捕獲公式，確認區域階段、等級差、謎立方、生命值、背襲和特殊狀態會共同影響成功率。", "body": [{"t":"h","c":"Aniimo 捕獲率怎麼計算？"},{"t":"p","c":"戰鬥外公式為基礎機率 × 謎立方係數 × 等級係數 × 背襲係數 × 特殊狀態係數；戰鬥中改用生命值係數，目標死亡時則使用死亡基礎機率。"},{"t":"h","c":"哪些捕獲加成已確認？"},{"t":"li","c":"高級立方 ×1.5，部分更高級立方 ×2，終極立方和閃耀立方必定成功"},{"t":"li","c":"有效背襲 ×1.5，僅在戰鬥外使用普通謎立方時生效"},{"t":"li","c":"擊破 ×1.5，普通睡眠或暈眩等狀態 ×2"},{"t":"li","c":"戰鬥中目標生命值越低，公開係數越高"},{"t":"h","c":"為什麼不能直接顯示每隻伊莫的百分比？"},{"t":"p","c":"官方說明具體基礎係數由伊莫模板指定，不能僅按等級推算。只有確定目前區域階段、對應模板和所有遭遇條件後，才能給出準確結果。"}] },
-      "aniimo-multiplayer": { "title": "Aniimo 伊莫能連線嗎？合作、PvP 與 Egg Heist 玩法", "subtitle": "官方商店確認多人、線上合作、PvP 和跨平台多人功能。", "tag": "多人", "lead": "Aniimo 同時包含單人和多人活動。Steam 列出 PvP、線上合作及跨平台多人，Xbox 則公布了三人組隊的 Egg Heist PVEVP 模式。", "body": [{"t":"h","c":"Aniimo 支援連線合作嗎？"},{"t":"p","c":"支援。Steam 頁面列出線上合作與多人模式，具體活動可能受到平台、帳號與上線版本影響。"},{"t":"h","c":"有 PvP 嗎？"},{"t":"p","c":"Steam 列出了 PvP；Xbox 將 Egg Heist 描述為即時 PVEVP 活動，三人隊伍需要在對抗環境威脅的同時展開競爭。"},{"t":"h","c":"支援跨平台連線嗎？"},{"t":"p","c":"Steam 標註跨平台多人，但目前官方資料尚未說明所有平台組合、跨平台存檔和帳號綁定細節。"}] },
-      "aniimo-pre-registration": { "title": "伊莫預約指南：Aniimo 官方入口、平台與上線時間", "subtitle": "查看 Aniimo 伊莫官方預約入口、各平台願望清單狀態，以及 2026 年 9 月 16 日上線時間。", "tag": "更新", "lead": "Aniimo 官網提供預約和各平台商店入口，不同平台與地區可能分別顯示預約、願望清單或預購。", "body": [{"t":"h","c":"Aniimo 怎麼預約？"},{"t":"p","c":"進入 Aniimo 官網，選擇你的平台並開啟官方商店連結。根據平台不同，按鈕可能顯示為預約、加入願望清單或預購。"},{"t":"h","c":"預約有什麼獎勵？"},{"t":"p","c":"獎勵細節可能隨活動和地區變化，請只採用官網或官方商店當時展示的資訊。"},{"t":"h","c":"什麼時候上線？"},{"t":"p","c":"PlayStation Store 公布的全球上線時間為 2026 年 9 月 16 日 10:00（UTC+8）；部分時區的商店可能顯示前一天。"}] },
-      "aniimo-system-requirements": { "title": "Aniimo 伊莫 PC 配置需求：最低與建議配置", "subtitle": "官方 Windows CPU、記憶體、顯示卡、DirectX 與 30 GB 儲存需求。", "tag": "PC", "lead": "Epic Games Store 已公布 Aniimo 的完整 Windows 最低與建議配置，兩檔均需要 30 GB，建議配置要求 SSD。", "body": [{"t":"h","c":"Aniimo 能在 PC 上玩嗎？"},{"t":"p","c":"可以。Steam、Epic 和 Xbox 頁面均確認 PC/Windows 支援。"},{"t":"h","c":"Aniimo 最低配置是什麼？"},{"t":"table","head":["項目","最低配置"],"rows":[["系統","Windows 10"],["處理器","Intel i5 第 9 代或 AMD Ryzen 7 2700"],["記憶體","8 GB"],["顯示卡","GTX 1060、RX 580 或 Intel Arc A580"],["DirectX","DirectX 11"],["儲存","30 GB"]]},{"t":"h","c":"Aniimo 建議配置是什麼？"},{"t":"table","head":["項目","建議配置"],"rows":[["系統","Windows 11"],["處理器","Intel i7 第 9 代或 AMD Ryzen 7 3700"],["記憶體","16 GB"],["顯示卡","RTX 3060 或 RX 6600 及以上"],["DirectX","DirectX 12"],["儲存","30 GB SSD"]]},{"t":"h","c":"支援 macOS 嗎？"},{"t":"p","c":"目前官方商店只確認 Windows，尚未確認 macOS 版本。"}] },
-      "official-aniimo-dex-status": { "title": "Aniimo 官方圖鑑覆蓋：AniimoDex 已核驗哪些欄位", "subtitle": "公開說明 AniimoDex 使用的官方 Wiki 快照和逐欄位核驗狀態。", "tag": "資料狀態", "lead": "AniimoDex 目前收錄 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 條編號記錄，只將快照中明確存在的欄位標為已核驗。", "body": [{"t":"h","c":"目前已核驗什麼？"},{"t":"table","head":["欄位","狀態"],"rows":[["編號、名稱與圖片","來自官方 Wiki 索引"],["描述、元素、定位與階段","來自官方 Wiki 資料"],["進化、棲息地與型態","來自官方 Wiki 詳情頁"],["移動能力、特性與技能","來自官方 Wiki 詳情頁"],["數值屬性與捕獲條件","尚未作為已核驗資料發布"]]},{"t":"h","c":"目前圖鑑可以查看什麼？"},{"t":"p","c":"元素與定位篩選支援雙元素伊莫。每個詳情頁現在還會顯示官方進化、棲息地、型態、移動能力、特性與技能；數值屬性和準確捕獲條件仍暫不公開。"},{"t":"h","c":"資料如何更新？"},{"t":"p","c":"可重複執行的解析腳本讀取官方 Wiki 公開索引與詳情頁，驗證記錄完整性並保存帶日期的快照。官方資料變化會先經過差異檢查，再發布到線上。"},{"t":"quote","c":"已核驗標籤只適用於明確列出的欄位，不代表該伊莫的所有資訊都已確認。"}] },
-      "aniimo-launch-time-preload": { "title": "伊莫上線時間：Aniimo 全球發行與目前下載狀態", "subtitle": "Aniimo 已正式上線，查看全球發行時間和各平台目前開放情況。", "tag": "上線", "lead": "Aniimo 已於 2026 年 9 月 16 日 10:00（UTC+8）到達公布的全球上線時間。Steam 與 Xbox 已核驗開放，行動版時間仍獨立。", "body": [{"t":"h","c":"Aniimo 幾點上線？"},{"t":"table","head":["地區","當地時間"],"rows":[["台灣/新加坡 UTC+8","9 月 16 日 10:00"],["UTC","9 月 16 日 02:00"],["美國東部 EDT","9 月 15 日 22:00"],["美國西部 PDT","9 月 15 日 19:00"],["歐洲中部 CEST","9 月 16 日 04:00"]]},{"t":"h","c":"Aniimo 現在可以玩嗎？"},{"t":"p","c":"已核驗的 PC 與 Xbox 管道可以：Steam 已標記發行，官網提供 PC 啟動器，Xbox 已開放免費本體。PlayStation 請查看當地商店目前按鈕；iOS 仍標註 9 月 23 日，Android 時間尚未確認。"},{"t":"h","c":"為什麼 Steam 顯示 9 月 15 日？"},{"t":"p","c":"同一全球開放時刻在美洲仍是 9 月 15 日，在亞洲已是 9 月 16 日。上表以 PlayStation 明確公布的 UTC+8 時間換算。"},{"t":"quote","c":"平台開放狀態核驗於 2026 年 9 月 16 日，仍可能因地區不同。"}] },
-      "aniimo-crossplay-cross-save": { "title": "Aniimo 支援跨平台連線和跨平台存檔嗎？", "subtitle": "支援跨平台多人；跨平台存檔和進度互通尚未確認，查看目前官方狀態。", "tag": "多人", "lead": "支援。Steam 已列出 Aniimo 的跨平台多人功能；跨平台存檔和進度互通屬於不同能力，截至 2026 年 9 月 15 日仍未獲官方來源確認。", "body": [{"t":"h","c":"Aniimo 支援跨平台連線嗎？"},{"t":"p","c":"Steam 頁面列出跨平台多人，但沒有說明每一種平台組合和活動的具體支援範圍。"},{"t":"h","c":"支援跨平台存檔嗎？"},{"t":"p","c":"目前官方來源沒有完整的帳號綁定與進度轉移政策。支援跨平台連線不代表存檔、付費貨幣或禮包一定能在不同商店間轉移。"},{"t":"h","c":"還有哪些資訊待確認？"},{"t":"li","c":"PC、主機和手機之間的具體連線組合"},{"t":"li","c":"同一帳號是否在所有平台共享進度"},{"t":"li","c":"付費貨幣和禮包是否跨商店共享"},{"t":"quote","c":"Pawprint Studio 公布帳號或跨進度 FAQ 後，本頁會更新。"}] },
-      "aniimo-language-controller-support": { "title": "Aniimo 伊莫語言、手把與 Steam Deck 支援狀態", "subtitle": "整理語言選項、PC 手把和掌機相容性的目前官方狀態。", "tag": "相容性", "lead": "Aniimo 已有 PC 與主機官方頁面，但上線前並非所有相容性細節都已穩定公開。", "body": [{"t":"h","c":"Aniimo 支援手把嗎？"},{"t":"p","c":"主機版本會使用對應平台手把，但目前來源沒有提供最終 PC 手把矩陣、完整按鍵表或所有第三方手把相容清單。"},{"t":"h","c":"支援 Steam Deck 嗎？"},{"t":"p","c":"目前註冊來源沒有確認 Steam Deck 相容等級。Steam 上支援 Windows 並不能直接證明 Deck 已驗證或效能穩定。"},{"t":"h","c":"支援哪些語言？"},{"t":"p","c":"商店語言表在上線前可能變化，並會分別標示介面、字幕與語音。完整穩定清單公布前，請以對應官方商店即時頁面為準。"},{"t":"h","c":"上線後會測試什麼？"},{"t":"li","c":"鍵鼠按鍵自訂"},{"t":"li","c":"Xbox、DualSense 與通用 PC 手把"},{"t":"li","c":"Steam Deck 啟動、操作與效能"},{"t":"li","c":"介面、字幕和語音選項"}] },
-      "aniimo-elements-explained": { "title": "Aniimo 伊莫元素詳解：全部 9 種屬性", "subtitle": "了解官方元素標籤如何組織伊莫圖鑑。", "tag": "元素", "lead": "官方 Aniimo Wiki 使用九種元素標籤，AniimoDex 僅依這些標籤整理圖鑑，不據此推斷強度排名。" },
-      "aniimo-roles-explained": { "title": "Aniimo 伊莫戰鬥定位詳解", "subtitle": "理解攻擊、治療、輔助、破防與回復定位。", "tag": "定位", "lead": "官方戰鬥定位是分類標籤，不代表上線後的強度排名或完整配隊。" },
-      "aniimo-evolution-system": { "title": "Aniimo 伊莫進化系統與家族", "subtitle": "在不猜測條件的前提下閱讀官方進化關係。", "tag": "進化", "lead": "官方 Wiki 詳情頁公布進化家族和階段，未公布的進化條件繼續標為未知。" },
-      "aniimo-mobility-abilities": { "title": "Aniimo 伊莫移動能力詳解", "subtitle": "官方圖鑑中的探索與場地能力。", "tag": "能力", "lead": "官方移動能力與戰鬥特性、技能分開列出。" },
-      "aniimo-habitats-locations": { "title": "Aniimo 伊莫棲息地與地點資料", "subtitle": "官方棲息地能確認什麼，還有哪些未知。", "tag": "地點", "lead": "官方棲息地支援區域級檢索，不代表精確座標、刷新時間、天氣規則或捕捉率。" },
-      "aniimo-launch-coverage-status": { "title": "Aniimo 上線內容計畫：攻略、Build 與資料狀態", "subtitle": "公開上線首週實測隊列和各類內容的發布門檻。", "tag": "內容狀態", "lead": "AniimoDex 不會在正式遊戲可測試前編造流程攻略、Tier List、Build 或捕獲率。本頁說明已完成內容和後續驗證標準。", "body": [{"t":"h","c":"上線前已完成"},{"t":"table","head":["內容","狀態"],"rows":[["上線、平台與下載","官方來源頁面已發布"],["92 條伊莫圖鑑","編號、名稱、圖片、描述、元素、定位與階段已發布"],["Twine、捕獲和多人概覽","只包含官方已公布機制"],["上線時間與相容性","已確認資訊和未知項分開標示"]]},{"t":"h","c":"上線首週實測隊列"},{"t":"li","c":"開局一小時路線和系統解鎖順序"},{"t":"li","c":"捕獲教學、Aniipod 與陷阱機制"},{"t":"li","c":"區域、地圖、任務、貨幣與養成系統"},{"t":"li","c":"Egg Heist 解鎖和比賽流程"},{"t":"li","c":"登入錯誤、PC 設定、手機與主機效能"},{"t":"h","c":"Tier List 和 Build 何時發布？"},{"t":"p","c":"正式版本提供完整技能、數值與培養系統，並累積可重現戰鬥結果後才發布。每項推薦都會標示測試版本。"},{"t":"h","c":"地點和捕獲率何時發布？"},{"t":"p","c":"地點需要可重現的遊戲內觀察；準確捕獲率需要官方公式或充分記錄的樣本，估算結果不會冒充官方機率。"},{"t":"quote","c":"沒有來源或可重現實測，就不標記為已核驗。"}] }
+      "is-aniimo-free-to-play": {
+        "title": "Aniimo 伊莫是免費遊戲嗎？價格與內購說明",
+        "subtitle": "Steam、PlayStation 與 Xbox 官方頁面均將 Aniimo 標為免費遊玩。",
+        "tag": "價格",
+        "lead": "是的，Aniimo 是免費遊玩遊戲，基礎遊戲無需先付費購買。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 伊莫需要付費購買嗎？"
+          },
+          {
+            "t": "p",
+            "c": "Steam、PlayStation 和 Xbox 的官方商店頁面均標註免費遊玩，玩家可以免費下載並開始基礎遊戲。"
+          },
+          {
+            "t": "h",
+            "c": "遊戲內會有付費內容嗎？"
+          },
+          {
+            "t": "p",
+            "c": "商店頁面提到遊戲內購買或可選禮包，具體價格和商業模式可能因平台、地區和上線版本不同，請以上線時的官方商店為準。"
+          },
+          {
+            "t": "h",
+            "c": "去哪裡取得遊戲？"
+          },
+          {
+            "t": "p",
+            "c": "請從 Aniimo 官網進入對應平台商店，不要使用第三方安裝包、修改版客戶端或所謂的搶先下載頁面。"
+          }
+        ]
+      },
+      "how-to-download-aniimo": {
+        "title": "Aniimo 伊莫怎麼下載？PC、PS5、Xbox 與手機版指南",
+        "subtitle": "從 Aniimo 官網和官方商店頁面安全下載遊戲。",
+        "tag": "下載",
+        "lead": "Aniimo 官網現已提供 PC 官方下載入口，也可從對應平台商店取得遊戲；不要下載第三方 APK 或安裝程式。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 官方下載管道"
+          },
+          {
+            "t": "table",
+            "head": [
+              "平台",
+              "官方管道"
+            ],
+            "rows": [
+              [
+                "Windows PC",
+                "官網 PC 下載、Steam 或 Epic Games Store"
+              ],
+              [
+                "PlayStation 5",
+                "PlayStation Store"
+              ],
+              [
+                "Xbox Series X|S",
+                "Xbox Store"
+              ],
+              [
+                "iPhone / iPad",
+                "官網連結的 App Store"
+              ],
+              [
+                "Android",
+                "官網連結的 Google Play"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "目前下載狀態"
+          },
+          {
+            "t": "table",
+            "head": [
+              "平台",
+              "9 月 16 日核驗狀態"
+            ],
+            "rows": [
+              [
+                "官網 PC 啟動器",
+                "官網已顯示立即下載"
+              ],
+              [
+                "Steam",
+                "已正式發行並免費遊玩"
+              ],
+              [
+                "Xbox",
+                "免費本體與取得操作已開放"
+              ],
+              [
+                "PS5",
+                "公布的發行時間已到，請核對當地商店按鈕"
+              ],
+              [
+                "iOS",
+                "App Store 標註 9 月 23 日"
+              ],
+              [
+                "Android",
+                "已有官方入口，發行日期尚未確認"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "應該從哪裡下載？"
+          },
+          {
+            "t": "p",
+            "c": "請使用 Aniimo 官網、Steam、PlayStation Store 或 Xbox Store。行動版開放情況獨立，且可能因地區不同。"
+          },
+          {
+            "t": "quote",
+            "c": "不要在非官方下載頁面輸入遊戲帳號或商店帳號密碼。"
+          }
+        ]
+      },
+      "aniimo-mobile": {
+        "title": "Aniimo 伊莫手機版：iOS / Android 上線狀態與下載方式",
+        "subtitle": "iOS 商店標註 2026 年 9 月 23 日；Android 官方條目已存在但未公布日期。",
+        "tag": "手機版",
+        "lead": "App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。Android 的官方 Google Play 條目已經存在，但目前提供的是「加入願望清單」而不是安裝，且該條目與官方網站都沒有公布 Android 上線日期。",
+        "body": [
+          {
+            "t": "h",
+            "c": "手機版狀態一覽"
+          },
+          {
+            "t": "table",
+            "head": [
+              "平台",
+              "目前狀態"
+            ],
+            "rows": [
+              [
+                "iPhone / iPad",
+                "App Store 標註 2026 年 9 月 23 日"
+              ],
+              [
+                "Android",
+                "Google Play 官方條目已存在，目前為「加入願望清單」而非安裝，未公布日期"
+              ],
+              [
+                "進度互通",
+                "社群報導稱互通，未找到官方聲明"
+              ],
+              [
+                "裝置需求",
+                "官方未公布完整相容清單"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "手機版什麼時候上線？"
+          },
+          {
+            "t": "p",
+            "c": "官方 App Store 條目顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。社群報導普遍稱 Android 也是同一天，但我們核驗的官方網站與 Google Play 條目都沒有公布 Android 日期，因此 AniimoDex 把這一點標註為社群報導，而非官方確認。"
+          },
+          {
+            "t": "h",
+            "c": "現在能在 Android 上下載嗎？"
+          },
+          {
+            "t": "p",
+            "c": "不能。Google Play 條目提供的是「加入願望清單」而不是安裝，這與尚未開放下載的狀態一致。"
+          },
+          {
+            "t": "h",
+            "c": "手機版與 PC / 主機進度互通嗎？"
+          },
+          {
+            "t": "p",
+            "c": "本頁核驗的官方來源完全沒有提到跨進度或跨存檔策略。社群報導稱手機版與 PC、主機版本共享進度；在官方明確說明之前，請視為未證實。"
+          },
+          {
+            "t": "h",
+            "c": "哪些手機能執行 Aniimo？"
+          },
+          {
+            "t": "p",
+            "c": "本次核驗的官方網站與商店條目都沒有公布裝置相容清單，請不要依賴非官方的最低規格說法。"
+          },
+          {
+            "t": "h",
+            "c": "手機版收費嗎？"
+          },
+          {
+            "t": "p",
+            "c": "基礎遊戲免費遊玩，含遊戲內購買。Google Play 標註了遊戲內購買、10 歲以上分級，以及含幻想暴力與使用者互動。"
+          }
+        ]
+      },
+      "aniimo-team-composition": {
+        "title": "Aniimo 伊莫配隊：定位、元素與移動能力",
+        "subtitle": "基於官方已公布的定位、元素與移動能力欄位的功能性配隊指南，不是強度榜。",
+        "tag": "配隊",
+        "lead": "AniimoDex 不做強度排名。本文說明官方公布的每個定位標籤實際涵蓋什麼、元素標籤與移動能力涵蓋如何影響隊伍構成，以及如何按「你想做什麼」而不是「誰最強」來選擇開局伊莫。",
+        "body": [
+          {
+            "t": "h",
+            "c": "AniimoDex 會出強度榜嗎？"
+          },
+          {
+            "t": "p",
+            "c": "不會。官方 Wiki 索引為每隻伊莫公布一個定位標籤和一到多個元素標籤，這兩個欄位都無法說明哪隻更強。排名屬於主觀判斷，因此本文只討論隊伍功能。"
+          },
+          {
+            "t": "h",
+            "c": "各定位分別有多少隻伊莫？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "定位",
+              "索引中的伊莫數"
+            ],
+            "rows": [
+              [
+                "輸出 DPS",
+                "31"
+              ],
+              [
+                "破防 Break",
+                "26"
+              ],
+              [
+                "輔助 Support",
+                "18"
+              ],
+              [
+                "再生 Regen",
+                "10"
+              ],
+              [
+                "治療 Heal",
+                "7"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "每個定位標籤涵蓋什麼？"
+          },
+          {
+            "t": "li",
+            "c": "輸出（DPS）：索引中負責造成傷害的標籤，也是數量最多的一類。"
+          },
+          {
+            "t": "li",
+            "c": "破防（Break）：與擊破目標相關的索引標籤。官方機率公示確認擊破狀態提供 ×1.5 捕獲係數，擊破狀態捕捉增益可達 ×3。"
+          },
+          {
+            "t": "li",
+            "c": "輔助（Support）：索引中為隊伍提供增益效果的標籤。"
+          },
+          {
+            "t": "li",
+            "c": "再生（Regen）：索引中負責持續回復與續航的標籤。"
+          },
+          {
+            "t": "li",
+            "c": "治療（Heal）：索引中負責治療的標籤，也是數量最少的一類，僅 7 隻。"
+          },
+          {
+            "t": "p",
+            "c": "上述說明來自已公布的標籤，以及官方機率公示中明確寫出的部分。詳情快照包含技能名稱和描述，但沒有完整的冷卻、傷害、養成成本和版本平衡資料。"
+          },
+          {
+            "t": "h",
+            "c": "元素標籤怎麼用於配隊？"
+          },
+          {
+            "t": "p",
+            "c": "元素標籤是可核驗的官方資料，92 隻索引伊莫中有 13 隻帶有不止一個元素。但剋制矩陣工具中的倍率屬於社群整理的參考而非官方資料，因此請用元素標籤檢查隊伍的元素涵蓋，而不是據此假定某個元素必然剋制。"
+          },
+          {
+            "t": "table",
+            "head": [
+              "元素",
+              "索引中的伊莫數"
+            ],
+            "rows": [
+              [
+                "水",
+                "19"
+              ],
+              [
+                "草",
+                "16"
+              ],
+              [
+                "土",
+                "16"
+              ],
+              [
+                "風",
+                "14"
+              ],
+              [
+                "暗",
+                "12"
+              ],
+              [
+                "雷",
+                "10"
+              ],
+              [
+                "火",
+                "9"
+              ],
+              [
+                "冰",
+                "9"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "為什麼移動能力對隊伍也很重要？"
+          },
+          {
+            "t": "p",
+            "c": "移動能力用於場景移動或環境互動。92 隻索引伊莫中有 48 隻公布了移動能力，共 19 個不同名稱。這些描述可用於比較場地功能，但來源沒有將它們對應到具體的必經路線或地點。"
+          },
+          {
+            "t": "h",
+            "c": "新手該先選什麼？"
+          },
+          {
+            "t": "p",
+            "c": "按「你想做什麼」來選，而不是按「誰看起來最強」來選。"
+          },
+          {
+            "t": "li",
+            "c": "想探索：優先挑公布了移動能力的伊莫，因為索引裡不到一半帶該欄位。"
+          },
+          {
+            "t": "li",
+            "c": "想高效捕捉：可以對照官方公布的狀態與背襲係數，再在當前版本中確認哪些伊莫能施加對應狀態。該來源沒有將這類隊伍與傷害型隊伍做比較。"
+          },
+          {
+            "t": "li",
+            "c": "想玩連線：關注輔助、再生與治療，這三類是公布數量最少的組，分別只有 18、10、7 隻。"
+          },
+          {
+            "t": "h",
+            "c": "本文不能告訴你什麼？"
+          },
+          {
+            "t": "p",
+            "c": "本文無法給出強度排名或固定配隊。已登記的來源包含已公布的屬性和技能描述，但沒有足夠完整的冷卻、傷害、養成成本與版本平衡資料，因此不足以支撐可靠的強度排名。"
+          },
+          {
+            "t": "quote",
+            "c": "定位與元素說明的是這隻伊莫「用來做什麼」，不是「有多強」。本文只停留在功能這一側。"
+          }
+        ]
+      },
+      "aniimo-forms-explained": {
+        "title": "Aniimo 伊莫形態說明：虹彩形態、區域形態與閃耀樣式",
+        "subtitle": "官方 Wiki 索引共 19 個形態名，閃耀樣式則由官方機率公示單獨公布。",
+        "tag": "形態",
+        "lead": "AniimoDex 的形態資料來自兩份互不相同的官方文件：Wiki 詳情快照（為每隻伊莫列出形態條目）與機率公示（公布閃耀樣式表）。本文說明各自具體涵蓋了什麼。",
+        "body": [
+          {
+            "t": "h",
+            "c": "官方公布了哪些形態資料？"
+          },
+          {
+            "t": "p",
+            "c": "官方 Wiki 詳情快照為每隻伊莫記錄一份形態清單。92 筆索引裡共出現 19 個不同形態名，可分三類：每隻都帶「基礎形態」（Basic Form），21 隻另外帶「虹彩形態」（Prismana Form），其餘以地貌或天氣命名。"
+          },
+          {
+            "t": "table",
+            "head": [
+              "形態",
+              "索引中的伊莫數"
+            ],
+            "rows": [
+              [
+                "Basic Form 基礎形態",
+                "92"
+              ],
+              [
+                "Prismana Form 虹彩形態",
+                "21"
+              ],
+              [
+                "Highland Form",
+                "15"
+              ],
+              [
+                "Mountain Woods Form",
+                "12"
+              ],
+              [
+                "Umbrabow Form",
+                "12"
+              ],
+              [
+                "Snowfield Form",
+                "11"
+              ],
+              [
+                "Sea of Flowers Form",
+                "9"
+              ],
+              [
+                "Nighttime Form",
+                "9"
+              ],
+              [
+                "Rainstorm Form",
+                "7"
+              ],
+              [
+                "Beach Form",
+                "6"
+              ],
+              [
+                "Forest Form",
+                "6"
+              ],
+              [
+                "Mountain Form",
+                "6"
+              ],
+              [
+                "Plateau Form",
+                "4"
+              ],
+              [
+                "Thunderstorm Form",
+                "2"
+              ],
+              [
+                "Grassland Form",
+                "2"
+              ],
+              [
+                "Cloudmist Form",
+                "2"
+              ],
+              [
+                "Mudflat Form",
+                "2"
+              ],
+              [
+                "Bay Form",
+                "2"
+              ],
+              [
+                "Towerwood Form",
+                "2"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "什麼是虹彩形態（Prismana Form）？"
+          },
+          {
+            "t": "p",
+            "c": "Prismana Form 是官方形態清單裡的名稱，92 隻索引伊莫中有 21 隻公布了它。社群資料稱虹彩形態改變的是伊莫元素而不是數值，但本站引用的官方 Wiki 來源並未說明它改變了什麼，因此 AniimoDex 只把該說法標為社群級。"
+          },
+          {
+            "t": "h",
+            "c": "什麼是區域形態？"
+          },
+          {
+            "t": "p",
+            "c": "其餘 17 個形態名與地點或天氣綁定，例如 Highland Form、Snowfield Form、Sea of Flowers Form、Rainstorm Form、Nighttime Form。官方索引只記錄了名稱，沒有公布它們之間的差異在哪。"
+          },
+          {
+            "t": "h",
+            "c": "閃耀形態在同一個清單裡嗎？"
+          },
+          {
+            "t": "p",
+            "c": "不在。官方形態清單裡沒有任何閃耀條目。閃耀樣式由官方機率公示單獨公布，兩者不應被當成同一個欄位。"
+          },
+          {
+            "t": "h",
+            "c": "官方公布了哪些閃耀樣式？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "取得方式",
+              "普通閃耀",
+              "炫之閃耀",
+              "影之閃耀"
+            ],
+            "rows": [
+              [
+                "用閃耀立方捕捉大世界伊莫",
+                "99%",
+                "1%",
+                "0%"
+              ],
+              [
+                "用閃耀立方孵化非搶蛋大作戦的蛋",
+                "99%",
+                "1%",
+                "0%"
+              ],
+              [
+                "用閃耀立方孵化搶蛋大作戦的蛋",
+                "99%",
+                "0%",
+                "1%"
+              ],
+              [
+                "用閃耀之印把已有伊莫變為閃耀",
+                "99%",
+                "0.5%",
+                "0.5%"
+              ],
+              [
+                "用閃耀之彩改變閃耀樣式",
+                "99%",
+                "0.5%",
+                "0.5%"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "在閃耀立方的兩種用途裡普通閃耀樣式都是 99%，也就是說稀有結果是炫之閃耀（1%）或搶蛋蛋產出的影之閃耀（1%），而不是「是否閃耀」本身。"
+          },
+          {
+            "t": "h",
+            "c": "閃耀樣式會改變什麼？"
+          },
+          {
+            "t": "p",
+            "c": "官方公示只公布了各樣式的取得機率，沒有說明閃耀樣式是否影響數值、元素或定位，因此 AniimoDex 不做任何相關斷言。"
+          },
+          {
+            "t": "h",
+            "c": "為什麼圖鑑不顯示各形態的數值？"
+          },
+          {
+            "t": "p",
+            "c": "AniimoDex 引用的官方來源沒有公布各形態的屬性、元素、定位或能力，因此圖鑑只列出形態名稱與分類，不用估算數值填空。"
+          },
+          {
+            "t": "quote",
+            "c": "如實公布官方形態列表、並標註哪些沒有公布，比編造形態之間的差異更有用。"
+          }
+        ]
+      },
+      "aniimo-ps5": {
+        "title": "Aniimo 伊莫會登上 PS5 嗎？發售日期與商店狀態",
+        "subtitle": "會。Aniimo 已有官方 PS5 頁面，公布的 9 月 16 日發行時間已經到達。",
+        "tag": "PS5",
+        "lead": "Aniimo 已確認登上 PlayStation 5。官方公布的 2026 年 9 月 16 日 10:00（UTC+8）發行時間已經到達，請透過當地 PlayStation Store 核對目前下載按鈕。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 會登上 PS5 嗎？"
+          },
+          {
+            "t": "p",
+            "c": "會。Aniimo 已有由 Pawprint Interactive Entertainment 發布的官方 PS5 商店頁面。"
+          },
+          {
+            "t": "h",
+            "c": "Aniimo PS5 版什麼時候上線？"
+          },
+          {
+            "t": "p",
+            "c": "PlayStation Store 標註 2026 年 9 月 16 日 10:00（UTC+8），對應 UTC 時間 9 月 16 日 02:00；該時間現已到達。"
+          },
+          {
+            "t": "h",
+            "c": "Aniimo PS5 版免費嗎？"
+          },
+          {
+            "t": "p",
+            "c": "免費。基礎遊戲標註為免費遊玩；付費禮包包含可選遊戲內獎勵，不改變本體免費狀態。"
+          },
+          {
+            "t": "h",
+            "c": "PS5 版需要連線嗎？"
+          },
+          {
+            "t": "p",
+            "c": "PlayStation 頁面標註需要線上遊玩，並提示遊戲內購買和使用者互動；下載按鈕、地區帳號或訂閱需求請以即時商店頁面為準。"
+          }
+        ]
+      },
+      "is-aniimo-a-gacha-game": {
+        "title": "Aniimo 伊莫是抽卡遊戲嗎？零課玩法實用指南",
+        "subtitle": "Aniimo 是免費遊戲並含內購，但官方商店沒有把它定義為抽卡遊戲。",
+        "tag": "付費模式",
+        "lead": "官方商店確認基礎遊戲免費、含遊戲內購買，並且沒有描述抽卡系統。本文先回答抽卡問題，再只依據官方已公布的內容，說明不想付費的玩家實際上能做什麼。",
+        "body": [
+          {
+            "t": "h",
+            "c": "官方稱 Aniimo 是抽卡遊戲嗎？"
+          },
+          {
+            "t": "p",
+            "c": "沒有。官方網站與主要商店都把 Aniimo 描述為免費遊玩的捉寵開放世界 RPG，沒有使用抽卡這一分類。"
+          },
+          {
+            "t": "h",
+            "c": "Aniimo 有遊戲內購買嗎？"
+          },
+          {
+            "t": "p",
+            "c": "有。Steam、PlayStation、Xbox 與 Google Play 都披露了遊戲內購買。這只能確認存在付費內容；AniimoDex 不對任何付費項做排名或價值判斷。"
+          },
+          {
+            "t": "h",
+            "c": "哪些內容是免費的？"
+          },
+          {
+            "t": "li",
+            "c": "基礎遊戲本身在 PC、PS5、Xbox、iOS 與 Android 上均可免費下載遊玩。"
+          },
+          {
+            "t": "li",
+            "c": "商店描述把捕捉、開放世界探索、Twine 與多人玩法列為核心玩法，而不是需要另行購買的模組。"
+          },
+          {
+            "t": "li",
+            "c": "官方頁面列出了公測免費福利：免費捕捉道具（閃耀立方、終極立方與大白球）、限定伊莫蛋、專屬飾品、可自選的稀有虹彩伊莫，以及 4 套免費時裝。"
+          },
+          {
+            "t": "h",
+            "c": "零課玩家怎麼提高捕獲率？"
+          },
+          {
+            "t": "p",
+            "c": "依官方捕獲公式，免費手段拿到的倍率反而是最高的幾檔：伺服器確認的有效背襲 ×1.5；戰鬥中把目標打到 0% 生命值 ×2；特殊狀態中普通睡眠或暈眩 ×2，深度睡眠或採集花蜜最高可達 ×100。"
+          },
+          {
+            "t": "p",
+            "c": "相比之下付費立方的檔位更小：高級立方 ×1.5，更高級立方 ×2。也就是說，免費的身位、狀態與血量控制完全可以持平甚至超過換立方。"
+          },
+          {
+            "t": "h",
+            "c": "零課玩家最該注意什麼？"
+          },
+          {
+            "t": "p",
+            "c": "等級差是官方公布裡最重的懲罰：高出人物 11 級係數降到 ×0.8，15 級及以上降到 ×0.1。練等是免費的，收益比大多數付費道具更直接。"
+          },
+          {
+            "t": "h",
+            "c": "AniimoDex 會給出付費建議嗎？"
+          },
+          {
+            "t": "p",
+            "c": "不會。已登記的來源沒有以可核驗的形式公布價格、通行證內容、體力限制或貨幣兌換比例，因此本站不對任何付費項做推薦或排名。"
+          },
+          {
+            "t": "quote",
+            "c": "上述福利是官方頁面公布的公測內容；每項今天是否仍可取得，該頁面並未說明。"
+          }
+        ]
+      },
+      "aniimo-nintendo-switch": {
+        "title": "Aniimo 伊莫會登上 Nintendo Switch 嗎？官方狀態說明",
+        "subtitle": "Nintendo Switch 尚未出現在 Aniimo 目前官方平台清單中。",
+        "tag": "平台",
+        "lead": "截至本頁核驗時間，沒有官方資料確認 Aniimo 會登上 Nintendo Switch。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 有 Switch 版嗎？"
+          },
+          {
+            "t": "p",
+            "c": "目前沒有。Aniimo 官網列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但沒有 Nintendo Switch。"
+          },
+          {
+            "t": "h",
+            "c": "以後可能推出 Switch 版嗎？"
+          },
+          {
+            "t": "p",
+            "c": "平台計畫未來可能變化，但現在沒有可以核實的官方消息。只有 Aniimo 或任天堂正式公布後，本頁才會更新為已確認。"
+          }
+        ]
+      },
+      "aniimo-twine-explained": {
+        "title": "Aniimo Twine 玩法是什麼？變身、探索與戰鬥說明",
+        "subtitle": "Twine 允許探索者變成已經收集的伊莫並使用牠們的能力。",
+        "tag": "玩法",
+        "lead": "Twine 是 Aniimo 的核心系統之一：探索者可以變成已收集的伊莫，在探索、解謎和戰鬥中使用對應能力。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Twine 是什麼意思？"
+          },
+          {
+            "t": "p",
+            "c": "官方描述稱玩家可以與已收集的伊莫 Twine。已公布的例子包括滑翔、潛水和鑽地，並利用不同能力探索世界。"
+          },
+          {
+            "t": "h",
+            "c": "Twine 能做什麼？"
+          },
+          {
+            "t": "li",
+            "c": "穿越地形並到達新區域"
+          },
+          {
+            "t": "li",
+            "c": "解決環境謎題"
+          },
+          {
+            "t": "li",
+            "c": "在即時戰鬥中使用伊莫能力"
+          },
+          {
+            "t": "h",
+            "c": "哪些伊莫擁有對應能力？"
+          },
+          {
+            "t": "p",
+            "c": "目前引用的官方資料沒有公布完整的伊莫與能力對應表，社群圖鑑中的映射仍處於核驗狀態。"
+          }
+        ]
+      },
+      "aniimo-catching-guide": {
+        "title": "Aniimo 伊莫怎麼捕獲？官方公式、謎立方與狀態倍率",
+        "subtitle": "根據官方機率公示整理捕獲公式、基礎機率和已確認修正倍率。",
+        "tag": "玩法",
+        "lead": "官方現已公布戰鬥外、戰鬥中和目標死亡後的捕獲公式，確認區域階段、等級差、謎立方、生命值、背襲和特殊狀態會共同影響成功率。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 捕獲率怎麼計算？"
+          },
+          {
+            "t": "p",
+            "c": "戰鬥外公式為基礎機率 × 謎立方係數 × 等級係數 × 背襲係數 × 特殊狀態係數；戰鬥中改用生命值係數，目標死亡時則使用死亡基礎機率。"
+          },
+          {
+            "t": "h",
+            "c": "哪些捕獲加成已確認？"
+          },
+          {
+            "t": "li",
+            "c": "高級立方 ×1.5，部分更高級立方 ×2，終極立方和閃耀立方必定成功"
+          },
+          {
+            "t": "li",
+            "c": "有效背襲 ×1.5，僅在戰鬥外使用普通謎立方時生效"
+          },
+          {
+            "t": "li",
+            "c": "擊破 ×1.5，普通睡眠或暈眩等狀態 ×2"
+          },
+          {
+            "t": "li",
+            "c": "戰鬥中目標生命值越低，公開係數越高"
+          },
+          {
+            "t": "h",
+            "c": "為什麼不能直接顯示每隻伊莫的百分比？"
+          },
+          {
+            "t": "p",
+            "c": "官方說明具體基礎係數由伊莫模板指定，不能僅按等級推算。只有確定目前區域階段、對應模板和所有遭遇條件後，才能給出準確結果。"
+          }
+        ]
+      },
+      "aniimo-multiplayer": {
+        "title": "Aniimo 伊莫能連線嗎？合作、PvP 與 Egg Heist 玩法",
+        "subtitle": "官方商店確認多人、線上合作、PvP 和跨平台多人功能。",
+        "tag": "多人",
+        "lead": "Aniimo 同時包含單人和多人活動。Steam 列出 PvP、線上合作及跨平台多人，Xbox 則公布了三人組隊的 Egg Heist PVEVP 模式。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 支援連線合作嗎？"
+          },
+          {
+            "t": "p",
+            "c": "支援。Steam 頁面列出線上合作與多人模式，具體活動可能受到平台、帳號與上線版本影響。"
+          },
+          {
+            "t": "h",
+            "c": "有 PvP 嗎？"
+          },
+          {
+            "t": "p",
+            "c": "Steam 列出了 PvP；Xbox 將 Egg Heist 描述為即時 PVEVP 活動，三人隊伍需要在對抗環境威脅的同時展開競爭。"
+          },
+          {
+            "t": "h",
+            "c": "支援跨平台連線嗎？"
+          },
+          {
+            "t": "p",
+            "c": "Steam 標註跨平台多人，但目前官方資料尚未說明所有平台組合、跨平台存檔和帳號綁定細節。"
+          }
+        ]
+      },
+      "aniimo-pre-registration": {
+        "title": "伊莫預約獎勵：里程碑與目前狀態",
+        "subtitle": "官方預約數已突破 3500 萬，四個已公布的里程碑獎勵全部解鎖。",
+        "tag": "更新",
+        "lead": "Aniimo 官方網站仍在展示即時全球預約數與對應的獎勵里程碑。AniimoDex 只記錄該頁面實際公布的內容，不描述無法核驗的領取流程。",
+        "body": [
+          {
+            "t": "h",
+            "c": "目前預約數是多少？"
+          },
+          {
+            "t": "p",
+            "c": "2026 年 9 月 18 日核驗時，官方網站顯示預約數為 35,451,283。"
+          },
+          {
+            "t": "h",
+            "c": "哪些里程碑獎勵已經解鎖？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "里程碑",
+              "獎勵"
+            ],
+            "rows": [
+              [
+                "1000 萬",
+                "輝石 ×200"
+              ],
+              [
+                "1500 萬",
+                "終極立方 ×2"
+              ],
+              [
+                "2000 萬",
+                "「同遊之約」限定頭像框"
+              ],
+              [
+                "3000 萬",
+                "「逐光晴野」限定時裝"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "上線後還能領取預約獎勵嗎？"
+          },
+          {
+            "t": "p",
+            "c": "PC 與主機已於 2026 年 9 月 16 日上線，官方網站現在的主按鈕是 PC 下載，但仍保留預約數與里程碑展示。本次核驗的來源沒有說明已進入遊戲的帳號如何領取里程碑獎勵，因此 AniimoDex 不描述領取流程。"
+          },
+          {
+            "t": "h",
+            "c": "官方網站還列出了哪些公測福利？"
+          },
+          {
+            "t": "li",
+            "c": "晉升「初級啟程者」後可自選一隻稀有虹彩形態伊莫"
+          },
+          {
+            "t": "li",
+            "c": "完成「研究手冊」指定進度可得專屬飾品"
+          },
+          {
+            "t": "li",
+            "c": "免費獲得捕捉道具，包括閃耀立方、終極立方與大白球"
+          },
+          {
+            "t": "li",
+            "c": "官網預約送限定伊莫蛋；累計登入再領閃耀之星伊莫蛋"
+          },
+          {
+            "t": "li",
+            "c": "合計可獲得 4 套免費時裝"
+          },
+          {
+            "t": "quote",
+            "c": "AniimoDex 列出這些內容，是因為官方頁面確實公布了它們。至於每項福利今天是否仍可取得，該頁面並未說明。"
+          }
+        ]
+      },
+      "aniimo-system-requirements": {
+        "title": "Aniimo 伊莫 PC 配置需求：最低與建議配置",
+        "subtitle": "官方 Windows CPU、記憶體、顯示卡、DirectX 與 30 GB 儲存需求。",
+        "tag": "PC",
+        "lead": "Epic Games Store 已公布 Aniimo 的完整 Windows 最低與建議配置，兩檔均需要 30 GB，建議配置要求 SSD。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 能在 PC 上玩嗎？"
+          },
+          {
+            "t": "p",
+            "c": "可以。Steam、Epic 和 Xbox 頁面均確認 PC/Windows 支援。"
+          },
+          {
+            "t": "h",
+            "c": "Aniimo 最低配置是什麼？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "項目",
+              "最低配置"
+            ],
+            "rows": [
+              [
+                "系統",
+                "Windows 10"
+              ],
+              [
+                "處理器",
+                "Intel i5 第 9 代或 AMD Ryzen 7 2700"
+              ],
+              [
+                "記憶體",
+                "8 GB"
+              ],
+              [
+                "顯示卡",
+                "GTX 1060、RX 580 或 Intel Arc A580"
+              ],
+              [
+                "DirectX",
+                "DirectX 11"
+              ],
+              [
+                "儲存",
+                "30 GB"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Aniimo 建議配置是什麼？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "項目",
+              "建議配置"
+            ],
+            "rows": [
+              [
+                "系統",
+                "Windows 11"
+              ],
+              [
+                "處理器",
+                "Intel i7 第 9 代或 AMD Ryzen 7 3700"
+              ],
+              [
+                "記憶體",
+                "16 GB"
+              ],
+              [
+                "顯示卡",
+                "RTX 3060 或 RX 6600 及以上"
+              ],
+              [
+                "DirectX",
+                "DirectX 12"
+              ],
+              [
+                "儲存",
+                "30 GB SSD"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "支援 macOS 嗎？"
+          },
+          {
+            "t": "p",
+            "c": "目前官方商店只確認 Windows，尚未確認 macOS 版本。"
+          }
+        ]
+      },
+      "official-aniimo-dex-status": {
+        "title": "Aniimo 官方圖鑑覆蓋：AniimoDex 已核驗哪些欄位",
+        "subtitle": "公開說明 AniimoDex 使用的官方 Wiki 快照和逐欄位核驗狀態。",
+        "tag": "資料狀態",
+        "lead": "AniimoDex 目前收錄 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 條編號記錄，只將快照中明確存在的欄位標為已核驗。",
+        "body": [
+          {
+            "t": "h",
+            "c": "目前已核驗什麼？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "欄位",
+              "狀態"
+            ],
+            "rows": [
+              [
+                "編號、名稱與圖片",
+                "來自官方 Wiki 索引"
+              ],
+              [
+                "描述、元素、定位與階段",
+                "來自官方 Wiki 資料"
+              ],
+              [
+                "進化、棲息地與型態",
+                "來自官方 Wiki 詳情頁"
+              ],
+              [
+                "移動能力、特性與技能",
+                "來自官方 Wiki 詳情頁"
+              ],
+              [
+                "數值屬性與捕獲條件",
+                "尚未作為已核驗資料發布"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "目前圖鑑可以查看什麼？"
+          },
+          {
+            "t": "p",
+            "c": "元素與定位篩選支援雙元素伊莫。每個詳情頁現在還會顯示官方進化、棲息地、型態、移動能力、特性與技能；數值屬性和準確捕獲條件仍暫不公開。"
+          },
+          {
+            "t": "h",
+            "c": "資料如何更新？"
+          },
+          {
+            "t": "p",
+            "c": "可重複執行的解析腳本讀取官方 Wiki 公開索引與詳情頁，驗證記錄完整性並保存帶日期的快照。官方資料變化會先經過差異檢查，再發布到線上。"
+          },
+          {
+            "t": "quote",
+            "c": "已核驗標籤只適用於明確列出的欄位，不代表該伊莫的所有資訊都已確認。"
+          }
+        ]
+      },
+      "aniimo-launch-time-preload": {
+        "title": "伊莫上線時間：Aniimo 全球發行與目前下載狀態",
+        "subtitle": "Aniimo 已正式上線，查看全球發行時間和各平台目前開放情況。",
+        "tag": "上線",
+        "lead": "Aniimo 已於 2026 年 9 月 16 日 10:00（UTC+8）到達公布的全球上線時間。Steam 與 Xbox 已核驗開放，行動版時間仍獨立。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 幾點上線？"
+          },
+          {
+            "t": "table",
+            "head": [
+              "地區",
+              "當地時間"
+            ],
+            "rows": [
+              [
+                "台灣/新加坡 UTC+8",
+                "9 月 16 日 10:00"
+              ],
+              [
+                "UTC",
+                "9 月 16 日 02:00"
+              ],
+              [
+                "美國東部 EDT",
+                "9 月 15 日 22:00"
+              ],
+              [
+                "美國西部 PDT",
+                "9 月 15 日 19:00"
+              ],
+              [
+                "歐洲中部 CEST",
+                "9 月 16 日 04:00"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Aniimo 現在可以玩嗎？"
+          },
+          {
+            "t": "p",
+            "c": "已核驗的 PC 與 Xbox 管道可以：Steam 已標記發行，官網提供 PC 啟動器，Xbox 已開放免費本體。PlayStation 請查看當地商店目前按鈕；iOS 仍標註 9 月 23 日，Android 時間尚未確認。"
+          },
+          {
+            "t": "h",
+            "c": "為什麼 Steam 顯示 9 月 15 日？"
+          },
+          {
+            "t": "p",
+            "c": "同一全球開放時刻在美洲仍是 9 月 15 日，在亞洲已是 9 月 16 日。上表以 PlayStation 明確公布的 UTC+8 時間換算。"
+          },
+          {
+            "t": "quote",
+            "c": "平台開放狀態核驗於 2026 年 9 月 16 日，仍可能因地區不同。"
+          }
+        ]
+      },
+      "aniimo-crossplay-cross-save": {
+        "title": "Aniimo 支援跨平台連線和跨平台存檔嗎？",
+        "subtitle": "支援跨平台多人；跨平台存檔和進度互通尚未確認，查看目前官方狀態。",
+        "tag": "多人",
+        "lead": "支援。Steam 已列出 Aniimo 的跨平台多人功能；跨平台存檔和進度互通屬於不同能力，截至 2026 年 9 月 15 日仍未獲官方來源確認。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 支援跨平台連線嗎？"
+          },
+          {
+            "t": "p",
+            "c": "Steam 頁面列出跨平台多人，但沒有說明每一種平台組合和活動的具體支援範圍。"
+          },
+          {
+            "t": "h",
+            "c": "支援跨平台存檔嗎？"
+          },
+          {
+            "t": "p",
+            "c": "目前官方來源沒有完整的帳號綁定與進度轉移政策。支援跨平台連線不代表存檔、付費貨幣或禮包一定能在不同商店間轉移。"
+          },
+          {
+            "t": "h",
+            "c": "還有哪些資訊待確認？"
+          },
+          {
+            "t": "li",
+            "c": "PC、主機和手機之間的具體連線組合"
+          },
+          {
+            "t": "li",
+            "c": "同一帳號是否在所有平台共享進度"
+          },
+          {
+            "t": "li",
+            "c": "付費貨幣和禮包是否跨商店共享"
+          },
+          {
+            "t": "quote",
+            "c": "Pawprint Studio 公布帳號或跨進度 FAQ 後，本頁會更新。"
+          }
+        ]
+      },
+      "aniimo-language-controller-support": {
+        "title": "Aniimo 伊莫語言、手把與 Steam Deck 支援狀態",
+        "subtitle": "整理語言選項、PC 手把和掌機相容性的目前官方狀態。",
+        "tag": "相容性",
+        "lead": "Aniimo 已有 PC 與主機官方頁面，但上線前並非所有相容性細節都已穩定公開。",
+        "body": [
+          {
+            "t": "h",
+            "c": "Aniimo 支援手把嗎？"
+          },
+          {
+            "t": "p",
+            "c": "主機版本會使用對應平台手把，但目前來源沒有提供最終 PC 手把矩陣、完整按鍵表或所有第三方手把相容清單。"
+          },
+          {
+            "t": "h",
+            "c": "支援 Steam Deck 嗎？"
+          },
+          {
+            "t": "p",
+            "c": "目前註冊來源沒有確認 Steam Deck 相容等級。Steam 上支援 Windows 並不能直接證明 Deck 已驗證或效能穩定。"
+          },
+          {
+            "t": "h",
+            "c": "支援哪些語言？"
+          },
+          {
+            "t": "p",
+            "c": "商店語言表在上線前可能變化，並會分別標示介面、字幕與語音。完整穩定清單公布前，請以對應官方商店即時頁面為準。"
+          },
+          {
+            "t": "h",
+            "c": "上線後會測試什麼？"
+          },
+          {
+            "t": "li",
+            "c": "鍵鼠按鍵自訂"
+          },
+          {
+            "t": "li",
+            "c": "Xbox、DualSense 與通用 PC 手把"
+          },
+          {
+            "t": "li",
+            "c": "Steam Deck 啟動、操作與效能"
+          },
+          {
+            "t": "li",
+            "c": "介面、字幕和語音選項"
+          }
+        ]
+      },
+      "aniimo-elements-explained": {
+        "title": "Aniimo 伊莫元素詳解：全部 9 種屬性",
+        "subtitle": "了解官方元素標籤如何組織伊莫圖鑑。",
+        "tag": "元素",
+        "lead": "官方 Aniimo Wiki 使用九種元素標籤，AniimoDex 僅依這些標籤整理圖鑑，不據此推斷強度排名。"
+      },
+      "aniimo-roles-explained": {
+        "title": "Aniimo 伊莫戰鬥定位詳解",
+        "subtitle": "理解攻擊、治療、輔助、破防與回復定位。",
+        "tag": "定位",
+        "lead": "官方戰鬥定位是分類標籤，不代表上線後的強度排名或完整配隊。"
+      },
+      "aniimo-evolution-system": {
+        "title": "Aniimo 伊莫進化系統與家族",
+        "subtitle": "在不猜測條件的前提下閱讀官方進化關係。",
+        "tag": "進化",
+        "lead": "官方 Wiki 詳情頁公布進化家族和階段，未公布的進化條件繼續標為未知。"
+      },
+      "aniimo-mobility-abilities": {
+        "title": "Aniimo 伊莫移動能力詳解",
+        "subtitle": "官方圖鑑中的探索與場地能力。",
+        "tag": "能力",
+        "lead": "官方移動能力與戰鬥特性、技能分開列出。"
+      },
+      "aniimo-habitats-locations": {
+        "title": "Aniimo 伊莫棲息地與地點資料",
+        "subtitle": "官方棲息地能確認什麼，還有哪些未知。",
+        "tag": "地點",
+        "lead": "官方棲息地支援區域級檢索，不代表精確座標、刷新時間、天氣規則或捕捉率。"
+      },
+      "aniimo-launch-coverage-status": {
+        "title": "Aniimo 上線內容計畫：攻略、Build 與資料狀態",
+        "subtitle": "公開上線首週實測隊列和各類內容的發布門檻。",
+        "tag": "內容狀態",
+        "lead": "AniimoDex 不會在正式遊戲可測試前編造流程攻略、Tier List、Build 或捕獲率。本頁說明已完成內容和後續驗證標準。",
+        "body": [
+          {
+            "t": "h",
+            "c": "上線前已完成"
+          },
+          {
+            "t": "table",
+            "head": [
+              "內容",
+              "狀態"
+            ],
+            "rows": [
+              [
+                "上線、平台與下載",
+                "官方來源頁面已發布"
+              ],
+              [
+                "92 條伊莫圖鑑",
+                "編號、名稱、圖片、描述、元素、定位與階段已發布"
+              ],
+              [
+                "Twine、捕獲和多人概覽",
+                "只包含官方已公布機制"
+              ],
+              [
+                "上線時間與相容性",
+                "已確認資訊和未知項分開標示"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "上線首週實測隊列"
+          },
+          {
+            "t": "li",
+            "c": "開局一小時路線和系統解鎖順序"
+          },
+          {
+            "t": "li",
+            "c": "捕獲教學、Aniipod 與陷阱機制"
+          },
+          {
+            "t": "li",
+            "c": "區域、地圖、任務、貨幣與養成系統"
+          },
+          {
+            "t": "li",
+            "c": "Egg Heist 解鎖和比賽流程"
+          },
+          {
+            "t": "li",
+            "c": "登入錯誤、PC 設定、手機與主機效能"
+          },
+          {
+            "t": "h",
+            "c": "Tier List 和 Build 何時發布？"
+          },
+          {
+            "t": "p",
+            "c": "正式版本提供完整技能、數值與培養系統，並累積可重現戰鬥結果後才發布。每項推薦都會標示測試版本。"
+          },
+          {
+            "t": "h",
+            "c": "地點和捕獲率何時發布？"
+          },
+          {
+            "t": "p",
+            "c": "地點需要可重現的遊戲內觀察；準確捕獲率需要官方公式或充分記錄的樣本，估算結果不會冒充官方機率。"
+          },
+          {
+            "t": "quote",
+            "c": "沒有來源或可重現實測，就不標記為已核驗。"
+          }
+        ]
+      }
     },
     "dataTopics": {
-      "elements": { "meaning": { "heading": "伊莫有哪些元素？", "content": "官方索引使用光、火、冰、暗、雷、草、水、地和風，部分伊莫擁有兩個標籤。" }, "confirmed": { "heading": "已確認什麼？", "content": "元素頁彙整帶有該官方標籤的伊莫及其已公布定位。" }, "unknown": { "heading": "不能推斷什麼？", "content": "僅憑元素標籤不能確認剋制、配裝或強度排名。" } },
-      "roles": { "meaning": { "heading": "官方列出哪些定位？", "content": "官方索引使用 DPS、Heal、Support、Break 和 Regen。" }, "confirmed": { "heading": "怎樣使用定位資料？", "content": "可依定位篩選圖鑑，再比較官方元素、進化、特性與技能。" }, "unknown": { "heading": "定位能確認隊伍價值嗎？", "content": "不能。傷害、治療、裝備和隊伍價值需要完整實機資料與測試。" } },
-      "evolution": { "meaning": { "heading": "什麼是進化家族？", "content": "官方詳情資料把家族成員連接成進化樹，包括已公布的分支。" }, "confirmed": { "heading": "AniimoDex 保留什麼？", "content": "站點顯示官方家族關係，並連結所有已收錄成員。" }, "unknown": { "heading": "進化條件確認了嗎？", "content": "來源未列出時，不猜測等級、道具、任務、時段或天氣。" } },
-      "mobility": { "meaning": { "heading": "什麼是移動能力？", "content": "移動能力是移動或環境互動欄位，與戰鬥特性和技能不同。" }, "confirmed": { "heading": "哪些伊莫會收錄？", "content": "只有官方明確公布移動能力的條目才進入目錄。" }, "unknown": { "heading": "資料缺失時怎麼辦？", "content": "缺失能力保持未列出，不用猜測補齊。" } },
-      "habitats": { "meaning": { "heading": "棲息地代表什麼？", "content": "它表示官方 Wiki 將某隻伊莫與該命名區域關聯。" }, "confirmed": { "heading": "地點目錄能顯示什麼？", "content": "目錄彙整同棲息地伊莫，並概括元素和進化家族。" }, "unknown": { "heading": "這是精確刷新點嗎？", "content": "不是。座標、必定遭遇、刷新時間、天氣規則和捕捉率需要獨立證據。" } }
+      "elements": {
+        "meaning": {
+          "heading": "伊莫有哪些元素？",
+          "content": "官方索引使用光、火、冰、暗、雷、草、水、地和風，部分伊莫擁有兩個標籤。"
+        },
+        "confirmed": {
+          "heading": "已確認什麼？",
+          "content": "元素頁彙整帶有該官方標籤的伊莫及其已公布定位。"
+        },
+        "unknown": {
+          "heading": "不能推斷什麼？",
+          "content": "僅憑元素標籤不能確認剋制、配裝或強度排名。"
+        }
+      },
+      "roles": {
+        "meaning": {
+          "heading": "官方列出哪些定位？",
+          "content": "官方索引使用 DPS、Heal、Support、Break 和 Regen。"
+        },
+        "confirmed": {
+          "heading": "怎樣使用定位資料？",
+          "content": "可依定位篩選圖鑑，再比較官方元素、進化、特性與技能。"
+        },
+        "unknown": {
+          "heading": "定位能確認隊伍價值嗎？",
+          "content": "不能。傷害、治療、裝備和隊伍價值需要完整實機資料與測試。"
+        }
+      },
+      "evolution": {
+        "meaning": {
+          "heading": "什麼是進化家族？",
+          "content": "官方詳情資料把家族成員連接成進化樹，包括已公布的分支。"
+        },
+        "confirmed": {
+          "heading": "AniimoDex 保留什麼？",
+          "content": "站點顯示官方家族關係，並連結所有已收錄成員。"
+        },
+        "unknown": {
+          "heading": "進化條件確認了嗎？",
+          "content": "來源未列出時，不猜測等級、道具、任務、時段或天氣。"
+        }
+      },
+      "mobility": {
+        "meaning": {
+          "heading": "什麼是移動能力？",
+          "content": "移動能力是移動或環境互動欄位，與戰鬥特性和技能不同。"
+        },
+        "confirmed": {
+          "heading": "哪些伊莫會收錄？",
+          "content": "只有官方明確公布移動能力的條目才進入目錄。"
+        },
+        "unknown": {
+          "heading": "資料缺失時怎麼辦？",
+          "content": "缺失能力保持未列出，不用猜測補齊。"
+        }
+      },
+      "habitats": {
+        "meaning": {
+          "heading": "棲息地代表什麼？",
+          "content": "它表示官方 Wiki 將某隻伊莫與該命名區域關聯。"
+        },
+        "confirmed": {
+          "heading": "地點目錄能顯示什麼？",
+          "content": "目錄彙整同棲息地伊莫，並概括元素和進化家族。"
+        },
+        "unknown": {
+          "heading": "這是精確刷新點嗎？",
+          "content": "不是。座標、必定遭遇、刷新時間、天氣規則和捕捉率需要獨立證據。"
+        }
+      }
     },
     "relatedArticles": "相關攻略"
   },
   "collections": {
-    "evolutions": { "title": "Aniimo 伊莫進化圖與進化家族", "description": "查看官方 Aniimo Wiki 目前公布的全部進化家族，包括分支進化路線。", "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。", "family": "進化家族", "definition": "目前官方來源快照將 {members} 個伊莫名稱映射到 {families} 個進化家族。家族關係已確認；等級、道具和任務條件不會被推斷。", "stats": { "families": "已公布進化家族", "branching": "擁有多個直接分支的家族", "members": "已映射的不同伊莫名稱" }, "howToTitle": "如何使用伊莫進化圖鑑", "howToDescription": "每個家族把官方關聯階段整理成一條路線。開啟任意成員即可比較元素、定位、棲息地、型態、特性與技能。", "faq": { "branching": { "question": "伊莫有分支進化嗎？", "answer": "有。官方 Wiki 快照中部分家族擁有多個子分支，本站按原始關係保留。" }, "requirements": { "question": "這裡會顯示進化條件嗎？", "answer": "不會。目前只確認官方公開的家族關係；等級、道具、任務等條件必須有官方明確資料才會展示。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseLocations": "比較官方棲息地" },
-    "elements": { "title": "{element}系伊莫", "metaTitle": "{element}系伊莫列表與圖鑑", "metaDescription": "瀏覽官方列出的全部{element}系伊莫、定位、圖鑑資料與來源狀態。", "description": "瀏覽帶有官方{element}元素標籤的{count}隻伊莫，比較定位並開啟每個已核驗圖鑑條目。", "sourceNote": "元素標籤與成員來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 索引快照。", "dexTitle": "官方{element}系伊莫列表", "count": "{count}隻伊莫", "rolesTitle": "官方戰鬥定位", "familiesTitle": "進化家族", "familiesSummary": "此元素頁面包含 {count} 個官方進化家族。", "browseFamilies": "比較進化家族", "dualElementsTitle": "已公布的雙元素組合", "mobilityTitle": "已公布的移動能力", "browseMobility": "瀏覽全部移動能力", "nonePublished": "目前官方快照未公布。", "scopeTitle": "本元素頁確認的範圍", "scopeDescription": "本頁確認哪些圖鑑伊莫帶有{element}標籤，不推斷強度排名、配裝、抗性或未公布的副屬性。", "browseDex": "瀏覽完整伊莫圖鑑", "browseMatchups": "開啟元素剋制表", "readGuide": "閱讀元素說明" },
-    "locations": { "title": "Aniimo 伊莫地圖、地點與棲息地", "description": "透過官方來源的伊莫地點目錄按棲息地查找角色，涵蓋 Nimbus Fields、Mistwoods、Crescent Bay 等區域；精確地圖座標尚未確認。", "sourceNote": "這裡顯示官方 Wiki 棲息地，不代表準確座標、天氣條件或捕獲機率。", "definitionTitle": "伊莫棲息地能確認什麼？", "definition": "本目錄把 {aniimo} 隻伊莫映射到官方 Wiki 公布的 {habitats} 個命名棲息地。棲息地只確認區域關聯，不代表精確座標、必定刷新、計時、天氣條件或捕獲率。", "count": "{count} 隻伊莫", "directoryTitle": "伊莫地圖與棲息地目錄", "summary": "官方元素：{elements} · 涵蓋 {families} 個進化家族", "howToTitle": "如何使用伊莫地圖目錄", "howToDescription": "選擇官方棲息地查看對應伊莫，再進入圖鑑核對進化、元素、定位、型態與移動能力。這是可檢索的地點目錄，並非互動座標地圖。", "faq": { "map": { "question": "AniimoDex 有互動伊莫地圖嗎？", "answer": "目前沒有。可信的互動地圖需要可重現的遊戲內座標；在取得這些資料前，本頁只發布官方棲息地與伊莫的對應關係。" }, "coordinates": { "question": "這些是伊莫的精確刷新座標嗎？", "answer": "不是。棲息地名稱只確認官方區域關聯，不代表精確地圖座標或必定刷新的位置。" }, "conditions": { "question": "棲息地能確認天氣、時段或捕捉條件嗎？", "answer": "不能。天氣、時段、現象和捕捉機率是獨立資訊，不能從棲息地反推。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseEvolutions": "比較進化家族", "browseAbilities": "比較移動能力" },
-    "abilities": { "title": "Aniimo 伊莫移動與探索能力", "description": "反查 Hustle、Tunnel、Take Off、Cloak、Glow 等官方移動和探索能力。", "sourceNote": "能力名稱、說明與伊莫對應關係來自官方 Wiki 詳情頁。", "count": "{count} 隻伊莫", "howToTitle": "移動能力如何幫助探索", "howToDescription": "這些官方場地能力用於識別能支援特定移動方式或環境互動的伊莫。按能力分組即可比較對應成員。", "faq": { "combat": { "question": "移動能力和戰鬥技能一樣嗎？", "answer": "不一樣。移動能力用於探索和場地互動；特性與戰鬥技能會在每隻伊莫詳情頁單獨展示。" }, "complete": { "question": "每隻伊莫都有移動能力嗎？", "answer": "不是。這裡只顯示官方 Wiki 詳情快照明確列出的對應關係，不會為未列出的伊莫猜測能力。" } }, "browseDex": "瀏覽完整伊莫圖鑑", "browseLocations": "比較官方棲息地" }
+    "evolutions": {
+      "title": "Aniimo 伊莫進化圖與進化家族",
+      "description": "查看官方 Aniimo Wiki 目前公布的全部進化家族，包括分支進化路線。",
+      "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。",
+      "family": "進化家族",
+      "definition": "目前官方來源快照將 {members} 個伊莫名稱映射到 {families} 個進化家族。家族關係已確認；等級、道具和任務條件不會被推斷。",
+      "stats": {
+        "families": "已公布進化家族",
+        "branching": "擁有多個直接分支的家族",
+        "members": "已映射的不同伊莫名稱"
+      },
+      "howToTitle": "如何使用伊莫進化圖鑑",
+      "howToDescription": "每個家族把官方關聯階段整理成一條路線。開啟任意成員即可比較元素、定位、棲息地、型態、特性與技能。",
+      "faq": {
+        "branching": {
+          "question": "伊莫有分支進化嗎？",
+          "answer": "有。官方 Wiki 快照中部分家族擁有多個子分支，本站按原始關係保留。"
+        },
+        "requirements": {
+          "question": "這裡會顯示進化條件嗎？",
+          "answer": "不會。目前只確認官方公開的家族關係；等級、道具、任務等條件必須有官方明確資料才會展示。"
+        }
+      },
+      "browseDex": "瀏覽完整伊莫圖鑑",
+      "browseLocations": "比較官方棲息地"
+    },
+    "elements": {
+      "title": "{element}系伊莫",
+      "metaTitle": "{element}系伊莫列表與圖鑑",
+      "metaDescription": "瀏覽官方列出的全部{element}系伊莫、定位、圖鑑資料與來源狀態。",
+      "description": "瀏覽帶有官方{element}元素標籤的{count}隻伊莫，比較定位並開啟每個已核驗圖鑑條目。",
+      "sourceNote": "元素標籤與成員來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 索引快照。",
+      "dexTitle": "官方{element}系伊莫列表",
+      "count": "{count}隻伊莫",
+      "rolesTitle": "官方戰鬥定位",
+      "familiesTitle": "進化家族",
+      "familiesSummary": "此元素頁面包含 {count} 個官方進化家族。",
+      "browseFamilies": "比較進化家族",
+      "dualElementsTitle": "已公布的雙元素組合",
+      "mobilityTitle": "已公布的移動能力",
+      "browseMobility": "瀏覽全部移動能力",
+      "nonePublished": "目前官方快照未公布。",
+      "missingTitle": "「{element}」暫無已公布條目",
+      "missingBody": "該元素存在於 Aniimo 的元素體系中，但在 2026 年 8 月 30 日核驗的官方 Wiki 快照裡，92 隻伊莫沒有任何一隻帶有該元素。此處保留該元素並如實標註，而不是直接刪除。",
+      "scopeTitle": "本元素頁確認的範圍",
+      "scopeDescription": "本頁確認哪些圖鑑伊莫帶有{element}標籤，不推斷強度排名、配裝、抗性或未公布的副屬性。",
+      "browseDex": "瀏覽完整伊莫圖鑑",
+      "browseMatchups": "開啟元素剋制表",
+      "readGuide": "閱讀元素說明"
+    },
+    "locations": {
+      "title": "Aniimo 伊莫地圖、地點與棲息地",
+      "description": "透過官方來源的伊莫地點目錄按棲息地查找角色，涵蓋 Nimbus Fields、Mistwoods、Crescent Bay 等區域；精確地圖座標尚未確認。",
+      "sourceNote": "這裡顯示官方 Wiki 棲息地，不代表準確座標、天氣條件或捕獲機率。",
+      "definitionTitle": "伊莫棲息地能確認什麼？",
+      "definition": "本目錄把 {aniimo} 隻伊莫映射到官方 Wiki 公布的 {habitats} 個命名棲息地。棲息地只確認區域關聯，不代表精確座標、必定刷新、計時、天氣條件或捕獲率。",
+      "count": "{count} 隻伊莫",
+      "directoryTitle": "伊莫地圖與棲息地目錄",
+      "summary": "官方元素：{elements} · 涵蓋 {families} 個進化家族",
+      "howToTitle": "如何使用伊莫地圖目錄",
+      "howToDescription": "選擇官方棲息地查看對應伊莫，再進入圖鑑核對進化、元素、定位、型態與移動能力。這是可檢索的地點目錄，並非互動座標地圖。",
+      "faq": {
+        "map": {
+          "question": "AniimoDex 有互動伊莫地圖嗎？",
+          "answer": "目前沒有。可信的互動地圖需要可重現的遊戲內座標；在取得這些資料前，本頁只發布官方棲息地與伊莫的對應關係。"
+        },
+        "coordinates": {
+          "question": "這些是伊莫的精確刷新座標嗎？",
+          "answer": "不是。棲息地名稱只確認官方區域關聯，不代表精確地圖座標或必定刷新的位置。"
+        },
+        "conditions": {
+          "question": "棲息地能確認天氣、時段或捕捉條件嗎？",
+          "answer": "不能。天氣、時段、現象和捕捉機率是獨立資訊，不能從棲息地反推。"
+        }
+      },
+      "browseDex": "瀏覽完整伊莫圖鑑",
+      "browseEvolutions": "比較進化家族",
+      "browseAbilities": "比較移動能力"
+    },
+    "abilities": {
+      "title": "Aniimo 伊莫移動與探索能力",
+      "description": "反查 Hustle、Tunnel、Take Off、Cloak、Glow 等官方移動和探索能力。",
+      "sourceNote": "能力名稱、說明與伊莫對應關係來自官方 Wiki 詳情頁。",
+      "count": "{count} 隻伊莫",
+      "howToTitle": "移動能力如何幫助探索",
+      "howToDescription": "這些官方場地能力用於識別能支援特定移動方式或環境互動的伊莫。按能力分組即可比較對應成員。",
+      "faq": {
+        "combat": {
+          "question": "移動能力和戰鬥技能一樣嗎？",
+          "answer": "不一樣。移動能力用於探索和場地互動；特性與戰鬥技能會在每隻伊莫詳情頁單獨展示。"
+        },
+        "complete": {
+          "question": "每隻伊莫都有移動能力嗎？",
+          "answer": "不是。這裡只顯示官方 Wiki 詳情快照明確列出的對應關係，不會為未列出的伊莫猜測能力。"
+        }
+      },
+      "browseDex": "瀏覽完整伊莫圖鑑",
+      "browseLocations": "比較官方棲息地"
+    }
   },
   "elements": {
     "Light": "光",
@@ -600,13 +2220,47 @@
     "Break": "破防",
     "Regen": "再生"
   },
-  "twineAbility": {
-    "飞行": "飛行",
-    "游泳": "游泳",
-    "遁地": "遁地",
-    "攀岩": "攀岩",
-    "冲撞": "沖撞",
-    "无": "無"
+  "mobilityNames": {
+    "Bilateral": "雙視",
+    "Blooming": "綻花",
+    "Bubble Drift": "浮泡漂移",
+    "Cloak": "隱身",
+    "Cloudwalk": "踏雲",
+    "Detection": "探察",
+    "Dig In": "鑽地",
+    "Fast and Furious": "疾馳",
+    "Floaty Bubble": "泡泡護身",
+    "Glow": "照明",
+    "Head Hammer": "頭槌",
+    "High Jump": "高跳",
+    "Hookshot": "鉤索",
+    "Hustle": "疾行",
+    "Luminous Seed": "光種",
+    "Puff Up": "鼓氣",
+    "Scurry": "疾衝",
+    "Take Off": "起飛",
+    "Tunnel": "遁地"
+  },
+  "mobilityDescriptions": {
+    "Bilateral": "進入雙視模式，切換另一種視角觀察周圍。",
+    "Blooming": "舞動之處會綻放花朵。",
+    "Bubble Drift": "吹出一個可漂浮的大氣泡。",
+    "Cloak": "進入隱身狀態。",
+    "Cloudwalk": "在雲層間自由漂浮。",
+    "Detection": "開啟探察視野，可看見附近的金屬物與隱身的伊莫。",
+    "Dig In": "鑽入地面（官方詳情未提供說明文字）。",
+    "Fast and Furious": "進入疾馳狀態，消耗體力提升移動速度，並可撞開部分障礙物。",
+    "Floaty Bubble": "搓出包裹自身的大氣泡。",
+    "Glow": "從上方發光，照亮周圍環境。",
+    "Head Hammer": "使用頭槌釋放衝擊波。",
+    "High Jump": "可以進行更高的跳躍。",
+    "Hookshot": "向準星方向伸出手臂，命中牆體或敵人後拉近自身；長按技能鍵可瞄準。",
+    "Hustle": "進入疾行狀態，消耗體力提升移動速度。",
+    "Luminous Seed": "投擲發光種子，落地後照亮周圍區域。",
+    "Puff Up": "鼓脹身體，可跳得更高，並在空中額外衝刺一次。",
+    "Scurry": "向前短距離衝刺。",
+    "Take Off": "進入飛行狀態，以躲避地面敵人的攻擊；滯空時受到的傷害更高。",
+    "Tunnel": "持續消耗體力鑽入地下，免疫所有遠程攻擊；重擊類技能可將它轟到空中。"
   },
   "localeSwitcher": {
     "label": "語言"

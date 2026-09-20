@@ -51,6 +51,7 @@ const STATIC_ROUTES: {
   { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
   { path: '/abilities/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'weekly' },
   { path: '/tools/type-chart/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  { path: '/tools/catch/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates

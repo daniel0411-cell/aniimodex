@@ -37,7 +37,15 @@
     "latestUpdates": "Latest Updates",
     "viewAllGuide": "View all guides",
     "loadMore": "Load More",
-    "stats": { "dexEntries": "Dex entries", "sources": "Official sources", "tools": "Live tools", "updated": "Last updated", "evolutions": "Evolution families", "habitats": "Habitats", "abilities": "Mobility abilities" },
+    "stats": {
+      "dexEntries": "Dex entries",
+      "sources": "Official sources",
+      "tools": "Live tools",
+      "updated": "Last updated",
+      "evolutions": "Evolution families",
+      "habitats": "Habitats",
+      "abilities": "Mobility abilities"
+    },
     "databaseLabel": "Explore the database",
     "databaseTitle": "Start with what you need",
     "viewAllData": "View all data",
@@ -50,11 +58,26 @@
     "viewAllAniimo": "Browse all Aniimo",
     "coverageLink": "View data coverage",
     "coverage": {
-      "basics": { "label": "Names, artwork and descriptions", "status": "Verified" },
-      "classification": { "label": "Elements, roles and stages", "status": "Verified" },
-      "details": { "label": "Evolution, habitats and forms", "status": "Verified" },
-      "skills": { "label": "Mobility, traits and skills", "status": "Verified" },
-      "pending": { "label": "Numeric stats and catch conditions", "status": "Pending" }
+      "basics": {
+        "label": "Names, artwork and descriptions",
+        "status": "Verified"
+      },
+      "classification": {
+        "label": "Elements, roles and stages",
+        "status": "Verified"
+      },
+      "details": {
+        "label": "Evolution, habitats and forms",
+        "status": "Verified"
+      },
+      "skills": {
+        "label": "Mobility, traits and skills",
+        "status": "Verified"
+      },
+      "pending": {
+        "label": "Numeric stats and catch conditions",
+        "status": "Pending"
+      }
     },
     "guideSectionTitle": "Play Aniimo now",
     "launchTasksTitle": "Aniimo launch and download status",
@@ -121,13 +144,51 @@
     "title": "How We Verify Aniimo Data",
     "description": "AniimoDex is an unofficial fan resource. We publish only fields that can be traced to a named official source, and we label unknowns instead of guessing.",
     "tiers": {
-      "official": { "title": "Official Wiki", "body": "Names, numbers, artwork, elements, roles, stages and published detail fields are imported from the official Aniimo Wiki snapshots." },
-      "store": { "title": "Official storefronts", "body": "Release, platform and free-to-play claims are checked against official website and platform store pages." },
-      "unknown": { "title": "Not published", "body": "Numeric stats, exact catch rates, coordinates and other fields remain marked unknown when the registered sources do not provide them." },
-      "testing": { "title": "Future testing", "body": "Post-launch observations will be labeled as testing with a version, date and method. They will not be presented as official facts." }
+      "official": {
+        "title": "Official Wiki",
+        "body": "Names, numbers, artwork, elements, roles, stages and published detail fields are imported from the official Aniimo Wiki snapshots."
+      },
+      "store": {
+        "title": "Official storefronts",
+        "body": "Release, platform and free-to-play claims are checked against official website and platform store pages."
+      },
+      "unknown": {
+        "title": "Not published",
+        "body": "Numeric stats, exact catch rates, coordinates and other fields remain marked unknown when the registered sources do not provide them."
+      },
+      "testing": {
+        "title": "Future testing",
+        "body": "Post-launch observations will be labeled as testing with a version, date and method. They will not be presented as official facts."
+      }
+    },
+    "tiersMapping": "The tiers above describe where a claim comes from. Every claim below is labelled with one of three evidence levels: official, community or unknown. Official Wiki and official storefront findings count as official, while post-launch player observations count as community.",
+    "claimsTitle": "Verified claims and evidence levels",
+    "claimsDescription": "Every claim this site relies on is recorded here with the evidence level we could actually reach. A claim with no first-party source stays marked unknown instead of being presented as a fact.",
+    "statusLabels": {
+      "official": "Official",
+      "community": "Community",
+      "unknown": "Unknown"
+    },
+    "communitySourceLabel": "Community source",
+    "claimCount": "{count} claims",
+    "claimNoSource": "No first-party source is registered for this claim yet.",
+    "claims": {
+      "game-genre-and-core-loop": "Aniimo is an open-world action RPG with creature collection, Twine, exploration, team play and quests.",
+      "announced-platforms": "The official site links PS5, Xbox, Steam, iOS, Google Play and Epic Games Store.",
+      "global-launch-date": "Aniimo launches on PC and console on September 16, 2026 at 10:00 UTC+8.",
+      "ios-launch-date": "The Aniimo App Store listing shows September 23, 2026 for iPhone and iPad.",
+      "forms-and-sparkling-styles": "The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.",
+      "prismana-changes-element": "A Prismana form changes an Aniimo element rather than its stats.",
+      "android-release-status": "The official Google Play listing for Aniimo is live, currently offers a wishlist action instead of an install action, and publishes no Android release date.",
+      "mobile-shared-launch-date": "Aniimo mobile launches on September 23, 2026 for both iOS and Android.",
+      "mobile-cross-progression": "Aniimo mobile shares progress with the PC and console versions.",
+      "pre-registration-milestones": "The official site shows 35,451,283 pre-registrations and all four published milestone rewards unlocked.",
+      "dex-001-020": "Current Aniimo names, numbers, stats, elements, roles, evolutions and spawn conditions.",
+      "element-matchups": "Elemental matchup multipliers. No official combat table has been published, so the values shown are a community consensus (1.6x super effective, 0.625x resisted, no immunities), and a small number of cells still differ between community sources.",
+      "catch-formula": "The official probability disclosure publishes the catch formula for all three scenarios, the region-stage base rate table and the level, cube, HP, backstrike and status coefficients. Per-species template base rates are not published."
     },
     "sourcesTitle": "Registered sources",
-    "sourcesDescription": "These are the current first-party sources used by the site. Each page records when its source was checked.",
+    "sourcesDescription": "These are the sources used by the site. Official sources are first-party, and community sources are clearly labelled. Each page records when its source was checked.",
     "checkedOn": "Checked {date}",
     "correctionsTitle": "Corrections",
     "correctionsBody": "When an official source changes, we update the affected record and its verification date. Unsupported claims are removed or marked unknown.",
@@ -173,8 +234,24 @@
     "browseMatchups": "Element matchups",
     "featuredDetailsTitle": "Start with data-rich Aniimo entries",
     "featuredDetailsDescription": "These entries have published evolution, habitat, mobility, trait, skill or form fields in the official Wiki snapshot. Selection reflects documentation depth, not combat strength or rarity.",
-    "elementNames": { "Light": "Light", "Fire": "Fire", "Ice": "Ice", "Dark": "Dark", "Lightning": "Lightning", "Grass": "Grass", "Water": "Water", "Earth": "Earth", "Wind": "Wind" },
-    "roleNames": { "DPS": "DPS", "Heal": "Healer", "Support": "Support", "Break": "Breaker", "Regen": "Regenerator" }
+    "elementNames": {
+      "Light": "Light",
+      "Fire": "Fire",
+      "Ice": "Ice",
+      "Dark": "Dark",
+      "Lightning": "Lightning",
+      "Grass": "Grass",
+      "Water": "Water",
+      "Earth": "Earth",
+      "Wind": "Wind"
+    },
+    "roleNames": {
+      "DPS": "DPS",
+      "Heal": "Healer",
+      "Support": "Support",
+      "Break": "Breaker",
+      "Regen": "Regenerator"
+    }
   },
   "dexDetail": {
     "notFound": "Aniimo not found",
@@ -210,7 +287,13 @@
     "and": "and",
     "timeDay": "Day",
     "timeNight": "Night",
-    "shinyAvailable": "Shiny form available",
+    "formsCategory": {
+      "basic": "Basic form",
+      "prismana": "Prismana form",
+      "region": "Region form"
+    },
+    "formsNote": "Form names are reproduced from the official Wiki index. AniimoDex does not publish stat differences between forms, because the official sources do not.",
+    "formsReadMore": "How Aniimo forms and sparkling styles work",
     "reviewing": "Under review",
     "visualPending": "Official visual pending",
     "draftData": "Community draft data",
@@ -240,13 +323,22 @@
     "subtitle": "Official-data lookup tools for Aniimo abilities, elements and current catch information.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
-    "twineTags": ["Lookup", "Movement"],
+    "twineTags": [
+      "Lookup",
+      "Movement"
+    ],
     "typeChartTitle": "Type Matchup Matrix",
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
-    "typeChartTags": ["Matrix", "Matchup"],
-    "catchTitle": "Catch Data Status",
-    "catchDesc": "Check published habitats and the current official status of catch conditions and rates.",
-    "catchTags": ["Official status", "Habitats"]
+    "typeChartTags": [
+      "Matrix",
+      "Matchup"
+    ],
+    "catchTitle": "Catch Rate Calculator",
+    "catchDesc": "Estimate a catch chance from the official probability formula, with every coefficient shown.",
+    "catchTags": [
+      "Official formula",
+      "Calculator"
+    ]
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
@@ -255,19 +347,21 @@
     "all": "All",
     "found": "Found <b>{count}</b> Aniimo",
     "clear": "Clear filters",
-    "empty": "No matching results. Try adjusting your ability selection.",
+    "empty": "No mobility data is available yet.",
     "browseAbilities": "Browse the official mobility directory",
     "howItWorksTitle": "How the Aniimo Twine ability lookup works",
-    "howItWorksDescription": "Choose Fly, Swim, Dig, Climb or Ram to narrow the official index to Aniimo mapped to that field ability. Open a result to compare its elements, role, evolution and published detail fields.",
-    "sourceScope": "Ability mappings come from the official-source dataset; this tool does not infer combat rankings or unpublished movement skills.",
-    "abilityGuideTitle": "Browse Aniimo by Twine movement ability",
-    "abilityDescriptions": { "fly": "Find Aniimo associated with aerial movement and flight interactions.", "swim": "Find Aniimo associated with swimming and water traversal.", "dig": "Find Aniimo associated with digging or underground interactions.", "climb": "Find Aniimo associated with climbing and vertical traversal.", "ram": "Find Aniimo associated with charging, ramming or breakable field interactions." }
+    "howItWorksDescription": "Every option is taken straight from the official Wiki detail records, so the ability list is generated from the data instead of a fixed set of names. Select one or more abilities to narrow the indexed Aniimo down to the entries officially mapped to that field ability.",
+    "sourceScope": "Ability names and mappings come from the official-source dataset; this tool does not infer combat rankings or unpublished movement skills.",
+    "coverage": "{covered} of {total} indexed Aniimo publish at least one movement ability in the official records; the rest are left unlisted rather than guessed.",
+    "noMobility": "No movement ability published",
+    "abilityGuideTitle": "Browse Aniimo by mobility ability"
   },
   "typeChartTool": {
     "title": "Aniimo Type Chart: Element Matchups",
-    "subtitle": "Compare all 9 Aniimo elements in an attack-versus-defense chart. Check 2x, 1x, ½x and 0x matchup references, with source status clearly labeled.",
+    "subtitle": "Compare all 9 Aniimo elements in an attack-versus-defense chart. Check 1.6x, 1x and 0.625x matchup values, with source status clearly labeled.",
     "sourceStatusTitle": "What is official in this Aniimo type chart?",
-    "sourceStatusDescription": "The nine element names and each Aniimo's element labels come from the official Aniimo Wiki. The matchup multipliers are a reference under source review, not a confirmed official combat table.",
+    "sourceStatusDescription": "The nine element names and each Aniimo's element labels come from the official Aniimo Wiki. The matchup multipliers are a community-compiled reference, not a confirmed official combat table.",
+    "noEntriesNote": "No indexed Aniimo currently carries: {elements}. The element row and column are kept because the label exists in Aniimo, not removed.",
     "browseElements": "Browse official Aniimo element directories",
     "browseElement": "Browse {element} Aniimo",
     "attackDefend": "Atk\\Def",
@@ -279,15 +373,14 @@
     "selectedDefend": "Defender selected: {element}. Click an attacker to see the multiplier.",
     "clickToSelect": "Click any header element icon to select and highlight that row / column.",
     "rulesTitle": "Matchup Rules",
-    "rule2x": "2x (super effective): attacking element overcomes the defender, damage doubled.",
-    "ruleHalf": "½x (not very effective): defender resists, damage halved.",
-    "rule0": "0x (immune): defender is immune, no damage dealt.",
-    "rule1": "1x (neutral): no special relation, normal damage.",
-    "ruleSame": "Attacks between the same element are usually halved (½x).",
+    "ruleSuper": "1.6x (super effective): the attacking element overcomes the defender.",
+    "ruleResisted": "0.625x (resisted): the defender resists the attacking element.",
+    "ruleNeutral": "1x (neutral): no special relation, normal damage.",
+    "ruleNoImmune": "No immunities: every element deals at least 0.625x to every other element.",
+    "ruleSame": "Same-element attacks are resisted (0.625x), except Dark against Dark, which stays neutral (1x).",
     "superEffective": "Super effective",
     "neutral": "Neutral",
     "resisted": "Resisted",
-    "immune": "Immune",
     "mobileAttacker": "Attacking element",
     "mobileDefender": "Defending element",
     "selectElement": "Select an element",
@@ -298,76 +391,105 @@
     "selectAniimo": "Aniimo",
     "selectAniimoPlaceholder": "Select an Aniimo",
     "countersFor": "Best reference attackers for {name} ({elements})",
-    "lookupReferenceNote": "Matchup multipliers are a reference under source review, not a confirmed official combat table.",
+    "lookupReferenceNote": "Matchup multipliers are a community-compiled reference, not a confirmed official combat table.",
     "summaryTitle": "Aniimo element matchup summary",
-    "summaryIntro": "Use this element chart with the matrix above to check which Aniimo matchups deal double damage, are resisted or have no effect. Multipliers remain a reference while official combat documentation is unavailable.",
+    "summaryIntro": "Use this element chart with the matrix above to check which Aniimo matchups are super effective or resisted. Multipliers remain a community reference while official combat documentation is unavailable.",
     "elementMatchups": "{element} matchups",
     "strongAgainst": "Strong against: {elements}.",
     "resistedBy": "Resisted by: {elements}.",
-    "noEffectAgainst": "No effect against: {elements}.",
     "none": "none",
     "faqTitle": "Aniimo type chart FAQ",
     "faq": {
-      "readChart": { "question": "How do I read the Aniimo type chart?", "answer": "Choose the attacking element from a row and the defending element from a column. Their intersection shows the damage multiplier." },
-      "multiplierMeaning": { "question": "What do 2x, 1x, ½x and 0x mean?", "answer": "2x is super effective, 1x is neutral, ½x is resisted and 0x means the defending element is immune." },
-      "officialStatus": { "question": "Is this Aniimo element chart officially confirmed?", "answer": "The nine element names are confirmed by the official Aniimo Wiki. The matchup multipliers remain under source review and should be treated as a reference until official combat documentation is available." }
+      "readChart": {
+        "question": "How do I read the Aniimo type chart?",
+        "answer": "Choose the attacking element from a row and the defending element from a column. Their intersection shows the damage multiplier."
+      },
+      "multiplierMeaning": {
+        "question": "What do 1.6x, 1x and 0.625x mean?",
+        "answer": "1.6x is super effective, 1x is neutral and 0.625x is resisted. There are no immunities."
+      },
+      "officialStatus": {
+        "question": "Is this Aniimo element chart officially confirmed?",
+        "answer": "The nine element names are confirmed by the official Aniimo Wiki. The matchup multipliers are community-compiled and should be treated as such until official combat documentation is available."
+      }
     }
   },
   "catchTool": {
-    "title": "Aniimo Catch Data Status",
-    "subtitle": "Check official habitat data and see which catch details still await publication.",
-    "formulaPendingTitle": "Official catch formula published",
-    "formulaPendingDescription": "Aniimo's official disclosure now confirms the formula and published multipliers for region stage, level difference, cube type, HP, backstrikes and status effects. AniimoDex still withholds a per-creature percentage when that creature's template rate is not identified.",
-    "selectorHelp": "Select an Aniimo to review its verified index fields and published habitats.",
-    "officialStatus": "Official-source fields",
-    "elementsLabel": "Elements",
-    "roleLabel": "Combat role",
-    "habitatsLabel": "Published habitats",
-    "habitatsUnknown": "No habitat is listed in the current official snapshot.",
-    "catchRateLabel": "Exact catch rate",
-    "conditionsLabel": "Catch modifiers and conditions",
-    "notPublished": "Not officially published",
-    "speciesRatePending": "Per-creature template rate not mapped",
-    "formulaPublished": "Official formula and modifiers published",
+    "title": "Aniimo Catch Rate Calculator",
+    "subtitle": "Estimate a catch chance from the officially published Aniimo probability formula.",
+    "sourceNote": "Every coefficient on this page comes from the official Aniimo probability disclosure checked on 2026-09-18. The result is still an estimate based on the conditions you select because per-species template rates are not published.",
+    "templateCaveatTitle": "What this estimate cannot know",
+    "templateCaveatBody": "The official disclosure states that the base rate is decided by each Aniimo template and is not derived from level. Those per-species template rates are not published, so this calculator estimates from the region stage and evolution stage you select instead of claiming an exact species value.",
+    "scenarioLabel": "Scenario",
+    "scenarioField": "Outside battle",
+    "scenarioBattle": "In battle",
+    "scenarioDefeated": "Target already defeated",
+    "defeatedNote": "The defeated rule only multiplies the death base rate, the cube and the status coefficient, using the published 6% death rate for common bosses.",
+    "regionLabel": "Region stage",
+    "regionStandard": "Standard area",
+    "regionEarlyMid": "Early-mid area",
+    "regionMid": "Mid area",
+    "regionMidLate": "Mid-late area",
+    "regionLate": "Late area",
+    "regionTower": "Catch tower",
+    "stageLabel": "Target evolution stage",
+    "stage1": "Stage 1",
+    "stage2": "Stage 2",
+    "stage3": "Stage 3",
+    "playerLevelLabel": "Character level",
+    "aniimoLevelLabel": "Aniimo level",
+    "levelDiffValue": "Level difference: {diff}",
+    "playerBonusLabel": "Character base catch bonus (%)",
+    "playerBonusHelp": "The official formula folds your character's base catch bonus into the base rate as (1 + bonus). Leave it at 0% if you do not know your value.",
+    "cubeLabel": "Cube type",
+    "cubeStandard": "Standard cube",
+    "cubeAdvanced": "Advanced cube",
+    "cubeFast": "Swift / Tracking / Super cube",
+    "cubeRemote": "Remote big white ball",
+    "cubeRemoteMass": "Remote big white ball (mass outbreak target)",
+    "cubeUltimate": "Ultimate cube",
+    "cubeSparkling": "Sparkling cube",
+    "cubeGuaranteedNote": "This cube always succeeds as long as the target is catchable.",
+    "hpLabel": "Target HP",
+    "hpHelp": "The HP coefficient only applies in battle. The official table is discrete, so no value between those steps is interpolated.",
+    "backstrikeLabel": "Server-confirmed backstrike",
+    "backstrikeHelp": "A backstrike only applies outside battle, with a standard cube, and when the server confirms it. The big white ball never receives this bonus.",
+    "statusLabel": "Special status",
+    "statusRuleNote": "Official rule: when any status is below 1x the lowest coefficient is used; otherwise the highest is used.",
+    "statusBreak": "Break",
+    "statusBreakBonus": "Break catch bonus",
+    "statusCommon": "Sleep / stun / eating / drunk / bait",
+    "statusSpecialStun": "Special stun",
+    "statusHundredX": "Deep sleep / nectar gathering (some special stuns)",
+    "statusInvisible": "Invisible",
+    "statusAlert": "Alert / gaze",
+    "statusLeaving": "Leaving",
+    "statusUncatchable": "Rampage / bubble barrier / corrupted / already owned",
+    "resultTitle": "Estimated catch rate",
+    "resultGuaranteed": "Guaranteed success",
+    "resultUncatchable": "This status makes the target uncatchable while it lasts.",
+    "breakdownTitle": "Coefficient breakdown",
+    "breakdownBase": "Base rate",
+    "breakdownLevel": "Level coefficient",
+    "breakdownCube": "Cube coefficient",
+    "breakdownHp": "HP coefficient",
+    "breakdownBackstrike": "Backstrike coefficient",
+    "breakdownStatus": "Status coefficient",
+    "doubleCheckNote": "A standard cube on a normal target is resolved as two separate checks, each using the square root of the final rate. The combined chance still equals the final rate shown here.",
+    "strategyTitle": "How to improve the odds",
+    "strategyBackstrike": "Attack from behind outside battle with a standard cube to add the 1.5x backstrike coefficient.",
+    "strategyHp": "Lower the target's HP before throwing: the coefficient is 2x at 0% HP but only 0.8x at full HP.",
+    "strategyStatus": "Apply a status effect. Deep sleep, nectar gathering and some special stuns reach a 100x coefficient.",
+    "strategyLevel": "The level difference matters a lot: 11 levels above your character drops the coefficient to 0.8x, and 15 or more drops it to 0.1x.",
+    "strategyCube": "A stronger cube multiplies everything: advanced is 1.5x, and swift, tracking and super cubes are 2x.",
+    "officialStatus": "Official formula",
+    "referenceTitle": "Official coefficient reference",
+    "referenceBody": "These are the published values the calculator uses. You choose the region stage and evolution stage yourself, because the per-species template rate is not part of the disclosure.",
+    "refLevelHeader": "Level difference",
+    "refCoefficientHeader": "Coefficient",
     "openDex": "Open Dex entry",
     "browseLocations": "Browse habitats",
-    "readGuide": "Read the catching guide",
-    "selectAniimo": "Select Aniimo",
-    "podLevel": "Aniipod Level",
-    "trapType": "Trap Type",
-    "breakState": "BREAK state (broken)",
-    "timeSlot": "Time Slot",
-    "calculate": "Calculate Catch Rate",
-    "result": "Result",
-    "baseCatchRate": "Base catch rate",
-    "recommendedStrategy": "Recommended Strategy",
-    "copyShare": "Copy & share plan",
-    "placeholder": "Fill in the conditions on the left, then click “Calculate Catch Rate”.",
-    "calculationNote": "Calculation note (simplified placeholder formula)",
-    "calculationDetail": "Catch rate = base value + Aniipod level bonus + trap bonus + break bonus + time bonus, capped between 1% and 98%. Values are placeholders until real game data is integrated.",
-    "trapNormal": "Normal",
-    "trapAdvanced": "Advanced",
-    "trapMaster": "Master",
-    "timeDay": "Day",
-    "timeNight": "Night",
-    "timeDusk": "Dusk",
-    "shareTitle": "【Aniimo Catch Calc】",
-    "shareAniimo": "Aniimo: {name} ({enName}) #{number}",
-    "sharePod": "Aniipod level: {level} / 50",
-    "shareTrap": "Trap: {trap}",
-    "shareBreak": "BREAK: {break}",
-    "shareTime": "Time: {time}",
-    "shareBaseRate": "Base catch rate: {rate}%",
-    "shareStrategy": "Strategy: {strategy}",
-    "breakYes": "Yes",
-    "breakNo": "No",
-    "copied": "Catch plan copied to clipboard",
-    "copyFailed": "Copy failed, please copy manually",
-    "strategyBreak": "Consider using BREAK first to greatly boost your catch rate",
-    "strategyTrap": "Consider switching to an advanced or master trap",
-    "strategyRare": "This Aniimo is rare; prepare advanced/master traps and strike while broken",
-    "strategyDusk": "Dusk gives the highest catch rate; consider waiting",
-    "strategyIdeal": "Your current setup is ideal — good luck catching!"
+    "readGuide": "Read the catching guide"
   },
   "guide": {
     "title": "Aniimo Guide",
@@ -387,12 +509,31 @@
     "sourceChecked": "Sources checked: {date}",
     "officialSources": "Official sources",
     "howWeVerify": "How we verify data",
-    "launchHub": { "title": "Aniimo launch essentials", "description": "Release time, official downloads, preload status and supported platforms in one verified path.", "release": "Release date and time", "download": "Official download links", "preload": "Preload and unlock status", "platforms": "Platforms and availability" },
+    "launchHub": {
+      "title": "Aniimo launch essentials",
+      "description": "Release time, official downloads, preload status and supported platforms in one verified path.",
+      "release": "Release date and time",
+      "download": "Official download links",
+      "preload": "Preload and unlock status",
+      "platforms": "Platforms and availability"
+    },
     "groups": {
-      "playDownload": { "title": "Play, download and platforms", "description": "Release date, price, official downloads and supported devices." },
-      "gameplay": { "title": "Gameplay explained", "description": "Officially confirmed details about Twine, catching and multiplayer." },
-      "updates": { "title": "Official status and updates", "description": "Launch availability, mobile timing and verified PC requirements." },
-      "dexData": { "title": "Dex systems and official data", "description": "Elements, roles, evolution families, mobility abilities and habitat records from the official Wiki." }
+      "playDownload": {
+        "title": "Play, download and platforms",
+        "description": "Release date, price, official downloads and supported devices."
+      },
+      "gameplay": {
+        "title": "Gameplay explained",
+        "description": "Officially confirmed details about Twine, catching and multiplayer."
+      },
+      "updates": {
+        "title": "Official status and updates",
+        "description": "Launch availability, mobile timing and verified PC requirements."
+      },
+      "dexData": {
+        "title": "Dex systems and official data",
+        "description": "Elements, roles, evolution families, mobility abilities and habitat records from the official Wiki."
+      }
     },
     "posts": {
       "aniimo-release-date": {
@@ -451,14 +592,35 @@
           },
           {
             "t": "table",
-            "head": ["Platform", "Official status"],
+            "head": [
+              "Platform",
+              "Official status"
+            ],
             "rows": [
-              ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
-              ["Xbox Series X|S", "Free base game and purchase action available"],
-              ["Windows PC", "Released on Steam; official PC launcher also available"],
-              ["iOS", "App Store lists September 23, 2026"],
-              ["Android", "Official Google Play route; date not confirmed"],
-              ["Epic Games Store", "Linked by the official Aniimo website"]
+              [
+                "PlayStation 5",
+                "September 16, 2026 at 10:00 UTC+8"
+              ],
+              [
+                "Xbox Series X|S",
+                "Free base game and purchase action available"
+              ],
+              [
+                "Windows PC",
+                "Released on Steam; official PC launcher also available"
+              ],
+              [
+                "iOS",
+                "App Store lists September 23, 2026"
+              ],
+              [
+                "Android",
+                "Official Google Play route; date not confirmed"
+              ],
+              [
+                "Epic Games Store",
+                "Linked by the official Aniimo website"
+              ]
             ]
           },
           {
@@ -569,12 +731,30 @@
         "tag": "Price",
         "lead": "Yes. Steam, PlayStation and Xbox describe Aniimo as free-to-play, so the base game does not require an upfront purchase.",
         "body": [
-          { "t": "h", "c": "Does Aniimo cost money?" },
-          { "t": "p", "c": "The official Steam, PlayStation and Xbox listings label Aniimo as free-to-play. Players should be able to download and start the base game without buying it first." },
-          { "t": "h", "c": "Are there in-game purchases?" },
-          { "t": "p", "c": "Store listings mention in-game purchases or optional packs. Exact prices and the full monetization model may vary by platform and region and should be checked on the official storefront at launch." },
-          { "t": "h", "c": "Where should I get Aniimo?" },
-          { "t": "p", "c": "Use the storefront links on Aniimo's official website. Avoid websites offering unofficial installers, modified clients or early access downloads." }
+          {
+            "t": "h",
+            "c": "Does Aniimo cost money?"
+          },
+          {
+            "t": "p",
+            "c": "The official Steam, PlayStation and Xbox listings label Aniimo as free-to-play. Players should be able to download and start the base game without buying it first."
+          },
+          {
+            "t": "h",
+            "c": "Are there in-game purchases?"
+          },
+          {
+            "t": "p",
+            "c": "Store listings mention in-game purchases or optional packs. Exact prices and the full monetization model may vary by platform and region and should be checked on the official storefront at launch."
+          },
+          {
+            "t": "h",
+            "c": "Where should I get Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Use the storefront links on Aniimo's official website. Avoid websites offering unofficial installers, modified clients or early access downloads."
+          }
         ]
       },
       "how-to-download-aniimo": {
@@ -583,31 +763,173 @@
         "tag": "Download",
         "lead": "The safe way to download Aniimo is to begin at the official Aniimo website and follow its platform links. Do not use third-party APK, installer or account-download pages.",
         "body": [
-          { "t": "h", "c": "Official Aniimo download options" },
-          { "t": "table", "head": ["Platform", "Official route"], "rows": [["Windows PC", "Official website PC download, Steam or Epic Games Store"], ["PlayStation 5", "PlayStation Store"], ["Xbox Series X|S", "Xbox Store"], ["iPhone and iPad", "Apple App Store link on the official website"], ["Android", "Google Play link on the official website"]] },
-          { "t": "h", "c": "Official store pages and current status" },
-          { "t": "p", "c": "Steam: https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation: https://store.playstation.com/concept/10018491 · Xbox: https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6 · App Store: https://apps.apple.com/us/app/aniimo/id6759098797. These are official store pages; use the button and availability shown for your region." },
-          { "t": "h", "c": "What is the current download status?" },
-          { "t": "table", "head": ["Platform", "Status checked September 16"], "rows": [["Official PC launcher", "Download Now available on Aniimo's website"], ["Steam", "Released and free to play"], ["Xbox", "Free base game and purchase action available"], ["PS5", "Published release time has passed; verify the current regional store button"], ["iOS", "App Store lists September 23"], ["Android", "Official route available; release date not confirmed"]] },
-          { "t": "h", "c": "Where should I download Aniimo?" },
-          { "t": "p", "c": "Use Aniimo's official website, Steam, PlayStation Store or Xbox Store. Mobile availability remains separate and can differ by country." },
-          { "t": "quote", "c": "Never enter your game or store credentials on an unofficial download page." }
+          {
+            "t": "h",
+            "c": "Official Aniimo download options"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Platform",
+              "Official route"
+            ],
+            "rows": [
+              [
+                "Windows PC",
+                "Official website PC download, Steam or Epic Games Store"
+              ],
+              [
+                "PlayStation 5",
+                "PlayStation Store"
+              ],
+              [
+                "Xbox Series X|S",
+                "Xbox Store"
+              ],
+              [
+                "iPhone and iPad",
+                "Apple App Store link on the official website"
+              ],
+              [
+                "Android",
+                "Google Play link on the official website"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Official store pages and current status"
+          },
+          {
+            "t": "p",
+            "c": "Steam: https://store.steampowered.com/app/4126040/Aniimo/ · PlayStation: https://store.playstation.com/concept/10018491 · Xbox: https://www.xbox.com/en-US/games/store/aniimo/9pk8phlcqdf6 · App Store: https://apps.apple.com/us/app/aniimo/id6759098797. These are official store pages; use the button and availability shown for your region."
+          },
+          {
+            "t": "h",
+            "c": "What is the current download status?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Platform",
+              "Status checked September 16"
+            ],
+            "rows": [
+              [
+                "Official PC launcher",
+                "Download Now available on Aniimo's website"
+              ],
+              [
+                "Steam",
+                "Released and free to play"
+              ],
+              [
+                "Xbox",
+                "Free base game and purchase action available"
+              ],
+              [
+                "PS5",
+                "Published release time has passed; verify the current regional store button"
+              ],
+              [
+                "iOS",
+                "App Store lists September 23"
+              ],
+              [
+                "Android",
+                "Official route available; release date not confirmed"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Where should I download Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Use Aniimo's official website, Steam, PlayStation Store or Xbox Store. Mobile availability remains separate and can differ by country."
+          },
+          {
+            "t": "quote",
+            "c": "Never enter your game or store credentials on an unofficial download page."
+          }
         ]
       },
       "aniimo-mobile": {
-        "title": "Aniimo Mobile: iOS, Android, Download and Pre-Registration Status",
-        "subtitle": "iOS is listed for September 23, 2026; the Android date remains unconfirmed.",
+        "title": "Aniimo Mobile: iOS and Android Release Status and Downloads",
+        "subtitle": "iOS is listed for September 23, 2026; the Android listing is live but publishes no date.",
         "tag": "Mobile",
-        "lead": "The official App Store listing shows September 23, 2026 for iPhone and iPad in the storefronts checked. Aniimo also has an official Google Play route, but the Android release date has not been confirmed by the sources checked.",
+        "lead": "The App Store listing shows September 23, 2026 for iPhone and iPad. The official Google Play listing for Android exists but currently offers a wishlist action instead of an install action, and neither that listing nor the official website publishes an Android release date.",
         "body": [
-          { "t": "h", "c": "Aniimo mobile status at a glance" },
-          { "t": "table", "head": ["Platform", "Current status"], "rows": [["iPhone and iPad", "App Store lists September 23, 2026"], ["Android", "Official Google Play route available; release date not confirmed"], ["Device requirements", "Complete official list not published"]] },
-          { "t": "h", "c": "Is Aniimo coming to iPhone and Android?" },
-          { "t": "p", "c": "Yes. The official Aniimo website includes links for Apple's App Store and Google Play alongside console and PC storefronts." },
-          { "t": "h", "c": "Can I download the mobile version now?" },
-          { "t": "p", "c": "Check the official store page available in your region. The iOS listing currently shows September 23, while Android availability may differ by country and remains unconfirmed." },
-          { "t": "h", "c": "What phones will run Aniimo?" },
-          { "t": "p", "c": "The official sources used for this page do not provide a complete device compatibility list. Do not rely on unofficial minimum-spec claims." }
+          {
+            "t": "h",
+            "c": "Aniimo mobile status at a glance"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Platform",
+              "Current status"
+            ],
+            "rows": [
+              [
+                "iPhone and iPad",
+                "App Store lists September 23, 2026"
+              ],
+              [
+                "Android",
+                "Official Google Play listing is live; shows wishlist rather than install; no date published"
+              ],
+              [
+                "Progress sharing",
+                "Reported by community coverage; no official statement found"
+              ],
+              [
+                "Device requirements",
+                "No complete official list published"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "When does Aniimo release on mobile?"
+          },
+          {
+            "t": "p",
+            "c": "The official App Store listing shows September 23, 2026 for iPhone and iPad. Community coverage consistently reports the same September 23 date for Android, but the official website and the Google Play listing checked here publish no Android date, so AniimoDex labels that as community reporting rather than an official confirmation."
+          },
+          {
+            "t": "h",
+            "c": "Can I download Aniimo on Android yet?"
+          },
+          {
+            "t": "p",
+            "c": "No. The Google Play listing offers an add-to-wishlist action rather than an install action, which is consistent with a version that is not downloadable yet."
+          },
+          {
+            "t": "h",
+            "c": "Does mobile share progress with PC and console?"
+          },
+          {
+            "t": "p",
+            "c": "The official sources checked for this page do not state a cross-progression or cross-save policy at all. Community coverage reports that mobile shares progress with the PC and console versions, so treat that as unconfirmed until an official source states it."
+          },
+          {
+            "t": "h",
+            "c": "What phones will run Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Neither the official website nor the store listings checked here publish a device compatibility list. Do not rely on unofficial minimum-spec claims."
+          },
+          {
+            "t": "h",
+            "c": "What does the mobile version cost?"
+          },
+          {
+            "t": "p",
+            "c": "The base game is free to play with in-app purchases. The Google Play listing marks in-app purchases and an age rating of 10+ with fantasy violence and user interaction."
+          }
         ]
       },
       "aniimo-ps5": {
@@ -616,30 +938,110 @@
         "tag": "PS5",
         "lead": "Aniimo is confirmed for PlayStation 5. Its official September 16, 2026 at 10:00 UTC+8 release time has passed; use the live regional store to verify the current download button.",
         "body": [
-          { "t": "h", "c": "Will Aniimo be on PS5?" },
-          { "t": "p", "c": "Yes. Aniimo has an official PlayStation Store listing for PS5 published by Pawprint Interactive Entertainment." },
-          { "t": "h", "c": "When does Aniimo release on PS5?" },
-          { "t": "p", "c": "The PlayStation Store states September 16, 2026 at 10:00 UTC+8. That is September 16 at 02:00 UTC and September 15 at 10:00 PM EDT." },
-          { "t": "h", "c": "Is Aniimo free on PS5?" },
-          { "t": "p", "c": "Yes. The base game is listed as free-to-play. Paid pre-order packs contain optional in-game rewards and do not change the base game's free-to-play status." },
-          { "t": "h", "c": "Does the PS5 version require online play?" },
-          { "t": "p", "c": "The PlayStation listing marks online play as required and identifies in-game purchases and user interaction. Check the live store page for regional account or subscription requirements." }
+          {
+            "t": "h",
+            "c": "Will Aniimo be on PS5?"
+          },
+          {
+            "t": "p",
+            "c": "Yes. Aniimo has an official PlayStation Store listing for PS5 published by Pawprint Interactive Entertainment."
+          },
+          {
+            "t": "h",
+            "c": "When does Aniimo release on PS5?"
+          },
+          {
+            "t": "p",
+            "c": "The PlayStation Store states September 16, 2026 at 10:00 UTC+8. That is September 16 at 02:00 UTC and September 15 at 10:00 PM EDT."
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo free on PS5?"
+          },
+          {
+            "t": "p",
+            "c": "Yes. The base game is listed as free-to-play. Paid pre-order packs contain optional in-game rewards and do not change the base game's free-to-play status."
+          },
+          {
+            "t": "h",
+            "c": "Does the PS5 version require online play?"
+          },
+          {
+            "t": "p",
+            "c": "The PlayStation listing marks online play as required and identifies in-game purchases and user interaction. Check the live store page for regional account or subscription requirements."
+          }
         ]
       },
       "is-aniimo-a-gacha-game": {
-        "title": "Is Aniimo a Gacha Game? What Official Sources Confirm",
-        "subtitle": "Aniimo is free-to-play and has in-game purchases, but its official listings do not define it as a gacha game.",
+        "title": "Is Aniimo a Gacha Game? Free-to-Play and Zero-Spend Guide",
+        "subtitle": "Aniimo is free to play with in-game purchases, but its official listings do not define it as a gacha game.",
         "tag": "Monetization",
-        "lead": "It is not currently accurate to label Aniimo a gacha game from the official sources checked. The stores confirm free-to-play access and in-game purchases, while the official site mentions some random egg rewards; neither fact alone proves a character-gacha system.",
+        "lead": "Official listings confirm a free base game with in-game purchases and do not describe a gacha system. This page answers the gacha question and then focuses on what a player who does not want to pay can actually do, using only officially published data.",
         "body": [
-          { "t": "h", "c": "Is Aniimo officially described as a gacha game?" },
-          { "t": "p", "c": "No. Aniimo's official website and major store listings describe it as a free-to-play creature-catching open-world RPG, not as a gacha game." },
-          { "t": "h", "c": "Does Aniimo have in-game purchases?" },
-          { "t": "p", "c": "Yes. Steam, PlayStation and Xbox disclose in-game purchases or optional paid packs. That confirms monetization, but not the exact mechanics used after launch." },
-          { "t": "h", "c": "What about random Aniimo eggs?" },
-          { "t": "p", "c": "The official pre-registration campaign mentions a random Perfect Egg reward. A promotional random reward does not by itself establish a repeatable paid summoning system." },
-          { "t": "h", "c": "What remains unconfirmed?" },
-          { "t": "p", "c": "The registered sources do not publish a complete launch monetization system, paid draw rules, banners, currencies or probability tables. This page will only classify those systems after official documentation or reproducible launch testing is available." }
+          {
+            "t": "h",
+            "c": "Is Aniimo officially described as a gacha game?"
+          },
+          {
+            "t": "p",
+            "c": "No. Aniimo's official website and the major store listings describe it as a free-to-play creature-catching open-world RPG and do not use the gacha label."
+          },
+          {
+            "t": "h",
+            "c": "Does Aniimo have in-game purchases?"
+          },
+          {
+            "t": "p",
+            "c": "Yes. Steam, PlayStation, Xbox and Google Play all disclose in-game purchases. That confirms paid content exists, and AniimoDex does not rank or value any of it."
+          },
+          {
+            "t": "h",
+            "c": "What is free in Aniimo?"
+          },
+          {
+            "t": "li",
+            "c": "The base game is free to download and play on PC, PS5, Xbox, iOS and Android."
+          },
+          {
+            "t": "li",
+            "c": "Store descriptions present catching, open-world exploration, Twine and multiplayer as core gameplay rather than separately purchased modes."
+          },
+          {
+            "t": "li",
+            "c": "The official site lists launch freebies, including free catching items (a Sparkling Cube, an Ultimate Cube and a big white ball), limited Aniimo eggs, an exclusive accessory, a selectable rare Prismana Aniimo and four free outfits."
+          },
+          {
+            "t": "h",
+            "c": "How can a zero-spend player improve catch rates?"
+          },
+          {
+            "t": "p",
+            "c": "Under the official catch formula, free techniques carry some of the largest multipliers in the game. A server-confirmed backstrike adds x1.5, lowering a target to 0% HP adds x2 in battle, and status effects reach x2 for ordinary sleep or stun and up to x100 for deep sleep or nectar effects."
+          },
+          {
+            "t": "p",
+            "c": "By comparison the cube steps are smaller: an Advanced Cube is x1.5 and the higher cubes are x2. Free positioning, status and HP control can therefore match or beat a cube upgrade without spending."
+          },
+          {
+            "t": "h",
+            "c": "What should a zero-spend player watch out for?"
+          },
+          {
+            "t": "p",
+            "c": "The level difference is the harshest published penalty: 11 levels above your character drops the catch coefficient to x0.8, and 15 or more drops it to x0.1. Levelling up is free and is worth more than most paid items."
+          },
+          {
+            "t": "h",
+            "c": "Does AniimoDex give spending advice?"
+          },
+          {
+            "t": "p",
+            "c": "No. The registered sources do not publish prices, pass contents, energy limits or currency exchange rates in a form this site can verify, so AniimoDex does not recommend or rank any purchase."
+          },
+          {
+            "t": "quote",
+            "c": "The freebies above are what the official site published for launch. Whether each one is still obtainable today is not stated on that page."
+          }
         ]
       },
       "aniimo-nintendo-switch": {
@@ -648,10 +1050,22 @@
         "tag": "Platforms",
         "lead": "Aniimo has not been officially confirmed for Nintendo Switch in the sources checked for this page.",
         "body": [
-          { "t": "h", "c": "Is Aniimo on Nintendo Switch?" },
-          { "t": "p", "c": "No Nintendo Switch listing appears on the official Aniimo website, which currently links PlayStation, Xbox, PC, iOS and Android storefronts." },
-          { "t": "h", "c": "Could a Switch version be announced later?" },
-          { "t": "p", "c": "It is possible for platform plans to change, but there is no official confirmation to report now. This page will be updated only when Aniimo or Nintendo publishes a verifiable announcement." }
+          {
+            "t": "h",
+            "c": "Is Aniimo on Nintendo Switch?"
+          },
+          {
+            "t": "p",
+            "c": "No Nintendo Switch listing appears on the official Aniimo website, which currently links PlayStation, Xbox, PC, iOS and Android storefronts."
+          },
+          {
+            "t": "h",
+            "c": "Could a Switch version be announced later?"
+          },
+          {
+            "t": "p",
+            "c": "It is possible for platform plans to change, but there is no official confirmation to report now. This page will be updated only when Aniimo or Nintendo publishes a verifiable announcement."
+          }
         ]
       },
       "aniimo-twine-explained": {
@@ -660,14 +1074,38 @@
         "tag": "Gameplay",
         "lead": "Twine is one of Aniimo's defining systems: a Pathfinder can become an Aniimo they have collected and use that creature's abilities in exploration, puzzles and battles.",
         "body": [
-          { "t": "h", "c": "What does Twine mean in Aniimo?" },
-          { "t": "p", "c": "Official descriptions say players can Twine with collected Aniimo. Examples include gliding, diving and burrowing through the world while using creature-specific abilities." },
-          { "t": "h", "c": "What is Twine used for?" },
-          { "t": "li", "c": "Exploring terrain and reaching new areas" },
-          { "t": "li", "c": "Solving environmental puzzles" },
-          { "t": "li", "c": "Using Aniimo abilities in real-time combat" },
-          { "t": "h", "c": "Which Aniimo have each Twine ability?" },
-          { "t": "p", "c": "A complete official ability-by-creature list has not been published in the sources used here. Community dex mappings remain under review." }
+          {
+            "t": "h",
+            "c": "What does Twine mean in Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Official descriptions say players can Twine with collected Aniimo. Examples include gliding, diving and burrowing through the world while using creature-specific abilities."
+          },
+          {
+            "t": "h",
+            "c": "What is Twine used for?"
+          },
+          {
+            "t": "li",
+            "c": "Exploring terrain and reaching new areas"
+          },
+          {
+            "t": "li",
+            "c": "Solving environmental puzzles"
+          },
+          {
+            "t": "li",
+            "c": "Using Aniimo abilities in real-time combat"
+          },
+          {
+            "t": "h",
+            "c": "Which Aniimo have each Twine ability?"
+          },
+          {
+            "t": "p",
+            "c": "A complete official ability-by-creature list has not been published in the sources used here. Community dex mappings remain under review."
+          }
         ]
       },
       "aniimo-catching-guide": {
@@ -676,18 +1114,414 @@
         "tag": "Gameplay",
         "lead": "Official store descriptions confirm that players use Aniipods, traps and timing to catch Aniimo, while environment, weather, phenomena and time of day affect appearances.",
         "body": [
-          { "t": "h", "c": "How does catching work in Aniimo?" },
-          { "t": "p", "c": "Players explore habitats, encounter Aniimo and use Aniipods to catch them. Official text also mentions setting traps and choosing the right timing." },
-          { "t": "h", "c": "What affects where Aniimo appear?" },
-          { "t": "li", "c": "Environment and habitat" },
-          { "t": "li", "c": "Weather" },
-          { "t": "li", "c": "Special phenomena" },
-          { "t": "li", "c": "Time of day" },
-          { "t": "h", "c": "How is the Aniimo catch rate calculated?" },
-          { "t": "p", "c": "The official probability disclosure now publishes separate formulas for out-of-combat, in-combat and defeated targets. Published factors include the regional base rate, character catch bonus, cube type, level difference, target HP, backstrike and status effects." },
-          { "t": "h", "c": "What catch bonuses are officially confirmed?" },
-          { "t": "p", "c": "Examples include Advanced Cubes at ×1.5, several higher cubes at ×2, a valid out-of-combat backstrike at ×1.5, BREAK at ×1.5 and ordinary sleep or stun at ×2. Some states force success or make a target impossible to catch." },
-          { "t": "quote", "c": "A per-creature percentage still requires that Aniimo's configured base-rate group and current encounter conditions. AniimoDex does not guess an unmapped template rate." }
+          {
+            "t": "h",
+            "c": "How does catching work in Aniimo?"
+          },
+          {
+            "t": "p",
+            "c": "Players explore habitats, encounter Aniimo and use Aniipods to catch them. Official text also mentions setting traps and choosing the right timing."
+          },
+          {
+            "t": "h",
+            "c": "What affects where Aniimo appear?"
+          },
+          {
+            "t": "li",
+            "c": "Environment and habitat"
+          },
+          {
+            "t": "li",
+            "c": "Weather"
+          },
+          {
+            "t": "li",
+            "c": "Special phenomena"
+          },
+          {
+            "t": "li",
+            "c": "Time of day"
+          },
+          {
+            "t": "h",
+            "c": "How is the Aniimo catch rate calculated?"
+          },
+          {
+            "t": "p",
+            "c": "The official probability disclosure now publishes separate formulas for out-of-combat, in-combat and defeated targets. Published factors include the regional base rate, character catch bonus, cube type, level difference, target HP, backstrike and status effects."
+          },
+          {
+            "t": "h",
+            "c": "What catch bonuses are officially confirmed?"
+          },
+          {
+            "t": "p",
+            "c": "Examples include Advanced Cubes at ×1.5, several higher cubes at ×2, a valid out-of-combat backstrike at ×1.5, BREAK at ×1.5 and ordinary sleep or stun at ×2. Some states force success or make a target impossible to catch."
+          },
+          {
+            "t": "quote",
+            "c": "A per-creature percentage still requires that Aniimo's configured base-rate group and current encounter conditions. AniimoDex does not guess an unmapped template rate."
+          }
+        ]
+      },
+      "aniimo-team-composition": {
+        "title": "Aniimo Team Composition: Roles, Elements and Mobility",
+        "subtitle": "A functional team-building guide built on published role, element and mobility fields, and not a tier list.",
+        "tag": "Team building",
+        "lead": "AniimoDex does not publish strength rankings. This page explains what each officially published role label covers, how element labels and mobility coverage shape a team, and how to choose a starting Aniimo from what you actually want to do.",
+        "body": [
+          {
+            "t": "h",
+            "c": "Does AniimoDex publish a tier list?"
+          },
+          {
+            "t": "p",
+            "c": "No. The official Wiki index publishes a role label and one or more element labels per Aniimo, and neither field identifies which Aniimo performs best. A ranking would be an opinion, so this page stays on team functions."
+          },
+          {
+            "t": "h",
+            "c": "How many Aniimo carry each published role?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Role",
+              "Indexed Aniimo"
+            ],
+            "rows": [
+              [
+                "DPS",
+                "31"
+              ],
+              [
+                "Break",
+                "26"
+              ],
+              [
+                "Support",
+                "18"
+              ],
+              [
+                "Regen",
+                "10"
+              ],
+              [
+                "Heal",
+                "7"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "What does each published role cover?"
+          },
+          {
+            "t": "li",
+            "c": "DPS - the index label for damage-dealing Aniimo, and by far the largest group."
+          },
+          {
+            "t": "li",
+            "c": "Break - the index label tied to breaking a target. The official catch disclosure confirms a BREAK state adds a x1.5 catch coefficient and that the break catch bonus reaches x3."
+          },
+          {
+            "t": "li",
+            "c": "Support - the index label for supportive Aniimo that contribute team effects."
+          },
+          {
+            "t": "li",
+            "c": "Regen - the index label for sustain and recovery over time."
+          },
+          {
+            "t": "li",
+            "c": "Heal - the index label for healing Aniimo and the smallest group, with only 7 indexed entries."
+          },
+          {
+            "t": "p",
+            "c": "These descriptions come from the published labels and, where noted, the official probability disclosure. The detail snapshot publishes skill names and descriptions, but not a complete set of cooldowns, damage values, progression costs or balance data."
+          },
+          {
+            "t": "h",
+            "c": "How do element labels fit into a team?"
+          },
+          {
+            "t": "p",
+            "c": "Element labels are verified official data, and 13 of the 92 indexed Aniimo carry more than one element. The matchup multipliers in the type chart tool, however, are a community-compiled reference rather than official data, so use element labels to check that your team covers different elements rather than to assume a guaranteed counter."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Element",
+              "Indexed Aniimo"
+            ],
+            "rows": [
+              [
+                "Water",
+                "19"
+              ],
+              [
+                "Grass",
+                "16"
+              ],
+              [
+                "Earth",
+                "16"
+              ],
+              [
+                "Wind",
+                "14"
+              ],
+              [
+                "Dark",
+                "12"
+              ],
+              [
+                "Lightning",
+                "10"
+              ],
+              [
+                "Fire",
+                "9"
+              ],
+              [
+                "Ice",
+                "9"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Why does mobility matter for a team?"
+          },
+          {
+            "t": "p",
+            "c": "Mobility is the field ability used for traversal or environmental interaction, and 48 of the 92 indexed Aniimo publish one, across 19 distinct ability names. These descriptions can help you compare field functions, but the source does not map them to specific required routes or locations."
+          },
+          {
+            "t": "h",
+            "c": "What should a new player choose first?"
+          },
+          {
+            "t": "p",
+            "c": "Choose by what you want to do rather than by which Aniimo looks strongest."
+          },
+          {
+            "t": "li",
+            "c": "To explore: shortlist Aniimo that publish a mobility ability, because fewer than half of the index carries that field."
+          },
+          {
+            "t": "li",
+            "c": "To catch efficiently: consult the published status and backstrike coefficients, then verify which Aniimo can apply the relevant state in your current version. The source does not compare those teams with damage-focused teams."
+          },
+          {
+            "t": "li",
+            "c": "To play co-op: look at Support, Regen and Heal, which are the three smallest published groups at 18, 10 and 7 indexed Aniimo."
+          },
+          {
+            "t": "h",
+            "c": "What can this page not tell you?"
+          },
+          {
+            "t": "p",
+            "c": "It cannot rank Aniimo or recommend one fixed team. The registered sources include published stats and skill descriptions, but they do not provide enough complete cooldown, damage, progression-cost and version-balance data for a defensible strength ranking."
+          },
+          {
+            "t": "quote",
+            "c": "Roles and elements describe what an Aniimo is for, not how strong it is. This page stays on the functional side of that line."
+          }
+        ]
+      },
+      "aniimo-forms-explained": {
+        "title": "Aniimo Forms Explained: Prismana, Region Forms and Sparkling Styles",
+        "subtitle": "The official Wiki indexes 19 form names, and the official probability disclosure publishes the sparkling style table.",
+        "tag": "Forms",
+        "lead": "AniimoDex reads form data from two separate official documents: the Wiki detail snapshot, which lists a morphology entry for each Aniimo, and the probability disclosure, which publishes the sparkling style table. This page shows exactly what each one covers.",
+        "body": [
+          {
+            "t": "h",
+            "c": "What form data is officially published?"
+          },
+          {
+            "t": "p",
+            "c": "The official Wiki detail snapshot records a morphology list for each Aniimo. Across the 92 indexed Aniimo, 19 distinct form names appear, and they fall into three groups: every entry has a Basic Form, 21 entries also have a Prismana Form, and the rest are named after a region or a weather state."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Form",
+              "Indexed Aniimo"
+            ],
+            "rows": [
+              [
+                "Basic Form",
+                "92"
+              ],
+              [
+                "Prismana Form",
+                "21"
+              ],
+              [
+                "Highland Form",
+                "15"
+              ],
+              [
+                "Mountain Woods Form",
+                "12"
+              ],
+              [
+                "Umbrabow Form",
+                "12"
+              ],
+              [
+                "Snowfield Form",
+                "11"
+              ],
+              [
+                "Sea of Flowers Form",
+                "9"
+              ],
+              [
+                "Nighttime Form",
+                "9"
+              ],
+              [
+                "Rainstorm Form",
+                "7"
+              ],
+              [
+                "Beach Form",
+                "6"
+              ],
+              [
+                "Forest Form",
+                "6"
+              ],
+              [
+                "Mountain Form",
+                "6"
+              ],
+              [
+                "Plateau Form",
+                "4"
+              ],
+              [
+                "Thunderstorm Form",
+                "2"
+              ],
+              [
+                "Grassland Form",
+                "2"
+              ],
+              [
+                "Cloudmist Form",
+                "2"
+              ],
+              [
+                "Mudflat Form",
+                "2"
+              ],
+              [
+                "Bay Form",
+                "2"
+              ],
+              [
+                "Towerwood Form",
+                "2"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "What is a Prismana Form?"
+          },
+          {
+            "t": "p",
+            "c": "Prismana Form is the official name used in the morphology list, and 21 of the 92 indexed Aniimo publish one. Community coverage describes Prismana as changing an Aniimo's element rather than its stats, but the official Wiki sources used here do not say what a Prismana Form changes, so AniimoDex keeps that statement at community level."
+          },
+          {
+            "t": "h",
+            "c": "What are region forms?"
+          },
+          {
+            "t": "p",
+            "c": "The remaining 17 form names are tied to a place or a weather state, such as Highland Form, Snowfield Form, Sea of Flowers Form, Rainstorm Form and Nighttime Form. The official index records the names only and does not publish what differs between them."
+          },
+          {
+            "t": "h",
+            "c": "Are sparkling forms in the same list?"
+          },
+          {
+            "t": "p",
+            "c": "No. No sparkling entry appears anywhere in the official morphology list. The sparkling styles are published separately in the official probability disclosure, so the two systems should not be treated as one field."
+          },
+          {
+            "t": "h",
+            "c": "Which sparkling styles are officially published?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "How it is obtained",
+              "Normal",
+              "Dazzling",
+              "Shadow"
+            ],
+            "rows": [
+              [
+                "Sparkling Cube on a wild Aniimo",
+                "99%",
+                "1%",
+                "0%"
+              ],
+              [
+                "Sparkling Cube on an egg that is not from Egg Heist",
+                "99%",
+                "1%",
+                "0%"
+              ],
+              [
+                "Sparkling Cube on an Egg Heist egg",
+                "99%",
+                "0%",
+                "1%"
+              ],
+              [
+                "Sparkling Sigil on an existing Aniimo",
+                "99%",
+                "0.5%",
+                "0.5%"
+              ],
+              [
+                "Sparkling Color to change the style",
+                "99%",
+                "0.5%",
+                "0.5%"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "In both Sparkling Cube routes the normal style is 99%, which means the rare outcomes are the Dazzling style at 1%, or the Shadow style at 1% on Egg Heist eggs, rather than sparkling itself."
+          },
+          {
+            "t": "h",
+            "c": "What do sparkling styles change?"
+          },
+          {
+            "t": "p",
+            "c": "The official disclosure publishes only how each style is obtained. It does not state whether a sparkling style changes stats, elements or roles, so AniimoDex does not claim any of those effects."
+          },
+          {
+            "t": "h",
+            "c": "Why does the Dex not show stats per form?"
+          },
+          {
+            "t": "p",
+            "c": "The official sources used by AniimoDex do not publish per-form stats, elements, roles or abilities. The Dex therefore lists each form name with its category instead of filling the gaps with estimated numbers."
+          },
+          {
+            "t": "quote",
+            "c": "Publishing the official form list and labelling what is not published is more useful than inventing differences between forms."
+          }
         ]
       },
       "aniimo-multiplayer": {
@@ -696,26 +1530,111 @@
         "tag": "Multiplayer",
         "lead": "Aniimo supports solo and multiplayer activities. Steam lists PvP, online co-op and cross-platform multiplayer, while Xbox describes the three-player Egg Heist PVEVP mode.",
         "body": [
-          { "t": "h", "c": "Does Aniimo have co-op?" },
-          { "t": "p", "c": "Yes. Steam lists online co-op and multiplayer. The final availability of specific activities may depend on platform, account and launch version." },
-          { "t": "h", "c": "Does Aniimo have PvP?" },
-          { "t": "p", "c": "Steam lists PvP, and Xbox describes Egg Heist as a real-time PVEVP activity where three-player teams compete while facing environmental threats." },
-          { "t": "h", "c": "Is Aniimo cross-platform?" },
-          { "t": "p", "c": "Steam lists cross-platform multiplayer. Official sources checked here do not yet explain every cross-save, account-linking or platform-combination detail." }
+          {
+            "t": "h",
+            "c": "Does Aniimo have co-op?"
+          },
+          {
+            "t": "p",
+            "c": "Yes. Steam lists online co-op and multiplayer. The final availability of specific activities may depend on platform, account and launch version."
+          },
+          {
+            "t": "h",
+            "c": "Does Aniimo have PvP?"
+          },
+          {
+            "t": "p",
+            "c": "Steam lists PvP, and Xbox describes Egg Heist as a real-time PVEVP activity where three-player teams compete while facing environmental threats."
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo cross-platform?"
+          },
+          {
+            "t": "p",
+            "c": "Steam lists cross-platform multiplayer. Official sources checked here do not yet explain every cross-save, account-linking or platform-combination detail."
+          }
         ]
       },
       "aniimo-pre-registration": {
-        "title": "Aniimo Pre-Registration: Official Links, Platforms and Launch Date",
-        "subtitle": "Pre-register or wishlist Aniimo on official PC, PS5, Xbox, iOS and Android stores before the September 16 launch.",
+        "title": "Aniimo Pre-Registration Rewards: Milestones and Current Status",
+        "subtitle": "The official counter passed 35 million, and all four published milestone rewards are unlocked.",
         "tag": "Updates",
-        "lead": "Aniimo's official website provides pre-registration and storefront links. Availability and the wording of each action can differ by platform and region.",
+        "lead": "The official Aniimo website still displays a live global pre-registration counter and the reward milestones tied to it. AniimoDex records what that page actually publishes instead of describing a claim flow it cannot verify.",
         "body": [
-          { "t": "h", "c": "How do I pre-register for Aniimo?" },
-          { "t": "p", "c": "Open Aniimo's official website, choose your platform and follow the linked storefront. Depending on the platform, the action may appear as pre-register, wishlist or pre-order." },
-          { "t": "h", "c": "Does pre-registration give rewards?" },
-          { "t": "p", "c": "Reward details can change and may vary by campaign or region. Confirm any reward on the official Aniimo site or storefront before relying on it." },
-          { "t": "h", "c": "When does Aniimo launch?" },
-          { "t": "p", "c": "The PlayStation Store states September 16, 2026 at 10:00 UTC+8. Storefront dates may display the previous calendar day in some time zones." }
+          {
+            "t": "h",
+            "c": "What is the current pre-registration count?"
+          },
+          {
+            "t": "p",
+            "c": "The official website showed 35,451,283 pre-registrations when it was checked on September 18, 2026."
+          },
+          {
+            "t": "h",
+            "c": "Which milestone rewards are unlocked?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Milestone",
+              "Reward"
+            ],
+            "rows": [
+              [
+                "10,000,000",
+                "輝石 x200 (premium currency)"
+              ],
+              [
+                "15,000,000",
+                "Ultimate Cube x2"
+              ],
+              [
+                "20,000,000",
+                "「同遊之約」limited avatar frame"
+              ],
+              [
+                "30,000,000",
+                "「逐光晴野」limited outfit"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Are pre-registration rewards still claimable after launch?"
+          },
+          {
+            "t": "p",
+            "c": "PC and console launched on September 16, 2026, and the official website now leads with a PC download while still showing the pre-registration counter and milestones. The sources checked here do not explain how an account that is already playing claims a milestone reward, so AniimoDex does not describe a claim flow."
+          },
+          {
+            "t": "h",
+            "c": "What else does the official site list as launch benefits?"
+          },
+          {
+            "t": "li",
+            "c": "Choose one rare Prismana Aniimo after reaching Junior Pathfinder"
+          },
+          {
+            "t": "li",
+            "c": "An exclusive accessory from Research Handbook progress"
+          },
+          {
+            "t": "li",
+            "c": "Free catching items including a Sparkling Cube, an Ultimate Cube and a big white ball"
+          },
+          {
+            "t": "li",
+            "c": "Limited Aniimo eggs from pre-registration and from cumulative login"
+          },
+          {
+            "t": "li",
+            "c": "Four free outfits in total"
+          },
+          {
+            "t": "quote",
+            "c": "AniimoDex lists these because the official site publishes them. Whether each benefit is still obtainable today is not stated on that page."
+          }
         ]
       },
       "aniimo-system-requirements": {
@@ -724,14 +1643,96 @@
         "tag": "PC",
         "lead": "The Epic Games Store now publishes complete minimum and recommended Windows requirements for Aniimo. Both tiers require 30 GB, while the recommended tier specifies an SSD.",
         "body": [
-          { "t": "h", "c": "Can Aniimo run on PC?" },
-          { "t": "p", "c": "Yes. Steam lists Aniimo for Windows, and Xbox lists PC as a supported platform." },
-          { "t": "h", "c": "What are the minimum PC requirements?" },
-          { "t": "table", "head": ["Part", "Minimum"], "rows": [["OS", "Windows 10"], ["CPU", "Intel Core i5 9th Gen or AMD Ryzen 7 2700"], ["Memory", "8 GB RAM"], ["GPU", "GTX 1060, RX 580 or Intel Arc A580"], ["DirectX", "DirectX 11"], ["Storage", "30 GB"]] },
-          { "t": "h", "c": "What are the recommended PC requirements?" },
-          { "t": "table", "head": ["Part", "Recommended"], "rows": [["OS", "Windows 11"], ["CPU", "Intel Core i7 9th Gen or AMD Ryzen 7 3700"], ["Memory", "16 GB RAM"], ["GPU", "RTX 3060 or RX 6600 and above"], ["DirectX", "DirectX 12"], ["Storage", "30 GB SSD"]] },
-          { "t": "h", "c": "Is macOS supported?" },
-          { "t": "p", "c": "The Steam listing checked for this page identifies Windows support. No official macOS version is confirmed in these sources." }
+          {
+            "t": "h",
+            "c": "Can Aniimo run on PC?"
+          },
+          {
+            "t": "p",
+            "c": "Yes. Steam lists Aniimo for Windows, and Xbox lists PC as a supported platform."
+          },
+          {
+            "t": "h",
+            "c": "What are the minimum PC requirements?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Part",
+              "Minimum"
+            ],
+            "rows": [
+              [
+                "OS",
+                "Windows 10"
+              ],
+              [
+                "CPU",
+                "Intel Core i5 9th Gen or AMD Ryzen 7 2700"
+              ],
+              [
+                "Memory",
+                "8 GB RAM"
+              ],
+              [
+                "GPU",
+                "GTX 1060, RX 580 or Intel Arc A580"
+              ],
+              [
+                "DirectX",
+                "DirectX 11"
+              ],
+              [
+                "Storage",
+                "30 GB"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "What are the recommended PC requirements?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Part",
+              "Recommended"
+            ],
+            "rows": [
+              [
+                "OS",
+                "Windows 11"
+              ],
+              [
+                "CPU",
+                "Intel Core i7 9th Gen or AMD Ryzen 7 3700"
+              ],
+              [
+                "Memory",
+                "16 GB RAM"
+              ],
+              [
+                "GPU",
+                "RTX 3060 or RX 6600 and above"
+              ],
+              [
+                "DirectX",
+                "DirectX 12"
+              ],
+              [
+                "Storage",
+                "30 GB SSD"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Is macOS supported?"
+          },
+          {
+            "t": "p",
+            "c": "The Steam listing checked for this page identifies Windows support. No official macOS version is confirmed in these sources."
+          }
         ]
       },
       "official-aniimo-dex-status": {
@@ -740,13 +1741,59 @@
         "tag": "Data status",
         "lead": "AniimoDex currently tracks 92 numbered entries from the official Aniimo Wiki snapshot checked on August 30, 2026. Only fields present in that snapshot are published as verified.",
         "body": [
-          { "t": "h", "c": "What is verified now?" },
-          { "t": "table", "head": ["Field", "Status"], "rows": [["Dex number, name and artwork", "Verified from official Wiki index"], ["Description, element, role and stage", "Verified from official Wiki data"], ["Evolution, habitats and forms", "Verified from official Wiki detail pages"], ["Mobility, traits and skills", "Verified from official Wiki detail pages"], ["Numeric stats and catch conditions", "Not published as verified yet"]] },
-          { "t": "h", "c": "Which filters are available?" },
-          { "t": "p", "c": "Element and role filters use official Wiki fields, including dual-element entries. Evolution, habitats, forms, mobility, traits and skills now appear on each detail page. Numeric stats and exact catch conditions remain withheld." },
-          { "t": "h", "c": "How is the data refreshed?" },
-          { "t": "p", "c": "A repeatable parser reads the public official Wiki index, validates unique numbered records and stores a dated snapshot. Changes can then be reviewed before publication instead of silently replacing live data." },
-          { "t": "quote", "c": "A verified label applies only to the named fields, not to every possible fact about that Aniimo." }
+          {
+            "t": "h",
+            "c": "What is verified now?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "Dex number, name and artwork",
+                "Verified from official Wiki index"
+              ],
+              [
+                "Description, element, role and stage",
+                "Verified from official Wiki data"
+              ],
+              [
+                "Evolution, habitats and forms",
+                "Verified from official Wiki detail pages"
+              ],
+              [
+                "Mobility, traits and skills",
+                "Verified from official Wiki detail pages"
+              ],
+              [
+                "Numeric stats and catch conditions",
+                "Not published as verified yet"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Which filters are available?"
+          },
+          {
+            "t": "p",
+            "c": "Element and role filters use official Wiki fields, including dual-element entries. Evolution, habitats, forms, mobility, traits and skills now appear on each detail page. Numeric stats and exact catch conditions remain withheld."
+          },
+          {
+            "t": "h",
+            "c": "How is the data refreshed?"
+          },
+          {
+            "t": "p",
+            "c": "A repeatable parser reads the public official Wiki index, validates unique numbered records and stores a dated snapshot. Changes can then be reviewed before publication instead of silently replacing live data."
+          },
+          {
+            "t": "quote",
+            "c": "A verified label applies only to the named fields, not to every possible fact about that Aniimo."
+          }
         ]
       },
       "aniimo-launch-time-preload": {
@@ -755,13 +1802,59 @@
         "tag": "Launch",
         "lead": "Aniimo reached its announced global launch time on September 16, 2026 at 10:00 UTC+8. Steam and Xbox availability is now verified, while mobile timing remains separate.",
         "body": [
-          { "t": "h", "c": "When does Aniimo launch?" },
-          { "t": "table", "head": ["Region", "Local time"], "rows": [["China / Singapore (UTC+8)", "September 16, 10:00 AM"], ["UTC", "September 16, 2:00 AM"], ["US Eastern (EDT)", "September 15, 10:00 PM"], ["US Pacific (PDT)", "September 15, 7:00 PM"], ["Central Europe (CEST)", "September 16, 4:00 AM"]] },
-          { "t": "h", "c": "Is Aniimo available now?" },
-          { "t": "p", "c": "Yes on the verified PC and Xbox routes: Steam marks Aniimo released, the official website offers its PC launcher, and Xbox exposes the free base game. Check the regional PlayStation page for its live button; iOS remains listed for September 23 and Android timing is unconfirmed." },
-          { "t": "h", "c": "Why does Steam show September 15?" },
-          { "t": "p", "c": "A simultaneous launch can fall on September 15 in the Americas and September 16 in Asia. The explicit PlayStation UTC+8 time is used for the conversions above." },
-          { "t": "quote", "c": "Platform availability was checked on September 16, 2026 and may still vary by region." }
+          {
+            "t": "h",
+            "c": "When does Aniimo launch?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Region",
+              "Local time"
+            ],
+            "rows": [
+              [
+                "China / Singapore (UTC+8)",
+                "September 16, 10:00 AM"
+              ],
+              [
+                "UTC",
+                "September 16, 2:00 AM"
+              ],
+              [
+                "US Eastern (EDT)",
+                "September 15, 10:00 PM"
+              ],
+              [
+                "US Pacific (PDT)",
+                "September 15, 7:00 PM"
+              ],
+              [
+                "Central Europe (CEST)",
+                "September 16, 4:00 AM"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo available now?"
+          },
+          {
+            "t": "p",
+            "c": "Yes on the verified PC and Xbox routes: Steam marks Aniimo released, the official website offers its PC launcher, and Xbox exposes the free base game. Check the regional PlayStation page for its live button; iOS remains listed for September 23 and Android timing is unconfirmed."
+          },
+          {
+            "t": "h",
+            "c": "Why does Steam show September 15?"
+          },
+          {
+            "t": "p",
+            "c": "A simultaneous launch can fall on September 15 in the Americas and September 16 in Asia. The explicit PlayStation UTC+8 time is used for the conversions above."
+          },
+          {
+            "t": "quote",
+            "c": "Platform availability was checked on September 16, 2026 and may still vary by region."
+          }
         ]
       },
       "aniimo-crossplay-cross-save": {
@@ -770,21 +1863,112 @@
         "tag": "Multiplayer",
         "lead": "Yes, Aniimo supports cross-platform multiplayer according to Steam. Cross-save and cross-progression are separate features and remain unconfirmed in the official sources checked on September 15, 2026.",
         "body": [
-          { "t": "h", "c": "Which Aniimo platform combinations are confirmed?" },
-          { "t": "table", "head": ["Combination", "Current official status"], "rows": [["PC with other platforms", "Cross-platform multiplayer listed; exact pairings not documented"], ["PS5 with Xbox", "Not specifically confirmed"], ["PC / console with mobile", "Not specifically confirmed"], ["Shared saves and progression", "Not confirmed"]] },
-          { "t": "h", "c": "Aniimo cross-platform status at a glance" },
-          { "t": "table", "head": ["Feature", "Current official status"], "rows": [["Cross-platform multiplayer", "Listed on Steam"], ["Specific platform pairings", "Not fully documented"], ["Cross-save", "Not confirmed"], ["Cross-progression", "Not confirmed"], ["Purchases and paid currency transfer", "Not confirmed"]] },
-          { "t": "h", "c": "Does Aniimo support crossplay?" },
-          { "t": "p", "c": "Steam lists cross-platform multiplayer. That confirms cross-platform play as a product feature, but the listing does not specify every supported platform pairing or activity." },
-          { "t": "h", "c": "Does Aniimo have cross-save or cross-progression?" },
-          { "t": "p", "c": "No complete account-linking or progression-transfer policy appears in the official sources used here. Crossplay does not automatically mean that saves, purchases or rewards transfer between platforms." },
-          { "t": "h", "c": "What still needs confirmation?" },
-          { "t": "li", "c": "Which PC, console and mobile combinations can play together" },
-          { "t": "li", "c": "Whether one account shares progress on every platform" },
-          { "t": "li", "c": "Whether paid currency or packs transfer between stores" },
-          { "t": "h", "c": "What should players plan for before launch?" },
-          { "t": "p", "c": "Choose a primary platform until Pawprint Studio publishes account-linking details. Do not assume that a shared multiplayer session also transfers saves, achievements, purchases or premium currency." },
-          { "t": "quote", "c": "AniimoDex will update this page when Pawprint Studio publishes an account or cross-progression FAQ." }
+          {
+            "t": "h",
+            "c": "Which Aniimo platform combinations are confirmed?"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Combination",
+              "Current official status"
+            ],
+            "rows": [
+              [
+                "PC with other platforms",
+                "Cross-platform multiplayer listed; exact pairings not documented"
+              ],
+              [
+                "PS5 with Xbox",
+                "Not specifically confirmed"
+              ],
+              [
+                "PC / console with mobile",
+                "Not specifically confirmed"
+              ],
+              [
+                "Shared saves and progression",
+                "Not confirmed"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Aniimo cross-platform status at a glance"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Feature",
+              "Current official status"
+            ],
+            "rows": [
+              [
+                "Cross-platform multiplayer",
+                "Listed on Steam"
+              ],
+              [
+                "Specific platform pairings",
+                "Not fully documented"
+              ],
+              [
+                "Cross-save",
+                "Not confirmed"
+              ],
+              [
+                "Cross-progression",
+                "Not confirmed"
+              ],
+              [
+                "Purchases and paid currency transfer",
+                "Not confirmed"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Does Aniimo support crossplay?"
+          },
+          {
+            "t": "p",
+            "c": "Steam lists cross-platform multiplayer. That confirms cross-platform play as a product feature, but the listing does not specify every supported platform pairing or activity."
+          },
+          {
+            "t": "h",
+            "c": "Does Aniimo have cross-save or cross-progression?"
+          },
+          {
+            "t": "p",
+            "c": "No complete account-linking or progression-transfer policy appears in the official sources used here. Crossplay does not automatically mean that saves, purchases or rewards transfer between platforms."
+          },
+          {
+            "t": "h",
+            "c": "What still needs confirmation?"
+          },
+          {
+            "t": "li",
+            "c": "Which PC, console and mobile combinations can play together"
+          },
+          {
+            "t": "li",
+            "c": "Whether one account shares progress on every platform"
+          },
+          {
+            "t": "li",
+            "c": "Whether paid currency or packs transfer between stores"
+          },
+          {
+            "t": "h",
+            "c": "What should players plan for before launch?"
+          },
+          {
+            "t": "p",
+            "c": "Choose a primary platform until Pawprint Studio publishes account-linking details. Do not assume that a shared multiplayer session also transfers saves, achievements, purchases or premium currency."
+          },
+          {
+            "t": "quote",
+            "c": "AniimoDex will update this page when Pawprint Studio publishes an account or cross-progression FAQ."
+          }
         ]
       },
       "aniimo-language-controller-support": {
@@ -793,60 +1977,338 @@
         "tag": "Compatibility",
         "lead": "Aniimo has official PC and console listings, but not every compatibility detail is stable before launch. This page records only what can be verified and identifies the remaining checks.",
         "body": [
-          { "t": "h", "c": "Does Aniimo support controllers?" },
-          { "t": "p", "c": "Console releases necessarily use their platform controllers. The sources used here do not provide a final PC controller matrix, button-layout list or confirmation for every third-party gamepad." },
-          { "t": "h", "c": "Is Aniimo Steam Deck verified?" },
-          { "t": "p", "c": "No Steam Deck compatibility rating is confirmed in the registered official sources. Windows support on Steam does not by itself establish Deck verification or performance." },
-          { "t": "h", "c": "Which languages are supported?" },
-          { "t": "p", "c": "Store language tables can change before release and may distinguish interface, subtitles and audio. Use the live language section on your official storefront until a stable launch list is published." },
-          { "t": "h", "c": "What will be tested at launch?" },
-          { "t": "li", "c": "Keyboard and mouse rebinding" },
-          { "t": "li", "c": "Xbox, DualSense and generic controller behavior on PC" },
-          { "t": "li", "c": "Steam Deck launch, controls and performance" },
-          { "t": "li", "c": "Interface, subtitle and voice language options" }
+          {
+            "t": "h",
+            "c": "Does Aniimo support controllers?"
+          },
+          {
+            "t": "p",
+            "c": "Console releases necessarily use their platform controllers. The sources used here do not provide a final PC controller matrix, button-layout list or confirmation for every third-party gamepad."
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo Steam Deck verified?"
+          },
+          {
+            "t": "p",
+            "c": "No Steam Deck compatibility rating is confirmed in the registered official sources. Windows support on Steam does not by itself establish Deck verification or performance."
+          },
+          {
+            "t": "h",
+            "c": "Which languages are supported?"
+          },
+          {
+            "t": "p",
+            "c": "Store language tables can change before release and may distinguish interface, subtitles and audio. Use the live language section on your official storefront until a stable launch list is published."
+          },
+          {
+            "t": "h",
+            "c": "What will be tested at launch?"
+          },
+          {
+            "t": "li",
+            "c": "Keyboard and mouse rebinding"
+          },
+          {
+            "t": "li",
+            "c": "Xbox, DualSense and generic controller behavior on PC"
+          },
+          {
+            "t": "li",
+            "c": "Steam Deck launch, controls and performance"
+          },
+          {
+            "t": "li",
+            "c": "Interface, subtitle and voice language options"
+          }
         ]
       },
-      "aniimo-elements-explained": { "title": "Aniimo Elements Explained: All 9 Types", "subtitle": "How official element labels organize the Aniimo Dex.", "tag": "Elements", "lead": "The official Aniimo Wiki uses nine element labels. AniimoDex organizes those entries without inferring strength rankings." },
-      "aniimo-roles-explained": { "title": "Aniimo Combat Roles Explained", "subtitle": "DPS, Healer, Support, Breaker and Regenerator labels in the official Dex.", "tag": "Roles", "lead": "Official combat-role labels describe published classifications, not launch-day rankings or complete team builds." },
-      "aniimo-evolution-system": { "title": "Aniimo Evolution System and Families", "subtitle": "Read official evolution relationships without guessing requirements.", "tag": "Evolution", "lead": "Official Wiki detail pages publish evolution families and stages. Unpublished requirements remain unconfirmed." },
-      "aniimo-mobility-abilities": { "title": "Aniimo Mobility Abilities Explained", "subtitle": "Official field and exploration abilities in the Aniimo Dex.", "tag": "Mobility", "lead": "Official mobility abilities are listed separately from combat traits and skills." },
-      "aniimo-habitats-locations": { "title": "Aniimo Habitats and Location Data", "subtitle": "What official habitat records confirm and what remains unknown.", "tag": "Locations", "lead": "Official habitat records support area-level discovery, not exact spawn coordinates, timers, weather rules or catch rates." },
+      "aniimo-elements-explained": {
+        "title": "Aniimo Elements Explained: All 9 Types",
+        "subtitle": "How official element labels organize the Aniimo Dex.",
+        "tag": "Elements",
+        "lead": "The official Aniimo Wiki uses nine element labels. AniimoDex organizes those entries without inferring strength rankings."
+      },
+      "aniimo-roles-explained": {
+        "title": "Aniimo Combat Roles Explained",
+        "subtitle": "DPS, Healer, Support, Breaker and Regenerator labels in the official Dex.",
+        "tag": "Roles",
+        "lead": "Official combat-role labels describe published classifications, not launch-day rankings or complete team builds."
+      },
+      "aniimo-evolution-system": {
+        "title": "Aniimo Evolution System and Families",
+        "subtitle": "Read official evolution relationships without guessing requirements.",
+        "tag": "Evolution",
+        "lead": "Official Wiki detail pages publish evolution families and stages. Unpublished requirements remain unconfirmed."
+      },
+      "aniimo-mobility-abilities": {
+        "title": "Aniimo Mobility Abilities Explained",
+        "subtitle": "Official field and exploration abilities in the Aniimo Dex.",
+        "tag": "Mobility",
+        "lead": "Official mobility abilities are listed separately from combat traits and skills."
+      },
+      "aniimo-habitats-locations": {
+        "title": "Aniimo Habitats and Location Data",
+        "subtitle": "What official habitat records confirm and what remains unknown.",
+        "tag": "Locations",
+        "lead": "Official habitat records support area-level discovery, not exact spawn coordinates, timers, weather rules or catch rates."
+      },
       "aniimo-launch-coverage-status": {
         "title": "Aniimo Launch Coverage: Guides, Builds and Data Status",
         "subtitle": "A transparent roadmap for launch-day testing and post-launch guides.",
         "tag": "Coverage status",
         "lead": "AniimoDex will not publish invented walkthroughs, tier lists, builds or catch rates before the live game can be tested. This tracker shows what is ready and the evidence required for each next content area.",
         "body": [
-          { "t": "h", "c": "Available before launch" },
-          { "t": "table", "head": ["Area", "Status"], "rows": [["Release, platforms and download", "Official-source guides live"], ["92-entry Aniimo index", "Number, name, artwork, description, element, role and stage live"], ["Twine, catching and multiplayer overviews", "Official mechanics only"], ["Launch time and compatibility", "Confirmed facts plus clearly marked unknowns"]] },
-          { "t": "h", "c": "Launch-week testing queue" },
-          { "t": "li", "c": "First-hour route and system unlock order" },
-          { "t": "li", "c": "Catching tutorial, Aniipods and trap behavior" },
-          { "t": "li", "c": "Regions, maps, quests, currencies and upgrade systems" },
-          { "t": "li", "c": "Egg Heist access, team size and match flow" },
-          { "t": "li", "c": "Login errors, PC settings, mobile and console performance" },
-          { "t": "h", "c": "When will tier lists and builds be published?" },
-          { "t": "p", "c": "Only after the live version exposes complete skills, stats, progression and repeatable combat results. Every recommendation will name the tested game version and will be revised after balance changes." },
-          { "t": "h", "c": "When will locations and catch rates be published?" },
-          { "t": "p", "c": "Locations require reproducible in-game observations. Exact catch-rate claims require an official formula or a sufficiently documented sample; calculator estimates will not be presented as official probabilities." },
-          { "t": "quote", "c": "No source or reproducible test means no verified claim." }
+          {
+            "t": "h",
+            "c": "Available before launch"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Area",
+              "Status"
+            ],
+            "rows": [
+              [
+                "Release, platforms and download",
+                "Official-source guides live"
+              ],
+              [
+                "92-entry Aniimo index",
+                "Number, name, artwork, description, element, role and stage live"
+              ],
+              [
+                "Twine, catching and multiplayer overviews",
+                "Official mechanics only"
+              ],
+              [
+                "Launch time and compatibility",
+                "Confirmed facts plus clearly marked unknowns"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "Launch-week testing queue"
+          },
+          {
+            "t": "li",
+            "c": "First-hour route and system unlock order"
+          },
+          {
+            "t": "li",
+            "c": "Catching tutorial, Aniipods and trap behavior"
+          },
+          {
+            "t": "li",
+            "c": "Regions, maps, quests, currencies and upgrade systems"
+          },
+          {
+            "t": "li",
+            "c": "Egg Heist access, team size and match flow"
+          },
+          {
+            "t": "li",
+            "c": "Login errors, PC settings, mobile and console performance"
+          },
+          {
+            "t": "h",
+            "c": "When will tier lists and builds be published?"
+          },
+          {
+            "t": "p",
+            "c": "Only after the live version exposes complete skills, stats, progression and repeatable combat results. Every recommendation will name the tested game version and will be revised after balance changes."
+          },
+          {
+            "t": "h",
+            "c": "When will locations and catch rates be published?"
+          },
+          {
+            "t": "p",
+            "c": "Locations require reproducible in-game observations. Exact catch-rate claims require an official formula or a sufficiently documented sample; calculator estimates will not be presented as official probabilities."
+          },
+          {
+            "t": "quote",
+            "c": "No source or reproducible test means no verified claim."
+          }
         ]
       }
     },
     "dataTopics": {
-      "elements": { "meaning": { "heading": "What are Aniimo elements?", "content": "The official index uses Light, Fire, Ice, Dark, Lightning, Grass, Water, Earth and Wind; some entries carry two labels." }, "confirmed": { "heading": "What is confirmed?", "content": "Element pages collect entries carrying each official label and summarize their published roles." }, "unknown": { "heading": "What is not inferred?", "content": "A label alone does not prove matchups, builds or strength rankings." } },
-      "roles": { "meaning": { "heading": "Which roles are listed?", "content": "The official index uses DPS, Heal, Support, Break and Regen." }, "confirmed": { "heading": "How should roles be used?", "content": "Use the Dex role filter, then compare official elements, evolution, traits and skills." }, "unknown": { "heading": "Does a role confirm team value?", "content": "No. Damage, healing, equipment and team value require complete live-game data and testing." } },
-      "evolution": { "meaning": { "heading": "What is an evolution family?", "content": "Official detail records connect family members into trees, including published branches." }, "confirmed": { "heading": "What does AniimoDex preserve?", "content": "The site displays official family relationships and links every indexed member." }, "unknown": { "heading": "Are requirements confirmed?", "content": "Levels, items, quests, time and weather are not guessed when the source does not list them." } },
-      "mobility": { "meaning": { "heading": "What is mobility?", "content": "Mobility is an official field for movement or environmental interaction, separate from combat traits and skills." }, "confirmed": { "heading": "Which Aniimo are included?", "content": "Only entries with an explicitly published mobility ability appear in the directory." }, "unknown": { "heading": "What happens when data is absent?", "content": "A missing ability is left unlisted rather than replaced with a guess." } },
-      "habitats": { "meaning": { "heading": "What does a habitat mean?", "content": "It means the official Wiki associates an Aniimo with that named area." }, "confirmed": { "heading": "What can the location directory show?", "content": "It groups entries sharing a published habitat and summarizes their elements and families." }, "unknown": { "heading": "Is it an exact spawn point?", "content": "No. Coordinates, guaranteed encounters, timers, weather rules and catch rates require separate evidence." } }
+      "elements": {
+        "meaning": {
+          "heading": "What are Aniimo elements?",
+          "content": "The official index uses Light, Fire, Ice, Dark, Lightning, Grass, Water, Earth and Wind; some entries carry two labels."
+        },
+        "confirmed": {
+          "heading": "What is confirmed?",
+          "content": "Element pages collect entries carrying each official label and summarize their published roles."
+        },
+        "unknown": {
+          "heading": "What is not inferred?",
+          "content": "A label alone does not prove matchups, builds or strength rankings."
+        }
+      },
+      "roles": {
+        "meaning": {
+          "heading": "Which roles are listed?",
+          "content": "The official index uses DPS, Heal, Support, Break and Regen."
+        },
+        "confirmed": {
+          "heading": "How should roles be used?",
+          "content": "Use the Dex role filter, then compare official elements, evolution, traits and skills."
+        },
+        "unknown": {
+          "heading": "Does a role confirm team value?",
+          "content": "No. Damage, healing, equipment and team value require complete live-game data and testing."
+        }
+      },
+      "evolution": {
+        "meaning": {
+          "heading": "What is an evolution family?",
+          "content": "Official detail records connect family members into trees, including published branches."
+        },
+        "confirmed": {
+          "heading": "What does AniimoDex preserve?",
+          "content": "The site displays official family relationships and links every indexed member."
+        },
+        "unknown": {
+          "heading": "Are requirements confirmed?",
+          "content": "Levels, items, quests, time and weather are not guessed when the source does not list them."
+        }
+      },
+      "mobility": {
+        "meaning": {
+          "heading": "What is mobility?",
+          "content": "Mobility is an official field for movement or environmental interaction, separate from combat traits and skills."
+        },
+        "confirmed": {
+          "heading": "Which Aniimo are included?",
+          "content": "Only entries with an explicitly published mobility ability appear in the directory."
+        },
+        "unknown": {
+          "heading": "What happens when data is absent?",
+          "content": "A missing ability is left unlisted rather than replaced with a guess."
+        }
+      },
+      "habitats": {
+        "meaning": {
+          "heading": "What does a habitat mean?",
+          "content": "It means the official Wiki associates an Aniimo with that named area."
+        },
+        "confirmed": {
+          "heading": "What can the location directory show?",
+          "content": "It groups entries sharing a published habitat and summarizes their elements and families."
+        },
+        "unknown": {
+          "heading": "Is it an exact spawn point?",
+          "content": "No. Coordinates, guaranteed encounters, timers, weather rules and catch rates require separate evidence."
+        }
+      }
     },
     "relatedArticles": "Related guides"
   },
   "collections": {
-    "evolutions": { "title": "Aniimo Evolution Chart and Families", "description": "Browse every evolution family currently published by the official Aniimo Wiki, including branching evolution lines.", "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.", "family": "evolution family", "definition": "The current official-source snapshot maps {members} Aniimo names across {families} evolution families. Family links are confirmed; levels, items and quest requirements are not inferred.", "stats": { "families": "Published evolution families", "branching": "Families with multiple direct branches", "members": "Unique mapped Aniimo names" }, "howToTitle": "How to use the Aniimo evolution chart", "howToDescription": "Each family groups the officially linked stages into one path. Open any member to compare its elements, role, habitats, forms, traits and skills.", "faq": { "branching": { "question": "Does Aniimo have branching evolutions?", "answer": "Yes. The official Wiki snapshot includes families with more than one child branch, and those branches are preserved in this chart." }, "requirements": { "question": "Does this chart show evolution requirements?", "answer": "No. It confirms published family relationships, not levels, items, quests or other evolution conditions unless an official source explicitly lists them." } }, "browseDex": "Browse the full Aniimo Dex", "browseLocations": "Compare official habitats" },
-    "locations": { "title": "Aniimo Map, Locations and Habitats", "description": "Use the official-source Aniimo location directory to find creatures by habitat, from Nimbus Fields to Tideblossom Coast. Exact map coordinates remain unconfirmed.", "sourceNote": "These are official Wiki habitat listings, not guaranteed spawn coordinates, weather conditions or catch rates.", "definitionTitle": "What does an Aniimo habitat confirm?", "definition": "This directory maps {aniimo} Aniimo to {habitats} named habitats published by the official Wiki. A habitat confirms an area association, not an exact coordinate, guaranteed spawn, timer, weather condition or catch rate.", "count": "{count} Aniimo", "directoryTitle": "Aniimo map and habitat directory", "summary": "Published elements: {elements} · {families} evolution families represented", "howToTitle": "How to use this Aniimo map directory", "howToDescription": "Choose an official habitat to see its listed Aniimo, then open a dex entry for evolution, elements, roles, forms and mobility. This is a searchable location directory rather than an interactive coordinate map.", "faq": { "map": { "question": "Does AniimoDex have an interactive Aniimo map?", "answer": "Not yet. A trustworthy interactive map requires reproducible in-game coordinates. Until those are available, this page publishes only official habitat-to-Aniimo relationships." }, "coordinates": { "question": "Are these exact Aniimo spawn coordinates?", "answer": "No. A habitat name identifies an official area association; it does not establish a precise map coordinate or guaranteed spawn point." }, "conditions": { "question": "Do habitats confirm weather, time or catch conditions?", "answer": "No. Weather, time, phenomena and catch rates remain separate fields and are not inferred from a habitat listing." } }, "browseDex": "Browse the full Aniimo Dex", "browseEvolutions": "Compare evolution families", "browseAbilities": "Compare mobility abilities" },
-    "elements": { "title": "{element} Aniimo", "metaTitle": "{element} Aniimo List and Dex", "metaDescription": "Browse every officially listed {element} Aniimo with roles, Dex entries and source status.", "description": "Browse {count} Aniimo carrying the official {element} element label, then compare roles and open each verified Dex entry.", "sourceNote": "Element labels and membership come from the official Aniimo Wiki index snapshot checked August 30, 2026.", "dexTitle": "Official {element} Aniimo list", "count": "{count} Aniimo", "rolesTitle": "Published combat roles", "familiesTitle": "Evolution families", "familiesSummary": "{count} official evolution families are represented on this element page.", "browseFamilies": "Compare evolution families", "dualElementsTitle": "Published dual-element combinations", "mobilityTitle": "Published mobility abilities", "browseMobility": "Browse all mobility abilities", "nonePublished": "None published in the current official snapshot.", "scopeTitle": "What this element page confirms", "scopeDescription": "This page confirms which indexed Aniimo carry the {element} label. It does not infer rankings, builds, resistances or unpublished secondary types.", "browseDex": "Browse the full Aniimo Dex", "browseMatchups": "Open the element matchup chart", "readGuide": "Read the elements guide" },
-    "abilities": { "title": "Aniimo Mobility Abilities", "description": "Look up official movement and exploration abilities such as Hustle, Tunnel, Take Off, Cloak and Glow.", "sourceNote": "Ability names, descriptions and Aniimo mappings come from official Wiki detail pages.", "count": "{count} Aniimo", "howToTitle": "How mobility abilities help exploration", "howToDescription": "These official field abilities identify Aniimo that can support particular movement or environmental interactions. Open an ability group to compare its listed members.", "faq": { "combat": { "question": "Are mobility abilities the same as combat skills?", "answer": "No. Mobility covers exploration and field interaction. Traits and combat skills are listed separately on each Aniimo dex page." }, "complete": { "question": "Is every Aniimo assigned a mobility ability?", "answer": "No. Only mappings explicitly present in the official Wiki detail snapshot are shown; an unlisted ability is not guessed." } }, "browseDex": "Browse the full Aniimo Dex", "browseLocations": "Compare official habitats" }
+    "evolutions": {
+      "title": "Aniimo Evolution Chart and Families",
+      "description": "Browse every evolution family currently published by the official Aniimo Wiki, including branching evolution lines.",
+      "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.",
+      "family": "evolution family",
+      "definition": "The current official-source snapshot maps {members} Aniimo names across {families} evolution families. Family links are confirmed; levels, items and quest requirements are not inferred.",
+      "stats": {
+        "families": "Published evolution families",
+        "branching": "Families with multiple direct branches",
+        "members": "Unique mapped Aniimo names"
+      },
+      "howToTitle": "How to use the Aniimo evolution chart",
+      "howToDescription": "Each family groups the officially linked stages into one path. Open any member to compare its elements, role, habitats, forms, traits and skills.",
+      "faq": {
+        "branching": {
+          "question": "Does Aniimo have branching evolutions?",
+          "answer": "Yes. The official Wiki snapshot includes families with more than one child branch, and those branches are preserved in this chart."
+        },
+        "requirements": {
+          "question": "Does this chart show evolution requirements?",
+          "answer": "No. It confirms published family relationships, not levels, items, quests or other evolution conditions unless an official source explicitly lists them."
+        }
+      },
+      "browseDex": "Browse the full Aniimo Dex",
+      "browseLocations": "Compare official habitats"
+    },
+    "locations": {
+      "title": "Aniimo Map, Locations and Habitats",
+      "description": "Use the official-source Aniimo location directory to find creatures by habitat, from Nimbus Fields to Tideblossom Coast. Exact map coordinates remain unconfirmed.",
+      "sourceNote": "These are official Wiki habitat listings, not guaranteed spawn coordinates, weather conditions or catch rates.",
+      "definitionTitle": "What does an Aniimo habitat confirm?",
+      "definition": "This directory maps {aniimo} Aniimo to {habitats} named habitats published by the official Wiki. A habitat confirms an area association, not an exact coordinate, guaranteed spawn, timer, weather condition or catch rate.",
+      "count": "{count} Aniimo",
+      "directoryTitle": "Aniimo map and habitat directory",
+      "summary": "Published elements: {elements} · {families} evolution families represented",
+      "howToTitle": "How to use this Aniimo map directory",
+      "howToDescription": "Choose an official habitat to see its listed Aniimo, then open a dex entry for evolution, elements, roles, forms and mobility. This is a searchable location directory rather than an interactive coordinate map.",
+      "faq": {
+        "map": {
+          "question": "Does AniimoDex have an interactive Aniimo map?",
+          "answer": "Not yet. A trustworthy interactive map requires reproducible in-game coordinates. Until those are available, this page publishes only official habitat-to-Aniimo relationships."
+        },
+        "coordinates": {
+          "question": "Are these exact Aniimo spawn coordinates?",
+          "answer": "No. A habitat name identifies an official area association; it does not establish a precise map coordinate or guaranteed spawn point."
+        },
+        "conditions": {
+          "question": "Do habitats confirm weather, time or catch conditions?",
+          "answer": "No. Weather, time, phenomena and catch rates remain separate fields and are not inferred from a habitat listing."
+        }
+      },
+      "browseDex": "Browse the full Aniimo Dex",
+      "browseEvolutions": "Compare evolution families",
+      "browseAbilities": "Compare mobility abilities"
+    },
+    "elements": {
+      "title": "{element} Aniimo",
+      "metaTitle": "{element} Aniimo List and Dex",
+      "metaDescription": "Browse every officially listed {element} Aniimo with roles, Dex entries and source status.",
+      "description": "Browse {count} Aniimo carrying the official {element} element label, then compare roles and open each verified Dex entry.",
+      "sourceNote": "Element labels and membership come from the official Aniimo Wiki index snapshot checked August 30, 2026.",
+      "dexTitle": "Official {element} Aniimo list",
+      "count": "{count} Aniimo",
+      "rolesTitle": "Published combat roles",
+      "familiesTitle": "Evolution families",
+      "familiesSummary": "{count} official evolution families are represented on this element page.",
+      "browseFamilies": "Compare evolution families",
+      "dualElementsTitle": "Published dual-element combinations",
+      "mobilityTitle": "Published mobility abilities",
+      "browseMobility": "Browse all mobility abilities",
+      "nonePublished": "None published in the current official snapshot.",
+      "missingTitle": "{element} has no published entries yet",
+      "missingBody": "This element exists in the Aniimo element system, but none of the 92 Aniimo in the official Wiki snapshot checked August 30, 2026 carries it. The element is kept and labelled here instead of being removed.",
+      "scopeTitle": "What this element page confirms",
+      "scopeDescription": "This page confirms which indexed Aniimo carry the {element} label. It does not infer rankings, builds, resistances or unpublished secondary types.",
+      "browseDex": "Browse the full Aniimo Dex",
+      "browseMatchups": "Open the element matchup chart",
+      "readGuide": "Read the elements guide"
+    },
+    "abilities": {
+      "title": "Aniimo Mobility Abilities",
+      "description": "Look up official movement and exploration abilities such as Hustle, Tunnel, Take Off, Cloak and Glow.",
+      "sourceNote": "Ability names, descriptions and Aniimo mappings come from official Wiki detail pages.",
+      "count": "{count} Aniimo",
+      "howToTitle": "How mobility abilities help exploration",
+      "howToDescription": "These official field abilities identify Aniimo that can support particular movement or environmental interactions. Open an ability group to compare its listed members.",
+      "faq": {
+        "combat": {
+          "question": "Are mobility abilities the same as combat skills?",
+          "answer": "No. Mobility covers exploration and field interaction. Traits and combat skills are listed separately on each Aniimo dex page."
+        },
+        "complete": {
+          "question": "Is every Aniimo assigned a mobility ability?",
+          "answer": "No. Only mappings explicitly present in the official Wiki detail snapshot are shown; an unlisted ability is not guessed."
+        }
+      },
+      "browseDex": "Browse the full Aniimo Dex",
+      "browseLocations": "Compare official habitats"
+    }
   },
   "elements": {
     "Light": "Light",
@@ -865,14 +2327,6 @@
     "Support": "Support",
     "Break": "Breaker",
     "Regen": "Regenerator"
-  },
-  "twineAbility": {
-    "飞行": "Fly",
-    "游泳": "Swim",
-    "遁地": "Dig",
-    "攀岩": "Climb",
-    "冲撞": "Ram",
-    "无": "None"
   },
   "localeSwitcher": {
     "label": "Language"

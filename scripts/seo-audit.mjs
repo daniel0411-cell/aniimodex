@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const outDir = new URL('../out/', import.meta.url).pathname;
+const outDir = fileURLToPath(new URL('../out/', import.meta.url));
 const pages = [];
 
 function walk(dir) {
@@ -40,8 +41,10 @@ for (const path of pages) {
   if (!description) errors.push(`${path}: missing description`);
   if (!canonical) errors.push(`${path}: missing canonical`);
   if (h1Count !== 1) errors.push(`${path}: expected 1 h1, found ${h1Count}`);
-  if (hreflangCount !== 4) errors.push(`${path}: expected 4 hreflang links, found ${hreflangCount}`);
-  if (canonical && canonicals.has(canonical)) errors.push(`${path}: duplicate canonical ${canonical}`);
+  if (hreflangCount !== 4)
+    errors.push(`${path}: expected 4 hreflang links, found ${hreflangCount}`);
+  if (canonical && canonicals.has(canonical))
+    errors.push(`${path}: duplicate canonical ${canonical}`);
   if (canonical) canonicals.add(canonical);
   if (canonical) pageCanonicals.add(canonical);
   if (canonical && noindex && sitemapUrls.has(canonical)) {

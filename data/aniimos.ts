@@ -1,4 +1,5 @@
 import snapshot from '@/data/official-wiki-snapshot.json';
+import { mobilityByNumber } from '@/data/mobility';
 import type { AniimoEntry, EvolutionStage, Personality, PersonalityBonus } from '@/types/aniimo';
 
 const SOURCE_ID = 'aniimo-official-wiki-index-2026-08-30';
@@ -30,10 +31,10 @@ const aniimos: AniimoEntry[] = snapshot.entries.map((record) => ({
   officialStage: record.stage as AniimoEntry['officialStage'],
   description: record.description,
   flavorText: record.description,
-  shiny: false,
   element: record.elements[0] as AniimoEntry['element'],
   role: record.role as AniimoEntry['role'],
-  twineAbility: '无',
+  // 移动能力来自官方详情快照（detail.mobility），未公布时为 []
+  mobility: mobilityByNumber.get(record.number) ?? [],
   stats: { hp: 0, atk: 0, def: 0, spd: 0 },
   potential: {
     Common: 'unavailable',
@@ -47,7 +48,8 @@ const aniimos: AniimoEntry[] = snapshot.entries.map((record) => ({
   forms: [],
   dataSource: 'official',
   sourceIds: [SOURCE_ID],
-  note: 'Number, English name, artwork, description, elements, role and stage come from the official Wiki snapshot.',
+  note:
+    'Number, English name, artwork, description, elements, role and stage come from the official Wiki index snapshot. Mobility names come from the official Wiki detail snapshot and are empty when the official record publishes none.',
 }));
 
 export default aniimos;

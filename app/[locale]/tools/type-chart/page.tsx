@@ -1,25 +1,31 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { Element } from '@/types/aniimo';
 import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
 import { effectiveness } from '@/lib/type-chart';
-import { getAllAniimos } from '@/lib/aniimo';
+import { getAllAniimos, getElementsWithoutPublishedEntries } from '@/lib/aniimo';
+import { ELEMENT_MATCHUPS_CLAIM_ID, RESISTED, SUPER_EFFECTIVE } from '@/data/element-matchups';
+import {
+  EVIDENCE_BADGE_CLASSES,
+  EVIDENCE_PANEL_CLASSES,
+  getClaim,
+  getClaimStatus,
+} from '@/lib/evidence';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 // ---------------------------------------------------------------------------
 // 克制矩阵数据：行 = 攻击方，列 = 防御方
-// 值：2 = 克制、1 = 普通、0.5 = 抵抗、0 = 免疫（未列出则默认为 1）
+// 社区共识倍率：1.6 = 超克制、1 = 中性、0.625 = 抵抗，无免疫（未列出则默认为 1）
 // ---------------------------------------------------------------------------
 // 倍率 → 配色 / 文字（浅色背景下的深色文字，保证对比度）
 const MULTIPLIER_STYLE: Record<number, string> = {
-  2: 'bg-red-100 text-red-700 font-bold border border-red-300',
+  [SUPER_EFFECTIVE]: 'bg-red-100 text-red-700 font-bold border border-red-300',
   1: 'bg-ink-soft text-text-secondary',
-  0.5: 'bg-sky-100 text-sky-700 border border-sky-300',
-  0: 'bg-slate-900 text-slate-100',
+  [RESISTED]: 'bg-sky-100 text-sky-700 border border-sky-300',
 };
 
 export default function TypeChartPage() {
@@ -29,6 +35,16 @@ export default function TypeChartPage() {
   const [attackEl, setAttackEl] = useState<Element | null>(null);
   const [defendEl, setDefendEl] = useState<Element | null>(null);
   const [aniimoNumber, setAniimoNumber] = useState('');
+
+  // 克制倍率的核验状态由 verification.ts 驱动，不写死在 i18n 文案里：
+  // 数据改了，这里的等级标签与配色会自动跟随。
+  const matchupClaim = getClaim(ELEMENT_MATCHUPS_CLAIM_ID);
+  const matchupStatus = getClaimStatus(ELEMENT_MATCHUPS_CLAIM_ID);
+  const matchupClaimText = tr.has(`verification.claims.${ELEMENT_MATCHUPS_CLAIM_ID}`)
+    ? tr(`verification.claims.${ELEMENT_MATCHUPS_CLAIM_ID}`)
+    : matchupClaim?.claim ?? '';
+  // 官方索引中暂缺条目的元素（当前为 Light），如实标注而不是删掉
+  const elementsWithoutEntries = useMemo(() => getElementsWithoutPublishedEntries(), []);
 
   useEffect(() => {
     const defender = new URLSearchParams(window.location.search).get('defender');
@@ -48,10 +64,9 @@ export default function TypeChartPage() {
 
   // 图例
   const legend: { value: number; labelKey: string }[] = [
-    { value: 2, labelKey: 'superEffective' },
+    { value: SUPER_EFFECTIVE, labelKey: 'superEffective' },
     { value: 1, labelKey: 'neutral' },
-    { value: 0.5, labelKey: 'resisted' },
-    { value: 0, labelKey: 'immune' },
+    { value: RESISTED, labelKey: 'resisted' },
   ];
 
   return (
@@ -63,9 +78,23 @@ export default function TypeChartPage() {
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
-      <section className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-950">
-        <h2 className="font-semibold">{t('sourceStatusTitle')}</h2>
-        <p>{t('sourceStatusDescription')}</p>
+      <section className={cn('border-l-4 px-4 py-3 text-sm leading-6', EVIDENCE_PANEL_CLASSES[matchupStatus])}>
+        <div className="flex flex-wrap items-center gap-2">
+          <h2 className="font-semibold">{t('sourceStatusTitle')}</h2>
+          <span
+            className={cn(
+              'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold',
+              EVIDENCE_BADGE_CLASSES[matchupStatus]
+            )}
+          >
+            {tr(`verification.statusLabels.${matchupStatus}`)}
+          </span>
+        </div>
+        <p className="mt-1">{t('sourceStatusDescription')}</p>
+        <p className="mt-2 text-xs">
+          {matchupClaimText}
+          {matchupClaim ? ` · ${tr('verification.checkedOn', { date: matchupClaim.checkedAt })}` : ''}
+        </p>
       </section>
 
       <section className="border-t-4 border-primary bg-white p-4 sm:p-5">
@@ -118,6 +147,13 @@ export default function TypeChartPage() {
           </span>
         ))}
       </div>
+
+      {/* 官方索引暂缺条目的元素：保留行/列，但如实说明当前没有对应伊莫 */}
+      {elementsWithoutEntries.length > 0 && (
+        <p className="text-xs leading-5 text-text-muted">
+          {t('noEntriesNote', { elements: elementsWithoutEntries.map(elLabel).join(' / ') })}
+        </p>
+      )}
 
       {/* 克制表格 */}
       <div className="hidden overflow-x-auto rounded-md border border-ink-border bg-ink-card p-3 sm:block">
@@ -185,13 +221,13 @@ export default function TypeChartPage() {
                         <div
                           title={`${elLabel(atk)} ${t('attackText')} ${elLabel(def)}: ${value}x`}
                           className={cn(
-                            'flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-sm transition-all sm:h-12 sm:w-12',
+                            'flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-xs transition-all sm:h-12 sm:w-12',
                             MULTIPLIER_STYLE[effectiveness(atk, def)],
                             highlighted && 'ring-2 ring-primary/70',
                             !highlighted && 'opacity-80 hover:opacity-100'
                           )}
                         >
-                          {effectiveness(atk, def) === 0.5 ? '½' : effectiveness(atk, def)}
+                          {effectiveness(atk, def)}
                         </div>
                       </td>
                     );
@@ -226,10 +262,10 @@ export default function TypeChartPage() {
       <section className="space-y-2">
         <h2 className="text-lg font-semibold text-text-primary">{t('rulesTitle')}</h2>
         <ul className="list-inside list-disc space-y-1.5 rounded-xl border border-ink-border bg-ink-card px-5 py-4 text-sm text-text-secondary">
-          <li>{t('rule2x')}</li>
-          <li>{t('ruleHalf')}</li>
-          <li>{t('rule0')}</li>
-          <li>{t('rule1')}</li>
+          <li>{t('ruleSuper')}</li>
+          <li>{t('ruleResisted')}</li>
+          <li>{t('ruleNeutral')}</li>
+          <li>{t('ruleNoImmune')}</li>
           <li>{t('ruleSame')}</li>
         </ul>
       </section>
@@ -241,9 +277,8 @@ export default function TypeChartPage() {
         </div>
         <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
           {ELEMENTS.map((attacker) => {
-            const strong = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 2);
-            const resisted = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 0.5);
-            const immune = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === 0);
+            const strong = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === SUPER_EFFECTIVE);
+            const resisted = ELEMENTS.filter((defender) => effectiveness(attacker, defender) === RESISTED);
             return (
               <article key={attacker} className="border-t border-ink-border pt-4">
                 <h3 className="font-semibold text-text-primary">
@@ -259,11 +294,6 @@ export default function TypeChartPage() {
                     elements: resisted.map(elLabel).join(', ') || t('none'),
                   })}
                 </p>
-                {immune.length > 0 && (
-                  <p className="text-sm leading-6 text-text-secondary">
-                    {t('noEffectAgainst', { elements: immune.map(elLabel).join(', ') })}
-                  </p>
-                )}
               </article>
             );
           })}

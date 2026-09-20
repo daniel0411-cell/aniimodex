@@ -67,6 +67,12 @@ export default async function ElementPage({ params }: { params: Promise<{ locale
         <p className="mt-2 max-w-3xl text-text-secondary">{t('description', { element: name, count: members.length })}</p>
         <p className="mt-3 text-xs text-emerald-700">{t('sourceNote')}</p>
       </header>
+      {members.length === 0 && (
+        <section className="border-l-4 border-amber-500 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+          <h2 className="font-semibold">{t('missingTitle', { element: name })}</h2>
+          <p className="mt-1">{t('missingBody', { element: name })}</p>
+        </section>
+      )}
       <section>
         <div className="flex items-baseline justify-between border-b border-ink-border pb-2"><h2 className="text-xl font-bold text-text-primary">{t('dexTitle', { element: name })}</h2><span className="text-xs text-text-muted">{t('count', { count: members.length })}</span></div>
         <AniimoLinkList aniimos={members} />

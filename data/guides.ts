@@ -97,10 +97,14 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-mobile',
-    date: '2026-09-15',
-    readMinutes: 4,
+    date: '2026-09-18',
+    readMinutes: 5,
     relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-app-store-6759098797'],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-app-store-6759098797',
+      'aniimo-google-play',
+    ],
   },
   {
     slug: 'aniimo-ps5',
@@ -111,10 +115,17 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'is-aniimo-a-gacha-game',
-    date: '2026-09-15',
-    readMinutes: 4,
+    date: '2026-09-18',
+    readMinutes: 6,
     relatedSlugs: ['what-is-aniimo', 'is-aniimo-free-to-play', 'aniimo-catching-guide'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-steam-4126040',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-google-play',
+      'aniimo-official-probabilities-2026-09-16',
+    ],
   },
   {
     slug: 'aniimo-nintendo-switch',
@@ -147,8 +158,8 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-pre-registration',
-    date: '2026-09-16',
-    readMinutes: 4,
+    date: '2026-09-18',
+    readMinutes: 5,
     relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
@@ -226,6 +237,29 @@ export const guidePosts: GuidePost[] = [
     relatedToolHrefs: ['/dex', '/tools/twine'],
     relatedSlugs: ['official-aniimo-dex-status', 'aniimo-choose-by-mobility-role'],
     sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+  },
+  {
+    slug: 'aniimo-team-composition',
+    date: '2026-09-18',
+    readMinutes: 7,
+    relatedToolHrefs: ['/dex', '/abilities', '/tools/type-chart', '/tools/catch'],
+    relatedSlugs: [
+      'aniimo-choose-by-mobility-role',
+      'aniimo-roles-explained',
+      'aniimo-catching-guide',
+    ],
+    sourceIds: [
+      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-probabilities-2026-09-16',
+    ],
+  },
+  {
+    slug: 'aniimo-forms-explained',
+    date: '2026-09-18',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex'],
+    relatedSlugs: ['aniimo-elements-explained', 'aniimo-catching-guide', 'official-aniimo-dex-status'],
+    sourceIds: ['aniimo-official-wiki-index-2026-08-30', 'aniimo-official-probabilities-2026-09-16'],
   },
   ...([['aniimo-elements-explained', 'elements'], ['aniimo-roles-explained', 'roles'], ['aniimo-evolution-system', 'evolution'], ['aniimo-mobility-abilities', 'mobility'], ['aniimo-habitats-locations', 'habitats']] as const).map(([slug, dataTopic]) => ({
     slug, dataTopic,

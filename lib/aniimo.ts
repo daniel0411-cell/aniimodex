@@ -3,7 +3,8 @@
 // ============================================================================
 
 import aniimos from '@/data/aniimos';
-import type { AniimoEntry, Element, TwineAbility } from '@/types/aniimo';
+import { ELEMENTS } from '@/lib/aniimo-ui';
+import type { AniimoEntry, Element } from '@/types/aniimo';
 
 /** 获取全部伊莫（按编号升序） */
 export function getAllAniimos(): AniimoEntry[] {
@@ -31,36 +32,19 @@ export function filterByElement(element: Element): AniimoEntry[] {
   return aniimos.filter((a) => a.officialElements?.includes(element));
 }
 
-/** 按 Twine 能力筛选（单选：精确匹配该能力） */
-export function filterByTwineAbility(ability: TwineAbility): AniimoEntry[] {
-  return aniimos.filter(
-    (a) => a.twineAbility === ability || a.forms.some((f) => f.twineAbility === ability)
-  );
-}
-
 /**
- * 收集一只伊莫具备的全部 Twine 能力（主能力 + 各形态能力去重）。
- * 用于反查器，返回该伊莫能力集合是否包含任一选中能力。
+ * 官方索引中暂时没有任何条目的元素。
+ *
+ * 例：Light 存在于 Aniimo 的元素体系中，但 2026-08-30 的官方 Wiki 快照里
+ * 92 条记录无一携带该元素。此时应如实标注「官方索引暂缺数据」，
+ * 而不是把该元素从类型定义或克制表里删掉。
  */
-function twineAbilitySet(a: AniimoEntry): Set<TwineAbility> {
-  const set = new Set<TwineAbility>([a.twineAbility]);
-  for (const form of a.forms) set.add(form.twineAbility);
-  return set;
-}
-
-/**
- * 按 Twine 能力列表筛选（并集：匹配任一选中能力的伊莫）。
- * 传入空数组时返回全部伊莫。
- */
-export function filterByTwineAbilities(abilities: TwineAbility[]): AniimoEntry[] {
-  const list = abilities.filter((ab) => ab !== '无');
-  if (list.length === 0) return aniimos;
-  const wanted = new Set(list);
-  return aniimos.filter((a) => {
-    const owned = twineAbilitySet(a);
-    for (const w of wanted) if (owned.has(w)) return true;
-    return false;
-  });
+export function getElementsWithoutPublishedEntries(): Element[] {
+  const published = new Set<string>();
+  for (const aniimo of aniimos) {
+    for (const element of aniimo.officialElements ?? []) published.add(element);
+  }
+  return ELEMENTS.filter((element) => !published.has(element));
 }
 
 /** 模糊搜索：按编号 / 中文名 / 英文名 子串匹配 */

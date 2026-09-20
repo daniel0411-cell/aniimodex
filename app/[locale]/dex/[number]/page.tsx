@@ -10,6 +10,7 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
 import { getOfficialAniimoDetail, isSuspiciousOfficialDescription, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
+import { formKind, type FormKind } from '@/data/forms';
 import { flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 
@@ -18,6 +19,13 @@ interface PageProps {
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+
+// 官方形态分类配色：基础 / 虹彩（Prismana）/ 区域
+const FORM_KIND_CLASSES: Record<FormKind, string> = {
+  basic: 'border-ink-border bg-ink-soft text-text-secondary',
+  prismana: 'border-violet-300 bg-violet-50 text-violet-700',
+  region: 'border-emerald-300 bg-emerald-50 text-emerald-700',
+};
 
 function EvolutionTree({ node }: { node: OfficialEvolutionNode }) {
   return (
@@ -254,13 +262,6 @@ export default async function DexDetailPage({ params }: PageProps) {
               &ldquo;{aniimo.flavorText}&rdquo;
             </p>
           )}
-          {/* 闪亮形态标记 */}
-          {aniimo.shiny && (
-            <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
-              <span aria-hidden>✦</span>
-              {t('shinyAvailable')}
-            </span>
-          )}
           <div className="mt-5 border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-xs leading-5 text-emerald-950">{t('officialScope')}</div>
           <div className="mt-4 border-t border-ink-border pt-3 text-xs text-text-muted">
             <span className="font-semibold text-text-secondary">{t('dataStatus')}</span> · {t('lastVerified', { date: '2026-08-30' })}
@@ -283,7 +284,7 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a><a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
+      {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a><a href="#forms">{t('officialForms')}</a><a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
 
       <section className="border-t border-ink-border pt-5">
         <h2 className="text-lg font-bold text-text-primary">{t('continueExploring')}</h2>
@@ -317,12 +318,29 @@ export default async function DexDetailPage({ params }: PageProps) {
               </section>
             )}
 
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialForms')}</h2>
-              <ul className="space-y-1 text-sm text-text-secondary">
-                {detail.morphologyList.map((form) => <li key={form.wikiId}>{form.name}</li>)}
-              </ul>
-            </section>
+            {detail.morphologyList.length > 0 && (
+              <section id="forms" className="scroll-mt-24">
+                <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialForms')}</h2>
+                {/* 形态名为官方索引原文（专有名词），只翻译分类标签 */}
+                <ul className="divide-y divide-ink-border border-y border-ink-border">
+                  {detail.morphologyList.map((form) => {
+                    const kind = formKind(form.name);
+                    return (
+                      <li key={form.wikiId} className="flex flex-wrap items-center justify-between gap-2 py-2 text-sm">
+                        <span className="font-semibold text-text-primary">{form.name}</span>
+                        <span className={cn('rounded-full border px-2.5 py-0.5 text-xs font-medium', FORM_KIND_CLASSES[kind])}>
+                          {t(`formsCategory.${kind}`)}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="mt-2 text-xs leading-5 text-text-muted">{t('formsNote')}</p>
+                <Link href="/guide/aniimo-forms-explained" className="mt-2 inline-flex text-sm font-semibold text-primary-light">
+                  {t('formsReadMore')} →
+                </Link>
+              </section>
+            )}
           </div>
 
           <div className="space-y-8">
