@@ -48,10 +48,16 @@ export async function generateMetadata({
 const featuredNumbers = ['001', '002', '005', '007', '011'];
 const guideSlugs = [
   'aniimo-launch-checklist-known-issues',
+  'getting-started',
   'is-aniimo-a-gacha-game',
   'aniimo-crossplay-cross-save',
-  'aniimo-team-composition',
 ] as const;
+const guideImages: Record<(typeof guideSlugs)[number], string> = {
+  'aniimo-launch-checklist-known-issues': '/images/guides/getting-started.jpg',
+  'getting-started': '/images/guides/getting-started.jpg',
+  'is-aniimo-a-gacha-game': '/images/guides/dex-and-shiny.jpg',
+  'aniimo-crossplay-cross-save': '/images/guides/game-info.jpg',
+};
 const launchFeatureSlugs = [
   'aniimo-launch-checklist-known-issues',
   'how-to-download-aniimo',
@@ -480,18 +486,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
           </Link>
           <div className="border-t border-ink-border">
-            {guideSlugs.map((slug, index) => (
+            {guideSlugs.map((slug) => (
               <Link key={slug} href={`/guide/${slug}`} className="grid grid-cols-[4.5rem_1fr] items-center gap-3 border-b border-ink-border py-3">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                   <Image
-                    src={
-                      [
-                        '/images/guides/getting-started.jpg',
-                        '/images/guides/dex-and-shiny.jpg',
-                        '/images/guides/element-types.jpg',
-                        '/images/guides/game-info.jpg',
-                      ][index]
-                    }
+                    src={guideImages[slug]}
                     alt=""
                     fill
                     sizes="72px"

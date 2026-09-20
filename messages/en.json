@@ -527,6 +527,31 @@
       }
     },
     "posts": {
+      "getting-started": {
+        "title": "Aniimo Beginner Guide: 8 Decisions to Make Before You Spend Resources",
+        "subtitle": "A source-checked starting checklist for downloads, team roles, catching, evolution and multiplayer.",
+        "tag": "Beginner guide",
+        "lead": "Start with decisions that can be checked against official data: use an official download, separate exploration abilities from combat roles, improve known catch factors and verify an evolution before committing resources. This guide does not invent a best starter, leveling route or spending priority.",
+        "body": [
+          { "t": "h", "c": "1. Check your platform, region and account first" },
+          { "t": "p", "c": "Use the official Aniimo website or the verified Steam, PlayStation, Xbox and Epic listings. Store availability, mobile timing and account features can vary by platform and region, so confirm the live button before downloading or paying." },
+          { "t": "h", "c": "2. Confirm PC requirements before installing" },
+          { "t": "p", "c": "The Epic Games Store publishes official minimum and recommended Windows specifications, including CPU, memory, GPU, DirectX and storage. Compare those requirements with your device instead of relying on an unverified compatibility list." },
+          { "t": "h", "c": "3. Do not choose a starter from an unsupported tier list" },
+          { "t": "p", "c": "The official Wiki publishes element, role, stage and mobility fields, but those labels do not prove which Aniimo is strongest. Choose by the activity you need: damage, break, support, sustain, healing or an exploration ability." },
+          { "t": "h", "c": "4. Treat combat role and exploration ability separately" },
+          { "t": "p", "c": "A role describes a combat function, while mobility and Twine fields help with traversal or interaction. Check both fields in the Dex before building a team around one label." },
+          { "t": "h", "c": "5. Improve only the catch factors that are confirmed" },
+          { "t": "p", "c": "The official formula confirms that cube type, level difference, target HP, a valid backstrike and special status can change catch probability. AniimoDex does not assign a precise species percentage when the required template base rate is unpublished." },
+          { "t": "h", "c": "6. Verify the evolution family before spending" },
+          { "t": "p", "c": "AniimoDex can show evolution-family relationships from the official index. Exact level, quest, item and resource requirements are not assumed unless an official source or reproducible test confirms them." },
+          { "t": "h", "c": "7. Separate multiplayer from cross-save" },
+          { "t": "p", "c": "Steam confirms multiplayer, online co-op and cross-platform multiplayer, but that does not by itself confirm every platform pairing or cross-save behavior. Check the crossplay guide before planning progress across devices." },
+          { "t": "h", "c": "8. Be precise about rare forms" },
+          { "t": "p", "c": "The official probability disclosure publishes Sparkling-related rates and the official data identifies form information where available. Community claims about Umbral eggs, guaranteed outcomes or evolution behavior remain unconfirmed until independently verified." },
+          { "t": "quote", "c": "Still under verification: an optimal leveling path, home-base priority, Nurture guarantees, Egg Heist efficiency routes and a universal best team. Use community discussion to discover questions, not as proof of an answer." }
+        ]
+      },
       "aniimo-release-date": {
         "title": "Aniimo Release Date: Global Launch and Current Platform Status",
         "subtitle": "Aniimo launched September 16, 2026; Steam and Xbox availability is now verified.",
@@ -1241,11 +1266,24 @@
         ]
       },
       "aniimo-forms-explained": {
-        "title": "Aniimo Forms Explained: Prismana, Region Forms and Sparkling Styles",
-        "subtitle": "The official Wiki indexes 19 form names, and the official probability disclosure publishes the sparkling style table.",
+        "title": "Aniimo Prismana, Umbral and Sparkling Forms Explained",
+        "subtitle": "What official sources confirm about Prismana and Sparkling styles, and what remains unverified about Umbral eggs.",
         "tag": "Forms",
-        "lead": "AniimoDex reads form data from two separate official documents: the Wiki detail snapshot, which lists a morphology entry for each Aniimo, and the probability disclosure, which publishes the sparkling style table. This page shows exactly what each one covers.",
+        "lead": "Prismana, Sparkling and Umbral are active player searches, but they are not interchangeable labels. The official Wiki indexes Prismana as a morphology entry, the probability disclosure publishes Sparkling styles, and the registered official data does not yet define Umbral eggs or their evolution rules.",
         "body": [
+          {
+            "t": "h",
+            "c": "Prismana vs Sparkling vs Umbral: what is confirmed?"
+          },
+          {
+            "t": "table",
+            "head": ["Term", "Confirmed source status", "What AniimoDex can safely say"],
+            "rows": [
+              ["Prismana", "Official Wiki morphology field", "21 of 92 indexed Aniimo list a Prismana Form; its gameplay effects are not defined in the registered official source"],
+              ["Sparkling", "Official probability disclosure", "Normal, Dazzling and Shadow style probabilities are published for specific obtaining methods"],
+              ["Umbral", "Not defined in the registered official fields", "Egg source, hatch result and evolution behavior remain unverified"]
+            ]
+          },
           {
             "t": "h",
             "c": "What form data is officially published?"
@@ -1286,6 +1324,18 @@
           {
             "t": "p",
             "c": "Prismana Form is the official name used in the morphology list, and 21 of the 92 indexed Aniimo publish one. Community coverage describes Prismana as changing an Aniimo's element rather than its stats, but the official Wiki sources used here do not say what a Prismana Form changes, so AniimoDex keeps that statement at community level."
+          },
+          {
+            "t": "h",
+            "c": "What is an Umbral Aniimo or Umbral Egg?"
+          },
+          {
+            "t": "p",
+            "c": "Umbral is a current community search term, but it does not appear as a morphology category or Sparkling style in the official datasets registered for this page. AniimoDex therefore cannot yet confirm where an Umbral Egg comes from, whether its hatch is random, what a Sparkling Cube changes, or whether Umbral status survives evolution."
+          },
+          {
+            "t": "quote",
+            "c": "Conflicting community replies are useful for identifying questions, not for confirming a mechanic. Umbral instructions will be added only after an official rule or a documented, reproducible test is available."
           },
           {
             "t": "h",
@@ -1340,7 +1390,7 @@
           },
           {
             "t": "quote",
-            "c": "Publishing the official form list and labelling what is not published is more useful than inventing differences between forms."
+            "c": "Use Prismana for an official morphology entry, Sparkling for the separately published style system, and Umbral only as an unverified community term until stronger evidence is available."
           }
         ]
       },

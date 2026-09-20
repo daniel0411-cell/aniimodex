@@ -75,6 +75,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     {
       key: 'gameplay',
       slugs: [
+        'getting-started',
         'is-aniimo-a-gacha-game',
         'aniimo-crossplay-cross-save',
         'aniimo-team-composition',
@@ -88,6 +89,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     {
       key: 'dexData',
       slugs: [
+        'aniimo-forms-explained',
         'aniimo-elements-explained',
         'aniimo-roles-explained',
         'aniimo-evolution-system',
