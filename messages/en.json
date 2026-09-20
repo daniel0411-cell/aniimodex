@@ -79,14 +79,14 @@
         "status": "Pending"
       }
     },
-    "guideSectionTitle": "Play Aniimo now",
-    "launchTasksTitle": "Aniimo launch and download status",
-    "launchTasksDescription": "Official release status, safe downloads and supported platforms.",
+    "guideSectionTitle": "Solve the next Aniimo problem",
+    "launchTasksTitle": "Play Aniimo now: status and support",
+    "launchTasksDescription": "Check current availability, official downloads, known-issue verification and platform support.",
     "launchTasks": {
       "release": "Release date and time",
       "download": "Official download links",
-      "preload": "Release and download status",
-      "platforms": "Platforms and availability"
+      "platforms": "Platforms and availability",
+      "issues": "Known issues and troubleshooting"
     },
     "readGuide": "Read the guide",
     "latestUpdateLabel": "Latest update",
@@ -323,22 +323,13 @@
     "subtitle": "Official-data lookup tools for Aniimo abilities, elements and current catch information.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
-    "twineTags": [
-      "Lookup",
-      "Movement"
-    ],
+    "twineTags": ["Lookup", "Movement"],
     "typeChartTitle": "Type Matchup Matrix",
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
-    "typeChartTags": [
-      "Matrix",
-      "Matchup"
-    ],
+    "typeChartTags": ["Matrix", "Matchup"],
     "catchTitle": "Catch Rate Calculator",
     "catchDesc": "Estimate a catch chance from the official probability formula, with every coefficient shown.",
-    "catchTags": [
-      "Official formula",
-      "Calculator"
-    ]
+    "catchTags": ["Official formula", "Calculator"]
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
@@ -510,12 +501,12 @@
     "officialSources": "Official sources",
     "howWeVerify": "How we verify data",
     "launchHub": {
-      "title": "Aniimo launch essentials",
-      "description": "Release time, official downloads, preload status and supported platforms in one verified path.",
+      "title": "Aniimo player essentials",
+      "description": "Current availability, official downloads, known issues and supported platforms in one verified path.",
       "release": "Release date and time",
       "download": "Official download links",
-      "preload": "Preload and unlock status",
-      "platforms": "Platforms and availability"
+      "platforms": "Platforms and availability",
+      "issues": "Known issues and fixes"
     },
     "groups": {
       "playDownload": {
@@ -592,35 +583,14 @@
           },
           {
             "t": "table",
-            "head": [
-              "Platform",
-              "Official status"
-            ],
+            "head": ["Platform", "Official status"],
             "rows": [
-              [
-                "PlayStation 5",
-                "September 16, 2026 at 10:00 UTC+8"
-              ],
-              [
-                "Xbox Series X|S",
-                "Free base game and purchase action available"
-              ],
-              [
-                "Windows PC",
-                "Released on Steam; official PC launcher also available"
-              ],
-              [
-                "iOS",
-                "App Store lists September 23, 2026"
-              ],
-              [
-                "Android",
-                "Official Google Play route; date not confirmed"
-              ],
-              [
-                "Epic Games Store",
-                "Linked by the official Aniimo website"
-              ]
+              ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
+              ["Xbox Series X|S", "Free base game and purchase action available"],
+              ["Windows PC", "Released on Steam; official PC launcher also available"],
+              ["iOS", "App Store lists September 23, 2026"],
+              ["Android", "Official Google Play route; date not confirmed"],
+              ["Epic Games Store", "Linked by the official Aniimo website"]
             ]
           },
           {
@@ -769,31 +739,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "Platform",
-              "Official route"
-            ],
+            "head": ["Platform", "Official route"],
             "rows": [
-              [
-                "Windows PC",
-                "Official website PC download, Steam or Epic Games Store"
-              ],
-              [
-                "PlayStation 5",
-                "PlayStation Store"
-              ],
-              [
-                "Xbox Series X|S",
-                "Xbox Store"
-              ],
-              [
-                "iPhone and iPad",
-                "Apple App Store link on the official website"
-              ],
-              [
-                "Android",
-                "Google Play link on the official website"
-              ]
+              ["Windows PC", "Official website PC download, Steam or Epic Games Store"],
+              ["PlayStation 5", "PlayStation Store"],
+              ["Xbox Series X|S", "Xbox Store"],
+              ["iPhone and iPad", "Apple App Store link on the official website"],
+              ["Android", "Google Play link on the official website"]
             ]
           },
           {
@@ -810,35 +762,17 @@
           },
           {
             "t": "table",
-            "head": [
-              "Platform",
-              "Status checked September 16"
-            ],
+            "head": ["Platform", "Status checked September 16"],
             "rows": [
-              [
-                "Official PC launcher",
-                "Download Now available on Aniimo's website"
-              ],
-              [
-                "Steam",
-                "Released and free to play"
-              ],
-              [
-                "Xbox",
-                "Free base game and purchase action available"
-              ],
+              ["Official PC launcher", "Download Now available on Aniimo's website"],
+              ["Steam", "Released and free to play"],
+              ["Xbox", "Free base game and purchase action available"],
               [
                 "PS5",
                 "Published release time has passed; verify the current regional store button"
               ],
-              [
-                "iOS",
-                "App Store lists September 23"
-              ],
-              [
-                "Android",
-                "Official route available; release date not confirmed"
-              ]
+              ["iOS", "App Store lists September 23"],
+              ["Android", "Official route available; release date not confirmed"]
             ]
           },
           {
@@ -867,27 +801,15 @@
           },
           {
             "t": "table",
-            "head": [
-              "Platform",
-              "Current status"
-            ],
+            "head": ["Platform", "Current status"],
             "rows": [
-              [
-                "iPhone and iPad",
-                "App Store lists September 23, 2026"
-              ],
+              ["iPhone and iPad", "App Store lists September 23, 2026"],
               [
                 "Android",
                 "Official Google Play listing is live; shows wishlist rather than install; no date published"
               ],
-              [
-                "Progress sharing",
-                "Reported by community coverage; no official statement found"
-              ],
-              [
-                "Device requirements",
-                "No complete official list published"
-              ]
+              ["Progress sharing", "Reported by community coverage; no official statement found"],
+              ["Device requirements", "No complete official list published"]
             ]
           },
           {
@@ -973,74 +895,107 @@
         ]
       },
       "is-aniimo-a-gacha-game": {
-        "title": "Is Aniimo a Gacha Game? Free-to-Play and Zero-Spend Guide",
-        "subtitle": "Aniimo is free to play with in-game purchases, but its official listings do not define it as a gacha game.",
+        "title": "Is Aniimo Pay to Win or Gacha? Monetization Explained",
+        "subtitle": "What official sources confirm about free play, in-game purchases, random acquisition and paid progression.",
         "tag": "Monetization",
-        "lead": "Official listings confirm a free base game with in-game purchases and do not describe a gacha system. This page answers the gacha question and then focuses on what a player who does not want to pay can actually do, using only officially published data.",
+        "lead": "Aniimo is free to play and contains in-game purchases. The official sources registered by AniimoDex do not provide enough complete pricing, probability, progression-speed or competitive-impact data to prove that the game is pay to win, so this page separates confirmed facts from open questions.",
         "body": [
+          {
+            "t": "h",
+            "c": "Is Aniimo pay to win?"
+          },
+          {
+            "t": "p",
+            "c": "Not enough verified evidence is available for a defensible yes or no. Official storefronts confirm a free base game and in-game purchases, but they do not quantify how spending changes progression speed, combat power, competitive access or the time needed to obtain an Aniimo."
+          },
           {
             "t": "h",
             "c": "Is Aniimo officially described as a gacha game?"
           },
           {
             "t": "p",
-            "c": "No. Aniimo's official website and the major store listings describe it as a free-to-play creature-catching open-world RPG and do not use the gacha label."
+            "c": "No. The official website and storefront listings describe a free-to-play creature-catching open-world RPG and disclose in-game purchases, but they do not use the gacha label. That wording alone does not prove that every random or paid acquisition mechanic is absent."
           },
           {
             "t": "h",
-            "c": "Does Aniimo have in-game purchases?"
-          },
-          {
-            "t": "p",
-            "c": "Yes. Steam, PlayStation, Xbox and Google Play all disclose in-game purchases. That confirms paid content exists, and AniimoDex does not rank or value any of it."
-          },
-          {
-            "t": "h",
-            "c": "What is free in Aniimo?"
+            "c": "What can be obtained or improved without paying?"
           },
           {
             "t": "li",
-            "c": "The base game is free to download and play on PC, PS5, Xbox, iOS and Android."
+            "c": "The base game is listed as free to play on verified PC and console storefronts."
           },
           {
             "t": "li",
-            "c": "Store descriptions present catching, open-world exploration, Twine and multiplayer as core gameplay rather than separately purchased modes."
+            "c": "Catching, open-world exploration, Twine and multiplayer are presented as core gameplay rather than separately purchased modes."
           },
           {
             "t": "li",
-            "c": "The official site lists launch freebies, including free catching items (a Sparkling Cube, an Ultimate Cube and a big white ball), limited Aniimo eggs, an exclusive accessory, a selectable rare Prismana Aniimo and four free outfits."
+            "c": "The official catch disclosure publishes free gameplay coefficients for HP, level difference, backstrike and status effects."
+          },
+          {
+            "t": "li",
+            "c": "The official site has listed launch rewards and free catching items, but current account eligibility and claim windows must be checked separately."
           },
           {
             "t": "h",
-            "c": "How can a zero-spend player improve catch rates?"
+            "c": "What paid systems are officially confirmed?"
           },
           {
             "t": "p",
-            "c": "Under the official catch formula, free techniques carry some of the largest multipliers in the game. A server-confirmed backstrike adds x1.5, lowering a target to 0% HP adds x2 in battle, and status effects reach x2 for ordinary sleep or stun and up to x100 for deep sleep or nectar effects."
-          },
-          {
-            "t": "p",
-            "c": "By comparison the cube steps are smaller: an Advanced Cube is x1.5 and the higher cubes are x2. Free positioning, status and HP control can therefore match or beat a cube upgrade without spending."
+            "c": "Steam, PlayStation, Xbox and Google Play disclose in-game purchases. The registered sources do not provide a complete current catalog of prices, passes, currencies, paid Aniimo acquisition, duplicate conversion or progression boosts, so AniimoDex does not label any specific purchase essential or good value."
           },
           {
             "t": "h",
-            "c": "What should a zero-spend player watch out for?"
+            "c": "Are catch rates or rare forms sold?"
           },
           {
             "t": "p",
-            "c": "The level difference is the harshest published penalty: 11 levels above your character drops the catch coefficient to x0.8, and 15 or more drops it to x0.1. Levelling up is free and is worth more than most paid items."
+            "c": "The official probability disclosure publishes catch coefficients and sparkling-style probabilities, including several cube types. It does not by itself establish which items are paid-only, how much they cost, or whether a player must buy them. Probability data and store monetization must not be treated as the same claim."
           },
           {
             "t": "h",
-            "c": "Does AniimoDex give spending advice?"
+            "c": "What would change the pay-to-win assessment?"
           },
           {
-            "t": "p",
-            "c": "No. The registered sources do not publish prices, pass contents, energy limits or currency exchange rates in a form this site can verify, so AniimoDex does not recommend or rank any purchase."
+            "t": "table",
+            "head": ["Question", "Current evidence status"],
+            "rows": [
+              ["Can money directly buy stronger stats?", "Not established by registered sources"],
+              ["Can paid items skip meaningful progression?", "Not quantified"],
+              [
+                "Are Aniimo obtained through paid random draws?",
+                "Not confirmed by official listings used here"
+              ],
+              ["Are paid advantages relevant to PvP?", "Not quantified"],
+              [
+                "Are prices and duplicate rules published?",
+                "Not fully documented in registered sources"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "How should a player decide whether to spend?"
+          },
+          {
+            "t": "li",
+            "c": "Play the free progression loop first and identify the exact limit you are trying to remove."
+          },
+          {
+            "t": "li",
+            "c": "Check the live in-game price, contents, probability disclosure and expiry before paying."
+          },
+          {
+            "t": "li",
+            "c": "Do not infer value from a launch reward, community tier list or another region's price."
+          },
+          {
+            "t": "li",
+            "c": "Keep platform receipts and avoid repeated purchases while account or server progress is unclear."
           },
           {
             "t": "quote",
-            "c": "The freebies above are what the official site published for launch. Whether each one is still obtainable today is not stated on that page."
+            "c": "AniimoDex will update this assessment only when official rules or reproducible live-version tests can separate convenience, random acquisition and direct power."
           }
         ]
       },
@@ -1184,31 +1139,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "Role",
-              "Indexed Aniimo"
-            ],
+            "head": ["Role", "Indexed Aniimo"],
             "rows": [
-              [
-                "DPS",
-                "31"
-              ],
-              [
-                "Break",
-                "26"
-              ],
-              [
-                "Support",
-                "18"
-              ],
-              [
-                "Regen",
-                "10"
-              ],
-              [
-                "Heal",
-                "7"
-              ]
+              ["DPS", "31"],
+              ["Break", "26"],
+              ["Support", "18"],
+              ["Regen", "10"],
+              ["Heal", "7"]
             ]
           },
           {
@@ -1249,43 +1186,16 @@
           },
           {
             "t": "table",
-            "head": [
-              "Element",
-              "Indexed Aniimo"
-            ],
+            "head": ["Element", "Indexed Aniimo"],
             "rows": [
-              [
-                "Water",
-                "19"
-              ],
-              [
-                "Grass",
-                "16"
-              ],
-              [
-                "Earth",
-                "16"
-              ],
-              [
-                "Wind",
-                "14"
-              ],
-              [
-                "Dark",
-                "12"
-              ],
-              [
-                "Lightning",
-                "10"
-              ],
-              [
-                "Fire",
-                "9"
-              ],
-              [
-                "Ice",
-                "9"
-              ]
+              ["Water", "19"],
+              ["Grass", "16"],
+              ["Earth", "16"],
+              ["Wind", "14"],
+              ["Dark", "12"],
+              ["Lightning", "10"],
+              ["Fire", "9"],
+              ["Ice", "9"]
             ]
           },
           {
@@ -1346,87 +1256,27 @@
           },
           {
             "t": "table",
-            "head": [
-              "Form",
-              "Indexed Aniimo"
-            ],
+            "head": ["Form", "Indexed Aniimo"],
             "rows": [
-              [
-                "Basic Form",
-                "92"
-              ],
-              [
-                "Prismana Form",
-                "21"
-              ],
-              [
-                "Highland Form",
-                "15"
-              ],
-              [
-                "Mountain Woods Form",
-                "12"
-              ],
-              [
-                "Umbrabow Form",
-                "12"
-              ],
-              [
-                "Snowfield Form",
-                "11"
-              ],
-              [
-                "Sea of Flowers Form",
-                "9"
-              ],
-              [
-                "Nighttime Form",
-                "9"
-              ],
-              [
-                "Rainstorm Form",
-                "7"
-              ],
-              [
-                "Beach Form",
-                "6"
-              ],
-              [
-                "Forest Form",
-                "6"
-              ],
-              [
-                "Mountain Form",
-                "6"
-              ],
-              [
-                "Plateau Form",
-                "4"
-              ],
-              [
-                "Thunderstorm Form",
-                "2"
-              ],
-              [
-                "Grassland Form",
-                "2"
-              ],
-              [
-                "Cloudmist Form",
-                "2"
-              ],
-              [
-                "Mudflat Form",
-                "2"
-              ],
-              [
-                "Bay Form",
-                "2"
-              ],
-              [
-                "Towerwood Form",
-                "2"
-              ]
+              ["Basic Form", "92"],
+              ["Prismana Form", "21"],
+              ["Highland Form", "15"],
+              ["Mountain Woods Form", "12"],
+              ["Umbrabow Form", "12"],
+              ["Snowfield Form", "11"],
+              ["Sea of Flowers Form", "9"],
+              ["Nighttime Form", "9"],
+              ["Rainstorm Form", "7"],
+              ["Beach Form", "6"],
+              ["Forest Form", "6"],
+              ["Mountain Form", "6"],
+              ["Plateau Form", "4"],
+              ["Thunderstorm Form", "2"],
+              ["Grassland Form", "2"],
+              ["Cloudmist Form", "2"],
+              ["Mudflat Form", "2"],
+              ["Bay Form", "2"],
+              ["Towerwood Form", "2"]
             ]
           },
           {
@@ -1459,43 +1309,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "How it is obtained",
-              "Normal",
-              "Dazzling",
-              "Shadow"
-            ],
+            "head": ["How it is obtained", "Normal", "Dazzling", "Shadow"],
             "rows": [
-              [
-                "Sparkling Cube on a wild Aniimo",
-                "99%",
-                "1%",
-                "0%"
-              ],
-              [
-                "Sparkling Cube on an egg that is not from Egg Heist",
-                "99%",
-                "1%",
-                "0%"
-              ],
-              [
-                "Sparkling Cube on an Egg Heist egg",
-                "99%",
-                "0%",
-                "1%"
-              ],
-              [
-                "Sparkling Sigil on an existing Aniimo",
-                "99%",
-                "0.5%",
-                "0.5%"
-              ],
-              [
-                "Sparkling Color to change the style",
-                "99%",
-                "0.5%",
-                "0.5%"
-              ]
+              ["Sparkling Cube on a wild Aniimo", "99%", "1%", "0%"],
+              ["Sparkling Cube on an egg that is not from Egg Heist", "99%", "1%", "0%"],
+              ["Sparkling Cube on an Egg Heist egg", "99%", "0%", "1%"],
+              ["Sparkling Sigil on an existing Aniimo", "99%", "0.5%", "0.5%"],
+              ["Sparkling Color to change the style", "99%", "0.5%", "0.5%"]
             ]
           },
           {
@@ -1576,27 +1396,12 @@
           },
           {
             "t": "table",
-            "head": [
-              "Milestone",
-              "Reward"
-            ],
+            "head": ["Milestone", "Reward"],
             "rows": [
-              [
-                "10,000,000",
-                "輝石 x200 (premium currency)"
-              ],
-              [
-                "15,000,000",
-                "Ultimate Cube x2"
-              ],
-              [
-                "20,000,000",
-                "「同遊之約」limited avatar frame"
-              ],
-              [
-                "30,000,000",
-                "「逐光晴野」limited outfit"
-              ]
+              ["10,000,000", "輝石 x200 (premium currency)"],
+              ["15,000,000", "Ultimate Cube x2"],
+              ["20,000,000", "「同遊之約」limited avatar frame"],
+              ["30,000,000", "「逐光晴野」limited outfit"]
             ]
           },
           {
@@ -1657,35 +1462,14 @@
           },
           {
             "t": "table",
-            "head": [
-              "Part",
-              "Minimum"
-            ],
+            "head": ["Part", "Minimum"],
             "rows": [
-              [
-                "OS",
-                "Windows 10"
-              ],
-              [
-                "CPU",
-                "Intel Core i5 9th Gen or AMD Ryzen 7 2700"
-              ],
-              [
-                "Memory",
-                "8 GB RAM"
-              ],
-              [
-                "GPU",
-                "GTX 1060, RX 580 or Intel Arc A580"
-              ],
-              [
-                "DirectX",
-                "DirectX 11"
-              ],
-              [
-                "Storage",
-                "30 GB"
-              ]
+              ["OS", "Windows 10"],
+              ["CPU", "Intel Core i5 9th Gen or AMD Ryzen 7 2700"],
+              ["Memory", "8 GB RAM"],
+              ["GPU", "GTX 1060, RX 580 or Intel Arc A580"],
+              ["DirectX", "DirectX 11"],
+              ["Storage", "30 GB"]
             ]
           },
           {
@@ -1694,35 +1478,14 @@
           },
           {
             "t": "table",
-            "head": [
-              "Part",
-              "Recommended"
-            ],
+            "head": ["Part", "Recommended"],
             "rows": [
-              [
-                "OS",
-                "Windows 11"
-              ],
-              [
-                "CPU",
-                "Intel Core i7 9th Gen or AMD Ryzen 7 3700"
-              ],
-              [
-                "Memory",
-                "16 GB RAM"
-              ],
-              [
-                "GPU",
-                "RTX 3060 or RX 6600 and above"
-              ],
-              [
-                "DirectX",
-                "DirectX 12"
-              ],
-              [
-                "Storage",
-                "30 GB SSD"
-              ]
+              ["OS", "Windows 11"],
+              ["CPU", "Intel Core i7 9th Gen or AMD Ryzen 7 3700"],
+              ["Memory", "16 GB RAM"],
+              ["GPU", "RTX 3060 or RX 6600 and above"],
+              ["DirectX", "DirectX 12"],
+              ["Storage", "30 GB SSD"]
             ]
           },
           {
@@ -1747,31 +1510,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "Field",
-              "Status"
-            ],
+            "head": ["Field", "Status"],
             "rows": [
-              [
-                "Dex number, name and artwork",
-                "Verified from official Wiki index"
-              ],
-              [
-                "Description, element, role and stage",
-                "Verified from official Wiki data"
-              ],
-              [
-                "Evolution, habitats and forms",
-                "Verified from official Wiki detail pages"
-              ],
-              [
-                "Mobility, traits and skills",
-                "Verified from official Wiki detail pages"
-              ],
-              [
-                "Numeric stats and catch conditions",
-                "Not published as verified yet"
-              ]
+              ["Dex number, name and artwork", "Verified from official Wiki index"],
+              ["Description, element, role and stage", "Verified from official Wiki data"],
+              ["Evolution, habitats and forms", "Verified from official Wiki detail pages"],
+              ["Mobility, traits and skills", "Verified from official Wiki detail pages"],
+              ["Numeric stats and catch conditions", "Not published as verified yet"]
             ]
           },
           {
@@ -1808,31 +1553,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "Region",
-              "Local time"
-            ],
+            "head": ["Region", "Local time"],
             "rows": [
-              [
-                "China / Singapore (UTC+8)",
-                "September 16, 10:00 AM"
-              ],
-              [
-                "UTC",
-                "September 16, 2:00 AM"
-              ],
-              [
-                "US Eastern (EDT)",
-                "September 15, 10:00 PM"
-              ],
-              [
-                "US Pacific (PDT)",
-                "September 15, 7:00 PM"
-              ],
-              [
-                "Central Europe (CEST)",
-                "September 16, 4:00 AM"
-              ]
+              ["China / Singapore (UTC+8)", "September 16, 10:00 AM"],
+              ["UTC", "September 16, 2:00 AM"],
+              ["US Eastern (EDT)", "September 15, 10:00 PM"],
+              ["US Pacific (PDT)", "September 15, 7:00 PM"],
+              ["Central Europe (CEST)", "September 16, 4:00 AM"]
             ]
           },
           {
@@ -1869,27 +1596,15 @@
           },
           {
             "t": "table",
-            "head": [
-              "Combination",
-              "Current official status"
-            ],
+            "head": ["Combination", "Current official status"],
             "rows": [
               [
                 "PC with other platforms",
                 "Cross-platform multiplayer listed; exact pairings not documented"
               ],
-              [
-                "PS5 with Xbox",
-                "Not specifically confirmed"
-              ],
-              [
-                "PC / console with mobile",
-                "Not specifically confirmed"
-              ],
-              [
-                "Shared saves and progression",
-                "Not confirmed"
-              ]
+              ["PS5 with Xbox", "Not specifically confirmed"],
+              ["PC / console with mobile", "Not specifically confirmed"],
+              ["Shared saves and progression", "Not confirmed"]
             ]
           },
           {
@@ -1898,31 +1613,13 @@
           },
           {
             "t": "table",
-            "head": [
-              "Feature",
-              "Current official status"
-            ],
+            "head": ["Feature", "Current official status"],
             "rows": [
-              [
-                "Cross-platform multiplayer",
-                "Listed on Steam"
-              ],
-              [
-                "Specific platform pairings",
-                "Not fully documented"
-              ],
-              [
-                "Cross-save",
-                "Not confirmed"
-              ],
-              [
-                "Cross-progression",
-                "Not confirmed"
-              ],
-              [
-                "Purchases and paid currency transfer",
-                "Not confirmed"
-              ]
+              ["Cross-platform multiplayer", "Listed on Steam"],
+              ["Specific platform pairings", "Not fully documented"],
+              ["Cross-save", "Not confirmed"],
+              ["Cross-progression", "Not confirmed"],
+              ["Purchases and paid currency transfer", "Not confirmed"]
             ]
           },
           {
@@ -2065,27 +1762,15 @@
           },
           {
             "t": "table",
-            "head": [
-              "Area",
-              "Status"
-            ],
+            "head": ["Area", "Status"],
             "rows": [
-              [
-                "Release, platforms and download",
-                "Official-source guides live"
-              ],
+              ["Release, platforms and download", "Official-source guides live"],
               [
                 "92-entry Aniimo index",
                 "Number, name, artwork, description, element, role and stage live"
               ],
-              [
-                "Twine, catching and multiplayer overviews",
-                "Official mechanics only"
-              ],
-              [
-                "Launch time and compatibility",
-                "Confirmed facts plus clearly marked unknowns"
-              ]
+              ["Twine, catching and multiplayer overviews", "Official mechanics only"],
+              ["Launch time and compatibility", "Confirmed facts plus clearly marked unknowns"]
             ]
           },
           {

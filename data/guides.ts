@@ -93,7 +93,12 @@ export const guidePosts: GuidePost[] = [
     date: '2026-09-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-platforms', 'aniimo-pre-registration'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-steam-4126040',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+    ],
   },
   {
     slug: 'aniimo-mobile',
@@ -115,9 +120,13 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'is-aniimo-a-gacha-game',
-    date: '2026-09-18',
-    readMinutes: 6,
-    relatedSlugs: ['what-is-aniimo', 'is-aniimo-free-to-play', 'aniimo-catching-guide'],
+    date: '2026-09-20',
+    readMinutes: 7,
+    relatedSlugs: [
+      'aniimo-launch-checklist-known-issues',
+      'is-aniimo-free-to-play',
+      'aniimo-catching-guide',
+    ],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
@@ -189,14 +198,23 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-crossplay-cross-save',
     date: '2026-09-16',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-multiplayer', 'aniimo-platforms', 'how-to-download-aniimo', 'aniimo-system-requirements'],
+    relatedSlugs: [
+      'aniimo-multiplayer',
+      'aniimo-platforms',
+      'how-to-download-aniimo',
+      'aniimo-system-requirements',
+    ],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
   },
   {
     slug: 'aniimo-face-data-import',
     date: '2026-09-16',
     readMinutes: 4,
-    relatedSlugs: ['aniimo-launch-checklist-known-issues', 'aniimo-language-controller-support', 'what-is-aniimo'],
+    relatedSlugs: [
+      'aniimo-launch-checklist-known-issues',
+      'aniimo-language-controller-support',
+      'what-is-aniimo',
+    ],
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
@@ -216,11 +234,22 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-09-16',
-    readMinutes: 6,
+    date: '2026-09-20',
+    readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
-    relatedSlugs: ['how-to-download-aniimo', 'aniimo-system-requirements', 'aniimo-language-controller-support'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-epic-759396'],
+    relatedSlugs: [
+      'how-to-download-aniimo',
+      'is-aniimo-a-gacha-game',
+      'aniimo-crossplay-cross-save',
+      'aniimo-system-requirements',
+    ],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-steam-4126040',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-epic-759396',
+    ],
   },
   {
     slug: 'aniimo-choose-by-mobility-role',
@@ -258,14 +287,31 @@ export const guidePosts: GuidePost[] = [
     date: '2026-09-18',
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
-    relatedSlugs: ['aniimo-elements-explained', 'aniimo-catching-guide', 'official-aniimo-dex-status'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30', 'aniimo-official-probabilities-2026-09-16'],
+    relatedSlugs: [
+      'aniimo-elements-explained',
+      'aniimo-catching-guide',
+      'official-aniimo-dex-status',
+    ],
+    sourceIds: [
+      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-probabilities-2026-09-16',
+    ],
   },
-  ...([['aniimo-elements-explained', 'elements'], ['aniimo-roles-explained', 'roles'], ['aniimo-evolution-system', 'evolution'], ['aniimo-mobility-abilities', 'mobility'], ['aniimo-habitats-locations', 'habitats']] as const).map(([slug, dataTopic]) => ({
-    slug, dataTopic,
+  ...(
+    [
+      ['aniimo-elements-explained', 'elements'],
+      ['aniimo-roles-explained', 'roles'],
+      ['aniimo-evolution-system', 'evolution'],
+      ['aniimo-mobility-abilities', 'mobility'],
+      ['aniimo-habitats-locations', 'habitats'],
+    ] as const
+  ).map(([slug, dataTopic]) => ({
+    slug,
+    dataTopic,
     date: '2026-08-31',
     readMinutes: 5,
-    relatedToolHrefs: slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
+    relatedToolHrefs:
+      slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
     relatedSlugs: ['official-aniimo-dex-status'],
     sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
   })),

@@ -14,6 +14,17 @@ import { sourceById } from '@/data/sources';
 import { getLaunchGuide } from '@/data/launch-guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
+const SUPPORT_GUIDE_SLUGS = new Set([
+  'aniimo-release-date',
+  'aniimo-platforms',
+  'how-to-download-aniimo',
+  'aniimo-mobile',
+  'aniimo-ps5',
+  'aniimo-launch-time-preload',
+  'aniimo-crossplay-cross-save',
+  'aniimo-system-requirements',
+  'is-aniimo-free-to-play',
+]);
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -315,6 +326,17 @@ export default async function GuidePostPage({
         </header>
 
         <div className="pt-2">{renderedBody}</div>
+
+        {SUPPORT_GUIDE_SLUGS.has(post.slug) && (
+          <nav className="mt-8 grid gap-3 border-y border-ink-border py-5 sm:grid-cols-2" aria-label={t('relatedArticles')}>
+            <Link href="/guide/aniimo-launch-checklist-known-issues" className="border-l-4 border-accent bg-rose-50 px-4 py-3 text-sm font-semibold text-text-primary">
+              {getLaunchGuide(locale, 'aniimo-launch-checklist-known-issues')!.title} <span className="text-primary-light">→</span>
+            </Link>
+            <Link href="/guide/is-aniimo-a-gacha-game" className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm font-semibold text-text-primary">
+              {tp('is-aniimo-a-gacha-game.title')} <span className="text-primary-light">→</span>
+            </Link>
+          </nav>
+        )}
 
         {sources.length > 0 && (
           <section className="mt-8 border-t border-ink-border pt-6">

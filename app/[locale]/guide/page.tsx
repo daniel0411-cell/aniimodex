@@ -59,10 +59,54 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const tc = await getTranslations('collections');
   const guidePosts = getPublishedGuidePosts();
   const groups = [
-    { key: 'playDownload', slugs: ['aniimo-release-date', 'aniimo-launch-time-preload', 'aniimo-platforms', 'aniimo-ps5', 'is-aniimo-free-to-play', 'how-to-download-aniimo', 'aniimo-mobile', 'aniimo-nintendo-switch'] },
-    { key: 'gameplay', slugs: ['what-is-aniimo', 'is-aniimo-a-gacha-game', 'aniimo-twine-explained', 'aniimo-catching-guide', 'aniimo-multiplayer', 'aniimo-crossplay-cross-save', 'aniimo-face-data-import'] },
-    { key: 'dexData', slugs: ['aniimo-elements-explained', 'aniimo-roles-explained', 'aniimo-evolution-system', 'aniimo-mobility-abilities', 'aniimo-habitats-locations'] },
-    { key: 'updates', slugs: ['aniimo-launch-checklist-known-issues', 'aniimo-choose-by-mobility-role', 'aniimo-launch-watchlist', 'official-aniimo-dex-status', 'aniimo-launch-coverage-status', 'aniimo-language-controller-support', 'aniimo-pre-registration', 'aniimo-system-requirements'] },
+    {
+      key: 'playDownload',
+      slugs: [
+        'aniimo-launch-checklist-known-issues',
+        'how-to-download-aniimo',
+        'aniimo-platforms',
+        'aniimo-mobile',
+        'aniimo-ps5',
+        'aniimo-release-date',
+        'aniimo-launch-time-preload',
+        'aniimo-nintendo-switch',
+      ],
+    },
+    {
+      key: 'gameplay',
+      slugs: [
+        'is-aniimo-a-gacha-game',
+        'aniimo-crossplay-cross-save',
+        'aniimo-team-composition',
+        'aniimo-catching-guide',
+        'aniimo-twine-explained',
+        'aniimo-multiplayer',
+        'aniimo-face-data-import',
+        'what-is-aniimo',
+      ],
+    },
+    {
+      key: 'dexData',
+      slugs: [
+        'aniimo-elements-explained',
+        'aniimo-roles-explained',
+        'aniimo-evolution-system',
+        'aniimo-mobility-abilities',
+        'aniimo-habitats-locations',
+      ],
+    },
+    {
+      key: 'updates',
+      slugs: [
+        'aniimo-language-controller-support',
+        'aniimo-system-requirements',
+        'aniimo-pre-registration',
+        'aniimo-choose-by-mobility-role',
+        'aniimo-launch-watchlist',
+        'official-aniimo-dex-status',
+        'aniimo-launch-coverage-status',
+      ],
+    },
   ];
 
   // JSON-LD 结构化数据：BreadcrumbList（locale 感知）
@@ -113,30 +157,78 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <p className="text-sm text-text-secondary">{t('subtitle')}</p>
       </header>
 
-      <LaunchHub title={t('launchHub.title')} description={t('launchHub.description')} labels={{ release: t('launchHub.release'), download: t('launchHub.download'), preload: t('launchHub.preload'), platforms: t('launchHub.platforms') }} />
+      <LaunchHub
+        title={t('launchHub.title')}
+        description={t('launchHub.description')}
+        labels={{
+          release: t('launchHub.release'),
+          download: t('launchHub.download'),
+          issues: t('launchHub.issues'),
+          platforms: t('launchHub.platforms'),
+        }}
+      />
 
       {groups.map((group) => (
         <section key={group.key}>
           <div className="mb-4 border-b border-ink-border pb-3">
-            <h2 className="text-xl font-bold text-text-primary">{t(`groups.${group.key}.title`)}</h2>
+            <h2 className="text-xl font-bold text-text-primary">
+              {t(`groups.${group.key}.title`)}
+            </h2>
             <p className="mt-1 text-sm text-text-muted">{t(`groups.${group.key}.description`)}</p>
           </div>
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(0, 1).map((post) => (
-              <Link key={post.slug} href={`/guide/${post.slug}`} className="border-t-4 border-primary bg-white p-5 shadow-card">
-                <span className="text-xs font-semibold uppercase text-primary-light">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.tag : tp(`${post.slug}.tag`)}</span>
-                <h3 className="mt-2 text-xl font-bold text-text-primary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.title : tp(`${post.slug}.title`)}</h3>
-                <p className="mt-2 text-sm leading-6 text-text-secondary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.subtitle : tp(`${post.slug}.subtitle`)}</p>
-                <p className="mt-4 text-xs text-text-muted">{post.date} · {post.readMinutes} {t('minRead')} · {post.sourceIds?.length ?? 0} {t('sources')}</p>
-              </Link>
-            ))}
-            <div className="border-t border-ink-border">
-              {group.slugs.map((slug) => guidePosts.find((post) => post.slug === slug)).filter((post) => post !== undefined).slice(1).map((post) => (
-                <Link key={post.slug} href={`/guide/${post.slug}`} className="grid gap-1 border-b border-ink-border py-3 sm:grid-cols-[1fr_auto] sm:items-center">
-                  <span className="text-sm font-semibold text-text-primary">{getLaunchGuide(locale, post.slug) ? getLaunchGuide(locale, post.slug)!.title : tp(`${post.slug}.title`)}</span>
-                  <span className="text-xs text-text-muted">{post.date} · {post.sourceIds?.length ?? 0} {t('sources')}</span>
+            {group.slugs
+              .map((slug) => guidePosts.find((post) => post.slug === slug))
+              .filter((post) => post !== undefined)
+              .slice(0, 1)
+              .map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/guide/${post.slug}`}
+                  className="border-t-4 border-primary bg-white p-5 shadow-card"
+                >
+                  <span className="text-xs font-semibold uppercase text-primary-light">
+                    {getLaunchGuide(locale, post.slug)
+                      ? getLaunchGuide(locale, post.slug)!.tag
+                      : tp(`${post.slug}.tag`)}
+                  </span>
+                  <h3 className="mt-2 text-xl font-bold text-text-primary">
+                    {getLaunchGuide(locale, post.slug)
+                      ? getLaunchGuide(locale, post.slug)!.title
+                      : tp(`${post.slug}.title`)}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-text-secondary">
+                    {getLaunchGuide(locale, post.slug)
+                      ? getLaunchGuide(locale, post.slug)!.subtitle
+                      : tp(`${post.slug}.subtitle`)}
+                  </p>
+                  <p className="mt-4 text-xs text-text-muted">
+                    {post.date} · {post.readMinutes} {t('minRead')} · {post.sourceIds?.length ?? 0}{' '}
+                    {t('sources')}
+                  </p>
                 </Link>
               ))}
+            <div className="border-t border-ink-border">
+              {group.slugs
+                .map((slug) => guidePosts.find((post) => post.slug === slug))
+                .filter((post) => post !== undefined)
+                .slice(1)
+                .map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/guide/${post.slug}`}
+                    className="grid gap-1 border-b border-ink-border py-3 sm:grid-cols-[1fr_auto] sm:items-center"
+                  >
+                    <span className="text-sm font-semibold text-text-primary">
+                      {getLaunchGuide(locale, post.slug)
+                        ? getLaunchGuide(locale, post.slug)!.title
+                        : tp(`${post.slug}.title`)}
+                    </span>
+                    <span className="text-xs text-text-muted">
+                      {post.date} · {post.sourceIds?.length ?? 0} {t('sources')}
+                    </span>
+                  </Link>
+                ))}
             </div>
           </div>
         </section>
@@ -157,12 +249,21 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             </li>
           ))}
           {collectionLinks.map((link) => (
-            <li key={link.href}><Link href={link.href} className="text-primary-light transition-colors hover:text-primary">{link.label}</Link></li>
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="text-primary-light transition-colors hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            </li>
           ))}
         </ul>
       </section>
       <section className="border-t border-ink-border pt-5">
-        <Link href="/guide/how-we-verify" className="text-sm font-semibold text-primary-light">{t('howWeVerify')} →</Link>
+        <Link href="/guide/how-we-verify" className="text-sm font-semibold text-primary-light">
+          {t('howWeVerify')} →
+        </Link>
       </section>
     </div>
   );

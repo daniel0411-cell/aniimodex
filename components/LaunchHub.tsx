@@ -3,13 +3,13 @@ import { Link } from '@/i18n/navigation';
 interface LaunchHubProps {
   title: string;
   description: string;
-  labels: { release: string; download: string; preload: string; platforms: string };
+  labels: { release: string; download: string; issues: string; platforms: string };
 }
 
 const launchLinks = [
   ['release', '/guide/aniimo-release-date'],
   ['download', '/guide/how-to-download-aniimo'],
-  ['preload', '/guide/aniimo-launch-time-preload'],
+  ['issues', '/guide/aniimo-launch-checklist-known-issues'],
   ['platforms', '/guide/aniimo-platforms'],
 ] as const;
 
@@ -23,7 +23,11 @@ export default function LaunchHub({ title, description, labels }: LaunchHubProps
       </div>
       <nav className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label={title}>
         {launchLinks.map(([key, href]) => (
-          <Link key={key} href={href} className="border-l-4 border-primary bg-white px-4 py-4 text-sm font-semibold text-text-primary hover:bg-sky-50">
+          <Link
+            key={key}
+            href={href}
+            className="border-l-4 border-primary bg-white px-4 py-4 text-sm font-semibold text-text-primary hover:bg-sky-50"
+          >
             {labels[key]} <span className="text-primary-light">→</span>
           </Link>
         ))}
