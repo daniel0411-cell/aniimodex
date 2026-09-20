@@ -1426,6 +1426,32 @@
           }
         ]
       },
+      "aniimo-egg-heist": {
+        "title": "Aniimo Egg Heist Guide: PVEVP and Shadow Sparkling Odds",
+        "subtitle": "The official facts about Egg Heist, its three-player format and the published Shadow Sparkling probability.",
+        "tag": "Egg Heist",
+        "lead": "Egg Heist is an official real-time PVEVP activity for three-player teams. Xbox confirms the mode format, while Aniimo's probability disclosure separately confirms how an Egg Heist egg differs in the Sparkling style table. Exact unlock requirements, rewards and efficient routes remain unverified here.",
+        "body": [
+          { "t": "h", "c": "What is Egg Heist in Aniimo?" },
+          { "t": "p", "c": "Xbox describes Egg Heist as a real-time PVEVP activity. Teams of three compete while also dealing with environmental threats, so the published description combines player-versus-environment and player-versus-player pressure." },
+          { "t": "h", "c": "How many players are on an Egg Heist team?" },
+          { "t": "p", "c": "The official Xbox description specifies three-player teams. It does not establish whether matchmaking fills every missing position, whether a smaller party can queue, or which platforms can invite one another in this activity." },
+          { "t": "h", "c": "Does Egg Heist support cross-platform play?" },
+          { "t": "p", "c": "Steam lists cross-platform multiplayer for Aniimo as a product feature, but the registered official sources do not document every supported platform pairing or confirm Egg Heist-specific crossplay behavior. Cross-save is a separate question and also remains incompletely documented." },
+          { "t": "h", "c": "What is special about an Egg Heist egg?" },
+          { "t": "p", "c": "The official probability disclosure distinguishes an Egg Heist egg from other eggs in its Sparkling style table. When a Sparkling Cube is used on an Egg Heist egg, the published outcomes are 99% Normal Sparkling, 0% Dazzling Sparkling and 1% Shadow Sparkling." },
+          { "t": "table", "head": ["Sparkling Cube target", "Normal", "Dazzling", "Shadow"], "rows": [["Egg Heist egg", "99%", "0%", "1%"], ["Egg not from Egg Heist", "99%", "1%", "0%"]] },
+          { "t": "p", "c": "This table describes the style outcome after the listed Sparkling Cube use. It does not prove that an Egg Heist egg is guaranteed to contain a particular Aniimo, that a Shadow style changes stats, or that any claimed farming route is optimal." },
+          { "t": "h", "c": "What should players verify before entering?" },
+          { "t": "li", "c": "The mode is currently available on the platform and server being used" },
+          { "t": "li", "c": "All team members are on a compatible game version" },
+          { "t": "li", "c": "The in-game activity screen shows the current access requirement and reward rules" },
+          { "t": "li", "c": "Any Sparkling item description matches the official probability disclosure before use" },
+          { "t": "h", "c": "What is still unverified?" },
+          { "t": "p", "c": "AniimoDex does not currently publish an unlock level, quest path, match duration, reward table, best team, fastest egg route or guaranteed hatch result. Those claims require a current official rule or a documented test with platform, server and game version." },
+          { "t": "quote", "c": "Published now: mode type, team size and the Egg Heist row in the official Sparkling table. Held back: unlock steps, optimal routes, reward efficiency and guaranteed egg outcomes." }
+        ]
+      },
       "aniimo-pre-registration": {
         "title": "Aniimo Pre-Registration Rewards: Milestones and Current Status",
         "subtitle": "The official counter passed 35 million, and all four published milestone rewards are unlocked.",

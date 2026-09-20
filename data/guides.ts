@@ -28,6 +28,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-team-composition',
       'aniimo-catching-guide',
       'aniimo-evolution-system',
+      'aniimo-egg-heist',
       'aniimo-crossplay-cross-save',
     ],
     image: '/images/guides/getting-started.jpg',
@@ -174,10 +175,23 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-multiplayer',
-    date: '2026-08-30',
+    date: '2026-09-20',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-crossplay-cross-save', 'aniimo-platforms'],
+    relatedSlugs: ['aniimo-egg-heist', 'aniimo-crossplay-cross-save', 'aniimo-platforms'],
     sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
+  },
+  {
+    slug: 'aniimo-egg-heist',
+    date: '2026-09-20',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex', '/tools/catch'],
+    relatedSlugs: [
+      'aniimo-multiplayer',
+      'aniimo-crossplay-cross-save',
+      'aniimo-forms-explained',
+      'getting-started',
+    ],
+    sourceIds: ['aniimo-xbox-9pk8phlcqdf6', 'aniimo-official-probabilities-2026-09-16'],
   },
   {
     slug: 'aniimo-pre-registration',
@@ -303,6 +317,7 @@ export const guidePosts: GuidePost[] = [
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
       'getting-started',
+      'aniimo-egg-heist',
       'aniimo-elements-explained',
       'aniimo-catching-guide',
       'official-aniimo-dex-status',

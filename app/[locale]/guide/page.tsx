@@ -76,6 +76,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
       key: 'gameplay',
       slugs: [
         'getting-started',
+        'aniimo-egg-heist',
         'is-aniimo-a-gacha-game',
         'aniimo-crossplay-cross-save',
         'aniimo-team-composition',
