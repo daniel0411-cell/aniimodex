@@ -91,9 +91,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'pre-registration-milestones',
     claim:
-      'The official site shows 35,451,283 pre-registrations and all four published milestone rewards unlocked.',
+      'The official site shows 39,566,123 pre-registrations and all four published milestone rewards unlocked.',
     status: 'official',
-    checkedAt: '2026-09-18',
+    checkedAt: '2026-09-21',
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {

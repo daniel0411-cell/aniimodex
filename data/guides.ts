@@ -195,7 +195,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-pre-registration',
-    date: '2026-09-18',
+    date: '2026-09-21',
     readMinutes: 5,
     relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],

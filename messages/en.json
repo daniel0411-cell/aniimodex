@@ -182,7 +182,7 @@
       "android-release-status": "The official Google Play listing for Aniimo is live, currently offers a wishlist action instead of an install action, and publishes no Android release date.",
       "mobile-shared-launch-date": "Aniimo mobile launches on September 23, 2026 for both iOS and Android.",
       "mobile-cross-progression": "Aniimo mobile shares progress with the PC and console versions.",
-      "pre-registration-milestones": "The official site shows 35,451,283 pre-registrations and all four published milestone rewards unlocked.",
+      "pre-registration-milestones": "The official site shows 39,566,123 pre-registrations and all four published milestone rewards unlocked.",
       "dex-001-020": "Current Aniimo names, numbers, stats, elements, roles, evolutions and spawn conditions.",
       "element-matchups": "Elemental matchup multipliers. No official combat table has been published, so the values shown are a community consensus (1.6x super effective, 0.625x resisted, no immunities), and a small number of cells still differ between community sources.",
       "catch-formula": "The official probability disclosure publishes the catch formula for all three scenarios, the region-stage base rate table and the level, cube, HP, backstrike and status coefficients. Per-species template base rates are not published."
@@ -1470,10 +1470,10 @@
         ]
       },
       "aniimo-pre-registration": {
-        "title": "Aniimo Pre-Registration Rewards: Milestones and Current Status",
-        "subtitle": "The official counter passed 35 million, and all four published milestone rewards are unlocked.",
-        "tag": "Updates",
-        "lead": "The official Aniimo website still displays a live global pre-registration counter and the reward milestones tied to it. AniimoDex records what that page actually publishes instead of describing a claim flow it cannot verify.",
+        "title": "Aniimo Launch Rewards: Milestones and Current Eligibility",
+        "subtitle": "The official counter passed 39 million, but current eligibility and claim steps still depend on official in-game terms.",
+        "tag": "Launch rewards",
+        "lead": "The official Aniimo website still displays its global pre-registration counter, unlocked milestones and launch benefits. This page records what is published now and separates those facts from claim eligibility that the public page does not explain.",
         "body": [
           {
             "t": "h",
@@ -1481,7 +1481,7 @@
           },
           {
             "t": "p",
-            "c": "The official website showed 35,451,283 pre-registrations when it was checked on September 18, 2026."
+            "c": "The official website showed 39,566,123 pre-registrations when it was checked on September 21, 2026."
           },
           {
             "t": "h",
@@ -1527,7 +1527,7 @@
           },
           {
             "t": "li",
-            "c": "Four free outfits in total"
+            "c": "Four free outfits in total through story missions, home gameplay and cumulative sign-in"
           },
           {
             "t": "quote",

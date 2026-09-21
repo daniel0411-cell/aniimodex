@@ -24,9 +24,9 @@ export const sources: SourceReference[] = [
     id: 'aniimo-official-home-2026-08-28',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo Official Website - Global Launch Announced!',
-    accessedAt: '2026-09-18',
+    accessedAt: '2026-09-21',
     evidence:
-      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (35,451,283 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The page does not publish an Android release date or a cross-progression statement.',
+      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (39,566,123 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish an Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
   },
   {
     id: 'aniimo-steam-4126040',
