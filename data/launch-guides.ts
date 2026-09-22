@@ -26,13 +26,13 @@ const commonWatchlist = [
 
 const english: Record<string, LaunchGuide> = {
   'aniimo-crossplay-cross-save': {
-    title: 'Is Aniimo Crossplay? Cross-Platform and Cross-Save Status',
+    title: 'Is Aniimo Crossplay? Platform Pairings, Cross-Save and Progression',
     subtitle:
-      'Aniimo lists cross-platform multiplayer; exact platform pairings, cross-save and cross-progression remain unconfirmed.',
+      'Yes, Aniimo lists cross-platform multiplayer. Exact PC, PS5, Xbox and mobile pairings, cross-save and progression transfer remain undocumented.',
     tag: 'Cross-platform',
-    lead: 'Yes, Aniimo lists cross-platform multiplayer on Steam. Cross-save and cross-progression are different features, and the official sources checked on September 16 do not publish a complete account-linking or transfer policy.',
+    lead: 'Yes, Steam lists cross-platform multiplayer for Aniimo. That does not confirm every PC, PS5, Xbox or mobile pairing, and the official sources checked here still do not publish a complete cross-save, cross-progression or account-transfer policy.',
     body: [
-      { t: 'h', c: 'Is Aniimo cross-platform?' },
+      { t: 'h', c: 'Does Aniimo support crossplay?' },
       {
         t: 'p',
         c: 'Yes. Steam lists cross-platform multiplayer as an Aniimo feature. The listing does not document every supported platform pairing or activity.',
@@ -57,6 +57,11 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'No complete official policy is available in the sources used here. Crossplay allows players on different platforms to play together; it does not automatically transfer saves, achievements, purchases or premium currency.',
       },
+      { t: 'h', c: 'Does progress transfer between PC, PS5, Xbox and mobile?' },
+      {
+        t: 'p',
+        c: 'No complete official transfer matrix is published in the registered sources. Do not assume that saves, paid currency, achievements or rewards move between stores simply because multiplayer is cross-platform.',
+      },
       { t: 'h', c: 'What should players do now?' },
       {
         t: 'p',
@@ -64,7 +69,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last source check: September 16, 2026. This page will change only when an official account or cross-progression policy is available.',
+        c: 'Last source check: September 22, 2026. This page will change only when an official platform-pairing, account or cross-progression policy is available.',
       },
     ],
   },
@@ -409,11 +414,11 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   const map: Record<string, [string, string, string]> = {
     'aniimo-crossplay-cross-save': [
       traditional
-        ? 'Aniimo 支援跨平台連線和跨平台存檔嗎？'
-        : 'Aniimo 支持跨平台联机和跨平台存档吗？',
+        ? 'Aniimo 支援跨平台連線嗎？平台組合、跨平台存檔與進度互通'
+        : 'Aniimo 支持跨平台联机吗？平台组合、跨平台存档与进度互通',
       traditional
-        ? '官方列出跨平台多人；具體平台組合、跨平台存檔與進度互通仍待確認。'
-        : '官方列出跨平台多人；具体平台组合、跨平台存档与进度互通仍待确认。',
+        ? '官方列出跨平台多人；PC、PS5、Xbox、手機版的具體組合、跨平台存檔與進度轉移仍未公開。'
+        : '官方列出跨平台多人；PC、PS5、Xbox、手游的具体组合、跨平台存档与进度转移仍未公开。',
       traditional ? '跨平台' : '跨平台',
     ],
     'aniimo-pre-registration': [

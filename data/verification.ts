@@ -35,9 +35,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'global-launch-date',
-    claim: 'Aniimo launches on PC and console on September 16, 2026 at 10:00 UTC+8.',
+    claim: 'Aniimo launched on PC and console on September 16, 2026 at 10:00 UTC+8.',
     status: 'official',
-    checkedAt: '2026-08-29',
+    checkedAt: '2026-09-21',
     sourceIds: ['aniimo-playstation-10018491'],
   },
   {
@@ -68,9 +68,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'android-release-status',
     claim:
-      'The official Google Play listing for Aniimo is live, currently offers a wishlist action instead of an install action, and publishes no Android release date.',
+      'The official US Google Play listing for Aniimo showed an Install action on September 22, 2026; availability can still vary by region, account and device.',
     status: 'official',
-    checkedAt: '2026-09-18',
+    checkedAt: '2026-09-22',
     sourceIds: ['aniimo-google-play'],
   },
   {
@@ -91,9 +91,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'pre-registration-milestones',
     claim:
-      'The official site shows 39,566,123 pre-registrations and all four published milestone rewards unlocked.',
+      'The official site shows 40,130,660 pre-registrations and all four published milestone rewards unlocked.',
     status: 'official',
-    checkedAt: '2026-09-21',
+    checkedAt: '2026-09-22',
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {

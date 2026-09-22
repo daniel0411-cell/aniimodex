@@ -98,7 +98,7 @@
     "pcLaunchDate": "Steam 與 Xbox 已核驗開放 · 9 月 16 日",
     "mobileStatus": "行動版上線",
     "mobileLaunch": "iOS：2026 年 9 月 23 日",
-    "mobileLaunchDate": "Android 日期尚未確認",
+    "mobileLaunchDate": "Android 美國區已顯示安裝 · 其他地區可能不同",
     "priceStatus": "價格",
     "freeToPlay": "免費遊玩",
     "priceNote": "已核驗官方商店頁面",
@@ -179,10 +179,10 @@
       "ios-launch-date": "Aniimo 的 App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。",
       "forms-and-sparkling-styles": "官方 Wiki 詳情快照公布了三種形態條目（基礎形態、虹彩形態與以地貌命名的區域形態）；官方機率公示則另行公布了閃耀樣式表，含 3 種樣式及其在各取得方式下的機率。",
       "prismana-changes-element": "虹彩（Prismana）形態改變的是伊莫元素，而不是數值。",
-      "android-release-status": "Aniimo 的官方 Google Play 條目已上線，目前提供「加入願望清單」而非安裝，且未公布 Android 上線日期。",
+      "android-release-status": "2026 年 9 月 22 日核驗時，Aniimo 的美國區 Google Play 條目已顯示「安裝」；實際可用性仍可能因地區、帳號與裝置不同。",
       "mobile-shared-launch-date": "Aniimo 手機版將於 2026 年 9 月 23 日在 iOS 與 Android 同步上線。",
       "mobile-cross-progression": "Aniimo 手機版與 PC、主機版本共享遊戲進度。",
-      "pre-registration-milestones": "官方頁面顯示預約數為 39,566,123，四個已公布的里程碑獎勵全部解鎖。",
+      "pre-registration-milestones": "官方頁面顯示預約數為 40,130,660，四個已公布的里程碑獎勵全部解鎖。",
       "dex-001-020": "目前收錄的伊莫名稱、編號、數值屬性、元素、定位、進化與出現條件。",
       "element-matchups": "元素相剋倍率。官方未公布戰鬥剋制表，因此本站展示的數值是社群共識（剋制 1.6x、抵抗 0.625x、無免疫），且個別儲存格在社群來源之間仍存在分歧。",
       "catch-formula": "官方機率公示已提供三類場景的捕捉公式、區域階段基礎機率表，以及等級、謎立方、生命值、背襲與特殊狀態係數；但每種伊莫的模板基礎率仍未公開。"
@@ -346,8 +346,8 @@
     "abilityGuideTitle": "按移動能力瀏覽伊莫"
   },
   "typeChartTool": {
-    "title": "元素剋制表",
-    "subtitle": "行 = 攻擊方元素 · 列 = 防守方元素。點擊表頭以高亮對應的行或列。",
+    "title": "Aniimo 伊莫元素剋制表：9 種元素與剋制查詢",
+    "subtitle": "查詢全部 9 種元素的攻防關係、1.6x / 1x / 0.625x 倍率，或選擇一隻伊莫反查參考剋制元素。",
     "sourceStatusTitle": "這張伊莫元素表中哪些是官方資料？",
     "sourceStatusDescription": "九種元素名稱與每隻伊莫的元素標籤來自官方 Wiki；剋制倍率是社群整理的參考，不屬於已確認的官方戰鬥表。",
     "noEntriesNote": "目前收錄的伊莫中沒有任何一隻帶有：{elements}。由於該元素確實存在於遊戲中，此處保留其行與列並如實標註，而不是刪除。",
@@ -595,8 +595,8 @@
         ]
       },
       "aniimo-platforms": {
-        "title": "Aniimo 支援平台：PC、PS5、Xbox 与手机端",
-        "subtitle": "整理 Aniimo 官方商店入口与当前已確認平台。",
+        "title": "Aniimo 支援平台：PC、PS5、Xbox、Android 與 iOS",
+        "subtitle": "目前平台狀態：PC 與主機已上線，Android 美國區已顯示安裝，iOS 標註 9 月 23 日。",
         "tag": "平台",
         "lead": "Aniimo 官网目前連結 PlayStation 5、Xbox、Steam、iOS、Google Play 和 Epic Games Store。以下信息区分官网已連結平台与商店当前明确标注的裝置。",
         "body": [
@@ -612,7 +612,7 @@
               ["Xbox Series X|S", "免費本體和取得操作已開放"],
               ["Windows PC", "Steam 已正式發行，官網 PC 啟動器也可下載"],
               ["iOS", "App Store 標註 2026 年 9 月 23 日"],
-              ["Android", "已有官方 Google Play 入口，日期尚未確認"],
+              ["Android", "美國區 Google Play 已顯示安裝；其他地區與裝置可能不同"],
               ["Epic Games Store", "Aniimo 官网已提供 Epic 連結"]
             ]
           },
@@ -768,7 +768,7 @@
               ["Xbox", "免費本體與取得操作已開放"],
               ["PS5", "公布的發行時間已到，請核對當地商店按鈕"],
               ["iOS", "App Store 標註 9 月 23 日"],
-              ["Android", "已有官方入口，發行日期尚未確認"]
+              ["Android", "美國區 Google Play 於 9 月 22 日顯示安裝；實際可用性可能不同"]
             ]
           },
           {
@@ -787,9 +787,9 @@
       },
       "aniimo-mobile": {
         "title": "Aniimo 伊莫手機版：iOS / Android 上線狀態與下載方式",
-        "subtitle": "iOS 商店標註 2026 年 9 月 23 日；Android 官方條目已存在但未公布日期。",
+        "subtitle": "iOS 商店標註 9 月 23 日；Android 美國區 Google Play 已顯示安裝。",
         "tag": "手機版",
-        "lead": "App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。Android 的官方 Google Play 條目已經存在，但目前提供的是「加入願望清單」而不是安裝，且該條目與官方網站都沒有公布 Android 上線日期。",
+        "lead": "App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。2026 年 9 月 22 日核驗時，Android 美國區 Google Play 已顯示「安裝」；其他國家、帳號與相容裝置的按鈕仍可能不同。",
         "body": [
           {
             "t": "h",
@@ -800,7 +800,7 @@
             "head": ["平台", "目前狀態"],
             "rows": [
               ["iPhone / iPad", "App Store 標註 2026 年 9 月 23 日"],
-              ["Android", "Google Play 官方條目已存在，目前為「加入願望清單」而非安裝，未公布日期"],
+              ["Android", "美國區 Google Play 已顯示安裝；地區、帳號與裝置可用性可能不同"],
               ["進度互通", "社群報導稱互通，未找到官方聲明"],
               ["裝置需求", "官方未公布完整相容清單"]
             ]
@@ -811,7 +811,7 @@
           },
           {
             "t": "p",
-            "c": "官方 App Store 條目顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。社群報導普遍稱 Android 也是同一天，但我們核驗的官方網站與 Google Play 條目都沒有公布 Android 日期，因此 AniimoDex 把這一點標註為社群報導，而非官方確認。"
+            "c": "官方 App Store 條目顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。Android 已無需依賴社群日期推測：美國區 Google Play 在 9 月 22 日顯示了安裝按鈕，但這不能證明所有國家和裝置已同步開放。"
           },
           {
             "t": "h",
@@ -819,7 +819,7 @@
           },
           {
             "t": "p",
-            "c": "不能。Google Play 條目提供的是「加入願望清單」而不是安裝，這與尚未開放下載的狀態一致。"
+            "c": "美國區 Google Play 在 9 月 22 日核驗時已顯示「安裝」。請用準備遊玩的 Google 帳號和裝置開啟官方條目確認；按鈕仍可能因地區、帳號或相容性不同。"
           },
           {
             "t": "h",
@@ -1431,7 +1431,7 @@
           },
           {
             "t": "p",
-            "c": "2026 年 9 月 21 日核驗時，官方網站顯示預約數為 39,566,123。"
+            "c": "2026 年 9 月 22 日核驗時，官方網站顯示預約數為 40,130,660。"
           },
           {
             "t": "h",
@@ -1675,7 +1675,7 @@
         "title": "Aniimo 伊莫語言、手把與 Steam Deck 支援狀態",
         "subtitle": "整理語言選項、PC 手把和掌機相容性的目前官方狀態。",
         "tag": "相容性",
-        "lead": "Aniimo 已有 PC 與主機官方頁面，但上線前並非所有相容性細節都已穩定公開。",
+        "lead": "Aniimo 已透過核驗的 PC 與主機管道上線，但目前官方來源仍未完整說明所有語言、手把與掌機相容細節。",
         "body": [
           {
             "t": "h",
@@ -1699,11 +1699,11 @@
           },
           {
             "t": "p",
-            "c": "商店語言表在上線前可能變化，並會分別標示介面、字幕與語音。完整穩定清單公布前，請以對應官方商店即時頁面為準。"
+            "c": "商店語言表可能因地區不同，並會分別標示介面、字幕與語音。目前平台支援清單請以對應官方商店即時頁面為準。"
           },
           {
             "t": "h",
-            "c": "上線後會測試什麼？"
+            "c": "哪些項目仍需直接核驗？"
           },
           {
             "t": "li",
@@ -1755,13 +1755,13 @@
       },
       "aniimo-launch-coverage-status": {
         "title": "Aniimo 上線內容計畫：攻略、Build 與資料狀態",
-        "subtitle": "公開上線首週實測隊列和各類內容的發布門檻。",
+        "subtitle": "公開已核驗資料、上線後實測隊列和各類內容的發布門檻。",
         "tag": "內容狀態",
-        "lead": "AniimoDex 不會在正式遊戲可測試前編造流程攻略、Tier List、Build 或捕獲率。本頁說明已完成內容和後續驗證標準。",
+        "lead": "Aniimo 已正式上線，但可玩不等於流程攻略、Tier List、Build 或捕獲率已經得到驗證。本頁說明現有內容和後續驗證標準。",
         "body": [
           {
             "t": "h",
-            "c": "上線前已完成"
+            "c": "目前已核驗內容"
           },
           {
             "t": "table",
@@ -1775,7 +1775,7 @@
           },
           {
             "t": "h",
-            "c": "上線首週實測隊列"
+            "c": "上線後核驗隊列"
           },
           {
             "t": "li",

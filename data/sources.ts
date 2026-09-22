@@ -24,9 +24,9 @@ export const sources: SourceReference[] = [
     id: 'aniimo-official-home-2026-08-28',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo Official Website - Global Launch Announced!',
-    accessedAt: '2026-09-21',
+    accessedAt: '2026-09-22',
     evidence:
-      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (39,566,123 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish an Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
+      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (40,130,660 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish a universal Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
   },
   {
     id: 'aniimo-steam-4126040',
@@ -72,9 +72,9 @@ export const sources: SourceReference[] = [
     id: 'aniimo-google-play',
     url: 'https://play.google.com/store/apps/details?id=com.x.aniimos',
     title: 'Aniimo on Google Play',
-    accessedAt: '2026-09-18',
+    accessedAt: '2026-09-22',
     evidence:
-      'The official Google Play listing for Aniimo (package com.x.aniimos) is published by PAWPRINT INTERACTIVE ENTERTAINMENT PTE. LTD. and is listed as a role-playing game. The listing offers an add-to-wishlist action rather than an install action and publishes no release date, which is consistent with an Android version that is not downloadable yet. It lists in-app purchases and an age rating of 10+ with fantasy violence and user interaction.',
+      'The official US Google Play listing for Aniimo (package com.x.aniimos) showed an Install action when checked on September 22, 2026, after listing an update dated September 21. It is published by Pawprint Studio as a role-playing game with in-app purchases. Availability can still vary by country, account and compatible device, so this check does not establish a simultaneous worldwide Android release.',
   },
   {
     id: 'aniimo-official-probabilities-2026-09-16',
