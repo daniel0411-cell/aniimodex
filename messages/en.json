@@ -195,9 +195,9 @@
     "backToGuides": "Back to Guide"
   },
   "dex": {
-    "title": "Aniimo Game Dex: All 92 Official-Source Entries",
-    "metaDescription": "Browse 92 Aniimo from the official Wiki by name, number, element, role and stage, with evolution families, habitats, forms, mobility, traits and skills.",
-    "intro": "Browse the Aniimo Wiki-style game dex with 92 official-source creatures. Search by English name or number, filter by element, role and stage, and open each entry for evolution, habitat, form, mobility, trait and skill data.",
+    "title": "Aniimo Dex: All 92 Creatures, Evolutions and Abilities",
+    "metaDescription": "Browse all 92 official-source Aniimo by name, number, element, role or stage. Check evolution families, habitats, forms, mobility, traits and skills.",
+    "intro": "Find all 92 official-source Aniimo in one searchable dex. Filter by name, number, element, role or stage, then open an entry to check its evolution family, habitat, forms, mobility, traits and skills.",
     "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
@@ -484,7 +484,7 @@
   },
   "guide": {
     "title": "Aniimo Guide",
-    "subtitle": "Tutorials & advanced guides",
+    "subtitle": "Aniimo guides for downloads, mobile status, crossplay, evolutions, catching and launch issues.",
     "relatedTools": "Related Tools",
     "relatedDesc": "Combine these tools to plan your exploration and team:",
     "browseDex": "Browse the full dex for stats and locations",
@@ -1679,10 +1679,10 @@
         ]
       },
       "aniimo-crossplay-cross-save": {
-        "title": "Does Aniimo Have Crossplay or Cross-Save? Current Status",
-        "subtitle": "Yes, Aniimo lists cross-platform multiplayer. Cross-save and cross-progression are not yet confirmed; see the current platform status.",
+        "title": "Aniimo Crossplay: Supported; Cross-Save Not Confirmed",
+        "subtitle": "Aniimo lists cross-platform multiplayer, but exact platform pairings, cross-save and cross-progression are not fully documented.",
         "tag": "Multiplayer",
-        "lead": "Yes, Aniimo supports cross-platform multiplayer according to Steam. Cross-save and cross-progression are separate features and remain unconfirmed in the official sources checked on September 15, 2026.",
+        "lead": "Yes. Steam lists cross-platform multiplayer for Aniimo. That does not confirm every PC, console and mobile pairing, and no complete official cross-save or cross-progression policy was found when this page was checked on September 23, 2026.",
         "body": [
           {
             "t": "h",
@@ -1990,8 +1990,8 @@
   },
   "collections": {
     "evolutions": {
-      "title": "Aniimo Evolution Chart and Families",
-      "description": "Browse every evolution family currently published by the official Aniimo Wiki, including branching evolution lines.",
+      "title": "Aniimo Evolution Chart: All Families and Branches",
+      "description": "Browse every official-source Aniimo evolution family and branching line. Family links are confirmed; required levels, items and quests remain unpublished.",
       "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.",
       "family": "evolution family",
       "definition": "The current official-source snapshot maps {members} Aniimo names across {families} evolution families. Family links are confirmed; levels, items and quest requirements are not inferred.",
@@ -2001,7 +2001,7 @@
         "members": "Unique mapped Aniimo names"
       },
       "howToTitle": "How to use the Aniimo evolution chart",
-      "howToDescription": "Each family groups the officially linked stages into one path. Open any member to compare its elements, role, habitats, forms, traits and skills.",
+      "howToDescription": "Choose a family to see every officially linked stage and branch, then open a member for elements, role, habitats, forms, traits and skills. The chart does not invent levels, items or quest requirements that the official source has not published.",
       "branchingTitle": "Published branching evolution families",
       "branchingDescription": "The official snapshot contains {count} families with more than one direct child branch. This confirms the branch relationship, not the requirement used to choose it.",
       "faq": {

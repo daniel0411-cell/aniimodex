@@ -62,7 +62,7 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'prismana-changes-element',
     claim: 'A Prismana form changes an Aniimo element rather than its stats.',
-    status: 'official',
+    status: 'community',
     checkedAt: '2026-09-18',
     sourceIds: [],
   },
@@ -78,7 +78,7 @@ export const verifiedClaims: VerifiedClaim[] = [
     id: 'mobile-shared-launch-date',
     claim:
       'Aniimo mobile availability is live in the China iOS and US Android storefronts checked, but availability can differ by region, account and device.',
-    status: 'community',
+    status: 'official',
     checkedAt: '2026-09-23',
     sourceIds: ['aniimo-app-store-cn-6768584375', 'aniimo-google-play'],
   },

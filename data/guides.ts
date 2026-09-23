@@ -234,7 +234,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
-    date: '2026-09-21',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: [
       'aniimo-multiplayer',

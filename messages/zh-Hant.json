@@ -195,9 +195,9 @@
     "backToGuides": "返回攻略"
   },
   "dex": {
-    "title": "伊莫圖鑑",
-    "intro": "瀏覽 92 條依據官方資料整理的 Aniimo Wiki 式伊莫圖鑑。可按名稱或編號搜尋，按元素、戰鬥定位和階段篩選，並進入詳情查看進化、棲息地、形態、移動能力、特性和技能。",
-    "metaDescription": "瀏覽官方 Wiki 中的 92 筆伊莫資料，可按名稱、編號、元素、定位和階段篩選，並查看進化、棲息地、型態、移動能力、特性與技能。",
+    "title": "伊莫圖鑑：92 隻伊莫、進化與能力",
+    "intro": "在可搜尋圖鑑中查找全部 92 隻官方來源伊莫。依名稱、編號、元素、定位或階段篩選，再進入詳情查看進化家族、棲息地、型態、移動能力、特性與技能。",
+    "metaDescription": "瀏覽官方來源的 92 隻伊莫，依名稱、編號、元素、定位或階段篩選，查看進化家族、棲息地、型態、移動能力、特性與技能。",
     "subtitle": "{filtered} / {total} 筆官方 Wiki 圖鑑",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋…",
     "filterElement": "元素",
@@ -482,7 +482,7 @@
   },
   "guide": {
     "title": "伊莫攻略",
-    "subtitle": "教學與進階攻略",
+    "subtitle": "伊莫下載、行動版、跨平台、進化、捕獲與上線問題攻略。",
     "relatedTools": "相關工具",
     "relatedDesc": "搭配以下工具，規劃你的探索與隊伍：",
     "browseDex": "瀏覽完整圖鑑，查看屬性與出沒地點",
@@ -787,9 +787,9 @@
       },
       "aniimo-mobile": {
         "title": "Aniimo 伊莫手機版：iOS / Android 上線狀態與下載方式",
-        "subtitle": "伊莫已在中國區 App Store 上線；Android 美國區 Google Play 已顯示安裝。",
+        "subtitle": "中國區 iOS 已上線，美國區 Android 已顯示安裝；台灣與其他地區請以當地官方商店為準。",
         "tag": "手機版",
-        "lead": "伊莫已在中國區 App Store 上線 iPhone 與 iPad 版本。2026 年 9 月 22 日核驗時，Android 美國區 Google Play 已顯示「安裝」；其他國家、帳號與相容裝置的按鈕仍可能不同。",
+        "lead": "伊莫已在中國區 App Store 上線 iPhone 與 iPad 版本，Android 美國區 Google Play 也已顯示「安裝」。台灣與其他地區的下載按鈕可能因商店、帳號與相容裝置而不同，請以當地官方商店為準。",
         "body": [
           {
             "t": "h",
@@ -1896,8 +1896,8 @@
   },
   "collections": {
     "evolutions": {
-      "title": "Aniimo 伊莫進化圖與進化家族",
-      "description": "查看官方 Aniimo Wiki 目前公布的全部進化家族，包括分支進化路線。",
+      "title": "Aniimo 伊莫進化圖鑑：全部家族與分支",
+      "description": "瀏覽官方來源的全部伊莫進化家族和分支路線。家族關係已確認；所需等級、道具與任務尚未公布。",
       "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。",
       "family": "進化家族",
       "definition": "目前官方來源快照將 {members} 個伊莫名稱映射到 {families} 個進化家族。家族關係已確認；等級、道具和任務條件不會被推斷。",
@@ -1907,7 +1907,7 @@
         "members": "已映射的不同伊莫名稱"
       },
       "howToTitle": "如何使用伊莫進化圖鑑",
-      "howToDescription": "每個家族把官方關聯階段整理成一條路線。開啟任意成員即可比較元素、定位、棲息地、型態、特性與技能。",
+      "howToDescription": "選擇一個家族即可查看官方關聯的全部階段和分支，再開啟成員比較元素、定位、棲息地、型態、特性與技能。官方未公布的等級、道具或任務條件不會被猜測補全。",
       "branchingTitle": "已公布的分支進化家族",
       "branchingDescription": "官方快照中有 {count} 個家族存在多個直接子分支。這只能確認分支關係，不能確認選擇分支所需的條件。",
       "faq": {
