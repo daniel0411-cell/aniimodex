@@ -74,7 +74,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-platforms',
-    date: '2026-09-22',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-crossplay-cross-save'],
     sourceIds: [
@@ -82,6 +82,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-app-store-cn-6768584375',
+      'aniimo-google-play',
     ],
   },
   {
@@ -105,7 +107,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'how-to-download-aniimo',
-    date: '2026-09-16',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: ['aniimo-platforms', 'aniimo-pre-registration'],
     sourceIds: [
@@ -113,16 +115,19 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-app-store-cn-6768584375',
+      'aniimo-google-play',
     ],
   },
   {
     slug: 'aniimo-mobile',
-    date: '2026-09-22',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-app-store-6759098797',
+      'aniimo-app-store-cn-6768584375',
       'aniimo-google-play',
     ],
   },
@@ -195,7 +200,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-pre-registration',
-    date: '2026-09-22',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
@@ -217,10 +222,15 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
-    date: '2026-09-22',
+    date: '2026-09-23',
     readMinutes: 5,
     relatedSlugs: ['aniimo-release-date', 'aniimo-pre-registration', 'aniimo-mobile'],
-    sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
+    sourceIds: [
+      'aniimo-playstation-10018491',
+      'aniimo-steam-4126040',
+      'aniimo-app-store-cn-6768584375',
+      'aniimo-google-play',
+    ],
   },
   {
     slug: 'aniimo-crossplay-cross-save',

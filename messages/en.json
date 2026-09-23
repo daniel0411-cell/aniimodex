@@ -97,8 +97,8 @@
     "pcLaunch": "PC and Xbox released",
     "pcLaunchDate": "Steam and Xbox verified available · September 16",
     "mobileStatus": "Mobile launch",
-    "mobileLaunch": "iOS: September 23, 2026",
-    "mobileLaunchDate": "Android install live in the US listing · regional availability varies",
+    "mobileLaunch": "iOS live in China · Android install live in the US",
+    "mobileLaunchDate": "Availability can vary by country, account and device",
     "priceStatus": "Price",
     "freeToPlay": "Free to play",
     "priceNote": "Official store listings checked",
@@ -176,13 +176,13 @@
       "game-genre-and-core-loop": "Aniimo is an open-world action RPG with creature collection, Twine, exploration, team play and quests.",
       "announced-platforms": "The official site links PS5, Xbox, Steam, iOS, Google Play and Epic Games Store.",
       "global-launch-date": "Aniimo launched on PC and console on September 16, 2026 at 10:00 UTC+8.",
-      "ios-launch-date": "The Aniimo App Store listing shows September 23, 2026 for iPhone and iPad.",
+      "ios-launch-date": "Aniimo is available for iPhone and iPad in the China App Store; other storefronts may differ.",
       "forms-and-sparkling-styles": "The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.",
       "prismana-changes-element": "A Prismana form changes an Aniimo element rather than its stats.",
       "android-release-status": "The official US Google Play listing for Aniimo showed an Install action on September 22, 2026; availability can still vary by region, account and device.",
-      "mobile-shared-launch-date": "Aniimo mobile launches on September 23, 2026 for both iOS and Android.",
+      "mobile-shared-launch-date": "Aniimo mobile is available in the China iOS and US Android storefronts checked; other regions may differ.",
       "mobile-cross-progression": "Aniimo mobile shares progress with the PC and console versions.",
-      "pre-registration-milestones": "The official site shows 40,130,660 pre-registrations and all four published milestone rewards unlocked.",
+      "pre-registration-milestones": "The official site shows 40,135,279 pre-registrations and all four published milestone rewards unlocked.",
       "dex-001-020": "Current Aniimo names, numbers, stats, elements, roles, evolutions and spawn conditions.",
       "element-matchups": "Elemental matchup multipliers. No official combat table has been published, so the values shown are a community consensus (1.6x super effective, 0.625x resisted, no immunities), and a small number of cells still differ between community sources.",
       "catch-formula": "The official probability disclosure publishes the catch formula for all three scenarios, the region-stage base rate table and the level, cube, HP, backstrike and status coefficients. Per-species template base rates are not published."
@@ -598,7 +598,7 @@
       },
       "aniimo-platforms": {
         "title": "Aniimo Platforms: PC, PS5, Xbox, Android and iOS Status",
-        "subtitle": "Current Aniimo availability: PC and console are live, Android Install appears in the US listing, and iOS is listed for September 23.",
+        "subtitle": "Current Aniimo availability: PC and console are live, iOS is live in China, and Android Install appears in the US listing.",
         "tag": "Platforms",
         "lead": "The official Aniimo website links PlayStation 5, Xbox, Steam, iOS, Google Play and Epic Games Store. The verified store listings below clarify what is currently confirmed for each platform.",
         "body": [
@@ -613,7 +613,7 @@
               ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
               ["Xbox Series X|S", "Free base game and purchase action available"],
               ["Windows PC", "Released on Steam; official PC launcher also available"],
-              ["iOS", "App Store lists September 23, 2026"],
+              ["iOS", "Available in the China App Store; other storefronts may differ"],
               ["Android", "Install shown on the US Google Play listing; regional and device availability may vary"],
               ["Epic Games Store", "Linked by the official Aniimo website"]
             ]
@@ -656,7 +656,7 @@
           },
           {
             "t": "p",
-            "c": "No single date should be assumed for every platform. PC and console launched on September 16 UTC+8, the App Store listing checked for iPhone and iPad shows September 23, and the US Google Play listing showed Install on September 22. Mobile availability can still differ by country and device."
+            "c": "No single date should be assumed for every platform. PC and console launched on September 16 UTC+8, Aniimo is available in the China App Store, and the US Google Play listing showed Install on September 22. Mobile availability can still differ by country, account and device."
           }
         ]
       },
@@ -796,7 +796,7 @@
                 "PS5",
                 "Published release time has passed; verify the current regional store button"
               ],
-              ["iOS", "App Store lists September 23"],
+              ["iOS", "Available in the China App Store; other storefronts may differ"],
               ["Android", "Install shown on the US Google Play listing on September 22; availability may vary"]
             ]
           },
@@ -816,9 +816,9 @@
       },
       "aniimo-mobile": {
         "title": "Aniimo Mobile: iOS and Android Release Status and Downloads",
-        "subtitle": "iOS is listed for September 23; the US Google Play listing now shows Install for Android.",
+        "subtitle": "Aniimo is live in the China App Store, and the US Google Play listing shows Install for Android.",
         "tag": "Mobile",
-        "lead": "The App Store listing shows September 23, 2026 for iPhone and iPad. The official US Google Play listing showed an Install action when checked on September 22, while availability can still differ by country, account and compatible device.",
+        "lead": "Aniimo is available for iPhone and iPad in the China App Store. The official US Google Play listing showed an Install action when checked on September 22, while availability can still differ by country, account and compatible device.",
         "body": [
           {
             "t": "h",
@@ -828,13 +828,14 @@
             "t": "table",
             "head": ["Platform", "Current status"],
             "rows": [
-              ["iPhone and iPad", "App Store lists September 23, 2026"],
+              ["iPhone and iPad", "Available in the China App Store; other storefronts may differ"],
               [
                 "Android",
                 "US Google Play listing shows Install; regional, account and device availability may vary"
               ],
               ["Progress sharing", "Reported by community coverage; no official statement found"],
-              ["Device requirements", "No complete official list published"]
+              ["China iOS requirements", "iOS 15.0 or later; 3.7 GB listing size; iPhone and iPad"],
+              ["Other device requirements", "Check the local official store for compatibility"]
             ]
           },
           {
@@ -843,7 +844,7 @@
           },
           {
             "t": "p",
-            "c": "The official App Store listing shows September 23, 2026 for iPhone and iPad. Android does not need an inferred date now: the US Google Play listing showed Install on September 22, although that does not prove simultaneous availability in every country or on every device."
+            "c": "Aniimo is available for iPhone and iPad in the China App Store. Android does not need an inferred date now: the US Google Play listing showed Install on September 22, although neither storefront check proves simultaneous availability in every country or on every device."
           },
           {
             "t": "h",
@@ -1481,7 +1482,7 @@
           },
           {
             "t": "p",
-            "c": "The official website showed 40,130,660 pre-registrations when it was checked on September 22, 2026."
+            "c": "The official website showed 40,135,279 pre-registrations when it was checked on September 23, 2026."
           },
           {
             "t": "h",
@@ -1638,7 +1639,7 @@
         "title": "Aniimo Release Time and Current Download Status",
         "subtitle": "Check the historical global unlock time and current PC, PS5, Xbox, Android and iOS availability.",
         "tag": "Launch",
-        "lead": "Aniimo has passed its September 16 global unlock time. Steam, the official PC launcher and Xbox are available; the US Google Play listing shows Install, iOS is listed for September 23, and other regional store buttons may differ.",
+        "lead": "Aniimo has passed its September 16 global unlock time. Steam, the official PC launcher and Xbox are available; Aniimo is live in the China App Store, the US Google Play listing shows Install, and other regional store buttons may differ.",
         "body": [
           {
             "t": "h",
@@ -1652,7 +1653,7 @@
               ["Xbox Series X|S", "Free base game available"],
               ["PlayStation 5", "Check the current regional store button"],
               ["Android", "US Google Play listing shows Install; availability may vary"],
-              ["iPhone / iPad", "App Store lists September 23, 2026"]
+              ["iPhone / iPad", "Available in the China App Store; other storefronts may differ"]
             ]
           },
           {

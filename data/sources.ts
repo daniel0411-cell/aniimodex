@@ -24,9 +24,9 @@ export const sources: SourceReference[] = [
     id: 'aniimo-official-home-2026-08-28',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo Official Website - Global Launch Announced!',
-    accessedAt: '2026-09-22',
+    accessedAt: '2026-09-23',
     evidence:
-      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (40,130,660 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish a universal Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
+      'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (40,135,279 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish a universal Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
   },
   {
     id: 'aniimo-steam-4126040',
@@ -59,6 +59,14 @@ export const sources: SourceReference[] = [
     accessedAt: '2026-09-15',
     evidence:
       'The official Aniimo App Store listing shows September 23, 2026 for iPhone and iPad in the storefronts checked. This date does not confirm the Android release date.',
+  },
+  {
+    id: 'aniimo-app-store-cn-6768584375',
+    url: 'https://apps.apple.com/cn/app/%E4%BC%8A%E8%8E%AB/id6768584375',
+    title: '伊莫 on the China App Store',
+    accessedAt: '2026-09-23',
+    evidence:
+      'The China App Store lists 伊莫 as a free iPhone and iPad app with in-app purchases, version 1.0.4, a 3.7 GB listing size, and iOS 15.0 or later. This confirms China storefront availability only and does not establish availability in every country.',
   },
   {
     id: 'aniimo-epic-759396',

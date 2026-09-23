@@ -97,7 +97,7 @@
     "pcLaunch": "PC 與 Xbox 已發行",
     "pcLaunchDate": "Steam 與 Xbox 已核驗開放 · 9 月 16 日",
     "mobileStatus": "行動版上線",
-    "mobileLaunch": "iOS：2026 年 9 月 23 日",
+    "mobileLaunch": "iOS 中國區已上線",
     "mobileLaunchDate": "Android 美國區已顯示安裝 · 其他地區可能不同",
     "priceStatus": "價格",
     "freeToPlay": "免費遊玩",
@@ -176,13 +176,13 @@
       "game-genre-and-core-loop": "Aniimo 是一款開放世界動作 RPG，包含生物捕捉、Twine、探索、組隊與任務。",
       "announced-platforms": "官方網站已連結 PS5、Xbox、Steam、iOS、Google Play 與 Epic Games Store。",
       "global-launch-date": "Aniimo 於 2026 年 9 月 16 日 10:00（UTC+8）在 PC 與主機平台上線。",
-      "ios-launch-date": "Aniimo 的 App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。",
+      "ios-launch-date": "伊莫已在中國區 App Store 上線 iPhone 與 iPad 版本；其他地區可能不同。",
       "forms-and-sparkling-styles": "官方 Wiki 詳情快照公布了三種形態條目（基礎形態、虹彩形態與以地貌命名的區域形態）；官方機率公示則另行公布了閃耀樣式表，含 3 種樣式及其在各取得方式下的機率。",
       "prismana-changes-element": "虹彩（Prismana）形態改變的是伊莫元素，而不是數值。",
       "android-release-status": "2026 年 9 月 22 日核驗時，Aniimo 的美國區 Google Play 條目已顯示「安裝」；實際可用性仍可能因地區、帳號與裝置不同。",
-      "mobile-shared-launch-date": "Aniimo 手機版將於 2026 年 9 月 23 日在 iOS 與 Android 同步上線。",
+      "mobile-shared-launch-date": "已核驗中國區 iOS 與美國區 Android 商店可用；其他地區可能不同。",
       "mobile-cross-progression": "Aniimo 手機版與 PC、主機版本共享遊戲進度。",
-      "pre-registration-milestones": "官方頁面顯示預約數為 40,130,660，四個已公布的里程碑獎勵全部解鎖。",
+      "pre-registration-milestones": "官方頁面顯示預約數為 40,135,279，四個已公布的里程碑獎勵全部解鎖。",
       "dex-001-020": "目前收錄的伊莫名稱、編號、數值屬性、元素、定位、進化與出現條件。",
       "element-matchups": "元素相剋倍率。官方未公布戰鬥剋制表，因此本站展示的數值是社群共識（剋制 1.6x、抵抗 0.625x、無免疫），且個別儲存格在社群來源之間仍存在分歧。",
       "catch-formula": "官方機率公示已提供三類場景的捕捉公式、區域階段基礎機率表，以及等級、謎立方、生命值、背襲與特殊狀態係數；但每種伊莫的模板基礎率仍未公開。"
@@ -596,7 +596,7 @@
       },
       "aniimo-platforms": {
         "title": "Aniimo 支援平台：PC、PS5、Xbox、Android 與 iOS",
-        "subtitle": "目前平台狀態：PC 與主機已上線，Android 美國區已顯示安裝，iOS 標註 9 月 23 日。",
+        "subtitle": "目前平台狀態：PC 與主機已上線，iOS 中國區已上線，Android 美國區已顯示安裝。",
         "tag": "平台",
         "lead": "Aniimo 官网目前連結 PlayStation 5、Xbox、Steam、iOS、Google Play 和 Epic Games Store。以下信息区分官网已連結平台与商店当前明确标注的裝置。",
         "body": [
@@ -611,7 +611,7 @@
               ["PlayStation 5", "2026 年 9 月 16 日 10:00（UTC+8）"],
               ["Xbox Series X|S", "免費本體和取得操作已開放"],
               ["Windows PC", "Steam 已正式發行，官網 PC 啟動器也可下載"],
-              ["iOS", "App Store 標註 2026 年 9 月 23 日"],
+              ["iOS", "中國區 App Store 已上線；其他地區可能不同"],
               ["Android", "美國區 Google Play 已顯示安裝；其他地區與裝置可能不同"],
               ["Epic Games Store", "Aniimo 官网已提供 Epic 連結"]
             ]
@@ -767,7 +767,7 @@
               ["Steam", "已正式發行並免費遊玩"],
               ["Xbox", "免費本體與取得操作已開放"],
               ["PS5", "公布的發行時間已到，請核對當地商店按鈕"],
-              ["iOS", "App Store 標註 9 月 23 日"],
+              ["iOS", "中國區 App Store 已上線；其他地區可能不同"],
               ["Android", "美國區 Google Play 於 9 月 22 日顯示安裝；實際可用性可能不同"]
             ]
           },
@@ -787,9 +787,9 @@
       },
       "aniimo-mobile": {
         "title": "Aniimo 伊莫手機版：iOS / Android 上線狀態與下載方式",
-        "subtitle": "iOS 商店標註 9 月 23 日；Android 美國區 Google Play 已顯示安裝。",
+        "subtitle": "伊莫已在中國區 App Store 上線；Android 美國區 Google Play 已顯示安裝。",
         "tag": "手機版",
-        "lead": "App Store 頁面顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。2026 年 9 月 22 日核驗時，Android 美國區 Google Play 已顯示「安裝」；其他國家、帳號與相容裝置的按鈕仍可能不同。",
+        "lead": "伊莫已在中國區 App Store 上線 iPhone 與 iPad 版本。2026 年 9 月 22 日核驗時，Android 美國區 Google Play 已顯示「安裝」；其他國家、帳號與相容裝置的按鈕仍可能不同。",
         "body": [
           {
             "t": "h",
@@ -799,7 +799,7 @@
             "t": "table",
             "head": ["平台", "目前狀態"],
             "rows": [
-              ["iPhone / iPad", "App Store 標註 2026 年 9 月 23 日"],
+              ["iPhone / iPad", "中國區 App Store 已上線；其他地區可能不同"],
               ["Android", "美國區 Google Play 已顯示安裝；地區、帳號與裝置可用性可能不同"],
               ["進度互通", "社群報導稱互通，未找到官方聲明"],
               ["裝置需求", "官方未公布完整相容清單"]
@@ -811,7 +811,7 @@
           },
           {
             "t": "p",
-            "c": "官方 App Store 條目顯示 iPhone 與 iPad 版本為 2026 年 9 月 23 日。Android 已無需依賴社群日期推測：美國區 Google Play 在 9 月 22 日顯示了安裝按鈕，但這不能證明所有國家和裝置已同步開放。"
+            "c": "伊莫已在中國區 App Store 上線 iPhone 與 iPad 版本，該頁列出 iOS 15.0 或更高版本及 3.7 GB 商店大小。美國區 Google Play 在 9 月 22 日顯示安裝按鈕，但兩項核驗都不能證明所有國家和裝置已同步開放。"
           },
           {
             "t": "h",
@@ -1431,7 +1431,7 @@
           },
           {
             "t": "p",
-            "c": "2026 年 9 月 22 日核驗時，官方網站顯示預約數為 40,130,660。"
+            "c": "2026 年 9 月 23 日核驗時，官方網站顯示預約數為 40,135,279。"
           },
           {
             "t": "h",
@@ -1611,7 +1611,7 @@
           },
           {
             "t": "p",
-            "c": "已核驗的 PC 與 Xbox 管道可以：Steam 已標記發行，官網提供 PC 啟動器，Xbox 已開放免費本體。PlayStation 請查看當地商店目前按鈕；iOS 仍標註 9 月 23 日，Android 時間尚未確認。"
+            "c": "已核驗的 PC 與 Xbox 管道可以：Steam 已標記發行，官網提供 PC 啟動器，Xbox 已開放免費本體。PlayStation 請查看當地商店目前按鈕；iOS 中國區已上線，Android 美國區已顯示安裝，其他地區可能不同。"
           },
           {
             "t": "h",

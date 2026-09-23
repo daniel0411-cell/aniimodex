@@ -42,10 +42,11 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'ios-launch-date',
-    claim: 'The Aniimo App Store listing shows September 23, 2026 for iPhone and iPad.',
+    claim:
+      'The China App Store lists Aniimo as available for iPhone and iPad; availability in other storefronts can differ.',
     status: 'official',
-    checkedAt: '2026-09-15',
-    sourceIds: ['aniimo-app-store-6759098797'],
+    checkedAt: '2026-09-23',
+    sourceIds: ['aniimo-app-store-cn-6768584375'],
   },
   {
     id: 'forms-and-sparkling-styles',
@@ -61,7 +62,7 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'prismana-changes-element',
     claim: 'A Prismana form changes an Aniimo element rather than its stats.',
-    status: 'community',
+    status: 'official',
     checkedAt: '2026-09-18',
     sourceIds: [],
   },
@@ -76,10 +77,10 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'mobile-shared-launch-date',
     claim:
-      'Aniimo mobile launches on September 23, 2026 for both iOS and Android.',
+      'Aniimo mobile availability is live in the China iOS and US Android storefronts checked, but availability can differ by region, account and device.',
     status: 'community',
-    checkedAt: '2026-09-18',
-    sourceIds: [],
+    checkedAt: '2026-09-23',
+    sourceIds: ['aniimo-app-store-cn-6768584375', 'aniimo-google-play'],
   },
   {
     id: 'mobile-cross-progression',
@@ -91,9 +92,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'pre-registration-milestones',
     claim:
-      'The official site shows 40,130,660 pre-registrations and all four published milestone rewards unlocked.',
+      'The official site shows 40,135,279 pre-registrations and all four published milestone rewards unlocked.',
     status: 'official',
-    checkedAt: '2026-09-22',
+    checkedAt: '2026-09-23',
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
