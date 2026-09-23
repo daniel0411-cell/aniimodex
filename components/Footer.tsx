@@ -1,11 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
-
-const friendLinks = [
-  { href: 'https://example.com', labelKey: 'f1' },
-  { href: 'https://example.com', labelKey: 'f2' },
-  { href: 'https://example.com', labelKey: 'f3' },
-];
+import { Link } from '@/i18n/navigation';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
@@ -15,7 +9,6 @@ export default async function Footer() {
     <footer className="border-t border-ink-border bg-ink-soft">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-          {/* 版权信息 */}
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded bg-primary text-xs font-bold text-white">
@@ -26,24 +19,12 @@ export default async function Footer() {
             <p className="text-sm text-text-muted">{t('disclaimer', { year })}</p>
           </div>
 
-          {/* 友情链接（暂时隐藏） */}
-          {false && (
-            <div>
-              <h4 className="mb-3 text-sm font-semibold text-text-secondary">{t('friends')}</h4>
-              <ul className="space-y-2">
-                {friendLinks.map((link) => (
-                  <li key={link.labelKey}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-text-muted transition-colors hover:text-primary-light"
-                    >
-                      {t('friendLinks.' + link.labelKey)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <nav aria-label={t('legalNav')} className="flex max-w-xl flex-wrap gap-x-5 gap-y-3 text-sm">
+            <Link href="/about" className="text-text-secondary hover:text-primary-light">{t('about')}</Link>
+            <Link href="/privacy" className="text-text-secondary hover:text-primary-light">{t('privacy')}</Link>
+            <Link href="/terms" className="text-text-secondary hover:text-primary-light">{t('terms')}</Link>
+            <Link href="/guide/how-we-verify" className="text-text-secondary hover:text-primary-light">{t('verification')}</Link>
+          </nav>
         </div>
       </div>
     </footer>

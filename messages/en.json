@@ -125,12 +125,54 @@
     }
   },
   "footer": {
-    "disclaimer": "© {year} AniimoDex · For learning purposes only, not an official product.",
-    "friends": "Friend Links",
-    "friendLinks": {
-      "f1": "Friend Site 1",
-      "f2": "Friend Site 2",
-      "f3": "Friend Site 3"
+    "disclaimer": "© {year} AniimoDex · Unofficial fan resource. Game names, artwork and trademarks belong to their respective owners.",
+    "legalNav": "Site information and policies",
+    "about": "About & contact",
+    "privacy": "Privacy",
+    "terms": "Terms & copyright",
+    "verification": "How we verify"
+  },
+  "legal": {
+    "about": {
+      "title": "About AniimoDex",
+      "intro": "AniimoDex is an independent, unofficial fan-made database and player guide for Aniimo. It is not operated, sponsored or endorsed by Pawprint Studio, Kingsglory, Xbox, PlayStation, Steam, Apple, Google or Epic Games.",
+      "updated": "Last updated: September 23, 2026",
+      "sections": [
+        { "heading": "What this site provides", "paragraphs": ["We organize official-source creature records, evolution families, habitats, abilities, platform information and practical guides into searchable pages and tools. Our goal is to answer a player question clearly, show where the answer came from and identify what remains unknown."], "items": ["Searchable Aniimo records and entity relationships", "Calculators and lookups built from published formulas or clearly labelled community data", "Guides that distinguish official facts, reproducible observations and unconfirmed claims"] },
+        { "heading": "Editorial and correction standards", "paragraphs": ["Official sources are preferred. Each factual guide names its sources and check date. We do not invent stats, locations, rates, builds or platform support. When a source changes, we update the affected page; unsupported claims are removed or labelled unknown."], "items": ["Commercial relationships do not determine rankings or factual conclusions", "Generated or translated drafts are reviewed against the registered source before publication", "Material corrections update the page date and evidence record"] },
+        { "heading": "Contact, corrections and privacy requests", "paragraphs": ["For factual corrections, privacy questions or general site enquiries, email privacy@aniimodex.com. Include the page URL and enough detail to identify the issue. For copyright or trademark concerns, use copyright@aniimodex.com and include the work, the affected URL, your authority and the requested action."], "items": ["Privacy and general contact: privacy@aniimodex.com", "Copyright and trademark requests: copyright@aniimodex.com"] },
+        { "heading": "Funding and independence", "paragraphs": ["AniimoDex may use display advertising to fund hosting and maintenance. Advertising does not change our evidence labels, sources or editorial conclusions. Sponsored material, if ever published, will be clearly identified."] }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "This policy explains what AniimoDex may collect, why it is used, how advertising and cookies may work, and the choices available to visitors.",
+      "updated": "Effective and last updated: September 23, 2026",
+      "sections": [
+        { "heading": "Information processed when you visit", "paragraphs": ["Our hosting and security providers may process standard request information such as IP address, browser and device type, requested URL, approximate region, timestamps and security signals. We use this information to deliver the site, prevent abuse, diagnose failures and understand aggregate performance. AniimoDex does not require an account and does not intentionally collect names, passwords, payment details or game credentials."] },
+        { "heading": "Cookies, local storage and advertising", "paragraphs": ["The site may use essential storage for language or interface preferences. If Google AdSense or another advertising service is enabled, advertising partners may use cookies, device identifiers or similar technologies to serve, measure and limit ads. Google may use advertising cookies to show ads based on visits to this and other sites where permitted by law."], "items": ["Google's advertising technology information: policies.google.com/technologies/ads", "Google ad personalization controls: adssettings.google.com", "You can also restrict cookies through your browser settings"] },
+        { "heading": "Consent in the EEA, United Kingdom and Switzerland", "paragraphs": ["Where required, non-essential advertising and measurement storage will not be used until a visitor makes a choice through a Google-certified consent management platform. Visitors will be able to accept, reject or manage available purposes and vendors, and revisit that choice. Contextual or limited ads may be used where appropriate."] },
+        { "heading": "How information is shared", "paragraphs": ["Information may be processed by infrastructure, security, analytics, consent and advertising providers only to operate, protect, measure or fund the site. These providers act under their own terms or processing obligations. We do not sell personal information in the ordinary meaning of selling data for money. We may disclose information when legally required or necessary to protect users, the site or the public."] },
+        { "heading": "Retention, transfers and security", "paragraphs": ["Technical logs are retained only as long as reasonably needed for security, troubleshooting, legal compliance and aggregate reporting. Providers may process data in countries other than your own and apply their contractual and legal safeguards. No online service can guarantee absolute security, but we minimize collection and use reputable hosting and security controls."] },
+        { "heading": "Your choices and requests", "paragraphs": ["Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, or withdraw consent. Email privacy@aniimodex.com with the request and the country or region whose law applies. We may need reasonable verification and may retain information when legally required."], "items": ["Do not send game credentials, identity documents or payment information unless specifically and lawfully requested", "Browser controls and the consent interface can be used to manage cookies", "Google advertising choices can be managed at adssettings.google.com"] },
+        { "heading": "Children", "paragraphs": ["AniimoDex is a general-audience game reference site and is not directed to children under the minimum age required to consent to online data processing in their jurisdiction. We do not knowingly request personal information from children. A parent or guardian may contact us to request review or deletion."] },
+        { "heading": "External links and policy changes", "paragraphs": ["Links to game publishers, stores and community sources lead to services with their own privacy practices. We are not responsible for those practices. Material changes to this policy will be posted here with a revised effective date."] }
+      ]
+    },
+    "terms": {
+      "title": "Terms, Copyright and Disclaimer",
+      "intro": "These terms describe permitted use of AniimoDex, ownership boundaries, source attribution, correction requests and limitations of this unofficial fan resource.",
+      "updated": "Effective and last updated: September 23, 2026",
+      "sections": [
+        { "heading": "Unofficial fan resource", "paragraphs": ["AniimoDex is independent and unofficial. Aniimo, character names, logos, artwork, screenshots and other game assets are owned by their respective rights holders. Their appearance here does not imply affiliation, sponsorship or endorsement."] },
+        { "heading": "Site content and permitted use", "paragraphs": ["Our original page structure, commentary, source comparisons, tools and editorial text may be used for personal, non-commercial reference. You may link to public pages and quote short excerpts with attribution. Do not copy the database, guides or site design at scale; remove attribution; bypass technical controls; interfere with the service; or use the site for unlawful, deceptive or abusive activity."] },
+        { "heading": "Game data, images and source material", "paragraphs": ["Names, artwork and factual fields are presented for identification, commentary and player reference with source links where available. We add search, relationships, comparisons, verification labels and explanatory context rather than claiming ownership of source material. Rights holders may request correction, attribution changes or removal at copyright@aniimodex.com."], "items": ["Identify the protected work or mark", "Provide the exact AniimoDex URL", "Explain your authority and requested action", "Provide a reliable way to contact you"] },
+        { "heading": "Accuracy and no professional advice", "paragraphs": ["We try to keep information current, but games, storefronts, regional availability and live systems can change without notice. Unknown fields are not guarantees. AniimoDex provides information as available and is not legal, financial, safety or purchasing advice. Verify important decisions through the official game, publisher or platform store."] },
+        { "heading": "External services and downloads", "paragraphs": ["External links are provided for convenience and may change. We do not control third-party services. Download the game only from official publisher or platform-store links, and never submit game or store credentials to an unofficial download page."] },
+        { "heading": "Advertising and endorsements", "paragraphs": ["Advertising may appear on the site. An ad is not an AniimoDex recommendation and will not be designed to imitate navigation, a download control or game content. Paid or sponsored editorial material, if introduced, will be clearly disclosed."] },
+        { "heading": "Availability and limitation", "paragraphs": ["The site may change, suspend or remove content for accuracy, legal, security or maintenance reasons. To the extent permitted by law, AniimoDex is not liable for losses arising from reliance on outdated information, third-party links, service interruption or in-game decisions. Nothing here excludes rights that cannot legally be excluded."] },
+        { "heading": "Changes and contact", "paragraphs": ["We may revise these terms when the site, law or service providers change. Continued use after publication of an update means the revised terms apply. Questions may be sent to privacy@aniimodex.com; rights-holder notices should be sent to copyright@aniimodex.com."] }
+      ]
     }
   },
   "breadcrumb": {
