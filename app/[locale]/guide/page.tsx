@@ -101,6 +101,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
     {
       key: 'updates',
       slugs: [
+        'aniimo-version-1-1-update',
         'aniimo-language-controller-support',
         'aniimo-system-requirements',
         'aniimo-pre-registration',

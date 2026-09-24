@@ -37,6 +37,14 @@ export const sources: SourceReference[] = [
       'Steam lists Aniimo as released, free-to-play and Windows-only, developed and published by Pawprint Studio, with Sep 15, 2026 shown for the US store region checked.',
   },
   {
+    id: 'aniimo-steam-update-1-1-2026-09-23',
+    url: 'https://store.steampowered.com/news/app/4126040/view/703279756977636272',
+    title: 'Aniimo Official Steam Announcement - Version 1.1 Update and Server Maintenance',
+    accessedAt: '2026-09-23',
+    evidence:
+      'The official Steam announcement states that version 1.1 maintenance ran on September 23, 2026, mobile platforms launched globally after the update, and servers are now live. It lists 1,000 Glimmers plus one Sparkling Cube as compensation, to be delivered after the temporarily unavailable in-game mailbox is restored. It also publishes the Irisalis event, Holo-Battle Interlink, Egg Heist Chaos Mode and dated event schedules.',
+  },
+  {
     id: 'aniimo-playstation-10018491',
     url: 'https://store.playstation.com/concept/10018491',
     title: 'Aniimo on PlayStation Store',

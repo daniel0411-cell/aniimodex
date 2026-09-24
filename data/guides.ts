@@ -129,6 +129,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-app-store-6759098797',
       'aniimo-app-store-cn-6768584375',
       'aniimo-google-play',
+      'aniimo-steam-update-1-1-2026-09-23',
     ],
   },
   {
@@ -272,7 +273,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-09-20',
+    date: '2026-09-23',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -287,7 +288,21 @@ export const guidePosts: GuidePost[] = [
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-epic-759396',
+      'aniimo-steam-update-1-1-2026-09-23',
     ],
+  },
+  {
+    slug: 'aniimo-version-1-1-update',
+    date: '2026-09-23',
+    readMinutes: 7,
+    relatedToolHrefs: ['/dex', '/tools/catch'],
+    relatedSlugs: [
+      'aniimo-launch-checklist-known-issues',
+      'aniimo-mobile',
+      'aniimo-egg-heist',
+      'aniimo-forms-explained',
+    ],
+    sourceIds: ['aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-choose-by-mobility-role',

@@ -110,6 +110,57 @@ const english: Record<string, LaunchGuide> = {
       },
     ],
   },
+  'aniimo-mobile': {
+    title: 'Aniimo Mobile Is Live: iOS and Android Download Status',
+    subtitle:
+      'Version 1.1 launched Aniimo globally on mobile on September 23; local store, account and device availability can still differ.',
+    tag: 'Mobile',
+    lead: 'Aniimo officially launched globally on mobile after the September 23 version 1.1 update. Use the official App Store or Google Play listing for your country and device, because a global launch announcement does not guarantee identical storefront buttons or compatibility everywhere.',
+    body: [
+      { t: 'h', c: 'Is Aniimo available on mobile now?' },
+      {
+        t: 'p',
+        c: 'Yes. The official version 1.1 announcement says Aniimo launched globally on mobile platforms after the September 23 maintenance. The China App Store and US Google Play listings were also directly available when checked.',
+      },
+      { t: 'h', c: 'Mobile status at a glance' },
+      {
+        t: 'table',
+        head: ['Item', 'Verified status'],
+        rows: [
+          [
+            'Global mobile launch',
+            'Officially announced for September 23 after version 1.1 maintenance',
+          ],
+          ['iPhone and iPad', 'China App Store listing verified; check your local storefront'],
+          [
+            'Android',
+            'US Google Play Install action verified; check your local account and device',
+          ],
+          ['In-game mailbox', 'Temporarily unavailable in the current official notice'],
+          ['Cross-save and progression', 'No complete official policy in the registered sources'],
+        ],
+      },
+      { t: 'h', c: 'Why might the download button still be missing?' },
+      {
+        t: 'p',
+        c: 'Store rollout, country, account region, age settings and device compatibility can still affect what you see. Open the official listing with the account and device you intend to use; do not install a third-party APK or modified client.',
+      },
+      { t: 'h', c: 'What are the verified iOS requirements?' },
+      {
+        t: 'p',
+        c: 'The China App Store listing shows iOS 15.0 or later, a 3.7 GB listing size and support for iPhone and iPad. Those listing details do not prove every device will deliver the same performance.',
+      },
+      { t: 'h', c: 'Does mobile share progress with PC and console?' },
+      {
+        t: 'p',
+        c: 'The registered official sources still do not publish a complete cross-save, cross-progression, purchase or paid-currency transfer policy. Treat community reports as unconfirmed until an official account policy is available.',
+      },
+      {
+        t: 'quote',
+        c: 'Last official-source check: September 23, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+      },
+    ],
+  },
   'aniimo-face-data-import': {
     title: 'Aniimo Face Data Import: Current Verification and Safety Guide',
     subtitle:
@@ -161,8 +212,20 @@ const english: Record<string, LaunchGuide> = {
     subtitle:
       'A source-checked troubleshooting hub that separates confirmed platform facts from unverified launch reports.',
     tag: 'Known issues',
-    lead: 'Start here when Aniimo will not launch, connect or save as expected. AniimoDex does not turn isolated posts into confirmed bugs: each category below states what can be verified now, what you can safely check, and what evidence is still missing.',
+    lead: 'Aniimo servers are live after the September 23 version 1.1 maintenance. The official notice confirms a temporary in-game mailbox issue and delayed compensation delivery; other reports remain unconfirmed unless an official notice or reproducible test supports them.',
     body: [
+      { t: 'h', c: 'September 23 official service status' },
+      {
+        t: 'table',
+        head: ['Item', 'Official status'],
+        rows: [
+          ['Servers', 'Live after version 1.1 maintenance'],
+          ['Mobile launch', 'Officially launched globally after the update'],
+          ['In-game mailbox', 'Temporarily unavailable'],
+          ['Maintenance compensation', '1,000 Glimmers, sent after mailbox restoration'],
+          ['Known-issue compensation', '1 Sparkling Cube, sent after mailbox restoration'],
+        ],
+      },
       { t: 'h', c: 'Current playable status' },
       {
         t: 'table',
@@ -176,14 +239,22 @@ const english: Record<string, LaunchGuide> = {
             'Published launch time has passed; availability can vary by regional store',
             'September 14',
           ],
-          ['iPhone and iPad', 'Available in the China App Store; other regions may differ', 'September 23'],
-          ['Android', 'Install shown in the US Google Play listing; availability may vary', 'September 22'],
+          [
+            'iPhone and iPad',
+            'Available in the China App Store; other regions may differ',
+            'September 23',
+          ],
+          [
+            'Android',
+            'Install shown in the US Google Play listing; availability may vary',
+            'September 22',
+          ],
         ],
       },
       { t: 'h', c: 'Login, server or connection problems' },
       {
         t: 'p',
-        c: 'No registered official source currently publishes a complete outage list or a universal login fix. First confirm the correct region and server, restart the official client, check the storefront or official site for a maintenance notice, and record the exact error before reinstalling.',
+        c: 'The official announcement says all servers are now live after maintenance. It does not publish a universal login fix. If you still cannot connect, restart the official client to obtain the latest build, confirm the correct region and server, and record the exact error before reinstalling.',
       },
       { t: 'h', c: 'Game will not launch, crashes or runs poorly' },
       {
@@ -218,7 +289,75 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last content review: September 20, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
+        c: 'Last official-source review: September 23, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
+      },
+    ],
+  },
+  'aniimo-version-1-1-update': {
+    title: 'Aniimo Version 1.1 Update: Mobile Launch, Irisalis and Event Schedule',
+    subtitle:
+      'Official September 23 update details, server status, compensation, new modes and time-limited events in one schedule.',
+    tag: 'Version 1.1',
+    lead: 'Aniimo version 1.1 completed maintenance on September 23, 2026. The official Steam announcement says all servers are live, mobile platforms have launched globally, and compensation will arrive after the in-game mailbox is restored.',
+    body: [
+      { t: 'h', c: 'Current server and compensation status' },
+      {
+        t: 'table',
+        head: ['Status', 'Official detail'],
+        rows: [
+          ['Servers', 'Live after September 23 maintenance'],
+          ['Mobile platforms', 'Global launch followed the version 1.1 update'],
+          ['Mailbox', 'Temporarily unavailable'],
+          ['Compensation mail 1', '1,000 Glimmers'],
+          ['Compensation mail 2', '1 Sparkling Cube'],
+        ],
+      },
+      { t: 'h', c: "Windchaser's Departure and Irisalis" },
+      {
+        t: 'p',
+        c: "The Irisalis Legendary Journey runs from September 25 at 10:00 to December 10 at 07:59 (UTC+8) and unlocks at Student I. Players collect weekly-limited Iris Petals to craft the Legendary Aniipod: Irisalis. The seasonal Windchaser's Departure Aniipod is described as guaranteeing capture, Perfect Innate Potential, Sparkling Form and exclusive seasonal perks.",
+      },
+      { t: 'h', c: 'New gameplay modes' },
+      {
+        t: 'table',
+        head: ['Mode', 'Schedule and requirement'],
+        rows: [
+          [
+            'Holo-Battle Interlink',
+            'Thursday 04:00 to Monday 03:59 weekly; Trailblazer I; four-player or AI teammates',
+          ],
+          [
+            'Egg Heist Chaos Mode',
+            'Unlocks September 24 at 04:00; requires Elite Egg Seeker Tier IV and a Chaos Ticket',
+          ],
+        ],
+      },
+      { t: 'h', c: 'Time-limited event calendar' },
+      {
+        t: 'table',
+        head: ['Event', 'Official period (UTC+8)'],
+        rows: [
+          ['Glamour Star', 'Sep 25 04:00 - Oct 2 03:59'],
+          ['Aniimo Discovery', 'Sep 25 04:00 - Oct 9 03:59'],
+          ['Vein Abundance: Rosetower Woods', 'Sep 28 04:00 - Oct 5 03:59'],
+          ['Vein Abundance: Berylline Vale', 'Oct 5 04:00 - Oct 12 03:59'],
+          ['Journey Chronicles', 'Oct 1 04:00 - Oct 29 03:59'],
+        ],
+      },
+      { t: 'h', c: 'Quality-of-life changes worth knowing' },
+      { t: 'li', c: 'A Pathfinder voiceover toggle was added under Settings > Audio > Balance.' },
+      { t: 'li', c: 'Unobtained Sparkling Forms are temporarily hidden in Aniilog.' },
+      {
+        t: 'li',
+        c: 'Companion Mode no longer requires friends to stand face-to-face before an invite.',
+      },
+      {
+        t: 'li',
+        c: 'Home interfaces received new shortcuts, controller navigation and build-snapping improvements.',
+      },
+      {
+        t: 'quote',
+        c: 'All times above come from the official announcement and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
       },
     ],
   },
@@ -407,6 +546,218 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             {
               t: 'quote',
               c: '内容最后检查：2026 年 9 月 20 日。有效的问题报告应包含平台、地区、服务器、版本、时间、完整错误与重现步骤。',
+            },
+          ],
+        };
+  }
+  if (guide === english['aniimo-version-1-1-update']) {
+    return traditional
+      ? {
+          title: 'Aniimo 1.1 版本更新：行動端上線、Irisalis 與活動時間表',
+          subtitle: '整理 9 月 23 日官方更新、伺服器狀態、補償、新模式與限時活動。',
+          tag: '1.1 版本',
+          lead: 'Aniimo 1.1 版本已於 2026 年 9 月 23 日完成維護。Steam 官方公告確認伺服器已開放、行動端已全球上線，補償將在遊戲內郵箱恢復後發送。',
+          body: [
+            { t: 'h', c: '目前伺服器與補償狀態' },
+            {
+              t: 'table',
+              head: ['項目', '官方狀態'],
+              rows: [
+                ['伺服器', '9 月 23 日維護後已開放'],
+                ['行動端', '1.1 更新後全球上線'],
+                ['遊戲內郵箱', '暫時無法使用'],
+                ['補償郵件 1', '1,000 Glimmers'],
+                ['補償郵件 2', '1 個 Sparkling Cube'],
+              ],
+            },
+            { t: 'h', c: "Windchaser's Departure 與 Irisalis" },
+            {
+              t: 'p',
+              c: 'Irisalis 傳說旅程於 9 月 25 日 10:00 至 12 月 10 日 07:59（UTC+8）開放，需達 Student I。玩家可收集每週有限的 Iris Petals 製作對應 Legendary Aniipod。',
+            },
+            { t: 'h', c: '新玩法模式' },
+            {
+              t: 'table',
+              head: ['模式', '時間與條件'],
+              rows: [
+                [
+                  'Holo-Battle Interlink',
+                  '每週四 04:00 至週一 03:59；Trailblazer I；4 人或 AI 隊友',
+                ],
+                [
+                  'Egg Heist Chaos Mode',
+                  '9 月 24 日 04:00 開放；需 Elite Egg Seeker Tier IV 及 Chaos Ticket',
+                ],
+              ],
+            },
+            { t: 'h', c: '限時活動時間表' },
+            {
+              t: 'table',
+              head: ['活動', '官方時間（UTC+8）'],
+              rows: [
+                ['Glamour Star', '9/25 04:00 - 10/2 03:59'],
+                ['Aniimo Discovery', '9/25 04:00 - 10/9 03:59'],
+                ['Vein Abundance: Rosetower Woods', '9/28 04:00 - 10/5 03:59'],
+                ['Vein Abundance: Berylline Vale', '10/5 04:00 - 10/12 03:59'],
+                ['Journey Chronicles', '10/1 04:00 - 10/29 03:59'],
+              ],
+            },
+            { t: 'h', c: '值得注意的便利性更新' },
+            { t: 'li', c: '設定 > 音效 > 平衡新增主角語音開關。' },
+            { t: 'li', c: 'Aniilog 暫時隱藏尚未取得的 Sparkling Forms。' },
+            { t: 'li', c: 'Companion Mode 邀請不再需要與朋友面對面站立。' },
+            { t: 'li', c: '家園介面新增快捷入口，並改善控制器導覽與建造吸附顯示。' },
+            { t: 'quote', c: '上述時間均來自官方公告並使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
+          ],
+        }
+      : {
+          title: 'Aniimo 1.1 版本更新：移动端上线、Irisalis 与活动时间表',
+          subtitle: '整理 9 月 23 日官方更新、服务器状态、补偿、新模式与限时活动。',
+          tag: '1.1 版本',
+          lead: 'Aniimo 1.1 版本已于 2026 年 9 月 23 日完成维护。Steam 官方公告确认服务器已开放、移动端已全球上线，补偿将在游戏内邮箱恢复后发送。',
+          body: [
+            { t: 'h', c: '当前服务器与补偿状态' },
+            {
+              t: 'table',
+              head: ['项目', '官方状态'],
+              rows: [
+                ['服务器', '9 月 23 日维护后已开放'],
+                ['移动端', '1.1 更新后全球上线'],
+                ['游戏内邮箱', '暂时无法使用'],
+                ['补偿邮件 1', '1,000 Glimmers'],
+                ['补偿邮件 2', '1 个 Sparkling Cube'],
+              ],
+            },
+            { t: 'h', c: "Windchaser's Departure 与 Irisalis" },
+            {
+              t: 'p',
+              c: 'Irisalis 传说旅程于 9 月 25 日 10:00 至 12 月 10 日 07:59（UTC+8）开放，需达 Student I。玩家可收集每周有限的 Iris Petals 制作对应 Legendary Aniipod。',
+            },
+            { t: 'h', c: '新玩法模式' },
+            {
+              t: 'table',
+              head: ['模式', '时间与条件'],
+              rows: [
+                [
+                  'Holo-Battle Interlink',
+                  '每周四 04:00 至周一 03:59；Trailblazer I；4 人或 AI 队友',
+                ],
+                [
+                  'Egg Heist Chaos Mode',
+                  '9 月 24 日 04:00 开放；需 Elite Egg Seeker Tier IV 及 Chaos Ticket',
+                ],
+              ],
+            },
+            { t: 'h', c: '限时活动时间表' },
+            {
+              t: 'table',
+              head: ['活动', '官方时间（UTC+8）'],
+              rows: [
+                ['Glamour Star', '9/25 04:00 - 10/2 03:59'],
+                ['Aniimo Discovery', '9/25 04:00 - 10/9 03:59'],
+                ['Vein Abundance: Rosetower Woods', '9/28 04:00 - 10/5 03:59'],
+                ['Vein Abundance: Berylline Vale', '10/5 04:00 - 10/12 03:59'],
+                ['Journey Chronicles', '10/1 04:00 - 10/29 03:59'],
+              ],
+            },
+            { t: 'h', c: '值得注意的便利性更新' },
+            { t: 'li', c: '设置 > 音频 > 平衡新增主角语音开关。' },
+            { t: 'li', c: 'Aniilog 暂时隐藏尚未获得的 Sparkling Forms。' },
+            { t: 'li', c: 'Companion Mode 邀请不再需要与朋友面对面站立。' },
+            { t: 'li', c: '家园界面新增快捷入口，并改善手柄导航与建造吸附显示。' },
+            { t: 'quote', c: '上述时间均来自官方公告并使用 UTC+8；参与活动仍需满足对应解锁条件。' },
+          ],
+        };
+  }
+  if (guide === english['aniimo-mobile']) {
+    return traditional
+      ? {
+          title: 'Aniimo 手機版已上線：iOS 與 Android 下載狀態',
+          subtitle:
+            '1.1 版本已於 9 月 23 日推動 Aniimo 行動端全球上線；商店、帳號與裝置可用性仍可能不同。',
+          tag: '手機版',
+          lead: 'Aniimo 已在 9 月 23 日 1.1 版本更新後官方宣布行動端全球上線。請使用當地官方 App Store 或 Google Play 條目；全球上線不代表每個地區、帳號和裝置會顯示相同按鈕。',
+          body: [
+            { t: 'h', c: 'Aniimo 手機版現在可以玩嗎？' },
+            {
+              t: 'p',
+              c: '可以。官方 1.1 版本公告表示，Aniimo 在 9 月 23 日維護後正式於行動端全球上線。中國區 App Store 與美國區 Google Play 條目也已分別實際核驗。',
+            },
+            { t: 'h', c: '手機版狀態一覽' },
+            {
+              t: 'table',
+              head: ['項目', '已核驗狀態'],
+              rows: [
+                ['行動端全球上線', '官方宣布 9 月 23 日 1.1 維護後上線'],
+                ['iPhone / iPad', '中國區 App Store 已核驗；請查看當地商店'],
+                ['Android', '美國區 Google Play 已核驗安裝按鈕；請查看當地帳號與裝置'],
+                ['遊戲內郵箱', '目前官方公告標註為暫時無法使用'],
+                ['跨端存檔與進度', '已登記官方來源仍無完整政策'],
+              ],
+            },
+            { t: 'h', c: '為什麼仍可能看不到下載按鈕？' },
+            {
+              t: 'p',
+              c: '商店推送、國家、帳號地區、年齡設定與裝置相容性仍可能影響顯示。請使用實際遊玩帳號和裝置開啟官方條目，不要安裝第三方 APK 或修改版客戶端。',
+            },
+            { t: 'h', c: 'iOS 已核驗的要求是什麼？' },
+            {
+              t: 'p',
+              c: '中國區 App Store 列出 iOS 15.0 或更高版本、3.7 GB 商店大小，並支援 iPhone 與 iPad。這些商店資料不能保證每台裝置都有相同效能。',
+            },
+            { t: 'h', c: '手機版與 PC / 主機進度互通嗎？' },
+            {
+              t: 'p',
+              c: '已登記的官方來源仍未公開完整的跨存檔、跨進度、購買與付費貨幣轉移政策。在官方公開帳號政策前，社群說法仍視為未證實。',
+            },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 9 月 23 日。行動端已官方上線，但仍需在當地商店確認裝置可用性。',
+            },
+          ],
+        }
+      : {
+          title: 'Aniimo 手游已上线：iOS 与 Android 下载状态',
+          subtitle:
+            '1.1 版本已于 9 月 23 日推动 Aniimo 移动端全球上线；商店、账号与设备可用性仍可能不同。',
+          tag: '手游',
+          lead: 'Aniimo 已在 9 月 23 日 1.1 版本更新后官方宣布移动端全球上线。请使用当地官方 App Store 或 Google Play 条目；全球上线不代表每个地区、账号和设备会显示相同按钮。',
+          body: [
+            { t: 'h', c: 'Aniimo 手游现在可以玩吗？' },
+            {
+              t: 'p',
+              c: '可以。官方 1.1 版本公告表示，Aniimo 在 9 月 23 日维护后正式于移动端全球上线。中国区 App Store 与美国区 Google Play 条目也已分别实际核验。',
+            },
+            { t: 'h', c: '移动端状态一览' },
+            {
+              t: 'table',
+              head: ['项目', '已核验状态'],
+              rows: [
+                ['移动端全球上线', '官方宣布 9 月 23 日 1.1 维护后上线'],
+                ['iPhone / iPad', '中国区 App Store 已核验；请查看当地商店'],
+                ['Android', '美国区 Google Play 已核验安装按钮；请查看当地账号与设备'],
+                ['游戏内邮箱', '当前官方公告标记为暂时无法使用'],
+                ['跨端存档与进度', '已登记官方来源仍无完整政策'],
+              ],
+            },
+            { t: 'h', c: '为什么仍可能看不到下载按钮？' },
+            {
+              t: 'p',
+              c: '商店推送、国家、账号地区、年龄设置与设备兼容性仍可能影响显示。请使用实际游玩账号和设备打开官方条目，不要安装第三方 APK 或修改版客户端。',
+            },
+            { t: 'h', c: 'iOS 已核验的要求是什么？' },
+            {
+              t: 'p',
+              c: '中国区 App Store 列出 iOS 15.0 或更高版本、3.7 GB 商店大小，并支持 iPhone 与 iPad。这些商店资料不能保证每台设备都有相同性能。',
+            },
+            { t: 'h', c: '手游与 PC / 主机进度互通吗？' },
+            {
+              t: 'p',
+              c: '已登记的官方来源仍未公布完整的跨存档、跨进度、购买与付费货币转移政策。在官方公布账号政策前，社区说法仍视为未证实。',
+            },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 9 月 23 日。移动端已官方上线，但仍需在当地商店确认设备可用性。',
             },
           ],
         };
