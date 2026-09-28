@@ -143,6 +143,102 @@ const english: Record<string, LaunchGuide> = {
       },
     ],
   },
+  'aniimo-holo-battle-interlink': {
+    title: 'Aniimo Holo-Battle Interlink Guide: Schedule, Teams & Star Rewards',
+    subtitle:
+      'Official 1.1 rules for Holo-Battle Interlink: its weekly window, Trailblazer I requirement, routes, team options and reward structure.',
+    tag: 'Weekly mode',
+    lead: 'Holo-Battle Interlink is a recurring combat activity introduced in Aniimo 1.1. The official announcement confirms its weekly availability, entry requirement, three-route structure, four-player team option and star-based rewards, but does not publish a best team, route tier list or complete reward values.',
+    body: [
+      { t: 'h', c: 'When is Holo-Battle Interlink open?' },
+      {
+        t: 'table',
+        head: ['Item', 'Official status'],
+        rows: [
+          ['Schedule', 'Every Thursday 04:00 to Monday 03:59 (UTC+8)'],
+          ['Unlock requirement', 'Reach Trailblazer I'],
+          ['Team options', 'Form a four-player team or match with AI teammates'],
+          ['Routes per cycle', 'Three distinct routes'],
+          ['Replay availability', 'Each route can be replayed freely'],
+        ],
+      },
+      { t: 'h', c: 'What is the Holo-Battle Interlink mode?' },
+      {
+        t: 'p',
+        c: 'The official description calls it a Battle Art simulation of Alpha encounters based on historical high-threat Aniimos. Each route has its own Alpha encounters and environmental mechanics. Before a battle, players choose their Aniimo lineup and buff effects; in four-player co-op, the Team Leader selects the buffs.',
+      },
+      { t: 'h', c: 'How do Star Rank rewards work?' },
+      {
+        t: 'p',
+        c: 'The game records the highest Star Rank for each of the three routes independently. Milestone rewards unlock from the combined Star total across all three routes. Helping other players improve their Star Ranks also grants Support Rewards. Both Star Rank Rewards and Support Rewards reset weekly.',
+      },
+      { t: 'h', c: 'What is not officially published yet?' },
+      {
+        t: 'table',
+        head: ['Topic', 'Status on AniimoDex'],
+        rows: [
+          ['Best team or build', 'Not published without documented live testing'],
+          ['Route rankings or damage thresholds', 'Not published in the official announcement'],
+          ['Exact milestone and Support Reward values', 'Not published in the official announcement'],
+          ['Current cycle Alpha list', 'Check the live in-game cycle; no static list is assumed'],
+        ],
+      },
+      { t: 'h', c: 'What should I check before joining?' },
+      { t: 'li', c: 'Confirm Trailblazer I is unlocked and the UTC+8 weekly window is open' },
+      { t: 'li', c: 'Choose a route and review the displayed environmental mechanics in the current cycle' },
+      { t: 'li', c: 'In co-op, agree on the Team Leader buff selection before starting' },
+      { t: 'li', c: 'Record your highest Star Rank in each route before the weekly reset' },
+      {
+        t: 'quote',
+        c: 'Last official-source check: September 28, 2026. Times use UTC+8. This page will add live-cycle details only when an official notice or reproducible current-version record is available.',
+      },
+    ],
+  },
+  'aniimo-prismana-event-tracker': {
+    title: 'Aniimo Prismana Event Tracker: Melloblum & Waleetle Schedule',
+    subtitle:
+      'Official 1.1 Prismana Form event windows, regions and unlock requirement, with clear status labels and UTC+8 times.',
+    tag: 'Limited events',
+    lead: 'Aniimo 1.1 introduced limited Vein Abundance windows where designated Prismana Form Aniimos appear in named regions. This tracker records the official schedule only; it does not claim an exact spawn point, respawn timer, catch rate or farming route.',
+    body: [
+      { t: 'h', c: 'Current official Prismana event schedule' },
+      {
+        t: 'table',
+        head: ['Event window (UTC+8)', 'Region', 'Officially named Prismana Form Aniimo', 'Entry requirement'],
+        rows: [
+          ['Sep 28 04:00 - Oct 5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', 'Reach Student II'],
+          ['Oct 5 04:00 - Oct 12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
+        ],
+      },
+      { t: 'h', c: 'What is Vein Abundance?' },
+      {
+        t: 'p',
+        c: 'The official 1.1 announcement says special Prismana Form Aniimos appear in designated regions for a limited time, drawn by surges in Vein energy. It names the windows, regions and featured Aniimos above, but does not publish a map coordinate, encounter frequency or guaranteed catch outcome.',
+      },
+      { t: 'h', c: 'How should I use this tracker?' },
+      {
+        t: 'li',
+        c: 'Check that the current UTC+8 time falls within the listed event window',
+      },
+      { t: 'li', c: 'Reach Student II before travelling to the listed region' },
+      { t: 'li', c: 'Use the current in-game event notice for any live map marker or rule change' },
+      { t: 'li', c: 'Treat community spawn routes and rate claims as unconfirmed unless they can be reproduced' },
+      { t: 'h', c: 'How is this different from Prismana and Sparkling styles?' },
+      {
+        t: 'p',
+        c: 'This page tracks a limited event that names Prismana Form Aniimos. Prismana morphology and Sparkling styles are separate systems in AniimoDex data; an event appearance does not establish a Sparkling result, a stat change or a guaranteed capture.',
+      },
+      { t: 'h', c: 'What happens after an event window ends?' },
+      {
+        t: 'p',
+        c: 'The event remains listed as a dated official record, but AniimoDex will label it ended rather than imply that the featured Aniimo remains available. A later event requires a new official announcement before it is added.',
+      },
+      {
+        t: 'quote',
+        c: 'Last official-source check: September 28, 2026. All event times use UTC+8 and come from the September 23 version 1.1 announcement.',
+      },
+    ],
+  },
   'aniimo-pre-registration': {
     title: 'Aniimo Pre-Registration Rewards: Post-Launch Eligibility & Status',
     subtitle:
@@ -845,6 +941,100 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: '问题开始时间、完整错误文字与可重现步骤' },
             { t: 'li', c: '截图或视频；涉及奖励或购买时附原始收据' },
             { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。此页不会宣称某个操作必定恢复进度，因为处理结果取决于账号个案与官方核验。' },
+          ],
+        };
+  }
+  if (guide === english['aniimo-holo-battle-interlink']) {
+    return traditional
+      ? {
+          title: 'Aniimo Holo-Battle Interlink 攻略：時間、隊伍與星級獎勵',
+          subtitle: '整理 1.1 官方規則：每週開放時間、Trailblazer I 條件、路線、組隊與星級獎勵。',
+          tag: '每週玩法',
+          lead: 'Holo-Battle Interlink 是 Aniimo 1.1 新增的循環戰鬥玩法。官方已確認每週開放時間、解鎖條件、三條路線、4 人組隊選項與星級獎勵結構，但尚未公布最佳隊伍、路線強度或完整獎勵數值。',
+          body: [
+            { t: 'h', c: 'Holo-Battle Interlink 什麼時候開放？' },
+            { t: 'table', head: ['項目', '官方狀態'], rows: [['開放時間', '每週四 04:00 至週一 03:59（UTC+8）'], ['解鎖條件', '達到 Trailblazer I'], ['組隊方式', '4 人組隊或與 AI 隊友配對'], ['每期路線', '3 條不同路線'], ['重玩', '每條路線均可自由重玩']] },
+            { t: 'h', c: 'Holo-Battle Interlink 是什麼玩法？' },
+            { t: 'p', c: '官方將它描述為 Battle Art 模擬的 Alpha 遭遇戰，重現高威脅伊莫的歷史資料。每條路線都有不同 Alpha 與環境機制；開戰前可選擇伊莫陣容與增益效果，4 人合作時由隊長選擇增益。' },
+            { t: 'h', c: '星級獎勵怎麼計算？' },
+            { t: 'p', c: '系統分別記錄三條路線的最高星級，三條路線的合計星數會解鎖里程碑獎勵。協助其他玩家提升星級還可獲得 Support Rewards。星級獎勵與協助獎勵均每週重置。' },
+            { t: 'h', c: '哪些內容官方尚未公布？' },
+            { t: 'table', head: ['項目', 'AniimoDex 狀態'], rows: [['最佳隊伍或配裝', '沒有可記錄的實測前不發布'], ['路線強度或傷害門檻', '官方公告未公布'], ['里程碑與協助獎勵的具體數值', '官方公告未公布'], ['當前 Alpha 清單', '請以遊戲內當期內容為準，不假定固定清單']] },
+            { t: 'h', c: '參加前應確認什麼？' },
+            { t: 'li', c: '確認已達 Trailblazer I，且 UTC+8 時間在每週開放窗口內' },
+            { t: 'li', c: '選擇路線後查看當期顯示的環境機制' },
+            { t: 'li', c: '合作時先確認隊長的增益選擇' },
+            { t: 'li', c: '在每週重置前記錄各路線的最高星級' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。時間使用 UTC+8；只有在官方公告或可重現的當前版本記錄存在時，才會補充當期細節。' },
+          ],
+        }
+      : {
+          title: 'Aniimo Holo-Battle Interlink 攻略：时间、队伍与星级奖励',
+          subtitle: '整理 1.1 官方规则：每周开放时间、Trailblazer I 条件、路线、组队与星级奖励。',
+          tag: '每周玩法',
+          lead: 'Holo-Battle Interlink 是 Aniimo 1.1 新增的循环战斗玩法。官方已确认每周开放时间、解锁条件、三条路线、4 人组队选项与星级奖励结构，但尚未公布最佳队伍、路线强度或完整奖励数值。',
+          body: [
+            { t: 'h', c: 'Holo-Battle Interlink 什么时候开放？' },
+            { t: 'table', head: ['项目', '官方状态'], rows: [['开放时间', '每周四 04:00 至周一 03:59（UTC+8）'], ['解锁条件', '达到 Trailblazer I'], ['组队方式', '4 人组队或与 AI 队友匹配'], ['每期路线', '3 条不同路线'], ['重玩', '每条路线均可自由重玩']] },
+            { t: 'h', c: 'Holo-Battle Interlink 是什么玩法？' },
+            { t: 'p', c: '官方将它描述为 Battle Art 模拟的 Alpha 遭遇战，重现高威胁伊莫的历史资料。每条路线都有不同 Alpha 与环境机制；开战前可选择伊莫阵容与增益效果，4 人合作时由队长选择增益。' },
+            { t: 'h', c: '星级奖励怎么计算？' },
+            { t: 'p', c: '系统分别记录三条路线的最高星级，三条路线的合计星数会解锁里程碑奖励。协助其他玩家提升星级还可获得 Support Rewards。星级奖励与协助奖励均每周重置。' },
+            { t: 'h', c: '哪些内容官方尚未公布？' },
+            { t: 'table', head: ['项目', 'AniimoDex 状态'], rows: [['最佳队伍或配装', '没有可记录的实测前不发布'], ['路线强度或伤害门槛', '官方公告未公布'], ['里程碑与协助奖励的具体数值', '官方公告未公布'], ['当前 Alpha 清单', '请以游戏内当期内容为准，不假定固定清单']] },
+            { t: 'h', c: '参加前应确认什么？' },
+            { t: 'li', c: '确认已达 Trailblazer I，且 UTC+8 时间在每周开放窗口内' },
+            { t: 'li', c: '选择路线后查看当期显示的环境机制' },
+            { t: 'li', c: '合作时先确认队长的增益选择' },
+            { t: 'li', c: '在每周重置前记录各路线的最高星级' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。时间使用 UTC+8；只有在官方公告或可复现的当前版本记录存在时，才会补充当期细节。' },
+          ],
+        };
+  }
+  if (guide === english['aniimo-prismana-event-tracker']) {
+    return traditional
+      ? {
+          title: 'Aniimo Prismana 活動追蹤：Melloblum 與 Waleetle 時間表',
+          subtitle: '整理 1.1 官方虹彩形態活動時間、區域與解鎖條件，所有時間均為 UTC+8。',
+          tag: '限時活動',
+          lead: 'Aniimo 1.1 加入 Vein Abundance 限時活動，指定區域會出現官方點名的 Prismana Form 伊莫。本頁只記錄官方時間表，不聲稱座標、重生時間、捕獲率或最佳路線。',
+          body: [
+            { t: 'h', c: '目前官方 Prismana 活動時間表' },
+            { t: 'table', head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'], rows: [['9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '達到 Student II'], ['10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '達到 Student II']] },
+            { t: 'h', c: 'Vein Abundance 是什麼？' },
+            { t: 'p', c: '官方 1.1 公告表示，Vein 能量湧現時，指定區域會在限時內出現特別 Prismana Form 伊莫。公告列出上述時間、區域和主打伊莫，但未公布地圖座標、遇見頻率或保證捕獲結果。' },
+            { t: 'h', c: '怎麼使用這張追蹤表？' },
+            { t: 'li', c: '先確認目前 UTC+8 時間位於對應活動窗口內' },
+            { t: 'li', c: '前往指定區域前先達到 Student II' },
+            { t: 'li', c: '即時地圖標記或規則變動以遊戲內活動公告為準' },
+            { t: 'li', c: '社群座標、刷取路線與機率說法在可重現前均視為未證實' },
+            { t: 'h', c: '這和 Prismana、閃耀樣式有什麼不同？' },
+            { t: 'p', c: '本頁追蹤的是限時活動中點名的 Prismana Form 伊莫。Prismana 形態與閃耀樣式在 AniimoDex 資料中是不同系統；活動出現不代表閃耀結果、數值變化或保證捕獲。' },
+            { t: 'h', c: '活動結束後會怎樣？' },
+            { t: 'p', c: '活動會保留為帶日期的官方記錄，但 AniimoDex 會標示為已結束，不會暗示主打伊莫仍能取得。後續活動必須有新的官方公告才會加入。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。所有活動時間使用 UTC+8，來源為 9 月 23 日 1.1 版本公告。' },
+          ],
+        }
+      : {
+          title: 'Aniimo Prismana 活动追踪：Melloblum 与 Waleetle 时间表',
+          subtitle: '整理 1.1 官方虹彩形态活动时间、区域与解锁条件，所有时间均为 UTC+8。',
+          tag: '限时活动',
+          lead: 'Aniimo 1.1 加入 Vein Abundance 限时活动，指定区域会出现官方点名的 Prismana Form 伊莫。本页只记录官方时间表，不声称坐标、重生时间、捕获率或最佳路线。',
+          body: [
+            { t: 'h', c: '当前官方 Prismana 活动时间表' },
+            { t: 'table', head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'], rows: [['9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '达到 Student II'], ['10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '达到 Student II']] },
+            { t: 'h', c: 'Vein Abundance 是什么？' },
+            { t: 'p', c: '官方 1.1 公告表示，Vein 能量涌现时，指定区域会在限时内出现特别 Prismana Form 伊莫。公告列出上述时间、区域和主打伊莫，但未公布地图坐标、遇见频率或保证捕获结果。' },
+            { t: 'h', c: '怎么使用这张追踪表？' },
+            { t: 'li', c: '先确认当前 UTC+8 时间位于对应活动窗口内' },
+            { t: 'li', c: '前往指定区域前先达到 Student II' },
+            { t: 'li', c: '即时地图标记或规则变动以游戏内活动公告为准' },
+            { t: 'li', c: '社区坐标、刷取路线与概率说法在可复现前均视为未证实' },
+            { t: 'h', c: '这和 Prismana、闪耀样式有什么不同？' },
+            { t: 'p', c: '本页追踪的是限时活动中点名的 Prismana Form 伊莫。Prismana 形态与闪耀样式在 AniimoDex 数据中是不同系统；活动出现不代表闪耀结果、数值变化或保证捕获。' },
+            { t: 'h', c: '活动结束后会怎样？' },
+            { t: 'p', c: '活动会保留为带日期的官方记录，但 AniimoDex 会标示为已结束，不会暗示主打伊莫仍能取得。后续活动必须有新的官方公告才会加入。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。所有活动时间使用 UTC+8，来源为 9 月 23 日 1.1 版本公告。' },
           ],
         };
   }

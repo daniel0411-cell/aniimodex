@@ -78,6 +78,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
       slugs: [
         'getting-started',
         'aniimo-egg-heist',
+        'aniimo-holo-battle-interlink',
+        'aniimo-prismana-event-tracker',
         'is-aniimo-a-gacha-game',
         'aniimo-crossplay-cross-save',
         'aniimo-team-composition',
