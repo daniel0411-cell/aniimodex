@@ -26,12 +26,24 @@ const commonWatchlist = [
 
 const english: Record<string, LaunchGuide> = {
   'aniimo-crossplay-cross-save': {
-    title: 'Is Aniimo Crossplay? Platform Pairings, Cross-Save and Progression',
+    title: 'Is Aniimo Crossplay? Platforms & Cross-Save Status',
     subtitle:
-      'Yes, Aniimo lists cross-platform multiplayer. Exact PC, PS5, Xbox and mobile pairings, cross-save and progression transfer remain undocumented.',
+      'Aniimo lists cross-platform multiplayer, but official sources do not yet publish every platform pairing or a cross-save policy.',
     tag: 'Cross-platform',
-    lead: 'Yes, Steam lists cross-platform multiplayer for Aniimo. That does not confirm every PC, PS5, Xbox or mobile pairing, and the official sources checked here still do not publish a complete cross-save, cross-progression or account-transfer policy.',
+    lead: 'Aniimo is live on the official PC launcher, Steam, PS5, Xbox, Epic and mobile storefronts linked by its official website. Steam lists cross-platform multiplayer, but that does not confirm every pairing or that saves, purchases and progression move between platforms.',
     body: [
+      { t: 'h', c: 'Current platform and crossplay status' },
+      {
+        t: 'table',
+        head: ['Platform', 'Current status', 'Crossplay / account status'],
+        rows: [
+          ['PC launcher and Steam', 'Available from official routes', 'Cross-platform multiplayer listed; exact pairings not documented'],
+          ['PlayStation 5', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
+          ['Xbox Series X|S', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
+          ['iOS and Android', 'Official mobile download route listed', 'Specific pairing and cross-save status not documented'],
+          ['Nintendo Switch', 'Not announced by the official sources checked', 'No crossplay or account policy announced'],
+        ],
+      },
       { t: 'h', c: 'Does Aniimo support crossplay?' },
       {
         t: 'p',
@@ -69,21 +81,84 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last source check: September 22, 2026. This page will change only when an official platform-pairing, account or cross-progression policy is available.',
+        c: 'Last official-source check: September 26, 2026. Status labels describe the linked official routes, not a promise that every country, account or device can access the same store listing.',
+      },
+    ],
+  },
+  'aniimo-progress-account-safety': {
+    title: 'Aniimo Progress & Account Safety: What to Do Before You Switch Devices',
+    subtitle:
+      'A source-checked checklist for missing progress, device changes, reward claims and account recovery without assuming cross-save exists.',
+    tag: 'Account safety',
+    lead: 'Aniimo has official reports about lost progress, reward claims and switching from PC to mobile, while a complete cross-save and account-transfer policy is still not published. Preserve evidence and verify the exact account, server and character before changing devices, reinstalling or making another purchase.',
+    body: [
+      { t: 'h', c: 'What should I do if Aniimo progress looks missing?' },
+      {
+        t: 'p',
+        c: 'Do not create over the existing character, unlink an account, reinstall repeatedly or make a replacement purchase first. Record the platform, region, server, character name, approximate last successful login, game version and any error. Keep platform receipts and screenshots, then use the official support route for account-specific recovery.',
+      },
+      { t: 'h', c: 'Before switching from PC, console or mobile' },
+      {
+        t: 'table',
+        head: ['Check', 'Why it matters'],
+        rows: [
+          ['Account identity', 'Use the same official account and confirm the sign-in prompt before proceeding'],
+          ['Region and server', 'A different region or server can make a character appear absent without proving deletion'],
+          ['Character selection', 'Confirm the expected character before starting new-game or tutorial flows'],
+          ['Current client version', 'Update through the official launcher or storefront before diagnosing a sync issue'],
+          ['Purchase records', 'Keep the storefront receipt; do not repeat a purchase while its delivery state is unclear'],
+        ],
+      },
+      { t: 'h', c: 'Does Aniimo officially confirm cross-save?' },
+      {
+        t: 'p',
+        c: 'No complete official cross-save, cross-progression or paid-currency transfer matrix is registered for this site. Cross-platform multiplayer does not prove that saves, rewards, achievements or purchases move between PC, console and mobile.',
+      },
+      { t: 'h', c: 'What is officially documented for a PC-to-mobile reward problem?' },
+      {
+        t: 'p',
+        c: 'The September 23 official update says that players unable to claim a Link Without Borders reward after logging in on PC and then immediately on mobile should log in again once. This is a reward-claim workaround, not confirmation of universal cross-save or account transfer.',
+      },
+      { t: 'h', c: 'What if I am disconnected or see a black or red screen?' },
+      {
+        t: 'p',
+        c: 'Official patch notes acknowledge frequent disconnects and reconnections, plus black-screen and red-screen reports. For a black screen, update the graphics driver, try switching between DX11 and DX12, and disable DLSS and Frame Generation on the login screen. For a red screen, the official temporary workaround is to set graphics quality to Performance mode. These steps address display and connection reports, not missing-account recovery.',
+      },
+      { t: 'h', c: 'What should a useful support report include?' },
+      {
+        t: 'li',
+        c: 'Platform, storefront account, region, server, character name and game version',
+      },
+      {
+        t: 'li',
+        c: 'The time the problem began, exact error text and steps that reproduce it',
+      },
+      {
+        t: 'li',
+        c: 'Screenshots or video, plus original purchase receipts when a reward or purchase is involved',
+      },
+      {
+        t: 'quote',
+        c: 'Last official-source check: September 28, 2026. This guide avoids claiming that a particular action restores progress, because recovery depends on the affected account and official support verification.',
       },
     ],
   },
   'aniimo-pre-registration': {
-    title: 'Aniimo Pre-Registration Rewards and Eligibility After Launch',
+    title: 'Aniimo Pre-Registration Rewards: Post-Launch Eligibility & Status',
     subtitle:
-      'Check the post-launch status of Aniimo pre-registration links, rewards and eligibility without relying on expired campaign claims.',
+      'Aniimo is live. Check current reward eligibility and claim conditions instead of treating old pre-registration information as a new-player download route.',
     tag: 'Launch rewards',
-    lead: 'Aniimo has launched on verified PC and Xbox routes. The old pre-registration URL remains useful for players checking reward eligibility, but campaign buttons and terms may differ by platform and region.',
+    lead: 'Aniimo has launched, and its official site still displays global-launch rewards and completed pre-registration milestones. That display does not establish a universal claim deadline, account entitlement or regional availability, so use the official game and storefront for your own account.',
     body: [
-      { t: 'h', c: 'Can I still pre-register for Aniimo?' },
+      { t: 'h', c: 'Is pre-registration still open?' },
       {
         t: 'p',
-        c: 'The global launch has passed for the verified PC and Xbox routes, so new players should use the official download or store pages. Mobile timing remains platform-specific.',
+        c: 'Aniimo is already live. New players should use the official download or store pages rather than treat pre-registration as the route to access the game. The official website still presents launch rewards and milestone rewards, but it does not publish one universal post-launch eligibility or claim deadline.',
+      },
+      { t: 'h', c: 'What rewards are still visible on the official site?' },
+      {
+        t: 'p',
+        c: 'The official website currently shows four completed global pre-registration milestones and launch-reward categories such as a selected rare Shiny Aniimo, capture items, a limited Aniimo egg, milestone items and four free outfits. The site also says in-game events control the specific content, so these labels do not guarantee delivery to every account.',
       },
       { t: 'h', c: 'How do I check pre-registration reward eligibility?' },
       {
@@ -107,6 +182,10 @@ const english: Record<string, LaunchGuide> = {
       {
         t: 'p',
         c: 'Use the official Aniimo website or its linked Steam, PlayStation, Xbox, App Store, Google Play and Epic storefronts. Avoid third-party APK and launcher downloads.',
+      },
+      {
+        t: 'quote',
+        c: 'Last official-source check: September 26, 2026. Rewards and availability can vary by game version, region, platform and account; only the current official in-game notice or campaign terms can confirm a claim.',
       },
     ],
   },
@@ -136,7 +215,7 @@ const english: Record<string, LaunchGuide> = {
             'Android',
             'US Google Play Install action verified; check your local account and device',
           ],
-          ['In-game mailbox', 'Temporarily unavailable in the current official notice'],
+          ['In-game mail', 'Compensation is scheduled for delivery through in-game mail; check its current in-game status'],
           ['Cross-save and progression', 'No complete official policy in the registered sources'],
         ],
       },
@@ -157,7 +236,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 23, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+        c: 'Last official-source check: September 26, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
       },
     ],
   },
@@ -208,11 +287,11 @@ const english: Record<string, LaunchGuide> = {
     ],
   },
   'aniimo-launch-checklist-known-issues': {
-    title: 'Aniimo Known Issues: Login, Crashes, Progress and Multiplayer',
+    title: 'Aniimo Known Issues & Fixes: Login, Rewards, Android and Progress',
     subtitle:
-      'A source-checked troubleshooting hub that separates confirmed platform facts from unverified launch reports.',
+      'Official September 23 issue status and workarounds for reward claims, Android quest freezes, platform switching and connection problems.',
     tag: 'Known issues',
-    lead: 'Aniimo servers are live after the September 23 version 1.1 maintenance. The official notice confirms a temporary in-game mailbox issue and delayed compensation delivery; other reports remain unconfirmed unless an official notice or reproducible test supports them.',
+    lead: 'Aniimo servers are live after the September 23 version 1.1 maintenance. This page lists only the issues and workarounds published in the official notice; other launch reports stay unconfirmed until an official update or reproducible test supports them.',
     body: [
       { t: 'h', c: 'September 23 official service status' },
       {
@@ -221,9 +300,22 @@ const english: Record<string, LaunchGuide> = {
         rows: [
           ['Servers', 'Live after version 1.1 maintenance'],
           ['Mobile launch', 'Officially launched globally after the update'],
-          ['In-game mailbox', 'Temporarily unavailable'],
-          ['Maintenance compensation', '1,000 Glimmers, sent after mailbox restoration'],
-          ['Known-issue compensation', '1 Sparkling Cube, sent after mailbox restoration'],
+          ['Opening delay', 'Server opening delayed by five minutes, then opened'],
+          ['Compensation', '500 Glimmers maintenance + 500 Glimmers delay + 1 Sparkling Cube known issues'],
+          ['Delivery route', 'Sent through in-game mail; check current mail availability in-game'],
+        ],
+      },
+      { t: 'h', c: 'Officially listed issues and workarounds' },
+      {
+        t: 'table',
+        head: ['Issue', 'Affected scope', 'Official workaround or status'],
+        rows: [
+          ['Reward mail claim error', 'Some players', 'Official notice lists the issue; check in-game mail and current notices'],
+          ['"Stars and Knight" side quest freeze', 'Some Android devices', 'Use Performance mode or disable shadows; the upper-right option can skip the scene'],
+          ['Moonlit Fox ground-effect display', 'Some situations', 'Officially acknowledged; no player workaround published'],
+          ['Link Without Borders reward cannot be clicked', 'Event reward screen', 'Click the blank area on the left to claim'],
+          ['Link Without Borders reward after PC-to-mobile switch', 'PC then immediate mobile login', 'Log in again once to restore reward claiming'],
+          ['Home visual blocks or outlines on mobile', 'Mobile Home entry', 'Official notice marks this as fixed'],
         ],
       },
       { t: 'h', c: 'Current playable status' },
@@ -254,17 +346,17 @@ const english: Record<string, LaunchGuide> = {
       { t: 'h', c: 'Login, server or connection problems' },
       {
         t: 'p',
-        c: 'The official announcement says all servers are now live after maintenance. It does not publish a universal login fix. If you still cannot connect, restart the official client to obtain the latest build, confirm the correct region and server, and record the exact error before reinstalling.',
+        c: 'The official announcement says all servers are live after maintenance, while earlier official patch notes acknowledge frequent disconnects and reconnections. Restart the official client to obtain the latest build, confirm the correct region and server, and record the exact error before reinstalling. A reconnect issue alone does not prove that progress was deleted.',
       },
       { t: 'h', c: 'Game will not launch, crashes or runs poorly' },
       {
         t: 'p',
-        c: 'The official PC requirements are published, but the sources registered here do not confirm a single crash or performance issue affecting every PC. Compare your hardware and free storage with the official requirements, update the game through its official launcher or store, and test default display settings before changing files or using third-party tools.',
+        c: 'Official patch notes list black-screen and red-screen reports. For a black screen, update the graphics driver, try switching between DX11 and DX12, and disable DLSS and Frame Generation on the login screen. For a red screen, the official temporary workaround is Performance mode. Compare your hardware and free storage with the official requirements before changing files or using third-party tools.',
       },
       { t: 'h', c: 'Quest or progression appears stuck' },
       {
         t: 'p',
-        c: 'AniimoDex has no official source confirming a universal blocked quest or safe skip. Do not delete a character or overwrite a save based on an isolated report. Capture the quest name, objective, platform, server, version and reproduction steps, then check official support or a current maintenance notice.',
+        c: 'For the Android "Stars and Knight" side quest, the official notice advises Performance mode, disabling shadows, or using the upper-right option to skip the scene. For every other quest, AniimoDex has no official universal safe skip: do not delete a character or overwrite a save based on an isolated report.',
       },
       { t: 'h', c: 'Multiplayer or cross-platform play does not work' },
       {
@@ -274,7 +366,7 @@ const english: Record<string, LaunchGuide> = {
       { t: 'h', c: 'Save, account or purchase progress looks wrong' },
       {
         t: 'p',
-        c: 'Cross-save, cross-progression and purchase transfer are not fully documented in the registered official sources. Avoid unlinking accounts or repeating a purchase until the platform receipt, server, account and character are confirmed. Contact official support for account-specific recovery.',
+        c: 'Cross-save, cross-progression and purchase transfer are not fully documented in the registered official sources. Avoid unlinking accounts or repeating a purchase until the platform receipt, server, account and character are confirmed. See the Progress & Account Safety guide for an evidence-preserving checklist before contacting official support.',
       },
       { t: 'h', c: 'What counts as a confirmed known issue?' },
       {
@@ -289,16 +381,16 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source review: September 23, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
+        c: 'Last official-source review: September 28, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
       },
     ],
   },
   'aniimo-version-1-1-update': {
-    title: 'Aniimo Version 1.1 Update: Mobile Launch, Irisalis and Event Schedule',
+    title: 'Aniimo 1.1 Patch Notes: S1 Events, Compensation & New Modes',
     subtitle:
-      'Official September 23 update details, server status, compensation, new modes and time-limited events in one schedule.',
+      'Official September 23 update details: maintenance compensation, mobile launch, Irisalis, Egg Heist Chaos Mode and S1 events.',
     tag: 'Version 1.1',
-    lead: 'Aniimo version 1.1 completed maintenance on September 23, 2026. The official Steam announcement says all servers are live, mobile platforms have launched globally, and compensation will arrive after the in-game mailbox is restored.',
+    lead: 'Aniimo version 1.1 completed maintenance on September 23, 2026. The official notice says servers are live after a five-minute opening delay, lists compensation, and introduces mobile access, S1 activities and new modes.',
     body: [
       { t: 'h', c: 'Current server and compensation status' },
       {
@@ -307,9 +399,10 @@ const english: Record<string, LaunchGuide> = {
         rows: [
           ['Servers', 'Live after September 23 maintenance'],
           ['Mobile platforms', 'Global launch followed the version 1.1 update'],
-          ['Mailbox', 'Temporarily unavailable'],
-          ['Compensation mail 1', '1,000 Glimmers'],
-          ['Compensation mail 2', '1 Sparkling Cube'],
+          ['Opening', 'Five-minute delay, then servers opened'],
+          ['Maintenance compensation', '500 Glimmers; players registered before 1.1'],
+          ['Opening-delay compensation', '500 Glimmers'],
+          ['Known-issue compensation', '1 Sparkling Cube'],
         ],
       },
       { t: 'h', c: "Windchaser's Departure and Irisalis" },
@@ -355,9 +448,14 @@ const english: Record<string, LaunchGuide> = {
         t: 'li',
         c: 'Home interfaces received new shortcuts, controller navigation and build-snapping improvements.',
       },
+      { t: 'h', c: 'Official issue workarounds introduced with 1.1' },
+      {
+        t: 'p',
+        c: 'The update notice documents an Android workaround for the "Stars and Knight" side quest freeze: use Performance mode, disable shadows, or skip the scene from the upper-right option. It also says players who cannot claim Link Without Borders rewards after moving from PC to mobile should log in again once.',
+      },
       {
         t: 'quote',
-        c: 'All times above come from the official announcement and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
+        c: 'Last official-source check: September 26, 2026. All times above come from the official announcement and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
       },
     ],
   },
@@ -446,20 +544,33 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['Android', '美國區 Google Play 已顯示安裝；可用性可能不同', '9 月 22 日'],
               ],
             },
+            { t: 'h', c: '官方列出的問題與處理方式' },
+            {
+              t: 'table',
+              head: ['問題', '影響範圍', '官方處理方式或狀態'],
+              rows: [
+                ['郵件領取獎勵異常', '部分玩家', '官方已列出問題；請查看遊戲內郵箱和最新公告'],
+                ['「星星與騎士」支線卡死', '部分 Android 裝置', '切換效能模式或關閉陰影，也可用右上角選項跳過劇情'],
+                ['「月輝狐」地面特效異常', '部分情況', '官方已確認；未公布玩家處理方式'],
+                ['「聯結無界」獎勵無法點擊', '活動獎勵畫面', '點擊左側空白區域領取'],
+                ['PC 轉手機後無法領取「聯結無界」獎勵', 'PC 後立即手機登入', '重新登入一次即可恢復領取'],
+                ['手機進入家園出現方塊或描邊', '手機家園入口', '官方標示已修正'],
+              ],
+            },
             { t: 'h', c: '登入、伺服器或連線問題' },
             {
               t: 'p',
-              c: '已登記的官方來源目前沒有公開完整的中斷清單或通用登入修復方法。請先確認地區與伺服器、重啟官方客戶端、查看商店或官網維護通知，並在重新安裝前記錄完整錯誤訊息。',
+              c: '官方 1.1 公告稱維護後伺服器已開放，較早的官方補丁也確認過頻繁斷線與重新連線。請先確認地區與伺服器、重啟官方客戶端並記錄完整錯誤訊息，再考慮重新安裝。單純重新連線不代表進度已被刪除。',
             },
             { t: 'h', c: '遊戲無法啟動、閃退或效能不佳' },
             {
               t: 'p',
-              c: '官方已公開 PC 配置需求，但已登記來源沒有確認一個影響所有 PC 的單一閃退或效能問題。請對照官方配置與可用空間、由官方啟動器或商店更新，並先用預設顯示設定測試。',
+              c: '官方補丁列出黑屏與紅屏問題。黑屏時，更新顯示卡驅動、在 DX11 和 DX12 間切換，並在登入畫面關閉 DLSS 和畫格生成；紅屏暫可切換到效能模式。請先對照官方配置與可用空間，不要修改遊戲檔案或使用第三方工具。',
             },
             { t: 'h', c: '任務或進度疑似卡住' },
             {
               t: 'p',
-              c: 'AniimoDex 目前沒有官方來源確認通用的任務卡關或安全跳過方法。不要因單一報告刪除角色或覆蓋存檔。記錄任務名稱、目標、平台、伺服器、版本與重現步驟，再查看官方支援或維護通知。',
+              c: '針對 Android「星星與騎士」支線，官方建議切換效能模式、關閉陰影，或以右上角選項跳過劇情。其他任務目前沒有官方通用安全跳過方式；不要因單一報告刪除角色或覆蓋存檔。',
             },
             { t: 'h', c: '多人或跨平台無法使用' },
             {
@@ -469,7 +580,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'h', c: '存檔、帳號或購買進度不正確' },
             {
               t: 'p',
-              c: '跨平台存檔、進度共享與付費轉移尚未在已登記官方來源中完整說明。在確認平台收據、伺服器、帳號與角色前，請勿解除帳號連結或重複購買；帳號復原應聯絡官方支援。',
+              c: '跨平台存檔、進度共享與付費轉移尚未在已登記官方來源中完整說明。在確認平台收據、伺服器、帳號與角色前，請勿解除帳號連結或重複購買；請參考「進度與帳號安全」頁先保留證據，再聯絡官方支援。',
             },
             { t: 'h', c: '什麼才算已確認的問題？' },
             {
@@ -484,7 +595,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '內容最後檢查：2026 年 9 月 20 日。有效的問題報告應包含平台、地區、伺服器、版本、時間、完整錯誤與重現步驟。',
+              c: '內容最後檢查：2026 年 9 月 28 日。有效的問題報告應包含平台、地區、伺服器、版本、時間、完整錯誤與重現步驟。',
             },
           ],
         }
@@ -507,20 +618,33 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['Android', '美国区 Google Play 已显示安装；可用性可能不同', '9 月 22 日'],
               ],
             },
+            { t: 'h', c: '官方列出的问题与处理方式' },
+            {
+              t: 'table',
+              head: ['问题', '影响范围', '官方处理方式或状态'],
+              rows: [
+                ['邮件领取奖励异常', '部分玩家', '官方已列出问题；请查看游戏内邮箱和最新公告'],
+                ['“星星与骑士”支线卡死', '部分 Android 设备', '切换性能模式或关闭阴影，也可用右上角选项跳过剧情'],
+                ['“月辉狐”地面特效异常', '部分情况', '官方已确认；未公布玩家处理方式'],
+                ['“联结无界”奖励无法点击', '活动奖励界面', '点击左侧空白区域领取'],
+                ['PC 转手机后无法领取“联结无界”奖励', 'PC 后立即手机登录', '重新登录一次即可恢复领取'],
+                ['手机进入家园出现方块或描边', '手机家园入口', '官方标示已修复'],
+              ],
+            },
             { t: 'h', c: '登录、服务器或连接问题' },
             {
               t: 'p',
-              c: '已登记的官方来源目前没有公布完整的中断清单或通用登录修复方法。请先确认地区与服务器、重启官方客户端、查看商店或官网维护通知，并在重新安装前记录完整错误信息。',
+              c: '官方 1.1 公告称维护后服务器已开放，较早的官方补丁也确认过频繁断线与重新连接。请先确认地区与服务器、重启官方客户端并记录完整错误信息，再考虑重新安装。单纯重新连接不代表进度已被删除。',
             },
             { t: 'h', c: '游戏无法启动、闪退或性能不佳' },
             {
               t: 'p',
-              c: '官方已公布 PC 配置要求，但已登记来源没有确认一个影响所有 PC 的单一闪退或性能问题。请对照官方配置与可用空间、由官方启动器或商店更新，并先用默认显示设置测试。',
+              c: '官方补丁列出黑屏与红屏问题。黑屏时，更新显卡驱动、在 DX11 和 DX12 间切换，并在登录画面关闭 DLSS 和帧生成；红屏暂可切换到性能模式。请先对照官方配置与可用空间，不要修改游戏文件或使用第三方工具。',
             },
             { t: 'h', c: '任务或进度疑似卡住' },
             {
               t: 'p',
-              c: 'AniimoDex 目前没有官方来源确认通用的任务卡关或安全跳过方法。不要因单一报告删除角色或覆盖存档。记录任务名称、目标、平台、服务器、版本与重现步骤，再查看官方支持或维护通知。',
+              c: '针对 Android“星星与骑士”支线，官方建议切换性能模式、关闭阴影，或以右上角选项跳过剧情。其他任务目前没有官方通用安全跳过方式；不要因单一报告删除角色或覆盖存档。',
             },
             { t: 'h', c: '多人或跨平台无法使用' },
             {
@@ -530,7 +654,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'h', c: '存档、账号或购买进度不正确' },
             {
               t: 'p',
-              c: '跨平台存档、进度共享与付费转移尚未在已登记官方来源中完整说明。在确认平台收据、服务器、账号与角色前，请勿解除账号绑定或重复购买；账号恢复应联系官方支持。',
+              c: '跨平台存档、进度共享与付费转移尚未在已登记官方来源中完整说明。在确认平台收据、服务器、账号与角色前，请勿解除账号绑定或重复购买；请参考“进度与账号安全”页先保留证据，再联系官方支持。',
             },
             { t: 'h', c: '什么才算已确认的问题？' },
             {
@@ -545,7 +669,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '内容最后检查：2026 年 9 月 20 日。有效的问题报告应包含平台、地区、服务器、版本、时间、完整错误与重现步骤。',
+              c: '内容最后检查：2026 年 9 月 28 日。有效的问题报告应包含平台、地区、服务器、版本、时间、完整错误与重现步骤。',
             },
           ],
         };
@@ -553,10 +677,10 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   if (guide === english['aniimo-version-1-1-update']) {
     return traditional
       ? {
-          title: 'Aniimo 1.1 版本更新：行動端上線、Irisalis 與活動時間表',
-          subtitle: '整理 9 月 23 日官方更新、伺服器狀態、補償、新模式與限時活動。',
+          title: 'Aniimo 1.1 版本更新：S1 活動、補償與新模式',
+          subtitle: '整理 9 月 23 日官方更新：維護補償、行動端上線、Irisalis、Egg Heist 混沌模式與 S1 活動。',
           tag: '1.1 版本',
-          lead: 'Aniimo 1.1 版本已於 2026 年 9 月 23 日完成維護。Steam 官方公告確認伺服器已開放、行動端已全球上線，補償將在遊戲內郵箱恢復後發送。',
+          lead: 'Aniimo 1.1 版本已於 2026 年 9 月 23 日完成維護。官方公告表示，伺服器在延遲 5 分鐘後已開放，並列出補償、行動端入口、S1 活動與新模式。',
           body: [
             { t: 'h', c: '目前伺服器與補償狀態' },
             {
@@ -565,9 +689,10 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               rows: [
                 ['伺服器', '9 月 23 日維護後已開放'],
                 ['行動端', '1.1 更新後全球上線'],
-                ['遊戲內郵箱', '暫時無法使用'],
-                ['補償郵件 1', '1,000 Glimmers'],
-                ['補償郵件 2', '1 個 Sparkling Cube'],
+                ['開服', '延遲 5 分鐘後開放'],
+                ['維護補償', '輝石 ×500；1.1 前完成註冊的玩家'],
+                ['延遲開服補償', '輝石 ×500'],
+                ['已知問題補償', '閃耀立方 ×1'],
               ],
             },
             { t: 'h', c: "Windchaser's Departure 與 Irisalis" },
@@ -607,14 +732,16 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Aniilog 暫時隱藏尚未取得的 Sparkling Forms。' },
             { t: 'li', c: 'Companion Mode 邀請不再需要與朋友面對面站立。' },
             { t: 'li', c: '家園介面新增快捷入口，並改善控制器導覽與建造吸附顯示。' },
-            { t: 'quote', c: '上述時間均來自官方公告並使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
+            { t: 'h', c: '1.1 同步公告的問題處理方式' },
+            { t: 'p', c: 'Android「星星與騎士」支線卡死時，可切換效能模式、關閉陰影，或以右上角選項跳過劇情。PC 轉手機後無法領取「聯結無界」獎勵時，官方建議重新登入一次。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 26 日。上述時間均使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
           ],
         }
       : {
-          title: 'Aniimo 1.1 版本更新：移动端上线、Irisalis 与活动时间表',
-          subtitle: '整理 9 月 23 日官方更新、服务器状态、补偿、新模式与限时活动。',
+          title: 'Aniimo 1.1 版本更新：S1 活动、补偿与新模式',
+          subtitle: '整理 9 月 23 日官方更新：维护补偿、移动端上线、Irisalis、Egg Heist 混沌模式与 S1 活动。',
           tag: '1.1 版本',
-          lead: 'Aniimo 1.1 版本已于 2026 年 9 月 23 日完成维护。Steam 官方公告确认服务器已开放、移动端已全球上线，补偿将在游戏内邮箱恢复后发送。',
+          lead: 'Aniimo 1.1 版本已于 2026 年 9 月 23 日完成维护。官方公告表示，服务器在延迟 5 分钟后已开放，并列出补偿、移动端入口、S1 活动与新模式。',
           body: [
             { t: 'h', c: '当前服务器与补偿状态' },
             {
@@ -623,9 +750,10 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               rows: [
                 ['服务器', '9 月 23 日维护后已开放'],
                 ['移动端', '1.1 更新后全球上线'],
-                ['游戏内邮箱', '暂时无法使用'],
-                ['补偿邮件 1', '1,000 Glimmers'],
-                ['补偿邮件 2', '1 个 Sparkling Cube'],
+                ['开服', '延迟 5 分钟后开放'],
+                ['维护补偿', '辉石 ×500；1.1 前完成注册的玩家'],
+                ['延迟开服补偿', '辉石 ×500'],
+                ['已知问题补偿', '闪耀立方 ×1'],
               ],
             },
             { t: 'h', c: "Windchaser's Departure 与 Irisalis" },
@@ -665,7 +793,58 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Aniilog 暂时隐藏尚未获得的 Sparkling Forms。' },
             { t: 'li', c: 'Companion Mode 邀请不再需要与朋友面对面站立。' },
             { t: 'li', c: '家园界面新增快捷入口，并改善手柄导航与建造吸附显示。' },
-            { t: 'quote', c: '上述时间均来自官方公告并使用 UTC+8；参与活动仍需满足对应解锁条件。' },
+            { t: 'h', c: '1.1 同步公告的问题处理方式' },
+            { t: 'p', c: 'Android“星星与骑士”支线卡死时，可切换性能模式、关闭阴影，或以右上角选项跳过剧情。PC 转手机后无法领取“联结无界”奖励时，官方建议重新登录一次。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 26 日。上述时间均使用 UTC+8；参与活动仍需满足对应解锁条件。' },
+          ],
+        };
+  }
+  if (guide === english['aniimo-progress-account-safety']) {
+    return traditional
+      ? {
+          title: 'Aniimo 進度與帳號安全：切換裝置前先做什麼',
+          subtitle: '針對進度異常、換裝置與獎勵領取的可核驗檢查表，不假定跨平台存檔已支援。',
+          tag: '帳號安全',
+          lead: '官方曾處理進度遺失、獎勵領取和 PC 轉手機問題，但完整跨平台存檔與帳號轉移政策尚未公開。在換裝置、重裝或再次購買前，先保留證據並確認帳號、伺服器與角色。',
+          body: [
+            { t: 'h', c: 'Aniimo 進度看起來遺失時該怎麼做？' },
+            { t: 'p', c: '先不要覆蓋原有角色、解除帳號連結、反覆重裝或補買。記錄平台、地區、伺服器、角色名稱、最後正常登入時間、遊戲版本與錯誤訊息，保留商店收據和截圖，再透過官方支援處理帳號個案。' },
+            { t: 'h', c: '從 PC、主機或手機切換前' },
+            { t: 'table', head: ['檢查項目', '原因'], rows: [['帳號身分', '使用同一官方帳號，並先確認登入提示'], ['地區與伺服器', '不同地區或伺服器可能讓角色看起來不存在，不代表已被刪除'], ['角色選擇', '進入新手流程或建立新角色前，先確認原角色'], ['客戶端版本', '先透過官方啟動器或商店更新，再判斷同步問題'], ['購買紀錄', '保留商店收據；交付狀態不明時不要重複購買']] },
+            { t: 'h', c: 'Aniimo 已官方確認跨平台存檔嗎？' },
+            { t: 'p', c: '尚未。本站已登記官方來源沒有完整的跨平台存檔、進度共享或付費貨幣轉移矩陣。跨平台多人不代表存檔、獎勵、成就或購買一定能在 PC、主機與手機間轉移。' },
+            { t: 'h', c: 'PC 轉手機後無法領獎，官方有什麼說明？' },
+            { t: 'p', c: '9 月 23 日官方更新表示，先在 PC 登入又立刻在手機登入而無法領取「聯結無界」獎勵時，可重新登入一次。這只是獎勵領取處理方式，不等於已確認所有跨平台存檔或帳號轉移。' },
+            { t: 'h', c: '遇到斷線、黑屏或紅屏怎麼辦？' },
+            { t: 'p', c: '官方補丁確認過頻繁斷線與重新連線，以及黑屏、紅屏報告。黑屏時，更新顯示卡驅動、在 DX11 和 DX12 間切換，並在登入畫面關閉 DLSS 和畫格生成；紅屏暫時可切換到效能模式。這些步驟處理畫面與連線問題，不是帳號或進度復原保證。' },
+            { t: 'h', c: '有效的支援回報應包含什麼？' },
+            { t: 'li', c: '平台、商店帳號、地區、伺服器、角色名稱與遊戲版本' },
+            { t: 'li', c: '問題開始時間、完整錯誤文字與可重現步驟' },
+            { t: 'li', c: '截圖或影片；涉及獎勵或購買時附原始收據' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。此頁不會宣稱某個操作必定恢復進度，因為處理結果取決於帳號個案與官方核驗。' },
+          ],
+        }
+      : {
+          title: 'Aniimo 进度与账号安全：切换设备前先做什么',
+          subtitle: '针对进度异常、换设备与奖励领取的可核验检查表，不假定跨平台存档已支持。',
+          tag: '账号安全',
+          lead: '官方曾处理进度丢失、奖励领取和 PC 转手机问题，但完整跨平台存档与账号转移政策尚未公开。在换设备、重装或再次购买前，先保留证据并确认账号、服务器与角色。',
+          body: [
+            { t: 'h', c: 'Aniimo 进度看起来丢失时该怎么做？' },
+            { t: 'p', c: '先不要覆盖原有角色、解除账号绑定、反复重装或补买。记录平台、地区、服务器、角色名称、最后正常登录时间、游戏版本与错误信息，保留商店收据和截图，再通过官方支持处理账号个案。' },
+            { t: 'h', c: '从 PC、主机或手机切换前' },
+            { t: 'table', head: ['检查项目', '原因'], rows: [['账号身份', '使用同一官方账号，并先确认登录提示'], ['地区与服务器', '不同地区或服务器可能让角色看起来不存在，不代表已被删除'], ['角色选择', '进入新手流程或创建新角色前，先确认原角色'], ['客户端版本', '先通过官方启动器或商店更新，再判断同步问题'], ['购买记录', '保留商店收据；交付状态不明时不要重复购买']] },
+            { t: 'h', c: 'Aniimo 已官方确认跨平台存档吗？' },
+            { t: 'p', c: '尚未。本站已登记官方来源没有完整的跨平台存档、进度共享或付费货币转移矩阵。跨平台多人不代表存档、奖励、成就或购买一定能在 PC、主机与手机间转移。' },
+            { t: 'h', c: 'PC 转手机后无法领奖，官方有什么说明？' },
+            { t: 'p', c: '9 月 23 日官方更新表示，先在 PC 登录又立刻在手机登录而无法领取“联结无界”奖励时，可重新登录一次。这只是奖励领取处理方式，不等于已确认所有跨平台存档或账号转移。' },
+            { t: 'h', c: '遇到断线、黑屏或红屏怎么办？' },
+            { t: 'p', c: '官方补丁确认过频繁断线与重新连接，以及黑屏、红屏报告。黑屏时，更新显卡驱动、在 DX11 和 DX12 间切换，并在登录画面关闭 DLSS 和帧生成；红屏暂时可切换到性能模式。这些步骤处理画面与连接问题，不是账号或进度恢复保证。' },
+            { t: 'h', c: '有效的支持回报应包含什么？' },
+            { t: 'li', c: '平台、商店账号、地区、服务器、角色名称与游戏版本' },
+            { t: 'li', c: '问题开始时间、完整错误文字与可重现步骤' },
+            { t: 'li', c: '截图或视频；涉及奖励或购买时附原始收据' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。此页不会宣称某个操作必定恢复进度，因为处理结果取决于账号个案与官方核验。' },
           ],
         };
   }
@@ -691,7 +870,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['行動端全球上線', '官方宣布 9 月 23 日 1.1 維護後上線'],
                 ['iPhone / iPad', '中國區 App Store 已核驗；請查看當地商店'],
                 ['Android', '美國區 Google Play 已核驗安裝按鈕；請查看當地帳號與裝置'],
-                ['遊戲內郵箱', '目前官方公告標註為暫時無法使用'],
+                ['遊戲內郵件', '補償將透過遊戲內郵件發送；請以遊戲內目前狀態為準'],
                 ['跨端存檔與進度', '已登記官方來源仍無完整政策'],
               ],
             },
@@ -712,7 +891,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '官方來源最後核驗：2026 年 9 月 23 日。行動端已官方上線，但仍需在當地商店確認裝置可用性。',
+              c: '官方來源最後核驗：2026 年 9 月 26 日。行動端已官方上線，但仍需在當地商店確認裝置可用性。',
             },
           ],
         }
@@ -736,7 +915,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['移动端全球上线', '官方宣布 9 月 23 日 1.1 维护后上线'],
                 ['iPhone / iPad', '中国区 App Store 已核验；请查看当地商店'],
                 ['Android', '美国区 Google Play 已核验安装按钮；请查看当地账号与设备'],
-                ['游戏内邮箱', '当前官方公告标记为暂时无法使用'],
+                ['游戏内邮件', '补偿将通过游戏内邮件发送；请以游戏内当前状态为准'],
                 ['跨端存档与进度', '已登记官方来源仍无完整政策'],
               ],
             },
@@ -757,7 +936,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '官方来源最后核验：2026 年 9 月 23 日。移动端已官方上线，但仍需在当地商店确认设备可用性。',
+              c: '官方来源最后核验：2026 年 9 月 26 日。移动端已官方上线，但仍需在当地商店确认设备可用性。',
             },
           ],
         };

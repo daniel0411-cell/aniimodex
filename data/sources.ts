@@ -24,7 +24,7 @@ export const sources: SourceReference[] = [
     id: 'aniimo-official-home-2026-08-28',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo Official Website - Global Launch Announced!',
-    accessedAt: '2026-09-23',
+    accessedAt: '2026-09-26',
     evidence:
       'The official website shows a PC launcher download alongside links to PS5, Xbox, Steam, iOS, Google Play and Epic Games Store. It also publishes a live global pre-registration counter (40,135,279 when checked) with four milestone rewards, all of which were already unlocked, plus listed launch benefits. The benefits include four free outfits through story missions, home gameplay and cumulative sign-in. The page does not publish a universal Android release date, a cross-progression statement, or current eligibility and claim deadlines for every launch benefit.',
   },
@@ -40,9 +40,25 @@ export const sources: SourceReference[] = [
     id: 'aniimo-steam-update-1-1-2026-09-23',
     url: 'https://store.steampowered.com/news/app/4126040/view/703279756977636272',
     title: 'Aniimo Official Steam Announcement - Version 1.1 Update and Server Maintenance',
-    accessedAt: '2026-09-23',
+    accessedAt: '2026-09-26',
     evidence:
-      'The official Steam announcement states that version 1.1 maintenance ran on September 23, 2026, mobile platforms launched globally after the update, and servers are now live. It lists 1,000 Glimmers plus one Sparkling Cube as compensation, to be delivered after the temporarily unavailable in-game mailbox is restored. It also publishes the Irisalis event, Holo-Battle Interlink, Egg Heist Chaos Mode and dated event schedules.',
+      'The official Steam announcement says September 23 maintenance was followed by a five-minute delayed opening and that servers are live. It lists 500 Glimmers for maintenance, 500 Glimmers for the delayed opening and one Sparkling Cube for known issues, to be sent by in-game mail. It documents reward-claim, Android quest and PC-to-mobile switching issues with workarounds; mobile launch; Irisalis; Holo-Battle Interlink; Egg Heist Chaos Mode; and dated event schedules.',
+  },
+  {
+    id: 'aniimo-steam-patch-1-0-3535596-2026-09-17',
+    url: 'https://store.steampowered.com/news/app/4126040/view/515546702262393606',
+    title: 'Aniimo Official Steam Patch Notes - v1.0.3535596.0',
+    accessedAt: '2026-09-28',
+    evidence:
+      'The official patch note acknowledges frequent disconnects and reconnections, first-entry Astra visual effects, and lists black-screen troubleshooting: update the graphics driver, switch between DX11 and DX12, and disable DLSS and Frame Generation on the login screen. It also says the closed-beta Bonded Promise Sealed Egg claim entry was temporarily closed until its Innate Potential data issue is fixed.',
+  },
+  {
+    id: 'aniimo-steam-patch-1-0-3544783-2026-09-18',
+    url: 'https://store.steampowered.com/news/app/4126040/view/515546702262280489',
+    title: 'Aniimo Official Steam Patch Notes - v1.0.3544783.0',
+    accessedAt: '2026-09-28',
+    evidence:
+      'The official patch note lists red-screen and certain graphics-card eye-display fixes, plus a temporary red-screen workaround of switching graphics quality to Performance mode. It repeats the black-screen steps: update graphics drivers, switch between DX11 and DX12, and disable DLSS and Frame Generation on the login screen.',
   },
   {
     id: 'aniimo-playstation-10018491',
@@ -72,7 +88,7 @@ export const sources: SourceReference[] = [
     id: 'aniimo-app-store-cn-6768584375',
     url: 'https://apps.apple.com/cn/app/%E4%BC%8A%E8%8E%AB/id6768584375',
     title: '伊莫 on the China App Store',
-    accessedAt: '2026-09-23',
+    accessedAt: '2026-09-26',
     evidence:
       'The China App Store lists 伊莫 as a free iPhone and iPad app with in-app purchases, version 1.0.4, a 3.7 GB listing size, and iOS 15.0 or later. This confirms China storefront availability only and does not establish availability in every country.',
   },
@@ -88,7 +104,7 @@ export const sources: SourceReference[] = [
     id: 'aniimo-google-play',
     url: 'https://play.google.com/store/apps/details?id=com.x.aniimos',
     title: 'Aniimo on Google Play',
-    accessedAt: '2026-09-22',
+    accessedAt: '2026-09-26',
     evidence:
       'The official US Google Play listing for Aniimo (package com.x.aniimos) showed an Install action when checked on September 22, 2026, after listing an update dated September 21. It is published by Pawprint Studio as a role-playing game with in-app purchases. Availability can still vary by country, account and compatible device, so this check does not establish a simultaneous worldwide Android release.',
   },

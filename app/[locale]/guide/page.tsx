@@ -63,6 +63,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
       key: 'playDownload',
       slugs: [
         'aniimo-launch-checklist-known-issues',
+        'aniimo-progress-account-safety',
         'how-to-download-aniimo',
         'aniimo-platforms',
         'aniimo-mobile',

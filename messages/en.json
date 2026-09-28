@@ -1498,6 +1498,8 @@
           { "t": "p", "c": "The official Xbox description specifies three-player teams. It does not establish whether matchmaking fills every missing position, whether a smaller party can queue, or which platforms can invite one another in this activity." },
           { "t": "h", "c": "Does Egg Heist support cross-platform play?" },
           { "t": "p", "c": "Steam lists cross-platform multiplayer for Aniimo as a product feature, but the registered official sources do not document every supported platform pairing or confirm Egg Heist-specific crossplay behavior. Cross-save is a separate question and also remains incompletely documented." },
+          { "t": "h", "c": "What is Egg Heist Chaos Mode?" },
+          { "t": "p", "c": "The official September 23 update says Chaos Mode unlocked on September 24 at 04:00. It requires the Elite Egg Seeker Tier IV rank and a Chaos Ticket. The announcement describes higher chances for Prismana Aniimo eggs and glazed-quality collectibles, plus rare hidden collectibles, but does not publish exact rates or a best route." },
           { "t": "h", "c": "What is special about an Egg Heist egg?" },
           { "t": "p", "c": "The official probability disclosure distinguishes an Egg Heist egg from other eggs in its Sparkling style table. When a Sparkling Cube is used on an Egg Heist egg, the published outcomes are 99% Normal Sparkling, 0% Dazzling Sparkling and 1% Shadow Sparkling." },
           { "t": "table", "head": ["Sparkling Cube target", "Normal", "Dazzling", "Shadow"], "rows": [["Egg Heist egg", "99%", "0%", "1%"], ["Egg not from Egg Heist", "99%", "1%", "0%"]] },
@@ -1509,7 +1511,7 @@
           { "t": "li", "c": "Any Sparkling item description matches the official probability disclosure before use" },
           { "t": "h", "c": "What is still unverified?" },
           { "t": "p", "c": "AniimoDex does not currently publish an unlock level, quest path, match duration, reward table, best team, fastest egg route or guaranteed hatch result. Those claims require a current official rule or a documented test with platform, server and game version." },
-          { "t": "quote", "c": "Published now: mode type, team size and the Egg Heist row in the official Sparkling table. Held back: unlock steps, optimal routes, reward efficiency and guaranteed egg outcomes." }
+          { "t": "quote", "c": "Last official-source check: September 26, 2026. Published now: mode type, team size, Chaos Mode entry conditions and the Egg Heist row in the official Sparkling table. Held back: optimal routes, reward efficiency and guaranteed egg outcomes." }
         ]
       },
       "aniimo-pre-registration": {
@@ -1678,45 +1680,47 @@
         ]
       },
       "aniimo-launch-time-preload": {
-        "title": "Aniimo Release Time and Current Download Status",
-        "subtitle": "Check the historical global unlock time and current PC, PS5, Xbox, Android and iOS availability.",
+        "title": "Aniimo Launch Status: Download, Servers & Platform Availability",
+        "subtitle": "Aniimo is live. Check current download routes, server status and platform availability instead of expired preload information.",
         "tag": "Launch",
-        "lead": "Aniimo has passed its September 16 global unlock time. Steam, the official PC launcher and Xbox are available; Aniimo is live in the China App Store, the US Google Play listing shows Install, and other regional store buttons may differ.",
+        "lead": "Aniimo is already live, so old preload times no longer determine access. The official website currently links its PC launcher, Steam, PS5, Xbox, Epic and mobile download routes; local availability can still differ by storefront, account, region and device.",
         "body": [
           {
             "t": "h",
-            "c": "Where can I download Aniimo now?"
+            "c": "Current download and platform status"
           },
           {
             "t": "table",
             "head": ["Platform", "Current status"],
             "rows": [
-              ["PC", "Official launcher, Steam and Epic routes"],
-              ["Xbox Series X|S", "Free base game available"],
-              ["PlayStation 5", "Check the current regional store button"],
-              ["Android", "US Google Play listing shows Install; availability may vary"],
-              ["iPhone / iPad", "Available in the China App Store; other storefronts may differ"]
+              ["PC launcher", "Official download route listed"],
+              ["Steam", "Released and free to play in the storefront checked"],
+              ["PlayStation 5", "Official store route listed; check your regional store"],
+              ["Xbox Series X|S", "Official store route listed; check your regional store"],
+              ["Epic Games Store", "Official store route listed; check your regional store"],
+              ["iOS and Android", "Official mobile route listed; check your local storefront and device"],
+              ["Nintendo Switch", "Not announced by the official sources checked"]
             ]
           },
           {
             "t": "h",
-            "c": "What was the global release time?"
+            "c": "Can I still preload Aniimo?"
           },
           {
             "t": "p",
-            "c": "The announced global release was September 16, 2026 at 10:00 UTC+8: September 16 at 2:00 AM UTC, 4:00 AM CEST, September 15 at 10:00 PM EDT and 7:00 PM PDT."
+            "c": "Preload timing was a pre-launch question. Because Aniimo is live, use the current official download or store route instead. Do not assume a button shown in another region is available to your account."
           },
           {
             "t": "h",
-            "c": "Why does Steam show September 15?"
+            "c": "Are the servers live?"
           },
           {
             "t": "p",
-            "c": "A simultaneous launch can fall on September 15 in the Americas and September 16 in Asia. The explicit PlayStation UTC+8 time is used for the conversions above."
+            "c": "The official version 1.1 announcement said all servers were live after the September 23 maintenance. If you cannot connect now, use the current official client, check your region and server, and consult the latest official notice before reinstalling or changing accounts."
           },
           {
             "t": "quote",
-            "c": "Platform availability was checked on September 22, 2026 and may still vary by region, account and compatible device."
+            "c": "Last official-source check: September 26, 2026. This page keeps its original URL for older preload searches, but it now answers current access status."
           }
         ]
       },
