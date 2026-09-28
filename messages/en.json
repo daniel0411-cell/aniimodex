@@ -362,7 +362,7 @@
   },
   "tools": {
     "title": "Tools Center",
-    "subtitle": "Official-data lookup tools for Aniimo abilities, elements and current catch information.",
+    "subtitle": "Use official-source Aniimo tools to compare elements, look up mobility abilities and estimate catch chances without relying on unverified build or route claims.",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
     "twineTags": ["Lookup", "Movement"],
@@ -526,7 +526,7 @@
   },
   "guide": {
     "title": "Aniimo Guide",
-    "subtitle": "Aniimo guides for downloads, mobile status, crossplay, evolutions, catching and launch issues.",
+    "subtitle": "Source-checked Aniimo guides for official downloads, mobile and platform status, crossplay boundaries, evolution data, catching mechanics, live events and known issues.",
     "relatedTools": "Related Tools",
     "relatedDesc": "Combine these tools to plan your exploration and team:",
     "browseDex": "Browse the full dex for stats and locations",
@@ -596,7 +596,7 @@
       },
       "aniimo-release-date": {
         "title": "Aniimo Release Date: Global Launch and Current Platform Status",
-        "subtitle": "Aniimo launched September 16, 2026; Steam and Xbox availability is now verified.",
+        "subtitle": "Aniimo launched September 16, 2026. Check verified Steam, Xbox, PlayStation, mobile and regional storefront status instead of relying on old pre-launch dates.",
         "tag": "Release",
         "lead": "Aniimo reached its global launch time on September 16, 2026 at 10:00 UTC+8. Steam and Xbox now expose the free base game, while mobile release timing remains separate.",
         "body": [
@@ -640,7 +640,7 @@
       },
       "aniimo-platforms": {
         "title": "Aniimo Platforms: PC, PS5, Xbox, Android and iOS Status",
-        "subtitle": "Current Aniimo availability: PC and console are live, iOS is live in China, and Android Install appears in the US listing.",
+        "subtitle": "Check current Aniimo availability across the official PC launcher, Steam, PS5, Xbox, Epic, iOS and Android, with regional storefront and device limits clearly separated.",
         "tag": "Platforms",
         "lead": "The official Aniimo website links PlayStation 5, Xbox, Steam, iOS, Google Play and Epic Games Store. The verified store listings below clarify what is currently confirmed for each platform.",
         "body": [
@@ -1681,7 +1681,7 @@
       },
       "aniimo-launch-time-preload": {
         "title": "Aniimo Launch Status: Download, Servers & Platform Availability",
-        "subtitle": "Aniimo is live. Check current download routes, server status and platform availability instead of expired preload information.",
+        "subtitle": "Aniimo is live. Check current official download routes, server status and PC, console and mobile availability instead of relying on expired preload times or regional storefront assumptions.",
         "tag": "Launch",
         "lead": "Aniimo is already live, so old preload times no longer determine access. The official website currently links its PC launcher, Steam, PS5, Xbox, Epic and mobile download routes; local availability can still differ by storefront, account, region and device.",
         "body": [
@@ -1862,31 +1862,31 @@
       },
       "aniimo-elements-explained": {
         "title": "Aniimo Elements Explained: All 9 Types",
-        "subtitle": "How official element labels organize the Aniimo Dex.",
+        "subtitle": "See how the official Aniimo Dex organizes nine element labels, dual-element entries and searchable creature records without inferring matchup strength or rankings.",
         "tag": "Elements",
         "lead": "The official Aniimo Wiki uses nine element labels. AniimoDex organizes those entries without inferring strength rankings."
       },
       "aniimo-roles-explained": {
         "title": "Aniimo Combat Roles Explained",
-        "subtitle": "DPS, Healer, Support, Breaker and Regenerator labels in the official Dex.",
+        "subtitle": "Understand the official DPS, Healer, Support, Breaker and Regenerator labels in the Aniimo Dex, then compare published elements, skills and evolution families.",
         "tag": "Roles",
         "lead": "Official combat-role labels describe published classifications, not launch-day rankings or complete team builds."
       },
       "aniimo-evolution-system": {
         "title": "Aniimo Evolution System and Families",
-        "subtitle": "Read official evolution relationships without guessing requirements.",
+        "subtitle": "Browse official Aniimo evolution families and branching relationships while keeping unlisted levels, items, quests and conditions clearly unconfirmed.",
         "tag": "Evolution",
         "lead": "Official Wiki detail pages publish evolution families and stages. Unpublished requirements remain unconfirmed."
       },
       "aniimo-mobility-abilities": {
         "title": "Aniimo Mobility Abilities Explained",
-        "subtitle": "Official field and exploration abilities in the Aniimo Dex.",
+        "subtitle": "Browse official Aniimo mobility abilities for movement and field interaction, then compare the published creatures, traits, skills and exploration functions linked to each ability.",
         "tag": "Mobility",
         "lead": "Official mobility abilities are listed separately from combat traits and skills."
       },
       "aniimo-habitats-locations": {
         "title": "Aniimo Habitats and Location Data",
-        "subtitle": "What official habitat records confirm and what remains unknown.",
+        "subtitle": "Use official Aniimo habitat records to compare area associations, then distinguish them from unconfirmed spawn coordinates, weather rules, timers and catch rates.",
         "tag": "Locations",
         "lead": "Official habitat records support area-level discovery, not exact spawn coordinates, timers, weather rules or catch rates."
       },
@@ -2095,7 +2095,7 @@
     "elements": {
       "title": "{element} Aniimo",
       "metaTitle": "{element} Aniimo List and Dex",
-      "metaDescription": "Browse every officially listed {element} Aniimo with roles, Dex entries and source status.",
+      "metaDescription": "Browse every officially listed {element} Aniimo with published roles, Dex entries, evolution-family links, habitats, forms and source status. Element labels do not imply rankings or matchup strength.",
       "description": "Browse {count} Aniimo carrying the official {element} element label, then compare roles and open each verified Dex entry.",
       "sourceNote": "Element labels and membership come from the official Aniimo Wiki index snapshot checked August 30, 2026.",
       "dexTitle": "Official {element} Aniimo list",

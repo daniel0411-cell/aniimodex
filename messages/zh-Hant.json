@@ -360,7 +360,7 @@
   },
   "tools": {
     "title": "工具中心",
-    "subtitle": "基於官方資料的伊莫能力、元素和捕捉資訊查詢工具。",
+    "subtitle": "使用官方來源的伊莫工具查詢元素關係、移動能力與捕捉機率，在不依賴未核驗配隊或刷取路線的前提下比較公開資料。",
     "twineTitle": "Twine 能力反查",
     "twineDesc": "選擇場地移動能力，反查對應的伊莫。",
     "twineTags": ["反查", "移動"],
@@ -524,7 +524,7 @@
   },
   "guide": {
     "title": "伊莫攻略",
-    "subtitle": "伊莫下載、行動版、跨平台、進化、捕獲與上線問題攻略。",
+    "subtitle": "基於官方來源整理伊莫下載、行動版與平台狀態、跨平台邊界、進化資料、捕捉機制、限時活動和已知問題攻略。",
     "relatedTools": "相關工具",
     "relatedDesc": "搭配以下工具，規劃你的探索與隊伍：",
     "browseDex": "瀏覽完整圖鑑，查看屬性與出沒地點",
@@ -594,7 +594,7 @@
       },
       "aniimo-release-date": {
         "title": "Aniimo 發售日期：全球上線與目前平台狀態",
-        "subtitle": "Aniimo 已於 2026 年 9 月 16 日上線，Steam 與 Xbox 已核驗開放。",
+        "subtitle": "Aniimo 已於 2026 年 9 月 16 日上線；查看 Steam、Xbox、PlayStation、行動端與地區商店的核驗狀態，不再依賴舊的上線日期資訊。",
         "tag": "發售",
         "lead": "Aniimo 已於 2026 年 9 月 16 日 10:00（UTC+8）到達全球上線時間。Steam 與 Xbox 現已提供免費本體，行動版發行時間另行計算。",
         "body": [
@@ -638,7 +638,7 @@
       },
       "aniimo-platforms": {
         "title": "Aniimo 支援平台：PC、PS5、Xbox、Android 與 iOS",
-        "subtitle": "目前平台狀態：PC 與主機已上線，iOS 中國區已上線，Android 美國區已顯示安裝。",
+        "subtitle": "查看 Aniimo 官方 PC 啟動器、Steam、PS5、Xbox、Epic、iOS 與 Android 的目前狀態，並區分地區商店、帳號與裝置限制。",
         "tag": "平台",
         "lead": "Aniimo 官网目前連結 PlayStation 5、Xbox、Steam、iOS、Google Play 和 Epic Games Store。以下信息区分官网已連結平台与商店当前明确标注的裝置。",
         "body": [
@@ -1630,7 +1630,7 @@
       },
       "aniimo-launch-time-preload": {
         "title": "Aniimo 伊莫上線狀態：下載、伺服器與平台開放情況",
-        "subtitle": "Aniimo 已正式上線，查看目前下載入口、伺服器狀態與平台開放情況，不再依賴預下載資訊。",
+        "subtitle": "Aniimo 已正式上線，查看目前官方下載入口、伺服器狀態及 PC、主機和行動端可用情況，不再依賴過期預下載時間或其他地區商店顯示。",
         "tag": "上線",
         "lead": "Aniimo 已正式上線，舊預下載時間不再決定能否進入遊戲。官網目前列出 PC 啟動器、Steam、PS5、Xbox、Epic 與行動版入口；商店、帳號、地區和裝置仍可能影響實際可用性。",
         "body": [
@@ -1771,31 +1771,31 @@
       },
       "aniimo-elements-explained": {
         "title": "Aniimo 伊莫元素詳解：全部 9 種屬性",
-        "subtitle": "了解官方元素標籤如何組織伊莫圖鑑。",
+        "subtitle": "了解官方伊莫圖鑑如何組織九種元素、雙元素條目與可搜尋的伊莫資料，不從元素標籤推斷剋制強度或排名。",
         "tag": "元素",
         "lead": "官方 Aniimo Wiki 使用九種元素標籤，AniimoDex 僅依這些標籤整理圖鑑，不據此推斷強度排名。"
       },
       "aniimo-roles-explained": {
         "title": "Aniimo 伊莫戰鬥定位詳解",
-        "subtitle": "理解攻擊、治療、輔助、破防與回復定位。",
+        "subtitle": "理解官方圖鑑中的攻擊、治療、輔助、破防與回復定位，並結合已公布元素、技能和進化家族比較伊莫。",
         "tag": "定位",
         "lead": "官方戰鬥定位是分類標籤，不代表上線後的強度排名或完整配隊。"
       },
       "aniimo-evolution-system": {
         "title": "Aniimo 伊莫進化系統與家族",
-        "subtitle": "在不猜測條件的前提下閱讀官方進化關係。",
+        "subtitle": "查看官方公布的伊莫進化家族與分支關係，同時明確未公布的等級、道具、任務和其他進化條件不會被猜測。",
         "tag": "進化",
         "lead": "官方 Wiki 詳情頁公布進化家族和階段，未公布的進化條件繼續標為未知。"
       },
       "aniimo-mobility-abilities": {
         "title": "Aniimo 伊莫移動能力詳解",
-        "subtitle": "官方圖鑑中的探索與場地能力。",
+        "subtitle": "瀏覽官方伊莫圖鑑中的移動與場地能力，比較關聯伊莫、已公布特性和技能，以及各項能力對應的探索用途。",
         "tag": "能力",
         "lead": "官方移動能力與戰鬥特性、技能分開列出。"
       },
       "aniimo-habitats-locations": {
         "title": "Aniimo 伊莫棲息地與地點資料",
-        "subtitle": "官方棲息地能確認什麼，還有哪些未知。",
+        "subtitle": "用官方伊莫棲息地資料比較區域關聯，並區分尚未確認的精確座標、天氣條件、刷新時間和捕捉機率。",
         "tag": "地點",
         "lead": "官方棲息地支援區域級檢索，不代表精確座標、刷新時間、天氣規則或捕捉率。"
       },
@@ -1972,7 +1972,7 @@
     "elements": {
       "title": "{element}系伊莫",
       "metaTitle": "{element}系伊莫列表與圖鑑",
-      "metaDescription": "瀏覽官方列出的全部{element}系伊莫、定位、圖鑑資料與來源狀態。",
+      "metaDescription": "瀏覽官方列出的全部{element}系伊莫、已公布定位、圖鑑資料、進化家族、棲息地和型態資訊，並查看來源狀態；元素標籤不代表強度排名或剋制結論。",
       "description": "瀏覽帶有官方{element}元素標籤的{count}隻伊莫，比較定位並開啟每個已核驗圖鑑條目。",
       "sourceNote": "元素標籤與成員來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 索引快照。",
       "dexTitle": "官方{element}系伊莫列表",

@@ -28,7 +28,7 @@ const english: Record<string, LaunchGuide> = {
   'aniimo-crossplay-cross-save': {
     title: 'Is Aniimo Crossplay? Platforms & Cross-Save Status',
     subtitle:
-      'Aniimo lists cross-platform multiplayer, but official sources do not yet publish every platform pairing or a cross-save policy.',
+      'Aniimo lists cross-platform multiplayer. See the confirmed PC, console and mobile availability, plus what official sources still do not confirm about platform pairings, cross-save, progression and purchases.',
     tag: 'Cross-platform',
     lead: 'Aniimo is live on the official PC launcher, Steam, PS5, Xbox, Epic and mobile storefronts linked by its official website. Steam lists cross-platform multiplayer, but that does not confirm every pairing or that saves, purchases and progression move between platforms.',
     body: [
@@ -242,7 +242,7 @@ const english: Record<string, LaunchGuide> = {
   'aniimo-pre-registration': {
     title: 'Aniimo Pre-Registration Rewards: Post-Launch Eligibility & Status',
     subtitle:
-      'Aniimo is live. Check current reward eligibility and claim conditions instead of treating old pre-registration information as a new-player download route.',
+      'Aniimo is live. Check official launch-reward status, account eligibility and claim conditions instead of treating expired pre-registration information as a current download route.',
     tag: 'Launch rewards',
     lead: 'Aniimo has launched, and its official site still displays global-launch rewards and completed pre-registration milestones. That display does not establish a universal claim deadline, account entitlement or regional availability, so use the official game and storefront for your own account.',
     body: [
@@ -1137,15 +1137,15 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
         ? 'Aniimo 支援跨平台連線嗎？平台組合、跨平台存檔與進度互通'
         : 'Aniimo 支持跨平台联机吗？平台组合、跨平台存档与进度互通',
       traditional
-        ? '官方列出跨平台多人；PC、PS5、Xbox、手機版的具體組合、跨平台存檔與進度轉移仍未公開。'
-        : '官方列出跨平台多人；PC、PS5、Xbox、手游的具体组合、跨平台存档与进度转移仍未公开。',
+        ? '官方列出跨平台多人；查看 PC、PS5、Xbox 與手機版目前可用狀態，以及具體組合、跨平台存檔、進度與付費轉移仍未公開的範圍。'
+        : '官方列出跨平台多人；查看 PC、PS5、Xbox 与手游当前可用状态，以及具体组合、跨平台存档、进度与付费转移仍未公开的范围。',
       traditional ? '跨平台' : '跨平台',
     ],
     'aniimo-pre-registration': [
       traditional ? 'Aniimo 上線後預約獎勵與資格查詢' : 'Aniimo 上线后预约奖励与资格查询',
       traditional
-        ? '查詢上線後的預約入口、獎勵資格和領取狀態，避免依賴過期活動說法。'
-        : '查询上线后的预约入口、奖励资格和领取状态，避免依赖过期活动说法。',
+        ? 'Aniimo 已上線；查看官方首發獎勵、帳號資格與領取狀態，避免將已過期的預約資訊當作目前下載或保證獎勵。'
+        : 'Aniimo 已上线；查看官方首发奖励、账号资格与领取状态，避免将已过期的预约信息当作当前下载或保证奖励。',
       traditional ? '首發獎勵' : '首发奖励',
     ],
     'aniimo-face-data-import': [
