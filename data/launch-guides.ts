@@ -26,11 +26,11 @@ const commonWatchlist = [
 
 const english: Record<string, LaunchGuide> = {
   'aniimo-crossplay-cross-save': {
-    title: 'Is Aniimo Crossplay? Platforms & Cross-Save Status',
+    title: 'Is Aniimo Crossplay? Cross-Platform Play & Cross-Save Status',
     subtitle:
       'Aniimo lists cross-platform multiplayer. See the confirmed PC, console and mobile availability, plus what official sources still do not confirm about platform pairings, cross-save, progression and purchases.',
     tag: 'Cross-platform',
-    lead: 'Aniimo is live on the official PC launcher, Steam, PS5, Xbox, Epic and mobile storefronts linked by its official website. Steam lists cross-platform multiplayer, but that does not confirm every pairing or that saves, purchases and progression move between platforms.',
+    lead: 'Yes, Aniimo lists cross-platform multiplayer. No, a complete official cross-save policy is not published. The official website links PC, PS5, Xbox, Epic and mobile routes, but Steam does not document every platform pairing or whether saves, purchases and progression move between platforms.',
     body: [
       { t: 'h', c: 'Current platform and crossplay status' },
       {
@@ -41,13 +41,18 @@ const english: Record<string, LaunchGuide> = {
           ['PlayStation 5', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
           ['Xbox Series X|S', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
           ['iOS and Android', 'Official mobile download route listed', 'Specific pairing and cross-save status not documented'],
-          ['Nintendo Switch', 'Not announced by the official sources checked', 'No crossplay or account policy announced'],
+          ['Nintendo Switch and Switch 2', 'Not announced by the official sources checked', 'No crossplay or account policy announced'],
         ],
       },
-      { t: 'h', c: 'Does Aniimo support crossplay?' },
+      { t: 'h', c: 'Is Aniimo cross-platform?' },
       {
         t: 'p',
         c: 'Yes. Steam lists cross-platform multiplayer as an Aniimo feature. The listing does not document every supported platform pairing or activity.',
+      },
+      { t: 'h', c: 'Is Aniimo crossplay?' },
+      {
+        t: 'p',
+        c: 'Yes. Aniimo uses the same officially listed cross-platform multiplayer feature. It confirms the feature exists, not that every PC, PS5, Xbox and mobile combination is currently supported for every activity.',
       },
       { t: 'h', c: 'Which platform combinations are confirmed?' },
       {
@@ -64,10 +69,10 @@ const english: Record<string, LaunchGuide> = {
           ['Purchases and paid currency transfer', 'Not confirmed'],
         ],
       },
-      { t: 'h', c: 'Does Aniimo have cross-save or cross-progression?' },
+      { t: 'h', c: 'Does Aniimo have cross-save?' },
       {
         t: 'p',
-        c: 'No complete official policy is available in the sources used here. Crossplay allows players on different platforms to play together; it does not automatically transfer saves, achievements, purchases or premium currency.',
+        c: 'No complete official cross-save or cross-progression policy is available in the sources used here. Crossplay allows players on different platforms to play together; it does not automatically transfer saves, achievements, purchases or premium currency.',
       },
       { t: 'h', c: 'Does progress transfer between PC, PS5, Xbox and mobile?' },
       {
@@ -81,7 +86,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 26, 2026. Status labels describe the linked official routes, not a promise that every country, account or device can access the same store listing.',
+        c: 'Last official-source check: September 29, 2026. Status labels describe the linked official routes, not a promise that every country, account or device can access the same store listing.',
       },
     ],
   },
@@ -281,7 +286,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 26, 2026. Rewards and availability can vary by game version, region, platform and account; only the current official in-game notice or campaign terms can confirm a claim.',
+        c: 'Last official-source check: September 29, 2026. Rewards and availability can vary by game version, region, platform and account; only the current official in-game notice or campaign terms can confirm a claim.',
       },
     ],
   },
@@ -332,7 +337,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 26, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+        c: 'Last official-source check: September 29, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
       },
     ],
   },

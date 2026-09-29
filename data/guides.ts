@@ -77,9 +77,9 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-platforms',
-    date: '2026-09-23',
+    date: '2026-09-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-release-date', 'aniimo-crossplay-cross-save'],
+    relatedSlugs: ['aniimo-mobile', 'aniimo-nintendo-switch', 'aniimo-crossplay-cross-save'],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
@@ -124,9 +124,9 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-mobile',
-    date: '2026-09-26',
+    date: '2026-09-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-pre-registration', 'aniimo-platforms', 'aniimo-launch-time-preload'],
+    relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-launch-checklist-known-issues'],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-app-store-6759098797',
@@ -162,9 +162,9 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-nintendo-switch',
-    date: '2026-08-30',
+    date: '2026-09-29',
     readMinutes: 3,
-    relatedSlugs: ['aniimo-platforms', 'aniimo-release-date'],
+    relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-launch-time-preload'],
     sourceIds: ['aniimo-official-home-2026-08-28'],
   },
   {
@@ -255,9 +255,9 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
-    date: '2026-09-26',
+    date: '2026-09-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-release-date', 'aniimo-pre-registration', 'aniimo-mobile'],
+    relatedSlugs: ['how-to-download-aniimo', 'aniimo-platforms', 'aniimo-launch-checklist-known-issues'],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-playstation-10018491',
@@ -270,7 +270,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
-    date: '2026-09-26',
+    date: '2026-09-29',
     readMinutes: 5,
     relatedSlugs: [
       'aniimo-multiplayer',
@@ -333,7 +333,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-09-26',
+    date: '2026-09-29',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [

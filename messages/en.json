@@ -639,10 +639,10 @@
         ]
       },
       "aniimo-platforms": {
-        "title": "Aniimo Platforms: PC, PS5, Xbox, Android and iOS Status",
-        "subtitle": "Check current Aniimo availability across the official PC launcher, Steam, PS5, Xbox, Epic, iOS and Android, with regional storefront and device limits clearly separated.",
+        "title": "Aniimo Platforms: PC, PS5, Xbox, Mobile, Switch & Switch 2 Status",
+        "subtitle": "See the current official status for PC, PS5, Xbox, Epic, iOS and Android, plus the unconfirmed Nintendo Switch and Switch 2 status.",
         "tag": "Platforms",
-        "lead": "The official Aniimo website links PlayStation 5, Xbox, Steam, iOS, Google Play and Epic Games Store. The verified store listings below clarify what is currently confirmed for each platform.",
+        "lead": "Aniimo is available through the official PC launcher, Steam, PS5, Xbox, Epic and mobile routes. Nintendo Switch and Switch 2 are not announced in the official sources checked. Storefront, account region and device compatibility can still change what is available to a player.",
         "body": [
           {
             "t": "h",
@@ -652,12 +652,14 @@
             "t": "table",
             "head": ["Platform", "Official status"],
             "rows": [
-              ["PlayStation 5", "September 16, 2026 at 10:00 UTC+8"],
-              ["Xbox Series X|S", "Free base game and purchase action available"],
-              ["Windows PC", "Released on Steam; official PC launcher also available"],
-              ["iOS", "Available in the China App Store; other storefronts may differ"],
-              ["Android", "Install shown on the US Google Play listing; regional and device availability may vary"],
-              ["Epic Games Store", "Linked by the official Aniimo website"]
+              ["Windows PC / Steam", "Released; official PC launcher and Steam route listed"],
+              ["PlayStation 5", "Official store route listed; regional availability can differ"],
+              ["Xbox Series X|S", "Official store route listed; regional availability can differ"],
+              ["Epic Games Store", "Official store route listed"],
+              ["iOS", "China App Store listing verified; check your local storefront"],
+              ["Android", "US Google Play Install action verified; check your account and device"],
+              ["Nintendo Switch", "Not announced by the official sources checked"],
+              ["Nintendo Switch 2", "Not announced by the official sources checked"]
             ]
           },
           {
@@ -690,7 +692,7 @@
           },
           {
             "t": "p",
-            "c": "No Nintendo Switch listing appears among the official platform links checked for this page. Treat Switch claims as unconfirmed unless Aniimo or Nintendo publishes an official listing."
+            "c": "No Nintendo Switch or Nintendo Switch 2 listing appears among the official platform links checked for this page. Treat claims for either console as unconfirmed unless Aniimo or Nintendo publishes an official listing."
           },
           {
             "t": "h",
@@ -698,7 +700,11 @@
           },
           {
             "t": "p",
-            "c": "No single date should be assumed for every platform. PC and console launched on September 16 UTC+8, Aniimo is available in the China App Store, and the US Google Play listing showed Install on September 22. Mobile availability can still differ by country, account and device."
+            "c": "No single date should be assumed for every platform. The official store listings and mobile routes have different regional and device conditions. Use the dedicated Mobile, Nintendo Switch and Crossplay guides for the platform-specific answer."
+          },
+          {
+            "t": "quote",
+            "c": "Last official-source check: September 29, 2026. This is the platform overview; it does not promise availability in every country or on every account."
           }
         ]
       },
@@ -1068,10 +1074,10 @@
         ]
       },
       "aniimo-nintendo-switch": {
-        "title": "Is Aniimo Coming to Nintendo Switch? Current Official Status",
-        "subtitle": "Nintendo Switch is not listed among Aniimo's current official platform links.",
+        "title": "Is Aniimo on Nintendo Switch or Switch 2? Official Status",
+        "subtitle": "Neither Nintendo Switch nor Switch 2 is announced in the official Aniimo sources checked for this page.",
         "tag": "Platforms",
-        "lead": "Aniimo has not been officially confirmed for Nintendo Switch in the sources checked for this page.",
+        "lead": "Aniimo is not officially confirmed for Nintendo Switch or Nintendo Switch 2. The official website currently links PC, PS5, Xbox, Epic, iOS and Android routes, but no Nintendo store route or release date is listed.",
         "body": [
           {
             "t": "h",
@@ -1079,7 +1085,15 @@
           },
           {
             "t": "p",
-            "c": "No Nintendo Switch listing appears on the official Aniimo website, which currently links PlayStation, Xbox, PC, iOS and Android storefronts."
+            "c": "No Nintendo Switch listing appears on the official Aniimo website, which currently links PlayStation, Xbox, PC, iOS and Android storefronts. This means Switch availability and a release date remain unconfirmed."
+          },
+          {
+            "t": "h",
+            "c": "Is Aniimo on Nintendo Switch 2?"
+          },
+          {
+            "t": "p",
+            "c": "No. The official sources checked also do not announce Aniimo for Nintendo Switch 2. Do not treat a Switch 2 search result, rumor or platform wish list as a confirmed version."
           },
           {
             "t": "h",
@@ -1087,7 +1101,11 @@
           },
           {
             "t": "p",
-            "c": "It is possible for platform plans to change, but there is no official confirmation to report now. This page will be updated only when Aniimo or Nintendo publishes a verifiable announcement."
+            "c": "Platform plans can change, but there is no official confirmation to report now. Check the Platforms overview for listed routes and Crossplay for multiplayer and account-status limits; this page will change only when Aniimo or Nintendo publishes a verifiable announcement."
+          },
+          {
+            "t": "quote",
+            "c": "Last official-source check: September 29, 2026. Status is unconfirmed, not a prediction about a future Nintendo release."
           }
         ]
       },
@@ -1720,7 +1738,7 @@
           },
           {
             "t": "quote",
-            "c": "Last official-source check: September 26, 2026. This page keeps its original URL for older preload searches, but it now answers current access status."
+            "c": "Last official-source check: September 29, 2026. This page keeps its original URL for older preload searches, but it now answers current access status."
           }
         ]
       },

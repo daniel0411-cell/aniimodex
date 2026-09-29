@@ -637,10 +637,10 @@
         ]
       },
       "aniimo-platforms": {
-        "title": "Aniimo 支持平台：PC、PS5、Xbox、Android 与 iOS",
-        "subtitle": "查看 Aniimo 官方 PC 启动器、Steam、PS5、Xbox、Epic、iOS 与 Android 的当前状态，并区分地区商店、账号与设备限制。",
+        "title": "Aniimo 支持平台：PC、PS5、Xbox、手游、Switch 与 Switch 2 状态",
+        "subtitle": "查看 PC、PS5、Xbox、Epic、iOS 与 Android 当前官方状态，以及尚未确认的 Nintendo Switch 与 Switch 2。",
         "tag": "平台",
-        "lead": "Aniimo 官网目前链接 PlayStation 5、Xbox、Steam、iOS、Google Play 和 Epic Games Store。以下信息区分官网已链接平台与商店当前明确标注的设备。",
+        "lead": "Aniimo 可通过官方 PC 启动器、Steam、PS5、Xbox、Epic 和移动端入口获取。本站核验的官方来源尚未公布 Nintendo Switch 或 Switch 2；商店、账号地区和设备兼容性仍可能影响实际可用性。",
         "body": [
           {
             "t": "h",
@@ -650,12 +650,14 @@
             "t": "table",
             "head": ["平台", "官方状态"],
             "rows": [
-              ["PlayStation 5", "2026 年 9 月 16 日 10:00（UTC+8）"],
-              ["Xbox Series X|S", "免费本体和获取操作已开放"],
-              ["Windows PC", "Steam 已正式发行，官网 PC 启动器也可下载"],
-              ["iOS", "中国区 App Store 已上线；其他地区可能不同"],
-              ["Android", "美国区 Google Play 已显示安装；其他地区与设备可能不同"],
-              ["Epic Games Store", "Aniimo 官网已提供 Epic 链接"]
+              ["Windows PC / Steam", "已发行；官网列出 PC 启动器和 Steam 入口"],
+              ["PlayStation 5", "官网列出商店入口；地区可用性可能不同"],
+              ["Xbox Series X|S", "官网列出商店入口；地区可用性可能不同"],
+              ["Epic Games Store", "官网列出商店入口"],
+              ["iOS", "已核验中国区 App Store；请查看本地商店"],
+              ["Android", "已核验美国区 Google Play 安装按钮；请查看账号和设备"],
+              ["Nintendo Switch", "本次核验的官方来源未公布"],
+              ["Nintendo Switch 2", "本次核验的官方来源未公布"]
             ]
           },
           {
@@ -688,7 +690,11 @@
           },
           {
             "t": "p",
-            "c": "本站核验的官方平台入口中没有 Nintendo Switch。在 Aniimo 或任天堂发布官方页面前，应视为尚未确认。"
+            "c": "本站核验的官方平台入口中没有 Nintendo Switch 或 Nintendo Switch 2。在 Aniimo 或任天堂发布官方页面前，两者都应视为尚未确认。"
+          },
+          {
+            "t": "quote",
+            "c": "官方来源最后核验：2026 年 9 月 29 日。本页是平台总览，不保证每个国家、账号或设备都能看到相同入口。"
           }
         ]
       },
@@ -1279,10 +1285,10 @@
         ]
       },
       "aniimo-nintendo-switch": {
-        "title": "Aniimo 伊莫会上 Nintendo Switch 吗？官方状态说明",
-        "subtitle": "Nintendo Switch 尚未出现在 Aniimo 当前官方平台列表中。",
+        "title": "Aniimo 伊莫会上 Nintendo Switch 或 Switch 2 吗？官方状态",
+        "subtitle": "本站核验的官方 Aniimo 来源尚未公布 Nintendo Switch 或 Switch 2 版本。",
         "tag": "平台",
-        "lead": "截至本页核验时间，没有官方资料确认 Aniimo 会登陆 Nintendo Switch。",
+        "lead": "Aniimo 尚未获官方确认登陆 Nintendo Switch 或 Nintendo Switch 2。官网目前列出 PC、PS5、Xbox、Epic、iOS 和 Android 入口，但没有任天堂商店入口或发行日期。",
         "body": [
           {
             "t": "h",
@@ -1290,7 +1296,15 @@
           },
           {
             "t": "p",
-            "c": "目前没有。Aniimo 官网列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但没有 Nintendo Switch。"
+            "c": "目前没有官方确认。Aniimo 官网列出了 PlayStation、Xbox、PC、iOS 和 Android 商店，但没有 Nintendo Switch；Switch 可用性和发行日期都尚未确认。"
+          },
+          {
+            "t": "h",
+            "c": "Aniimo 有 Switch 2 版吗？"
+          },
+          {
+            "t": "p",
+            "c": "本站核验的官方来源同样没有公布 Nintendo Switch 2 版本。搜索结果、传闻或愿望清单不等于已确认版本。"
           },
           {
             "t": "h",
@@ -1298,7 +1312,11 @@
           },
           {
             "t": "p",
-            "c": "平台计划未来可能变化，但现在没有可以核实的官方消息。只有 Aniimo 或任天堂正式公布后，本页才会更新为已确认。"
+            "c": "平台计划未来可能变化，但现在没有可以核实的官方消息。可在平台总览查看当前入口，在跨平台页查看联机与账号状态；只有 Aniimo 或任天堂正式公布后，本页才会更新为已确认。"
+          },
+          {
+            "t": "quote",
+            "c": "官方来源最后核验：2026 年 9 月 29 日。尚未确认不代表对未来任天堂版本的预测。"
           }
         ]
       },
@@ -1669,7 +1687,7 @@
           },
           {
             "t": "quote",
-            "c": "官方来源最后核验：2026 年 9 月 26 日。本页保留原 URL 服务旧的预下载搜索，但内容已更新为当前访问状态。"
+            "c": "官方来源最后核验：2026 年 9 月 29 日。本页保留原 URL 服务旧的预下载搜索，但内容已更新为当前访问状态。"
           }
         ]
       },
