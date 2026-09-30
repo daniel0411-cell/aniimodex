@@ -200,19 +200,19 @@ const english: Record<string, LaunchGuide> = {
     ],
   },
   'aniimo-prismana-event-tracker': {
-    title: 'Aniimo Prismana Event Tracker: Melloblum & Waleetle Schedule',
+    title: 'Aniimo Prismana Event Tracker: Current Melloblum & Waleetle Schedule',
     subtitle:
       'Official 1.1 Prismana Form event windows, regions and unlock requirement, with clear status labels and UTC+8 times.',
     tag: 'Limited events',
-    lead: 'Aniimo 1.1 introduced limited Vein Abundance windows where designated Prismana Form Aniimos appear in named regions. This tracker records the official schedule only; it does not claim an exact spawn point, respawn timer, catch rate or farming route.',
+    lead: 'Melloblum is the current official Vein Abundance feature in Rosetower Woods through October 5 at 03:59 (UTC+8). Waleetle is scheduled next in Berylline Vale from October 5. This tracker records the official schedule only; it does not claim an exact spawn point, respawn timer, catch rate or farming route.',
     body: [
-      { t: 'h', c: 'Current official Prismana event schedule' },
+      { t: 'h', c: 'Current and next official Prismana event schedule' },
       {
         t: 'table',
         head: ['Event window (UTC+8)', 'Region', 'Officially named Prismana Form Aniimo', 'Entry requirement'],
         rows: [
-          ['Sep 28 04:00 - Oct 5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', 'Reach Student II'],
-          ['Oct 5 04:00 - Oct 12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
+          ['Current: Sep 28 04:00 - Oct 5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', 'Reach Student II'],
+          ['Next: Oct 5 04:00 - Oct 12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
         ],
       },
       { t: 'h', c: 'What is Vein Abundance?' },
@@ -240,7 +240,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 28, 2026. All event times use UTC+8 and come from the September 23 version 1.1 announcement.',
+        c: 'Last official-source check: September 30, 2026. All event times use UTC+8 and come from the September 23 version 1.1 announcement. The status labels use the current UTC+8 date and must change when a listed window ends.',
       },
     ],
   },
@@ -419,6 +419,11 @@ const english: Record<string, LaunchGuide> = {
           ['Home visual blocks or outlines on mobile', 'Mobile Home entry', 'Official notice marks this as fixed'],
         ],
       },
+      { t: 'h', c: 'Latest official patch: September 29' },
+      {
+        t: 'p',
+        c: 'Patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects. This patch does not publish a new universal fix for the other issues listed above.',
+      },
       { t: 'h', c: 'Current playable status' },
       {
         t: 'table',
@@ -482,7 +487,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source review: September 28, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
+        c: 'Last official-source review: September 30, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
       },
     ],
   },
@@ -549,6 +554,11 @@ const english: Record<string, LaunchGuide> = {
         t: 'li',
         c: 'Home interfaces received new shortcuts, controller navigation and build-snapping improvements.',
       },
+      { t: 'h', c: 'September 29 follow-up patch' },
+      {
+        t: 'p',
+        c: 'Official patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects.',
+      },
       { t: 'h', c: 'Official issue workarounds introduced with 1.1' },
       {
         t: 'p',
@@ -556,7 +566,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 26, 2026. All times above come from the official announcement and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
+        c: 'Last official-source check: September 30, 2026. All times above come from official announcements and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
       },
     ],
   },
@@ -658,6 +668,8 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['手機進入家園出現方塊或描邊', '手機家園入口', '官方標示已修正'],
               ],
             },
+            { t: 'h', c: '9 月 29 日最新官方補丁' },
+            { t: 'p', c: '1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後，模型貼圖變模糊的問題；也更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser\'s Departure 的展示影片和圖片，使其與遊戲內效果一致。該補丁未公布上方其他問題的通用新修正方式。' },
             { t: 'h', c: '登入、伺服器或連線問題' },
             {
               t: 'p',
@@ -696,7 +708,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '內容最後檢查：2026 年 9 月 28 日。有效的問題報告應包含平台、地區、伺服器、版本、時間、完整錯誤與重現步驟。',
+              c: '內容最後檢查：2026 年 9 月 30 日。有效的問題報告應包含平台、地區、伺服器、版本、時間、完整錯誤與重現步驟。',
             },
           ],
         }
@@ -732,6 +744,8 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 ['手机进入家园出现方块或描边', '手机家园入口', '官方标示已修复'],
               ],
             },
+            { t: 'h', c: '9 月 29 日最新官方补丁' },
+            { t: 'p', c: '1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；也更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser\'s Departure 的展示视频和图片，使其与游戏内效果一致。该补丁未公布上方其他问题的通用新修复方式。' },
             { t: 'h', c: '登录、服务器或连接问题' },
             {
               t: 'p',
@@ -770,7 +784,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             },
             {
               t: 'quote',
-              c: '内容最后检查：2026 年 9 月 28 日。有效的问题报告应包含平台、地区、服务器、版本、时间、完整错误与重现步骤。',
+              c: '内容最后检查：2026 年 9 月 30 日。有效的问题报告应包含平台、地区、服务器、版本、时间、完整错误与重现步骤。',
             },
           ],
         };
@@ -833,9 +847,11 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Aniilog 暫時隱藏尚未取得的 Sparkling Forms。' },
             { t: 'li', c: 'Companion Mode 邀請不再需要與朋友面對面站立。' },
             { t: 'li', c: '家園介面新增快捷入口，並改善控制器導覽與建造吸附顯示。' },
+            { t: 'h', c: '9 月 29 日後續補丁' },
+            { t: 'p', c: '官方 1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後模型貼圖變模糊的問題；並更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser\'s Departure 的展示影片和圖片，使其與遊戲內效果一致。' },
             { t: 'h', c: '1.1 同步公告的問題處理方式' },
             { t: 'p', c: 'Android「星星與騎士」支線卡死時，可切換效能模式、關閉陰影，或以右上角選項跳過劇情。PC 轉手機後無法領取「聯結無界」獎勵時，官方建議重新登入一次。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 26 日。上述時間均使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 30 日。上述時間均使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
           ],
         }
       : {
@@ -894,9 +910,11 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Aniilog 暂时隐藏尚未获得的 Sparkling Forms。' },
             { t: 'li', c: 'Companion Mode 邀请不再需要与朋友面对面站立。' },
             { t: 'li', c: '家园界面新增快捷入口，并改善手柄导航与建造吸附显示。' },
+            { t: 'h', c: '9 月 29 日后续补丁' },
+            { t: 'p', c: '官方 1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；并更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser\'s Departure 的展示视频和图片，使其与游戏内效果一致。' },
             { t: 'h', c: '1.1 同步公告的问题处理方式' },
             { t: 'p', c: 'Android“星星与骑士”支线卡死时，可切换性能模式、关闭阴影，或以右上角选项跳过剧情。PC 转手机后无法领取“联结无界”奖励时，官方建议重新登录一次。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 26 日。上述时间均使用 UTC+8；参与活动仍需满足对应解锁条件。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 30 日。上述时间均使用 UTC+8；参与活动仍需满足对应解锁条件。' },
           ],
         };
   }
@@ -1004,8 +1022,8 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           tag: '限時活動',
           lead: 'Aniimo 1.1 加入 Vein Abundance 限時活動，指定區域會出現官方點名的 Prismana Form 伊莫。本頁只記錄官方時間表，不聲稱座標、重生時間、捕獲率或最佳路線。',
           body: [
-            { t: 'h', c: '目前官方 Prismana 活動時間表' },
-            { t: 'table', head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'], rows: [['9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '達到 Student II'], ['10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '達到 Student II']] },
+            { t: 'h', c: '目前與下一期官方 Prismana 活動時間表' },
+            { t: 'table', head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'], rows: [['目前：9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '達到 Student II'], ['下一期：10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '達到 Student II']] },
             { t: 'h', c: 'Vein Abundance 是什麼？' },
             { t: 'p', c: '官方 1.1 公告表示，Vein 能量湧現時，指定區域會在限時內出現特別 Prismana Form 伊莫。公告列出上述時間、區域和主打伊莫，但未公布地圖座標、遇見頻率或保證捕獲結果。' },
             { t: 'h', c: '怎麼使用這張追蹤表？' },
@@ -1017,7 +1035,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'p', c: '本頁追蹤的是限時活動中點名的 Prismana Form 伊莫。Prismana 形態與閃耀樣式在 AniimoDex 資料中是不同系統；活動出現不代表閃耀結果、數值變化或保證捕獲。' },
             { t: 'h', c: '活動結束後會怎樣？' },
             { t: 'p', c: '活動會保留為帶日期的官方記錄，但 AniimoDex 會標示為已結束，不會暗示主打伊莫仍能取得。後續活動必須有新的官方公告才會加入。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。所有活動時間使用 UTC+8，來源為 9 月 23 日 1.1 版本公告。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 30 日。所有活動時間使用 UTC+8，來源為 9 月 23 日 1.1 版本公告；目前/下一期標示依 UTC+8 當日日期判斷，活動窗口結束時必須更新。' },
           ],
         }
       : {
@@ -1026,8 +1044,8 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           tag: '限时活动',
           lead: 'Aniimo 1.1 加入 Vein Abundance 限时活动，指定区域会出现官方点名的 Prismana Form 伊莫。本页只记录官方时间表，不声称坐标、重生时间、捕获率或最佳路线。',
           body: [
-            { t: 'h', c: '当前官方 Prismana 活动时间表' },
-            { t: 'table', head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'], rows: [['9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '达到 Student II'], ['10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '达到 Student II']] },
+            { t: 'h', c: '当前与下一期官方 Prismana 活动时间表' },
+            { t: 'table', head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'], rows: [['当前：9/28 04:00 - 10/5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', '达到 Student II'], ['下一期：10/5 04:00 - 10/12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', '达到 Student II']] },
             { t: 'h', c: 'Vein Abundance 是什么？' },
             { t: 'p', c: '官方 1.1 公告表示，Vein 能量涌现时，指定区域会在限时内出现特别 Prismana Form 伊莫。公告列出上述时间、区域和主打伊莫，但未公布地图坐标、遇见频率或保证捕获结果。' },
             { t: 'h', c: '怎么使用这张追踪表？' },
@@ -1039,7 +1057,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'p', c: '本页追踪的是限时活动中点名的 Prismana Form 伊莫。Prismana 形态与闪耀样式在 AniimoDex 数据中是不同系统；活动出现不代表闪耀结果、数值变化或保证捕获。' },
             { t: 'h', c: '活动结束后会怎样？' },
             { t: 'p', c: '活动会保留为带日期的官方记录，但 AniimoDex 会标示为已结束，不会暗示主打伊莫仍能取得。后续活动必须有新的官方公告才会加入。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。所有活动时间使用 UTC+8，来源为 9 月 23 日 1.1 版本公告。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 30 日。所有活动时间使用 UTC+8，来源为 9 月 23 日 1.1 版本公告；当前/下一期标示依 UTC+8 当日日期判断，活动窗口结束时必须更新。' },
           ],
         };
   }

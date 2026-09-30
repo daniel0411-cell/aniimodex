@@ -8,7 +8,7 @@ import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
-const LAST_PUBLISHED = '2026-09-20';
+const LAST_PUBLISHED = '2026-09-30';
 
 const FEATURED_DEX_NUMBERS = new Set(['001', '002', '005', '007', '011']);
 const details = detailsSnapshot.details as OfficialAniimoDetail[];

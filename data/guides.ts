@@ -220,7 +220,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    date: '2026-09-28',
+    date: '2026-09-30',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -333,7 +333,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-09-29',
+    date: '2026-09-30',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -350,11 +350,12 @@ export const guidePosts: GuidePost[] = [
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-epic-759396',
       'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-steam-patch-1-0-3616231-2026-09-29',
     ],
   },
   {
     slug: 'aniimo-version-1-1-update',
-    date: '2026-09-26',
+    date: '2026-09-30',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -365,7 +366,10 @@ export const guidePosts: GuidePost[] = [
       'aniimo-holo-battle-interlink',
       'aniimo-prismana-event-tracker',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: [
+      'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-steam-patch-1-0-3616231-2026-09-29',
+    ],
   },
   {
     slug: 'aniimo-choose-by-mobility-role',

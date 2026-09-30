@@ -61,6 +61,14 @@ export const sources: SourceReference[] = [
       'The official patch note lists red-screen and certain graphics-card eye-display fixes, plus a temporary red-screen workaround of switching graphics quality to Performance mode. It repeats the black-screen steps: update graphics drivers, switch between DX11 and DX12, and disable DLSS and Frame Generation on the login screen.',
   },
   {
+    id: 'aniimo-steam-patch-1-0-3616231-2026-09-29',
+    url: 'https://store.steampowered.com/news/app/4126040/view/707783993093785982',
+    title: 'Aniimo Official Steam Patch Notes - v1.0.3616231.0',
+    accessedAt: '2026-09-30',
+    evidence:
+      'The official patch note fixes blurry Irisalis model textures after Transmogging to selected styles from the Super Operation: Egg Heist and updates the Legendary Aniipod: Irisalis acquisition notification icon plus the Windchaser\'s Departure showcase video and image to match in-game effects.',
+  },
+  {
     id: 'aniimo-playstation-10018491',
     url: 'https://store.playstation.com/concept/10018491',
     title: 'Aniimo on PlayStation Store',
