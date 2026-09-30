@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    'google-adsense-account': 'ca-pub-8108326729795034',
+  },
 };
 
 // 启用静态渲染（output: 'export' 下 setRequestLocale 是必须的）
