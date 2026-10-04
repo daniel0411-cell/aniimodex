@@ -107,6 +107,17 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Do not create over the existing character, unlink an account, reinstall repeatedly or make a replacement purchase first. Record the platform, region, server, character name, approximate last successful login, game version and any error. Keep platform receipts and screenshots, then use the official support route for account-specific recovery.',
       },
+      { t: 'h', c: 'Which official recovery case matches me?' },
+      {
+        t: 'table',
+        head: ['Situation', 'Official next step'],
+        rows: [
+          ['You created a new character after progress disappeared', 'Use the account-choice survey sent to the registered email; official support stated a 72-hour processing target after submission'],
+          ['You did not create a new character', 'The official post says the original progress should already be restored; contact support if it is still missing'],
+          ['The character appears on another region', 'Switch back to the server region originally used before treating the progress as deleted'],
+          ['No survey, reply or restored progress', 'Send UID, login email, log file and server region to official support'],
+        ],
+      },
       { t: 'h', c: 'Before switching from PC, console or mobile' },
       {
         t: 'table',
@@ -155,6 +166,93 @@ const english: Record<string, LaunchGuide> = {
       {
         t: 'quote',
         c: 'Last official-source check: October 4, 2026. This guide avoids claiming that a particular action restores progress, because recovery depends on the affected account and official support verification.',
+      },
+    ],
+  },
+  'aniimo-egg-heist': {
+    title: 'Aniimo Egg Heist Guide: Chaos Mode, Drops & Shadow Sparkling Odds',
+    subtitle:
+      'Official Egg Heist rules, three-player PVEVP, Chaos access, September 30 fixes and the published Shadow Sparkling probability.',
+    tag: 'Egg Heist',
+    lead: 'Egg Heist is a three-player real-time PVEVP activity. Official sources confirm the team format, Chaos Mode access, Sparkling odds and several September 30 fixes, but they still do not publish a complete map rotation, exact drop-rate table or universally best route.',
+    body: [
+      { t: 'h', c: 'Current official Egg Heist status' },
+      {
+        t: 'table',
+        head: ['Topic', 'Official status'],
+        rows: [
+          ['Team format', 'Three-player real-time PVEVP'],
+          ['Chaos Mode', 'Requires Elite Egg Seeker Tier IV and a Chaos Ticket'],
+          ['Chaos rewards', 'Higher chances for Prismana eggs and glazed-quality collectibles; exact rates not published'],
+          ['September 30 patch', 'Erlath added; missing Sanctum entrance and Stellarys control-immunity issues fixed'],
+          ['Stellarys Starine', 'Drop rate increased on Chaos difficulty; exact before/after rates not published'],
+        ],
+      },
+      { t: 'h', c: 'What is special about an Egg Heist egg?' },
+      {
+        t: 'table',
+        head: ['Sparkling Cube target', 'Normal', 'Dazzling', 'Shadow'],
+        rows: [['Egg Heist egg', '99%', '0%', '1%'], ['Egg not from Egg Heist', '99%', '1%', '0%']],
+      },
+      {
+        t: 'p',
+        c: 'The official probability disclosure covers Sparkling style outcomes after using the listed item. It does not guarantee a particular Aniimo hatch, prove that Shadow changes stats, or publish Alpha Egg odds.',
+      },
+      { t: 'h', c: 'What should I verify before a run?' },
+      { t: 'li', c: 'Confirm the live activity screen, difficulty, ticket requirement and current reward preview.' },
+      { t: 'li', c: 'Make sure all three players use a compatible client version and server region.' },
+      { t: 'li', c: 'Treat community maps as navigation aids, not proof of every live map rotation or reward rate.' },
+      { t: 'li', c: 'Record version, difficulty and sample size before making a drop-rate claim.' },
+      { t: 'h', c: 'What remains unverified?' },
+      {
+        t: 'p',
+        c: 'AniimoDex does not publish a fastest route, guaranteed Alpha Egg, exact collectible rate, fixed map rotation, best team or universal match strategy without a current official rule or reproducible versioned test.',
+      },
+      {
+        t: 'quote',
+        c: 'Last official-source check: October 4, 2026. Official facts and community route discussions are kept separate.',
+      },
+    ],
+  },
+  'aniimo-rv-homeland-guide': {
+    title: 'Aniimo RV & Homeland Guide: Building, Production and Known Issues',
+    subtitle:
+      'A source-checked overview of Aniimo Home and RV features, version 1.1 controls and confirmed mobile model fixes.',
+    tag: 'RV & Home',
+    lead: 'Aniimo includes Home gameplay and RV progression, but official public sources do not yet publish a complete level-by-level production table or optimal building order. This guide records confirmed features and separates them from current community issue reports.',
+    body: [
+      { t: 'h', c: 'What is officially confirmed about Home and RV?' },
+      {
+        t: 'table',
+        head: ['Feature', 'Verified status'],
+        rows: [
+          ['Home gameplay', 'Listed by the official website as part of launch benefits and progression'],
+          ['Home shortcut', 'Version 1.1 added a shortcut in the Home interface'],
+          ['Controller navigation', 'Version 1.1 improved Home controller navigation'],
+          ['Building placement', 'Version 1.1 improved build-snapping display'],
+          ['Missing mobile Home models', 'Official September 30 patch marks the model issue fixed'],
+        ],
+      },
+      { t: 'h', c: 'What is not yet verified?' },
+      {
+        t: 'table',
+        head: ['Player question', 'AniimoDex status'],
+        rows: [
+          ['Best RV level-up order', 'No official complete table registered'],
+          ['Best production building priority', 'Not published as an official recommendation'],
+          ['Exact roof and layout limits', 'No complete public specification registered'],
+          ['Disappearing production or decorations', 'Community issue reports only unless an official notice confirms the case'],
+          ['Priority queue per building', 'Community feature request, not a current confirmed feature'],
+        ],
+      },
+      { t: 'h', c: 'Safe troubleshooting for a Home display problem' },
+      { t: 'li', c: 'Update through the official launcher or storefront and record the current client version.' },
+      { t: 'li', c: 'Leave and re-enter Home before rebuilding or deleting any structure.' },
+      { t: 'li', c: 'Capture the RV level, platform, server, layout and missing object in screenshots or video.' },
+      { t: 'li', c: 'Do not spend replacement currency until official support confirms whether the object is missing or only not rendered.' },
+      {
+        t: 'quote',
+        c: 'Last official-source check: October 4, 2026. A full progression and production table will be added only from official rules or a documented current-version test.',
       },
     ],
   },
@@ -716,6 +814,90 @@ const english: Record<string, LaunchGuide> = {
 function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   if (locale === 'en') return guide;
   const traditional = locale === 'zh-Hant';
+  if (guide === english['aniimo-egg-heist']) {
+    return traditional
+      ? {
+          title: 'Aniimo Egg Heist 攻略：混沌模式、掉落與影之閃耀機率',
+          subtitle: '整理官方三人 PVEVP 規則、混沌模式條件、9 月 30 日修正與影之閃耀機率。',
+          tag: 'Egg Heist',
+          lead: 'Egg Heist 是三人即時 PVEVP 活動。官方已確認隊伍形式、混沌模式條件、閃耀機率與 9 月 30 日多項修正，但尚未公布完整地圖輪替、精確掉落率或通用最佳路線。',
+          body: [
+            { t: 'h', c: '目前官方 Egg Heist 狀態' },
+            { t: 'table', head: ['主題', '官方狀態'], rows: [['隊伍形式', '三人即時 PVEVP'], ['混沌模式', '需 Elite Egg Seeker Tier IV 與 Chaos Ticket'], ['混沌獎勵', 'Prismana 蛋與 glazed-quality 收藏品機率較高；未公布精確數值'], ['9 月 30 日補丁', '新增 Erlath，修正 Sanctum 入口缺失與 Stellarys 控制免疫問題'], ['Stellarys Starine', '混沌難度掉落率提高；未公布調整前後數值']] },
+            { t: 'h', c: 'Egg Heist 蛋有什麼特殊？' },
+            { t: 'table', head: ['閃耀立方使用對象', '普通', '炫彩', '影之'], rows: [['Egg Heist 蛋', '99%', '0%', '1%'], ['非 Egg Heist 蛋', '99%', '1%', '0%']] },
+            { t: 'p', c: '官方機率表只說明使用對應道具後的閃耀樣式結果，不保證孵出特定伊莫，也未證明影之樣式改變數值或公布 Alpha Egg 機率。' },
+            { t: 'h', c: '進場前應確認什麼？' },
+            { t: 'li', c: '查看遊戲內活動介面的難度、票券條件和當期獎勵預覽。' },
+            { t: 'li', c: '確認三名玩家使用相容客戶端版本和伺服器地區。' },
+            { t: 'li', c: '社群地圖只能作為導航參考，不能證明完整輪替或掉落率。' },
+            { t: 'li', c: '討論掉落率時需記錄版本、難度與樣本數。' },
+            { t: 'h', c: '哪些內容仍未核驗？' },
+            { t: 'p', c: '在沒有目前官方規則或可重現的版本化測試前，AniimoDex 不發布最快路線、保證 Alpha Egg、精確收藏品機率、固定地圖輪替、最佳隊伍或通用戰術。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。官方事實與社群路線討論分開標示。' },
+          ],
+        }
+      : {
+          title: 'Aniimo Egg Heist 攻略：混沌模式、掉落与影之闪耀概率',
+          subtitle: '整理官方三人 PVEVP 规则、混沌模式条件、9 月 30 日修复与影之闪耀概率。',
+          tag: 'Egg Heist',
+          lead: 'Egg Heist 是三人实时 PVEVP 活动。官方已确认队伍形式、混沌模式条件、闪耀概率与 9 月 30 日多项修复，但尚未公布完整地图轮换、精确掉落率或通用最佳路线。',
+          body: [
+            { t: 'h', c: '当前官方 Egg Heist 状态' },
+            { t: 'table', head: ['主题', '官方状态'], rows: [['队伍形式', '三人实时 PVEVP'], ['混沌模式', '需 Elite Egg Seeker Tier IV 与 Chaos Ticket'], ['混沌奖励', 'Prismana 蛋与 glazed-quality 收藏品概率较高；未公布精确数值'], ['9 月 30 日补丁', '新增 Erlath，修复 Sanctum 入口缺失与 Stellarys 控制免疫问题'], ['Stellarys Starine', '混沌难度掉落率提高；未公布调整前后数值']] },
+            { t: 'h', c: 'Egg Heist 蛋有什么特殊？' },
+            { t: 'table', head: ['闪耀立方使用对象', '普通', '炫彩', '影之'], rows: [['Egg Heist 蛋', '99%', '0%', '1%'], ['非 Egg Heist 蛋', '99%', '1%', '0%']] },
+            { t: 'p', c: '官方概率表只说明使用对应道具后的闪耀样式结果，不保证孵出特定伊莫，也未证明影之样式改变数值或公布 Alpha Egg 概率。' },
+            { t: 'h', c: '进场前应确认什么？' },
+            { t: 'li', c: '查看游戏内活动界面的难度、票券条件和当期奖励预览。' },
+            { t: 'li', c: '确认三名玩家使用兼容客户端版本和服务器地区。' },
+            { t: 'li', c: '社区地图只能作为导航参考，不能证明完整轮换或掉落率。' },
+            { t: 'li', c: '讨论掉落率时需记录版本、难度与样本数。' },
+            { t: 'h', c: '哪些内容仍未核验？' },
+            { t: 'p', c: '在没有当前官方规则或可复现的版本化测试前，AniimoDex 不发布最快路线、保证 Alpha Egg、精确收藏品概率、固定地图轮换、最佳队伍或通用战术。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。官方事实与社区路线讨论分开标示。' },
+          ],
+        };
+  }
+  if (guide === english['aniimo-rv-homeland-guide']) {
+    return traditional
+      ? {
+          title: 'Aniimo RV 與家園指南：建造、生產與已知問題',
+          subtitle: '整理家園與 RV 的官方功能、1.1 操作改善及已確認的手機模型修正。',
+          tag: 'RV 與家園',
+          lead: 'Aniimo 包含家園玩法和 RV 進度，但官方公開來源尚未提供完整逐級生產表或最佳建造順序。本頁記錄已確認功能，並與目前社群問題報告分開。',
+          body: [
+            { t: 'h', c: '家園與 RV 有哪些官方確認內容？' },
+            { t: 'table', head: ['功能', '核驗狀態'], rows: [['家園玩法', '官網將其列為首發福利與進度內容之一'], ['家園快捷入口', '1.1 版本新增'], ['控制器導覽', '1.1 版本改善家園控制器操作'], ['建造放置', '1.1 版本改善建造吸附顯示'], ['手機家園模型缺失', '9 月 30 日官方補丁標示已修正']] },
+            { t: 'h', c: '哪些內容尚未核驗？' },
+            { t: 'table', head: ['玩家問題', 'AniimoDex 狀態'], rows: [['最佳 RV 升級順序', '尚無已登記官方完整表格'], ['最佳生產建築優先級', '官方未公布推薦'], ['屋頂與布局限制', '尚無完整公開規格'], ['生產或裝飾消失', '除非官方確認，否則僅屬社群問題報告'], ['每棟建築的優先佇列', '社群功能建議，不是目前已確認功能']] },
+            { t: 'h', c: '家園顯示異常的安全排查' },
+            { t: 'li', c: '透過官方啟動器或商店更新，並記錄客戶端版本。' },
+            { t: 'li', c: '先離開再進入家園，不要立刻重建或刪除結構。' },
+            { t: 'li', c: '以截圖或影片記錄 RV 等級、平台、伺服器、布局與缺失物件。' },
+            { t: 'li', c: '官方支援確認前，不要花費資源重買可能只是未顯示的物件。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。完整進度與生產表只會使用官方規則或有文件記錄的目前版本實測。' },
+          ],
+        }
+      : {
+          title: 'Aniimo RV 与家园指南：建造、生产与已知问题',
+          subtitle: '整理家园与 RV 的官方功能、1.1 操作改善及已确认的手机模型修复。',
+          tag: 'RV 与家园',
+          lead: 'Aniimo 包含家园玩法和 RV 进度，但官方公开来源尚未提供完整逐级生产表或最佳建造顺序。本页记录已确认功能，并与当前社区问题报告分开。',
+          body: [
+            { t: 'h', c: '家园与 RV 有哪些官方确认内容？' },
+            { t: 'table', head: ['功能', '核验状态'], rows: [['家园玩法', '官网将其列为首发福利与进度内容之一'], ['家园快捷入口', '1.1 版本新增'], ['手柄导航', '1.1 版本改善家园手柄操作'], ['建造放置', '1.1 版本改善建造吸附显示'], ['手机家园模型缺失', '9 月 30 日官方补丁标示已修复']] },
+            { t: 'h', c: '哪些内容尚未核验？' },
+            { t: 'table', head: ['玩家问题', 'AniimoDex 状态'], rows: [['最佳 RV 升级顺序', '尚无已登记官方完整表格'], ['最佳生产建筑优先级', '官方未公布推荐'], ['屋顶与布局限制', '尚无完整公开规格'], ['生产或装饰消失', '除非官方确认，否则仅属社区问题报告'], ['每栋建筑的优先队列', '社区功能建议，不是当前已确认功能']] },
+            { t: 'h', c: '家园显示异常的安全排查' },
+            { t: 'li', c: '通过官方启动器或商店更新，并记录客户端版本。' },
+            { t: 'li', c: '先离开再进入家园，不要立即重建或删除结构。' },
+            { t: 'li', c: '以截图或视频记录 RV 等级、平台、服务器、布局与缺失物件。' },
+            { t: 'li', c: '官方支持确认前，不要花费资源重买可能只是未显示的物件。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。完整进度与生产表只会使用官方规则或有文件记录的当前版本实测。' },
+          ],
+        };
+  }
   if (guide === english['aniimo-dev-dispatch-roadmap']) {
     return traditional
       ? {
@@ -1341,6 +1523,8 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
       { t: 'p', c: traditional ? '官方流程為 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。此流程不代表已確認跨平台存檔。' : '官方流程为 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。此流程不代表已确认跨平台存档。' },
     ],
     'aniimo-progress-account-safety': [
+      { t: 'h', c: traditional ? '哪一種官方恢復情況符合我？' : '哪一种官方恢复情况符合我？' },
+      { t: 'table', head: [traditional ? '情況' : '情况', traditional ? '官方下一步' : '官方下一步'], rows: traditional ? [['進度消失後建立了新角色', '填寫寄至註冊信箱的帳號選擇問卷；官方表示提交後目標在 72 小時內處理'], ['沒有建立新角色', '官方表示原進度應已恢復；仍缺失時聯絡支援'], ['角色出現在其他地區', '先切回原本遊玩的伺服器地區'], ['沒有問卷、回覆或恢復結果', '向官方支援提供 UID、登入信箱、log 檔和伺服器地區']] : [['进度消失后创建了新角色', '填写寄至注册邮箱的账号选择问卷；官方表示提交后目标在 72 小时内处理'], ['没有创建新角色', '官方表示原进度应已恢复；仍缺失时联系支持'], ['角色出现在其他地区', '先切回原本游玩的服务器地区'], ['没有问卷、回复或恢复结果', '向官方支持提供 UID、登录邮箱、log 文件和服务器地区']] },
       { t: 'h', c: traditional ? '如何申請官方 Steam、PSN 或 Xbox 重綁？' : '如何申请官方 Steam、PSN 或 Xbox 重绑？' },
       { t: 'p', c: traditional ? '進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。工單處理期間不要自行解除綁定或覆蓋角色。' : '进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。工单处理期间不要自行解除绑定或覆盖角色。' },
     ],

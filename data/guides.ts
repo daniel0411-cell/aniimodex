@@ -208,6 +208,22 @@ export const guidePosts: GuidePost[] = [
     ],
   },
   {
+    slug: 'aniimo-rv-homeland-guide',
+    date: '2026-10-04',
+    readMinutes: 6,
+    relatedSlugs: [
+      'aniimo-launch-checklist-known-issues',
+      'aniimo-version-1-1-update',
+      'getting-started',
+      'aniimo-progress-account-safety',
+    ],
+    sourceIds: [
+      'aniimo-official-home-2026-08-28',
+      'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-steam-patch-1-0-3629693-2026-09-30',
+    ],
+  },
+  {
     slug: 'aniimo-holo-battle-interlink',
     date: '2026-09-28',
     readMinutes: 6,
@@ -306,6 +322,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-patch-1-0-3535596-2026-09-17',
       'aniimo-steam-patch-1-0-3544783-2026-09-18',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
+      'aniimo-steam-lost-progress-solution-2026-09-18',
     ],
   },
   {

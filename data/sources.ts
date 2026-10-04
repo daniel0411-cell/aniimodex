@@ -85,6 +85,14 @@ export const sources: SourceReference[] = [
       'The official developer Q&A addresses Sparkling Hue rerolls and restoring the original Prismana Hue, fixed future Irisalis Potential values and compensation, applying Legendary Aniipods to existing Sparkling Aniimo, mobile lag and overheating work, support response times, and the official Steam/PSN/Xbox relink support-ticket path and required account identifiers.',
   },
   {
+    id: 'aniimo-steam-lost-progress-solution-2026-09-18',
+    url: 'https://steamcommunity.com/app/4126040/discussions/0/563668239243168357/',
+    title: 'Aniimo Support - Solution for the Lost Progress Issue',
+    accessedAt: '2026-10-04',
+    evidence:
+      'The official developer-pinned support post attributes affected account bindings to a data-sync error during a website entity and domain migration. It separates players who created a new character, those who did not, and cases caused by selecting another server region; it states a 72-hour survey-processing target and requests UID, login email, log file and server region when recovery is still needed.',
+  },
+  {
     id: 'aniimo-playstation-10018491',
     url: 'https://store.playstation.com/concept/10018491',
     title: 'Aniimo on PlayStation Store',
