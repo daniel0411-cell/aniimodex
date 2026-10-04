@@ -84,9 +84,14 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Use one primary platform until Pawprint Studio publishes account-linking details. Verify any linking prompt inside the official game or support documentation before moving progress or making purchases.',
       },
+      { t: 'h', c: 'What if Steam, PSN or Xbox is linked to the wrong UID?' },
+      {
+        t: 'p',
+        c: 'The official Dev Dispatch gives a support route: Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox). The ticket needs the platform ID, current UID and linked email, the UID to unlink, and the platform linked to that UID. This recovery route does not confirm cross-save.',
+      },
       {
         t: 'quote',
-        c: 'Last official-source check: September 29, 2026. Status labels describe the linked official routes, not a promise that every country, account or device can access the same store listing.',
+        c: 'Last official-source check: October 4, 2026. Status labels describe the linked official routes, not a promise that every country, account or device can access the same store listing.',
       },
     ],
   },
@@ -142,9 +147,14 @@ const english: Record<string, LaunchGuide> = {
         t: 'li',
         c: 'Screenshots or video, plus original purchase receipts when a reward or purchase is involved',
       },
+      { t: 'h', c: 'How do I request an official Steam, PSN or Xbox relink?' },
+      {
+        t: 'p',
+        c: 'Dev Dispatch Vol. 1 directs players to Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox). Include the platform ID, current UID and linked email, the UID to unlink, and the platform linked to that UID. Do not self-unlink or overwrite the character while the ticket is pending.',
+      },
       {
         t: 'quote',
-        c: 'Last official-source check: September 28, 2026. This guide avoids claiming that a particular action restores progress, because recovery depends on the affected account and official support verification.',
+        c: 'Last official-source check: October 4, 2026. This guide avoids claiming that a particular action restores progress, because recovery depends on the affected account and official support verification.',
       },
     ],
   },
@@ -335,9 +345,58 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'The registered official sources still do not publish a complete cross-save, cross-progression, purchase or paid-currency transfer policy. Treat community reports as unconfirmed until an official account policy is available.',
       },
+      { t: 'h', c: 'What has the developer said about mobile lag and overheating?' },
+      {
+        t: 'p',
+        c: 'Dev Dispatch Vol. 1 says a dedicated team is working on mobile lag and overheating. The announcement does not publish an ETA, supported-device list or measured performance result, so this is an acknowledged workstream rather than a verified fix.',
+      },
       {
         t: 'quote',
-        c: 'Last official-source check: September 29, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+        c: 'Last official-source check: October 4, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+      },
+    ],
+  },
+  'aniimo-dev-dispatch-roadmap': {
+    title: 'Aniimo Dev Dispatch: Irisalis Potential, Sparkling Hue & Account Linking',
+    subtitle:
+      'Official answers on Sparkling Hue switching, Irisalis Potential, Legendary Aniipods, mobile performance and Steam, PSN or Xbox relinking.',
+    tag: 'Developer update',
+    lead: 'Aniimo Dev Dispatch Vol. 1 addresses several heavily reported player problems. These are official announced changes and support procedures, but the notice does not prove that every planned gameplay change is already active in the current client.',
+    body: [
+      { t: 'h', c: 'Official announcement status' },
+      {
+        t: 'table',
+        head: ['Topic', 'What the developer announced', 'Current evidence boundary'],
+        rows: [
+          ['Sparkling Hues', 'Players will be able to switch among unlocked Hues, including the original Prismana Hue', 'Planned; no implementation date published'],
+          ['Irisalis Potential', 'Future Irisalis Potential will use fixed values', 'Planned; current-client status not independently verified'],
+          ['Existing Irisalis compensation', 'Potential above the fixed values will convert to Starcryst Essence', 'Exact conversion rules and amounts not published'],
+          ['Legendary Aniipods', 'Planned to work on an existing Sparkling Aniimo, replace its original Aniipod and grant the exclusive effect', 'Planned; no implementation date published'],
+          ['Mobile performance', 'A dedicated team is working on lag and overheating', 'No ETA, device list or measured result published'],
+          ['Customer support', 'Team, system and process improvements are underway', 'No response-time guarantee published'],
+        ],
+      },
+      { t: 'h', c: 'What fixed Potential is planned for Irisalis?' },
+      {
+        t: 'table',
+        head: ['Stat', 'Announced value'],
+        rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']],
+      },
+      {
+        t: 'p',
+        c: 'The developer says existing Potential above these values will be converted into Starcryst Essence. Do not estimate the amount: the announcement says detailed rules will follow.',
+      },
+      { t: 'h', c: 'How do I request a Steam, PSN or Xbox relink?' },
+      {
+        t: 'p',
+        c: 'Use Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox). The ticket should include your platform ID, current UID and linked email, the UID that must be unlinked, and the platform linked to that UID.',
+      },
+      { t: 'li', c: 'Do not self-unlink, overwrite a character or create replacement progress first.' },
+      { t: 'li', c: 'Keep screenshots and platform receipts until support confirms the account action.' },
+      { t: 'li', c: 'A relink route does not prove universal cross-save, purchase transfer or currency transfer.' },
+      {
+        t: 'quote',
+        c: 'Last official-source check: October 4, 2026. This page records the October 1 Dev Dispatch as an official announcement. Planned changes remain labeled planned until their live implementation is independently verified.',
       },
     ],
   },
@@ -424,6 +483,19 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects. This patch does not publish a new universal fix for the other issues listed above.',
       },
+      { t: 'h', c: 'September 30 patch 1.0.3629693.0: confirmed fixes' },
+      {
+        t: 'table',
+        head: ['Area', 'Official patch result'],
+        rows: [
+          ['Quests and progression', 'Multiple progression blocks fixed; Harvest Moon Point requirements reduced'],
+          ['Egg Heist', 'Missing Sanctum entrance and Stellarys control-immunity issues fixed; Erlath added; Chaos Stellarys Starine drop rate increased'],
+          ['Controller and rewards', 'Selection and reward-claim interactions improved'],
+          ['Home and mobile', 'Missing Home models fixed; login and scene-switch performance improved'],
+          ['Console', 'Achievement issues, PlayStation Album stutter and an accessory-preview crash fixed'],
+          ['Compensation', '100 Glimmers announced for eligible accounts created before version 1.1'],
+        ],
+      },
       { t: 'h', c: 'Current playable status' },
       {
         t: 'table',
@@ -487,7 +559,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source review: September 30, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
+        c: 'Last official-source review: October 4, 2026. A useful report includes platform, region, server, version, time, exact error and reproduction steps.',
       },
     ],
   },
@@ -559,6 +631,16 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Official patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects.',
       },
+      { t: 'h', c: 'September 30 follow-up patch' },
+      {
+        t: 'p',
+        c: 'Patch 1.0.3629693.0 fixes quest and progression blocks, the missing Egg Heist Sanctum entrance, Stellarys control immunity, Home models, controller interactions and several console issues. It adds Erlath to Egg Heist, increases Chaos Stellarys Starine drops, reduces Harvest Moon Point requirements, improves login and scene switching, and announces 100 Glimmers for eligible pre-1.1 accounts.',
+      },
+      { t: 'h', c: 'What is active on October 4?' },
+      {
+        t: 'p',
+        c: 'Journey Chronicles is inside its official October 1 to October 29 window. Melloblum remains the current Vein Abundance feature through October 5 at 03:59 (UTC+8); Waleetle begins at 04:00, so it is not labeled current early.',
+      },
       { t: 'h', c: 'Official issue workarounds introduced with 1.1' },
       {
         t: 'p',
@@ -566,7 +648,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: September 30, 2026. All times above come from official announcements and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
+        c: 'Last official-source check: October 4, 2026. All times above come from official announcements and use UTC+8. Event availability still depends on meeting the listed in-game unlock requirement.',
       },
     ],
   },
@@ -634,6 +716,47 @@ const english: Record<string, LaunchGuide> = {
 function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   if (locale === 'en') return guide;
   const traditional = locale === 'zh-Hant';
+  if (guide === english['aniimo-dev-dispatch-roadmap']) {
+    return traditional
+      ? {
+          title: 'Aniimo 開發者答疑：Irisalis 潛能、閃耀色彩與帳號重綁',
+          subtitle: '整理官方對閃耀色彩切換、Irisalis 潛能、傳說 Aniipod、手機效能與 Steam、PSN、Xbox 重綁的答覆。',
+          tag: '開發者更新',
+          lead: 'Aniimo Dev Dispatch Vol. 1 回應了多個玩家集中反映的問題。這些是官方公布的計畫和支援流程，但公告本身不代表每項遊戲改動已在目前客戶端生效。',
+          body: [
+            { t: 'h', c: '官方公布狀態' },
+            { t: 'table', head: ['主題', '開發者公布內容', '目前證據邊界'], rows: [['閃耀色彩', '可在已解鎖色彩間切換，包括原始 Prismana Hue', '規劃中；未公布實裝日期'], ['Irisalis 潛能', '未來改為固定潛能值', '規劃中；尚未獨立確認目前客戶端已生效'], ['既有 Irisalis 補償', '高於固定值的潛能轉為 Starcryst Essence', '未公布換算規則與數量'], ['傳說 Aniipod', '規劃可用於既有 Sparkling Aniimo，取代原 Aniipod 並給予專屬效果', '規劃中；未公布實裝日期'], ['手機效能', '專門團隊處理卡頓與過熱', '未公布 ETA、裝置清單或量測結果'], ['客服', '正在改善團隊、系統與流程', '未承諾回覆時間']] },
+            { t: 'h', c: 'Irisalis 固定潛能是多少？' },
+            { t: 'table', head: ['屬性', '公布數值'], rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']] },
+            { t: 'p', c: '官方表示，既有潛能超過上述數值的部分將轉為 Starcryst Essence。詳細規則尚未公布，不應自行估算補償數量。' },
+            { t: 'h', c: '如何申請 Steam、PSN 或 Xbox 帳號重綁？' },
+            { t: 'p', c: '依官方流程進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。' },
+            { t: 'li', c: '先不要自行解除綁定、覆蓋角色或建立替代進度。' },
+            { t: 'li', c: '客服確認前保留截圖與平台收據。' },
+            { t: 'li', c: '重綁流程不等於官方確認通用跨平台存檔、購買或貨幣轉移。' },
+            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。本頁記錄 10 月 1 日開發者答疑；規劃中的改動會保持「規劃中」標示，直到可獨立核驗已實裝。' },
+          ],
+        }
+      : {
+          title: 'Aniimo 开发者答疑：Irisalis 潜能、闪耀色彩与账号重绑',
+          subtitle: '整理官方对闪耀色彩切换、Irisalis 潜能、传奇 Aniipod、手机性能与 Steam、PSN、Xbox 重绑的答复。',
+          tag: '开发者更新',
+          lead: 'Aniimo Dev Dispatch Vol. 1 回应了多个玩家集中反馈的问题。这些是官方公布的计划和支持流程，但公告本身不代表每项游戏改动已在当前客户端生效。',
+          body: [
+            { t: 'h', c: '官方公布状态' },
+            { t: 'table', head: ['主题', '开发者公布内容', '当前证据边界'], rows: [['闪耀色彩', '可在已解锁色彩间切换，包括原始 Prismana Hue', '计划中；未公布实装日期'], ['Irisalis 潜能', '未来改为固定潜能值', '计划中；尚未独立确认当前客户端已生效'], ['现有 Irisalis 补偿', '高于固定值的潜能转为 Starcryst Essence', '未公布换算规则与数量'], ['传奇 Aniipod', '计划可用于现有 Sparkling Aniimo，替换原 Aniipod 并给予专属效果', '计划中；未公布实装日期'], ['手机性能', '专门团队处理卡顿与过热', '未公布 ETA、设备清单或测量结果'], ['客服', '正在改善团队、系统与流程', '未承诺回复时间']] },
+            { t: 'h', c: 'Irisalis 固定潜能是多少？' },
+            { t: 'table', head: ['属性', '公布数值'], rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']] },
+            { t: 'p', c: '官方表示，现有潜能超过上述数值的部分将转为 Starcryst Essence。详细规则尚未公布，不应自行估算补偿数量。' },
+            { t: 'h', c: '如何申请 Steam、PSN 或 Xbox 账号重绑？' },
+            { t: 'p', c: '按官方流程进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。' },
+            { t: 'li', c: '先不要自行解除绑定、覆盖角色或创建替代进度。' },
+            { t: 'li', c: '客服确认前保留截图与平台收据。' },
+            { t: 'li', c: '重绑流程不等于官方确认通用跨平台存档、购买或货币转移。' },
+            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。本页记录 10 月 1 日开发者答疑；计划中的改动会保持“计划中”标示，直到可独立核验已实装。' },
+          ],
+        };
+  }
   if (guide === english['aniimo-launch-checklist-known-issues']) {
     return traditional
       ? {
@@ -1208,7 +1331,42 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
 
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
   const guide = english[slug];
-  return guide ? localized(locale, guide) : undefined;
+  if (!guide) return undefined;
+  const result = localized(locale, guide);
+  if (locale === 'en') return result;
+  const traditional = locale === 'zh-Hant';
+  const additions: Partial<Record<string, LaunchGuideBlock[]>> = {
+    'aniimo-crossplay-cross-save': [
+      { t: 'h', c: traditional ? 'Steam、PSN 或 Xbox 綁錯 UID 怎麼辦？' : 'Steam、PSN 或 Xbox 绑错 UID 怎么办？' },
+      { t: 'p', c: traditional ? '官方流程為 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。此流程不代表已確認跨平台存檔。' : '官方流程为 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。此流程不代表已确认跨平台存档。' },
+    ],
+    'aniimo-progress-account-safety': [
+      { t: 'h', c: traditional ? '如何申請官方 Steam、PSN 或 Xbox 重綁？' : '如何申请官方 Steam、PSN 或 Xbox 重绑？' },
+      { t: 'p', c: traditional ? '進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。工單處理期間不要自行解除綁定或覆蓋角色。' : '进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。工单处理期间不要自行解除绑定或覆盖角色。' },
+    ],
+    'aniimo-mobile': [
+      { t: 'h', c: traditional ? '官方如何回應手機卡頓與過熱？' : '官方如何回应手机卡顿与过热？' },
+      { t: 'p', c: traditional ? '開發者答疑表示已有專門團隊處理手機卡頓與過熱，但未公布 ETA、支援裝置清單或效能測試結果，因此這是已確認的工作方向，不是已驗證完成的修正。' : '开发者答疑表示已有专门团队处理手机卡顿与过热，但未公布 ETA、支持设备清单或性能测试结果，因此这是已确认的工作方向，不是已验证完成的修复。' },
+    ],
+    'aniimo-launch-checklist-known-issues': [
+      { t: 'h', c: traditional ? '9 月 30 日 1.0.3629693.0 補丁' : '9 月 30 日 1.0.3629693.0 补丁' },
+      { t: 'p', c: traditional ? '官方補丁修正多項任務與進度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家園模型、控制器操作和主機問題；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求並改善登入與場景切換。符合條件的 1.1 前帳號可獲 100 Glimmers。' : '官方补丁修复多项任务与进度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家园模型、手柄操作和主机问题；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求并改善登录与场景切换。符合条件的 1.1 前账号可获 100 Glimmers。' },
+    ],
+    'aniimo-version-1-1-update': [
+      { t: 'h', c: traditional ? '9 月 30 日後續補丁與目前活動' : '9 月 30 日后续补丁与当前活动' },
+      { t: 'p', c: traditional ? '1.0.3629693.0 修正任務、Egg Heist、家園、控制器與主機問題，並改善登入和場景切換。10 月 4 日時 Journey Chronicles 已在官方活動期間內；Melloblum 持續至 10 月 5 日 03:59（UTC+8），Waleetle 於 04:00 才開始。' : '1.0.3629693.0 修复任务、Egg Heist、家园、手柄与主机问题，并改善登录和场景切换。10 月 4 日时 Journey Chronicles 已在官方活动期间内；Melloblum 持续至 10 月 5 日 03:59（UTC+8），Waleetle 于 04:00 才开始。' },
+    ],
+  };
+  const extra = additions[slug];
+  if (!extra) return result;
+  return {
+    ...result,
+    body: [
+      ...result.body,
+      ...extra,
+      { t: 'quote', c: traditional ? '官方來源最後核驗：2026 年 10 月 4 日。' : '官方来源最后核验：2026 年 10 月 4 日。' },
+    ],
+  };
 }
 
 export const launchGuideSlugs = Object.keys(english);

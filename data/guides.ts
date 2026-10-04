@@ -191,7 +191,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    date: '2026-09-26',
+    date: '2026-10-04',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -204,6 +204,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-steam-patch-1-0-3629693-2026-09-30',
     ],
   },
   {
@@ -270,7 +271,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
-    date: '2026-09-29',
+    date: '2026-10-04',
     readMinutes: 5,
     relatedSlugs: [
       'aniimo-multiplayer',
@@ -287,11 +288,12 @@ export const guidePosts: GuidePost[] = [
       'aniimo-epic-759396',
       'aniimo-app-store-cn-6768584375',
       'aniimo-google-play',
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
   },
   {
     slug: 'aniimo-progress-account-safety',
-    date: '2026-09-28',
+    date: '2026-10-04',
     readMinutes: 6,
     relatedSlugs: [
       'aniimo-launch-checklist-known-issues',
@@ -303,6 +305,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3535596-2026-09-17',
       'aniimo-steam-patch-1-0-3544783-2026-09-18',
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
   },
   {
@@ -318,10 +321,15 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-language-controller-support',
-    date: '2026-09-21',
+    date: '2026-10-04',
     readMinutes: 5,
     relatedSlugs: ['aniimo-platforms', 'aniimo-system-requirements'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: [
+      'aniimo-steam-4126040',
+      'aniimo-playstation-10018491',
+      'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-steam-patch-1-0-3629693-2026-09-30',
+    ],
   },
   {
     slug: 'aniimo-launch-coverage-status',
@@ -333,7 +341,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-09-30',
+    date: '2026-10-04',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -351,11 +359,12 @@ export const guidePosts: GuidePost[] = [
       'aniimo-epic-759396',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3616231-2026-09-29',
+      'aniimo-steam-patch-1-0-3629693-2026-09-30',
     ],
   },
   {
     slug: 'aniimo-version-1-1-update',
-    date: '2026-09-30',
+    date: '2026-10-04',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -369,6 +378,7 @@ export const guidePosts: GuidePost[] = [
     sourceIds: [
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3616231-2026-09-29',
+      'aniimo-steam-patch-1-0-3629693-2026-09-30',
     ],
   },
   {
@@ -404,7 +414,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-forms-explained',
-    date: '2026-09-20',
+    date: '2026-10-04',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -417,7 +427,21 @@ export const guidePosts: GuidePost[] = [
     sourceIds: [
       'aniimo-official-wiki-index-2026-08-30',
       'aniimo-official-probabilities-2026-09-16',
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
+  },
+  {
+    slug: 'aniimo-dev-dispatch-roadmap',
+    date: '2026-10-04',
+    readMinutes: 7,
+    relatedToolHrefs: ['/dex'],
+    relatedSlugs: [
+      'aniimo-progress-account-safety',
+      'aniimo-forms-explained',
+      'aniimo-mobile',
+      'aniimo-launch-checklist-known-issues',
+    ],
+    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01'],
   },
   ...(
     [

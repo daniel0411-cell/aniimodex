@@ -69,6 +69,22 @@ export const sources: SourceReference[] = [
       'The official patch note fixes blurry Irisalis model textures after Transmogging to selected styles from the Super Operation: Egg Heist and updates the Legendary Aniipod: Irisalis acquisition notification icon plus the Windchaser\'s Departure showcase video and image to match in-game effects.',
   },
   {
+    id: 'aniimo-steam-patch-1-0-3629693-2026-09-30',
+    url: 'https://store.steampowered.com/news/app/4126040/view/667252228600365112',
+    title: 'Aniimo Official Steam Patch Notes - v1.0.3629693.0',
+    accessedAt: '2026-10-04',
+    evidence:
+      'The official resource update gives 100 Glimmers to eligible pre-1.1 accounts, improves login and scene-switching performance, controller reward claims and Irisalis presets, and fixes documented Aniimo, Egg Heist, quest, Home, interface and console issues. It also adds Erlath to Egg Heist, raises Stellarys Starine drops on Chaos difficulty and reduces Harvest Moon Point requirements.',
+  },
+  {
+    id: 'aniimo-steam-dev-dispatch-1-2026-10-01',
+    url: 'https://store.steampowered.com/news/app/4126040/view/667252228600365155',
+    title: 'Aniimo Dev Dispatch Vol. 1',
+    accessedAt: '2026-10-04',
+    evidence:
+      'The official developer Q&A addresses Sparkling Hue rerolls and restoring the original Prismana Hue, fixed future Irisalis Potential values and compensation, applying Legendary Aniipods to existing Sparkling Aniimo, mobile lag and overheating work, support response times, and the official Steam/PSN/Xbox relink support-ticket path and required account identifiers.',
+  },
+  {
     id: 'aniimo-playstation-10018491',
     url: 'https://store.playstation.com/concept/10018491',
     title: 'Aniimo on PlayStation Store',
