@@ -85,9 +85,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
-  const title = aniimo.number === '069'
-    ? `Cubbo Aniimo Dex #069: Evolution, Skills and Location | ${siteName}`
-    : `${displayName} Aniimo Dex | ${siteName}`;
+  const title = `${displayName} #${aniimo.number}: Evolution, Skills & Location`;
   const elements = aniimo.officialElements?.map((element) => td(`elementNames.${element}`)).join(', ');
   const role = aniimo.officialRole ? td(`roleNames.${aniimo.officialRole}`) : '';
   const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;

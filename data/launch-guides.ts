@@ -20,15 +20,15 @@ const commonWatchlist = [
   ['#007', 'Chirpi', 'Habitats and branching evolution'],
   ['#022', 'Hummin', 'Luminous Seed, skills and forms'],
   ['#024', 'Budclaw', 'Tunnel, habitats, forms and branches'],
-  ['#035', 'Budsquire', 'Skills, forms and evolution'],
+  ['#035', 'Thornblade', 'Skills, habitat and Budsquire evolution family'],
   ['#080', 'Bulbly', 'Glow, skills and forms'],
 ];
 
 const english: Record<string, LaunchGuide> = {
   'aniimo-crossplay-cross-save': {
-    title: 'Is Aniimo Crossplay? Cross-Platform Play & Cross-Save Status',
+    title: 'Is Aniimo Crossplay? Platform Pairings & Cross-Save Status',
     subtitle:
-      'Aniimo lists cross-platform multiplayer. See the confirmed PC, console and mobile availability, plus what official sources still do not confirm about platform pairings, cross-save, progression and purchases.',
+      'Yes, Aniimo lists cross-platform multiplayer. Check PC, PS5, Xbox and mobile pairings, plus the still-unconfirmed cross-save and progression rules.',
     tag: 'Cross-platform',
     lead: 'Yes, Aniimo lists cross-platform multiplayer. No, a complete official cross-save policy is not published. The official website links PC, PS5, Xbox, Epic and mobile routes, but Steam does not document every platform pairing or whether saves, purchases and progression move between platforms.',
     body: [
@@ -353,9 +353,9 @@ const english: Record<string, LaunchGuide> = {
     ],
   },
   'aniimo-pre-registration': {
-    title: 'Aniimo Pre-Registration Rewards: Post-Launch Eligibility & Status',
+    title: 'Aniimo Pre-Registration Ended: Reward Eligibility',
     subtitle:
-      'Aniimo is live. Check official launch-reward status, account eligibility and claim conditions instead of treating expired pre-registration information as a current download route.',
+      'Aniimo is live and pre-registration has ended. Check the published launch rewards, account eligibility limits and official download routes.',
     tag: 'Launch rewards',
     lead: 'Aniimo has launched, and its official site still displays global-launch rewards and completed pre-registration milestones. That display does not establish a universal claim deadline, account entitlement or regional availability, so use the official game and storefront for your own account.',
     body: [
@@ -399,9 +399,9 @@ const english: Record<string, LaunchGuide> = {
     ],
   },
   'aniimo-mobile': {
-    title: 'Aniimo Mobile Is Live: iOS and Android Download Status',
+    title: 'Aniimo Mobile Download: iOS & Android Status',
     subtitle:
-      'Version 1.1 launched Aniimo globally on mobile on September 23; local store, account and device availability can still differ.',
+      'Aniimo is live on mobile. Check official iOS and Android store routes, device availability and the still-unconfirmed cross-save policy.',
     tag: 'Mobile',
     lead: 'Aniimo officially launched globally on mobile after the September 23 version 1.1 update. Use the official App Store or Google Play listing for your country and device, because a global launch announcement does not guarantee identical storefront buttons or compatibility everywhere.',
     body: [

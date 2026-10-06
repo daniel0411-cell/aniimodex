@@ -390,8 +390,8 @@
     "abilityGuideTitle": "Browse Aniimo by mobility ability"
   },
   "typeChartTool": {
-    "title": "Aniimo Type Chart: All 9 Elements and Matchup Calculator",
-    "subtitle": "Check all 9 Aniimo elements, attack and defense matchups, 1.6x / 1x / 0.625x values, or select an Aniimo to find reference counters.",
+    "title": "Aniimo Type Chart: Weaknesses, Counters & Matchups",
+    "subtitle": "Check all 9 Aniimo elements, weaknesses, counters and attack-versus-defense matchups, or select an Aniimo to find its strongest reference attackers.",
     "sourceStatusTitle": "What is official in this Aniimo type chart?",
     "sourceStatusDescription": "The nine element names and each Aniimo's element labels come from the official Aniimo Wiki. The matchup multipliers are a community-compiled reference, not a confirmed official combat table.",
     "noEntriesNote": "No indexed Aniimo currently carries: {elements}. The element row and column are kept because the label exists in Aniimo, not removed.",
@@ -525,7 +525,7 @@
     "readGuide": "Read the catching guide"
   },
   "guide": {
-    "title": "Aniimo Guide",
+    "title": "Aniimo Guides: Download, Crossplay, Beginner Help & Systems",
     "subtitle": "Source-checked Aniimo guides for official downloads, mobile and platform status, crossplay boundaries, evolution data, catching mechanics, live events and known issues.",
     "relatedTools": "Related Tools",
     "relatedDesc": "Combine these tools to plan your exploration and team:",
@@ -639,8 +639,8 @@
         ]
       },
       "aniimo-platforms": {
-        "title": "Aniimo Platforms: PC, PS5, Xbox, Mobile, Switch & Switch 2 Status",
-        "subtitle": "See the current official status for PC, PS5, Xbox, Epic, iOS and Android, plus the unconfirmed Nintendo Switch and Switch 2 status.",
+        "title": "Aniimo Platforms: PC, PS5, Xbox, Mobile & Switch Status",
+        "subtitle": "Check where Aniimo is available now on PC, PS5, Xbox, Epic, iOS and Android, plus the unconfirmed Nintendo Switch and Switch 2 status.",
         "tag": "Platforms",
         "lead": "Aniimo is available through the official PC launcher, Steam, PS5, Xbox, Epic and mobile routes. Nintendo Switch and Switch 2 are not announced in the official sources checked. Storefront, account region and device compatibility can still change what is available to a player.",
         "body": [
@@ -1698,8 +1698,8 @@
         ]
       },
       "aniimo-launch-time-preload": {
-        "title": "Aniimo Launch Status: Download, Servers & Platform Availability",
-        "subtitle": "Aniimo is live. Check current official download routes, server status and PC, console and mobile availability instead of relying on expired preload times or regional storefront assumptions.",
+        "title": "Aniimo Is Live: Download, Servers & Platform Status",
+        "subtitle": "Aniimo is live. Check current PC, PS5, Xbox, Epic, iOS and Android download routes, server status and the historical preload answer.",
         "tag": "Launch",
         "lead": "Aniimo is already live, so old preload times no longer determine access. The official website currently links its PC launcher, Steam, PS5, Xbox, Epic and mobile download routes; local availability can still differ by storefront, account, region and device.",
         "body": [
@@ -2054,7 +2054,7 @@
   },
   "collections": {
     "evolutions": {
-      "title": "Aniimo Evolution Chart: All Families and Branches",
+      "title": "Aniimo Evolutions: Complete Evolution Lines & Branches",
       "description": "Browse every official-source Aniimo evolution family and branching line. Family links are confirmed; required levels, items and quests remain unpublished.",
       "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.",
       "family": "evolution family",
@@ -2135,7 +2135,7 @@
       "readGuide": "Read the elements guide"
     },
     "abilities": {
-      "title": "Aniimo Abilities, Traits and Skills Directory",
+      "title": "Aniimo Skills, Traits & Mobility Abilities",
       "description": "Look up official mobility abilities, passive traits and combat skills, then open every Aniimo that carries the published entry.",
       "sourceNote": "Names, descriptions and Aniimo mappings come from the official Wiki detail snapshot. This directory does not rank their strength.",
       "count": "{count} Aniimo",
