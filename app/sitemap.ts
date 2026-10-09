@@ -9,6 +9,7 @@ import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const LAST_PUBLISHED = '2026-10-04';
+const SEARCH_METADATA_UPDATED = '2026-10-06';
 
 const FEATURED_DEX_NUMBERS = new Set(['001', '002', '005', '007', '011']);
 const details = detailsSnapshot.details as OfficialAniimoDetail[];
@@ -45,16 +46,31 @@ const STATIC_ROUTES: {
   { path: '/', lastModified: LAST_PUBLISHED, priority: 1.0, changefreq: 'weekly' },
   { path: '/dex/', lastModified: LAST_PUBLISHED, priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'monthly' },
-  { path: '/guide/', lastModified: LAST_PUBLISHED, priority: 0.7, changefreq: 'monthly' },
+  {
+    path: '/guide/',
+    lastModified: SEARCH_METADATA_UPDATED,
+    priority: 0.7,
+    changefreq: 'monthly',
+  },
   {
     path: '/guide/how-we-verify/',
     lastModified: LAST_PUBLISHED,
     priority: 0.7,
     changefreq: 'monthly',
   },
-  { path: '/evolutions/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  {
+    path: '/evolutions/',
+    lastModified: SEARCH_METADATA_UPDATED,
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
   { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
-  { path: '/abilities/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'weekly' },
+  {
+    path: '/abilities/',
+    lastModified: SEARCH_METADATA_UPDATED,
+    priority: 0.8,
+    changefreq: 'weekly',
+  },
   {
     path: '/tools/type-chart/',
     lastModified: LAST_PUBLISHED,
@@ -110,7 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((aniimo) => priorityDexNumbers.has(aniimo.number))
     .map((aniimo) => ({
       url: `${SITE_URL}/en/dex/${aniimo.number}/`,
-      lastModified: LAST_PUBLISHED,
+      lastModified: SEARCH_METADATA_UPDATED,
       changeFrequency: 'weekly' as const,
       priority: 0.75,
       alternates: { languages: localizedLanguagesForPath(`/dex/${aniimo.number}/`) },

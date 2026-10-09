@@ -91,10 +91,12 @@ pnpm pages:build   # 同 pnpm build
 4. 点击 **Save and Deploy**，等待首次构建完成。
 5. 构建成功后，Cloudflare 会分配一个 `*.pages.dev` 域名（如 `aniimodex.pages.dev`）。
 
-### 方式二：通过 Wrangler CLI / 直接上传
+### 方式二：通过 Wrangler CLI / 直接上传（仅用于自动部署失败）
+
+正常发布只需推送 `main`，等待 Cloudflare Git 集成自动构建。不要在自动部署成功后再执行 Wrangler，否则同一提交会产生两条 Production deployment。
 
 ```bash
-# 构建
+# 仅当 Git 自动部署失败时手动构建与上传
 pnpm build
 
 # 方式 A：上传 out/ 目录（需安装 wrangler）
