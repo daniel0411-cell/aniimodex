@@ -1452,6 +1452,30 @@
           },
           {
             "t": "h",
+            "c": "Does a Sparkling egg guarantee the hatch result I expect?"
+          },
+          {
+            "t": "p",
+            "c": "The published table describes style outcomes for a specified Sparkling item and target, not the chance of finding any egg, a guaranteed species, or an undocumented inheritance rule. Normal in this table means Normal Sparkling style, not proof of a non-Sparkling hatch. An Egg Heist egg and an egg from another source use different rows; do not combine their outcomes into one hatch rate."
+          },
+          {
+            "t": "h",
+            "c": "What should I record if an egg result looks wrong?"
+          },
+          {
+            "t": "p",
+            "c": "Record the client version, egg source, exact item used, before-and-after screenshots and displayed style name. A single disappointing result does not prove a bug or a changed rate. Report a mismatch privately to official support; do not spend more consumables just to test an unverified claim. Evolution inheritance and species-level hatch odds remain unconfirmed here."
+          },
+          {
+            "t": "h",
+            "c": "Can I restore the original Prismana Hue?"
+          },
+          {
+            "t": "p",
+            "c": "The October 1 Dev Dispatch announced switching among unlocked Hues, including the original Prismana Hue, and future use of Legendary Aniipods on existing Sparkling Aniimo. These are developer plans, not a verified live workflow on this page. Check a dated patch or current-client evidence before spending an item; see the linked Dev Dispatch guide for the evidence boundary."
+          },
+          {
+            "t": "h",
             "c": "What do sparkling styles change?"
           },
           {

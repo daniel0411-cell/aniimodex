@@ -229,7 +229,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="grid gap-4 lg:grid-cols-[1.25fr_1fr_1fr]">
           <Link
             href="/dex"
-            className="group relative min-h-64 overflow-hidden border-t-4 border-primary bg-sky-50 p-6"
+            className="group relative min-h-64 overflow-hidden border-t-4 border-primary bg-sky-50 p-6 pb-36"
           >
             <h3 className="relative z-10 text-2xl font-bold text-text-primary">
               {t('home.quickLinks.dex.title')}
@@ -244,7 +244,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Link>
           <Link
             href="/evolutions"
-            className="relative min-h-64 overflow-hidden border-t-4 border-secondary bg-emerald-50 p-6"
+            className="relative min-h-64 overflow-hidden border-t-4 border-secondary bg-emerald-50 p-6 pb-36"
           >
             <h3 className="relative z-10 text-xl font-bold text-text-primary">
               {t('collections.evolutions.title')}
@@ -259,7 +259,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Link>
           <Link
             href="/locations"
-            className="relative min-h-64 overflow-hidden border-t-4 border-accent bg-rose-50 p-6"
+            className="relative min-h-64 overflow-hidden border-t-4 border-accent bg-rose-50 p-6 pb-36"
           >
             <h3 className="relative z-10 text-xl font-bold text-text-primary">
               {t('collections.locations.title')}
@@ -390,6 +390,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           platforms: th('launchTasks.platforms'),
         }}
       />
+      <section className="border-b border-ink-border py-5">
+        <h2 className="text-lg font-bold text-text-primary">
+          {locale === 'en' ? 'October activity schedule' : locale === 'zh-Hant' ? '10 月活動時間表' : '10 月活动时间表'}
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
+          {locale === 'en'
+            ? 'Schedule checked October 11 (UTC+8): Waleetle ends October 12 at 03:59; Journey Chronicles is announced through October 29 at 03:59. Melloblum and Aniimo Discovery have ended. These dates are not live availability monitoring.'
+            : locale === 'zh-Hant'
+              ? '10 月 11 日核對（UTC+8）：摩托郎公告截止為 10 月 12 日 03:59，旅途拾光至 10 月 29 日 03:59。魅樂薇與伊莫大發現已結束；這是公告日期，不是即時開放監控。'
+              : '10 月 11 日核对（UTC+8）：摩托郎公告截止为 10 月 12 日 03:59，旅途拾光至 10 月 29 日 03:59。魅乐薇与伊莫大发现已结束；这是公告日期，不是实时开放监控。'}
+        </p>
+        <nav className="mt-3 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={locale === 'en' ? 'Activity and support guides' : locale === 'zh-Hant' ? '活動與支援攻略' : '活动与支持攻略'}>
+          <Link href="/guide/aniimo-prismana-event-tracker">{locale === 'en' ? 'Event dates and requirements' : locale === 'zh-Hant' ? '活動時間與條件' : '活动时间与条件'} →</Link>
+          <Link href="/guide/aniimo-language-controller-support">{locale === 'en' ? 'Controller and Steam Deck help' : locale === 'zh-Hant' ? '手柄與 Steam Deck 排查' : '手柄与 Steam Deck 排查'} →</Link>
+          <Link href="/guide/aniimo-progress-account-safety">{locale === 'en' ? 'Account and progress help' : locale === 'zh-Hant' ? '帳號與進度處理' : '账号与进度处理'} →</Link>
+        </nav>
+      </section>
       <section className="border-y border-emerald-200 bg-emerald-50 px-5 py-7 sm:px-8">
         <div className="mb-5">
           <p className="text-xs font-semibold uppercase text-emerald-700">Launch guides</p>

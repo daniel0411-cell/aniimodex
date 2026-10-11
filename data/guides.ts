@@ -237,7 +237,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    date: '2026-09-30',
+    date: '2026-10-11',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -309,7 +309,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-progress-account-safety',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 6,
     relatedSlugs: [
       'aniimo-launch-checklist-known-issues',
@@ -323,6 +323,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-patch-1-0-3544783-2026-09-18',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
       'aniimo-steam-lost-progress-solution-2026-09-18',
+      'aniimo-steam-launch-faq-2026-09-16',
+      'aniimo-official-support-center',
     ],
   },
   {
@@ -338,14 +340,16 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-language-controller-support',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-platforms', 'aniimo-system-requirements'],
+    relatedSlugs: ['aniimo-launch-checklist-known-issues', 'aniimo-platforms', 'aniimo-system-requirements'],
     sourceIds: [
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
+      'aniimo-steam-launch-faq-2026-09-16',
+      'aniimo-official-support-center',
     ],
   },
   {
@@ -358,7 +362,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -367,6 +371,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-crossplay-cross-save',
       'aniimo-progress-account-safety',
       'aniimo-system-requirements',
+      'aniimo-language-controller-support',
     ],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
@@ -377,11 +382,13 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3616231-2026-09-29',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
+      'aniimo-steam-launch-faq-2026-09-16',
+      'aniimo-official-support-center',
     ],
   },
   {
     slug: 'aniimo-version-1-1-update',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -431,7 +438,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-forms-explained',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -440,6 +447,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-elements-explained',
       'aniimo-catching-guide',
       'official-aniimo-dex-status',
+      'aniimo-dev-dispatch-roadmap',
+      'aniimo-launch-checklist-known-issues',
     ],
     sourceIds: [
       'aniimo-official-wiki-index-2026-08-30',
@@ -449,7 +458,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-dev-dispatch-roadmap',
-    date: '2026-10-04',
+    date: '2026-10-11',
     readMinutes: 7,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [

@@ -285,7 +285,7 @@ export default async function GuidePostPage({
       <Breadcrumb items={[{ label: t('title'), href: '/guide/' }, { label: title }]} />
 
       <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_15rem]">
-      <article>
+      <article className="min-w-0">
         {/* 文章横幅图 */}
         {post.image && (
           <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-ink-border">

@@ -40,9 +40,25 @@ export const sources: SourceReference[] = [
     id: 'aniimo-steam-update-1-1-2026-09-23',
     url: 'https://store.steampowered.com/news/app/4126040/view/703279756977636272',
     title: 'Aniimo Official Steam Announcement - Version 1.1 Update and Server Maintenance',
-    accessedAt: '2026-09-26',
+    accessedAt: '2026-10-11',
     evidence:
       'The official Steam announcement says September 23 maintenance was followed by a five-minute delayed opening and that servers are live. It lists 500 Glimmers for maintenance, 500 Glimmers for the delayed opening and one Sparkling Cube for known issues, to be sent by in-game mail. It documents reward-claim, Android quest and PC-to-mobile switching issues with workarounds; mobile launch; Irisalis; Holo-Battle Interlink; Egg Heist Chaos Mode; and dated event schedules.',
+  },
+  {
+    id: 'aniimo-steam-launch-faq-2026-09-16',
+    url: 'https://steamcommunity.com/app/4126040/discussions/0/563668168527106976/',
+    title: 'Aniimo Support - Steam Launch FAQ & Bug Reports',
+    accessedAt: '2026-10-11',
+    evidence:
+      'Developer-pinned FAQ, last edited September 19. It documents Menu > Support / F10 reporting; disabling Steam Input for controller issues; graphics troubleshooting; update prompts; log filenames; beta email-linking conflicts; error107 fixed in 1.0.3551601.0; and a November Steam Deck compatibility plan. The Proton 10.0.0-4 workaround is community-origin advice republished by the developer, not a tested compatibility guarantee. Reading this historical FAQ does not verify live server status or completion of planned fixes.',
+  },
+  {
+    id: 'aniimo-official-support-center',
+    url: 'https://fpcs-web.aniimo.com?fpx_app_id=worldx.global.prod&im_entry_source=web_outside',
+    title: 'Aniimo Support Center - linked from the official Steam FAQ',
+    accessedAt: '2026-10-11',
+    evidence:
+      'The developer-pinned Steam FAQ links this support destination and aniimo_support@aniimo.com. The URL was checked in the official FAQ; no ticket submission, response time or recovery outcome was tested.',
   },
   {
     id: 'aniimo-steam-patch-1-0-3535596-2026-09-17',
