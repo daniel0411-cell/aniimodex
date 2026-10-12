@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   other: {
-    'google-adsense-account': 'ca-pub-8108326729795034',
+    'google-adsense-account': 'ca-pub-2321309842883439',
   },
 };
 
@@ -52,7 +52,7 @@ export default async function LocaleLayout({
       <head>
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8108326729795034"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2321309842883439"
           crossOrigin="anonymous"
         />
       </head>
