@@ -191,7 +191,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    date: '2026-10-04',
+    date: '2026-10-13',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -201,6 +201,7 @@ export const guidePosts: GuidePost[] = [
       'getting-started',
     ],
     sourceIds: [
+      'aniimo-steam-dev-feedback-2026-10-13',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-update-1-1-2026-09-23',
@@ -237,7 +238,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    date: '2026-10-11',
+    date: '2026-10-13',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -362,7 +363,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-10-11',
+    date: '2026-10-13',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -384,6 +385,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
       'aniimo-steam-launch-faq-2026-09-16',
       'aniimo-official-support-center',
+      'aniimo-steam-dev-feedback-2026-10-13',
     ],
   },
   {
@@ -407,11 +409,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-choose-by-mobility-role',
-    date: '2026-09-16',
+    date: '2026-10-13',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/twine'],
     relatedSlugs: ['aniimo-mobility-abilities', 'aniimo-roles-explained', 'aniimo-twine-explained'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+    sourceIds: ['aniimo-official-wiki-index-2026-08-30', 'aniimo-steam-dev-feedback-2026-10-13'],
   },
   {
     slug: 'aniimo-launch-watchlist',
@@ -458,7 +460,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-dev-dispatch-roadmap',
-    date: '2026-10-11',
+    date: '2026-10-13',
     readMinutes: 7,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
@@ -467,7 +469,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-mobile',
       'aniimo-launch-checklist-known-issues',
     ],
-    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01'],
+    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13'],
   },
   ...(
     [

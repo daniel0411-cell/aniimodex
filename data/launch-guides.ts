@@ -314,7 +314,7 @@ const english: Record<string, LaunchGuide> = {
     subtitle:
       'Official 1.1 Prismana Form event windows, regions and unlock requirement, with clear status labels and UTC+8 times.',
     tag: 'Limited events',
-    lead: 'Schedule checked October 11: Melloblum ended on October 5; the announced Waleetle window in Berylline Vale ends October 12 at 03:59 (UTC+8). No replacement event after that deadline has been verified here. Check the dated windows and in-game notice rather than assuming an event is still active.',
+    lead: 'October 13 schedule status: the announced Melloblum and Waleetle windows have both ended; Waleetle ended October 12 at 03:59 (UTC+8). No replacement event has been verified here. Historical source checks are dated below; use the current in-game notice for live availability.',
     body: [
       { t: 'h', c: 'Official Prismana schedule checked October 11' },
       {
@@ -322,7 +322,7 @@ const english: Record<string, LaunchGuide> = {
         head: ['Event window (UTC+8)', 'Region', 'Officially named Prismana Form Aniimo', 'Entry requirement'],
         rows: [
           ['Ended: Sep 28 04:00 - Oct 5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', 'Reach Student II'],
-          ['Oct 5 04:00 - Oct 12 03:59; expires at this deadline', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
+          ['Ended: Oct 5 04:00 - Oct 12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
         ],
       },
       { t: 'h', c: 'What is Vein Abundance?' },
@@ -1422,7 +1422,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           title: 'Aniimo Prismana 活動追蹤：Melloblum 與 Waleetle 時間表',
           subtitle: '整理 1.1 官方虹彩形態活動時間、區域與解鎖條件，所有時間均為 UTC+8。',
           tag: '限時活動',
-          lead: '10 月 11 日核對：魅樂薇活動已於 10 月 5 日結束；青石台摩托郎活動的公告截止時間為 10 月 12 日 03:59（UTC+8）。尚未核驗截止後的接檔活動。請對照日期與遊戲內公告，不要假定活動仍開放。',
+          lead: '10 月 13 日時間表狀態：魅樂薇與摩托郎的公告窗口均已結束，摩托郎截止為 10 月 12 日 03:59（UTC+8）。尚未核驗接檔活動；下文保留歷史來源核對日期，即時開放狀態請看遊戲內公告。',
           body: [
             { t: 'h', c: '10 月 11 日核對的官方 Prismana 活動時間表' },
             { t: 'table', head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'], rows: [['已結束：9/28 04:00 - 10/5 03:59', '玫瑰塔林 / Rosetower Woods', '魅樂薇 / Melloblum', '達到 Student II'], ['10/5 04:00 - 10/12 03:59；到時截止', '青石台 / Berylline Vale', '摩托郎 / Waleetle', '達到 Student II']] },
@@ -1446,7 +1446,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           title: 'Aniimo Prismana 活动追踪：Melloblum 与 Waleetle 时间表',
           subtitle: '整理 1.1 官方虹彩形态活动时间、区域与解锁条件，所有时间均为 UTC+8。',
           tag: '限时活动',
-          lead: '10 月 11 日核对：魅乐薇活动已于 10 月 5 日结束；青石台摩托郎活动的公告截止时间为 10 月 12 日 03:59（UTC+8）。尚未核验截止后的接档活动。请对照日期与游戏内公告，不要假定活动仍开放。',
+          lead: '10 月 13 日时间表状态：魅乐薇与摩托郎的公告窗口均已结束，摩托郎截止为 10 月 12 日 03:59（UTC+8）。尚未核验接档活动；下文保留历史来源核对日期，即时开放状态请看游戏内公告。',
           body: [
             { t: 'h', c: '10 月 11 日核对的官方 Prismana 活动时间表' },
             { t: 'table', head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'], rows: [['已结束：9/28 04:00 - 10/5 03:59', '玫瑰塔林 / Rosetower Woods', '魅乐薇 / Melloblum', '达到 Student II'], ['10/5 04:00 - 10/12 03:59；到时截止', '青石台 / Berylline Vale', '摩托郎 / Waleetle', '达到 Student II']] },
@@ -1612,10 +1612,46 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   return { ...guide, title, subtitle, tag };
 }
 
+function octoberFeedbackBlocks(locale: string, slug: string): LaunchGuideBlock[] {
+  const en = locale === 'en';
+  const traditional = locale === 'zh-Hant';
+  const text = (englishText: string, simplified: string, traditionalText: string) => en ? englishText : traditional ? traditionalText : simplified;
+  const damage: LaunchGuideBlock[] = [
+    { t: 'h', c: text('Why does more ATK sometimes give the same damage?', '为什么增加攻击，伤害却可能不变？', '為什麼增加攻擊，傷害卻可能不變？') },
+    { t: 'p', c: text('The October 13 developer explanation describes a damage-calculation safeguard for non-DPS Aniimo: at low ATK, an ATK boost is calculated from level, or from BREAK for BREAK Aniimo. Below the guaranteed minimum, raising displayed ATK may not immediately raise damage. This is not a rule for every Aniimo, nor proof that ATK is useless.', '10 月 13 日官方解释：非输出定位伊莫在低攻击时，伤害计算会按等级补足攻击；BREAK 定位则涉及 BREAK 属性。低于保底值时，提高面板攻击可能不会立刻提高伤害。这不适用于所有伊莫，也不代表攻击属性无用。', '10 月 13 日官方解釋：非輸出定位伊莫在低攻擊時，傷害計算會按等級補足攻擊；BREAK 定位則涉及 BREAK 屬性。低於保底值時，提高面板攻擊可能不會立刻提高傷害。這不適用於所有伊莫，也不代表攻擊屬性無用。') },
+    { t: 'p', c: text('The post announces a version 1.1 refinement intended to make ATK increases affect damage more directly. It is a plan in this source, not a verified deployed fix. No full formula or thresholds are published here; this explanation cannot establish an optimal build, exact allocation or calculator.', '该公告计划在 1.1 调整计算，使攻击提升更直接影响伤害；本来源中的表述是计划，不是已核验上线的修复。未公布完整公式与阈值，不能据此计算最优配装或精确加点。', '該公告計畫在 1.1 調整計算，使攻擊提升更直接影響傷害；本來源中的表述是計畫，不是已核驗上線的修正。未公布完整公式與閾值，不能據此計算最優配裝或精確加點。') },
+  ];
+  const investigation: LaunchGuideBlock[] = [
+    { t: 'h', c: text('October 13: investigated reports are not completed fixes', '10 月 13 日：调查中的反馈不是已完成修复', '10 月 13 日：調查中的回饋不是已完成修正') },
+    { t: 'p', c: text('The developer says Aniimo and Chest spawn probabilities have not received numerical changes, while spawn, combat disengagement and aggro reports are being investigated. This is the developer statement, not an independent test or confirmation that every reported symptom is a bug. Rescue improvements and Chaos Mode changes are planned, with no delivery date in this notice.', '官方表示未调整伊莫或宝箱刷新概率数值，同时正在调查刷新、脱战和仇恨反馈。这是开发者声明，不是本站实测，也不代表每种现象都已确认为 Bug。救援体验与混沌模式改进仍属计划，本公告未给出实装日期。', '官方表示未調整伊莫或寶箱刷新機率數值，同時正在調查刷新、脫戰和仇恨回饋。這是開發者聲明，不是本站實測，也不代表每種現象都已確認為 Bug。救援體驗與混沌模式改進仍屬計畫，本公告未給出實裝日期。') },
+  ];
+  const egg: LaunchGuideBlock[] = [
+    ...investigation,
+    { t: 'h', c: text('Why do more Aniimo appear during a Sanctum run?', '为什么圣所探索途中会出现更多伊莫？', '為什麼聖所探索途中會出現更多伊莫？') },
+    { t: 'p', c: text('Not all Aniimo spawn at the start. More can appear as exploration progresses; digging up rare Aniimo Eggs or Rare Treasure disturbs dormant Aniimo and attracts them. Do not assume the opening enemy count is the total encounter count, or convert this explanation into an exact spawn timer.', '官方解释，并非所有伊莫都在开局出现，探索过程中可能继续出现；挖掘稀有伊莫蛋或稀有宝藏会惊动并吸引休眠伊莫。不要把开局数量当成整局数量，也不能由此推算精确刷新计时。', '官方解釋，並非所有伊莫都在開局出現，探索過程中可能繼續出現；挖掘稀有伊莫蛋或稀有寶藏會驚動並吸引休眠伊莫。不要把開局數量當成整局數量，也不能由此推算精確刷新計時。') },
+    { t: 'h', c: text('Are S1 Collectibles permanently missable?', 'S1 收藏品错过后会绝版吗？', 'S1 收藏品錯過後會絕版嗎？') },
+    { t: 'p', c: text('The developer plans more reliable acquisition through new gameplay in the second half of S1, and previous-season Collectibles returning in future events. No exact return date or complete item list is given; do not promise that a particular reward is available now.', '官方计划在 S1 后半段通过新玩法提供更稳定的获取方式，往季收藏品会在未来活动回归；未给出具体回归日期或完整物品清单，不能承诺某项奖励现在可领。', '官方計畫在 S1 後半段透過新玩法提供更穩定的取得方式，往季收藏品會在未來活動回歸；未給出具體回歸日期或完整物品清單，不能承諾某項獎勵現在可領。') },
+    { t: 'h', c: text('Chaos Mode: what is planned, not live-confirmed?', '混沌模式：哪些是计划而非已实装？', '混沌模式：哪些是計畫而非已實裝？') },
+    { t: 'p', c: text('Plans include more suitable Aniimo, more Chip sources including Heal and melee-support Chips, and Sanctum interactions granting temporary abilities. Future high-difficulty content is intended to resemble optional Limited-Time Challenges with reasonable rewards. No best team or new drop rate is established by these plans.', '计划包括更多适配伊莫、治疗及近战相关 Chip 的获取渠道，以及提供临时能力的圣所互动。后续高难内容倾向于可选的限时挑战与合理奖励；这些计划不能证明某个队伍最强或新的掉落率。', '計畫包括更多適配伊莫、治療及近戰相關 Chip 的取得渠道，以及提供臨時能力的聖所互動。後續高難內容傾向於可選的限時挑戰與合理獎勵；這些計畫不能證明某個隊伍最強或新的掉落率。') },
+  ];
+  let blocks: LaunchGuideBlock[] = [];
+  if (slug === 'aniimo-egg-heist') blocks = egg;
+  if (slug === 'aniimo-choose-by-mobility-role') blocks = damage;
+  if (slug === 'aniimo-launch-checklist-known-issues') blocks = investigation;
+  if (slug === 'aniimo-dev-dispatch-roadmap') blocks = [
+    ...investigation, ...damage,
+    { t: 'h', c: text('Egg Heist update cadence and collection plans', 'Egg Heist 更新节奏与收藏计划', 'Egg Heist 更新節奏與收藏計畫') },
+    { t: 'p', c: text('The October 13 plan describes major seasonal updates and smaller updates every two weeks: PvE focus in the first half, casual competition in the second half, and new Collectibles, maps, Aniimo and gameplay every half-season. Past Collectibles are intended to return through future events. This is intended cadence, not guaranteed dates or confirmation that content is already live.', '10 月 13 日计划为每赛季大更新、每两周小更新：前半季侧重 PvE，后半季侧重休闲竞技，每半季增加收藏品、地图、伊莫和玩法。往季收藏品计划通过未来活动回归。这是预期节奏，不是保证日期或已上线清单。', '10 月 13 日計畫為每賽季大更新、每兩週小更新：前半季側重 PvE，後半季側重休閒競技，每半季增加收藏品、地圖、伊莫和玩法。往季收藏品計畫透過未來活動回歸。這是預期節奏，不是保證日期或已上線清單。') },
+  ];
+  return blocks.length ? [...blocks, { t: 'quote', c: text('Source: official Dev Feedback | Oct 13, checked October 13, 2026. This is developer guidance and plans, not independent gameplay testing or a new patch report.', '来源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核验。这是开发者解释与计划，不是本站实测或新补丁实装报告。', '來源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核驗。這是開發者解釋與計畫，不是本站實測或新補丁實裝報告。') }] : [];
+}
+
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
   const guide = english[slug];
   if (!guide) return undefined;
-  const result = localized(locale, guide);
+  const localizedGuide = localized(locale, guide);
+  const feedback = octoberFeedbackBlocks(locale, slug);
+  const result = { ...localizedGuide, body: [...feedback, ...localizedGuide.body] };
   if (locale === 'en') return result;
   const traditional = locale === 'zh-Hant';
   const additions: Partial<Record<string, LaunchGuideBlock[]>> = {

@@ -13,6 +13,13 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-steam-dev-feedback-2026-10-13',
+    url: 'https://steamcommunity.com/games/4126040/announcements/detail/1846018067943039',
+    title: 'Aniimo Dev Feedback | Oct 13',
+    accessedAt: '2026-10-13',
+    evidence: 'Developer explanation of Sanctum spawning and non-DPS damage safeguards; spawning, disengagement and aggro reports remain under investigation. Rescue improvements, collectible returns, Chaos changes and the version 1.1 damage refinement are plans, not delivered fixes. Seasonal and fortnightly updates describe intended cadence, not guaranteed release dates.',
+  },
+  {
     id: 'aniimo-official-wiki-index-2026-08-30',
     url: 'https://wiki.aniimo.com/',
     title: 'Official Aniimo Wiki - Complete Aniimo Index',

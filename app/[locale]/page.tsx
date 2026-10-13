@@ -392,16 +392,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       />
       <section className="border-b border-ink-border py-5">
         <h2 className="text-lg font-bold text-text-primary">
-          {locale === 'en' ? 'October activity schedule' : locale === 'zh-Hant' ? '10 月活動時間表' : '10 月活动时间表'}
+          {locale === 'en' ? 'October 13: Egg Heist feedback and event dates' : locale === 'zh-Hant' ? '10 月 13 日：Egg Heist 答疑與活動時間' : '10 月 13 日：Egg Heist 答疑与活动时间'}
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
           {locale === 'en'
-            ? 'Schedule checked October 11 (UTC+8): Waleetle ends October 12 at 03:59; Journey Chronicles is announced through October 29 at 03:59. Melloblum and Aniimo Discovery have ended. These dates are not live availability monitoring.'
+            ? 'New official feedback explains Sanctum spawning and ATK damage safeguards; rescue and Chaos changes remain plans. Waleetle ended October 12 at 03:59 (UTC+8). Journey Chronicles is announced through October 29 at 03:59. Event dates are a schedule record, not live monitoring.'
             : locale === 'zh-Hant'
-              ? '10 月 11 日核對（UTC+8）：摩托郎公告截止為 10 月 12 日 03:59，旅途拾光至 10 月 29 日 03:59。魅樂薇與伊莫大發現已結束；這是公告日期，不是即時開放監控。'
-              : '10 月 11 日核对（UTC+8）：摩托郎公告截止为 10 月 12 日 03:59，旅途拾光至 10 月 29 日 03:59。魅乐薇与伊莫大发现已结束；这是公告日期，不是实时开放监控。'}
+              ? '最新官方答疑解釋聖所刷新與攻擊傷害保底；救援及混沌改進仍屬計畫。摩托郎公告窗口已於 10 月 12 日 03:59 結束，旅途拾光公告至 10 月 29 日 03:59（UTC+8）。活動日期不是即時開放監控。'
+              : '最新官方答疑解释圣所刷新与攻击伤害保底；救援及混沌改进仍属计划。摩托郎公告窗口已于 10 月 12 日 03:59 结束，旅途拾光公告至 10 月 29 日 03:59（UTC+8）。活动日期不是实时开放监控。'}
         </p>
         <nav className="mt-3 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={locale === 'en' ? 'Activity and support guides' : locale === 'zh-Hant' ? '活動與支援攻略' : '活动与支持攻略'}>
+          <Link href="/guide/aniimo-egg-heist">{locale === 'en' ? 'Egg Heist official answers' : 'Egg Heist 官方答疑'} →</Link>
+          <Link href="/guide/aniimo-choose-by-mobility-role">{locale === 'en' ? 'Roles and ATK damage explained' : locale === 'zh-Hant' ? '定位與攻擊傷害解釋' : '定位与攻击伤害解释'} →</Link>
           <Link href="/guide/aniimo-prismana-event-tracker">{locale === 'en' ? 'Event dates and requirements' : locale === 'zh-Hant' ? '活動時間與條件' : '活动时间与条件'} →</Link>
           <Link href="/guide/aniimo-language-controller-support">{locale === 'en' ? 'Controller and Steam Deck help' : locale === 'zh-Hant' ? '手柄與 Steam Deck 排查' : '手柄与 Steam Deck 排查'} →</Link>
           <Link href="/guide/aniimo-progress-account-safety">{locale === 'en' ? 'Account and progress help' : locale === 'zh-Hant' ? '帳號與進度處理' : '账号与进度处理'} →</Link>
