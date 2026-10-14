@@ -7,10 +7,15 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
     assert(html.includes('Dev Feedback | Oct 13'), `${locale}/${slug}: missing dated feedback`);
     assert(html.includes('1846018067943039'), `${locale}/${slug}: missing source link`);
-    assert(html.includes('2026-10-13'), `${locale}/${slug}: missing update date`);
+    assert(html.includes('2026-10-13'), `${locale}/${slug}: missing dated source`);
     if (['aniimo-choose-by-mobility-role', 'aniimo-dev-dispatch-roadmap'].includes(slug)) {
       assert(html.includes('BREAK'), `${locale}/${slug}: missing damage safeguard explanation`);
     }
+  }
+  for (const [slug, term] of [['aniimo-launch-checklist-known-issues', 'Outpost'], ['aniimo-catching-guide', 'Cannot catch the Alpha in the current state'], ['aniimo-egg-heist', 'Erlath'], ['aniimo-team-composition', 'BREAK']]) {
+    const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+    assert(html.includes(term), `${locale}/${slug}: missing practical answer`);
+    assert(html.includes('2026') && html.includes('14'), `${locale}/${slug}: missing practical update date`);
   }
   const home = readFileSync(`out/${locale}/index.html`, 'utf8');
   assert(home.includes('guide/aniimo-egg-heist'), `${locale}: missing home task entry`);

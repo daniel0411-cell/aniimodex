@@ -11,7 +11,7 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getGuidePost, getPublishedGuidePosts } from '@/data/guides';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
-import { getLaunchGuide } from '@/data/launch-guides';
+import { getLaunchGuide, getPracticalSupportBlocks } from '@/data/launch-guides';
 import { formIndex } from '@/data/forms';
 import { getAniimoByNumber } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
@@ -109,12 +109,13 @@ export default async function GuidePostPage({
   const tag = launchGuide?.tag ?? tp(`${post.slug}.tag`);
   const lead = launchGuide?.lead ?? tp(`${post.slug}.lead`);
   const messages = await getMessages();
-  const body = post.dataTopic
+  const originalBody = post.dataTopic
     ? (['meaning', 'confirmed', 'unknown'] as const).flatMap((key) => [
         { t: 'h', c: tg(`dataTopics.${post.dataTopic}.${key}.heading`) },
         { t: 'p', c: tg(`dataTopics.${post.dataTopic}.${key}.content`) },
       ] as Block[])
     : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
+  const body = [...getPracticalSupportBlocks(locale, post.slug), ...originalBody];
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);

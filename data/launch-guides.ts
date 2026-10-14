@@ -1695,4 +1695,28 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
   };
 }
 
+export function getPracticalSupportBlocks(locale: string, slug: string): LaunchGuideBlock[] {
+  const text = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const entries: Record<string, [string, string]> = {
+    'aniimo-launch-checklist-known-issues': [
+      text('Wrong scene after teleporting: official recovery step', '传送后场景加载错误：官方处理步骤', '傳送後場景載入錯誤：官方處理步驟'),
+      text('The September 29 and 30 patch notes describe a rare teleportation issue that loads the wrong scene. For that symptom, the official instruction is to go to the Outpost and use the green interaction point to reload the correct scene. This historical guidance is not a fix for every black screen, login error or network failure. If you cannot reach the Outpost, record your client version, server region, destination and screenshot for official support; do not delete saves or unlink your account.', '9 月 29 日与 30 日补丁记录了罕见的传送场景加载错误。针对此症状，官方指引是前往 Outpost（前哨站），使用绿色交互点重新加载正确场景。这是历史指引，不适用于所有黑屏、登录错误或网络故障。若无法到达前哨站，记录客户端版本、服务器地区、传送目标和截图并提交官方支持；不要删除存档或解除账号绑定。', '9 月 29 日與 30 日補丁記錄了罕見的傳送場景載入錯誤。針對此症狀，官方指引是前往 Outpost（前哨站），使用綠色互動點重新載入正確場景。這是歷史指引，不適用於所有黑屏、登入錯誤或網路故障。若無法到達前哨站，記錄客戶端版本、伺服器地區、傳送目標和截圖並提交官方支援；不要刪除存檔或解除帳號綁定。'),
+    ],
+    'aniimo-catching-guide': [
+      text('Cannot catch the Alpha in the current state: what to check', 'Cannot catch the Alpha in the current state：怎么排查', 'Cannot catch the Alpha in the current state：怎麼排查'),
+      text('Official patch 1.0.3616231.0 on September 29 marks an intermittent Alpha-catching failure with this exact message as fixed. That does not mean every capture restriction is a bug. First check for updates through your official platform. If the same message persists, send official support the client version, Alpha name, location, screenshot and reproduction steps. No force-catch method, guaranteed workaround or capture probability is established by this notice.', '9 月 29 日官方 1.0.3616231.0 补丁标记已修复偶发 Alpha 捕获失败及此错误提示，但不代表所有捕获限制都是 Bug。先通过所在平台的官方渠道检查更新；若相同提示持续出现，向官方支持提供客户端版本、Alpha 名称、地点、截图和复现步骤。本公告没有证明强制捕获方法、保证有效的临时办法或捕获概率。', '9 月 29 日官方 1.0.3616231.0 補丁標記已修正偶發 Alpha 捕獲失敗及此錯誤提示，但不代表所有捕獲限制都是 Bug。先透過所在平台的官方渠道檢查更新；若相同提示持續出現，向官方支援提供客戶端版本、Alpha 名稱、地點、截圖和重現步驟。本公告沒有證明強制捕獲方法、保證有效的臨時辦法或捕獲機率。'),
+    ],
+    'aniimo-egg-heist': [
+      text('Encountered Erlath? The official target-priority advice', '遇到 Erlath：官方的目标优先级建议', '遇到 Erlath：官方的目標優先級建議'),
+      text('September 30 patch 1.0.3629693.0 introduces Erlath as an enemy with group support abilities and explicitly advises prioritizing it when encountered. This supports a target-priority decision, not a guaranteed spawn location, best route or universal winning team. Check the current encounter before applying the advice.', '9 月 30 日 1.0.3629693.0 补丁新增具备群体支援能力的敌人 Erlath，并明确建议遇到时优先击败它。这能支持目标优先级判断，但不能证明固定刷新点、最佳路线或必胜阵容；请结合当前遭遇情况使用。', '9 月 30 日 1.0.3629693.0 補丁新增具備群體支援能力的敵人 Erlath，並明確建議遇到時優先擊敗它。這能支持目標優先級判斷，但不能證明固定刷新點、最佳路線或必勝陣容；請結合目前遭遇情況使用。'),
+    ],
+    'aniimo-team-composition': [
+      text('Do not choose non-DPS Aniimo by displayed ATK alone', '非输出定位不要只按面板攻击选队员', '非輸出定位不要只按面板攻擊選隊員'),
+      text('The October 13 developer explanation describes a low-ATK damage safeguard for non-DPS Aniimo, based on level or BREAK for BREAK Aniimo. Below the safeguard, adding displayed ATK may not immediately increase damage. Compare published roles, skills and BREAK information rather than ranking every role by ATK alone; the mobility-and-role guide explains the limits. The same post calls a damage refinement a version 1.1 plan. Despite earlier announcements also using 1.1, this specific change is not verified live here. No published threshold or full formula supports an exact allocation or best team.', '10 月 13 日开发者解释了非输出定位的低攻击伤害保底，按等级或 BREAK 定位的 BREAK 属性计算；低于保底时，增加面板攻击可能不会立刻提高伤害。请结合已公开定位、技能和 BREAK 信息判断功能，不要用攻击值给所有定位统一排名；移动能力与定位选择页解释了适用边界。同一公告把伤害调整称为 1.1 计划，虽然更早公告也使用 1.1 名称，本站尚未核验此项调整实装。未公布阈值或完整公式，不能推导精确加点或最强队伍。', '10 月 13 日開發者解釋了非輸出定位的低攻擊傷害保底，按等級或 BREAK 定位的 BREAK 屬性計算；低於保底時，增加面板攻擊可能不會立刻提高傷害。請結合已公開定位、技能和 BREAK 資訊判斷功能，不要用攻擊值給所有定位統一排名；移動能力與定位選擇頁解釋了適用邊界。同一公告把傷害調整稱為 1.1 計畫，雖然更早公告也使用 1.1 名稱，本站尚未核驗此項調整實裝。未公布閾值或完整公式，不能推導精確加點或最強隊伍。'),
+    ],
+  };
+  const entry = entries[slug];
+  return entry ? [{ t: 'h', c: entry[0] }, { t: 'p', c: entry[1] }, { t: 'quote', c: text('Practical guidance added October 14, 2026 from the dated official sources listed below. Historical fixes and developer plans are not new patch releases or independently tested guarantees.', '实用说明于 2026 年 10 月 14 日补充，依据下方列明日期的官方来源。历史修复与开发计划不代表新补丁发布或本站实测保证。', '實用說明於 2026 年 10 月 14 日補充，依據下方列明日期的官方來源。歷史修正與開發計畫不代表新補丁發布或本站實測保證。') }] : [];
+}
+
 export const launchGuideSlugs = Object.keys(english);

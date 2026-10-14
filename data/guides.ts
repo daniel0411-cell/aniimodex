@@ -177,10 +177,10 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-catching-guide',
-    date: '2026-09-16',
+    date: '2026-10-14',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-twine-explained', 'what-is-aniimo'],
-    sourceIds: ['aniimo-playstation-10018491', 'aniimo-official-probabilities-2026-09-16'],
+    relatedSlugs: ['aniimo-twine-explained', 'what-is-aniimo', 'aniimo-launch-checklist-known-issues'],
+    sourceIds: ['aniimo-playstation-10018491', 'aniimo-official-probabilities-2026-09-16', 'aniimo-steam-patch-1-0-3616231-2026-09-29', 'aniimo-official-support-center'],
   },
   {
     slug: 'aniimo-multiplayer',
@@ -191,7 +191,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    date: '2026-10-13',
+    date: '2026-10-14',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -363,7 +363,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-10-13',
+    date: '2026-10-14',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -425,7 +425,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-team-composition',
-    date: '2026-09-18',
+    date: '2026-10-14',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/abilities', '/tools/type-chart', '/tools/catch'],
     relatedSlugs: [
@@ -436,6 +436,7 @@ export const guidePosts: GuidePost[] = [
     sourceIds: [
       'aniimo-official-wiki-index-2026-08-30',
       'aniimo-official-probabilities-2026-09-16',
+      'aniimo-steam-dev-feedback-2026-10-13',
     ],
   },
   {
