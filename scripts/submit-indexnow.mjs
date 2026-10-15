@@ -20,16 +20,23 @@ async function getUrls() {
 }
 
 const key = await getKey();
-const urls = await getUrls();
+const sitemapUrls = await getUrls();
 const hostname = new URL(siteUrl).hostname;
+const requestedUrls = process.argv
+  .filter((arg) => arg.startsWith('--url='))
+  .map((arg) => new URL(arg.slice(6), `${siteUrl}/`).href);
+const urls = requestedUrls.length ? [...new Set(requestedUrls)] : sitemapUrls;
 
 if (!urls.length) throw new Error('Sitemap contains no URLs.');
 if (urls.some((url) => new URL(url).hostname !== hostname)) {
   throw new Error('Sitemap contains a URL outside the configured hostname.');
 }
+if (requestedUrls.length && urls.some((url) => !sitemapUrls.includes(url))) {
+  throw new Error('Every requested URL must exist in the live sitemap.');
+}
 
 if (!process.argv.includes('--submit')) {
-  console.log(`IndexNow check passed: ${urls.length} URLs for ${hostname}.`);
+  console.log(`IndexNow check passed: ${urls.length} ${requestedUrls.length ? 'requested' : 'sitemap'} URLs for ${hostname}.`);
   console.log('Run pnpm seo:indexnow:submit after configuring INDEXNOW_KEY.');
   process.exit(0);
 }

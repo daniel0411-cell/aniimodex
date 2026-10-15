@@ -274,6 +274,9 @@
     "browseLocations": "伊莫栖息地",
     "browseAbilities": "移动能力",
     "browseMatchups": "元素克制",
+    "browseTools": "伊莫工具",
+    "browseTwine": "Twine 能力反查",
+    "browseCatch": "捕获率计算器",
     "featuredDetailsTitle": "从资料更完整的伊莫开始",
     "featuredDetailsDescription": "这些条目在官方 Wiki 快照中包含进化、栖息地、移动能力、特性、技能或形态字段。入选仅代表资料丰富，不代表强度或稀有度。",
     "elementNames": {
@@ -359,8 +362,14 @@
     "openTwine": "打开 Twine 反查"
   },
   "tools": {
-    "title": "工具中心",
-    "subtitle": "使用官方来源的伊莫工具查询元素关系、移动能力与捕获概率，在不依赖未核验配队或刷取路线的前提下比较公开数据。",
+    "title": "Aniimo 伊莫工具：元素克制、Twine 反查与捕获率计算",
+    "subtitle": "查询伊莫元素克制、按 Twine 移动能力反查伊莫，并按已公布概率公式估算捕获率。",
+    "databaseTitle": "继续查看伊莫资料库",
+    "databaseDesc": "从工具结果继续查看 92 条图鉴、进化家族、栖息地与移动能力目录。",
+    "browseDex": "浏览全部 92 只伊莫",
+    "browseEvolutions": "比较进化家族",
+    "browseLocations": "查看伊莫栖息地",
+    "browseAbilities": "浏览移动能力",
     "twineTitle": "Twine 能力反查",
     "twineDesc": "选择场地移动能力，反查对应的伊莫。",
     "twineTags": ["反查", "移动"],

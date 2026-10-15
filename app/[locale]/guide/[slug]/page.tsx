@@ -326,6 +326,19 @@ export default async function GuidePostPage({
               {locale === 'en' ? 'Use official store links to download the game. Pre-registration reward eligibility depends on the current campaign terms, account, region and platform.' : locale === 'zh-Hant' ? '請透過官方商店連結下載遊戲；預約獎勵資格以目前活動條款、帳號、地區和平台為準。' : '请通过官方商店链接下载游戏；预约奖励资格以当前活动条款、账号、地区和平台为准。'}
             </div>
           )}
+          {post.slug === 'aniimo-launch-time-preload' && (
+            <div className="border-l-4 border-primary bg-sky-50 px-4 py-3 text-sm leading-6 text-sky-950">
+              <strong>{locale === 'en' ? 'Historical search status:' : locale === 'zh-Hant' ? '歷史搜尋狀態：' : '历史搜索状态：'}</strong>{' '}
+              {locale === 'en' ? 'Preload has ended. This URL is retained to answer older searches and now points players to current official downloads, platform availability and support.' : locale === 'zh-Hant' ? '預載已結束。本 URL 保留用於回答過往搜尋，現在引導至目前官方下載、平台可用狀態與支援。' : '预下载已结束。本 URL 保留用于回答过往搜索，现在引导至当前官方下载、平台可用状态与支持。'}
+            </div>
+          )}
+          {post.slug === 'aniimo-crossplay-cross-save' && (
+            <nav className="grid gap-2 border-y border-ink-border py-3 text-sm font-semibold text-primary-light sm:grid-cols-3" aria-label={locale === 'en' ? 'Crossplay next steps' : locale === 'zh-Hant' ? '跨平台下一步' : '跨平台下一步'}>
+              <Link href="/guide/aniimo-platforms">{locale === 'en' ? 'Check platform availability' : locale === 'zh-Hant' ? '查看平台可用狀態' : '查看平台可用状态'} →</Link>
+              <Link href="/guide/aniimo-multiplayer">{locale === 'en' ? 'Read multiplayer modes' : locale === 'zh-Hant' ? '查看多人模式' : '查看多人模式'} →</Link>
+              <Link href="/guide/aniimo-progress-account-safety">{locale === 'en' ? 'Protect account progress' : locale === 'zh-Hant' ? '保護帳號進度' : '保护账号进度'} →</Link>
+            </nav>
+          )}
           <p className="mt-3 text-base leading-relaxed text-text-primary">{lead}</p>
         </header>
 

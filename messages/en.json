@@ -274,6 +274,9 @@
     "browseLocations": "Aniimo habitats",
     "browseAbilities": "Mobility abilities",
     "browseMatchups": "Element matchups",
+    "browseTools": "Aniimo tools",
+    "browseTwine": "Twine ability lookup",
+    "browseCatch": "Catch rate calculator",
     "featuredDetailsTitle": "Start with data-rich Aniimo entries",
     "featuredDetailsDescription": "These entries have published evolution, habitat, mobility, trait, skill or form fields in the official Wiki snapshot. Selection reflects documentation depth, not combat strength or rarity.",
     "elementNames": {
@@ -361,8 +364,14 @@
     "openTwine": "Open Twine lookup"
   },
   "tools": {
-    "title": "Tools Center",
-    "subtitle": "Use official-source Aniimo tools to compare elements, look up mobility abilities and estimate catch chances without relying on unverified build or route claims.",
+    "title": "Aniimo Tools: Type Chart, Twine & Catch Calculator",
+    "subtitle": "Use Aniimo tools to check element matchups, find creatures by Twine mobility ability and estimate catch chances from the published probability formula.",
+    "databaseTitle": "Continue in the Aniimo database",
+    "databaseDesc": "Move from a tool result to the full 92-entry dex, evolution families, habitats or mobility directory.",
+    "browseDex": "Browse all 92 Aniimo",
+    "browseEvolutions": "Compare evolution families",
+    "browseLocations": "Check Aniimo habitats",
+    "browseAbilities": "Browse mobility abilities",
     "twineTitle": "Twine Ability Lookup",
     "twineDesc": "Pick a movement ability to find matching Aniimo.",
     "twineTags": ["Lookup", "Movement"],

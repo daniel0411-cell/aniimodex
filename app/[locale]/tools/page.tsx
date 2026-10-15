@@ -120,6 +120,17 @@ export default async function ToolsPage({
           </Link>
         ))}
       </section>
+
+      <section className="border-t border-ink-border pt-6">
+        <h2 className="text-lg font-bold text-text-primary">{t('databaseTitle')}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{t('databaseDesc')}</p>
+        <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={t('databaseTitle')}>
+          <Link href="/dex">{t('browseDex')} →</Link>
+          <Link href="/evolutions">{t('browseEvolutions')} →</Link>
+          <Link href="/locations">{t('browseLocations')} →</Link>
+          <Link href="/abilities">{t('browseAbilities')} →</Link>
+        </nav>
+      </section>
     </div>
   );
 }

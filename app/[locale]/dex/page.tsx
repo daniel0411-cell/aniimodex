@@ -353,6 +353,9 @@ export default function DexPage() {
           <Link href="/locations">{td('browseLocations')} →</Link>
           <Link href="/abilities">{td('browseAbilities')} →</Link>
           <Link href="/tools/type-chart">{td('browseMatchups')} →</Link>
+          <Link href="/tools">{td('browseTools')} →</Link>
+          <Link href="/tools/twine">{td('browseTwine')} →</Link>
+          <Link href="/tools/catch">{td('browseCatch')} →</Link>
         </nav>
       </section>
       <section className="border-t border-ink-border pt-8">

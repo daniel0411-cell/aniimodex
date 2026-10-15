@@ -273,7 +273,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
-    date: '2026-09-29',
+    date: '2026-10-15',
     readMinutes: 5,
     relatedSlugs: ['how-to-download-aniimo', 'aniimo-platforms', 'aniimo-launch-checklist-known-issues'],
     sourceIds: [
@@ -288,7 +288,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
-    date: '2026-10-04',
+    date: '2026-10-15',
     readMinutes: 5,
     relatedSlugs: [
       'aniimo-multiplayer',
