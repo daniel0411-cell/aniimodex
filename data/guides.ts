@@ -126,7 +126,11 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-mobile',
     date: '2026-09-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-launch-checklist-known-issues'],
+    relatedSlugs: [
+      'aniimo-platforms',
+      'aniimo-crossplay-cross-save',
+      'aniimo-launch-checklist-known-issues',
+    ],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-app-store-6759098797',
@@ -179,8 +183,17 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-catching-guide',
     date: '2026-10-14',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-twine-explained', 'what-is-aniimo', 'aniimo-launch-checklist-known-issues'],
-    sourceIds: ['aniimo-playstation-10018491', 'aniimo-official-probabilities-2026-09-16', 'aniimo-steam-patch-1-0-3616231-2026-09-29', 'aniimo-official-support-center'],
+    relatedSlugs: [
+      'aniimo-twine-explained',
+      'what-is-aniimo',
+      'aniimo-launch-checklist-known-issues',
+    ],
+    sourceIds: [
+      'aniimo-playstation-10018491',
+      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-steam-patch-1-0-3616231-2026-09-29',
+      'aniimo-official-support-center',
+    ],
   },
   {
     slug: 'aniimo-multiplayer',
@@ -277,7 +290,11 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-launch-time-preload',
     date: '2026-10-15',
     readMinutes: 5,
-    relatedSlugs: ['how-to-download-aniimo', 'aniimo-platforms', 'aniimo-launch-checklist-known-issues'],
+    relatedSlugs: [
+      'how-to-download-aniimo',
+      'aniimo-platforms',
+      'aniimo-launch-checklist-known-issues',
+    ],
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-playstation-10018491',
@@ -346,7 +363,11 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-language-controller-support',
     date: '2026-10-16',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-launch-checklist-known-issues', 'aniimo-platforms', 'aniimo-system-requirements'],
+    relatedSlugs: [
+      'aniimo-launch-checklist-known-issues',
+      'aniimo-platforms',
+      'aniimo-system-requirements',
+    ],
     sourceIds: [
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
@@ -476,6 +497,76 @@ export const guidePosts: GuidePost[] = [
       'aniimo-launch-checklist-known-issues',
     ],
     sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13'],
+  },
+  {
+    slug: 'aniimo-harvest-gathering-farm-guide',
+    element: '草',
+    date: '2026-10-16',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex', '/tools/twine'],
+    relatedSlugs: [
+      'aniimo-rv-homeland-guide',
+      'aniimo-version-1-1-update',
+      'aniimo-launch-checklist-known-issues',
+      'getting-started',
+    ],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
+  },
+  {
+    slug: 'aniimo-currencies-and-shops',
+    element: '光',
+    date: '2026-10-16',
+    readMinutes: 6,
+    relatedToolHrefs: ['/dex', '/tools/catch', '/tools/team-builder'],
+    relatedSlugs: [
+      'aniimo-egg-heist',
+      'aniimo-rv-homeland-guide',
+      'aniimo-version-1-1-update',
+      'getting-started',
+    ],
+    sourceIds: [
+      'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
+    ],
+  },
+  {
+    slug: 'aniimo-prismana-potential-breeding-guide',
+    element: '暗',
+    date: '2026-10-16',
+    readMinutes: 7,
+    relatedToolHrefs: ['/dex', '/tools/catch', '/tools/team-builder'],
+    relatedSlugs: [
+      'aniimo-forms-explained',
+      'aniimo-egg-heist',
+      'aniimo-catching-guide',
+      'aniimo-dev-dispatch-roadmap',
+    ],
+    sourceIds: [
+      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
+    ],
+  },
+  {
+    slug: 'aniimo-controller-steam-deck-optimization',
+    element: '风',
+    date: '2026-10-16',
+    readMinutes: 6,
+    relatedToolHrefs: ['/tools/team-builder'],
+    relatedSlugs: [
+      'aniimo-language-controller-support',
+      'aniimo-system-requirements',
+      'aniimo-platforms',
+      'aniimo-launch-checklist-known-issues',
+    ],
+    sourceIds: [
+      'aniimo-steam-4126040',
+      'aniimo-steam-launch-faq-2026-09-16',
+      'aniimo-steam-patch-1-0-3535596-2026-09-17',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
+      'aniimo-xbox-9pk8phlcqdf6',
+    ],
   },
   ...(
     [

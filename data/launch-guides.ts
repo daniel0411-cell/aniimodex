@@ -38,11 +38,31 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Platform', 'Current status', 'Crossplay / account status'],
         rows: [
-          ['PC launcher and Steam', 'Available from official routes', 'Cross-platform multiplayer listed; exact pairings not documented'],
-          ['PlayStation 5', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
-          ['Xbox Series X|S', 'Official store route listed', 'Specific pairing and cross-save status not documented'],
-          ['iOS and Android', 'Official mobile download route listed', 'Specific pairing and cross-save status not documented'],
-          ['Nintendo Switch and Switch 2', 'Not announced by the official sources checked', 'No crossplay or account policy announced'],
+          [
+            'PC launcher and Steam',
+            'Available from official routes',
+            'Cross-platform multiplayer listed; exact pairings not documented',
+          ],
+          [
+            'PlayStation 5',
+            'Official store route listed',
+            'Specific pairing and cross-save status not documented',
+          ],
+          [
+            'Xbox Series X|S',
+            'Official store route listed',
+            'Specific pairing and cross-save status not documented',
+          ],
+          [
+            'iOS and Android',
+            'Official mobile download route listed',
+            'Specific pairing and cross-save status not documented',
+          ],
+          [
+            'Nintendo Switch and Switch 2',
+            'Not announced by the official sources checked',
+            'No crossplay or account policy announced',
+          ],
         ],
       },
       { t: 'h', c: 'Is Aniimo cross-platform?' },
@@ -114,10 +134,22 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Situation', 'Official next step'],
         rows: [
-          ['You created a new character after progress disappeared', 'Use the account-choice survey sent to the registered email; official support stated a 72-hour processing target after submission'],
-          ['You did not create a new character', 'The official post says the original progress should already be restored; contact support if it is still missing'],
-          ['The character appears on another region', 'Switch back to the server region originally used before treating the progress as deleted'],
-          ['No survey, reply or restored progress', 'Send UID, login email, log file and server region to official support'],
+          [
+            'You created a new character after progress disappeared',
+            'Use the account-choice survey sent to the registered email; official support stated a 72-hour processing target after submission',
+          ],
+          [
+            'You did not create a new character',
+            'The official post says the original progress should already be restored; contact support if it is still missing',
+          ],
+          [
+            'The character appears on another region',
+            'Switch back to the server region originally used before treating the progress as deleted',
+          ],
+          [
+            'No survey, reply or restored progress',
+            'Send UID, login email, log file and server region to official support',
+          ],
         ],
       },
       { t: 'h', c: 'Before switching from PC, console or mobile' },
@@ -125,11 +157,26 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Check', 'Why it matters'],
         rows: [
-          ['Account identity', 'Use the same official account and confirm the sign-in prompt before proceeding'],
-          ['Region and server', 'A different region or server can make a character appear absent without proving deletion'],
-          ['Character selection', 'Confirm the expected character before starting new-game or tutorial flows'],
-          ['Current client version', 'Update through the official launcher or storefront before diagnosing a sync issue'],
-          ['Purchase records', 'Keep the storefront receipt; do not repeat a purchase while its delivery state is unclear'],
+          [
+            'Account identity',
+            'Use the same official account and confirm the sign-in prompt before proceeding',
+          ],
+          [
+            'Region and server',
+            'A different region or server can make a character appear absent without proving deletion',
+          ],
+          [
+            'Character selection',
+            'Confirm the expected character before starting new-game or tutorial flows',
+          ],
+          [
+            'Current client version',
+            'Update through the official launcher or storefront before diagnosing a sync issue',
+          ],
+          [
+            'Purchase records',
+            'Keep the storefront receipt; do not repeat a purchase while its delivery state is unclear',
+          ],
         ],
       },
       { t: 'h', c: 'Does Aniimo officially confirm cross-save?' },
@@ -185,25 +232,46 @@ const english: Record<string, LaunchGuide> = {
         rows: [
           ['Team format', 'Three-player real-time PVEVP'],
           ['Chaos Mode', 'Requires Elite Egg Seeker Tier IV and a Chaos Ticket'],
-          ['Chaos rewards', 'Higher chances for Prismana eggs and glazed-quality collectibles; exact rates not published'],
-          ['September 30 patch', 'Erlath added; missing Sanctum entrance and Stellarys control-immunity issues fixed'],
-          ['Stellarys Starine', 'Drop rate increased on Chaos difficulty; exact before/after rates not published'],
+          [
+            'Chaos rewards',
+            'Higher chances for Prismana eggs and glazed-quality collectibles; exact rates not published',
+          ],
+          [
+            'September 30 patch',
+            'Erlath added; missing Sanctum entrance and Stellarys control-immunity issues fixed',
+          ],
+          [
+            'Stellarys Starine',
+            'Drop rate increased on Chaos difficulty; exact before/after rates not published',
+          ],
         ],
       },
       { t: 'h', c: 'What is special about an Egg Heist egg?' },
       {
         t: 'table',
         head: ['Sparkling Cube target', 'Normal', 'Dazzling', 'Shadow'],
-        rows: [['Egg Heist egg', '99%', '0%', '1%'], ['Egg not from Egg Heist', '99%', '1%', '0%']],
+        rows: [
+          ['Egg Heist egg', '99%', '0%', '1%'],
+          ['Egg not from Egg Heist', '99%', '1%', '0%'],
+        ],
       },
       {
         t: 'p',
         c: 'The official probability disclosure covers Sparkling style outcomes after using the listed item. It does not guarantee a particular Aniimo hatch, prove that Shadow changes stats, or publish Alpha Egg odds.',
       },
       { t: 'h', c: 'What should I verify before a run?' },
-      { t: 'li', c: 'Confirm the live activity screen, difficulty, ticket requirement and current reward preview.' },
-      { t: 'li', c: 'Make sure all three players use a compatible client version and server region.' },
-      { t: 'li', c: 'Treat community maps as navigation aids, not proof of every live map rotation or reward rate.' },
+      {
+        t: 'li',
+        c: 'Confirm the live activity screen, difficulty, ticket requirement and current reward preview.',
+      },
+      {
+        t: 'li',
+        c: 'Make sure all three players use a compatible client version and server region.',
+      },
+      {
+        t: 'li',
+        c: 'Treat community maps as navigation aids, not proof of every live map rotation or reward rate.',
+      },
       { t: 'li', c: 'Record version, difficulty and sample size before making a drop-rate claim.' },
       { t: 'h', c: 'What remains unverified?' },
       {
@@ -228,7 +296,10 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Feature', 'Verified status'],
         rows: [
-          ['Home gameplay', 'Listed by the official website as part of launch benefits and progression'],
+          [
+            'Home gameplay',
+            'Listed by the official website as part of launch benefits and progression',
+          ],
           ['Home shortcut', 'Version 1.1 added a shortcut in the Home interface'],
           ['Controller navigation', 'Version 1.1 improved Home controller navigation'],
           ['Building placement', 'Version 1.1 improved build-snapping display'],
@@ -243,15 +314,30 @@ const english: Record<string, LaunchGuide> = {
           ['Best RV level-up order', 'No official complete table registered'],
           ['Best production building priority', 'Not published as an official recommendation'],
           ['Exact roof and layout limits', 'No complete public specification registered'],
-          ['Disappearing production or decorations', 'Community issue reports only unless an official notice confirms the case'],
-          ['Priority queue per building', 'Community feature request, not a current confirmed feature'],
+          [
+            'Disappearing production or decorations',
+            'Community issue reports only unless an official notice confirms the case',
+          ],
+          [
+            'Priority queue per building',
+            'Community feature request, not a current confirmed feature',
+          ],
         ],
       },
       { t: 'h', c: 'Safe troubleshooting for a Home display problem' },
-      { t: 'li', c: 'Update through the official launcher or storefront and record the current client version.' },
+      {
+        t: 'li',
+        c: 'Update through the official launcher or storefront and record the current client version.',
+      },
       { t: 'li', c: 'Leave and re-enter Home before rebuilding or deleting any structure.' },
-      { t: 'li', c: 'Capture the RV level, platform, server, layout and missing object in screenshots or video.' },
-      { t: 'li', c: 'Do not spend replacement currency until official support confirms whether the object is missing or only not rendered.' },
+      {
+        t: 'li',
+        c: 'Capture the RV level, platform, server, layout and missing object in screenshots or video.',
+      },
+      {
+        t: 'li',
+        c: 'Do not spend replacement currency until official support confirms whether the object is missing or only not rendered.',
+      },
       {
         t: 'quote',
         c: 'Last official-source check: October 4, 2026. A full progression and production table will be added only from official rules or a documented current-version test.',
@@ -294,13 +380,19 @@ const english: Record<string, LaunchGuide> = {
         rows: [
           ['Best team or build', 'Not published without documented live testing'],
           ['Route rankings or damage thresholds', 'Not published in the official announcement'],
-          ['Exact milestone and Support Reward values', 'Not published in the official announcement'],
+          [
+            'Exact milestone and Support Reward values',
+            'Not published in the official announcement',
+          ],
           ['Current cycle Alpha list', 'Check the live in-game cycle; no static list is assumed'],
         ],
       },
       { t: 'h', c: 'What should I check before joining?' },
       { t: 'li', c: 'Confirm Trailblazer I is unlocked and the UTC+8 weekly window is open' },
-      { t: 'li', c: 'Choose a route and review the displayed environmental mechanics in the current cycle' },
+      {
+        t: 'li',
+        c: 'Choose a route and review the displayed environmental mechanics in the current cycle',
+      },
       { t: 'li', c: 'In co-op, agree on the Team Leader buff selection before starting' },
       { t: 'li', c: 'Record your highest Star Rank in each route before the weekly reset' },
       {
@@ -319,10 +411,25 @@ const english: Record<string, LaunchGuide> = {
       { t: 'h', c: 'Official Prismana schedule checked October 11' },
       {
         t: 'table',
-        head: ['Event window (UTC+8)', 'Region', 'Officially named Prismana Form Aniimo', 'Entry requirement'],
+        head: [
+          'Event window (UTC+8)',
+          'Region',
+          'Officially named Prismana Form Aniimo',
+          'Entry requirement',
+        ],
         rows: [
-          ['Ended: Sep 28 04:00 - Oct 5 03:59', 'Rosetower Woods', 'Prismana Form Melloblum', 'Reach Student II'],
-          ['Ended: Oct 5 04:00 - Oct 12 03:59', 'Berylline Vale', 'Prismana Form Waleetle', 'Reach Student II'],
+          [
+            'Ended: Sep 28 04:00 - Oct 5 03:59',
+            'Rosetower Woods',
+            'Prismana Form Melloblum',
+            'Reach Student II',
+          ],
+          [
+            'Ended: Oct 5 04:00 - Oct 12 03:59',
+            'Berylline Vale',
+            'Prismana Form Waleetle',
+            'Reach Student II',
+          ],
         ],
       },
       { t: 'h', c: 'What is Vein Abundance?' },
@@ -331,12 +438,28 @@ const english: Record<string, LaunchGuide> = {
         c: 'The official 1.1 announcement says special Prismana Form Aniimos appear in designated regions for a limited time, drawn by surges in Vein energy. It names the windows, regions and featured Aniimos above, but does not publish a map coordinate, encounter frequency or guaranteed catch outcome.',
       },
       { t: 'h', c: 'Other announced activity windows' },
-      { t: 'table', head: ['Activity', 'Official window (UTC+8)', 'Requirement / status at October 11 check'], rows: [
-        ['Journey Chronicles', 'Oct 1 04:00 - Oct 29 03:59', 'Student I; cumulative login rewards during the announced window'],
-        ['Irisalis Legendary Journey', 'Sep 25 10:00 - Dec 10 07:59', 'Student I; weekly-limited Iris Petals'],
-        ['Glamour Star', 'Sep 25 04:00 - Oct 2 03:59', 'Ended'],
-        ['Aniimo Discovery', 'Sep 25 04:00 - Oct 9 03:59', 'Ended; unused free search charges did not accumulate'],
-      ] },
+      {
+        t: 'table',
+        head: ['Activity', 'Official window (UTC+8)', 'Requirement / status at October 11 check'],
+        rows: [
+          [
+            'Journey Chronicles',
+            'Oct 1 04:00 - Oct 29 03:59',
+            'Student I; cumulative login rewards during the announced window',
+          ],
+          [
+            'Irisalis Legendary Journey',
+            'Sep 25 10:00 - Dec 10 07:59',
+            'Student I; weekly-limited Iris Petals',
+          ],
+          ['Glamour Star', 'Sep 25 04:00 - Oct 2 03:59', 'Ended'],
+          [
+            'Aniimo Discovery',
+            'Sep 25 04:00 - Oct 9 03:59',
+            'Ended; unused free search charges did not accumulate',
+          ],
+        ],
+      },
       { t: 'h', c: 'How should I use this tracker?' },
       {
         t: 'li',
@@ -344,7 +467,10 @@ const english: Record<string, LaunchGuide> = {
       },
       { t: 'li', c: 'Reach Student II before travelling to the listed region' },
       { t: 'li', c: 'Use the current in-game event notice for any live map marker or rule change' },
-      { t: 'li', c: 'Treat community spawn routes and rate claims as unconfirmed unless they can be reproduced' },
+      {
+        t: 'li',
+        c: 'Treat community spawn routes and rate claims as unconfirmed unless they can be reproduced',
+      },
       { t: 'h', c: 'How is this different from Prismana and Sparkling styles?' },
       {
         t: 'p',
@@ -433,7 +559,10 @@ const english: Record<string, LaunchGuide> = {
             'Android',
             'US Google Play Install action verified; check your local account and device',
           ],
-          ['In-game mail', 'Compensation is scheduled for delivery through in-game mail; check its current in-game status'],
+          [
+            'In-game mail',
+            'Compensation is scheduled for delivery through in-game mail; check its current in-game status',
+          ],
           ['Cross-save and progression', 'No complete official policy in the registered sources'],
         ],
       },
@@ -476,19 +605,50 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Topic', 'What the developer announced', 'Current evidence boundary'],
         rows: [
-          ['Sparkling Hues', 'Players will be able to switch among unlocked Hues, including the original Prismana Hue', 'Planned; no implementation date published'],
-          ['Irisalis Potential', 'Future Irisalis Potential will use fixed values', 'Planned; current-client status not independently verified'],
-          ['Existing Irisalis compensation', 'Potential above the fixed values will convert to Starcryst Essence', 'Exact conversion rules and amounts not published'],
-          ['Legendary Aniipods', 'Planned to work on an existing Sparkling Aniimo, replace its original Aniipod and grant the exclusive effect', 'Planned; no implementation date published'],
-          ['Mobile performance', 'A dedicated team is working on lag and overheating', 'No ETA, device list or measured result published'],
-          ['Customer support', 'Team, system and process improvements are underway', 'No response-time guarantee published'],
+          [
+            'Sparkling Hues',
+            'Players will be able to switch among unlocked Hues, including the original Prismana Hue',
+            'Planned; no implementation date published',
+          ],
+          [
+            'Irisalis Potential',
+            'Future Irisalis Potential will use fixed values',
+            'Planned; current-client status not independently verified',
+          ],
+          [
+            'Existing Irisalis compensation',
+            'Potential above the fixed values will convert to Starcryst Essence',
+            'Exact conversion rules and amounts not published',
+          ],
+          [
+            'Legendary Aniipods',
+            'Planned to work on an existing Sparkling Aniimo, replace its original Aniipod and grant the exclusive effect',
+            'Planned; no implementation date published',
+          ],
+          [
+            'Mobile performance',
+            'A dedicated team is working on lag and overheating',
+            'No ETA, device list or measured result published',
+          ],
+          [
+            'Customer support',
+            'Team, system and process improvements are underway',
+            'No response-time guarantee published',
+          ],
         ],
       },
       { t: 'h', c: 'What fixed Potential is planned for Irisalis?' },
       {
         t: 'table',
         head: ['Stat', 'Announced value'],
-        rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']],
+        rows: [
+          ['ATK', '10'],
+          ['REGEN', '10'],
+          ['HP', '5'],
+          ['BREAK', '5'],
+          ['M.DEF', '5'],
+          ['P.DEF', '5'],
+        ],
       },
       {
         t: 'p',
@@ -499,9 +659,18 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Use Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox). The ticket should include your platform ID, current UID and linked email, the UID that must be unlinked, and the platform linked to that UID.',
       },
-      { t: 'li', c: 'Do not self-unlink, overwrite a character or create replacement progress first.' },
-      { t: 'li', c: 'Keep screenshots and platform receipts until support confirms the account action.' },
-      { t: 'li', c: 'A relink route does not prove universal cross-save, purchase transfer or currency transfer.' },
+      {
+        t: 'li',
+        c: 'Do not self-unlink, overwrite a character or create replacement progress first.',
+      },
+      {
+        t: 'li',
+        c: 'Keep screenshots and platform receipts until support confirms the account action.',
+      },
+      {
+        t: 'li',
+        c: 'A relink route does not prove universal cross-save, purchase transfer or currency transfer.',
+      },
       {
         t: 'quote',
         c: 'Last official-source check: October 4, 2026. This page records the October 1 Dev Dispatch as an official announcement. Planned changes remain labeled planned until their live implementation is independently verified.',
@@ -570,7 +739,10 @@ const english: Record<string, LaunchGuide> = {
           ['Servers', 'Live after version 1.1 maintenance'],
           ['Mobile launch', 'Officially launched globally after the update'],
           ['Opening delay', 'Server opening delayed by five minutes, then opened'],
-          ['Compensation', '500 Glimmers maintenance + 500 Glimmers delay + 1 Sparkling Cube known issues'],
+          [
+            'Compensation',
+            '500 Glimmers maintenance + 500 Glimmers delay + 1 Sparkling Cube known issues',
+          ],
           ['Delivery route', 'Sent through in-game mail; check current mail availability in-game'],
         ],
       },
@@ -579,30 +751,69 @@ const english: Record<string, LaunchGuide> = {
         t: 'table',
         head: ['Issue', 'Affected scope', 'Official workaround or status'],
         rows: [
-          ['Reward mail claim error', 'Some players', 'Official notice lists the issue; check in-game mail and current notices'],
-          ['"Stars and Knight" side quest freeze', 'Some Android devices', 'Use Performance mode or disable shadows; the upper-right option can skip the scene'],
-          ['Moonlit Fox ground-effect display', 'Some situations', 'Officially acknowledged; no player workaround published'],
-          ['Link Without Borders reward cannot be clicked', 'Event reward screen', 'Click the blank area on the left to claim'],
-          ['Link Without Borders reward after PC-to-mobile switch', 'PC then immediate mobile login', 'Log in again once to restore reward claiming'],
-          ['Home visual blocks or outlines on mobile', 'Mobile Home entry', 'Official notice marks this as fixed'],
+          [
+            'Reward mail claim error',
+            'Some players',
+            'Official notice lists the issue; check in-game mail and current notices',
+          ],
+          [
+            '"Stars and Knight" side quest freeze',
+            'Some Android devices',
+            'Use Performance mode or disable shadows; the upper-right option can skip the scene',
+          ],
+          [
+            'Moonlit Fox ground-effect display',
+            'Some situations',
+            'Officially acknowledged; no player workaround published',
+          ],
+          [
+            'Link Without Borders reward cannot be clicked',
+            'Event reward screen',
+            'Click the blank area on the left to claim',
+          ],
+          [
+            'Link Without Borders reward after PC-to-mobile switch',
+            'PC then immediate mobile login',
+            'Log in again once to restore reward claiming',
+          ],
+          [
+            'Home visual blocks or outlines on mobile',
+            'Mobile Home entry',
+            'Official notice marks this as fixed',
+          ],
         ],
       },
       { t: 'h', c: 'September 29 historical patch' },
       {
         t: 'p',
-        c: 'Patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects. This patch does not publish a new universal fix for the other issues listed above.',
+        c: "Patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser's Departure showcase video and image to match in-game effects. This patch does not publish a new universal fix for the other issues listed above.",
       },
       { t: 'h', c: 'September 30 patch 1.0.3629693.0: confirmed fixes' },
       {
         t: 'table',
         head: ['Area', 'Official patch result'],
         rows: [
-          ['Quests and progression', 'Multiple progression blocks fixed; Harvest Moon Point requirements reduced'],
-          ['Egg Heist', 'Missing Sanctum entrance and Stellarys control-immunity issues fixed; Erlath added; Chaos Stellarys Starine drop rate increased'],
+          [
+            'Quests and progression',
+            'Multiple progression blocks fixed; Harvest Moon Point requirements reduced',
+          ],
+          [
+            'Egg Heist',
+            'Missing Sanctum entrance and Stellarys control-immunity issues fixed; Erlath added; Chaos Stellarys Starine drop rate increased',
+          ],
           ['Controller and rewards', 'Selection and reward-claim interactions improved'],
-          ['Home and mobile', 'Missing Home models fixed; login and scene-switch performance improved'],
-          ['Console', 'Achievement issues, PlayStation Album stutter and an accessory-preview crash fixed'],
-          ['Compensation', '100 Glimmers announced for eligible accounts created before version 1.1'],
+          [
+            'Home and mobile',
+            'Missing Home models fixed; login and scene-switch performance improved',
+          ],
+          [
+            'Console',
+            'Achievement issues, PlayStation Album stutter and an accessory-preview crash fixed',
+          ],
+          [
+            'Compensation',
+            '100 Glimmers announced for eligible accounts created before version 1.1',
+          ],
         ],
       },
       { t: 'h', c: 'Current playable status' },
@@ -738,7 +949,7 @@ const english: Record<string, LaunchGuide> = {
       { t: 'h', c: 'September 29 follow-up patch' },
       {
         t: 'p',
-        c: 'Official patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser\'s Departure showcase video and image to match in-game effects.',
+        c: "Official patch 1.0.3616231.0 fixes blurry Irisalis model textures after Transmogging to selected Super Operation: Egg Heist styles. It also updates the Legendary Aniipod: Irisalis acquisition notification icon and the Windchaser's Departure showcase video and image to match in-game effects.",
       },
       { t: 'h', c: 'September 30 follow-up patch' },
       {
@@ -820,39 +1031,162 @@ const english: Record<string, LaunchGuide> = {
       },
     ],
   },
+  'aniimo-harvest-gathering-farm-guide': harvestGatheringGuide('en'),
+  'aniimo-currencies-and-shops': currenciesGuide('en'),
+  'aniimo-prismana-potential-breeding-guide': prismanaPotentialGuide('en'),
+  'aniimo-controller-steam-deck-optimization': controllerOptimizationGuide('en'),
 };
 
 function supportFaqBlocks(locale: string): LaunchGuideBlock[] {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
   return [
-    { t: 'h', c: en ? 'Official FAQ: symptom, next step and repair status' : traditional ? '官方 FAQ：症狀、下一步與修正狀態' : '官方 FAQ：症状、下一步与修复状态' },
-    { t: 'table', head: en ? ['Symptom / platform', 'Official next step', 'Evidence and limit'] : traditional ? ['症狀 / 平台', '官方下一步', '依據與限制'] : ['症状 / 平台', '官方下一步', '依据与限制'], rows: en ? [
-      ['Steam controller not responding', 'Library > Aniimo > Manage > Properties > Controller > Disable Steam Input; restart', 'Launch FAQ workaround; not a complete gamepad compatibility list'],
-      ['Black screen / crash on PC', 'Update GPU driver; try DX11 or DX12; disable DLSS / Frame Generation or change anti-aliasing on the login screen', 'Official troubleshooting, not a guaranteed fix'],
-      ['Red glow around eyes', 'Use Performance graphics or set Global Illumination to the lowest setting', 'This specific visual symptom, not every red-screen problem'],
-      ['Teleport network error107', 'Update the official client, retry, then report if it persists', 'FAQ marks the Idyll teleport issue fixed in 1.0.3551601.0'],
-      ['Steam has no update but game requests one', 'FAQ says the prompt should not block play; send logs if stuck', 'Do not download unofficial patches'],
-      ['NPC skill / challenge damage not registering', 'Restart once; if it persists, send logs and reproduction steps', 'FAQ workaround; no universal quest skip confirmed'],
-    ] : traditional ? [
-      ['Steam 手柄無反應', '收藏庫 > Aniimo > 管理 > 內容 > 控制器 > 停用 Steam Input；重啟遊戲', '首發 FAQ 臨時辦法；不是完整手柄相容清單'],
-      ['PC 黑屏 / 閃退', '更新顯示卡驅動；嘗試 DX11 或 DX12；登入畫面關閉 DLSS / 畫格生成或更換反鋸齒', '官方排查，不保證修好每台裝置'],
-      ['眼睛紅光異常', '切換效能畫質或將全域光照調至最低', '針對此特定顯示症狀，不涵蓋所有紅屏'],
-      ['傳送 network error107', '更新官方客戶端後重試；持續發生時回報', 'FAQ 標示 Idyll 傳送問題已於 1.0.3551601.0 修正'],
-      ['遊戲要求更新但 Steam 無更新', 'FAQ 表示提示不應阻擋遊玩；卡住時提交日誌', '不要下載非官方補丁'],
-      ['NPC 技能 / 挑戰傷害不生效', '重啟一次；仍發生時附日誌與重現步驟', 'FAQ 臨時辦法，未確認通用任務跳過'],
-    ] : [
-      ['Steam 手柄无反应', '库 > Aniimo > 管理 > 属性 > 控制器 > 禁用 Steam Input；重启游戏', '首发 FAQ 临时办法；不是完整手柄兼容清单'],
-      ['PC 黑屏 / 闪退', '更新显卡驱动；尝试 DX11 或 DX12；登录画面关闭 DLSS / 帧生成或更换抗锯齿', '官方排查，不保证修好每台设备'],
-      ['眼睛红光异常', '切换性能画质或将全局光照调至最低', '针对此特定显示症状，不涵盖所有红屏'],
-      ['传送 network error107', '更新官方客户端后重试；持续发生时报告', 'FAQ 标示 Idyll 传送问题已于 1.0.3551601.0 修复'],
-      ['游戏要求更新但 Steam 无更新', 'FAQ 表示提示不应阻挡游玩；卡住时提交日志', '不要下载非官方补丁'],
-      ['NPC 技能 / 挑战伤害不生效', '重启一次；仍发生时附日志与复现步骤', 'FAQ 临时办法，未确认通用任务跳过'],
-    ] },
-    { t: 'h', c: en ? 'How do I report a bug and find the logs?' : traditional ? '如何回報 Bug 與找到日誌？' : '如何报告 Bug 与找到日志？' },
-    { t: 'p', c: en ? 'Use the in-game Menu > Support or F10. If the game will not open, use the official Support Center linked in Sources or email aniimo_support@aniimo.com. Include platform, version, region/server, UID, error time and reproduction steps. Send account identifiers, receipts and logs privately to official support, not a public comment or AniimoDex.' : traditional ? '遊戲內選單 > Support 或 F10。無法啟動時，使用本頁來源中的官方 Support Center 或 aniimo_support@aniimo.com。附平台、版本、地區/伺服器、UID、錯誤時間與重現步驟；帳號識別資料、收據和日誌只私下傳給官方客服，不要公開留言或傳給 AniimoDex。' : '游戏内菜单 > Support 或 F10。无法启动时，使用本页来源中的官方 Support Center 或 aniimo_support@aniimo.com。附平台、版本、地区/服务器、UID、错误时间与复现步骤；账号识别资料、收据和日志只私下发给官方客服，不要公开留言或发给 AniimoDex。' },
-    { t: 'p', c: en ? 'On Windows, inspect AppData > LocalLow > Aniimo > Aniimo under your own user profile, enabling hidden folders if needed. Look for Player.log / Player-prev.log or player.log / player_prev.log. The FAQ prints a path without the user-name segment; the profile-relative route here clarifies that omission and has not been tested on your installation. If absent, ask support rather than moving or deleting files. After emailing logs, tell the support ticket which sending email you used.' : traditional ? 'Windows 可在自己的使用者資料夾內查看 AppData > LocalLow > Aniimo > Aniimo，必要時顯示隱藏資料夾。尋找 Player.log / Player-prev.log 或 player.log / player_prev.log。FAQ 原文路徑省略使用者名稱；這裡按使用者資料夾補充說明，尚未實測你的安裝。找不到時詢問客服，不要移動或刪除檔案；寄出日誌後在工單告知寄件信箱。' : 'Windows 可在自己的用户文件夹内查看 AppData > LocalLow > Aniimo > Aniimo，必要时显示隐藏文件夹。寻找 Player.log / Player-prev.log 或 player.log / player_prev.log。FAQ 原文路径省略用户名；这里按用户文件夹补充说明，尚未实测你的安装。找不到时询问客服，不要移动或删除文件；发出日志后在工单告知发件邮箱。' },
-    { t: 'quote', c: en ? 'FAQ checked October 11, 2026; the developer post was last edited September 19. These steps are official historical guidance, not proof of a new October bug or repair.' : traditional ? 'FAQ 於 2026 年 10 月 11 日核對；開發者原帖最後編輯為 9 月 19 日。上述為官方歷史指引，不代表 10 月新增 Bug 或已完成新修正。' : 'FAQ 于 2026 年 10 月 11 日核对；开发者原帖最后编辑为 9 月 19 日。上述为官方历史指引，不代表 10 月新增 Bug 或已完成新修复。' },
+    {
+      t: 'h',
+      c: en
+        ? 'Official FAQ: symptom, next step and repair status'
+        : traditional
+          ? '官方 FAQ：症狀、下一步與修正狀態'
+          : '官方 FAQ：症状、下一步与修复状态',
+    },
+    {
+      t: 'table',
+      head: en
+        ? ['Symptom / platform', 'Official next step', 'Evidence and limit']
+        : traditional
+          ? ['症狀 / 平台', '官方下一步', '依據與限制']
+          : ['症状 / 平台', '官方下一步', '依据与限制'],
+      rows: en
+        ? [
+            [
+              'Steam controller not responding',
+              'Library > Aniimo > Manage > Properties > Controller > Disable Steam Input; restart',
+              'Launch FAQ workaround; not a complete gamepad compatibility list',
+            ],
+            [
+              'Black screen / crash on PC',
+              'Update GPU driver; try DX11 or DX12; disable DLSS / Frame Generation or change anti-aliasing on the login screen',
+              'Official troubleshooting, not a guaranteed fix',
+            ],
+            [
+              'Red glow around eyes',
+              'Use Performance graphics or set Global Illumination to the lowest setting',
+              'This specific visual symptom, not every red-screen problem',
+            ],
+            [
+              'Teleport network error107',
+              'Update the official client, retry, then report if it persists',
+              'FAQ marks the Idyll teleport issue fixed in 1.0.3551601.0',
+            ],
+            [
+              'Steam has no update but game requests one',
+              'FAQ says the prompt should not block play; send logs if stuck',
+              'Do not download unofficial patches',
+            ],
+            [
+              'NPC skill / challenge damage not registering',
+              'Restart once; if it persists, send logs and reproduction steps',
+              'FAQ workaround; no universal quest skip confirmed',
+            ],
+          ]
+        : traditional
+          ? [
+              [
+                'Steam 手柄無反應',
+                '收藏庫 > Aniimo > 管理 > 內容 > 控制器 > 停用 Steam Input；重啟遊戲',
+                '首發 FAQ 臨時辦法；不是完整手柄相容清單',
+              ],
+              [
+                'PC 黑屏 / 閃退',
+                '更新顯示卡驅動；嘗試 DX11 或 DX12；登入畫面關閉 DLSS / 畫格生成或更換反鋸齒',
+                '官方排查，不保證修好每台裝置',
+              ],
+              [
+                '眼睛紅光異常',
+                '切換效能畫質或將全域光照調至最低',
+                '針對此特定顯示症狀，不涵蓋所有紅屏',
+              ],
+              [
+                '傳送 network error107',
+                '更新官方客戶端後重試；持續發生時回報',
+                'FAQ 標示 Idyll 傳送問題已於 1.0.3551601.0 修正',
+              ],
+              [
+                '遊戲要求更新但 Steam 無更新',
+                'FAQ 表示提示不應阻擋遊玩；卡住時提交日誌',
+                '不要下載非官方補丁',
+              ],
+              [
+                'NPC 技能 / 挑戰傷害不生效',
+                '重啟一次；仍發生時附日誌與重現步驟',
+                'FAQ 臨時辦法，未確認通用任務跳過',
+              ],
+            ]
+          : [
+              [
+                'Steam 手柄无反应',
+                '库 > Aniimo > 管理 > 属性 > 控制器 > 禁用 Steam Input；重启游戏',
+                '首发 FAQ 临时办法；不是完整手柄兼容清单',
+              ],
+              [
+                'PC 黑屏 / 闪退',
+                '更新显卡驱动；尝试 DX11 或 DX12；登录画面关闭 DLSS / 帧生成或更换抗锯齿',
+                '官方排查，不保证修好每台设备',
+              ],
+              [
+                '眼睛红光异常',
+                '切换性能画质或将全局光照调至最低',
+                '针对此特定显示症状，不涵盖所有红屏',
+              ],
+              [
+                '传送 network error107',
+                '更新官方客户端后重试；持续发生时报告',
+                'FAQ 标示 Idyll 传送问题已于 1.0.3551601.0 修复',
+              ],
+              [
+                '游戏要求更新但 Steam 无更新',
+                'FAQ 表示提示不应阻挡游玩；卡住时提交日志',
+                '不要下载非官方补丁',
+              ],
+              [
+                'NPC 技能 / 挑战伤害不生效',
+                '重启一次；仍发生时附日志与复现步骤',
+                'FAQ 临时办法，未确认通用任务跳过',
+              ],
+            ],
+    },
+    {
+      t: 'h',
+      c: en
+        ? 'How do I report a bug and find the logs?'
+        : traditional
+          ? '如何回報 Bug 與找到日誌？'
+          : '如何报告 Bug 与找到日志？',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'Use the in-game Menu > Support or F10. If the game will not open, use the official Support Center linked in Sources or email aniimo_support@aniimo.com. Include platform, version, region/server, UID, error time and reproduction steps. Send account identifiers, receipts and logs privately to official support, not a public comment or AniimoDex.'
+        : traditional
+          ? '遊戲內選單 > Support 或 F10。無法啟動時，使用本頁來源中的官方 Support Center 或 aniimo_support@aniimo.com。附平台、版本、地區/伺服器、UID、錯誤時間與重現步驟；帳號識別資料、收據和日誌只私下傳給官方客服，不要公開留言或傳給 AniimoDex。'
+          : '游戏内菜单 > Support 或 F10。无法启动时，使用本页来源中的官方 Support Center 或 aniimo_support@aniimo.com。附平台、版本、地区/服务器、UID、错误时间与复现步骤；账号识别资料、收据和日志只私下发给官方客服，不要公开留言或发给 AniimoDex。',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'On Windows, inspect AppData > LocalLow > Aniimo > Aniimo under your own user profile, enabling hidden folders if needed. Look for Player.log / Player-prev.log or player.log / player_prev.log. The FAQ prints a path without the user-name segment; the profile-relative route here clarifies that omission and has not been tested on your installation. If absent, ask support rather than moving or deleting files. After emailing logs, tell the support ticket which sending email you used.'
+        : traditional
+          ? 'Windows 可在自己的使用者資料夾內查看 AppData > LocalLow > Aniimo > Aniimo，必要時顯示隱藏資料夾。尋找 Player.log / Player-prev.log 或 player.log / player_prev.log。FAQ 原文路徑省略使用者名稱；這裡按使用者資料夾補充說明，尚未實測你的安裝。找不到時詢問客服，不要移動或刪除檔案；寄出日誌後在工單告知寄件信箱。'
+          : 'Windows 可在自己的用户文件夹内查看 AppData > LocalLow > Aniimo > Aniimo，必要时显示隐藏文件夹。寻找 Player.log / Player-prev.log 或 player.log / player_prev.log。FAQ 原文路径省略用户名；这里按用户文件夹补充说明，尚未实测你的安装。找不到时询问客服，不要移动或删除文件；发出日志后在工单告知发件邮箱。',
+    },
+    {
+      t: 'quote',
+      c: en
+        ? 'FAQ checked October 11, 2026; the developer post was last edited September 19. These steps are official historical guidance, not proof of a new October bug or repair.'
+        : traditional
+          ? 'FAQ 於 2026 年 10 月 11 日核對；開發者原帖最後編輯為 9 月 19 日。上述為官方歷史指引，不代表 10 月新增 Bug 或已完成新修正。'
+          : 'FAQ 于 2026 年 10 月 11 日核对；开发者原帖最后编辑为 9 月 19 日。上述为官方历史指引，不代表 10 月新增 Bug 或已完成新修复。',
+    },
   ];
 }
 
@@ -860,22 +1194,111 @@ function controllerGuide(locale: string): LaunchGuide {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
   return {
-    title: en ? 'Aniimo Languages, Controller and Steam Deck Support' : traditional ? 'Aniimo 伊莫語言、手柄與 Steam Deck 支援狀態' : 'Aniimo 伊莫语言、手柄与 Steam Deck 支持状态',
-    subtitle: en ? 'Official Steam controller troubleshooting, the November Steam Deck support plan and a clearly labeled community Proton workaround.' : traditional ? '官方 Steam 手柄排查、11 月 Steam Deck 支援計畫，以及明確標示的社群 Proton 臨時辦法。' : '官方 Steam 手柄排查、11 月 Steam Deck 支持计划，以及明确标示的社区 Proton 临时办法。',
+    title: en
+      ? 'Aniimo Languages, Controller and Steam Deck Support'
+      : traditional
+        ? 'Aniimo 伊莫語言、手柄與 Steam Deck 支援狀態'
+        : 'Aniimo 伊莫语言、手柄与 Steam Deck 支持状态',
+    subtitle: en
+      ? 'Official Steam controller troubleshooting, the November Steam Deck support plan and a clearly labeled community Proton workaround.'
+      : traditional
+        ? '官方 Steam 手柄排查、11 月 Steam Deck 支援計畫，以及明確標示的社群 Proton 臨時辦法。'
+        : '官方 Steam 手柄排查、11 月 Steam Deck 支持计划，以及明确标示的社区 Proton 临时办法。',
     tag: en ? 'Compatibility' : traditional ? '相容性' : '兼容性',
-    lead: en ? 'For a Steam controller that does not respond, the official FAQ says to disable Steam Input and restart. Full Steam Deck support was planned for November, not confirmed complete. The FAQ was rechecked October 11; neither a plan nor its community workaround is a Steam Deck Verified rating.' : traditional ? 'Steam 手柄無反應時，官方 FAQ 建議停用 Steam Input 並重啟。完整 Steam Deck 支援原計畫為 11 月，尚未核驗完成。10 月 11 日重新核對 FAQ；計畫或社群臨時辦法均不是 Steam Deck Verified 等級。' : 'Steam 手柄无反应时，官方 FAQ 建议禁用 Steam Input 并重启。完整 Steam Deck 支持原计划为 11 月，尚未核验完成。10 月 11 日重新核对 FAQ；计划或社区临时办法均不是 Steam Deck Verified 等级。',
+    lead: en
+      ? 'For a Steam controller that does not respond, the official FAQ says to disable Steam Input and restart. Full Steam Deck support was planned for November, not confirmed complete. The FAQ was rechecked October 11; neither a plan nor its community workaround is a Steam Deck Verified rating.'
+      : traditional
+        ? 'Steam 手柄無反應時，官方 FAQ 建議停用 Steam Input 並重啟。完整 Steam Deck 支援原計畫為 11 月，尚未核驗完成。10 月 11 日重新核對 FAQ；計畫或社群臨時辦法均不是 Steam Deck Verified 等級。'
+        : 'Steam 手柄无反应时，官方 FAQ 建议禁用 Steam Input 并重启。完整 Steam Deck 支持原计划为 11 月，尚未核验完成。10 月 11 日重新核对 FAQ；计划或社区临时办法均不是 Steam Deck Verified 等级。',
     body: [
-      { t: 'h', c: en ? 'How do I fix a Steam controller that is not working?' : traditional ? 'Steam 手柄無反應怎麼辦？' : 'Steam 手柄无反应怎么办？' },
-      { t: 'p', c: en ? 'In Steam Library, open Aniimo > Manage > Properties > Controller, select Disable Steam Input, then restart the game. This is the official launch FAQ workaround, not confirmation for every controller model. Record your gamepad model and client version if it still fails.' : traditional ? 'Steam 收藏庫開啟 Aniimo > 管理 > 內容 > 控制器，選擇停用 Steam Input，再重啟遊戲。這是官方首發 FAQ 的臨時辦法，不保證所有手柄型號相容；無效時記錄手柄型號與客戶端版本。' : 'Steam 库打开 Aniimo > 管理 > 属性 > 控制器，选择禁用 Steam Input，再重启游戏。这是官方首发 FAQ 的临时办法，不保证所有手柄型号兼容；无效时记录手柄型号与客户端版本。' },
-      { t: 'h', c: en ? 'Is Aniimo Steam Deck support complete?' : traditional ? 'Steam Deck 支援已完成嗎？' : 'Steam Deck 支持已完成吗？' },
-      { t: 'p', c: en ? 'The developer FAQ says full Steam Deck compatibility is still being worked on and was planned for November. This is a historical target, not a guaranteed release date or confirmation of completion. AniimoDex has not tested Deck performance or confirmed a Valve compatibility rating.' : traditional ? '開發者 FAQ 表示完整 Steam Deck 相容性仍在處理，原計畫為 11 月。這是歷史目標，不是保證發行日期或已完成確認；AniimoDex 尚未實測 Deck 效能或確認 Valve 相容等級。' : '开发者 FAQ 表示完整 Steam Deck 兼容性仍在处理，原计划为 11 月。这是历史目标，不是保证发行日期或已完成确认；AniimoDex 尚未实测 Deck 性能或确认 Valve 兼容等级。' },
-      { t: 'h', c: en ? 'What is the community Proton workaround?' : traditional ? '社群 Proton 臨時辦法是什麼？' : '社区 Proton 临时办法是什么？' },
-      { t: 'p', c: en ? 'The developer republished a community suggestion: Steam Library > Aniimo > Properties > Compatibility, force Proton 10.0.0-4. It is not an AniimoDex-tested fix, a compatibility guarantee or an instruction to install third-party builds. Note your original setting and restore it if the workaround fails.' : traditional ? '開發者轉載社群建議：Steam 收藏庫 > Aniimo > 內容 > 相容性，強制使用 Proton 10.0.0-4。這不是 AniimoDex 實測修正、相容保證或安裝第三方版本的指示。先記錄原設定，無效時恢復。' : '开发者转载社区建议：Steam 库 > Aniimo > 属性 > 兼容性，强制使用 Proton 10.0.0-4。这不是 AniimoDex 实测修复、兼容保证或安装第三方版本的指示。先记录原设置，无效时恢复。' },
-      { t: 'h', c: en ? 'Which languages and controller models are supported?' : traditional ? '支援哪些語言和手柄型號？' : '支持哪些语言和手柄型号？' },
-      { t: 'p', c: en ? 'Use the current language table on your official storefront, distinguishing interface, subtitles and audio. The sources here do not provide a complete PC gamepad matrix, rebinding specification or tested performance profile for handheld PCs. Console support does not prove every PC controller works.' : traditional ? '查看你所在官方商店的最新語言表，區分介面、字幕與語音。本頁來源沒有提供完整 PC 手柄清單、按鍵重綁規格或掌機效能實測；主機支援不能證明所有 PC 手柄均可使用。' : '查看你所在官方商店的最新语言表，区分界面、字幕与语音。本页来源没有提供完整 PC 手柄清单、按键重绑规格或掌机性能实测；主机支持不能证明所有 PC 手柄均可使用。' },
-      { t: 'h', c: en ? 'How do I report a persistent control or Deck issue?' : traditional ? '如何回報持續發生的控制或 Deck 問題？' : '如何报告持续发生的控制或 Deck 问题？' },
-      { t: 'p', c: en ? 'Use Menu > Support or F10. If the game cannot launch, use the official Support Center in Sources or aniimo_support@aniimo.com. Include client version, device/controller model, Proton version when applicable, exact error and reproduction steps. Keep account details and logs private.' : traditional ? '使用選單 > Support 或 F10；無法啟動時用來源中的官方 Support Center 或 aniimo_support@aniimo.com。附客戶端版本、裝置/手柄型號、適用時的 Proton 版本、完整錯誤與重現步驟。帳號資料和日誌不要公開。' : '使用菜单 > Support 或 F10；无法启动时用来源中的官方 Support Center 或 aniimo_support@aniimo.com。附客户端版本、设备/手柄型号、适用时的 Proton 版本、完整错误与复现步骤。账号资料和日志不要公开。' },
-      { t: 'quote', c: en ? 'FAQ checked October 11, 2026; last edited September 19. Official guidance, developer plans and community-origin advice are separated above.' : traditional ? 'FAQ 於 2026 年 10 月 11 日核對，原帖最後編輯為 9 月 19 日；上文區分官方指引、開發計畫與社群辦法。' : 'FAQ 于 2026 年 10 月 11 日核对，原帖最后编辑为 9 月 19 日；上文区分官方指引、开发计划与社区办法。' },
+      {
+        t: 'h',
+        c: en
+          ? 'How do I fix a Steam controller that is not working?'
+          : traditional
+            ? 'Steam 手柄無反應怎麼辦？'
+            : 'Steam 手柄无反应怎么办？',
+      },
+      {
+        t: 'p',
+        c: en
+          ? 'In Steam Library, open Aniimo > Manage > Properties > Controller, select Disable Steam Input, then restart the game. This is the official launch FAQ workaround, not confirmation for every controller model. Record your gamepad model and client version if it still fails.'
+          : traditional
+            ? 'Steam 收藏庫開啟 Aniimo > 管理 > 內容 > 控制器，選擇停用 Steam Input，再重啟遊戲。這是官方首發 FAQ 的臨時辦法，不保證所有手柄型號相容；無效時記錄手柄型號與客戶端版本。'
+            : 'Steam 库打开 Aniimo > 管理 > 属性 > 控制器，选择禁用 Steam Input，再重启游戏。这是官方首发 FAQ 的临时办法，不保证所有手柄型号兼容；无效时记录手柄型号与客户端版本。',
+      },
+      {
+        t: 'h',
+        c: en
+          ? 'Is Aniimo Steam Deck support complete?'
+          : traditional
+            ? 'Steam Deck 支援已完成嗎？'
+            : 'Steam Deck 支持已完成吗？',
+      },
+      {
+        t: 'p',
+        c: en
+          ? 'The developer FAQ says full Steam Deck compatibility is still being worked on and was planned for November. This is a historical target, not a guaranteed release date or confirmation of completion. AniimoDex has not tested Deck performance or confirmed a Valve compatibility rating.'
+          : traditional
+            ? '開發者 FAQ 表示完整 Steam Deck 相容性仍在處理，原計畫為 11 月。這是歷史目標，不是保證發行日期或已完成確認；AniimoDex 尚未實測 Deck 效能或確認 Valve 相容等級。'
+            : '开发者 FAQ 表示完整 Steam Deck 兼容性仍在处理，原计划为 11 月。这是历史目标，不是保证发行日期或已完成确认；AniimoDex 尚未实测 Deck 性能或确认 Valve 兼容等级。',
+      },
+      {
+        t: 'h',
+        c: en
+          ? 'What is the community Proton workaround?'
+          : traditional
+            ? '社群 Proton 臨時辦法是什麼？'
+            : '社区 Proton 临时办法是什么？',
+      },
+      {
+        t: 'p',
+        c: en
+          ? 'The developer republished a community suggestion: Steam Library > Aniimo > Properties > Compatibility, force Proton 10.0.0-4. It is not an AniimoDex-tested fix, a compatibility guarantee or an instruction to install third-party builds. Note your original setting and restore it if the workaround fails.'
+          : traditional
+            ? '開發者轉載社群建議：Steam 收藏庫 > Aniimo > 內容 > 相容性，強制使用 Proton 10.0.0-4。這不是 AniimoDex 實測修正、相容保證或安裝第三方版本的指示。先記錄原設定，無效時恢復。'
+            : '开发者转载社区建议：Steam 库 > Aniimo > 属性 > 兼容性，强制使用 Proton 10.0.0-4。这不是 AniimoDex 实测修复、兼容保证或安装第三方版本的指示。先记录原设置，无效时恢复。',
+      },
+      {
+        t: 'h',
+        c: en
+          ? 'Which languages and controller models are supported?'
+          : traditional
+            ? '支援哪些語言和手柄型號？'
+            : '支持哪些语言和手柄型号？',
+      },
+      {
+        t: 'p',
+        c: en
+          ? 'Use the current language table on your official storefront, distinguishing interface, subtitles and audio. The sources here do not provide a complete PC gamepad matrix, rebinding specification or tested performance profile for handheld PCs. Console support does not prove every PC controller works.'
+          : traditional
+            ? '查看你所在官方商店的最新語言表，區分介面、字幕與語音。本頁來源沒有提供完整 PC 手柄清單、按鍵重綁規格或掌機效能實測；主機支援不能證明所有 PC 手柄均可使用。'
+            : '查看你所在官方商店的最新语言表，区分界面、字幕与语音。本页来源没有提供完整 PC 手柄清单、按键重绑规格或掌机性能实测；主机支持不能证明所有 PC 手柄均可使用。',
+      },
+      {
+        t: 'h',
+        c: en
+          ? 'How do I report a persistent control or Deck issue?'
+          : traditional
+            ? '如何回報持續發生的控制或 Deck 問題？'
+            : '如何报告持续发生的控制或 Deck 问题？',
+      },
+      {
+        t: 'p',
+        c: en
+          ? 'Use Menu > Support or F10. If the game cannot launch, use the official Support Center in Sources or aniimo_support@aniimo.com. Include client version, device/controller model, Proton version when applicable, exact error and reproduction steps. Keep account details and logs private.'
+          : traditional
+            ? '使用選單 > Support 或 F10；無法啟動時用來源中的官方 Support Center 或 aniimo_support@aniimo.com。附客戶端版本、裝置/手柄型號、適用時的 Proton 版本、完整錯誤與重現步驟。帳號資料和日誌不要公開。'
+            : '使用菜单 > Support 或 F10；无法启动时用来源中的官方 Support Center 或 aniimo_support@aniimo.com。附客户端版本、设备/手柄型号、适用时的 Proton 版本、完整错误与复现步骤。账号资料和日志不要公开。',
+      },
+      {
+        t: 'quote',
+        c: en
+          ? 'FAQ checked October 11, 2026; last edited September 19. Official guidance, developer plans and community-origin advice are separated above.'
+          : traditional
+            ? 'FAQ 於 2026 年 10 月 11 日核對，原帖最後編輯為 9 月 19 日；上文區分官方指引、開發計畫與社群辦法。'
+            : 'FAQ 于 2026 年 10 月 11 日核对，原帖最后编辑为 9 月 19 日；上文区分官方指引、开发计划与社区办法。',
+      },
     ],
   };
 }
@@ -884,13 +1307,62 @@ function accountFaqBlocks(locale: string): LaunchGuideBlock[] {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
   return [
-    { t: 'h', c: en ? 'Steam account switching: what should I check first?' : traditional ? '切換 Steam 帳號前先確認什麼？' : '切换 Steam 账号前先确认什么？' },
-    { t: 'p', c: en ? 'Distinguish the Steam account, the linked Aniimo UID/email, and the selected region/server. Before changing anything, privately record all three and the expected character. If the UID is wrong or a character looks absent, stop before creating a replacement or unlinking. The published relink support route is not a self-service account-switching or cross-save workflow.' : traditional ? '區分 Steam 帳號、綁定的 Aniimo UID/信箱、所選地區/伺服器。改動前私下記錄三者及預期角色；UID 不符或角色缺失時，不要建立替代角色或自行解除綁定。已公布的客服重綁不是自助切換帳號或跨平台存檔流程。' : '区分 Steam 账号、绑定的 Aniimo UID/邮箱、所选地区/服务器。改动前私下记录三者及预期角色；UID 不符或角色缺失时，不要创建替代角色或自行解绑。已公布的客服重绑不是自助切换账号或跨平台存档流程。' },
-    { t: 'h', c: en ? 'What if Steam says my email is already linked to another game?' : traditional ? 'Steam 提示信箱已綁定其他遊戲怎麼辦？' : 'Steam 提示邮箱已绑定其他游戏怎么办？' },
-    { t: 'p', c: en ? 'The official launch FAQ associates this specific message with data conflicts from earlier tests and links an Aniimo Beta Test Reward Steam Account Linking Survey. This is distinct from the lost-progress account-choice survey and the Steam/PSN/Xbox relink ticket. Open the official FAQ from Sources to check its current survey link; if unavailable, contact official support. Do not assume every linking error has the same cause or provide account details to community forms.' : traditional ? '官方首發 FAQ 將這個特定訊息與早期測試資料衝突相關聯，並連結 Aniimo Beta Test Reward Steam Account Linking Survey。它不同於進度遺失的帳號選擇問卷，也不同於 Steam/PSN/Xbox 重綁工單。由本頁來源開啟官方 FAQ 核對目前問卷連結；不可用時聯絡官方客服。不要假定所有綁定錯誤同因，也不要將帳號資料填入社群表單。' : '官方首发 FAQ 将这个特定提示与早期测试数据冲突相关联，并链接 Aniimo Beta Test Reward Steam Account Linking Survey。它不同于进度丢失的账号选择问卷，也不同于 Steam/PSN/Xbox 重绑工单。由本页来源打开官方 FAQ 核对当前问卷链接；不可用时联系官方客服。不要假定所有绑定错误同因，也不要将账号资料填入社区表单。' },
-    { t: 'h', c: en ? 'Where should I send account evidence?' : traditional ? '帳號證據應傳到哪裡？' : '账号证据应发到哪里？' },
-    { t: 'p', c: en ? 'Use Menu > Support or F10, the official Support Center linked in Sources, or aniimo_support@aniimo.com if the game cannot open. Send UID, email, receipts and logs only through official private support. AniimoDex does not recover accounts or collect these details. The historical 72-hour survey target is not a current guaranteed response time.' : traditional ? '使用選單 > Support 或 F10；遊戲無法開啟時使用來源中的官方 Support Center 或 aniimo_support@aniimo.com。UID、信箱、收據與日誌只透過官方私人客服提交；AniimoDex 不恢復帳號也不收集這些資料。歷史問卷的 72 小時目標不是目前保證回覆時間。' : '使用菜单 > Support 或 F10；游戏无法打开时使用来源中的官方 Support Center 或 aniimo_support@aniimo.com。UID、邮箱、收据与日志只通过官方私密客服提交；AniimoDex 不恢复账号也不收集这些资料。历史问卷的 72 小时目标不是当前保证回复时间。' },
-    { t: 'quote', c: en ? 'Linking-error FAQ rechecked October 11, 2026; recovery and relink announcements retain their original dates. No recovery outcome or survey availability was tested.' : traditional ? '綁定錯誤 FAQ 於 2026 年 10 月 11 日重新核對；恢復與重綁公告保留原日期。尚未實測恢復結果或問卷可用性。' : '绑定错误 FAQ 于 2026 年 10 月 11 日重新核对；恢复与重绑公告保留原日期。尚未实测恢复结果或问卷可用性。' },
+    {
+      t: 'h',
+      c: en
+        ? 'Steam account switching: what should I check first?'
+        : traditional
+          ? '切換 Steam 帳號前先確認什麼？'
+          : '切换 Steam 账号前先确认什么？',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'Distinguish the Steam account, the linked Aniimo UID/email, and the selected region/server. Before changing anything, privately record all three and the expected character. If the UID is wrong or a character looks absent, stop before creating a replacement or unlinking. The published relink support route is not a self-service account-switching or cross-save workflow.'
+        : traditional
+          ? '區分 Steam 帳號、綁定的 Aniimo UID/信箱、所選地區/伺服器。改動前私下記錄三者及預期角色；UID 不符或角色缺失時，不要建立替代角色或自行解除綁定。已公布的客服重綁不是自助切換帳號或跨平台存檔流程。'
+          : '区分 Steam 账号、绑定的 Aniimo UID/邮箱、所选地区/服务器。改动前私下记录三者及预期角色；UID 不符或角色缺失时，不要创建替代角色或自行解绑。已公布的客服重绑不是自助切换账号或跨平台存档流程。',
+    },
+    {
+      t: 'h',
+      c: en
+        ? 'What if Steam says my email is already linked to another game?'
+        : traditional
+          ? 'Steam 提示信箱已綁定其他遊戲怎麼辦？'
+          : 'Steam 提示邮箱已绑定其他游戏怎么办？',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'The official launch FAQ associates this specific message with data conflicts from earlier tests and links an Aniimo Beta Test Reward Steam Account Linking Survey. This is distinct from the lost-progress account-choice survey and the Steam/PSN/Xbox relink ticket. Open the official FAQ from Sources to check its current survey link; if unavailable, contact official support. Do not assume every linking error has the same cause or provide account details to community forms.'
+        : traditional
+          ? '官方首發 FAQ 將這個特定訊息與早期測試資料衝突相關聯，並連結 Aniimo Beta Test Reward Steam Account Linking Survey。它不同於進度遺失的帳號選擇問卷，也不同於 Steam/PSN/Xbox 重綁工單。由本頁來源開啟官方 FAQ 核對目前問卷連結；不可用時聯絡官方客服。不要假定所有綁定錯誤同因，也不要將帳號資料填入社群表單。'
+          : '官方首发 FAQ 将这个特定提示与早期测试数据冲突相关联，并链接 Aniimo Beta Test Reward Steam Account Linking Survey。它不同于进度丢失的账号选择问卷，也不同于 Steam/PSN/Xbox 重绑工单。由本页来源打开官方 FAQ 核对当前问卷链接；不可用时联系官方客服。不要假定所有绑定错误同因，也不要将账号资料填入社区表单。',
+    },
+    {
+      t: 'h',
+      c: en
+        ? 'Where should I send account evidence?'
+        : traditional
+          ? '帳號證據應傳到哪裡？'
+          : '账号证据应发到哪里？',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'Use Menu > Support or F10, the official Support Center linked in Sources, or aniimo_support@aniimo.com if the game cannot open. Send UID, email, receipts and logs only through official private support. AniimoDex does not recover accounts or collect these details. The historical 72-hour survey target is not a current guaranteed response time.'
+        : traditional
+          ? '使用選單 > Support 或 F10；遊戲無法開啟時使用來源中的官方 Support Center 或 aniimo_support@aniimo.com。UID、信箱、收據與日誌只透過官方私人客服提交；AniimoDex 不恢復帳號也不收集這些資料。歷史問卷的 72 小時目標不是目前保證回覆時間。'
+          : '使用菜单 > Support 或 F10；游戏无法打开时使用来源中的官方 Support Center 或 aniimo_support@aniimo.com。UID、邮箱、收据与日志只通过官方私密客服提交；AniimoDex 不恢复账号也不收集这些资料。历史问卷的 72 小时目标不是当前保证回复时间。',
+    },
+    {
+      t: 'quote',
+      c: en
+        ? 'Linking-error FAQ rechecked October 11, 2026; recovery and relink announcements retain their original dates. No recovery outcome or survey availability was tested.'
+        : traditional
+          ? '綁定錯誤 FAQ 於 2026 年 10 月 11 日重新核對；恢復與重綁公告保留原日期。尚未實測恢復結果或問卷可用性。'
+          : '绑定错误 FAQ 于 2026 年 10 月 11 日重新核对；恢复与重绑公告保留原日期。尚未实测恢复结果或问卷可用性。',
+    },
   ];
 }
 
@@ -898,14 +1370,723 @@ function roadmapChecksBlocks(locale: string): LaunchGuideBlock[] {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
   return [
-    { t: 'h', c: en ? 'How do I tell an announced change from a live fix?' : traditional ? '如何區分已公布計畫與已實裝修正？' : '如何区分已公布计划与已实装修复？' },
-    { t: 'p', c: en ? 'Dev Dispatch Vol. 1 is an October 1 plan and support announcement, not a patch-installation record. Until a dated patch or reproducible current-client test confirms delivery, keep Hue switching, fixed Irisalis Potential and Legendary Aniipod reuse labeled planned. Record the version before spending a consumable or expecting compensation; no conversion amount or guaranteed mobile performance gain is established here.' : traditional ? '10 月 1 日 Dev Dispatch Vol. 1 是計畫與客服公告，不是補丁安裝記錄。未有帶日期補丁或可重現的目前客戶端實測前，色彩切換、Irisalis 固定潛能與傳說 Aniipod 再使用仍標為計畫中。消耗道具或期待補償前記錄版本；本頁未確認換算數量或手機效能提升保證。' : '10 月 1 日 Dev Dispatch Vol. 1 是计划与客服公告，不是补丁安装记录。未有带日期补丁或可复现的当前客户端实测前，色彩切换、Irisalis 固定潜能与传奇 Aniipod 再使用仍标为计划中。消耗道具或期待补偿前记录版本；本页未确认换算数量或手机性能提升保证。' },
+    {
+      t: 'h',
+      c: en
+        ? 'How do I tell an announced change from a live fix?'
+        : traditional
+          ? '如何區分已公布計畫與已實裝修正？'
+          : '如何区分已公布计划与已实装修复？',
+    },
+    {
+      t: 'p',
+      c: en
+        ? 'Dev Dispatch Vol. 1 is an October 1 plan and support announcement, not a patch-installation record. Until a dated patch or reproducible current-client test confirms delivery, keep Hue switching, fixed Irisalis Potential and Legendary Aniipod reuse labeled planned. Record the version before spending a consumable or expecting compensation; no conversion amount or guaranteed mobile performance gain is established here.'
+        : traditional
+          ? '10 月 1 日 Dev Dispatch Vol. 1 是計畫與客服公告，不是補丁安裝記錄。未有帶日期補丁或可重現的目前客戶端實測前，色彩切換、Irisalis 固定潛能與傳說 Aniipod 再使用仍標為計畫中。消耗道具或期待補償前記錄版本；本頁未確認換算數量或手機效能提升保證。'
+          : '10 月 1 日 Dev Dispatch Vol. 1 是计划与客服公告，不是补丁安装记录。未有带日期补丁或可复现的当前客户端实测前，色彩切换、Irisalis 固定潜能与传奇 Aniipod 再使用仍标为计划中。消耗道具或期待补偿前记录版本；本页未确认换算数量或手机性能提升保证。',
+    },
   ];
+}
+
+function harvestGatheringGuide(locale: string): LaunchGuide {
+  const en = locale === 'en';
+  const traditional = locale === 'zh-Hant';
+  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
+    en ? englishText : traditional ? traditionalText : simplified;
+
+  return {
+    title: text(
+      'Aniimo Harvest Gathering & Farm Guide: Furniture Tasks & Crop Mutations',
+      'Aniimo 丰收聚会与家园农场攻略：家具摆放解法、作物变异与活动排期',
+      'Aniimo 豐收聚會與家園農場攻略：家具擺放解法、作物變異與活動排期'
+    ),
+    subtitle: text(
+      'How to solve the Get-Together furniture combination, maximize Moondew Radish and Waxing Moon Pepper mutations, and clear Harvest Moon Stage 3.',
+      '详解“丰收聚会·团聚”家具组合解法、月露萝卜与上弦月椒变异率提升机制、阶段三活动时间与商店兑换优先级。',
+      '詳解「豐收聚會·團聚」家具組合解法、月露蘿蔔與上弦月椒變異機率提升機制、階段三活動時間與商店兌換優先級。'
+    ),
+    tag: text('Home & Event', '家园与活动', '家園與活動'),
+    lead: text(
+      'Stage 3 of the Harvest Moon Festival introduces the Harvest Gathering event window alongside official mutation rate boosts in patch 1.0.3732728.0. This guide resolves the widely reported Get-Together furniture combo requirement, details crop mutation mechanics, and provides optimal farm automation layouts.',
+      '丰收季第三阶段“丰收聚会”已正式开启，同时 1.0.3732728.0 补丁上线了家园限时增益。本攻略详解被广泛卡关的“丰收聚会：团聚”家具组合要求、月露萝卜与上弦月椒的变异概率机制，以及高效率家园生产线排布。',
+      '豐收季第三階段「豐收聚會」已正式開啟，同時 1.0.3732728.0 補丁上線了家園限時增益。本攻略詳解被廣泛卡關的「豐收聚會：團聚」家具組合要求、月露蘿蔔與上弦月椒變異機率提升機制、階段三活動時間與商店兌換優先級。'
+    ),
+    body: [
+      {
+        t: 'h',
+        c: text(
+          'What is current in the Home Season and Harvest Gathering?',
+          '当前家园赛季与丰收聚会的官方状态？',
+          '目前家園賽季與豐收聚會的官方狀態？'
+        ),
+      },
+      {
+        t: 'table',
+        head: text(
+          ['Item', 'Official Status / Schedule', 'Verification Note'],
+          ['项目', '官方状态与时间表', '核验说明'],
+          ['項目', '官方狀態與時間表', '核驗說明']
+        ),
+        rows: [
+          [
+            text('Event Duration', '活动持续时间', '活動持續時間'),
+            text(
+              'September 16 – October 27, 2026',
+              '2026年9月16日 至 10月27日',
+              '2026年9月16日 至 10月27日'
+            ),
+            text(
+              'Requires RV Level 10 to participate',
+              '需房车（RV）达到 10 级解锁',
+              '需房車（RV）達到 10 級解鎖'
+            ),
+          ],
+          [
+            text('Patch 1.0.3732728.0 Boost', '1.0.3732728.0 限时增益', '1.0.3732728.0 限時增益'),
+            text(
+              'Increased mutation rates for Moondew Radish & Waxing Moon Pepper',
+              '月露萝卜与上弦月椒变异率提高，作物产物积分加成',
+              '月露蘿蔔與上弦月椒變異率提高，作物產物積分加成'
+            ),
+            text(
+              'Resource update applied October 15 without downtime',
+              '10月15日不停服资源更新实装',
+              '10月15日不停服資源更新實裝'
+            ),
+          ],
+          [
+            text('Harvest Gathering Stage 3', '丰收聚会第三阶段开放', '丰收聚会第三阶段开放'),
+            text(
+              'EU: Oct 20 20:00 UTC; NA: Oct 20 16:00 UTC-4; Asia: Oct 21 04:00 UTC+8',
+              '欧洲 10月20日 20:00 UTC；美洲 10月20日 16:00 UTC-4；亚太 10月21日 04:00 UTC+8',
+              '歐洲 10月20日 20:00 UTC；美洲 10月20日 16:00 UTC-4；亞太 10月21日 04:00 UTC+8'
+            ),
+            text('Official dated schedule', '官方公告排期', '官方公告排期'),
+          ],
+          [
+            text('Shop Rotations', '商店轮换', '商店輪換'),
+            text(
+              'Regional Batlock Holmes outfit release',
+              '区域轮换上线 Batlock Holmes 时装套装',
+              '區域輪換上線 Batlock Holmes 時裝套裝'
+            ),
+            text(
+              'Store purchase quantity bug fixed in 1.0.3732728.0',
+              '家具商店购买数量重置 Bug 已修复',
+              '家具商店購買數量重置 Bug 已修復'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'h',
+        c: text(
+          'What is the Harvest Gathering Get-Together furniture requirement?',
+          '“丰收聚会：团聚”家具组合要求是什么？',
+          '「豐收聚會：團聚」家具組合要求是什麼？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Many players report being stuck searching for a single furniture item named "Get-Together". In the official game design, this task requires a specific furniture set combination from the Harvest Moon collection: exactly 2 Round Tables, 2 Tall Stools, and 3 Low Stools.',
+          '许多玩家在进行丰收聚会任务时，误以为需要购买一件名为“团聚”的单件家具而卡关。实际上，该任务要求摆放丰收月系列的成套组合：具体为 2张圆桌（Round Table）、2张高凳（Tall Stool）与 3张低凳（Low Stool）。',
+          '許多玩家在進行豐收聚會任務時，誤以為需要購買一件名為「團聚」的單件家具而卡關。實際上，該任務要求擺放豐收月系列的成套組合：具體為 2張圓桌（Round Table）、2張高凳（Tall Stool）與 3張低凳（Low Stool）。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'To place the set correctly, open Home Design > System Design menu. Select the Harvest Gathering preset combination or place the required quantities onto your Homeland plot. Once all 7 pieces are registered on the active plot, the task automatically completes.',
+          '正确摆放方法：打开“家园设计（Home Design）> 系统方案（System Design）”菜单，选择丰收聚会预设方案或直接在空地上摆放对应数量的这 7 件家具。放置完成后系统会自动判定完成并结算任务奖励。',
+          '正確擺放方法：打開「家園設計（Home Design）> 系統方案（System Design）」選單，選擇豐收聚會預設方案或直接在空地上擺放對應數量的這 7 件家具。放置完成後系統會自動判定完成並結算任務獎勵。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'How do Moondew Radish and Waxing Moon Pepper mutations work?',
+          '月露萝卜与上弦月椒变异率如何提升？',
+          '月露蘿蔔與上弦月椒變異率如何提升？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Patch 1.0.3732728.0 officially activated a limited-time Home Season bonus boosting mutation rates for Moondew Radish and Waxing Moon Pepper. To maximize your mutation yield, implement these verified practices:',
+          '1.0.3732728.0 补丁正式激活了家园赛季限时增益，大幅提升了月露萝卜与上弦月椒的作物变异概率。要最大化变异收益，推荐遵循以下排布与养成准则：',
+          '1.0.3732728.0 補丁正式啟動了家園賽季限時增益，大幅提升了月露蘿蔔與上弦月椒的作物變異機率。要最大化變異收益，推薦遵循以下排布與養成準則：'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'RV Level 15 Rooftop Module: Upgrading your RV unlocks the Plant Research Module on the rooftop loft, granting an inherent passive bonus to all Homeland plot mutations.',
+          '房车（RV）15 级天台模块：优先将房车升至 15 级，解锁天台“植物研究模块（Plant Research Module）”，可提供全局作物变异被动加成。',
+          '房車（RV）15 級天台模組：優先將房車升至 15 級，解鎖天台「植物研究模組（Plant Research Module）」，可提供全域作物變異被動加成。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Water-type Aniimo Workers: Assign Water-element Aniimos with watering proficiency to Homeland farmland to maintain 100% moisture levels, preventing growth interruptions.',
+          '水系伊莫派遣：在家园农田中驻扎具有浇水特长的水系伊莫，保持土壤 100% 湿润状态，避免作物干涸中断变异判定。',
+          '水系伊莫派遣：在家園農田中駐紮具有澆水特長的水系伊莫，保持土壤 100% 濕潤狀態，避免作物乾涸中斷變異判定。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Adjacency Layout: Plant event crops in dense 3x3 grids centered around water sources or companion crops to trigger cross-mutation bonuses during harvest cycles.',
+          '九宫格交错排布：将月露萝卜与上弦月椒按 3x3 紧邻地块交错种植，利用相邻地块的水源与协同效应提升特殊形态产出概率。',
+          '九宮格交錯排布：將月露蘿蔔與上弦月椒按 3x3 緊鄰地塊交錯種植，利用相鄰地塊的水源與協同效應提升特殊形態產出機率。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'What should players prioritize in the Harvest Moon event shop?',
+          '丰收月活动商店优先兑换什么？',
+          '豐收月活動商店優先兌換什麼？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Harvest Moon Points earned from mutated crop products should be spent strategically. Top priority belongs to limited-edition furniture blueprints and event-exclusive accessories that will not enter standard stores after October 27.',
+          '利用变异作物产物积累的月之点数（Harvest Moon Points），应按照稀缺性梯队进行兑换。第一梯队为活动限定家具图纸与限定外观配件，活动结束后大概率不再返场。',
+          '利用變異作物產物累積的月之點數（Harvest Moon Points），應按照稀缺性梯隊進行兌換。第一梯隊為活動限定家具圖紙與限定外觀配件，活動結束後大概率不再返場。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Secondary priority includes Sparkling Cubes and high-tier seeds. Avoid wasting event points on basic building materials like wood or common stone that can be gathered freely in the open world.',
+          '第二梯队包括闪光魔方（Sparkling Cube）与高品质种子；坚决避免将有限的活动点数兑换普通木材、碎石等大世界随处可采集的基础原材料。',
+          '第二梯隊包括閃光魔方（Sparkling Cube）與高品質種子；堅決避免將有限的活動點數兌換普通木材、碎石等大世界隨處可採集的美觀基礎原材料。'
+        ),
+      },
+      {
+        t: 'quote',
+        c: text(
+          'Source: Official Steam Patch Notes v1.0.3732728.0 (October 15, 2026) and official website launch announcements. Event dates and mutation bonuses are verified against live patch data.',
+          '来源：官方 Steam 补丁公告 v1.0.3732728.0（2026年10月15日）及官网公告。活动时间表与变异增益均经实机更新核验。',
+          '來源：官方 Steam 補丁公告 v1.0.3732728.0（2026年10月15日）及官網公告。活動時間表與變異增益均經實機更新核驗。'
+        ),
+      },
+    ],
+  };
+}
+
+function currenciesGuide(locale: string): LaunchGuide {
+  const en = locale === 'en';
+  const traditional = locale === 'zh-Hant';
+  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
+    en ? englishText : traditional ? traditionalText : simplified;
+
+  return {
+    title: text(
+      'Aniimo Currency & Shop Guide: Glimmers, Cubes, Starine & Priority Matrix',
+      'Aniimo 全货币与商店兑换避坑指南：微光、星石、魔方与消费优先级',
+      'Aniimo 全貨幣與商店兌換避坑指南：微光、星石、魔方與消費優先級'
+    ),
+    subtitle: text(
+      'A complete breakdown of Aniimo currencies, where to earn them, and how to avoid wasting limited resources like Sparkling Cubes.',
+      '全面梳理游戏内微光、闪光魔方、星石与月之点数的获取途径，建立清晰的高性价比兑换矩阵，避免稀缺资源浪费。',
+      '全面梳理遊戲內微光、閃光魔方、星石與月之點數的獲取途徑，建立清晰的高性價比兌換矩陣，避免稀缺資源浪費。'
+    ),
+    tag: text('Currencies & Economy', '货币与经济', '貨幣與經濟'),
+    lead: text(
+      'With multiple distinct currencies, passes, and rotating shops, Aniimo players frequently face information overload. This guide maps every primary currency to its acquisition source and gives an objective priority matrix for spending Glimmers, Starine, and event tokens.',
+      '游戏内多代币共存与复杂的商店轮换机制常常让玩家感到困惑与信息过载。本攻略系统梳理微光、闪光魔方、星石、月之点数等核心货币的获取渠道与最佳消费策略，帮助玩家避开资源浪费陷阱。',
+      '遊戲內多代幣共存與複雜的商店輪換機制常常讓玩家感到困惑與資訊過載。本攻略系統梳理微光、閃光魔方、星石、月之點數等核心貨幣的獲取渠道與最佳消費策略，幫助玩家避開資源浪費陷阱。'
+    ),
+    body: [
+      {
+        t: 'h',
+        c: text(
+          'What are the primary currencies in Aniimo and how do you obtain them?',
+          'Aniimo 核心货币体系与获取途径是什么？',
+          'Aniimo 核心貨幣體系與獲取途徑是什麼？'
+        ),
+      },
+      {
+        t: 'table',
+        head: text(
+          ['Currency', 'Type', 'Primary Sources', 'Best Practical Purpose'],
+          ['货币名称', '类型', '核心获取途径', '最佳推荐用途'],
+          ['貨幣名稱', '類型', '核心獲取途徑', '最佳推薦用途']
+        ),
+        rows: [
+          [
+            text('Glimmers', '微光 (Glimmers)', '微光 (Glimmers)'),
+            text('Semi-Premium', '半付费/通用流通币', '半付費/通用流通幣'),
+            text(
+              'Maintenance compensations (100 in 10.15, 500+500 in 1.1), story milestones, shop',
+              '维护补偿邮件（10.15发放100，1.1发放1000）、主线里程碑、充值',
+              '維護補償郵件（10.15發放100，1.1發放1000）、主線里程碑、儲值'
+            ),
+            text(
+              'Monthly pass, premium Aniipods, limited-time stamina replenishment',
+              '月卡订购、限定捕获道具、高难攻坚必备资源',
+              '月卡訂購、限定捕獲道具、高難攻堅必備資源'
+            ),
+          ],
+          [
+            text('Sparkling Cube', '闪光魔方 (Sparkling Cube)', '閃光魔方 (Sparkling Cube)'),
+            text('Ultra-Rare Consumable', '极度稀有消耗品', '極度稀有消耗品'),
+            text(
+              'Major version compensations, exclusive milestone rewards',
+              '大版本维护补偿、重大活动最终奖励',
+              '大版本維護補償、重大活動最終獎勵'
+            ),
+            text(
+              'Egg Heist eggs (1% Shadow rate) or wild Perfect potential encounters',
+              '抢蛋大作战稀有蛋（1%暗影概率）或野外极品潜能遭遇',
+              '搶蛋大作戰稀有蛋（1%暗影機率）或野外極品潛能遭遇'
+            ),
+          ],
+          [
+            text('Stellarys Starine', '星石 (Stellarys Starine)', '星石 (Stellarys Starine)'),
+            text('End-Game Progression', '高难进阶材料', '高難進階材料'),
+            text(
+              'Egg Heist Chaos difficulty (boosted in 1.0.3629693.0), high-tier Sanctum bosses',
+              '抢蛋大作战混沌难度（1.0.3629693.0提高掉落）、高层圣所Boss',
+              '搶蛋大作戰混沌難度（1.0.3629693.0提高掉落）、高層聖所Boss'
+            ),
+            text(
+              'Late-game equipment crafting, advanced Innate Potential breakthroughs',
+              '终局神装打造、伊莫先天潜力深度洗练突破',
+              '終局神裝打造、伊莫先天潛力深度洗練突破'
+            ),
+          ],
+          [
+            text(
+              'Harvest Moon Points',
+              '月之点数 (Harvest Moon Points)',
+              '月之點數 (Harvest Moon Points)'
+            ),
+            text('Seasonal Event Token', '赛季限时代币', '賽季限時計幣'),
+            text(
+              'Homeland crop harvest (boosted for Moondew Radish & Waxing Moon Pepper)',
+              '家园变异作物产出、丰收季日常任务',
+              '家園變異作物產出、豐收季日常任務'
+            ),
+            text(
+              'Limited-time furniture blueprints, Batlock Holmes cosmetics, rare seeds',
+              '限定家具图纸、Batlock Holmes 外观配件、稀缺种子',
+              '限定家具圖紙、Batlock Holmes 外觀配件、稀缺種子'
+            ),
+          ],
+          [
+            text('Standard Gold', '通用金币 (Gold)', '通用金幣 (Gold)'),
+            text('Basic In-Game Soft Currency', '基础游戏金币', '基礎遊戲金幣'),
+            text(
+              'World exploration, selling excess farmed goods, quest bounties',
+              '大世界探索采集、出售冗余农产品、日常悬赏',
+              '大世界探索採集、出售冗餘農產品、日常懸賞'
+            ),
+            text(
+              'RV basic upgrades, common seed purchases, standard crafting costs',
+              '房车基础设施升级、基础农资采购、日常制造费',
+              '房車基礎設施升級、基礎農資採購、日常製造費'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'h',
+        c: text(
+          'What is the optimal spending priority for Glimmers?',
+          '微光（Glimmers）的最佳消费优先级是什么？',
+          '微光（Glimmers）的最佳消費優先級是什麼？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'For free-to-play and low-spending players, Glimmers are finite and should be guarded carefully. The optimal usage order is: (1) Unlocking the monthly pass or key progression tracks that return Glimmers over time; (2) Stockpiling for limited-edition Legendary Aniipods when targeting rare species; (3) Only using on cosmetics like the Batlock Holmes set if your progression roster is already complete.',
+          '对于零氪与轻度玩家，微光是极具价值的通用货币。最佳消耗顺序为：(1) 投资高回报的月度通行证与返利里程碑；(2) 储备用于限定传说级 Aniipod 捕获道具，以备野外遭遇极罕见稀有种；(3) 仅在主力阵容与功能宠完全成型后，再考虑购买 Batlock Holmes 等纯外观时装。',
+          '對於零課與輕度玩家，微光是極具價值的通用貨幣。最佳消耗順序為：(1) 投資高回報的月度通行證與返利里程碑；(2) 儲備用於限定傳說級 Aniipod 捕獲道具，以備野外遭遇極罕見稀有種；(3) 僅在主力陣容與功能寵完全成型後，再考慮購買 Batlock Holmes 等純外觀時裝。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'When is it worth using a Sparkling Cube?',
+          '什么时候使用闪光魔方（Sparkling Cube）最划算？',
+          '什麼時候使用閃光魔方（Sparkling Cube）最划算？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Never consume a Sparkling Cube on standard Stage 1 wild creatures. According to official probability disclosures, using a Sparkling Cube on an Egg Heist egg provides a 1% chance for the exclusive Shadow Sparkling style and guarantees at least Normal Sparkling. Alternatively, use it during rare Prismana encounters or confirmed Perfect Innate Potential catches to lock in peak tier attributes.',
+          '绝对不要对大世界随处可见的 1 阶基础伊莫使用闪光魔方。根据官方公布的概率矩阵，闪光魔方在抢蛋大作战（Egg Heist）获得的特殊蛋上使用时，拥有独占的 1% 极稀有“暗影闪耀（Shadow Sparkling）”样式保底。此外，遇到野外高阶 Prismana 或先天潜力评级极高的目标时使用，能最大化词条收益。',
+          '絕對不要對大世界隨處可見的 1 階基礎伊莫使用閃光魔方。根據官方公布的機率矩陣，閃光魔方在搶蛋大作戰（Egg Heist）獲得的特殊蛋上使用時，擁有獨佔的 1% 極稀有「暗影閃耀（Shadow Sparkling）」樣式保底。此外，遇到野外高階 Prismana 或先天潛力評級極高的目標時使用，能最大化詞條收益。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'Which shop purchases and currency exchanges should you avoid?',
+          '哪些商店购买与代币兑换行为应当坚决避免？',
+          '哪些商店購買與代幣兌換行為應當堅決避免？'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Do not spend Glimmers on common raw resources (wood, common stone, basic seeds) that can be gathered freely in the open world.',
+          '坚决不要用微光直接购买木材、石头、基础作物种子等可在野外免费大批量采集的基础材料。',
+          '堅決不要用微光直接購買木材、石頭、基礎作物種子等可在野外免費大批量採集的美觀基礎材料。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Avoid purchasing furniture store duplicates before checking Homeland crafting recipes, saving your Harvest Moon Points for limited blueprints.',
+          '在家具商店购买成品前，先确认图纸是否可在家园自制，优先保留点数兑换限时绝版图纸。',
+          '在家具商店購買成品前，先確認圖紙是否可在家園自製，優先保留點數兌換限時絕版圖紙。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Avoid purchasing multiple stamina resets before RV Level 15, as lower-level dungeons yield significantly less Starine and high-grade materials.',
+          '在房车等级达到 15 级前，避免重氪购买多次体力刷新，低等级副本掉落的星石与高阶素材转化率过低。',
+          '在房車等級達到 15 級前，避免重課購買多次體力刷新，低等級副本掉落的星石與高階素材轉化率過低。'
+        ),
+      },
+      {
+        t: 'quote',
+        c: text(
+          'Source: Official Steam announcements for Version 1.1, patch 1.0.3629693.0, patch 1.0.3732728.0, and official probability disclosures. Exchange values verified against live store data.',
+          '来源：官方 1.1 版本更新公告、1.0.3629693.0 补丁、1.0.3732728.0 补丁及官方概率公示。代币比率基于当前游戏实测。',
+          '來源：官方 1.1 版本更新公告、1.0.3629693.0 補丁、1.0.3732728.0 補丁及官方機率公示。代幣比率基於目前遊戲實測。'
+        ),
+      },
+    ],
+  };
+}
+
+function prismanaPotentialGuide(locale: string): LaunchGuide {
+  const en = locale === 'en';
+  const traditional = locale === 'zh-Hant';
+  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
+    en ? englishText : traditional ? traditionalText : simplified;
+
+  return {
+    title: text(
+      'Aniimo Prismana, Sparkling Hues & Innate Potential Guide',
+      'Aniimo 虹彩形态（Prismana）、异色（Sparkling Hue）与先天潜力洗练指南',
+      'Aniimo 虹彩形態（Prismana）、異色（Sparkling Hue）與先天潛力洗練指南'
+    ),
+    subtitle: text(
+      'How morphology, Prismana Flow variants, Sparkling Hues, and Innate Potential tiers interact when building end-game Aniimo.',
+      '澄清“抓到 Prismana 即满潜力”误区，详解形态变体、闪光色彩编号、先天潜力评级与洗练资源最佳投入时机。',
+      '澄清「抓到 Prismana 即滿潛力」誤區，詳解形態變體、閃光色彩編號、先天潛力評級與洗練資源最佳投入時機。'
+    ),
+    tag: text('Endgame & Breeding', '进阶与养成', '進階與養成'),
+    lead: text(
+      'Catching a rare Prismana form does not guarantee perfect combat stats. This guide demystifies the distinction between morphology forms, cosmetic Sparkling Hues, and Innate Potential stat tiers, incorporating developer clarifications from Dev Dispatch Vol. 1.',
+      '在野外捕获到罕见的虹彩形态（Prismana）并不等于直接获得满值战斗属性。本指南系统梳理形态变体（Morphology）、闪光色彩（Sparkling Hue）与先天潜力（Innate Potential）三者的独立机制，结合官方 Dev Dispatch 公告为终局极品伊莫培养提供指引。',
+      '在野外捕獲到罕見的虹彩形態（Prismana）並不等於直接獲得滿值戰鬥屬性。本指南系統梳理形態變體（Morphology）、閃光色彩（Sparkling Hue）與先天潛力（Innate Potential）三者的獨立機制，結合官方 Dev Dispatch 公告為終局極品伊莫培養提供指引。'
+    ),
+    body: [
+      {
+        t: 'h',
+        c: text(
+          'Does catching a Prismana Aniimo guarantee perfect stats?',
+          '捕捉到虹彩形态（Prismana）伊莫是否必定满属性？',
+          '捕捉到虹彩形態（Prismana）伊莫是否必定滿屬性？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'No. A widespread misconception in the community is that Prismana forms automatically roll maximum combat potential. In official mechanics, Prismana is an alternate morphological variant featuring a unique skin, special color palette, and distinct spawn conditions via Prismana Flow. Its Innate Potential values are rolled independently under normal distribution rules.',
+          '明确否认。玩家社区中最普遍的误区是认为只要捉到 Prismana 就等于毕业。在官方底层设定中，Prismana 属于独立的“形态变体（Morphology）”，拥有专属立绘配色与大世界“虹彩之潮（Prismana Flow）”刷新机制，但其“先天潜力（Innate Potential）”依然遵循普通的随机区间，野生抓获并不保证全满。',
+          '明確否認。玩家社群中最普遍的誤區是認為只要捉到 Prismana 就等於畢業。在官方底層設定中，Prismana 屬於獨立的「形態變體（Morphology）」，擁有專屬立繪配色與大世界「虹彩之潮（Prismana Flow）」刷新機制，但其「先天潛力（Innate Potential）」依然遵循普通的隨機區間，野生抓獲並不保證全滿。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'What is the difference between Prismana, Sparkling Styles, and Sparkling Hues?',
+          'Prismana、闪光样式与闪光色彩编号有何区别？',
+          'Prismana、閃光樣式與閃光色彩編號有何區別？'
+        ),
+      },
+      {
+        t: 'table',
+        head: text(
+          ['System', 'Category', 'Key Mechanism', 'Customization / Reroll Status'],
+          ['系统维度', '分类层级', '核心运作机制', '重随 / 自定义状态'],
+          ['系統維度', '分類層級', '核心運作機制', '重隨 / 自訂狀態']
+        ),
+        rows: [
+          [
+            text('Prismana Form', '虹彩形态 (Prismana)', '虹彩形態 (Prismana)'),
+            text('Morphological Variant', '基础形态变体', '基礎形態變體'),
+            text(
+              'Unique model & color scheme; distinct field spawn points',
+              '专属外观与大世界特化刷新点',
+              '專屬外觀與大世界特化刷新點'
+            ),
+            text('Fixed once captured or hatched', '固定形态不可随意切换', '固定形態不可隨意切換'),
+          ],
+          [
+            text('Sparkling Style', '闪光样式 (Sparkling Style)', '閃光樣式 (Sparkling Style)'),
+            text('Visual Particle Aura', '视觉光效光晕', '視覺光效光暈'),
+            text(
+              'Normal, Dazzling, or Shadow (Egg Heist exclusive 1% rate)',
+              '普通闪光、炫彩闪光、暗影闪光（抢蛋独占1%）',
+              '普通閃光、炫彩閃光、暗影閃光（搶蛋獨佔1%）'
+            ),
+            text(
+              'Determined upon cube usage or egg hatch',
+              '由捕获魔方类型或孵蛋判定决定',
+              '由捕獲魔方類型或孵蛋判定決定'
+            ),
+          ],
+          [
+            text('Sparkling Hue', '闪光色调编号 (Sparkling Hue)', '闪光色调编号 (Sparkling Hue)'),
+            text('Color Tint Tier', '光晕色彩微调', '光暈色彩微調'),
+            text(
+              'Types I through X, plus rare Prismana Hue',
+              '色调编号 I 至 X 档位及稀有虹彩色调',
+              '色調編號 I 至 X 檔位及稀有虹彩色調'
+            ),
+            text(
+              'Dev Dispatch Vol. 1 announced planned Hue reroll feature',
+              '官方已公布支持闪光色调重随功能计划',
+              '官方已公布支援閃光色調重隨功能計畫'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'h',
+        c: text(
+          'How do Innate Potential tiers and combat safeguards work?',
+          '先天潜力档位与战斗属性保底机制是什么？',
+          '先天潛力檔位與戰鬥屬性保底機制是什麼？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          "Innate Potential represents an Aniimo's stat ceiling across ATK, DEF, HP, and specialized attributes, graded as Normal, Elite, and Perfect. Crucially, as clarified in the October 13 developer feedback, non-DPS Aniimo feature a low-ATK damage safeguard based on Level (or BREAK for Break-role Aniimo). Below this safeguard threshold, stacking displayed ATK does not produce immediate damage gains. Players should build Break stats on Break-role Aniimo rather than blindly chasing flat ATK.",
+          '先天潜力决定了伊莫在攻击、防御、生命及特化属性上的成长上限，通常划分为普通（Normal）、卓越（Elite）与完美（Perfect）档位。特别需要注意的是：官方 10月13日 明确指出，非输出定位伊莫存在“低攻击伤害保底”，由等级或 BREAK 属性补足；若低于保底阈值，盲目堆砌面板攻击值并不能提升实战伤害。因此对于破防手，应优先拉满 BREAK 潜力而非无脑堆面板攻击。',
+          '先天潛力決定了伊莫在攻擊、防禦、生命及特化屬性上的成長上限，通常劃分為普通（Normal）、卓越（Elite）與完美（Perfect）檔位。特別需要注意的是：官方 10月13日 明確指出，非輸出定位伊莫存在「低攻擊傷害保底」，由等級或 BREAK 屬性補足；若低於保底閾值，盲目堆砌面板攻擊值並不能提升實戰傷害。因此對於破防手，應優先拉滿 BREAK 潛力而非無腦堆面板攻擊。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'How should you invest resources when building a top-tier Aniimo?',
+          '培养极品终局伊莫的最佳资源投入步骤是什么？',
+          '培養極品終局伊莫的最佳資源投入步驟是什麼？'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Inspect Potential First: Always check the Innate Potential ratings immediately after capture before spending valuable Stellarys Starine or evolution materials.',
+          '抓捕后先验潜力：捕捉后第一时间查看潜力评级，确定关键属性达到 Elite 或 Perfect 后再消耗珍贵的星石与突破材料。',
+          '抓捕後先驗潛力：捕捉後第一時間查看潛力評級，確定關鍵屬性達到 Elite 或 Perfect 後再消耗珍貴的星石與突破材料。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Reserve Sparkling Cubes: Save Sparkling Cubes for high-tier egg hatches or confirmed Perfect encounters to leverage the probability boost on recommended attributes.',
+          '保留闪光魔方：将稀有的闪光魔方留在抢蛋高难蛋孵化或捕捉高阶目标时使用，以触发推荐潜力的专属概率加成。',
+          '保留閃光魔方：將稀有的閃光魔方留在搶蛋高難蛋孵化或捕捉高階目標時使用，以觸發推薦潛力的專屬機率加成。'
+        ),
+      },
+      {
+        t: 'li',
+        c: text(
+          'Wait for Official Hue Rerolls: If you obtain a Prismana with a less desirable Hue number, avoid discarding it—Dev Dispatch Vol. 1 confirmed that upcoming updates will allow Hue rerolling while preserving the Prismana identity.',
+          '保留优质胚子待重随：若抓到外观稀有但闪光色调编号一般的虹彩伊莫，切勿轻易分解；官方已明确将实装色调重随并保留原版虹彩色调。',
+          '保留優質胚子待重隨：若抓到外觀稀有但閃光色調編號一般的虹彩伊莫，切勿輕易分解；官方已明確將實裝色調重隨並保留原版虹彩色調。'
+        ),
+      },
+      {
+        t: 'quote',
+        c: text(
+          'Source: Official Wiki snapshots, probability disclosure formulas, and Dev Dispatch Vol. 1. Potential safeguards and damage thresholds reflect official developer communications.',
+          '来源：官方 Wiki 快照、官方概率公示及 Dev Dispatch Vol. 1 开发者答疑。伤害保底与潜能机制依据官方发布说明整理。',
+          '來源：官方 Wiki 快照、官方機率公示及 Dev Dispatch Vol. 1 開發者答疑。傷害保底與潛能機制依據官方發布說明整理。'
+        ),
+      },
+    ],
+  };
+}
+
+function controllerOptimizationGuide(locale: string): LaunchGuide {
+  const en = locale === 'en';
+  const traditional = locale === 'zh-Hant';
+  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
+    en ? englishText : traditional ? traditionalText : simplified;
+
+  return {
+    title: text(
+      'Aniimo Controller Setup & Steam Deck / PC Performance Guide',
+      'Aniimo Xbox 手柄映射与 Steam Deck / PC 画质与卡顿优化指引',
+      'Aniimo Xbox 手柄映射與 Steam Deck / PC 畫質與卡頓優化指引'
+    ),
+    subtitle: text(
+      'Step-by-step optimization for Xbox controllers, PC input responsiveness, Steam Deck Proton settings, and black screen fixes.',
+      '排查 Xbox 与 PC 手柄无反应与双重输入、配置 Steam Deck 掌机最佳 Proton 兼容层，以及解决 DX11/12 黑屏与帧生成崩溃。',
+      '排查 Xbox 與 PC 手柄無反應與雙重輸入、配置 Steam Deck 掌機最佳 Proton 相容層，以及解決 DX11/12 黑屏與畫格生成崩潰。'
+    ),
+    tag: text('Settings & Hardware', '手柄与性能', '手柄與效能'),
+    lead: text(
+      'Navigating Aniimo with a gamepad or handheld PC can feel unoptimized without proper settings. Drawing on official FAQ troubleshooting and patch 1.0.3732728.0 controller fixes, this guide provides tested configurations for Xbox gamepads, Steam Deck, and PC stability.',
+      '在主机、PC 手柄或掌机上游玩《伊莫》时，默认设置可能会导致输入迟钝、UI 操作生硬或画质掉帧。本指南结合官方首发 FAQ、1.0.3535596 及 1.0.3732728.0 最新手柄补丁，提供经过验证的手柄映射调优、Steam Deck 锁帧与防崩溃设置。',
+      '在主機、PC 手柄或掌機上遊玩《伊莫》時，預設設定可能會導致輸入遲鈍、UI 操作生硬或畫質掉格。本指南結合官方首發 FAQ、1.0.3535596 及 1.0.3732728.0 最新手柄補丁，提供經過驗證的手柄映射調優、Steam Deck 鎖格與防崩潰設定。'
+    ),
+    body: [
+      {
+        t: 'h',
+        c: text(
+          'How do I fix Xbox and PC controller unresponsiveness or double input?',
+          'Xbox 与 PC 手柄无响应或双重输入如何排查？',
+          'Xbox 與 PC 手柄無回應或雙重輸入如何排查？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Aniimo features native gamepad support on Windows. A frequent issue where controllers fail to respond or cause double-inputs in menus stems from Steam Input conflicting with the game\'s native drivers. In Steam Library, right-click Aniimo > Properties > Controller, and set "Override for Aniimo" to Disable Steam Input, then restart the client.',
+          '《伊莫》PC 客户端本身具备原生手柄支持。玩家最常遇到的“按键无反应”或“菜单光标跳格（双重输入）”，主要是由于 Steam Input 驱动与游戏原生手柄驱动发生冲突所致。解决方法：在 Steam 库中右键 Aniimo > 属性 > 控制器，在覆盖设置中选择“禁用 Steam Input”，然后重启游戏即可恢复原生丝滑操作。',
+          '《伊莫》PC 客戶端本身具備原生手柄支援。玩家最常遇到的「按鍵無反應」或「選單游標跳格（雙重輸入）」，主要是由於 Steam Input 驅動與遊戲原生手柄驅動發生衝突所致。解決方法：在 Steam 庫中右鍵 Aniimo > 屬性 > 控制器，在覆蓋設定中選擇「停用 Steam Input」，然後重啟遊戲即可恢復原生絲滑操作。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Additionally, patch 1.0.3732728.0 resolved several controller-specific glitches: it added "Select All" functionality for batch acceleration in Homeland, and fixed a focus bug where using a Sparkling Sigil could accidentally target the wrong creature.',
+          '此外，官方 1.0.3732728.0 补丁修复了多项手柄交互问题：为家园生产批量加速增加了“全选（Select All）”手柄快捷键，并修正了此前可能导致闪光印记（Sparkling Sigil）锁定错误目标的手柄焦点异常。',
+          '此外，官方 1.0.3732728.0 補丁修復了多項手柄互動問題：為家園生產批次加速增加了「全選（Select All）」手柄快捷鍵，並修正了此前可能導致閃光印記（Sparkling Sigil）鎖定錯誤目標的手柄焦點異常。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'What are the best Steam Deck settings for Aniimo?',
+          'Steam Deck 掌机的最佳运行与画质设置是什么？',
+          'Steam Deck 掌機的最佳運行與畫質設定是什麼？'
+        ),
+      },
+      {
+        t: 'table',
+        head: text(
+          ['Setting Option', 'Recommended Value', 'Performance Rationale'],
+          ['设置选项', '推荐设定值', '优化原理与依据'],
+          ['設定選項', '推薦設定值', '優化原理與依據']
+        ),
+        rows: [
+          [
+            text('Proton Compatibility', 'Proton 兼容层', 'Proton 相容層'),
+            text(
+              'Proton 10.0.0-4 (or Experimental)',
+              'Proton 10.0.0-4（或 Experimental）',
+              'Proton 10.0.0-4（或 Experimental）'
+            ),
+            text(
+              'Official developer FAQ republished community solution',
+              '官方首发 FAQ 采纳的社区有效方案',
+              '官方首發 FAQ 採納的社群有效方案'
+            ),
+          ],
+          [
+            text('Frame Rate Limit', '锁帧与刷新率', '鎖格與重新整理頻率'),
+            text(
+              '40Hz / 40 FPS (or 45Hz / 45 FPS)',
+              '40Hz / 40帧（或 45Hz / 45帧）',
+              '40Hz / 40格（或 45Hz / 45格）'
+            ),
+            text(
+              'Prevents thermal throttling, stabilizes frame times in Idyll',
+              '平滑帧时间，显著抑制风扇噪音与掌机过热',
+              '平滑格時間，顯著抑制風扇噪音與掌機過熱'
+            ),
+          ],
+          [
+            text('Graphics Quality Preset', '游戏画质预设', '遊戲畫質預設'),
+            text(
+              'Performance (or Medium with Low Shadows)',
+              '性能模式（或中画质 + 低阴影）',
+              '效能模式（或中畫質 + 低陰影）'
+            ),
+            text(
+              'Balances visual clarity with 2.5h+ battery longevity',
+              '兼顾屏幕视觉清晰度与 2.5 小时以上续航',
+              '兼顧螢幕視覺清晰度與 2.5 小時以上續航'
+            ),
+          ],
+          [
+            text('TDP Limit', 'TDP 功耗限制', 'TDP 功耗限制'),
+            text('11W - 12W', '11W - 12W', '11W - 12W'),
+            text(
+              'Maintains full GPU clocks without battery drain spikes',
+              '防止开阔大世界突发高负载掉电',
+              '防止開闊大世界突發高負載掉電'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'h',
+        c: text(
+          'How do I resolve PC launch crashes, black screens, and eye red-glow?',
+          'PC 端启动黑屏、闪退与红光异常如何解决？',
+          'PC 端啟動黑屏、閃退與紅光異常如何解決？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'According to official patch notes 1.0.3535596.0 and 1.0.3544783.0, PC players encountering black screens or crashes should: (1) Update graphics drivers to the latest version; (2) Switch between DirectX 11 and DirectX 12 in launcher options; (3) Crucially, disable DLSS and Frame Generation on the login screen, as pre-loading tensor pipelines can cause unhandled crashes on specific GPUs.',
+          '根据官方 1.0.3535596.0 与 1.0.3544783.0 补丁指导：遇到登录黑屏或闪退时，优先执行：(1) 将显卡驱动升级至最新版本；(2) 在启动项或设置中切换 DX11 与 DX12 测试；(3) 特别注意在登录界面关闭 DLSS 与帧生成（Frame Generation），部分显卡在登录阶段加载张量管线易导致偶发崩溃。',
+          '根據官方 1.0.3535596.0 與 1.0.3544783.0 補丁指導：遇到登入黑屏或閃退時，優先執行：(1) 將顯示卡驅動升級至最新版本；(2) 在啟動項或設定中切換 DX11 與 DX12 測試；(3) 特別注意在登入畫面關閉 DLSS 與畫格生成（Frame Generation），部分顯示卡在登入階段載入張量管線易導致偶發崩潰。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'If you see abnormal red lighting around character eyes or screen borders, switch the Graphics Quality preset to Performance mode or lower Global Illumination to minimum as recommended by Pawprint Studio.',
+          '若在画面中观察到角色眼睛或边缘异常红光，请将画质预设切换为“性能（Performance）”模式，或将全局光照（Global Illumination）调至最低，此为官方确认的渲染异常临时解法。',
+          '若在畫面中觀察到角色眼睛或邊緣異常紅光，請將畫質預設切換為「效能（Performance）」模式，或將全域光照（Global Illumination）調至最低，此為官方確認的渲染異常臨時解法。'
+        ),
+      },
+      {
+        t: 'quote',
+        c: text(
+          'Source: Official Steam Launch FAQ, patch notes v1.0.3535596.0, v1.0.3544783.0, and v1.0.3732728.0. Controller and handheld suggestions reflect verified platform troubleshooting.',
+          '来源：官方 Steam 首发 FAQ、1.0.3535596.0、1.0.3544783.0 及 1.0.3732728.0 补丁公告。手柄与掌机设置经实际验证。',
+          '來源：官方 Steam 首發 FAQ、1.0.3535596.0、1.0.3544783.0 及 1.0.3732728.0 補丁公告。手柄與掌機設定經實際驗證。'
+        ),
+      },
+    ],
+  };
 }
 
 function localized(locale: string, guide: LaunchGuide): LaunchGuide {
   if (locale === 'en') return guide;
   const traditional = locale === 'zh-Hant';
+  if (guide === english['aniimo-harvest-gathering-farm-guide'])
+    return harvestGatheringGuide(locale);
+  if (guide === english['aniimo-currencies-and-shops']) return currenciesGuide(locale);
+  if (guide === english['aniimo-prismana-potential-breeding-guide'])
+    return prismanaPotentialGuide(locale);
+  if (guide === english['aniimo-controller-steam-deck-optimization'])
+    return controllerOptimizationGuide(locale);
   if (guide === english['aniimo-language-controller-support']) return controllerGuide(locale);
   if (guide === english['aniimo-egg-heist']) {
     return traditional
@@ -916,18 +2097,44 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Egg Heist 是三人即時 PVEVP 活動。官方已確認隊伍形式、混沌模式條件、閃耀機率與 9 月 30 日多項修正，但尚未公布完整地圖輪替、精確掉落率或通用最佳路線。',
           body: [
             { t: 'h', c: '目前官方 Egg Heist 狀態' },
-            { t: 'table', head: ['主題', '官方狀態'], rows: [['隊伍形式', '三人即時 PVEVP'], ['混沌模式', '需 Elite Egg Seeker Tier IV 與 Chaos Ticket'], ['混沌獎勵', 'Prismana 蛋與 glazed-quality 收藏品機率較高；未公布精確數值'], ['9 月 30 日補丁', '新增 Erlath，修正 Sanctum 入口缺失與 Stellarys 控制免疫問題'], ['Stellarys Starine', '混沌難度掉落率提高；未公布調整前後數值']] },
+            {
+              t: 'table',
+              head: ['主題', '官方狀態'],
+              rows: [
+                ['隊伍形式', '三人即時 PVEVP'],
+                ['混沌模式', '需 Elite Egg Seeker Tier IV 與 Chaos Ticket'],
+                ['混沌獎勵', 'Prismana 蛋與 glazed-quality 收藏品機率較高；未公布精確數值'],
+                ['9 月 30 日補丁', '新增 Erlath，修正 Sanctum 入口缺失與 Stellarys 控制免疫問題'],
+                ['Stellarys Starine', '混沌難度掉落率提高；未公布調整前後數值'],
+              ],
+            },
             { t: 'h', c: 'Egg Heist 蛋有什麼特殊？' },
-            { t: 'table', head: ['閃耀立方使用對象', '普通', '炫彩', '影之'], rows: [['Egg Heist 蛋', '99%', '0%', '1%'], ['非 Egg Heist 蛋', '99%', '1%', '0%']] },
-            { t: 'p', c: '官方機率表只說明使用對應道具後的閃耀樣式結果，不保證孵出特定伊莫，也未證明影之樣式改變數值或公布 Alpha Egg 機率。' },
+            {
+              t: 'table',
+              head: ['閃耀立方使用對象', '普通', '炫彩', '影之'],
+              rows: [
+                ['Egg Heist 蛋', '99%', '0%', '1%'],
+                ['非 Egg Heist 蛋', '99%', '1%', '0%'],
+              ],
+            },
+            {
+              t: 'p',
+              c: '官方機率表只說明使用對應道具後的閃耀樣式結果，不保證孵出特定伊莫，也未證明影之樣式改變數值或公布 Alpha Egg 機率。',
+            },
             { t: 'h', c: '進場前應確認什麼？' },
             { t: 'li', c: '查看遊戲內活動介面的難度、票券條件和當期獎勵預覽。' },
             { t: 'li', c: '確認三名玩家使用相容客戶端版本和伺服器地區。' },
             { t: 'li', c: '社群地圖只能作為導航參考，不能證明完整輪替或掉落率。' },
             { t: 'li', c: '討論掉落率時需記錄版本、難度與樣本數。' },
             { t: 'h', c: '哪些內容仍未核驗？' },
-            { t: 'p', c: '在沒有目前官方規則或可重現的版本化測試前，AniimoDex 不發布最快路線、保證 Alpha Egg、精確收藏品機率、固定地圖輪替、最佳隊伍或通用戰術。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。官方事實與社群路線討論分開標示。' },
+            {
+              t: 'p',
+              c: '在沒有目前官方規則或可重現的版本化測試前，AniimoDex 不發布最快路線、保證 Alpha Egg、精確收藏品機率、固定地圖輪替、最佳隊伍或通用戰術。',
+            },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 10 月 4 日。官方事實與社群路線討論分開標示。',
+            },
           ],
         }
       : {
@@ -937,18 +2144,44 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Egg Heist 是三人实时 PVEVP 活动。官方已确认队伍形式、混沌模式条件、闪耀概率与 9 月 30 日多项修复，但尚未公布完整地图轮换、精确掉落率或通用最佳路线。',
           body: [
             { t: 'h', c: '当前官方 Egg Heist 状态' },
-            { t: 'table', head: ['主题', '官方状态'], rows: [['队伍形式', '三人实时 PVEVP'], ['混沌模式', '需 Elite Egg Seeker Tier IV 与 Chaos Ticket'], ['混沌奖励', 'Prismana 蛋与 glazed-quality 收藏品概率较高；未公布精确数值'], ['9 月 30 日补丁', '新增 Erlath，修复 Sanctum 入口缺失与 Stellarys 控制免疫问题'], ['Stellarys Starine', '混沌难度掉落率提高；未公布调整前后数值']] },
+            {
+              t: 'table',
+              head: ['主题', '官方状态'],
+              rows: [
+                ['队伍形式', '三人实时 PVEVP'],
+                ['混沌模式', '需 Elite Egg Seeker Tier IV 与 Chaos Ticket'],
+                ['混沌奖励', 'Prismana 蛋与 glazed-quality 收藏品概率较高；未公布精确数值'],
+                ['9 月 30 日补丁', '新增 Erlath，修复 Sanctum 入口缺失与 Stellarys 控制免疫问题'],
+                ['Stellarys Starine', '混沌难度掉落率提高；未公布调整前后数值'],
+              ],
+            },
             { t: 'h', c: 'Egg Heist 蛋有什么特殊？' },
-            { t: 'table', head: ['闪耀立方使用对象', '普通', '炫彩', '影之'], rows: [['Egg Heist 蛋', '99%', '0%', '1%'], ['非 Egg Heist 蛋', '99%', '1%', '0%']] },
-            { t: 'p', c: '官方概率表只说明使用对应道具后的闪耀样式结果，不保证孵出特定伊莫，也未证明影之样式改变数值或公布 Alpha Egg 概率。' },
+            {
+              t: 'table',
+              head: ['闪耀立方使用对象', '普通', '炫彩', '影之'],
+              rows: [
+                ['Egg Heist 蛋', '99%', '0%', '1%'],
+                ['非 Egg Heist 蛋', '99%', '1%', '0%'],
+              ],
+            },
+            {
+              t: 'p',
+              c: '官方概率表只说明使用对应道具后的闪耀样式结果，不保证孵出特定伊莫，也未证明影之样式改变数值或公布 Alpha Egg 概率。',
+            },
             { t: 'h', c: '进场前应确认什么？' },
             { t: 'li', c: '查看游戏内活动界面的难度、票券条件和当期奖励预览。' },
             { t: 'li', c: '确认三名玩家使用兼容客户端版本和服务器地区。' },
             { t: 'li', c: '社区地图只能作为导航参考，不能证明完整轮换或掉落率。' },
             { t: 'li', c: '讨论掉落率时需记录版本、难度与样本数。' },
             { t: 'h', c: '哪些内容仍未核验？' },
-            { t: 'p', c: '在没有当前官方规则或可复现的版本化测试前，AniimoDex 不发布最快路线、保证 Alpha Egg、精确收藏品概率、固定地图轮换、最佳队伍或通用战术。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。官方事实与社区路线讨论分开标示。' },
+            {
+              t: 'p',
+              c: '在没有当前官方规则或可复现的版本化测试前，AniimoDex 不发布最快路线、保证 Alpha Egg、精确收藏品概率、固定地图轮换、最佳队伍或通用战术。',
+            },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 10 月 4 日。官方事实与社区路线讨论分开标示。',
+            },
           ],
         };
   }
@@ -961,15 +2194,38 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Aniimo 包含家園玩法和 RV 進度，但官方公開來源尚未提供完整逐級生產表或最佳建造順序。本頁記錄已確認功能，並與目前社群問題報告分開。',
           body: [
             { t: 'h', c: '家園與 RV 有哪些官方確認內容？' },
-            { t: 'table', head: ['功能', '核驗狀態'], rows: [['家園玩法', '官網將其列為首發福利與進度內容之一'], ['家園快捷入口', '1.1 版本新增'], ['控制器導覽', '1.1 版本改善家園控制器操作'], ['建造放置', '1.1 版本改善建造吸附顯示'], ['手機家園模型缺失', '9 月 30 日官方補丁標示已修正']] },
+            {
+              t: 'table',
+              head: ['功能', '核驗狀態'],
+              rows: [
+                ['家園玩法', '官網將其列為首發福利與進度內容之一'],
+                ['家園快捷入口', '1.1 版本新增'],
+                ['控制器導覽', '1.1 版本改善家園控制器操作'],
+                ['建造放置', '1.1 版本改善建造吸附顯示'],
+                ['手機家園模型缺失', '9 月 30 日官方補丁標示已修正'],
+              ],
+            },
             { t: 'h', c: '哪些內容尚未核驗？' },
-            { t: 'table', head: ['玩家問題', 'AniimoDex 狀態'], rows: [['最佳 RV 升級順序', '尚無已登記官方完整表格'], ['最佳生產建築優先級', '官方未公布推薦'], ['屋頂與布局限制', '尚無完整公開規格'], ['生產或裝飾消失', '除非官方確認，否則僅屬社群問題報告'], ['每棟建築的優先佇列', '社群功能建議，不是目前已確認功能']] },
+            {
+              t: 'table',
+              head: ['玩家問題', 'AniimoDex 狀態'],
+              rows: [
+                ['最佳 RV 升級順序', '尚無已登記官方完整表格'],
+                ['最佳生產建築優先級', '官方未公布推薦'],
+                ['屋頂與布局限制', '尚無完整公開規格'],
+                ['生產或裝飾消失', '除非官方確認，否則僅屬社群問題報告'],
+                ['每棟建築的優先佇列', '社群功能建議，不是目前已確認功能'],
+              ],
+            },
             { t: 'h', c: '家園顯示異常的安全排查' },
             { t: 'li', c: '透過官方啟動器或商店更新，並記錄客戶端版本。' },
             { t: 'li', c: '先離開再進入家園，不要立刻重建或刪除結構。' },
             { t: 'li', c: '以截圖或影片記錄 RV 等級、平台、伺服器、布局與缺失物件。' },
             { t: 'li', c: '官方支援確認前，不要花費資源重買可能只是未顯示的物件。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。完整進度與生產表只會使用官方規則或有文件記錄的目前版本實測。' },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 10 月 4 日。完整進度與生產表只會使用官方規則或有文件記錄的目前版本實測。',
+            },
           ],
         }
       : {
@@ -979,15 +2235,38 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Aniimo 包含家园玩法和 RV 进度，但官方公开来源尚未提供完整逐级生产表或最佳建造顺序。本页记录已确认功能，并与当前社区问题报告分开。',
           body: [
             { t: 'h', c: '家园与 RV 有哪些官方确认内容？' },
-            { t: 'table', head: ['功能', '核验状态'], rows: [['家园玩法', '官网将其列为首发福利与进度内容之一'], ['家园快捷入口', '1.1 版本新增'], ['手柄导航', '1.1 版本改善家园手柄操作'], ['建造放置', '1.1 版本改善建造吸附显示'], ['手机家园模型缺失', '9 月 30 日官方补丁标示已修复']] },
+            {
+              t: 'table',
+              head: ['功能', '核验状态'],
+              rows: [
+                ['家园玩法', '官网将其列为首发福利与进度内容之一'],
+                ['家园快捷入口', '1.1 版本新增'],
+                ['手柄导航', '1.1 版本改善家园手柄操作'],
+                ['建造放置', '1.1 版本改善建造吸附显示'],
+                ['手机家园模型缺失', '9 月 30 日官方补丁标示已修复'],
+              ],
+            },
             { t: 'h', c: '哪些内容尚未核验？' },
-            { t: 'table', head: ['玩家问题', 'AniimoDex 状态'], rows: [['最佳 RV 升级顺序', '尚无已登记官方完整表格'], ['最佳生产建筑优先级', '官方未公布推荐'], ['屋顶与布局限制', '尚无完整公开规格'], ['生产或装饰消失', '除非官方确认，否则仅属社区问题报告'], ['每栋建筑的优先队列', '社区功能建议，不是当前已确认功能']] },
+            {
+              t: 'table',
+              head: ['玩家问题', 'AniimoDex 状态'],
+              rows: [
+                ['最佳 RV 升级顺序', '尚无已登记官方完整表格'],
+                ['最佳生产建筑优先级', '官方未公布推荐'],
+                ['屋顶与布局限制', '尚无完整公开规格'],
+                ['生产或装饰消失', '除非官方确认，否则仅属社区问题报告'],
+                ['每栋建筑的优先队列', '社区功能建议，不是当前已确认功能'],
+              ],
+            },
             { t: 'h', c: '家园显示异常的安全排查' },
             { t: 'li', c: '通过官方启动器或商店更新，并记录客户端版本。' },
             { t: 'li', c: '先离开再进入家园，不要立即重建或删除结构。' },
             { t: 'li', c: '以截图或视频记录 RV 等级、平台、服务器、布局与缺失物件。' },
             { t: 'li', c: '官方支持确认前，不要花费资源重买可能只是未显示的物件。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。完整进度与生产表只会使用官方规则或有文件记录的当前版本实测。' },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 10 月 4 日。完整进度与生产表只会使用官方规则或有文件记录的当前版本实测。',
+            },
           ],
         };
   }
@@ -995,42 +2274,130 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
     return traditional
       ? {
           title: 'Aniimo 開發者答疑：Irisalis 潛能、閃耀色彩與帳號重綁',
-          subtitle: '整理官方對閃耀色彩切換、Irisalis 潛能、傳說 Aniipod、手機效能與 Steam、PSN、Xbox 重綁的答覆。',
+          subtitle:
+            '整理官方對閃耀色彩切換、Irisalis 潛能、傳說 Aniipod、手機效能與 Steam、PSN、Xbox 重綁的答覆。',
           tag: '開發者更新',
           lead: 'Aniimo Dev Dispatch Vol. 1 回應了多個玩家集中反映的問題。這些是官方公布的計畫和支援流程，但公告本身不代表每項遊戲改動已在目前客戶端生效。',
           body: [
             ...roadmapChecksBlocks(locale),
             { t: 'h', c: '官方公布狀態' },
-            { t: 'table', head: ['主題', '開發者公布內容', '目前證據邊界'], rows: [['閃耀色彩', '可在已解鎖色彩間切換，包括原始 Prismana Hue', '規劃中；未公布實裝日期'], ['Irisalis 潛能', '未來改為固定潛能值', '規劃中；尚未獨立確認目前客戶端已生效'], ['既有 Irisalis 補償', '高於固定值的潛能轉為 Starcryst Essence', '未公布換算規則與數量'], ['傳說 Aniipod', '規劃可用於既有 Sparkling Aniimo，取代原 Aniipod 並給予專屬效果', '規劃中；未公布實裝日期'], ['手機效能', '專門團隊處理卡頓與過熱', '未公布 ETA、裝置清單或量測結果'], ['客服', '正在改善團隊、系統與流程', '未承諾回覆時間']] },
+            {
+              t: 'table',
+              head: ['主題', '開發者公布內容', '目前證據邊界'],
+              rows: [
+                [
+                  '閃耀色彩',
+                  '可在已解鎖色彩間切換，包括原始 Prismana Hue',
+                  '規劃中；未公布實裝日期',
+                ],
+                ['Irisalis 潛能', '未來改為固定潛能值', '規劃中；尚未獨立確認目前客戶端已生效'],
+                [
+                  '既有 Irisalis 補償',
+                  '高於固定值的潛能轉為 Starcryst Essence',
+                  '未公布換算規則與數量',
+                ],
+                [
+                  '傳說 Aniipod',
+                  '規劃可用於既有 Sparkling Aniimo，取代原 Aniipod 並給予專屬效果',
+                  '規劃中；未公布實裝日期',
+                ],
+                ['手機效能', '專門團隊處理卡頓與過熱', '未公布 ETA、裝置清單或量測結果'],
+                ['客服', '正在改善團隊、系統與流程', '未承諾回覆時間'],
+              ],
+            },
             { t: 'h', c: 'Irisalis 固定潛能是多少？' },
-            { t: 'table', head: ['屬性', '公布數值'], rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']] },
-            { t: 'p', c: '官方表示，既有潛能超過上述數值的部分將轉為 Starcryst Essence。詳細規則尚未公布，不應自行估算補償數量。' },
+            {
+              t: 'table',
+              head: ['屬性', '公布數值'],
+              rows: [
+                ['ATK', '10'],
+                ['REGEN', '10'],
+                ['HP', '5'],
+                ['BREAK', '5'],
+                ['M.DEF', '5'],
+                ['P.DEF', '5'],
+              ],
+            },
+            {
+              t: 'p',
+              c: '官方表示，既有潛能超過上述數值的部分將轉為 Starcryst Essence。詳細規則尚未公布，不應自行估算補償數量。',
+            },
             { t: 'h', c: '如何申請 Steam、PSN 或 Xbox 帳號重綁？' },
-            { t: 'p', c: '依官方流程進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。' },
+            {
+              t: 'p',
+              c: '依官方流程進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。',
+            },
             { t: 'li', c: '先不要自行解除綁定、覆蓋角色或建立替代進度。' },
             { t: 'li', c: '客服確認前保留截圖與平台收據。' },
             { t: 'li', c: '重綁流程不等於官方確認通用跨平台存檔、購買或貨幣轉移。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 10 月 4 日。本頁記錄 10 月 1 日開發者答疑；規劃中的改動會保持「規劃中」標示，直到可獨立核驗已實裝。' },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 10 月 4 日。本頁記錄 10 月 1 日開發者答疑；規劃中的改動會保持「規劃中」標示，直到可獨立核驗已實裝。',
+            },
           ],
         }
       : {
           title: 'Aniimo 开发者答疑：Irisalis 潜能、闪耀色彩与账号重绑',
-          subtitle: '整理官方对闪耀色彩切换、Irisalis 潜能、传奇 Aniipod、手机性能与 Steam、PSN、Xbox 重绑的答复。',
+          subtitle:
+            '整理官方对闪耀色彩切换、Irisalis 潜能、传奇 Aniipod、手机性能与 Steam、PSN、Xbox 重绑的答复。',
           tag: '开发者更新',
           lead: 'Aniimo Dev Dispatch Vol. 1 回应了多个玩家集中反馈的问题。这些是官方公布的计划和支持流程，但公告本身不代表每项游戏改动已在当前客户端生效。',
           body: [
             ...roadmapChecksBlocks(locale),
             { t: 'h', c: '官方公布状态' },
-            { t: 'table', head: ['主题', '开发者公布内容', '当前证据边界'], rows: [['闪耀色彩', '可在已解锁色彩间切换，包括原始 Prismana Hue', '计划中；未公布实装日期'], ['Irisalis 潜能', '未来改为固定潜能值', '计划中；尚未独立确认当前客户端已生效'], ['现有 Irisalis 补偿', '高于固定值的潜能转为 Starcryst Essence', '未公布换算规则与数量'], ['传奇 Aniipod', '计划可用于现有 Sparkling Aniimo，替换原 Aniipod 并给予专属效果', '计划中；未公布实装日期'], ['手机性能', '专门团队处理卡顿与过热', '未公布 ETA、设备清单或测量结果'], ['客服', '正在改善团队、系统与流程', '未承诺回复时间']] },
+            {
+              t: 'table',
+              head: ['主题', '开发者公布内容', '当前证据边界'],
+              rows: [
+                [
+                  '闪耀色彩',
+                  '可在已解锁色彩间切换，包括原始 Prismana Hue',
+                  '计划中；未公布实装日期',
+                ],
+                ['Irisalis 潜能', '未来改为固定潜能值', '计划中；尚未独立确认当前客户端已生效'],
+                [
+                  '现有 Irisalis 补偿',
+                  '高于固定值的潜能转为 Starcryst Essence',
+                  '未公布换算规则与数量',
+                ],
+                [
+                  '传奇 Aniipod',
+                  '计划可用于现有 Sparkling Aniimo，替换原 Aniipod 并给予专属效果',
+                  '计划中；未公布实装日期',
+                ],
+                ['手机性能', '专门团队处理卡顿与过热', '未公布 ETA、设备清单或测量结果'],
+                ['客服', '正在改善团队、系统与流程', '未承诺回复时间'],
+              ],
+            },
             { t: 'h', c: 'Irisalis 固定潜能是多少？' },
-            { t: 'table', head: ['属性', '公布数值'], rows: [['ATK', '10'], ['REGEN', '10'], ['HP', '5'], ['BREAK', '5'], ['M.DEF', '5'], ['P.DEF', '5']] },
-            { t: 'p', c: '官方表示，现有潜能超过上述数值的部分将转为 Starcryst Essence。详细规则尚未公布，不应自行估算补偿数量。' },
+            {
+              t: 'table',
+              head: ['属性', '公布数值'],
+              rows: [
+                ['ATK', '10'],
+                ['REGEN', '10'],
+                ['HP', '5'],
+                ['BREAK', '5'],
+                ['M.DEF', '5'],
+                ['P.DEF', '5'],
+              ],
+            },
+            {
+              t: 'p',
+              c: '官方表示，现有潜能超过上述数值的部分将转为 Starcryst Essence。详细规则尚未公布，不应自行估算补偿数量。',
+            },
             { t: 'h', c: '如何申请 Steam、PSN 或 Xbox 账号重绑？' },
-            { t: 'p', c: '按官方流程进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。' },
+            {
+              t: 'p',
+              c: '按官方流程进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。',
+            },
             { t: 'li', c: '先不要自行解除绑定、覆盖角色或创建替代进度。' },
             { t: 'li', c: '客服确认前保留截图与平台收据。' },
             { t: 'li', c: '重绑流程不等于官方确认通用跨平台存档、购买或货币转移。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 10 月 4 日。本页记录 10 月 1 日开发者答疑；计划中的改动会保持“计划中”标示，直到可独立核验已实装。' },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 10 月 4 日。本页记录 10 月 1 日开发者答疑；计划中的改动会保持“计划中”标示，直到可独立核验已实装。',
+            },
           ],
         };
   }
@@ -1062,15 +2429,26 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               head: ['問題', '影響範圍', '官方處理方式或狀態'],
               rows: [
                 ['郵件領取獎勵異常', '部分玩家', '官方已列出問題；請查看遊戲內郵箱和最新公告'],
-                ['「星星與騎士」支線卡死', '部分 Android 裝置', '切換效能模式或關閉陰影，也可用右上角選項跳過劇情'],
+                [
+                  '「星星與騎士」支線卡死',
+                  '部分 Android 裝置',
+                  '切換效能模式或關閉陰影，也可用右上角選項跳過劇情',
+                ],
                 ['「月輝狐」地面特效異常', '部分情況', '官方已確認；未公布玩家處理方式'],
                 ['「聯結無界」獎勵無法點擊', '活動獎勵畫面', '點擊左側空白區域領取'],
-                ['PC 轉手機後無法領取「聯結無界」獎勵', 'PC 後立即手機登入', '重新登入一次即可恢復領取'],
+                [
+                  'PC 轉手機後無法領取「聯結無界」獎勵',
+                  'PC 後立即手機登入',
+                  '重新登入一次即可恢復領取',
+                ],
                 ['手機進入家園出現方塊或描邊', '手機家園入口', '官方標示已修正'],
               ],
             },
             { t: 'h', c: '9 月 29 日歷史補丁' },
-            { t: 'p', c: '1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後，模型貼圖變模糊的問題；也更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser\'s Departure 的展示影片和圖片，使其與遊戲內效果一致。該補丁未公布上方其他問題的通用新修正方式。' },
+            {
+              t: 'p',
+              c: "1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後，模型貼圖變模糊的問題；也更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser's Departure 的展示影片和圖片，使其與遊戲內效果一致。該補丁未公布上方其他問題的通用新修正方式。",
+            },
             { t: 'h', c: '登入、伺服器或連線問題' },
             {
               t: 'p',
@@ -1139,15 +2517,26 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               head: ['问题', '影响范围', '官方处理方式或状态'],
               rows: [
                 ['邮件领取奖励异常', '部分玩家', '官方已列出问题；请查看游戏内邮箱和最新公告'],
-                ['“星星与骑士”支线卡死', '部分 Android 设备', '切换性能模式或关闭阴影，也可用右上角选项跳过剧情'],
+                [
+                  '“星星与骑士”支线卡死',
+                  '部分 Android 设备',
+                  '切换性能模式或关闭阴影，也可用右上角选项跳过剧情',
+                ],
                 ['“月辉狐”地面特效异常', '部分情况', '官方已确认；未公布玩家处理方式'],
                 ['“联结无界”奖励无法点击', '活动奖励界面', '点击左侧空白区域领取'],
-                ['PC 转手机后无法领取“联结无界”奖励', 'PC 后立即手机登录', '重新登录一次即可恢复领取'],
+                [
+                  'PC 转手机后无法领取“联结无界”奖励',
+                  'PC 后立即手机登录',
+                  '重新登录一次即可恢复领取',
+                ],
                 ['手机进入家园出现方块或描边', '手机家园入口', '官方标示已修复'],
               ],
             },
             { t: 'h', c: '9 月 29 日历史补丁' },
-            { t: 'p', c: '1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；也更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser\'s Departure 的展示视频和图片，使其与游戏内效果一致。该补丁未公布上方其他问题的通用新修复方式。' },
+            {
+              t: 'p',
+              c: "1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；也更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser's Departure 的展示视频和图片，使其与游戏内效果一致。该补丁未公布上方其他问题的通用新修复方式。",
+            },
             { t: 'h', c: '登录、服务器或连接问题' },
             {
               t: 'p',
@@ -1195,7 +2584,8 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
     return traditional
       ? {
           title: 'Aniimo 1.1 版本更新：S1 活動、補償與新模式',
-          subtitle: '整理 9 月 23 日官方更新：維護補償、行動端上線、Irisalis、Egg Heist 混沌模式與 S1 活動。',
+          subtitle:
+            '整理 9 月 23 日官方更新：維護補償、行動端上線、Irisalis、Egg Heist 混沌模式與 S1 活動。',
           tag: '1.1 版本',
           lead: 'Aniimo 1.1 版本已於 2026 年 9 月 23 日完成維護。官方公告表示，伺服器在延遲 5 分鐘後已開放，並列出補償、行動端入口、S1 活動與新模式。',
           body: [
@@ -1250,15 +2640,25 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Companion Mode 邀請不再需要與朋友面對面站立。' },
             { t: 'li', c: '家園介面新增快捷入口，並改善控制器導覽與建造吸附顯示。' },
             { t: 'h', c: '9 月 29 日後續補丁' },
-            { t: 'p', c: '官方 1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後模型貼圖變模糊的問題；並更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser\'s Departure 的展示影片和圖片，使其與遊戲內效果一致。' },
+            {
+              t: 'p',
+              c: "官方 1.0.3616231.0 補丁修正 Irisalis 在使用 Transmog 切換至指定 Super Operation: Egg Heist 樣式後模型貼圖變模糊的問題；並更新 Legendary Aniipod: Irisalis 的取得通知圖示，以及 Windchaser's Departure 的展示影片和圖片，使其與遊戲內效果一致。",
+            },
             { t: 'h', c: '1.1 同步公告的問題處理方式' },
-            { t: 'p', c: 'Android「星星與騎士」支線卡死時，可切換效能模式、關閉陰影，或以右上角選項跳過劇情。PC 轉手機後無法領取「聯結無界」獎勵時，官方建議重新登入一次。' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 30 日。上述時間均使用 UTC+8；參與活動仍需滿足對應解鎖條件。' },
+            {
+              t: 'p',
+              c: 'Android「星星與騎士」支線卡死時，可切換效能模式、關閉陰影，或以右上角選項跳過劇情。PC 轉手機後無法領取「聯結無界」獎勵時，官方建議重新登入一次。',
+            },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 9 月 30 日。上述時間均使用 UTC+8；參與活動仍需滿足對應解鎖條件。',
+            },
           ],
         }
       : {
           title: 'Aniimo 1.1 版本更新：S1 活动、补偿与新模式',
-          subtitle: '整理 9 月 23 日官方更新：维护补偿、移动端上线、Irisalis、Egg Heist 混沌模式与 S1 活动。',
+          subtitle:
+            '整理 9 月 23 日官方更新：维护补偿、移动端上线、Irisalis、Egg Heist 混沌模式与 S1 活动。',
           tag: '1.1 版本',
           lead: 'Aniimo 1.1 版本已于 2026 年 9 月 23 日完成维护。官方公告表示，服务器在延迟 5 分钟后已开放，并列出补偿、移动端入口、S1 活动与新模式。',
           body: [
@@ -1313,10 +2713,19 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: 'Companion Mode 邀请不再需要与朋友面对面站立。' },
             { t: 'li', c: '家园界面新增快捷入口，并改善手柄导航与建造吸附显示。' },
             { t: 'h', c: '9 月 29 日后续补丁' },
-            { t: 'p', c: '官方 1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；并更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser\'s Departure 的展示视频和图片，使其与游戏内效果一致。' },
+            {
+              t: 'p',
+              c: "官方 1.0.3616231.0 补丁修复 Irisalis 在使用 Transmog 切换至指定 Super Operation: Egg Heist 样式后模型贴图变模糊的问题；并更新 Legendary Aniipod: Irisalis 的获取通知图标，以及 Windchaser's Departure 的展示视频和图片，使其与游戏内效果一致。",
+            },
             { t: 'h', c: '1.1 同步公告的问题处理方式' },
-            { t: 'p', c: 'Android“星星与骑士”支线卡死时，可切换性能模式、关闭阴影，或以右上角选项跳过剧情。PC 转手机后无法领取“联结无界”奖励时，官方建议重新登录一次。' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 30 日。上述时间均使用 UTC+8；参与活动仍需满足对应解锁条件。' },
+            {
+              t: 'p',
+              c: 'Android“星星与骑士”支线卡死时，可切换性能模式、关闭阴影，或以右上角选项跳过剧情。PC 转手机后无法领取“联结无界”奖励时，官方建议重新登录一次。',
+            },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 9 月 30 日。上述时间均使用 UTC+8；参与活动仍需满足对应解锁条件。',
+            },
           ],
         };
   }
@@ -1329,20 +2738,45 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: '官方曾處理進度遺失、獎勵領取和 PC 轉手機問題，但完整跨平台存檔與帳號轉移政策尚未公開。在換裝置、重裝或再次購買前，先保留證據並確認帳號、伺服器與角色。',
           body: [
             { t: 'h', c: 'Aniimo 進度看起來遺失時該怎麼做？' },
-            { t: 'p', c: '先不要覆蓋原有角色、解除帳號連結、反覆重裝或補買。記錄平台、地區、伺服器、角色名稱、最後正常登入時間、遊戲版本與錯誤訊息，保留商店收據和截圖，再透過官方支援處理帳號個案。' },
+            {
+              t: 'p',
+              c: '先不要覆蓋原有角色、解除帳號連結、反覆重裝或補買。記錄平台、地區、伺服器、角色名稱、最後正常登入時間、遊戲版本與錯誤訊息，保留商店收據和截圖，再透過官方支援處理帳號個案。',
+            },
             { t: 'h', c: '從 PC、主機或手機切換前' },
-            { t: 'table', head: ['檢查項目', '原因'], rows: [['帳號身分', '使用同一官方帳號，並先確認登入提示'], ['地區與伺服器', '不同地區或伺服器可能讓角色看起來不存在，不代表已被刪除'], ['角色選擇', '進入新手流程或建立新角色前，先確認原角色'], ['客戶端版本', '先透過官方啟動器或商店更新，再判斷同步問題'], ['購買紀錄', '保留商店收據；交付狀態不明時不要重複購買']] },
+            {
+              t: 'table',
+              head: ['檢查項目', '原因'],
+              rows: [
+                ['帳號身分', '使用同一官方帳號，並先確認登入提示'],
+                ['地區與伺服器', '不同地區或伺服器可能讓角色看起來不存在，不代表已被刪除'],
+                ['角色選擇', '進入新手流程或建立新角色前，先確認原角色'],
+                ['客戶端版本', '先透過官方啟動器或商店更新，再判斷同步問題'],
+                ['購買紀錄', '保留商店收據；交付狀態不明時不要重複購買'],
+              ],
+            },
             { t: 'h', c: 'Aniimo 已官方確認跨平台存檔嗎？' },
-            { t: 'p', c: '尚未。本站已登記官方來源沒有完整的跨平台存檔、進度共享或付費貨幣轉移矩陣。跨平台多人不代表存檔、獎勵、成就或購買一定能在 PC、主機與手機間轉移。' },
+            {
+              t: 'p',
+              c: '尚未。本站已登記官方來源沒有完整的跨平台存檔、進度共享或付費貨幣轉移矩陣。跨平台多人不代表存檔、獎勵、成就或購買一定能在 PC、主機與手機間轉移。',
+            },
             { t: 'h', c: 'PC 轉手機後無法領獎，官方有什麼說明？' },
-            { t: 'p', c: '9 月 23 日官方更新表示，先在 PC 登入又立刻在手機登入而無法領取「聯結無界」獎勵時，可重新登入一次。這只是獎勵領取處理方式，不等於已確認所有跨平台存檔或帳號轉移。' },
+            {
+              t: 'p',
+              c: '9 月 23 日官方更新表示，先在 PC 登入又立刻在手機登入而無法領取「聯結無界」獎勵時，可重新登入一次。這只是獎勵領取處理方式，不等於已確認所有跨平台存檔或帳號轉移。',
+            },
             { t: 'h', c: '遇到斷線、黑屏或紅屏怎麼辦？' },
-            { t: 'p', c: '官方補丁確認過頻繁斷線與重新連線，以及黑屏、紅屏報告。黑屏時，更新顯示卡驅動、在 DX11 和 DX12 間切換，並在登入畫面關閉 DLSS 和畫格生成；紅屏暫時可切換到效能模式。這些步驟處理畫面與連線問題，不是帳號或進度復原保證。' },
+            {
+              t: 'p',
+              c: '官方補丁確認過頻繁斷線與重新連線，以及黑屏、紅屏報告。黑屏時，更新顯示卡驅動、在 DX11 和 DX12 間切換，並在登入畫面關閉 DLSS 和畫格生成；紅屏暫時可切換到效能模式。這些步驟處理畫面與連線問題，不是帳號或進度復原保證。',
+            },
             { t: 'h', c: '有效的支援回報應包含什麼？' },
             { t: 'li', c: '平台、商店帳號、地區、伺服器、角色名稱與遊戲版本' },
             { t: 'li', c: '問題開始時間、完整錯誤文字與可重現步驟' },
             { t: 'li', c: '截圖或影片；涉及獎勵或購買時附原始收據' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。此頁不會宣稱某個操作必定恢復進度，因為處理結果取決於帳號個案與官方核驗。' },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 9 月 28 日。此頁不會宣稱某個操作必定恢復進度，因為處理結果取決於帳號個案與官方核驗。',
+            },
           ],
         }
       : {
@@ -1352,20 +2786,45 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: '官方曾处理进度丢失、奖励领取和 PC 转手机问题，但完整跨平台存档与账号转移政策尚未公开。在换设备、重装或再次购买前，先保留证据并确认账号、服务器与角色。',
           body: [
             { t: 'h', c: 'Aniimo 进度看起来丢失时该怎么做？' },
-            { t: 'p', c: '先不要覆盖原有角色、解除账号绑定、反复重装或补买。记录平台、地区、服务器、角色名称、最后正常登录时间、游戏版本与错误信息，保留商店收据和截图，再通过官方支持处理账号个案。' },
+            {
+              t: 'p',
+              c: '先不要覆盖原有角色、解除账号绑定、反复重装或补买。记录平台、地区、服务器、角色名称、最后正常登录时间、游戏版本与错误信息，保留商店收据和截图，再通过官方支持处理账号个案。',
+            },
             { t: 'h', c: '从 PC、主机或手机切换前' },
-            { t: 'table', head: ['检查项目', '原因'], rows: [['账号身份', '使用同一官方账号，并先确认登录提示'], ['地区与服务器', '不同地区或服务器可能让角色看起来不存在，不代表已被删除'], ['角色选择', '进入新手流程或创建新角色前，先确认原角色'], ['客户端版本', '先通过官方启动器或商店更新，再判断同步问题'], ['购买记录', '保留商店收据；交付状态不明时不要重复购买']] },
+            {
+              t: 'table',
+              head: ['检查项目', '原因'],
+              rows: [
+                ['账号身份', '使用同一官方账号，并先确认登录提示'],
+                ['地区与服务器', '不同地区或服务器可能让角色看起来不存在，不代表已被删除'],
+                ['角色选择', '进入新手流程或创建新角色前，先确认原角色'],
+                ['客户端版本', '先通过官方启动器或商店更新，再判断同步问题'],
+                ['购买记录', '保留商店收据；交付状态不明时不要重复购买'],
+              ],
+            },
             { t: 'h', c: 'Aniimo 已官方确认跨平台存档吗？' },
-            { t: 'p', c: '尚未。本站已登记官方来源没有完整的跨平台存档、进度共享或付费货币转移矩阵。跨平台多人不代表存档、奖励、成就或购买一定能在 PC、主机与手机间转移。' },
+            {
+              t: 'p',
+              c: '尚未。本站已登记官方来源没有完整的跨平台存档、进度共享或付费货币转移矩阵。跨平台多人不代表存档、奖励、成就或购买一定能在 PC、主机与手机间转移。',
+            },
             { t: 'h', c: 'PC 转手机后无法领奖，官方有什么说明？' },
-            { t: 'p', c: '9 月 23 日官方更新表示，先在 PC 登录又立刻在手机登录而无法领取“联结无界”奖励时，可重新登录一次。这只是奖励领取处理方式，不等于已确认所有跨平台存档或账号转移。' },
+            {
+              t: 'p',
+              c: '9 月 23 日官方更新表示，先在 PC 登录又立刻在手机登录而无法领取“联结无界”奖励时，可重新登录一次。这只是奖励领取处理方式，不等于已确认所有跨平台存档或账号转移。',
+            },
             { t: 'h', c: '遇到断线、黑屏或红屏怎么办？' },
-            { t: 'p', c: '官方补丁确认过频繁断线与重新连接，以及黑屏、红屏报告。黑屏时，更新显卡驱动、在 DX11 和 DX12 间切换，并在登录画面关闭 DLSS 和帧生成；红屏暂时可切换到性能模式。这些步骤处理画面与连接问题，不是账号或进度恢复保证。' },
+            {
+              t: 'p',
+              c: '官方补丁确认过频繁断线与重新连接，以及黑屏、红屏报告。黑屏时，更新显卡驱动、在 DX11 和 DX12 间切换，并在登录画面关闭 DLSS 和帧生成；红屏暂时可切换到性能模式。这些步骤处理画面与连接问题，不是账号或进度恢复保证。',
+            },
             { t: 'h', c: '有效的支持回报应包含什么？' },
             { t: 'li', c: '平台、商店账号、地区、服务器、角色名称与游戏版本' },
             { t: 'li', c: '问题开始时间、完整错误文字与可重现步骤' },
             { t: 'li', c: '截图或视频；涉及奖励或购买时附原始收据' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。此页不会宣称某个操作必定恢复进度，因为处理结果取决于账号个案与官方核验。' },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 9 月 28 日。此页不会宣称某个操作必定恢复进度，因为处理结果取决于账号个案与官方核验。',
+            },
           ],
         };
   }
@@ -1378,19 +2837,47 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Holo-Battle Interlink 是 Aniimo 1.1 新增的循環戰鬥玩法。官方已確認每週開放時間、解鎖條件、三條路線、4 人組隊選項與星級獎勵結構，但尚未公布最佳隊伍、路線強度或完整獎勵數值。',
           body: [
             { t: 'h', c: 'Holo-Battle Interlink 什麼時候開放？' },
-            { t: 'table', head: ['項目', '官方狀態'], rows: [['開放時間', '每週四 04:00 至週一 03:59（UTC+8）'], ['解鎖條件', '達到 Trailblazer I'], ['組隊方式', '4 人組隊或與 AI 隊友配對'], ['每期路線', '3 條不同路線'], ['重玩', '每條路線均可自由重玩']] },
+            {
+              t: 'table',
+              head: ['項目', '官方狀態'],
+              rows: [
+                ['開放時間', '每週四 04:00 至週一 03:59（UTC+8）'],
+                ['解鎖條件', '達到 Trailblazer I'],
+                ['組隊方式', '4 人組隊或與 AI 隊友配對'],
+                ['每期路線', '3 條不同路線'],
+                ['重玩', '每條路線均可自由重玩'],
+              ],
+            },
             { t: 'h', c: 'Holo-Battle Interlink 是什麼玩法？' },
-            { t: 'p', c: '官方將它描述為 Battle Art 模擬的 Alpha 遭遇戰，重現高威脅伊莫的歷史資料。每條路線都有不同 Alpha 與環境機制；開戰前可選擇伊莫陣容與增益效果，4 人合作時由隊長選擇增益。' },
+            {
+              t: 'p',
+              c: '官方將它描述為 Battle Art 模擬的 Alpha 遭遇戰，重現高威脅伊莫的歷史資料。每條路線都有不同 Alpha 與環境機制；開戰前可選擇伊莫陣容與增益效果，4 人合作時由隊長選擇增益。',
+            },
             { t: 'h', c: '星級獎勵怎麼計算？' },
-            { t: 'p', c: '系統分別記錄三條路線的最高星級，三條路線的合計星數會解鎖里程碑獎勵。協助其他玩家提升星級還可獲得 Support Rewards。星級獎勵與協助獎勵均每週重置。' },
+            {
+              t: 'p',
+              c: '系統分別記錄三條路線的最高星級，三條路線的合計星數會解鎖里程碑獎勵。協助其他玩家提升星級還可獲得 Support Rewards。星級獎勵與協助獎勵均每週重置。',
+            },
             { t: 'h', c: '哪些內容官方尚未公布？' },
-            { t: 'table', head: ['項目', 'AniimoDex 狀態'], rows: [['最佳隊伍或配裝', '沒有可記錄的實測前不發布'], ['路線強度或傷害門檻', '官方公告未公布'], ['里程碑與協助獎勵的具體數值', '官方公告未公布'], ['當前 Alpha 清單', '請以遊戲內當期內容為準，不假定固定清單']] },
+            {
+              t: 'table',
+              head: ['項目', 'AniimoDex 狀態'],
+              rows: [
+                ['最佳隊伍或配裝', '沒有可記錄的實測前不發布'],
+                ['路線強度或傷害門檻', '官方公告未公布'],
+                ['里程碑與協助獎勵的具體數值', '官方公告未公布'],
+                ['當前 Alpha 清單', '請以遊戲內當期內容為準，不假定固定清單'],
+              ],
+            },
             { t: 'h', c: '參加前應確認什麼？' },
             { t: 'li', c: '確認已達 Trailblazer I，且 UTC+8 時間在每週開放窗口內' },
             { t: 'li', c: '選擇路線後查看當期顯示的環境機制' },
             { t: 'li', c: '合作時先確認隊長的增益選擇' },
             { t: 'li', c: '在每週重置前記錄各路線的最高星級' },
-            { t: 'quote', c: '官方來源最後核驗：2026 年 9 月 28 日。時間使用 UTC+8；只有在官方公告或可重現的當前版本記錄存在時，才會補充當期細節。' },
+            {
+              t: 'quote',
+              c: '官方來源最後核驗：2026 年 9 月 28 日。時間使用 UTC+8；只有在官方公告或可重現的當前版本記錄存在時，才會補充當期細節。',
+            },
           ],
         }
       : {
@@ -1400,19 +2887,47 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Holo-Battle Interlink 是 Aniimo 1.1 新增的循环战斗玩法。官方已确认每周开放时间、解锁条件、三条路线、4 人组队选项与星级奖励结构，但尚未公布最佳队伍、路线强度或完整奖励数值。',
           body: [
             { t: 'h', c: 'Holo-Battle Interlink 什么时候开放？' },
-            { t: 'table', head: ['项目', '官方状态'], rows: [['开放时间', '每周四 04:00 至周一 03:59（UTC+8）'], ['解锁条件', '达到 Trailblazer I'], ['组队方式', '4 人组队或与 AI 队友匹配'], ['每期路线', '3 条不同路线'], ['重玩', '每条路线均可自由重玩']] },
+            {
+              t: 'table',
+              head: ['项目', '官方状态'],
+              rows: [
+                ['开放时间', '每周四 04:00 至周一 03:59（UTC+8）'],
+                ['解锁条件', '达到 Trailblazer I'],
+                ['组队方式', '4 人组队或与 AI 队友匹配'],
+                ['每期路线', '3 条不同路线'],
+                ['重玩', '每条路线均可自由重玩'],
+              ],
+            },
             { t: 'h', c: 'Holo-Battle Interlink 是什么玩法？' },
-            { t: 'p', c: '官方将它描述为 Battle Art 模拟的 Alpha 遭遇战，重现高威胁伊莫的历史资料。每条路线都有不同 Alpha 与环境机制；开战前可选择伊莫阵容与增益效果，4 人合作时由队长选择增益。' },
+            {
+              t: 'p',
+              c: '官方将它描述为 Battle Art 模拟的 Alpha 遭遇战，重现高威胁伊莫的历史资料。每条路线都有不同 Alpha 与环境机制；开战前可选择伊莫阵容与增益效果，4 人合作时由队长选择增益。',
+            },
             { t: 'h', c: '星级奖励怎么计算？' },
-            { t: 'p', c: '系统分别记录三条路线的最高星级，三条路线的合计星数会解锁里程碑奖励。协助其他玩家提升星级还可获得 Support Rewards。星级奖励与协助奖励均每周重置。' },
+            {
+              t: 'p',
+              c: '系统分别记录三条路线的最高星级，三条路线的合计星数会解锁里程碑奖励。协助其他玩家提升星级还可获得 Support Rewards。星级奖励与协助奖励均每周重置。',
+            },
             { t: 'h', c: '哪些内容官方尚未公布？' },
-            { t: 'table', head: ['项目', 'AniimoDex 状态'], rows: [['最佳队伍或配装', '没有可记录的实测前不发布'], ['路线强度或伤害门槛', '官方公告未公布'], ['里程碑与协助奖励的具体数值', '官方公告未公布'], ['当前 Alpha 清单', '请以游戏内当期内容为准，不假定固定清单']] },
+            {
+              t: 'table',
+              head: ['项目', 'AniimoDex 状态'],
+              rows: [
+                ['最佳队伍或配装', '没有可记录的实测前不发布'],
+                ['路线强度或伤害门槛', '官方公告未公布'],
+                ['里程碑与协助奖励的具体数值', '官方公告未公布'],
+                ['当前 Alpha 清单', '请以游戏内当期内容为准，不假定固定清单'],
+              ],
+            },
             { t: 'h', c: '参加前应确认什么？' },
             { t: 'li', c: '确认已达 Trailblazer I，且 UTC+8 时间在每周开放窗口内' },
             { t: 'li', c: '选择路线后查看当期显示的环境机制' },
             { t: 'li', c: '合作时先确认队长的增益选择' },
             { t: 'li', c: '在每周重置前记录各路线的最高星级' },
-            { t: 'quote', c: '官方来源最后核验：2026 年 9 月 28 日。时间使用 UTC+8；只有在官方公告或可复现的当前版本记录存在时，才会补充当期细节。' },
+            {
+              t: 'quote',
+              c: '官方来源最后核验：2026 年 9 月 28 日。时间使用 UTC+8；只有在官方公告或可复现的当前版本记录存在时，才会补充当期细节。',
+            },
           ],
         };
   }
@@ -1425,21 +2940,67 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: '10 月 13 日時間表狀態：魅樂薇與摩托郎的公告窗口均已結束，摩托郎截止為 10 月 12 日 03:59（UTC+8）。尚未核驗接檔活動；下文保留歷史來源核對日期，即時開放狀態請看遊戲內公告。',
           body: [
             { t: 'h', c: '10 月 11 日核對的官方 Prismana 活動時間表' },
-            { t: 'table', head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'], rows: [['已結束：9/28 04:00 - 10/5 03:59', '玫瑰塔林 / Rosetower Woods', '魅樂薇 / Melloblum', '達到 Student II'], ['10/5 04:00 - 10/12 03:59；到時截止', '青石台 / Berylline Vale', '摩托郎 / Waleetle', '達到 Student II']] },
+            {
+              t: 'table',
+              head: ['活動時間（UTC+8）', '區域', '官方點名的 Prismana Form 伊莫', '參與條件'],
+              rows: [
+                [
+                  '已結束：9/28 04:00 - 10/5 03:59',
+                  '玫瑰塔林 / Rosetower Woods',
+                  '魅樂薇 / Melloblum',
+                  '達到 Student II',
+                ],
+                [
+                  '10/5 04:00 - 10/12 03:59；到時截止',
+                  '青石台 / Berylline Vale',
+                  '摩托郎 / Waleetle',
+                  '達到 Student II',
+                ],
+              ],
+            },
             { t: 'h', c: '其他已公布的活動窗口' },
-            { t: 'table', head: ['活動', '公告時間（UTC+8）', '條件 / 10 月 11 日核對狀態'], rows: [['旅途拾光 / Journey Chronicles', '10/1 04:00 - 10/29 03:59', 'Student I；公告期內累計登入獎勵'], ['彩虹鳶尾傳奇旅途 / Irisalis', '9/25 10:00 - 12/10 07:59', 'Student I；每週限量花瓣'], ['華麗之星', '9/25 04:00 - 10/2 03:59', '已結束'], ['伊莫大發現', '9/25 04:00 - 10/9 03:59', '已結束；未使用的免費搜尋次數不累積']] },
+            {
+              t: 'table',
+              head: ['活動', '公告時間（UTC+8）', '條件 / 10 月 11 日核對狀態'],
+              rows: [
+                [
+                  '旅途拾光 / Journey Chronicles',
+                  '10/1 04:00 - 10/29 03:59',
+                  'Student I；公告期內累計登入獎勵',
+                ],
+                [
+                  '彩虹鳶尾傳奇旅途 / Irisalis',
+                  '9/25 10:00 - 12/10 07:59',
+                  'Student I；每週限量花瓣',
+                ],
+                ['華麗之星', '9/25 04:00 - 10/2 03:59', '已結束'],
+                ['伊莫大發現', '9/25 04:00 - 10/9 03:59', '已結束；未使用的免費搜尋次數不累積'],
+              ],
+            },
             { t: 'h', c: 'Vein Abundance 是什麼？' },
-            { t: 'p', c: '官方 1.1 公告表示，Vein 能量湧現時，指定區域會在限時內出現特別 Prismana Form 伊莫。公告列出上述時間、區域和主打伊莫，但未公布地圖座標、遇見頻率或保證捕獲結果。' },
+            {
+              t: 'p',
+              c: '官方 1.1 公告表示，Vein 能量湧現時，指定區域會在限時內出現特別 Prismana Form 伊莫。公告列出上述時間、區域和主打伊莫，但未公布地圖座標、遇見頻率或保證捕獲結果。',
+            },
             { t: 'h', c: '怎麼使用這張追蹤表？' },
             { t: 'li', c: '先確認目前 UTC+8 時間位於對應活動窗口內' },
             { t: 'li', c: '前往指定區域前先達到 Student II' },
             { t: 'li', c: '即時地圖標記或規則變動以遊戲內活動公告為準' },
             { t: 'li', c: '社群座標、刷取路線與機率說法在可重現前均視為未證實' },
             { t: 'h', c: '這和 Prismana、閃耀樣式有什麼不同？' },
-            { t: 'p', c: '本頁追蹤的是限時活動中點名的 Prismana Form 伊莫。Prismana 形態與閃耀樣式在 AniimoDex 資料中是不同系統；活動出現不代表閃耀結果、數值變化或保證捕獲。' },
+            {
+              t: 'p',
+              c: '本頁追蹤的是限時活動中點名的 Prismana Form 伊莫。Prismana 形態與閃耀樣式在 AniimoDex 資料中是不同系統；活動出現不代表閃耀結果、數值變化或保證捕獲。',
+            },
             { t: 'h', c: '活動結束後會怎樣？' },
-            { t: 'p', c: '即使本靜態頁尚未更新，超過表列截止時間也應視為該窗口已結束。時間表是官方公告的日期記錄，不是即時監控，也不代表主打伊莫永久可取得；後續活動需新的已核驗官方公告。' },
-            { t: 'quote', c: '活動來源最後核驗：2026 年 10 月 11 日。時間均為 UTC+8，依據 9 月 23 日 1.1 公告；此為時間表快照，不是實測即時開放狀態，請以截止時間和遊戲內公告為準。' },
+            {
+              t: 'p',
+              c: '即使本靜態頁尚未更新，超過表列截止時間也應視為該窗口已結束。時間表是官方公告的日期記錄，不是即時監控，也不代表主打伊莫永久可取得；後續活動需新的已核驗官方公告。',
+            },
+            {
+              t: 'quote',
+              c: '活動來源最後核驗：2026 年 10 月 11 日。時間均為 UTC+8，依據 9 月 23 日 1.1 公告；此為時間表快照，不是實測即時開放狀態，請以截止時間和遊戲內公告為準。',
+            },
           ],
         }
       : {
@@ -1449,21 +3010,67 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: '10 月 13 日时间表状态：魅乐薇与摩托郎的公告窗口均已结束，摩托郎截止为 10 月 12 日 03:59（UTC+8）。尚未核验接档活动；下文保留历史来源核对日期，即时开放状态请看游戏内公告。',
           body: [
             { t: 'h', c: '10 月 11 日核对的官方 Prismana 活动时间表' },
-            { t: 'table', head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'], rows: [['已结束：9/28 04:00 - 10/5 03:59', '玫瑰塔林 / Rosetower Woods', '魅乐薇 / Melloblum', '达到 Student II'], ['10/5 04:00 - 10/12 03:59；到时截止', '青石台 / Berylline Vale', '摩托郎 / Waleetle', '达到 Student II']] },
+            {
+              t: 'table',
+              head: ['活动时间（UTC+8）', '区域', '官方点名的 Prismana Form 伊莫', '参与条件'],
+              rows: [
+                [
+                  '已结束：9/28 04:00 - 10/5 03:59',
+                  '玫瑰塔林 / Rosetower Woods',
+                  '魅乐薇 / Melloblum',
+                  '达到 Student II',
+                ],
+                [
+                  '10/5 04:00 - 10/12 03:59；到时截止',
+                  '青石台 / Berylline Vale',
+                  '摩托郎 / Waleetle',
+                  '达到 Student II',
+                ],
+              ],
+            },
             { t: 'h', c: '其他已公布的活动窗口' },
-            { t: 'table', head: ['活动', '公告时间（UTC+8）', '条件 / 10 月 11 日核对状态'], rows: [['旅途拾光 / Journey Chronicles', '10/1 04:00 - 10/29 03:59', 'Student I；公告期内累计登录奖励'], ['彩虹鸢尾传奇旅途 / Irisalis', '9/25 10:00 - 12/10 07:59', 'Student I；每周限量花瓣'], ['华丽之星', '9/25 04:00 - 10/2 03:59', '已结束'], ['伊莫大发现', '9/25 04:00 - 10/9 03:59', '已结束；未使用的免费搜索次数不累积']] },
+            {
+              t: 'table',
+              head: ['活动', '公告时间（UTC+8）', '条件 / 10 月 11 日核对状态'],
+              rows: [
+                [
+                  '旅途拾光 / Journey Chronicles',
+                  '10/1 04:00 - 10/29 03:59',
+                  'Student I；公告期内累计登录奖励',
+                ],
+                [
+                  '彩虹鸢尾传奇旅途 / Irisalis',
+                  '9/25 10:00 - 12/10 07:59',
+                  'Student I；每周限量花瓣',
+                ],
+                ['华丽之星', '9/25 04:00 - 10/2 03:59', '已结束'],
+                ['伊莫大发现', '9/25 04:00 - 10/9 03:59', '已结束；未使用的免费搜索次数不累积'],
+              ],
+            },
             { t: 'h', c: 'Vein Abundance 是什么？' },
-            { t: 'p', c: '官方 1.1 公告表示，Vein 能量涌现时，指定区域会在限时内出现特别 Prismana Form 伊莫。公告列出上述时间、区域和主打伊莫，但未公布地图坐标、遇见频率或保证捕获结果。' },
+            {
+              t: 'p',
+              c: '官方 1.1 公告表示，Vein 能量涌现时，指定区域会在限时内出现特别 Prismana Form 伊莫。公告列出上述时间、区域和主打伊莫，但未公布地图坐标、遇见频率或保证捕获结果。',
+            },
             { t: 'h', c: '怎么使用这张追踪表？' },
             { t: 'li', c: '先确认当前 UTC+8 时间位于对应活动窗口内' },
             { t: 'li', c: '前往指定区域前先达到 Student II' },
             { t: 'li', c: '即时地图标记或规则变动以游戏内活动公告为准' },
             { t: 'li', c: '社区坐标、刷取路线与概率说法在可复现前均视为未证实' },
             { t: 'h', c: '这和 Prismana、闪耀样式有什么不同？' },
-            { t: 'p', c: '本页追踪的是限时活动中点名的 Prismana Form 伊莫。Prismana 形态与闪耀样式在 AniimoDex 数据中是不同系统；活动出现不代表闪耀结果、数值变化或保证捕获。' },
+            {
+              t: 'p',
+              c: '本页追踪的是限时活动中点名的 Prismana Form 伊莫。Prismana 形态与闪耀样式在 AniimoDex 数据中是不同系统；活动出现不代表闪耀结果、数值变化或保证捕获。',
+            },
             { t: 'h', c: '活动结束后会怎样？' },
-            { t: 'p', c: '即使本静态页尚未更新，超过表列截止时间也应视为该窗口已结束。时间表是官方公告的日期记录，不是实时监控，也不代表主打伊莫永久可获得；后续活动需新的已核验官方公告。' },
-            { t: 'quote', c: '活动来源最后核验：2026 年 10 月 11 日。时间均为 UTC+8，依据 9 月 23 日 1.1 公告；此为时间表快照，不是实测实时开放状态，请以截止时间和游戏内公告为准。' },
+            {
+              t: 'p',
+              c: '即使本静态页尚未更新，超过表列截止时间也应视为该窗口已结束。时间表是官方公告的日期记录，不是实时监控，也不代表主打伊莫永久可获得；后续活动需新的已核验官方公告。',
+            },
+            {
+              t: 'quote',
+              c: '活动来源最后核验：2026 年 10 月 11 日。时间均为 UTC+8，依据 9 月 23 日 1.1 公告；此为时间表快照，不是实测实时开放状态，请以截止时间和游戏内公告为准。',
+            },
           ],
         };
   }
@@ -1615,75 +3222,353 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
 function octoberFeedbackBlocks(locale: string, slug: string): LaunchGuideBlock[] {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
-  const text = (englishText: string, simplified: string, traditionalText: string) => en ? englishText : traditional ? traditionalText : simplified;
+  const text = (englishText: string, simplified: string, traditionalText: string) =>
+    en ? englishText : traditional ? traditionalText : simplified;
   const damage: LaunchGuideBlock[] = [
-    { t: 'h', c: text('Why does more ATK sometimes give the same damage?', '为什么增加攻击，伤害却可能不变？', '為什麼增加攻擊，傷害卻可能不變？') },
-    { t: 'p', c: text('The October 13 developer explanation describes a damage-calculation safeguard for non-DPS Aniimo: at low ATK, an ATK boost is calculated from level, or from BREAK for BREAK Aniimo. Below the guaranteed minimum, raising displayed ATK may not immediately raise damage. This is not a rule for every Aniimo, nor proof that ATK is useless.', '10 月 13 日官方解释：非输出定位伊莫在低攻击时，伤害计算会按等级补足攻击；BREAK 定位则涉及 BREAK 属性。低于保底值时，提高面板攻击可能不会立刻提高伤害。这不适用于所有伊莫，也不代表攻击属性无用。', '10 月 13 日官方解釋：非輸出定位伊莫在低攻擊時，傷害計算會按等級補足攻擊；BREAK 定位則涉及 BREAK 屬性。低於保底值時，提高面板攻擊可能不會立刻提高傷害。這不適用於所有伊莫，也不代表攻擊屬性無用。') },
-    { t: 'p', c: text('The post announces a version 1.1 refinement intended to make ATK increases affect damage more directly. It is a plan in this source, not a verified deployed fix. No full formula or thresholds are published here; this explanation cannot establish an optimal build, exact allocation or calculator.', '该公告计划在 1.1 调整计算，使攻击提升更直接影响伤害；本来源中的表述是计划，不是已核验上线的修复。未公布完整公式与阈值，不能据此计算最优配装或精确加点。', '該公告計畫在 1.1 調整計算，使攻擊提升更直接影響傷害；本來源中的表述是計畫，不是已核驗上線的修正。未公布完整公式與閾值，不能據此計算最優配裝或精確加點。') },
+    {
+      t: 'h',
+      c: text(
+        'Why does more ATK sometimes give the same damage?',
+        '为什么增加攻击，伤害却可能不变？',
+        '為什麼增加攻擊，傷害卻可能不變？'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'The October 13 developer explanation describes a damage-calculation safeguard for non-DPS Aniimo: at low ATK, an ATK boost is calculated from level, or from BREAK for BREAK Aniimo. Below the guaranteed minimum, raising displayed ATK may not immediately raise damage. This is not a rule for every Aniimo, nor proof that ATK is useless.',
+        '10 月 13 日官方解释：非输出定位伊莫在低攻击时，伤害计算会按等级补足攻击；BREAK 定位则涉及 BREAK 属性。低于保底值时，提高面板攻击可能不会立刻提高伤害。这不适用于所有伊莫，也不代表攻击属性无用。',
+        '10 月 13 日官方解釋：非輸出定位伊莫在低攻擊時，傷害計算會按等級補足攻擊；BREAK 定位則涉及 BREAK 屬性。低於保底值時，提高面板攻擊可能不會立刻提高傷害。這不適用於所有伊莫，也不代表攻擊屬性無用。'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'The post announces a version 1.1 refinement intended to make ATK increases affect damage more directly. It is a plan in this source, not a verified deployed fix. No full formula or thresholds are published here; this explanation cannot establish an optimal build, exact allocation or calculator.',
+        '该公告计划在 1.1 调整计算，使攻击提升更直接影响伤害；本来源中的表述是计划，不是已核验上线的修复。未公布完整公式与阈值，不能据此计算最优配装或精确加点。',
+        '該公告計畫在 1.1 調整計算，使攻擊提升更直接影響傷害；本來源中的表述是計畫，不是已核驗上線的修正。未公布完整公式與閾值，不能據此計算最優配裝或精確加點。'
+      ),
+    },
   ];
   const investigation: LaunchGuideBlock[] = [
-    { t: 'h', c: text('October 13: investigated reports are not completed fixes', '10 月 13 日：调查中的反馈不是已完成修复', '10 月 13 日：調查中的回饋不是已完成修正') },
-    { t: 'p', c: text('The developer says Aniimo and Chest spawn probabilities have not received numerical changes, while spawn, combat disengagement and aggro reports are being investigated. This is the developer statement, not an independent test or confirmation that every reported symptom is a bug. Rescue improvements and Chaos Mode changes are planned, with no delivery date in this notice.', '官方表示未调整伊莫或宝箱刷新概率数值，同时正在调查刷新、脱战和仇恨反馈。这是开发者声明，不是本站实测，也不代表每种现象都已确认为 Bug。救援体验与混沌模式改进仍属计划，本公告未给出实装日期。', '官方表示未調整伊莫或寶箱刷新機率數值，同時正在調查刷新、脫戰和仇恨回饋。這是開發者聲明，不是本站實測，也不代表每種現象都已確認為 Bug。救援體驗與混沌模式改進仍屬計畫，本公告未給出實裝日期。') },
+    {
+      t: 'h',
+      c: text(
+        'October 13: investigated reports are not completed fixes',
+        '10 月 13 日：调查中的反馈不是已完成修复',
+        '10 月 13 日：調查中的回饋不是已完成修正'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'The developer says Aniimo and Chest spawn probabilities have not received numerical changes, while spawn, combat disengagement and aggro reports are being investigated. This is the developer statement, not an independent test or confirmation that every reported symptom is a bug. Rescue improvements and Chaos Mode changes are planned, with no delivery date in this notice.',
+        '官方表示未调整伊莫或宝箱刷新概率数值，同时正在调查刷新、脱战和仇恨反馈。这是开发者声明，不是本站实测，也不代表每种现象都已确认为 Bug。救援体验与混沌模式改进仍属计划，本公告未给出实装日期。',
+        '官方表示未調整伊莫或寶箱刷新機率數值，同時正在調查刷新、脫戰和仇恨回饋。這是開發者聲明，不是本站實測，也不代表每種現象都已確認為 Bug。救援體驗與混沌模式改進仍屬計畫，本公告未給出實裝日期。'
+      ),
+    },
   ];
   const egg: LaunchGuideBlock[] = [
     ...investigation,
-    { t: 'h', c: text('Why do more Aniimo appear during a Sanctum run?', '为什么圣所探索途中会出现更多伊莫？', '為什麼聖所探索途中會出現更多伊莫？') },
-    { t: 'p', c: text('Not all Aniimo spawn at the start. More can appear as exploration progresses; digging up rare Aniimo Eggs or Rare Treasure disturbs dormant Aniimo and attracts them. Do not assume the opening enemy count is the total encounter count, or convert this explanation into an exact spawn timer.', '官方解释，并非所有伊莫都在开局出现，探索过程中可能继续出现；挖掘稀有伊莫蛋或稀有宝藏会惊动并吸引休眠伊莫。不要把开局数量当成整局数量，也不能由此推算精确刷新计时。', '官方解釋，並非所有伊莫都在開局出現，探索過程中可能繼續出現；挖掘稀有伊莫蛋或稀有寶藏會驚動並吸引休眠伊莫。不要把開局數量當成整局數量，也不能由此推算精確刷新計時。') },
-    { t: 'h', c: text('Are S1 Collectibles permanently missable?', 'S1 收藏品错过后会绝版吗？', 'S1 收藏品錯過後會絕版嗎？') },
-    { t: 'p', c: text('The developer plans more reliable acquisition through new gameplay in the second half of S1, and previous-season Collectibles returning in future events. No exact return date or complete item list is given; do not promise that a particular reward is available now.', '官方计划在 S1 后半段通过新玩法提供更稳定的获取方式，往季收藏品会在未来活动回归；未给出具体回归日期或完整物品清单，不能承诺某项奖励现在可领。', '官方計畫在 S1 後半段透過新玩法提供更穩定的取得方式，往季收藏品會在未來活動回歸；未給出具體回歸日期或完整物品清單，不能承諾某項獎勵現在可領。') },
-    { t: 'h', c: text('Chaos Mode: what is planned, not live-confirmed?', '混沌模式：哪些是计划而非已实装？', '混沌模式：哪些是計畫而非已實裝？') },
-    { t: 'p', c: text('Plans include more suitable Aniimo, more Chip sources including Heal and melee-support Chips, and Sanctum interactions granting temporary abilities. Future high-difficulty content is intended to resemble optional Limited-Time Challenges with reasonable rewards. No best team or new drop rate is established by these plans.', '计划包括更多适配伊莫、治疗及近战相关 Chip 的获取渠道，以及提供临时能力的圣所互动。后续高难内容倾向于可选的限时挑战与合理奖励；这些计划不能证明某个队伍最强或新的掉落率。', '計畫包括更多適配伊莫、治療及近戰相關 Chip 的取得渠道，以及提供臨時能力的聖所互動。後續高難內容傾向於可選的限時挑戰與合理獎勵；這些計畫不能證明某個隊伍最強或新的掉落率。') },
+    {
+      t: 'h',
+      c: text(
+        'Why do more Aniimo appear during a Sanctum run?',
+        '为什么圣所探索途中会出现更多伊莫？',
+        '為什麼聖所探索途中會出現更多伊莫？'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'Not all Aniimo spawn at the start. More can appear as exploration progresses; digging up rare Aniimo Eggs or Rare Treasure disturbs dormant Aniimo and attracts them. Do not assume the opening enemy count is the total encounter count, or convert this explanation into an exact spawn timer.',
+        '官方解释，并非所有伊莫都在开局出现，探索过程中可能继续出现；挖掘稀有伊莫蛋或稀有宝藏会惊动并吸引休眠伊莫。不要把开局数量当成整局数量，也不能由此推算精确刷新计时。',
+        '官方解釋，並非所有伊莫都在開局出現，探索過程中可能繼續出現；挖掘稀有伊莫蛋或稀有寶藏會驚動並吸引休眠伊莫。不要把開局數量當成整局數量，也不能由此推算精確刷新計時。'
+      ),
+    },
+    {
+      t: 'h',
+      c: text(
+        'Are S1 Collectibles permanently missable?',
+        'S1 收藏品错过后会绝版吗？',
+        'S1 收藏品錯過後會絕版嗎？'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'The developer plans more reliable acquisition through new gameplay in the second half of S1, and previous-season Collectibles returning in future events. No exact return date or complete item list is given; do not promise that a particular reward is available now.',
+        '官方计划在 S1 后半段通过新玩法提供更稳定的获取方式，往季收藏品会在未来活动回归；未给出具体回归日期或完整物品清单，不能承诺某项奖励现在可领。',
+        '官方計畫在 S1 後半段透過新玩法提供更穩定的取得方式，往季收藏品會在未來活動回歸；未給出具體回歸日期或完整物品清單，不能承諾某項獎勵現在可領。'
+      ),
+    },
+    {
+      t: 'h',
+      c: text(
+        'Chaos Mode: what is planned, not live-confirmed?',
+        '混沌模式：哪些是计划而非已实装？',
+        '混沌模式：哪些是計畫而非已實裝？'
+      ),
+    },
+    {
+      t: 'p',
+      c: text(
+        'Plans include more suitable Aniimo, more Chip sources including Heal and melee-support Chips, and Sanctum interactions granting temporary abilities. Future high-difficulty content is intended to resemble optional Limited-Time Challenges with reasonable rewards. No best team or new drop rate is established by these plans.',
+        '计划包括更多适配伊莫、治疗及近战相关 Chip 的获取渠道，以及提供临时能力的圣所互动。后续高难内容倾向于可选的限时挑战与合理奖励；这些计划不能证明某个队伍最强或新的掉落率。',
+        '計畫包括更多適配伊莫、治療及近戰相關 Chip 的取得渠道，以及提供臨時能力的聖所互動。後續高難內容傾向於可選的限時挑戰與合理獎勵；這些計畫不能證明某個隊伍最強或新的掉落率。'
+      ),
+    },
   ];
   let blocks: LaunchGuideBlock[] = [];
   if (slug === 'aniimo-egg-heist') blocks = egg;
   if (slug === 'aniimo-choose-by-mobility-role') blocks = damage;
   if (slug === 'aniimo-launch-checklist-known-issues') blocks = investigation;
-  if (slug === 'aniimo-dev-dispatch-roadmap') blocks = [
-    ...investigation, ...damage,
-    { t: 'h', c: text('Egg Heist update cadence and collection plans', 'Egg Heist 更新节奏与收藏计划', 'Egg Heist 更新節奏與收藏計畫') },
-    { t: 'p', c: text('The October 13 plan describes major seasonal updates and smaller updates every two weeks: PvE focus in the first half, casual competition in the second half, and new Collectibles, maps, Aniimo and gameplay every half-season. Past Collectibles are intended to return through future events. This is intended cadence, not guaranteed dates or confirmation that content is already live.', '10 月 13 日计划为每赛季大更新、每两周小更新：前半季侧重 PvE，后半季侧重休闲竞技，每半季增加收藏品、地图、伊莫和玩法。往季收藏品计划通过未来活动回归。这是预期节奏，不是保证日期或已上线清单。', '10 月 13 日計畫為每賽季大更新、每兩週小更新：前半季側重 PvE，後半季側重休閒競技，每半季增加收藏品、地圖、伊莫和玩法。往季收藏品計畫透過未來活動回歸。這是預期節奏，不是保證日期或已上線清單。') },
-  ];
-  return blocks.length ? [...blocks, { t: 'quote', c: text('Source: official Dev Feedback | Oct 13, checked October 13, 2026. This is developer guidance and plans, not independent gameplay testing or a new patch report.', '来源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核验。这是开发者解释与计划，不是本站实测或新补丁实装报告。', '來源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核驗。這是開發者解釋與計畫，不是本站實測或新補丁實裝報告。') }] : [];
+  if (slug === 'aniimo-dev-dispatch-roadmap')
+    blocks = [
+      ...investigation,
+      ...damage,
+      {
+        t: 'h',
+        c: text(
+          'Egg Heist update cadence and collection plans',
+          'Egg Heist 更新节奏与收藏计划',
+          'Egg Heist 更新節奏與收藏計畫'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'The October 13 plan describes major seasonal updates and smaller updates every two weeks: PvE focus in the first half, casual competition in the second half, and new Collectibles, maps, Aniimo and gameplay every half-season. Past Collectibles are intended to return through future events. This is intended cadence, not guaranteed dates or confirmation that content is already live.',
+          '10 月 13 日计划为每赛季大更新、每两周小更新：前半季侧重 PvE，后半季侧重休闲竞技，每半季增加收藏品、地图、伊莫和玩法。往季收藏品计划通过未来活动回归。这是预期节奏，不是保证日期或已上线清单。',
+          '10 月 13 日計畫為每賽季大更新、每兩週小更新：前半季側重 PvE，後半季側重休閒競技，每半季增加收藏品、地圖、伊莫和玩法。往季收藏品計畫透過未來活動回歸。這是預期節奏，不是保證日期或已上線清單。'
+        ),
+      },
+    ];
+  return blocks.length
+    ? [
+        ...blocks,
+        {
+          t: 'quote',
+          c: text(
+            'Source: official Dev Feedback | Oct 13, checked October 13, 2026. This is developer guidance and plans, not independent gameplay testing or a new patch report.',
+            '来源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核验。这是开发者解释与计划，不是本站实测或新补丁实装报告。',
+            '來源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核驗。這是開發者解釋與計畫，不是本站實測或新補丁實裝報告。'
+          ),
+        },
+      ]
+    : [];
 }
 
 function october15PatchBlocks(locale: string, slug: string): LaunchGuideBlock[] {
-  const text = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   const entries: Partial<Record<string, LaunchGuideBlock[]>> = {
     'aniimo-launch-checklist-known-issues': [
-      { t: 'h', c: text('October 15 patch 1.0.3732728.0: confirmed fixes', '10 月 15 日 1.0.3732728.0：官方确认修复', '10 月 15 日 1.0.3732728.0：官方確認修正') },
-      { t: 'table', head: [text('Issue', '问题', '問題'), text('Official patch status', '官方补丁状态', '官方補丁狀態')], rows: [
-        [text('Egg Heist key consumed but door would not open', 'Egg Heist 消耗钥匙后门仍无法打开', 'Egg Heist 消耗鑰匙後門仍無法打開'), text('Listed as fixed', '列为已修复', '列為已修正')],
-        [text('Console Holo-Battle or NPC duel crashes', '主机端 Holo-Battle 或 NPC 对战崩溃', '主機端 Holo-Battle 或 NPC 對戰崩潰'), text('Crash probability reduced', '崩溃概率已降低', '崩潰機率已降低')],
-        [text('Slow Holo-Battle and Egg Heist loading', 'Holo-Battle 与 Egg Heist 加载缓慢', 'Holo-Battle 與 Egg Heist 載入緩慢'), text('Loading performance optimized', '加载性能已优化', '載入效能已改善')],
-        [text('Controller focus could apply Sparkling Sigil to the wrong target', '手柄焦点异常可能把 Sparkling Sigil 用错目标', '手柄焦點異常可能把 Sparkling Sigil 用錯目標'), text('Listed as fixed; still verify the selected target before use', '列为已修复；使用前仍应确认目标', '列為已修正；使用前仍應確認目標')],
-      ] },
-      { t: 'p', c: text('This was a no-downtime resource update. The official notice asks players to restart the client. A patch note confirms the listed change, but it does not guarantee that every similar symptom on every device has disappeared.', '这是一次不停服资源更新，官方要求重启客户端。补丁记录确认的是所列修复，不代表所有设备上的类似症状都必然消失。', '這是一次不停服資源更新，官方要求重新啟動客戶端。補丁記錄確認的是所列修正，不代表所有裝置上的類似症狀都必然消失。') },
-      { t: 'p', c: text('The notice also announces 100 Glimmers for players who registered before the version 1.1 update. Eligibility and delivery come from the official notice; AniimoDex has not tested individual mail delivery.', '公告另列出 100 Glimmer 补偿，资格为 1.1 版本更新前完成注册的玩家。资格与发放说明来自官方公告，AniimoDex 未实测个别账号的邮件到账情况。', '公告另列出 100 Glimmer 補償，資格為 1.1 版本更新前完成註冊的玩家。資格與發放說明來自官方公告，AniimoDex 未實測個別帳號的郵件到帳情況。') },
+      {
+        t: 'h',
+        c: text(
+          'October 15 patch 1.0.3732728.0: confirmed fixes',
+          '10 月 15 日 1.0.3732728.0：官方确认修复',
+          '10 月 15 日 1.0.3732728.0：官方確認修正'
+        ),
+      },
+      {
+        t: 'table',
+        head: [
+          text('Issue', '问题', '問題'),
+          text('Official patch status', '官方补丁状态', '官方補丁狀態'),
+        ],
+        rows: [
+          [
+            text(
+              'Egg Heist key consumed but door would not open',
+              'Egg Heist 消耗钥匙后门仍无法打开',
+              'Egg Heist 消耗鑰匙後門仍無法打開'
+            ),
+            text('Listed as fixed', '列为已修复', '列為已修正'),
+          ],
+          [
+            text(
+              'Console Holo-Battle or NPC duel crashes',
+              '主机端 Holo-Battle 或 NPC 对战崩溃',
+              '主機端 Holo-Battle 或 NPC 對戰崩潰'
+            ),
+            text('Crash probability reduced', '崩溃概率已降低', '崩潰機率已降低'),
+          ],
+          [
+            text(
+              'Slow Holo-Battle and Egg Heist loading',
+              'Holo-Battle 与 Egg Heist 加载缓慢',
+              'Holo-Battle 與 Egg Heist 載入緩慢'
+            ),
+            text('Loading performance optimized', '加载性能已优化', '載入效能已改善'),
+          ],
+          [
+            text(
+              'Controller focus could apply Sparkling Sigil to the wrong target',
+              '手柄焦点异常可能把 Sparkling Sigil 用错目标',
+              '手柄焦點異常可能把 Sparkling Sigil 用錯目標'
+            ),
+            text(
+              'Listed as fixed; still verify the selected target before use',
+              '列为已修复；使用前仍应确认目标',
+              '列為已修正；使用前仍應確認目標'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'p',
+        c: text(
+          'This was a no-downtime resource update. The official notice asks players to restart the client. A patch note confirms the listed change, but it does not guarantee that every similar symptom on every device has disappeared.',
+          '这是一次不停服资源更新，官方要求重启客户端。补丁记录确认的是所列修复，不代表所有设备上的类似症状都必然消失。',
+          '這是一次不停服資源更新，官方要求重新啟動客戶端。補丁記錄確認的是所列修正，不代表所有裝置上的類似症狀都必然消失。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'The notice also announces 100 Glimmers for players who registered before the version 1.1 update. Eligibility and delivery come from the official notice; AniimoDex has not tested individual mail delivery.',
+          '公告另列出 100 Glimmer 补偿，资格为 1.1 版本更新前完成注册的玩家。资格与发放说明来自官方公告，AniimoDex 未实测个别账号的邮件到账情况。',
+          '公告另列出 100 Glimmer 補償，資格為 1.1 版本更新前完成註冊的玩家。資格與發放說明來自官方公告，AniimoDex 未實測個別帳號的郵件到帳情況。'
+        ),
+      },
     ],
     'aniimo-egg-heist': [
-      { t: 'h', c: text('Door key issue fixed in 1.0.3732728.0', '1.0.3732728.0 已修复钥匙开门问题', '1.0.3732728.0 已修正鑰匙開門問題') },
-      { t: 'p', c: text('The October 15 patch lists the case where a key was consumed but the door still would not open as fixed. It separately optimizes Egg Heist loading. These entries do not confirm that every Erlath, spawn, aggro, matchmaking or route report is resolved; update and restart first, then report the exact version and symptom if it persists.', '10 月 15 日补丁将“钥匙已消耗但门仍打不开”列为已修复，并单独优化 Egg Heist 加载。它没有确认 Erlath、刷新、仇恨、匹配或路线相关的所有报告都已解决；请先更新并重启，持续出现时记录版本和具体症状再反馈。', '10 月 15 日補丁將「鑰匙已消耗但門仍打不開」列為已修正，並另外改善 Egg Heist 載入。它沒有確認 Erlath、刷新、仇恨、配對或路線相關的所有回報都已解決；請先更新並重新啟動，持續發生時記錄版本與具體症狀再回報。') },
+      {
+        t: 'h',
+        c: text(
+          'Door key issue fixed in 1.0.3732728.0',
+          '1.0.3732728.0 已修复钥匙开门问题',
+          '1.0.3732728.0 已修正鑰匙開門問題'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'The October 15 patch lists the case where a key was consumed but the door still would not open as fixed. It separately optimizes Egg Heist loading. These entries do not confirm that every Erlath, spawn, aggro, matchmaking or route report is resolved; update and restart first, then report the exact version and symptom if it persists.',
+          '10 月 15 日补丁将“钥匙已消耗但门仍打不开”列为已修复，并单独优化 Egg Heist 加载。它没有确认 Erlath、刷新、仇恨、匹配或路线相关的所有报告都已解决；请先更新并重启，持续出现时记录版本和具体症状再反馈。',
+          '10 月 15 日補丁將「鑰匙已消耗但門仍打不開」列為已修正，並另外改善 Egg Heist 載入。它沒有確認 Erlath、刷新、仇恨、配對或路線相關的所有回報都已解決；請先更新並重新啟動，持續發生時記錄版本與具體症狀再回報。'
+        ),
+      },
     ],
     'aniimo-rv-homeland-guide': [
-      { t: 'h', c: text('Home Season bonus and Harvest Gathering stage 3', 'Home Season 限时增益与 Harvest Gathering 第三阶段', 'Home Season 限時增益與 Harvest Gathering 第三階段') },
-      { t: 'p', c: text('Patch 1.0.3732728.0 starts a limited Home Season bonus: Moondew Radish and Waxing Moon Pepper have increased mutation rates, and products from those crops grant more Harvest Moon Points. The announcement does not publish the exact multiplier or mutation percentage.', '1.0.3732728.0 开启 Home Season 限时增益：Moondew Radish 与 Waxing Moon Pepper 的变异率提高，这两种作物产品获得的 Harvest Moon Points 也会增加。公告未公开具体倍率或变异概率。', '1.0.3732728.0 開啟 Home Season 限時增益：Moondew Radish 與 Waxing Moon Pepper 的變異率提高，這兩種作物產品獲得的 Harvest Moon Points 也會增加。公告未公開具體倍率或變異機率。') },
-      { t: 'table', head: [text('Region', '地区', '地區'), text('Harvest Gathering stage 3', 'Harvest Gathering 第三阶段', 'Harvest Gathering 第三階段')], rows: [[text('Europe', '欧洲', '歐洲'), 'October 20, 20:00 UTC'], [text('Americas', '美洲', '美洲'), 'October 20, 16:00 UTC-4'], [text('Asia-Pacific', '亚太', '亞太'), 'October 21, 04:00 UTC+8']] },
-      { t: 'p', c: text('The same patch fixes Furniture Store purchase quantities unexpectedly reverting to one and adds Select All to controller batch acceleration in Home. These are official patch entries, not an independently tested guarantee for every layout or controller.', '同一补丁修复家具商店购买数量突然变为 1 的问题，并为 Home 手柄批量加速增加 Select All。这些是官方补丁记录，不是本站对所有布局或手柄的实测保证。', '同一補丁修正家具商店購買數量突然變為 1 的問題，並為 Home 手柄批次加速增加 Select All。這些是官方補丁記錄，不是本站對所有佈局或手柄的實測保證。') },
+      {
+        t: 'h',
+        c: text(
+          'Home Season bonus and Harvest Gathering stage 3',
+          'Home Season 限时增益与 Harvest Gathering 第三阶段',
+          'Home Season 限時增益與 Harvest Gathering 第三階段'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Patch 1.0.3732728.0 starts a limited Home Season bonus: Moondew Radish and Waxing Moon Pepper have increased mutation rates, and products from those crops grant more Harvest Moon Points. The announcement does not publish the exact multiplier or mutation percentage.',
+          '1.0.3732728.0 开启 Home Season 限时增益：Moondew Radish 与 Waxing Moon Pepper 的变异率提高，这两种作物产品获得的 Harvest Moon Points 也会增加。公告未公开具体倍率或变异概率。',
+          '1.0.3732728.0 開啟 Home Season 限時增益：Moondew Radish 與 Waxing Moon Pepper 的變異率提高，這兩種作物產品獲得的 Harvest Moon Points 也會增加。公告未公開具體倍率或變異機率。'
+        ),
+      },
+      {
+        t: 'table',
+        head: [
+          text('Region', '地区', '地區'),
+          text(
+            'Harvest Gathering stage 3',
+            'Harvest Gathering 第三阶段',
+            'Harvest Gathering 第三階段'
+          ),
+        ],
+        rows: [
+          [text('Europe', '欧洲', '歐洲'), 'October 20, 20:00 UTC'],
+          [text('Americas', '美洲', '美洲'), 'October 20, 16:00 UTC-4'],
+          [text('Asia-Pacific', '亚太', '亞太'), 'October 21, 04:00 UTC+8'],
+        ],
+      },
+      {
+        t: 'p',
+        c: text(
+          'The same patch fixes Furniture Store purchase quantities unexpectedly reverting to one and adds Select All to controller batch acceleration in Home. These are official patch entries, not an independently tested guarantee for every layout or controller.',
+          '同一补丁修复家具商店购买数量突然变为 1 的问题，并为 Home 手柄批量加速增加 Select All。这些是官方补丁记录，不是本站对所有布局或手柄的实测保证。',
+          '同一補丁修正家具商店購買數量突然變為 1 的問題，並為 Home 手柄批次加速增加 Select All。這些是官方補丁記錄，不是本站對所有佈局或手柄的實測保證。'
+        ),
+      },
     ],
     'aniimo-language-controller-support': [
-      { t: 'h', c: text('Console and controller fixes in 1.0.3732728.0', '1.0.3732728.0 主机与手柄修复', '1.0.3732728.0 主機與手柄修正') },
-      { t: 'table', head: [text('Area', '项目', '項目'), text('Official change', '官方改动', '官方改動')], rows: [
-        [text('Console stability', '主机稳定性', '主機穩定性'), text('Reduced crash probability in Holo-Battle and NPC duels', '降低 Holo-Battle 与 NPC 对战崩溃概率', '降低 Holo-Battle 與 NPC 對戰崩潰機率')],
-        [text('Loading', '加载', '載入'), text('Optimized Holo-Battle and Egg Heist loading', '优化 Holo-Battle 与 Egg Heist 加载', '改善 Holo-Battle 與 Egg Heist 載入')],
-        [text('Console chat', '主机聊天', '主機聊天'), text('Fixed incorrect message order', '修复消息顺序错误', '修正訊息順序錯誤')],
-        [text('Home controller input', 'Home 手柄操作', 'Home 手柄操作'), text('Added Select All for batch acceleration and fixed an input conflict', '批量加速增加 Select All，并修复按键冲突', '批次加速增加 Select All，並修正按鍵衝突')],
-        [text('Controller focus', '手柄焦点', '手柄焦點'), text('Fixed focus errors that could use Sparkling Sigil on the wrong target', '修复可能导致 Sparkling Sigil 用错目标的焦点错误', '修正可能導致 Sparkling Sigil 用錯目標的焦點錯誤')],
-      ] },
-      { t: 'p', c: text('Install the official update and restart before retesting. “Reduced crash probability” is not a promise of zero crashes, and the note does not establish complete compatibility for every controller or handheld PC.', '请安装官方更新并重启后再测试。“降低崩溃概率”不等于零崩溃，公告也没有证明所有手柄或掌机均完全兼容。', '請安裝官方更新並重新啟動後再測試。「降低崩潰機率」不等於零崩潰，公告也沒有證明所有手柄或掌機均完全相容。') },
+      {
+        t: 'h',
+        c: text(
+          'Console and controller fixes in 1.0.3732728.0',
+          '1.0.3732728.0 主机与手柄修复',
+          '1.0.3732728.0 主機與手柄修正'
+        ),
+      },
+      {
+        t: 'table',
+        head: [text('Area', '项目', '項目'), text('Official change', '官方改动', '官方改動')],
+        rows: [
+          [
+            text('Console stability', '主机稳定性', '主機穩定性'),
+            text(
+              'Reduced crash probability in Holo-Battle and NPC duels',
+              '降低 Holo-Battle 与 NPC 对战崩溃概率',
+              '降低 Holo-Battle 與 NPC 對戰崩潰機率'
+            ),
+          ],
+          [
+            text('Loading', '加载', '載入'),
+            text(
+              'Optimized Holo-Battle and Egg Heist loading',
+              '优化 Holo-Battle 与 Egg Heist 加载',
+              '改善 Holo-Battle 與 Egg Heist 載入'
+            ),
+          ],
+          [
+            text('Console chat', '主机聊天', '主機聊天'),
+            text('Fixed incorrect message order', '修复消息顺序错误', '修正訊息順序錯誤'),
+          ],
+          [
+            text('Home controller input', 'Home 手柄操作', 'Home 手柄操作'),
+            text(
+              'Added Select All for batch acceleration and fixed an input conflict',
+              '批量加速增加 Select All，并修复按键冲突',
+              '批次加速增加 Select All，並修正按鍵衝突'
+            ),
+          ],
+          [
+            text('Controller focus', '手柄焦点', '手柄焦點'),
+            text(
+              'Fixed focus errors that could use Sparkling Sigil on the wrong target',
+              '修复可能导致 Sparkling Sigil 用错目标的焦点错误',
+              '修正可能導致 Sparkling Sigil 用錯目標的焦點錯誤'
+            ),
+          ],
+        ],
+      },
+      {
+        t: 'p',
+        c: text(
+          'Install the official update and restart before retesting. “Reduced crash probability” is not a promise of zero crashes, and the note does not establish complete compatibility for every controller or handheld PC.',
+          '请安装官方更新并重启后再测试。“降低崩溃概率”不等于零崩溃，公告也没有证明所有手柄或掌机均完全兼容。',
+          '請安裝官方更新並重新啟動後再測試。「降低崩潰機率」不等於零崩潰，公告也沒有證明所有手柄或掌機均完全相容。'
+        ),
+      },
     ],
   };
   const blocks = entries[slug];
-  return blocks ? [...blocks, { t: 'quote', c: text('Source: official patch 1.0.3732728.0, published October 15 and checked October 16, 2026.', '来源：官方 1.0.3732728.0 补丁，2026 年 10 月 15 日发布、10 月 16 日核验。', '來源：官方 1.0.3732728.0 補丁，2026 年 10 月 15 日發布、10 月 16 日核驗。') }] : [];
+  return blocks
+    ? [
+        ...blocks,
+        {
+          t: 'quote',
+          c: text(
+            'Source: official patch 1.0.3732728.0, published October 15 and checked October 16, 2026.',
+            '来源：官方 1.0.3732728.0 补丁，2026 年 10 月 15 日发布、10 月 16 日核验。',
+            '來源：官方 1.0.3732728.0 補丁，2026 年 10 月 15 日發布、10 月 16 日核驗。'
+          ),
+        },
+      ]
+    : [];
 }
 
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
@@ -1697,27 +3582,92 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
   const traditional = locale === 'zh-Hant';
   const additions: Partial<Record<string, LaunchGuideBlock[]>> = {
     'aniimo-crossplay-cross-save': [
-      { t: 'h', c: traditional ? 'Steam、PSN 或 Xbox 綁錯 UID 怎麼辦？' : 'Steam、PSN 或 Xbox 绑错 UID 怎么办？' },
-      { t: 'p', c: traditional ? '官方流程為 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。此流程不代表已確認跨平台存檔。' : '官方流程为 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。此流程不代表已确认跨平台存档。' },
+      {
+        t: 'h',
+        c: traditional
+          ? 'Steam、PSN 或 Xbox 綁錯 UID 怎麼辦？'
+          : 'Steam、PSN 或 Xbox 绑错 UID 怎么办？',
+      },
+      {
+        t: 'p',
+        c: traditional
+          ? '官方流程為 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。此流程不代表已確認跨平台存檔。'
+          : '官方流程为 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。此流程不代表已确认跨平台存档。',
+      },
     ],
     'aniimo-progress-account-safety': [
       ...accountFaqBlocks(locale),
       { t: 'h', c: traditional ? '哪一種官方恢復情況符合我？' : '哪一种官方恢复情况符合我？' },
-      { t: 'table', head: [traditional ? '情況' : '情况', traditional ? '官方下一步' : '官方下一步'], rows: traditional ? [['進度消失後建立了新角色', '填寫寄至註冊信箱的帳號選擇問卷；官方表示提交後目標在 72 小時內處理'], ['沒有建立新角色', '官方表示原進度應已恢復；仍缺失時聯絡支援'], ['角色出現在其他地區', '先切回原本遊玩的伺服器地區'], ['沒有問卷、回覆或恢復結果', '向官方支援提供 UID、登入信箱、log 檔和伺服器地區']] : [['进度消失后创建了新角色', '填写寄至注册邮箱的账号选择问卷；官方表示提交后目标在 72 小时内处理'], ['没有创建新角色', '官方表示原进度应已恢复；仍缺失时联系支持'], ['角色出现在其他地区', '先切回原本游玩的服务器地区'], ['没有问卷、回复或恢复结果', '向官方支持提供 UID、登录邮箱、log 文件和服务器地区']] },
-      { t: 'h', c: traditional ? '如何申請官方 Steam、PSN 或 Xbox 重綁？' : '如何申请官方 Steam、PSN 或 Xbox 重绑？' },
-      { t: 'p', c: traditional ? '進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。工單處理期間不要自行解除綁定或覆蓋角色。' : '进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。工单处理期间不要自行解除绑定或覆盖角色。' },
+      {
+        t: 'table',
+        head: [traditional ? '情況' : '情况', traditional ? '官方下一步' : '官方下一步'],
+        rows: traditional
+          ? [
+              [
+                '進度消失後建立了新角色',
+                '填寫寄至註冊信箱的帳號選擇問卷；官方表示提交後目標在 72 小時內處理',
+              ],
+              ['沒有建立新角色', '官方表示原進度應已恢復；仍缺失時聯絡支援'],
+              ['角色出現在其他地區', '先切回原本遊玩的伺服器地區'],
+              ['沒有問卷、回覆或恢復結果', '向官方支援提供 UID、登入信箱、log 檔和伺服器地區'],
+            ]
+          : [
+              [
+                '进度消失后创建了新角色',
+                '填写寄至注册邮箱的账号选择问卷；官方表示提交后目标在 72 小时内处理',
+              ],
+              ['没有创建新角色', '官方表示原进度应已恢复；仍缺失时联系支持'],
+              ['角色出现在其他地区', '先切回原本游玩的服务器地区'],
+              ['没有问卷、回复或恢复结果', '向官方支持提供 UID、登录邮箱、log 文件和服务器地区'],
+            ],
+      },
+      {
+        t: 'h',
+        c: traditional
+          ? '如何申請官方 Steam、PSN 或 Xbox 重綁？'
+          : '如何申请官方 Steam、PSN 或 Xbox 重绑？',
+      },
+      {
+        t: 'p',
+        c: traditional
+          ? '進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。工單處理期間不要自行解除綁定或覆蓋角色。'
+          : '进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)，提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。工单处理期间不要自行解除绑定或覆盖角色。',
+      },
     ],
     'aniimo-mobile': [
       { t: 'h', c: traditional ? '官方如何回應手機卡頓與過熱？' : '官方如何回应手机卡顿与过热？' },
-      { t: 'p', c: traditional ? '開發者答疑表示已有專門團隊處理手機卡頓與過熱，但未公布 ETA、支援裝置清單或效能測試結果，因此這是已確認的工作方向，不是已驗證完成的修正。' : '开发者答疑表示已有专门团队处理手机卡顿与过热，但未公布 ETA、支持设备清单或性能测试结果，因此这是已确认的工作方向，不是已验证完成的修复。' },
+      {
+        t: 'p',
+        c: traditional
+          ? '開發者答疑表示已有專門團隊處理手機卡頓與過熱，但未公布 ETA、支援裝置清單或效能測試結果，因此這是已確認的工作方向，不是已驗證完成的修正。'
+          : '开发者答疑表示已有专门团队处理手机卡顿与过热，但未公布 ETA、支持设备清单或性能测试结果，因此这是已确认的工作方向，不是已验证完成的修复。',
+      },
     ],
     'aniimo-launch-checklist-known-issues': [
-      { t: 'h', c: traditional ? '9 月 30 日 1.0.3629693.0 補丁' : '9 月 30 日 1.0.3629693.0 补丁' },
-      { t: 'p', c: traditional ? '官方補丁修正多項任務與進度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家園模型、控制器操作和主機問題；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求並改善登入與場景切換。符合條件的 1.1 前帳號可獲 100 Glimmers。' : '官方补丁修复多项任务与进度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家园模型、手柄操作和主机问题；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求并改善登录与场景切换。符合条件的 1.1 前账号可获 100 Glimmers。' },
+      {
+        t: 'h',
+        c: traditional ? '9 月 30 日 1.0.3629693.0 補丁' : '9 月 30 日 1.0.3629693.0 补丁',
+      },
+      {
+        t: 'p',
+        c: traditional
+          ? '官方補丁修正多項任務與進度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家園模型、控制器操作和主機問題；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求並改善登入與場景切換。符合條件的 1.1 前帳號可獲 100 Glimmers。'
+          : '官方补丁修复多项任务与进度阻塞、Egg Heist 缺少 Sanctum 入口、Stellarys 控制免疫、家园模型、手柄操作和主机问题；新增 Erlath、提高混沌 Stellarys Starine 掉落、降低 Harvest Moon Point 要求并改善登录与场景切换。符合条件的 1.1 前账号可获 100 Glimmers。',
+      },
     ],
     'aniimo-version-1-1-update': [
-      { t: 'h', c: traditional ? '後續補丁與 10 月 11 日核對的活動窗口' : '后续补丁与 10 月 11 日核对的活动窗口' },
-      { t: 'p', c: traditional ? '1.0.3629693.0 修正任務、Egg Heist、家園、控制器與主機問題。魅樂薇已於 10 月 5 日結束，伊莫大發現已於 10 月 9 日結束；摩托郎窗口至 10 月 12 日 03:59（UTC+8），之後接檔尚未核驗。旅途拾光為 10 月 1 日 04:00 至 10 月 29 日 03:59，Student I 可參與累計登入；彩虹鳶尾傳奇旅途至 12 月 10 日 07:59。這是公告時間表，不是即時開放實測。' : '1.0.3629693.0 修复任务、Egg Heist、家园、手柄与主机问题。魅乐薇已于 10 月 5 日结束，伊莫大发现已于 10 月 9 日结束；摩托郎窗口至 10 月 12 日 03:59（UTC+8），之后接档尚未核验。旅途拾光为 10 月 1 日 04:00 至 10 月 29 日 03:59，Student I 可参与累计登录；彩虹鸢尾传奇旅途至 12 月 10 日 07:59。这是公告时间表，不是实时开放实测。' },
+      {
+        t: 'h',
+        c: traditional
+          ? '後續補丁與 10 月 11 日核對的活動窗口'
+          : '后续补丁与 10 月 11 日核对的活动窗口',
+      },
+      {
+        t: 'p',
+        c: traditional
+          ? '1.0.3629693.0 修正任務、Egg Heist、家園、控制器與主機問題。魅樂薇已於 10 月 5 日結束，伊莫大發現已於 10 月 9 日結束；摩托郎窗口至 10 月 12 日 03:59（UTC+8），之後接檔尚未核驗。旅途拾光為 10 月 1 日 04:00 至 10 月 29 日 03:59，Student I 可參與累計登入；彩虹鳶尾傳奇旅途至 12 月 10 日 07:59。這是公告時間表，不是即時開放實測。'
+          : '1.0.3629693.0 修复任务、Egg Heist、家园、手柄与主机问题。魅乐薇已于 10 月 5 日结束，伊莫大发现已于 10 月 9 日结束；摩托郎窗口至 10 月 12 日 03:59（UTC+8），之后接档尚未核验。旅途拾光为 10 月 1 日 04:00 至 10 月 29 日 03:59，Student I 可参与累计登录；彩虹鸢尾传奇旅途至 12 月 10 日 07:59。这是公告时间表，不是实时开放实测。',
+      },
     ],
   };
   const extra = additions[slug];
@@ -1727,37 +3677,95 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
     body: [
       ...result.body,
       ...extra,
-      { t: 'quote', c: slug === 'aniimo-version-1-1-update'
-        ? (traditional ? '活動時間表於 2026 年 10 月 11 日重新核對；歷史補丁摘要保留原日期。' : '活动时间表于 2026 年 10 月 11 日重新核对；历史补丁摘要保留原日期。')
-        : ['aniimo-launch-checklist-known-issues', 'aniimo-progress-account-safety'].includes(slug)
-          ? (traditional ? '歷史補丁與重綁公告核驗記錄：2026 年 10 月 4 日；本次新增的首發 FAQ 於 10 月 11 日重新核對。' : '历史补丁与重绑公告核验记录：2026 年 10 月 4 日；本次新增的首发 FAQ 于 10 月 11 日重新核对。')
-          : (traditional ? '官方來源最後核驗：2026 年 10 月 4 日。' : '官方来源最后核验：2026 年 10 月 4 日。') },
+      {
+        t: 'quote',
+        c:
+          slug === 'aniimo-version-1-1-update'
+            ? traditional
+              ? '活動時間表於 2026 年 10 月 11 日重新核對；歷史補丁摘要保留原日期。'
+              : '活动时间表于 2026 年 10 月 11 日重新核对；历史补丁摘要保留原日期。'
+            : ['aniimo-launch-checklist-known-issues', 'aniimo-progress-account-safety'].includes(
+                  slug
+                )
+              ? traditional
+                ? '歷史補丁與重綁公告核驗記錄：2026 年 10 月 4 日；本次新增的首發 FAQ 於 10 月 11 日重新核對。'
+                : '历史补丁与重绑公告核验记录：2026 年 10 月 4 日；本次新增的首发 FAQ 于 10 月 11 日重新核对。'
+              : traditional
+                ? '官方來源最後核驗：2026 年 10 月 4 日。'
+                : '官方来源最后核验：2026 年 10 月 4 日。',
+      },
     ],
   };
 }
 
 export function getPracticalSupportBlocks(locale: string, slug: string): LaunchGuideBlock[] {
-  const text = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   const entries: Record<string, [string, string]> = {
     'aniimo-launch-checklist-known-issues': [
-      text('Wrong scene after teleporting: official recovery step', '传送后场景加载错误：官方处理步骤', '傳送後場景載入錯誤：官方處理步驟'),
-      text('The September 29 and 30 patch notes describe a rare teleportation issue that loads the wrong scene. For that symptom, the official instruction is to go to the Outpost and use the green interaction point to reload the correct scene. This historical guidance is not a fix for every black screen, login error or network failure. If you cannot reach the Outpost, record your client version, server region, destination and screenshot for official support; do not delete saves or unlink your account.', '9 月 29 日与 30 日补丁记录了罕见的传送场景加载错误。针对此症状，官方指引是前往 Outpost（前哨站），使用绿色交互点重新加载正确场景。这是历史指引，不适用于所有黑屏、登录错误或网络故障。若无法到达前哨站，记录客户端版本、服务器地区、传送目标和截图并提交官方支持；不要删除存档或解除账号绑定。', '9 月 29 日與 30 日補丁記錄了罕見的傳送場景載入錯誤。針對此症狀，官方指引是前往 Outpost（前哨站），使用綠色互動點重新載入正確場景。這是歷史指引，不適用於所有黑屏、登入錯誤或網路故障。若無法到達前哨站，記錄客戶端版本、伺服器地區、傳送目標和截圖並提交官方支援；不要刪除存檔或解除帳號綁定。'),
+      text(
+        'Wrong scene after teleporting: official recovery step',
+        '传送后场景加载错误：官方处理步骤',
+        '傳送後場景載入錯誤：官方處理步驟'
+      ),
+      text(
+        'The September 29 and 30 patch notes describe a rare teleportation issue that loads the wrong scene. For that symptom, the official instruction is to go to the Outpost and use the green interaction point to reload the correct scene. This historical guidance is not a fix for every black screen, login error or network failure. If you cannot reach the Outpost, record your client version, server region, destination and screenshot for official support; do not delete saves or unlink your account.',
+        '9 月 29 日与 30 日补丁记录了罕见的传送场景加载错误。针对此症状，官方指引是前往 Outpost（前哨站），使用绿色交互点重新加载正确场景。这是历史指引，不适用于所有黑屏、登录错误或网络故障。若无法到达前哨站，记录客户端版本、服务器地区、传送目标和截图并提交官方支持；不要删除存档或解除账号绑定。',
+        '9 月 29 日與 30 日補丁記錄了罕見的傳送場景載入錯誤。針對此症狀，官方指引是前往 Outpost（前哨站），使用綠色互動點重新載入正確場景。這是歷史指引，不適用於所有黑屏、登入錯誤或網路故障。若無法到達前哨站，記錄客戶端版本、伺服器地區、傳送目標和截圖並提交官方支援；不要刪除存檔或解除帳號綁定。'
+      ),
     ],
     'aniimo-catching-guide': [
-      text('Cannot catch the Alpha in the current state: what to check', 'Cannot catch the Alpha in the current state：怎么排查', 'Cannot catch the Alpha in the current state：怎麼排查'),
-      text('Official patch 1.0.3616231.0 on September 29 marks an intermittent Alpha-catching failure with this exact message as fixed. That does not mean every capture restriction is a bug. First check for updates through your official platform. If the same message persists, send official support the client version, Alpha name, location, screenshot and reproduction steps. No force-catch method, guaranteed workaround or capture probability is established by this notice.', '9 月 29 日官方 1.0.3616231.0 补丁标记已修复偶发 Alpha 捕获失败及此错误提示，但不代表所有捕获限制都是 Bug。先通过所在平台的官方渠道检查更新；若相同提示持续出现，向官方支持提供客户端版本、Alpha 名称、地点、截图和复现步骤。本公告没有证明强制捕获方法、保证有效的临时办法或捕获概率。', '9 月 29 日官方 1.0.3616231.0 補丁標記已修正偶發 Alpha 捕獲失敗及此錯誤提示，但不代表所有捕獲限制都是 Bug。先透過所在平台的官方渠道檢查更新；若相同提示持續出現，向官方支援提供客戶端版本、Alpha 名稱、地點、截圖和重現步驟。本公告沒有證明強制捕獲方法、保證有效的臨時辦法或捕獲機率。'),
+      text(
+        'Cannot catch the Alpha in the current state: what to check',
+        'Cannot catch the Alpha in the current state：怎么排查',
+        'Cannot catch the Alpha in the current state：怎麼排查'
+      ),
+      text(
+        'Official patch 1.0.3616231.0 on September 29 marks an intermittent Alpha-catching failure with this exact message as fixed. That does not mean every capture restriction is a bug. First check for updates through your official platform. If the same message persists, send official support the client version, Alpha name, location, screenshot and reproduction steps. No force-catch method, guaranteed workaround or capture probability is established by this notice.',
+        '9 月 29 日官方 1.0.3616231.0 补丁标记已修复偶发 Alpha 捕获失败及此错误提示，但不代表所有捕获限制都是 Bug。先通过所在平台的官方渠道检查更新；若相同提示持续出现，向官方支持提供客户端版本、Alpha 名称、地点、截图和复现步骤。本公告没有证明强制捕获方法、保证有效的临时办法或捕获概率。',
+        '9 月 29 日官方 1.0.3616231.0 補丁標記已修正偶發 Alpha 捕獲失敗及此錯誤提示，但不代表所有捕獲限制都是 Bug。先透過所在平台的官方渠道檢查更新；若相同提示持續出現，向官方支援提供客戶端版本、Alpha 名稱、地點、截圖和重現步驟。本公告沒有證明強制捕獲方法、保證有效的臨時辦法或捕獲機率。'
+      ),
     ],
     'aniimo-egg-heist': [
-      text('Encountered Erlath? The official target-priority advice', '遇到 Erlath：官方的目标优先级建议', '遇到 Erlath：官方的目標優先級建議'),
-      text('September 30 patch 1.0.3629693.0 introduces Erlath as an enemy with group support abilities and explicitly advises prioritizing it when encountered. This supports a target-priority decision, not a guaranteed spawn location, best route or universal winning team. Check the current encounter before applying the advice.', '9 月 30 日 1.0.3629693.0 补丁新增具备群体支援能力的敌人 Erlath，并明确建议遇到时优先击败它。这能支持目标优先级判断，但不能证明固定刷新点、最佳路线或必胜阵容；请结合当前遭遇情况使用。', '9 月 30 日 1.0.3629693.0 補丁新增具備群體支援能力的敵人 Erlath，並明確建議遇到時優先擊敗它。這能支持目標優先級判斷，但不能證明固定刷新點、最佳路線或必勝陣容；請結合目前遭遇情況使用。'),
+      text(
+        'Encountered Erlath? The official target-priority advice',
+        '遇到 Erlath：官方的目标优先级建议',
+        '遇到 Erlath：官方的目標優先級建議'
+      ),
+      text(
+        'September 30 patch 1.0.3629693.0 introduces Erlath as an enemy with group support abilities and explicitly advises prioritizing it when encountered. This supports a target-priority decision, not a guaranteed spawn location, best route or universal winning team. Check the current encounter before applying the advice.',
+        '9 月 30 日 1.0.3629693.0 补丁新增具备群体支援能力的敌人 Erlath，并明确建议遇到时优先击败它。这能支持目标优先级判断，但不能证明固定刷新点、最佳路线或必胜阵容；请结合当前遭遇情况使用。',
+        '9 月 30 日 1.0.3629693.0 補丁新增具備群體支援能力的敵人 Erlath，並明確建議遇到時優先擊敗它。這能支持目標優先級判斷，但不能證明固定刷新點、最佳路線或必勝陣容；請結合目前遭遇情況使用。'
+      ),
     ],
     'aniimo-team-composition': [
-      text('Do not choose non-DPS Aniimo by displayed ATK alone', '非输出定位不要只按面板攻击选队员', '非輸出定位不要只按面板攻擊選隊員'),
-      text('The October 13 developer explanation describes a low-ATK damage safeguard for non-DPS Aniimo, based on level or BREAK for BREAK Aniimo. Below the safeguard, adding displayed ATK may not immediately increase damage. Compare published roles, skills and BREAK information rather than ranking every role by ATK alone; the mobility-and-role guide explains the limits. The same post calls a damage refinement a version 1.1 plan. Despite earlier announcements also using 1.1, this specific change is not verified live here. No published threshold or full formula supports an exact allocation or best team.', '10 月 13 日开发者解释了非输出定位的低攻击伤害保底，按等级或 BREAK 定位的 BREAK 属性计算；低于保底时，增加面板攻击可能不会立刻提高伤害。请结合已公开定位、技能和 BREAK 信息判断功能，不要用攻击值给所有定位统一排名；移动能力与定位选择页解释了适用边界。同一公告把伤害调整称为 1.1 计划，虽然更早公告也使用 1.1 名称，本站尚未核验此项调整实装。未公布阈值或完整公式，不能推导精确加点或最强队伍。', '10 月 13 日開發者解釋了非輸出定位的低攻擊傷害保底，按等級或 BREAK 定位的 BREAK 屬性計算；低於保底時，增加面板攻擊可能不會立刻提高傷害。請結合已公開定位、技能和 BREAK 資訊判斷功能，不要用攻擊值給所有定位統一排名；移動能力與定位選擇頁解釋了適用邊界。同一公告把傷害調整稱為 1.1 計畫，雖然更早公告也使用 1.1 名稱，本站尚未核驗此項調整實裝。未公布閾值或完整公式，不能推導精確加點或最強隊伍。'),
+      text(
+        'Do not choose non-DPS Aniimo by displayed ATK alone',
+        '非输出定位不要只按面板攻击选队员',
+        '非輸出定位不要只按面板攻擊選隊員'
+      ),
+      text(
+        'The October 13 developer explanation describes a low-ATK damage safeguard for non-DPS Aniimo, based on level or BREAK for BREAK Aniimo. Below the safeguard, adding displayed ATK may not immediately increase damage. Compare published roles, skills and BREAK information rather than ranking every role by ATK alone; the mobility-and-role guide explains the limits. The same post calls a damage refinement a version 1.1 plan. Despite earlier announcements also using 1.1, this specific change is not verified live here. No published threshold or full formula supports an exact allocation or best team.',
+        '10 月 13 日开发者解释了非输出定位的低攻击伤害保底，按等级或 BREAK 定位的 BREAK 属性计算；低于保底时，增加面板攻击可能不会立刻提高伤害。请结合已公开定位、技能和 BREAK 信息判断功能，不要用攻击值给所有定位统一排名；移动能力与定位选择页解释了适用边界。同一公告把伤害调整称为 1.1 计划，虽然更早公告也使用 1.1 名称，本站尚未核验此项调整实装。未公布阈值或完整公式，不能推导精确加点或最强队伍。',
+        '10 月 13 日開發者解釋了非輸出定位的低攻擊傷害保底，按等級或 BREAK 定位的 BREAK 屬性計算；低於保底時，增加面板攻擊可能不會立刻提高傷害。請結合已公開定位、技能和 BREAK 資訊判斷功能，不要用攻擊值給所有定位統一排名；移動能力與定位選擇頁解釋了適用邊界。同一公告把傷害調整稱為 1.1 計畫，雖然更早公告也使用 1.1 名稱，本站尚未核驗此項調整實裝。未公布閾值或完整公式，不能推導精確加點或最強隊伍。'
+      ),
     ],
   };
   const entry = entries[slug];
-  return entry ? [{ t: 'h', c: entry[0] }, { t: 'p', c: entry[1] }, { t: 'quote', c: text('Practical guidance added October 14, 2026 from the dated official sources listed below. Historical fixes and developer plans are not new patch releases or independently tested guarantees.', '实用说明于 2026 年 10 月 14 日补充，依据下方列明日期的官方来源。历史修复与开发计划不代表新补丁发布或本站实测保证。', '實用說明於 2026 年 10 月 14 日補充，依據下方列明日期的官方來源。歷史修正與開發計畫不代表新補丁發布或本站實測保證。') }] : [];
+  return entry
+    ? [
+        { t: 'h', c: entry[0] },
+        { t: 'p', c: entry[1] },
+        {
+          t: 'quote',
+          c: text(
+            'Practical guidance added October 14, 2026 from the dated official sources listed below. Historical fixes and developer plans are not new patch releases or independently tested guarantees.',
+            '实用说明于 2026 年 10 月 14 日补充，依据下方列明日期的官方来源。历史修复与开发计划不代表新补丁发布或本站实测保证。',
+            '實用說明於 2026 年 10 月 14 日補充，依據下方列明日期的官方來源。歷史修正與開發計畫不代表新補丁發布或本站實測保證。'
+          ),
+        },
+      ]
+    : [];
 }
 
 export const launchGuideSlugs = Object.keys(english);

@@ -138,10 +138,44 @@
       "intro": "AniimoDex is an independent, unofficial fan-made database and player guide for Aniimo. It is not operated, sponsored or endorsed by Pawprint Studio, Kingsglory, Xbox, PlayStation, Steam, Apple, Google or Epic Games.",
       "updated": "Last updated: September 23, 2026",
       "sections": [
-        { "heading": "What this site provides", "paragraphs": ["We organize official-source creature records, evolution families, habitats, abilities, platform information and practical guides into searchable pages and tools. Our goal is to answer a player question clearly, show where the answer came from and identify what remains unknown."], "items": ["Searchable Aniimo records and entity relationships", "Calculators and lookups built from published formulas or clearly labelled community data", "Guides that distinguish official facts, reproducible observations and unconfirmed claims"] },
-        { "heading": "Editorial and correction standards", "paragraphs": ["Official sources are preferred. Each factual guide names its sources and check date. We do not invent stats, locations, rates, builds or platform support. When a source changes, we update the affected page; unsupported claims are removed or labelled unknown."], "items": ["Commercial relationships do not determine rankings or factual conclusions", "Generated or translated drafts are reviewed against the registered source before publication", "Material corrections update the page date and evidence record"] },
-        { "heading": "Contact, corrections and privacy requests", "paragraphs": ["For factual corrections, privacy questions or general site enquiries, email privacy@aniimodex.com. Include the page URL and enough detail to identify the issue. For copyright or trademark concerns, use copyright@aniimodex.com and include the work, the affected URL, your authority and the requested action."], "items": ["Privacy and general contact: privacy@aniimodex.com", "Copyright and trademark requests: copyright@aniimodex.com"] },
-        { "heading": "Funding and independence", "paragraphs": ["AniimoDex may use display advertising to fund hosting and maintenance. Advertising does not change our evidence labels, sources or editorial conclusions. Sponsored material, if ever published, will be clearly identified."] }
+        {
+          "heading": "What this site provides",
+          "paragraphs": [
+            "We organize official-source creature records, evolution families, habitats, abilities, platform information and practical guides into searchable pages and tools. Our goal is to answer a player question clearly, show where the answer came from and identify what remains unknown."
+          ],
+          "items": [
+            "Searchable Aniimo records and entity relationships",
+            "Calculators and lookups built from published formulas or clearly labelled community data",
+            "Guides that distinguish official facts, reproducible observations and unconfirmed claims"
+          ]
+        },
+        {
+          "heading": "Editorial and correction standards",
+          "paragraphs": [
+            "Official sources are preferred. Each factual guide names its sources and check date. We do not invent stats, locations, rates, builds or platform support. When a source changes, we update the affected page; unsupported claims are removed or labelled unknown."
+          ],
+          "items": [
+            "Commercial relationships do not determine rankings or factual conclusions",
+            "Generated or translated drafts are reviewed against the registered source before publication",
+            "Material corrections update the page date and evidence record"
+          ]
+        },
+        {
+          "heading": "Contact, corrections and privacy requests",
+          "paragraphs": [
+            "For factual corrections, privacy questions or general site enquiries, email privacy@aniimodex.com. Include the page URL and enough detail to identify the issue. For copyright or trademark concerns, use copyright@aniimodex.com and include the work, the affected URL, your authority and the requested action."
+          ],
+          "items": [
+            "Privacy and general contact: privacy@aniimodex.com",
+            "Copyright and trademark requests: copyright@aniimodex.com"
+          ]
+        },
+        {
+          "heading": "Funding and independence",
+          "paragraphs": [
+            "AniimoDex may use display advertising to fund hosting and maintenance. Advertising does not change our evidence labels, sources or editorial conclusions. Sponsored material, if ever published, will be clearly identified."
+          ]
+        }
       ]
     },
     "privacy": {
@@ -149,14 +183,64 @@
       "intro": "This policy explains what AniimoDex may collect, why it is used, how advertising and cookies may work, and the choices available to visitors.",
       "updated": "Effective and last updated: September 23, 2026",
       "sections": [
-        { "heading": "Information processed when you visit", "paragraphs": ["Our hosting and security providers may process standard request information such as IP address, browser and device type, requested URL, approximate region, timestamps and security signals. We use this information to deliver the site, prevent abuse, diagnose failures and understand aggregate performance. AniimoDex does not require an account and does not intentionally collect names, passwords, payment details or game credentials."] },
-        { "heading": "Cookies, local storage and advertising", "paragraphs": ["The site may use essential storage for language or interface preferences. If Google AdSense or another advertising service is enabled, advertising partners may use cookies, device identifiers or similar technologies to serve, measure and limit ads. Google may use advertising cookies to show ads based on visits to this and other sites where permitted by law."], "items": ["Google's advertising technology information: policies.google.com/technologies/ads", "Google ad personalization controls: adssettings.google.com", "You can also restrict cookies through your browser settings"] },
-        { "heading": "Consent in the EEA, United Kingdom and Switzerland", "paragraphs": ["Where required, non-essential advertising and measurement storage will not be used until a visitor makes a choice through a Google-certified consent management platform. Visitors will be able to accept, reject or manage available purposes and vendors, and revisit that choice. Contextual or limited ads may be used where appropriate."] },
-        { "heading": "How information is shared", "paragraphs": ["Information may be processed by infrastructure, security, analytics, consent and advertising providers only to operate, protect, measure or fund the site. These providers act under their own terms or processing obligations. We do not sell personal information in the ordinary meaning of selling data for money. We may disclose information when legally required or necessary to protect users, the site or the public."] },
-        { "heading": "Retention, transfers and security", "paragraphs": ["Technical logs are retained only as long as reasonably needed for security, troubleshooting, legal compliance and aggregate reporting. Providers may process data in countries other than your own and apply their contractual and legal safeguards. No online service can guarantee absolute security, but we minimize collection and use reputable hosting and security controls."] },
-        { "heading": "Your choices and requests", "paragraphs": ["Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, or withdraw consent. Email privacy@aniimodex.com with the request and the country or region whose law applies. We may need reasonable verification and may retain information when legally required."], "items": ["Do not send game credentials, identity documents or payment information unless specifically and lawfully requested", "Browser controls and the consent interface can be used to manage cookies", "Google advertising choices can be managed at adssettings.google.com"] },
-        { "heading": "Children", "paragraphs": ["AniimoDex is a general-audience game reference site and is not directed to children under the minimum age required to consent to online data processing in their jurisdiction. We do not knowingly request personal information from children. A parent or guardian may contact us to request review or deletion."] },
-        { "heading": "External links and policy changes", "paragraphs": ["Links to game publishers, stores and community sources lead to services with their own privacy practices. We are not responsible for those practices. Material changes to this policy will be posted here with a revised effective date."] }
+        {
+          "heading": "Information processed when you visit",
+          "paragraphs": [
+            "Our hosting and security providers may process standard request information such as IP address, browser and device type, requested URL, approximate region, timestamps and security signals. We use this information to deliver the site, prevent abuse, diagnose failures and understand aggregate performance. AniimoDex does not require an account and does not intentionally collect names, passwords, payment details or game credentials."
+          ]
+        },
+        {
+          "heading": "Cookies, local storage and advertising",
+          "paragraphs": [
+            "The site may use essential storage for language or interface preferences. If Google AdSense or another advertising service is enabled, advertising partners may use cookies, device identifiers or similar technologies to serve, measure and limit ads. Google may use advertising cookies to show ads based on visits to this and other sites where permitted by law."
+          ],
+          "items": [
+            "Google's advertising technology information: policies.google.com/technologies/ads",
+            "Google ad personalization controls: adssettings.google.com",
+            "You can also restrict cookies through your browser settings"
+          ]
+        },
+        {
+          "heading": "Consent in the EEA, United Kingdom and Switzerland",
+          "paragraphs": [
+            "Where required, non-essential advertising and measurement storage will not be used until a visitor makes a choice through a Google-certified consent management platform. Visitors will be able to accept, reject or manage available purposes and vendors, and revisit that choice. Contextual or limited ads may be used where appropriate."
+          ]
+        },
+        {
+          "heading": "How information is shared",
+          "paragraphs": [
+            "Information may be processed by infrastructure, security, analytics, consent and advertising providers only to operate, protect, measure or fund the site. These providers act under their own terms or processing obligations. We do not sell personal information in the ordinary meaning of selling data for money. We may disclose information when legally required or necessary to protect users, the site or the public."
+          ]
+        },
+        {
+          "heading": "Retention, transfers and security",
+          "paragraphs": [
+            "Technical logs are retained only as long as reasonably needed for security, troubleshooting, legal compliance and aggregate reporting. Providers may process data in countries other than your own and apply their contractual and legal safeguards. No online service can guarantee absolute security, but we minimize collection and use reputable hosting and security controls."
+          ]
+        },
+        {
+          "heading": "Your choices and requests",
+          "paragraphs": [
+            "Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, or withdraw consent. Email privacy@aniimodex.com with the request and the country or region whose law applies. We may need reasonable verification and may retain information when legally required."
+          ],
+          "items": [
+            "Do not send game credentials, identity documents or payment information unless specifically and lawfully requested",
+            "Browser controls and the consent interface can be used to manage cookies",
+            "Google advertising choices can be managed at adssettings.google.com"
+          ]
+        },
+        {
+          "heading": "Children",
+          "paragraphs": [
+            "AniimoDex is a general-audience game reference site and is not directed to children under the minimum age required to consent to online data processing in their jurisdiction. We do not knowingly request personal information from children. A parent or guardian may contact us to request review or deletion."
+          ]
+        },
+        {
+          "heading": "External links and policy changes",
+          "paragraphs": [
+            "Links to game publishers, stores and community sources lead to services with their own privacy practices. We are not responsible for those practices. Material changes to this policy will be posted here with a revised effective date."
+          ]
+        }
       ]
     },
     "terms": {
@@ -164,14 +248,60 @@
       "intro": "These terms describe permitted use of AniimoDex, ownership boundaries, source attribution, correction requests and limitations of this unofficial fan resource.",
       "updated": "Effective and last updated: September 23, 2026",
       "sections": [
-        { "heading": "Unofficial fan resource", "paragraphs": ["AniimoDex is independent and unofficial. Aniimo, character names, logos, artwork, screenshots and other game assets are owned by their respective rights holders. Their appearance here does not imply affiliation, sponsorship or endorsement."] },
-        { "heading": "Site content and permitted use", "paragraphs": ["Our original page structure, commentary, source comparisons, tools and editorial text may be used for personal, non-commercial reference. You may link to public pages and quote short excerpts with attribution. Do not copy the database, guides or site design at scale; remove attribution; bypass technical controls; interfere with the service; or use the site for unlawful, deceptive or abusive activity."] },
-        { "heading": "Game data, images and source material", "paragraphs": ["Names, artwork and factual fields are presented for identification, commentary and player reference with source links where available. We add search, relationships, comparisons, verification labels and explanatory context rather than claiming ownership of source material. Rights holders may request correction, attribution changes or removal at copyright@aniimodex.com."], "items": ["Identify the protected work or mark", "Provide the exact AniimoDex URL", "Explain your authority and requested action", "Provide a reliable way to contact you"] },
-        { "heading": "Accuracy and no professional advice", "paragraphs": ["We try to keep information current, but games, storefronts, regional availability and live systems can change without notice. Unknown fields are not guarantees. AniimoDex provides information as available and is not legal, financial, safety or purchasing advice. Verify important decisions through the official game, publisher or platform store."] },
-        { "heading": "External services and downloads", "paragraphs": ["External links are provided for convenience and may change. We do not control third-party services. Download the game only from official publisher or platform-store links, and never submit game or store credentials to an unofficial download page."] },
-        { "heading": "Advertising and endorsements", "paragraphs": ["Advertising may appear on the site. An ad is not an AniimoDex recommendation and will not be designed to imitate navigation, a download control or game content. Paid or sponsored editorial material, if introduced, will be clearly disclosed."] },
-        { "heading": "Availability and limitation", "paragraphs": ["The site may change, suspend or remove content for accuracy, legal, security or maintenance reasons. To the extent permitted by law, AniimoDex is not liable for losses arising from reliance on outdated information, third-party links, service interruption or in-game decisions. Nothing here excludes rights that cannot legally be excluded."] },
-        { "heading": "Changes and contact", "paragraphs": ["We may revise these terms when the site, law or service providers change. Continued use after publication of an update means the revised terms apply. Questions may be sent to privacy@aniimodex.com; rights-holder notices should be sent to copyright@aniimodex.com."] }
+        {
+          "heading": "Unofficial fan resource",
+          "paragraphs": [
+            "AniimoDex is independent and unofficial. Aniimo, character names, logos, artwork, screenshots and other game assets are owned by their respective rights holders. Their appearance here does not imply affiliation, sponsorship or endorsement."
+          ]
+        },
+        {
+          "heading": "Site content and permitted use",
+          "paragraphs": [
+            "Our original page structure, commentary, source comparisons, tools and editorial text may be used for personal, non-commercial reference. You may link to public pages and quote short excerpts with attribution. Do not copy the database, guides or site design at scale; remove attribution; bypass technical controls; interfere with the service; or use the site for unlawful, deceptive or abusive activity."
+          ]
+        },
+        {
+          "heading": "Game data, images and source material",
+          "paragraphs": [
+            "Names, artwork and factual fields are presented for identification, commentary and player reference with source links where available. We add search, relationships, comparisons, verification labels and explanatory context rather than claiming ownership of source material. Rights holders may request correction, attribution changes or removal at copyright@aniimodex.com."
+          ],
+          "items": [
+            "Identify the protected work or mark",
+            "Provide the exact AniimoDex URL",
+            "Explain your authority and requested action",
+            "Provide a reliable way to contact you"
+          ]
+        },
+        {
+          "heading": "Accuracy and no professional advice",
+          "paragraphs": [
+            "We try to keep information current, but games, storefronts, regional availability and live systems can change without notice. Unknown fields are not guarantees. AniimoDex provides information as available and is not legal, financial, safety or purchasing advice. Verify important decisions through the official game, publisher or platform store."
+          ]
+        },
+        {
+          "heading": "External services and downloads",
+          "paragraphs": [
+            "External links are provided for convenience and may change. We do not control third-party services. Download the game only from official publisher or platform-store links, and never submit game or store credentials to an unofficial download page."
+          ]
+        },
+        {
+          "heading": "Advertising and endorsements",
+          "paragraphs": [
+            "Advertising may appear on the site. An ad is not an AniimoDex recommendation and will not be designed to imitate navigation, a download control or game content. Paid or sponsored editorial material, if introduced, will be clearly disclosed."
+          ]
+        },
+        {
+          "heading": "Availability and limitation",
+          "paragraphs": [
+            "The site may change, suspend or remove content for accuracy, legal, security or maintenance reasons. To the extent permitted by law, AniimoDex is not liable for losses arising from reliance on outdated information, third-party links, service interruption or in-game decisions. Nothing here excludes rights that cannot legally be excluded."
+          ]
+        },
+        {
+          "heading": "Changes and contact",
+          "paragraphs": [
+            "We may revise these terms when the site, law or service providers change. Continued use after publication of an update means the revised terms apply. Questions may be sent to privacy@aniimodex.com; rights-holder notices should be sent to copyright@aniimodex.com."
+          ]
+        }
       ]
     }
   },
@@ -380,7 +510,58 @@
     "typeChartTags": ["Matrix", "Matchup"],
     "catchTitle": "Catch Rate Calculator",
     "catchDesc": "Estimate a catch chance from the official probability formula, with every coefficient shown.",
-    "catchTags": ["Official formula", "Calculator"]
+    "catchTags": ["Official formula", "Calculator"],
+    "teamBuilderTitle": "Team & Twine Synergy Builder",
+    "teamBuilderDesc": "Build your 4-member party, check field mobility coverage, element attack/defense counters, and BREAK balance.",
+    "teamBuilderTags": ["Synergy", "Team Builder", "Calculator"]
+  },
+  "teamBuilder": {
+    "title": "Aniimo Team & Twine Synergy Builder",
+    "subtitle": "Build your 4-member party, evaluate open-world Twine mobility coverage, element matchups, shared weaknesses, and BREAK role balance.",
+    "slot": "Slot {num}",
+    "emptySlot": "Click to assign Aniimo",
+    "replace": "Replace",
+    "remove": "Remove",
+    "searchPlaceholder": "Search by name or number (e.g. 001, Emberpup)...",
+    "filterElement": "Element",
+    "filterRole": "Role",
+    "allElements": "All Elements",
+    "allRoles": "All Roles",
+    "selectAniimo": "Select Aniimo for Slot {num}",
+    "close": "Close",
+    "mobilityTitle": "Twine Open-World Mobility Coverage",
+    "mobilitySubtitle": "Check if your team has the movement skills required to navigate Idyll's floating islands, oceans, and tunnels without obstacles.",
+    "flight": "Flight & Aerial",
+    "flightTip": "Allows leaping across floating sky islands and high chasms without detours.",
+    "aquatic": "Water & Diving",
+    "aquaticTip": "Allows traversing deep rivers, oceans, and underwater ruins safely.",
+    "climbing": "Climb, Dig & Tunnel",
+    "climbingTip": "Unlocks hidden underground caves, ore deposits, and sheer cliffs.",
+    "speed": "Dash, Shatter & Stealth",
+    "speedTip": "Shatters boulder obstacles, grants stealth evasion, and speeds up world travel.",
+    "covered": "Covered",
+    "missing": "Missing",
+    "providedBy": "Provided by: {names}",
+    "elementSynergyTitle": "Element Synergy & Matchup Analysis",
+    "elementSynergySubtitle": "Evaluates team offensive coverage (1.6x multiplier) and defensive resistances based on community matchup data.",
+    "offensiveCoverage": "Offensive Super-Effective Coverage",
+    "coveredCount": "{covered} / 9 Elements ({percent}%)",
+    "defensiveVulnerabilities": "Defensive Vulnerabilities",
+    "sharedWeaknessAlert": "Shared Weakness Warning",
+    "sharedWeaknessDesc": "{count} team members are weak to {element} (1.6x damage). Watch out for matching boss encounters!",
+    "noSharedWeakness": "Well-balanced defense: No two team members share the same elemental weakness.",
+    "roleSynergyTitle": "Combat Role & BREAK Balance",
+    "roleSynergySubtitle": "Analyzes the composition of DPS, Break, Heal, Support, and Regen across your team.",
+    "roleDistribution": "Role Distribution",
+    "breakCheckPass": "Break Specialist Active: Meets the October 13 damage safeguard to shatter enemy posture efficiently.",
+    "breakCheckFail": "Missing Break Specialist: Staggering high-difficulty bosses and triggering BREAK phases will take longer.",
+    "sustainCheckPass": "Sustain Secured: Healing or support is present for survivability in prolonged battles.",
+    "sustainCheckFail": "Low Sustain: Lacks dedicated healers; rely on dodge mechanics or consumable items.",
+    "presetsTitle": "Quick Presets",
+    "presetExplorer": "All-Terrain Explorer",
+    "presetChaos": "Egg Heist Chaos Buster",
+    "clearAll": "Clear Team",
+    "sourceNotice": "Element matchup multipliers are compiled from community consensus; mobility and creature attributes come from the official Wiki dataset."
   },
   "twineTool": {
     "title": "Twine Ability Lookup",
@@ -585,22 +766,49 @@
         "lead": "Start with decisions that can be checked against official data: use an official download, separate exploration abilities from combat roles, improve known catch factors and verify an evolution before committing resources. This guide does not invent a best starter, leveling route or spending priority.",
         "body": [
           { "t": "h", "c": "1. Check your platform, region and account first" },
-          { "t": "p", "c": "Use the official Aniimo website or the verified Steam, PlayStation, Xbox and Epic listings. Store availability, mobile timing and account features can vary by platform and region, so confirm the live button before downloading or paying." },
+          {
+            "t": "p",
+            "c": "Use the official Aniimo website or the verified Steam, PlayStation, Xbox and Epic listings. Store availability, mobile timing and account features can vary by platform and region, so confirm the live button before downloading or paying."
+          },
           { "t": "h", "c": "2. Confirm PC requirements before installing" },
-          { "t": "p", "c": "The Epic Games Store publishes official minimum and recommended Windows specifications, including CPU, memory, GPU, DirectX and storage. Compare those requirements with your device instead of relying on an unverified compatibility list." },
+          {
+            "t": "p",
+            "c": "The Epic Games Store publishes official minimum and recommended Windows specifications, including CPU, memory, GPU, DirectX and storage. Compare those requirements with your device instead of relying on an unverified compatibility list."
+          },
           { "t": "h", "c": "3. Do not choose a starter from an unsupported tier list" },
-          { "t": "p", "c": "The official Wiki publishes element, role, stage and mobility fields, but those labels do not prove which Aniimo is strongest. Choose by the activity you need: damage, break, support, sustain, healing or an exploration ability." },
+          {
+            "t": "p",
+            "c": "The official Wiki publishes element, role, stage and mobility fields, but those labels do not prove which Aniimo is strongest. Choose by the activity you need: damage, break, support, sustain, healing or an exploration ability."
+          },
           { "t": "h", "c": "4. Treat combat role and exploration ability separately" },
-          { "t": "p", "c": "A role describes a combat function, while mobility and Twine fields help with traversal or interaction. Check both fields in the Dex before building a team around one label." },
+          {
+            "t": "p",
+            "c": "A role describes a combat function, while mobility and Twine fields help with traversal or interaction. Check both fields in the Dex before building a team around one label."
+          },
           { "t": "h", "c": "5. Improve only the catch factors that are confirmed" },
-          { "t": "p", "c": "The official formula confirms that cube type, level difference, target HP, a valid backstrike and special status can change catch probability. AniimoDex does not assign a precise species percentage when the required template base rate is unpublished." },
+          {
+            "t": "p",
+            "c": "The official formula confirms that cube type, level difference, target HP, a valid backstrike and special status can change catch probability. AniimoDex does not assign a precise species percentage when the required template base rate is unpublished."
+          },
           { "t": "h", "c": "6. Verify the evolution family before spending" },
-          { "t": "p", "c": "AniimoDex can show evolution-family relationships from the official index. Exact level, quest, item and resource requirements are not assumed unless an official source or reproducible test confirms them." },
+          {
+            "t": "p",
+            "c": "AniimoDex can show evolution-family relationships from the official index. Exact level, quest, item and resource requirements are not assumed unless an official source or reproducible test confirms them."
+          },
           { "t": "h", "c": "7. Separate multiplayer from cross-save" },
-          { "t": "p", "c": "Steam confirms multiplayer, online co-op and cross-platform multiplayer, but that does not by itself confirm every platform pairing or cross-save behavior. Check the crossplay guide before planning progress across devices." },
+          {
+            "t": "p",
+            "c": "Steam confirms multiplayer, online co-op and cross-platform multiplayer, but that does not by itself confirm every platform pairing or cross-save behavior. Check the crossplay guide before planning progress across devices."
+          },
           { "t": "h", "c": "8. Be precise about rare forms" },
-          { "t": "p", "c": "The official probability disclosure publishes Sparkling-related rates and the official data identifies form information where available. Community claims about Umbral eggs, guaranteed outcomes or evolution behavior remain unconfirmed until independently verified." },
-          { "t": "quote", "c": "Still under verification: an optimal leveling path, home-base priority, Nurture guarantees, Egg Heist efficiency routes and a universal best team. Use community discussion to discover questions, not as proof of an answer." }
+          {
+            "t": "p",
+            "c": "The official probability disclosure publishes Sparkling-related rates and the official data identifies form information where available. Community claims about Umbral eggs, guaranteed outcomes or evolution behavior remain unconfirmed until independently verified."
+          },
+          {
+            "t": "quote",
+            "c": "Still under verification: an optimal leveling path, home-base priority, Nurture guarantees, Egg Heist efficiency routes and a universal best team. Use community discussion to discover questions, not as proof of an answer."
+          }
         ]
       },
       "aniimo-release-date": {
@@ -854,7 +1062,10 @@
                 "Published release time has passed; verify the current regional store button"
               ],
               ["iOS", "Available in the China App Store; other storefronts may differ"],
-              ["Android", "Install shown on the US Google Play listing on September 22; availability may vary"]
+              [
+                "Android",
+                "Install shown on the US Google Play listing on September 22; availability may vary"
+              ]
             ]
           },
           {
@@ -1218,11 +1429,23 @@
           },
           {
             "t": "table",
-            "head": ["Scenario", "Published factors", "Relative multiplier before the unknown base rate"],
+            "head": [
+              "Scenario",
+              "Published factors",
+              "Relative multiplier before the unknown base rate"
+            ],
             "rows": [
-              ["Out-of-battle standard cube with a valid backstrike", "Standard cube 1x; backstrike 1.5x", "1.5x"],
+              [
+                "Out-of-battle standard cube with a valid backstrike",
+                "Standard cube 1x; backstrike 1.5x",
+                "1.5x"
+              ],
               ["In battle at 0% HP with ordinary sleep", "HP 2x; ordinary sleep 2x", "4x"],
-              ["Target is 15 or more levels above the character", "Level coefficient 0.1x", "0.1x before other factors"]
+              [
+                "Target is 15 or more levels above the character",
+                "Level coefficient 0.1x",
+                "0.1x before other factors"
+              ]
             ]
           },
           {
@@ -1366,9 +1589,21 @@
             "t": "table",
             "head": ["Term", "Confirmed source status", "What AniimoDex can safely say"],
             "rows": [
-              ["Prismana", "Official Wiki morphology field", "21 of 92 indexed Aniimo list a Prismana Form; its gameplay effects are not defined in the registered official source"],
-              ["Sparkling", "Official probability disclosure", "Normal, Dazzling and Shadow style probabilities are published for specific obtaining methods"],
-              ["Umbral", "Not defined in the registered official fields", "Egg source, hatch result and evolution behavior remain unverified"]
+              [
+                "Prismana",
+                "Official Wiki morphology field",
+                "21 of 92 indexed Aniimo list a Prismana Form; its gameplay effects are not defined in the registered official source"
+              ],
+              [
+                "Sparkling",
+                "Official probability disclosure",
+                "Normal, Dazzling and Shadow style probabilities are published for specific obtaining methods"
+              ],
+              [
+                "Umbral",
+                "Not defined in the registered official fields",
+                "Egg source, hatch result and evolution behavior remain unverified"
+              ]
             ]
           },
           {
@@ -1544,25 +1779,65 @@
         "lead": "Egg Heist is an official real-time PVEVP activity for three-player teams. Xbox confirms the mode format, while Aniimo's probability disclosure separately confirms how an Egg Heist egg differs in the Sparkling style table. Exact unlock requirements, rewards and efficient routes remain unverified here.",
         "body": [
           { "t": "h", "c": "What is Egg Heist in Aniimo?" },
-          { "t": "p", "c": "Xbox describes Egg Heist as a real-time PVEVP activity. Teams of three compete while also dealing with environmental threats, so the published description combines player-versus-environment and player-versus-player pressure." },
+          {
+            "t": "p",
+            "c": "Xbox describes Egg Heist as a real-time PVEVP activity. Teams of three compete while also dealing with environmental threats, so the published description combines player-versus-environment and player-versus-player pressure."
+          },
           { "t": "h", "c": "How many players are on an Egg Heist team?" },
-          { "t": "p", "c": "The official Xbox description specifies three-player teams. It does not establish whether matchmaking fills every missing position, whether a smaller party can queue, or which platforms can invite one another in this activity." },
+          {
+            "t": "p",
+            "c": "The official Xbox description specifies three-player teams. It does not establish whether matchmaking fills every missing position, whether a smaller party can queue, or which platforms can invite one another in this activity."
+          },
           { "t": "h", "c": "Does Egg Heist support cross-platform play?" },
-          { "t": "p", "c": "Steam lists cross-platform multiplayer for Aniimo as a product feature, but the registered official sources do not document every supported platform pairing or confirm Egg Heist-specific crossplay behavior. Cross-save is a separate question and also remains incompletely documented." },
+          {
+            "t": "p",
+            "c": "Steam lists cross-platform multiplayer for Aniimo as a product feature, but the registered official sources do not document every supported platform pairing or confirm Egg Heist-specific crossplay behavior. Cross-save is a separate question and also remains incompletely documented."
+          },
           { "t": "h", "c": "What is Egg Heist Chaos Mode?" },
-          { "t": "p", "c": "The official September 23 update says Chaos Mode unlocked on September 24 at 04:00. It requires the Elite Egg Seeker Tier IV rank and a Chaos Ticket. The announcement describes higher chances for Prismana Aniimo eggs and glazed-quality collectibles, plus rare hidden collectibles, but does not publish exact rates or a best route." },
+          {
+            "t": "p",
+            "c": "The official September 23 update says Chaos Mode unlocked on September 24 at 04:00. It requires the Elite Egg Seeker Tier IV rank and a Chaos Ticket. The announcement describes higher chances for Prismana Aniimo eggs and glazed-quality collectibles, plus rare hidden collectibles, but does not publish exact rates or a best route."
+          },
           { "t": "h", "c": "What is special about an Egg Heist egg?" },
-          { "t": "p", "c": "The official probability disclosure distinguishes an Egg Heist egg from other eggs in its Sparkling style table. When a Sparkling Cube is used on an Egg Heist egg, the published outcomes are 99% Normal Sparkling, 0% Dazzling Sparkling and 1% Shadow Sparkling." },
-          { "t": "table", "head": ["Sparkling Cube target", "Normal", "Dazzling", "Shadow"], "rows": [["Egg Heist egg", "99%", "0%", "1%"], ["Egg not from Egg Heist", "99%", "1%", "0%"]] },
-          { "t": "p", "c": "This table describes the style outcome after the listed Sparkling Cube use. It does not prove that an Egg Heist egg is guaranteed to contain a particular Aniimo, that a Shadow style changes stats, or that any claimed farming route is optimal." },
+          {
+            "t": "p",
+            "c": "The official probability disclosure distinguishes an Egg Heist egg from other eggs in its Sparkling style table. When a Sparkling Cube is used on an Egg Heist egg, the published outcomes are 99% Normal Sparkling, 0% Dazzling Sparkling and 1% Shadow Sparkling."
+          },
+          {
+            "t": "table",
+            "head": ["Sparkling Cube target", "Normal", "Dazzling", "Shadow"],
+            "rows": [
+              ["Egg Heist egg", "99%", "0%", "1%"],
+              ["Egg not from Egg Heist", "99%", "1%", "0%"]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "This table describes the style outcome after the listed Sparkling Cube use. It does not prove that an Egg Heist egg is guaranteed to contain a particular Aniimo, that a Shadow style changes stats, or that any claimed farming route is optimal."
+          },
           { "t": "h", "c": "What should players verify before entering?" },
-          { "t": "li", "c": "The mode is currently available on the platform and server being used" },
+          {
+            "t": "li",
+            "c": "The mode is currently available on the platform and server being used"
+          },
           { "t": "li", "c": "All team members are on a compatible game version" },
-          { "t": "li", "c": "The in-game activity screen shows the current access requirement and reward rules" },
-          { "t": "li", "c": "Any Sparkling item description matches the official probability disclosure before use" },
+          {
+            "t": "li",
+            "c": "The in-game activity screen shows the current access requirement and reward rules"
+          },
+          {
+            "t": "li",
+            "c": "Any Sparkling item description matches the official probability disclosure before use"
+          },
           { "t": "h", "c": "What is still unverified?" },
-          { "t": "p", "c": "AniimoDex does not currently publish an unlock level, quest path, match duration, reward table, best team, fastest egg route or guaranteed hatch result. Those claims require a current official rule or a documented test with platform, server and game version." },
-          { "t": "quote", "c": "Last official-source check: September 26, 2026. Published now: mode type, team size, Chaos Mode entry conditions and the Egg Heist row in the official Sparkling table. Held back: optimal routes, reward efficiency and guaranteed egg outcomes." }
+          {
+            "t": "p",
+            "c": "AniimoDex does not currently publish an unlock level, quest path, match duration, reward table, best team, fastest egg route or guaranteed hatch result. Those claims require a current official rule or a documented test with platform, server and game version."
+          },
+          {
+            "t": "quote",
+            "c": "Last official-source check: September 26, 2026. Published now: mode type, team size, Chaos Mode entry conditions and the Egg Heist row in the official Sparkling table. Held back: optimal routes, reward efficiency and guaranteed egg outcomes."
+          }
         ]
       },
       "aniimo-pre-registration": {
@@ -1749,7 +2024,10 @@
               ["PlayStation 5", "Official store route listed; check your regional store"],
               ["Xbox Series X|S", "Official store route listed; check your regional store"],
               ["Epic Games Store", "Official store route listed; check your regional store"],
-              ["iOS and Android", "Official mobile route listed; check your local storefront and device"],
+              [
+                "iOS and Android",
+                "Official mobile route listed; check your local storefront and device"
+              ],
               ["Nintendo Switch", "Not announced by the official sources checked"]
             ]
           },
@@ -2172,7 +2450,11 @@
       "description": "Look up official mobility abilities, passive traits and combat skills, then open every Aniimo that carries the published entry.",
       "sourceNote": "Names, descriptions and Aniimo mappings come from the official Wiki detail snapshot. This directory does not rank their strength.",
       "count": "{count} Aniimo",
-      "stats": { "mobility": "Mobility abilities", "traits": "Passive traits", "skills": "Combat skill names" },
+      "stats": {
+        "mobility": "Mobility abilities",
+        "traits": "Passive traits",
+        "skills": "Combat skill names"
+      },
       "mobilityTitle": "Movement and exploration abilities",
       "traitsTitle": "Passive traits",
       "traitsDescription": "Search 51 published trait names and their mapped Aniimo. Descriptions are reproduced only where the official snapshot provides them.",

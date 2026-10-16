@@ -41,11 +41,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ToolsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function ToolsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -77,6 +73,14 @@ export default async function ToolsPage({
       tagsKey: 'catchTags',
       tone: 'border-accent bg-rose-50/70',
     },
+    {
+      href: '/tools/team-builder',
+      icon: '🛡️',
+      titleKey: 'teamBuilderTitle',
+      descKey: 'teamBuilderDesc',
+      tagsKey: 'teamBuilderTags',
+      tone: 'border-purple-500 bg-purple-50/70',
+    },
   ];
 
   return (
@@ -88,7 +92,7 @@ export default async function ToolsPage({
         <p className="text-sm text-text-secondary sm:text-base">{t('subtitle')}</p>
       </header>
 
-      <section className="grid gap-4 md:grid-cols-3">
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {tools.map((tool) => (
           <Link
             key={tool.href}
@@ -124,7 +128,10 @@ export default async function ToolsPage({
       <section className="border-t border-ink-border pt-6">
         <h2 className="text-lg font-bold text-text-primary">{t('databaseTitle')}</h2>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{t('databaseDesc')}</p>
-        <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={t('databaseTitle')}>
+        <nav
+          className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light"
+          aria-label={t('databaseTitle')}
+        >
           <Link href="/dex">{t('browseDex')} →</Link>
           <Link href="/evolutions">{t('browseEvolutions')} →</Link>
           <Link href="/locations">{t('browseLocations')} →</Link>

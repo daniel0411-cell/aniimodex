@@ -78,6 +78,12 @@ const STATIC_ROUTES: {
     changefreq: 'weekly',
   },
   { path: '/tools/catch/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  {
+    path: '/tools/team-builder/',
+    lastModified: '2026-10-16',
+    priority: 0.85,
+    changefreq: 'weekly',
+  },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates
