@@ -392,14 +392,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       />
       <section className="border-b border-ink-border py-5">
         <h2 className="text-lg font-bold text-text-primary">
-          {locale === 'en' ? 'October 13: Egg Heist feedback and event dates' : locale === 'zh-Hant' ? '10 月 13 日：Egg Heist 答疑與活動時間' : '10 月 13 日：Egg Heist 答疑与活动时间'}
+          {locale === 'en' ? 'October 15 patch and Harvest Gathering times' : locale === 'zh-Hant' ? '10 月 15 日：補丁與豐收集會時間' : '10 月 15 日：补丁与丰收集会时间'}
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
           {locale === 'en'
-            ? 'New official feedback explains Sanctum spawning and ATK damage safeguards; rescue and Chaos changes remain plans. Waleetle ended October 12 at 03:59 (UTC+8). Journey Chronicles is announced through October 29 at 03:59. Event dates are a schedule record, not live monitoring.'
+            ? 'Official patch 1.0.3732728.0 fixes documented Egg Heist, Home, controller and console issues. Harvest Gathering stage 3 begins October 20 in Europe and the Americas, and October 21 in Asia-Pacific. Batlock Holmes availability starts October 16 at 10:00 in each listed regional time zone. Restart the client after this no-downtime resource update.'
             : locale === 'zh-Hant'
-              ? '最新官方答疑解釋聖所刷新與攻擊傷害保底；救援及混沌改進仍屬計畫。摩托郎公告窗口已於 10 月 12 日 03:59 結束，旅途拾光公告至 10 月 29 日 03:59（UTC+8）。活動日期不是即時開放監控。'
-              : '最新官方答疑解释圣所刷新与攻击伤害保底；救援及混沌改进仍属计划。摩托郎公告窗口已于 10 月 12 日 03:59 结束，旅途拾光公告至 10 月 29 日 03:59（UTC+8）。活动日期不是实时开放监控。'}
+              ? '官方 1.0.3732728.0 補丁修正 Egg Heist、Home、手柄與主機問題。Harvest Gathering 第三階段於 10 月 20 日在歐美開始、10 月 21 日在亞太開始；Batlock Holmes 依各區所列時區於 10 月 16 日 10:00 開放。不停服資源更新後需重新啟動客戶端。'
+              : '官方 1.0.3732728.0 补丁修复 Egg Heist、Home、手柄与主机问题。Harvest Gathering 第三阶段于 10 月 20 日在欧美开始、10 月 21 日在亚太开始；Batlock Holmes 按各区所列时区于 10 月 16 日 10:00 开放。不停服资源更新后需重启客户端。'}
         </p>
         <nav className="mt-3 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={locale === 'en' ? 'Activity and support guides' : locale === 'zh-Hant' ? '活動與支援攻略' : '活动与支持攻略'}>
           <Link href="/guide/aniimo-egg-heist">{locale === 'en' ? 'Egg Heist official answers' : 'Egg Heist 官方答疑'} →</Link>

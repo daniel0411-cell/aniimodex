@@ -237,7 +237,7 @@
     "backToGuides": "Back to Guide"
   },
   "dex": {
-    "title": "Aniimo Dex: All 92 Creatures, Evolutions and Abilities",
+    "title": "Aniimo Dex: All 92 Creatures, Forms & Evolutions",
     "metaDescription": "Browse all 92 official-source Aniimo by name, number, element, role or stage. Check evolution families, habitats, forms, mobility, traits and skills.",
     "intro": "Find all 92 official-source Aniimo in one searchable dex. Filter by name, number, element, role or stage, then open an entry to check its evolution family, habitat, forms, mobility, traits and skills.",
     "subtitle": "{filtered} / {total} official Wiki entries",
@@ -1083,7 +1083,7 @@
         ]
       },
       "aniimo-nintendo-switch": {
-        "title": "Is Aniimo on Nintendo Switch or Switch 2? Official Status",
+        "title": "Is Aniimo on Nintendo Switch or Switch 2?",
         "subtitle": "Neither Nintendo Switch nor Switch 2 is announced in the official Aniimo sources checked for this page.",
         "tag": "Platforms",
         "lead": "Aniimo is not officially confirmed for Nintendo Switch or Nintendo Switch 2. The official website currently links PC, PS5, Xbox, Epic, iOS and Android routes, but no Nintendo store route or release date is listed.",

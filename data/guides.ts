@@ -191,7 +191,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    date: '2026-10-14',
+    date: '2026-10-16',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -206,11 +206,12 @@ export const guidePosts: GuidePost[] = [
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {
     slug: 'aniimo-rv-homeland-guide',
-    date: '2026-10-04',
+    date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
       'aniimo-launch-checklist-known-issues',
@@ -222,6 +223,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {
@@ -293,6 +295,7 @@ export const guidePosts: GuidePost[] = [
     relatedSlugs: [
       'aniimo-multiplayer',
       'aniimo-platforms',
+      'aniimo-nintendo-switch',
       'how-to-download-aniimo',
       'aniimo-system-requirements',
       'aniimo-progress-account-safety',
@@ -341,7 +344,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-language-controller-support',
-    date: '2026-10-11',
+    date: '2026-10-16',
     readMinutes: 5,
     relatedSlugs: ['aniimo-launch-checklist-known-issues', 'aniimo-platforms', 'aniimo-system-requirements'],
     sourceIds: [
@@ -351,6 +354,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
       'aniimo-steam-launch-faq-2026-09-16',
       'aniimo-official-support-center',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {
@@ -363,7 +367,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    date: '2026-10-14',
+    date: '2026-10-16',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
@@ -386,6 +390,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-steam-launch-faq-2026-09-16',
       'aniimo-official-support-center',
       'aniimo-steam-dev-feedback-2026-10-13',
+      'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {

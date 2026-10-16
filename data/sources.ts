@@ -13,6 +13,14 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-steam-patch-1-0-3732728-2026-10-15',
+    url: 'https://steamcommunity.com/games/4126040/announcements/detail/1846651706678228',
+    title: 'Aniimo Official Steam Patch Notes - v1.0.3732728.0',
+    accessedAt: '2026-10-16',
+    evidence:
+      'The official no-downtime resource update introduces a limited Home Season bonus, publishes the third Harvest Gathering schedule and regional Batlock Holmes outfit availability, and fixes documented Egg Heist, Home, controller, interface, loading and console issues. It announces 100 Glimmers for accounts registered before version 1.1 and instructs players to restart the client; the notice does not prove that similar symptoms on every device are resolved.',
+  },
+  {
     id: 'aniimo-steam-dev-feedback-2026-10-13',
     url: 'https://steamcommunity.com/games/4126040/announcements/detail/1846018067943039',
     title: 'Aniimo Dev Feedback | Oct 13',

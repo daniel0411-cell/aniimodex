@@ -27,9 +27,9 @@ const commonWatchlist = [
 const english: Record<string, LaunchGuide> = {
   'aniimo-language-controller-support': controllerGuide('en'),
   'aniimo-crossplay-cross-save': {
-    title: 'Is Aniimo Crossplay? Platform Pairings & Cross-Save Status',
+    title: 'Aniimo Crossplay & Cross-Save: Current Status',
     subtitle:
-      'Yes, Aniimo lists cross-platform multiplayer. Check PC, PS5, Xbox and mobile pairings, plus the still-unconfirmed cross-save and progression rules.',
+      'Aniimo supports cross-platform multiplayer, but exact PC, PS5, Xbox and mobile pairings and cross-save rules are not fully documented.',
     tag: 'Cross-platform',
     lead: 'Yes, Aniimo lists cross-platform multiplayer. No, a complete official cross-save policy is not published. The official website links PC, PS5, Xbox, Epic and mobile routes, but Steam does not document every platform pairing or whether saves, purchases and progression move between platforms.',
     body: [
@@ -555,11 +555,11 @@ const english: Record<string, LaunchGuide> = {
     ],
   },
   'aniimo-launch-checklist-known-issues': {
-    title: 'Aniimo Known Issues & Fixes: Login, Rewards, Android and Progress',
+    title: 'Aniimo Known Issues & Fixes: Current Patch Status',
     subtitle:
-      'Official troubleshooting for login, crashes, Steam controllers, error107 and missing progress, with patch-specific fixes and support reporting steps.',
+      'Current official fixes and troubleshooting for login, crashes, controllers, error107 and missing progress, checked against the latest patch notes.',
     tag: 'Known issues',
-    lead: 'Start with the official troubleshooting table below for crashes, Steam controllers, error107 and support reports. Rechecked October 11, the launch FAQ is a historical support notice, not live server monitoring. A patch-specific fix is not a guarantee that a similar symptom has disappeared on every device.',
+    lead: 'Start with the October 15 patch fixes and official troubleshooting below for crashes, Steam controllers, error107 and support reports. Sources were checked October 16; this is not live server monitoring, and a patch-specific fix does not guarantee that every similar symptom has disappeared on every device.',
     body: [
       ...supportFaqBlocks('en'),
       { t: 'h', c: 'September 23 official service status' },
@@ -1646,12 +1646,53 @@ function octoberFeedbackBlocks(locale: string, slug: string): LaunchGuideBlock[]
   return blocks.length ? [...blocks, { t: 'quote', c: text('Source: official Dev Feedback | Oct 13, checked October 13, 2026. This is developer guidance and plans, not independent gameplay testing or a new patch report.', '来源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核验。这是开发者解释与计划，不是本站实测或新补丁实装报告。', '來源：官方 Dev Feedback | Oct 13，2026 年 10 月 13 日核驗。這是開發者解釋與計畫，不是本站實測或新補丁實裝報告。') }] : [];
 }
 
+function october15PatchBlocks(locale: string, slug: string): LaunchGuideBlock[] {
+  const text = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const entries: Partial<Record<string, LaunchGuideBlock[]>> = {
+    'aniimo-launch-checklist-known-issues': [
+      { t: 'h', c: text('October 15 patch 1.0.3732728.0: confirmed fixes', '10 月 15 日 1.0.3732728.0：官方确认修复', '10 月 15 日 1.0.3732728.0：官方確認修正') },
+      { t: 'table', head: [text('Issue', '问题', '問題'), text('Official patch status', '官方补丁状态', '官方補丁狀態')], rows: [
+        [text('Egg Heist key consumed but door would not open', 'Egg Heist 消耗钥匙后门仍无法打开', 'Egg Heist 消耗鑰匙後門仍無法打開'), text('Listed as fixed', '列为已修复', '列為已修正')],
+        [text('Console Holo-Battle or NPC duel crashes', '主机端 Holo-Battle 或 NPC 对战崩溃', '主機端 Holo-Battle 或 NPC 對戰崩潰'), text('Crash probability reduced', '崩溃概率已降低', '崩潰機率已降低')],
+        [text('Slow Holo-Battle and Egg Heist loading', 'Holo-Battle 与 Egg Heist 加载缓慢', 'Holo-Battle 與 Egg Heist 載入緩慢'), text('Loading performance optimized', '加载性能已优化', '載入效能已改善')],
+        [text('Controller focus could apply Sparkling Sigil to the wrong target', '手柄焦点异常可能把 Sparkling Sigil 用错目标', '手柄焦點異常可能把 Sparkling Sigil 用錯目標'), text('Listed as fixed; still verify the selected target before use', '列为已修复；使用前仍应确认目标', '列為已修正；使用前仍應確認目標')],
+      ] },
+      { t: 'p', c: text('This was a no-downtime resource update. The official notice asks players to restart the client. A patch note confirms the listed change, but it does not guarantee that every similar symptom on every device has disappeared.', '这是一次不停服资源更新，官方要求重启客户端。补丁记录确认的是所列修复，不代表所有设备上的类似症状都必然消失。', '這是一次不停服資源更新，官方要求重新啟動客戶端。補丁記錄確認的是所列修正，不代表所有裝置上的類似症狀都必然消失。') },
+      { t: 'p', c: text('The notice also announces 100 Glimmers for players who registered before the version 1.1 update. Eligibility and delivery come from the official notice; AniimoDex has not tested individual mail delivery.', '公告另列出 100 Glimmer 补偿，资格为 1.1 版本更新前完成注册的玩家。资格与发放说明来自官方公告，AniimoDex 未实测个别账号的邮件到账情况。', '公告另列出 100 Glimmer 補償，資格為 1.1 版本更新前完成註冊的玩家。資格與發放說明來自官方公告，AniimoDex 未實測個別帳號的郵件到帳情況。') },
+    ],
+    'aniimo-egg-heist': [
+      { t: 'h', c: text('Door key issue fixed in 1.0.3732728.0', '1.0.3732728.0 已修复钥匙开门问题', '1.0.3732728.0 已修正鑰匙開門問題') },
+      { t: 'p', c: text('The October 15 patch lists the case where a key was consumed but the door still would not open as fixed. It separately optimizes Egg Heist loading. These entries do not confirm that every Erlath, spawn, aggro, matchmaking or route report is resolved; update and restart first, then report the exact version and symptom if it persists.', '10 月 15 日补丁将“钥匙已消耗但门仍打不开”列为已修复，并单独优化 Egg Heist 加载。它没有确认 Erlath、刷新、仇恨、匹配或路线相关的所有报告都已解决；请先更新并重启，持续出现时记录版本和具体症状再反馈。', '10 月 15 日補丁將「鑰匙已消耗但門仍打不開」列為已修正，並另外改善 Egg Heist 載入。它沒有確認 Erlath、刷新、仇恨、配對或路線相關的所有回報都已解決；請先更新並重新啟動，持續發生時記錄版本與具體症狀再回報。') },
+    ],
+    'aniimo-rv-homeland-guide': [
+      { t: 'h', c: text('Home Season bonus and Harvest Gathering stage 3', 'Home Season 限时增益与 Harvest Gathering 第三阶段', 'Home Season 限時增益與 Harvest Gathering 第三階段') },
+      { t: 'p', c: text('Patch 1.0.3732728.0 starts a limited Home Season bonus: Moondew Radish and Waxing Moon Pepper have increased mutation rates, and products from those crops grant more Harvest Moon Points. The announcement does not publish the exact multiplier or mutation percentage.', '1.0.3732728.0 开启 Home Season 限时增益：Moondew Radish 与 Waxing Moon Pepper 的变异率提高，这两种作物产品获得的 Harvest Moon Points 也会增加。公告未公开具体倍率或变异概率。', '1.0.3732728.0 開啟 Home Season 限時增益：Moondew Radish 與 Waxing Moon Pepper 的變異率提高，這兩種作物產品獲得的 Harvest Moon Points 也會增加。公告未公開具體倍率或變異機率。') },
+      { t: 'table', head: [text('Region', '地区', '地區'), text('Harvest Gathering stage 3', 'Harvest Gathering 第三阶段', 'Harvest Gathering 第三階段')], rows: [[text('Europe', '欧洲', '歐洲'), 'October 20, 20:00 UTC'], [text('Americas', '美洲', '美洲'), 'October 20, 16:00 UTC-4'], [text('Asia-Pacific', '亚太', '亞太'), 'October 21, 04:00 UTC+8']] },
+      { t: 'p', c: text('The same patch fixes Furniture Store purchase quantities unexpectedly reverting to one and adds Select All to controller batch acceleration in Home. These are official patch entries, not an independently tested guarantee for every layout or controller.', '同一补丁修复家具商店购买数量突然变为 1 的问题，并为 Home 手柄批量加速增加 Select All。这些是官方补丁记录，不是本站对所有布局或手柄的实测保证。', '同一補丁修正家具商店購買數量突然變為 1 的問題，並為 Home 手柄批次加速增加 Select All。這些是官方補丁記錄，不是本站對所有佈局或手柄的實測保證。') },
+    ],
+    'aniimo-language-controller-support': [
+      { t: 'h', c: text('Console and controller fixes in 1.0.3732728.0', '1.0.3732728.0 主机与手柄修复', '1.0.3732728.0 主機與手柄修正') },
+      { t: 'table', head: [text('Area', '项目', '項目'), text('Official change', '官方改动', '官方改動')], rows: [
+        [text('Console stability', '主机稳定性', '主機穩定性'), text('Reduced crash probability in Holo-Battle and NPC duels', '降低 Holo-Battle 与 NPC 对战崩溃概率', '降低 Holo-Battle 與 NPC 對戰崩潰機率')],
+        [text('Loading', '加载', '載入'), text('Optimized Holo-Battle and Egg Heist loading', '优化 Holo-Battle 与 Egg Heist 加载', '改善 Holo-Battle 與 Egg Heist 載入')],
+        [text('Console chat', '主机聊天', '主機聊天'), text('Fixed incorrect message order', '修复消息顺序错误', '修正訊息順序錯誤')],
+        [text('Home controller input', 'Home 手柄操作', 'Home 手柄操作'), text('Added Select All for batch acceleration and fixed an input conflict', '批量加速增加 Select All，并修复按键冲突', '批次加速增加 Select All，並修正按鍵衝突')],
+        [text('Controller focus', '手柄焦点', '手柄焦點'), text('Fixed focus errors that could use Sparkling Sigil on the wrong target', '修复可能导致 Sparkling Sigil 用错目标的焦点错误', '修正可能導致 Sparkling Sigil 用錯目標的焦點錯誤')],
+      ] },
+      { t: 'p', c: text('Install the official update and restart before retesting. “Reduced crash probability” is not a promise of zero crashes, and the note does not establish complete compatibility for every controller or handheld PC.', '请安装官方更新并重启后再测试。“降低崩溃概率”不等于零崩溃，公告也没有证明所有手柄或掌机均完全兼容。', '請安裝官方更新並重新啟動後再測試。「降低崩潰機率」不等於零崩潰，公告也沒有證明所有手柄或掌機均完全相容。') },
+    ],
+  };
+  const blocks = entries[slug];
+  return blocks ? [...blocks, { t: 'quote', c: text('Source: official patch 1.0.3732728.0, published October 15 and checked October 16, 2026.', '来源：官方 1.0.3732728.0 补丁，2026 年 10 月 15 日发布、10 月 16 日核验。', '來源：官方 1.0.3732728.0 補丁，2026 年 10 月 15 日發布、10 月 16 日核驗。') }] : [];
+}
+
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
   const guide = english[slug];
   if (!guide) return undefined;
   const localizedGuide = localized(locale, guide);
+  const patch = october15PatchBlocks(locale, slug);
   const feedback = octoberFeedbackBlocks(locale, slug);
-  const result = { ...localizedGuide, body: [...feedback, ...localizedGuide.body] };
+  const result = { ...localizedGuide, body: [...patch, ...feedback, ...localizedGuide.body] };
   if (locale === 'en') return result;
   const traditional = locale === 'zh-Hant';
   const additions: Partial<Record<string, LaunchGuideBlock[]>> = {

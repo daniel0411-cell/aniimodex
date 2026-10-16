@@ -19,6 +19,12 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   }
   const home = readFileSync(`out/${locale}/index.html`, 'utf8');
   assert(home.includes('guide/aniimo-egg-heist'), `${locale}: missing home task entry`);
+  assert(home.includes('1.0.3732728.0') && home.includes('Batlock Holmes'), `${locale}: missing October 15 home status`);
+  for (const slug of ['aniimo-launch-checklist-known-issues', 'aniimo-egg-heist', 'aniimo-rv-homeland-guide', 'aniimo-language-controller-support']) {
+    const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
+    assert(html.includes('1.0.3732728.0'), `${locale}/${slug}: missing October 15 patch`);
+    assert(html.includes('1846651706678228'), `${locale}/${slug}: missing October 15 source`);
+  }
   const events = readFileSync(`out/${locale}/guide/aniimo-prismana-event-tracker/index.html`, 'utf8');
   assert(events.includes(locale === 'en' ? 'windows have both ended' : locale === 'zh-Hant' ? '公告窗口均已結束' : '公告窗口均已结束'), `${locale}: stale event lead`);
 }
