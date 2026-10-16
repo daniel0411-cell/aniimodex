@@ -526,6 +526,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
       'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],

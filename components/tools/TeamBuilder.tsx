@@ -15,10 +15,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import { getAllAniimos } from '@/lib/aniimo';
 import { mobilityByNumber } from '@/data/mobility';
 import { ELEMENT_MATCHUPS } from '@/data/element-matchups';
+import { combinedEffectiveness } from '@/lib/type-chart';
 import {
   ELEMENTS,
-  ELEMENT_LABELS,
-  ROLE_LABELS,
   ELEMENT_BADGE_CLASSES,
   ROLE_BADGE_CLASSES,
   ELEMENT_GRADIENTS,
@@ -33,33 +32,36 @@ const MOBILITY_CATEGORIES = [
     titleKey: 'flight',
     tipKey: 'flightTip',
     icon: '🦅',
-    skills: ['Take Off', 'Cloudwalk', 'Bubble Drift'],
+    skills: ['Take Off', 'Cloudwalk'],
   },
   {
     key: 'aquatic',
     titleKey: 'aquatic',
     tipKey: 'aquaticTip',
     icon: '🌊',
-    skills: ['Swim', 'Dive', 'Floaty Bubble'],
+    skills: ['Floaty Bubble', 'Bubble Drift'],
   },
   {
     key: 'climbing',
     titleKey: 'climbing',
     tipKey: 'climbingTip',
     icon: '⛏️',
-    skills: ['Tunnel', 'Dig In', 'Hookshot', 'High Jump', 'Blooming'],
+    skills: ['Hookshot', 'High Jump', 'Puff Up'],
   },
   {
     key: 'speed',
     titleKey: 'speed',
     tipKey: 'speedTip',
     icon: '⚡',
-    skills: ['Hustle', 'Scurry', 'Fast and Furious', 'Head Hammer', 'Cloak'],
+    skills: ['Hustle', 'Scurry', 'Fast and Furious'],
   },
 ] as const;
 
 export default function TeamBuilder() {
   const t = useTranslations('teamBuilder');
+  const tr = useTranslations();
+  const elementLabel = (element: Element) => tr(`elements.${element}`);
+  const roleLabel = (role: Role) => tr(`roles.${role}`);
   const locale = useLocale();
   const allAniimos = useMemo(() => getAllAniimos(), []);
 
@@ -163,9 +165,7 @@ export default function TeamBuilder() {
       const victims: AniimoEntry[] = [];
       for (const aniimo of assignedAniimos) {
         const defenderElements = aniimo.officialElements ?? [aniimo.element];
-        const isWeak = defenderElements.some(
-          (defEl) => ELEMENT_MATCHUPS[attackingEl]?.[defEl] === 1.6
-        );
+        const isWeak = combinedEffectiveness(attackingEl, defenderElements) > 1;
         if (isWeak) {
           victims.push(aniimo);
         }
@@ -363,7 +363,7 @@ export default function TeamBuilder() {
                           ELEMENT_BADGE_CLASSES[el]
                         )}
                       >
-                        {ELEMENT_LABELS[el]}
+                        {elementLabel(el)}
                       </span>
                     ))}
                     <span
@@ -372,7 +372,7 @@ export default function TeamBuilder() {
                         ROLE_BADGE_CLASSES[aniimo.officialRole ?? aniimo.role]
                       )}
                     >
-                      {ROLE_LABELS[aniimo.officialRole ?? aniimo.role]}
+                      {roleLabel(aniimo.officialRole ?? aniimo.role)}
                     </span>
                   </div>
                 </div>
@@ -381,7 +381,7 @@ export default function TeamBuilder() {
               {/* 机动能力标签 */}
               <div className="border-t border-ink-border pt-2">
                 <div className="text-[10px] font-semibold text-text-muted uppercase">
-                  Twine Mobility:
+                  {t('mobilityLabel')}:
                 </div>
                 <div className="mt-1 flex flex-wrap gap-1">
                   {mobilities.length > 0 ? (
@@ -501,11 +501,11 @@ export default function TeamBuilder() {
                       )}
                       title={
                         isCovered
-                          ? `Countered by: ${counters.map((el) => ELEMENT_LABELS[el]).join(', ')}`
-                          : 'No team element counters this enemy element'
+                          ? t('counteredBy', { elements: counters.map(elementLabel).join(', ') })
+                          : t('noCounter')
                       }
                     >
-                      <span>{ELEMENT_LABELS[targetEl]}</span>
+                      <span>{elementLabel(targetEl)}</span>
                       {isCovered && <span className="font-mono text-[10px]">1.6x</span>}
                     </div>
                   );
@@ -527,16 +527,16 @@ export default function TeamBuilder() {
                       className="rounded-md border border-rose-300 bg-rose-50/80 p-3 text-xs text-rose-900"
                     >
                       <div className="font-bold flex items-center gap-1.5">
-                        <span>⚠️</span> {t('sharedWeaknessAlert')} ({ELEMENT_LABELS[element]})
+                        <span>⚠️</span> {t('sharedWeaknessAlert')} ({elementLabel(element)})
                       </div>
                       <p className="mt-1">
                         {t('sharedWeaknessDesc', {
                           count: victims.length,
-                          element: ELEMENT_LABELS[element],
+                          element: elementLabel(element),
                         })}
                       </p>
                       <div className="mt-1 text-[11px] text-rose-700">
-                        Affected: {victims.map(getDisplayName).join(', ')}
+                        {t('affected', { names: victims.map(getDisplayName).join(', ') })}
                       </div>
                     </div>
                   ))}
@@ -570,7 +570,7 @@ export default function TeamBuilder() {
                       ROLE_BADGE_CLASSES[role]
                     )}
                   >
-                    {ROLE_LABELS[role]}
+                    {roleLabel(role)}
                   </span>
                   <span className="font-mono font-bold text-text-primary">
                     {roleAnalysis.counts[role]}
@@ -681,7 +681,7 @@ export default function TeamBuilder() {
                         : 'border-ink-border bg-white text-text-secondary hover:border-ink'
                     )}
                   >
-                    {ELEMENT_LABELS[el]}
+                    {elementLabel(el)}
                   </button>
                 ))}
               </div>
@@ -713,7 +713,7 @@ export default function TeamBuilder() {
                         : 'border-ink-border bg-white text-text-secondary hover:border-ink'
                     )}
                   >
-                    {ROLE_LABELS[r]}
+                    {roleLabel(r)}
                   </button>
                 ))}
               </div>
@@ -771,7 +771,7 @@ export default function TeamBuilder() {
                                   ELEMENT_BADGE_CLASSES[el]
                                 )}
                               >
-                                {ELEMENT_LABELS[el]}
+                                {elementLabel(el)}
                               </span>
                             ))}
                             <span
@@ -780,7 +780,7 @@ export default function TeamBuilder() {
                                 ROLE_BADGE_CLASSES[aniimo.officialRole ?? aniimo.role]
                               )}
                             >
-                              {ROLE_LABELS[aniimo.officialRole ?? aniimo.role]}
+                              {roleLabel(aniimo.officialRole ?? aniimo.role)}
                             </span>
                           </div>
                           {mobilities.length > 0 && (
@@ -794,9 +794,7 @@ export default function TeamBuilder() {
                   })}
                 </div>
               ) : (
-                <div className="py-12 text-center text-sm text-text-muted">
-                  No Aniimo matches your search and filter criteria.
-                </div>
+                <div className="py-12 text-center text-sm text-text-muted">{t('noResults')}</div>
               )}
             </div>
           </div>

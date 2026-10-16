@@ -15,12 +15,17 @@ export function effectiveness(attacker: Element, defender: Element): number {
   return ELEMENT_MATCHUPS[attacker][defender] ?? 1;
 }
 
+/** Combine all defender elements, including resistances that cancel weaknesses. */
+export function combinedEffectiveness(attacker: Element, defenders: Element[]): number {
+  return defenders.reduce((total, defender) => total * effectiveness(attacker, defender), 1);
+}
+
 /** 针对一组防御方元素，按综合倍率从高到低排列全部攻击方元素 */
 export function bestAttackers(defenders: Element[]): { element: Element; value: number }[] {
   return (Object.keys(ELEMENT_MATCHUPS) as Element[])
     .map((element) => ({
       element,
-      value: defenders.reduce((total, defender) => total * effectiveness(element, defender), 1),
+      value: combinedEffectiveness(element, defenders),
     }))
     .sort((a, b) => b.value - a.value);
 }

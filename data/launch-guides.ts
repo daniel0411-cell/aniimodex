@@ -1390,189 +1390,57 @@ function roadmapChecksBlocks(locale: string): LaunchGuideBlock[] {
 }
 
 function harvestGatheringGuide(locale: string): LaunchGuide {
-  const en = locale === 'en';
-  const traditional = locale === 'zh-Hant';
-  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
-    en ? englishText : traditional ? traditionalText : simplified;
-
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return {
     title: text(
-      'Aniimo Harvest Gathering & Farm Guide: Furniture Tasks & Crop Mutations',
-      'Aniimo 丰收聚会与家园农场攻略：家具摆放解法、作物变异与活动排期',
-      'Aniimo 豐收聚會與家園農場攻略：家具擺放解法、作物變異與活動排期'
+      'Aniimo Harvest Gathering: Schedule & Crop Bonuses',
+      'Aniimo 丰收聚会：开放时间与作物增益',
+      'Aniimo 豐收聚會：開放時間與作物增益'
     ),
     subtitle: text(
-      'How to solve the Get-Together furniture combination, maximize Moondew Radish and Waxing Moon Pepper mutations, and clear Harvest Moon Stage 3.',
-      '详解“丰收聚会·团聚”家具组合解法、月露萝卜与上弦月椒变异率提升机制、阶段三活动时间与商店兑换优先级。',
-      '詳解「豐收聚會·團聚」家具組合解法、月露蘿蔔與上弦月椒變異機率提升機制、階段三活動時間與商店兌換優先級。'
+      'Official October 15 crop bonuses and the October 20–21 Harvest Gathering opening schedule, with regional time zones.',
+      '整理官方 10 月 15 日作物增益与 10 月 20–21 日丰收聚会开放排期，区分各区时区。',
+      '整理官方 10 月 15 日作物增益與 10 月 20–21 日豐收聚會開放排期，區分各區時區。'
     ),
     tag: text('Home & Event', '家园与活动', '家園與活動'),
     lead: text(
-      'Stage 3 of the Harvest Moon Festival introduces the Harvest Gathering event window alongside official mutation rate boosts in patch 1.0.3732728.0. This guide resolves the widely reported Get-Together furniture combo requirement, details crop mutation mechanics, and provides optimal farm automation layouts.',
-      '丰收季第三阶段“丰收聚会”已正式开启，同时 1.0.3732728.0 补丁上线了家园限时增益。本攻略详解被广泛卡关的“丰收聚会：团聚”家具组合要求、月露萝卜与上弦月椒的变异概率机制，以及高效率家园生产线排布。',
-      '豐收季第三階段「豐收聚會」已正式開啟，同時 1.0.3732728.0 補丁上線了家園限時增益。本攻略詳解被廣泛卡關的「豐收聚會：團聚」家具組合要求、月露蘿蔔與上弦月椒變異機率提升機制、階段三活動時間與商店兌換優先級。'
+      'As of October 16, Harvest Gathering stage 3 has not opened. The official schedule starts October 20 in Europe and the Americas and October 21 in Asia-Pacific. Patch 1.0.3732728.0 separately introduces the limited-time Home Season crop bonus.',
+      '截至 10 月 16 日，丰收聚会第三阶段尚未开放。官方排期为欧美 10 月 20 日、亚太 10 月 21 日；1.0.3732728.0 补丁已另行公布家园赛季限时作物增益。',
+      '截至 10 月 16 日，豐收聚會第三階段尚未開放。官方排期為歐美 10 月 20 日、亞太 10 月 21 日；1.0.3732728.0 補丁已另外公布家園賽季限時作物增益。'
     ),
     body: [
+      ...october15PatchBlocks(locale, 'aniimo-rv-homeland-guide'),
       {
         t: 'h',
         c: text(
-          'What is current in the Home Season and Harvest Gathering?',
-          '当前家园赛季与丰收聚会的官方状态？',
-          '目前家園賽季與豐收聚會的官方狀態？'
-        ),
-      },
-      {
-        t: 'table',
-        head: text(
-          ['Item', 'Official Status / Schedule', 'Verification Note'],
-          ['项目', '官方状态与时间表', '核验说明'],
-          ['項目', '官方狀態與時間表', '核驗說明']
-        ),
-        rows: [
-          [
-            text('Event Duration', '活动持续时间', '活動持續時間'),
-            text(
-              'September 16 – October 27, 2026',
-              '2026年9月16日 至 10月27日',
-              '2026年9月16日 至 10月27日'
-            ),
-            text(
-              'Requires RV Level 10 to participate',
-              '需房车（RV）达到 10 级解锁',
-              '需房車（RV）達到 10 級解鎖'
-            ),
-          ],
-          [
-            text('Patch 1.0.3732728.0 Boost', '1.0.3732728.0 限时增益', '1.0.3732728.0 限時增益'),
-            text(
-              'Increased mutation rates for Moondew Radish & Waxing Moon Pepper',
-              '月露萝卜与上弦月椒变异率提高，作物产物积分加成',
-              '月露蘿蔔與上弦月椒變異率提高，作物產物積分加成'
-            ),
-            text(
-              'Resource update applied October 15 without downtime',
-              '10月15日不停服资源更新实装',
-              '10月15日不停服資源更新實裝'
-            ),
-          ],
-          [
-            text('Harvest Gathering Stage 3', '丰收聚会第三阶段开放', '丰收聚会第三阶段开放'),
-            text(
-              'EU: Oct 20 20:00 UTC; NA: Oct 20 16:00 UTC-4; Asia: Oct 21 04:00 UTC+8',
-              '欧洲 10月20日 20:00 UTC；美洲 10月20日 16:00 UTC-4；亚太 10月21日 04:00 UTC+8',
-              '歐洲 10月20日 20:00 UTC；美洲 10月20日 16:00 UTC-4；亞太 10月21日 04:00 UTC+8'
-            ),
-            text('Official dated schedule', '官方公告排期', '官方公告排期'),
-          ],
-          [
-            text('Shop Rotations', '商店轮换', '商店輪換'),
-            text(
-              'Regional Batlock Holmes outfit release',
-              '区域轮换上线 Batlock Holmes 时装套装',
-              '區域輪換上線 Batlock Holmes 時裝套裝'
-            ),
-            text(
-              'Store purchase quantity bug fixed in 1.0.3732728.0',
-              '家具商店购买数量重置 Bug 已修复',
-              '家具商店購買數量重置 Bug 已修復'
-            ),
-          ],
-        ],
-      },
-      {
-        t: 'h',
-        c: text(
-          'What is the Harvest Gathering Get-Together furniture requirement?',
-          '“丰收聚会：团聚”家具组合要求是什么？',
-          '「豐收聚會：團聚」家具組合要求是什麼？'
+          'What are the Get-Together furniture requirements?',
+          '团聚任务需要哪些家具？',
+          '團聚任務需要哪些家具？'
         ),
       },
       {
         t: 'p',
         c: text(
-          'Many players report being stuck searching for a single furniture item named "Get-Together". In the official game design, this task requires a specific furniture set combination from the Harvest Moon collection: exactly 2 Round Tables, 2 Tall Stools, and 3 Low Stools.',
-          '许多玩家在进行丰收聚会任务时，误以为需要购买一件名为“团聚”的单件家具而卡关。实际上，该任务要求摆放丰收月系列的成套组合：具体为 2张圆桌（Round Table）、2张高凳（Tall Stool）与 3张低凳（Low Stool）。',
-          '許多玩家在進行豐收聚會任務時，誤以為需要購買一件名為「團聚」的單件家具而卡關。實際上，該任務要求擺放豐收月系列的成套組合：具體為 2張圓桌（Round Table）、2張高凳（Tall Stool）與 3張低凳（Low Stool）。'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'To place the set correctly, open Home Design > System Design menu. Select the Harvest Gathering preset combination or place the required quantities onto your Homeland plot. Once all 7 pieces are registered on the active plot, the task automatically completes.',
-          '正确摆放方法：打开“家园设计（Home Design）> 系统方案（System Design）”菜单，选择丰收聚会预设方案或直接在空地上摆放对应数量的这 7 件家具。放置完成后系统会自动判定完成并结算任务奖励。',
-          '正確擺放方法：打開「家園設計（Home Design）> 系統方案（System Design）」選單，選擇豐收聚會預設方案或直接在空地上擺放對應數量的這 7 件家具。放置完成後系統會自動判定完成並結算任務獎勵。'
+          'The registered official sources do not specify a furniture recipe, required quantities or a reproducible completion workflow for this task. Check the in-game task and furniture names before buying. AniimoDex cannot confirm a seven-piece combination.',
+          '已登记的官方来源没有提供此任务的家具配方、数量或可复现的完成流程。购买前请核对游戏内任务说明与家具名称；本站无法确认七件家具组合。',
+          '已登記的官方來源沒有提供此任務的家具配方、數量或可重現的完成流程。購買前請核對遊戲內任務說明與家具名稱；本站無法確認七件家具組合。'
         ),
       },
       {
         t: 'h',
         c: text(
-          'How do Moondew Radish and Waxing Moon Pepper mutations work?',
-          '月露萝卜与上弦月椒变异率如何提升？',
-          '月露蘿蔔與上弦月椒變異率如何提升？'
+          'Which farming bonuses are confirmed?',
+          '哪些种植增益已有依据？',
+          '哪些種植增益已有依據？'
         ),
       },
       {
         t: 'p',
         c: text(
-          'Patch 1.0.3732728.0 officially activated a limited-time Home Season bonus boosting mutation rates for Moondew Radish and Waxing Moon Pepper. To maximize your mutation yield, implement these verified practices:',
-          '1.0.3732728.0 补丁正式激活了家园赛季限时增益，大幅提升了月露萝卜与上弦月椒的作物变异概率。要最大化变异收益，推荐遵循以下排布与养成准则：',
-          '1.0.3732728.0 補丁正式啟動了家園賽季限時增益，大幅提升了月露蘿蔔與上弦月椒的作物變異機率。要最大化變異收益，推薦遵循以下排布與養成準則：'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'RV Level 15 Rooftop Module: Upgrading your RV unlocks the Plant Research Module on the rooftop loft, granting an inherent passive bonus to all Homeland plot mutations.',
-          '房车（RV）15 级天台模块：优先将房车升至 15 级，解锁天台“植物研究模块（Plant Research Module）”，可提供全局作物变异被动加成。',
-          '房車（RV）15 級天台模組：優先將房車升至 15 級，解鎖天台「植物研究模組（Plant Research Module）」，可提供全域作物變異被動加成。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Water-type Aniimo Workers: Assign Water-element Aniimos with watering proficiency to Homeland farmland to maintain 100% moisture levels, preventing growth interruptions.',
-          '水系伊莫派遣：在家园农田中驻扎具有浇水特长的水系伊莫，保持土壤 100% 湿润状态，避免作物干涸中断变异判定。',
-          '水系伊莫派遣：在家園農田中駐紮具有澆水特長的水系伊莫，保持土壤 100% 濕潤狀態，避免作物乾涸中斷變異判定。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Adjacency Layout: Plant event crops in dense 3x3 grids centered around water sources or companion crops to trigger cross-mutation bonuses during harvest cycles.',
-          '九宫格交错排布：将月露萝卜与上弦月椒按 3x3 紧邻地块交错种植，利用相邻地块的水源与协同效应提升特殊形态产出概率。',
-          '九宮格交錯排布：將月露蘿蔔與上弦月椒按 3x3 緊鄰地塊交錯種植，利用相鄰地塊的水源與協同效應提升特殊形態產出機率。'
-        ),
-      },
-      {
-        t: 'h',
-        c: text(
-          'What should players prioritize in the Harvest Moon event shop?',
-          '丰收月活动商店优先兑换什么？',
-          '豐收月活動商店優先兌換什麼？'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'Harvest Moon Points earned from mutated crop products should be spent strategically. Top priority belongs to limited-edition furniture blueprints and event-exclusive accessories that will not enter standard stores after October 27.',
-          '利用变异作物产物积累的月之点数（Harvest Moon Points），应按照稀缺性梯队进行兑换。第一梯队为活动限定家具图纸与限定外观配件，活动结束后大概率不再返场。',
-          '利用變異作物產物累積的月之點數（Harvest Moon Points），應按照稀缺性梯隊進行兌換。第一梯隊為活動限定家具圖紙與限定外觀配件，活動結束後大概率不再返場。'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'Secondary priority includes Sparkling Cubes and high-tier seeds. Avoid wasting event points on basic building materials like wood or common stone that can be gathered freely in the open world.',
-          '第二梯队包括闪光魔方（Sparkling Cube）与高品质种子；坚决避免将有限的活动点数兑换普通木材、碎石等大世界随处可采集的基础原材料。',
-          '第二梯隊包括閃光魔方（Sparkling Cube）與高品質種子；堅決避免將有限的活動點數兌換普通木材、碎石等大世界隨處可採集的美觀基礎原材料。'
-        ),
-      },
-      {
-        t: 'quote',
-        c: text(
-          'Source: Official Steam Patch Notes v1.0.3732728.0 (October 15, 2026) and official website launch announcements. Event dates and mutation bonuses are verified against live patch data.',
-          '来源：官方 Steam 补丁公告 v1.0.3732728.0（2026年10月15日）及官网公告。活动时间表与变异增益均经实机更新核验。',
-          '來源：官方 Steam 補丁公告 v1.0.3732728.0（2026年10月15日）及官網公告。活動時間表與變異增益均經實機更新核驗。'
+          'The patch confirms higher mutation rates for the two named crops and more Harvest Moon Points from their crafted products. It does not publish a multiplier, a 3×3 adjacency bonus, an RV level requirement or an optimal layout. Event shop stock, costs and future availability must be checked in-game.',
+          '补丁确认两种指定作物变异率提高，其加工产物获得更多 Harvest Moon Points；未公布具体倍率、3×3 邻接加成、房车等级要求或最优布局。活动商店库存、价格及后续返场情况需在游戏内核对。',
+          '補丁確認兩種指定作物變異機率提高，其加工產物獲得更多 Harvest Moon Points；未公布具體倍率、3×3 鄰接加成、房車等級要求或最佳佈局。活動商店庫存、價格及後續再推出情況需在遊戲內核對。'
         ),
       },
     ],
@@ -1580,191 +1448,96 @@ function harvestGatheringGuide(locale: string): LaunchGuide {
 }
 
 function currenciesGuide(locale: string): LaunchGuide {
-  const en = locale === 'en';
-  const traditional = locale === 'zh-Hant';
-  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
-    en ? englishText : traditional ? traditionalText : simplified;
-
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return {
     title: text(
-      'Aniimo Currency & Shop Guide: Glimmers, Cubes, Starine & Priority Matrix',
-      'Aniimo 全货币与商店兑换避坑指南：微光、星石、魔方与消费优先级',
-      'Aniimo 全貨幣與商店兌換避坑指南：微光、星石、魔方與消費優先級'
+      'Aniimo Currencies: Rewards & Spending Checks',
+      'Aniimo 货币与奖励：领取条件与消费核对',
+      'Aniimo 貨幣與獎勵：領取條件與消費核對'
     ),
     subtitle: text(
-      'A complete breakdown of Aniimo currencies, where to earn them, and how to avoid wasting limited resources like Sparkling Cubes.',
-      '全面梳理游戏内微光、闪光魔方、星石与月之点数的获取途径，建立清晰的高性价比兑换矩阵，避免稀缺资源浪费。',
-      '全面梳理遊戲內微光、閃光魔方、星石與月之點數的獲取途徑，建立清晰的高性價比兌換矩陣，避免稀缺資源浪費。'
+      'Check official Glimmer compensation, Harvest Moon Points bonuses and Sparkling Cube style probabilities before spending.',
+      '消费前核对官方 Glimmer 补偿资格、Harvest Moon Points 增益与 Sparkling Cube 样式概率。',
+      '消費前核對官方 Glimmer 補償資格、Harvest Moon Points 增益與 Sparkling Cube 樣式機率。'
     ),
-    tag: text('Currencies & Economy', '货币与经济', '貨幣與經濟'),
+    tag: text('Currencies & Rewards', '货币与奖励', '貨幣與獎勵'),
     lead: text(
-      'With multiple distinct currencies, passes, and rotating shops, Aniimo players frequently face information overload. This guide maps every primary currency to its acquisition source and gives an objective priority matrix for spending Glimmers, Starine, and event tokens.',
-      '游戏内多代币共存与复杂的商店轮换机制常常让玩家感到困惑与信息过载。本攻略系统梳理微光、闪光魔方、星石、月之点数等核心货币的获取渠道与最佳消费策略，帮助玩家避开资源浪费陷阱。',
-      '遊戲內多代幣共存與複雜的商店輪換機制常常讓玩家感到困惑與資訊過載。本攻略系統梳理微光、閃光魔方、星石、月之點數等核心貨幣的獲取渠道與最佳消費策略，幫助玩家避開資源浪費陷阱。'
+      'Official announcements establish specific rewards and bonuses, not a complete currency exchange table or a universal spending order. Check your account eligibility, current shop price and item description before using a limited resource.',
+      '官方公告确认部分奖励与增益，并未提供完整货币兑换表或通用消费排名。使用稀缺资源前，请核对账号资格、当前商店价格及道具说明。',
+      '官方公告確認部分獎勵與增益，並未提供完整貨幣兌換表或通用消費排名。使用稀缺資源前，請核對帳號資格、目前商店價格及道具說明。'
     ),
     body: [
       {
         t: 'h',
         c: text(
-          'What are the primary currencies in Aniimo and how do you obtain them?',
-          'Aniimo 核心货币体系与获取途径是什么？',
-          'Aniimo 核心貨幣體系與獲取途徑是什麼？'
+          'Which rewards and bonuses are documented?',
+          '哪些奖励与增益已公布？',
+          '哪些獎勵與增益已公布？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'The October 15 patch announces 100 Glimmers for accounts registered before the version 1.1 update. The September 23 notice records 500 Glimmers for maintenance, 500 for the opening delay and one Sparkling Cube for known issues. Historical announcements do not guarantee that old reward mail is still claimable.',
+          '10 月 15 日补丁公告列出 100 Glimmers，资格为 1.1 更新前完成注册的账号。9 月 23 日公告记录了维护 500 Glimmers、开服延迟 500 Glimmers，以及已知问题补偿 1 个 Sparkling Cube；历史公告不保证旧奖励邮件目前仍可领取。',
+          '10 月 15 日補丁公告列出 100 Glimmers，資格為 1.1 更新前完成註冊的帳號。9 月 23 日公告記錄了維護 500 Glimmers、開服延遲 500 Glimmers，以及已知問題補償 1 個 Sparkling Cube；歷史公告不保證舊獎勵郵件目前仍可領取。'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'The October 15 Home Season bonus increases Harvest Moon Points from products crafted with Moondew Radish and Waxing Moon Pepper. No exact multiplier or complete event-shop exchange list is published in that notice. Batlock Holmes is listed under Shop > Recommended; the notice does not say it can be purchased with Harvest Moon Points.',
+          '10 月 15 日家园增益提高 Moondew Radish 与 Waxing Moon Pepper 加工产物的 Harvest Moon Points；公告未给出具体倍率或完整活动商店兑换表。Batlock Holmes 位于 Shop > Recommended，公告没有确认可用 Harvest Moon Points 购买。',
+          '10 月 15 日家園增益提高 Moondew Radish 與 Waxing Moon Pepper 加工產物的 Harvest Moon Points；公告未給出具體倍率或完整活動商店兌換表。Batlock Holmes 位於 Shop > Recommended，公告沒有確認可用 Harvest Moon Points 購買。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'What does a Sparkling Cube probability describe?',
+          'Sparkling Cube 概率描述的是什么？',
+          'Sparkling Cube 機率描述的是什麼？'
         ),
       },
       {
         t: 'table',
-        head: text(
-          ['Currency', 'Type', 'Primary Sources', 'Best Practical Purpose'],
-          ['货币名称', '类型', '核心获取途径', '最佳推荐用途'],
-          ['貨幣名稱', '類型', '核心獲取途徑', '最佳推薦用途']
-        ),
+        head: [text('Cube target', '魔方目标', '魔方目標'), 'Normal', 'Dazzling', 'Shadow'],
         rows: [
-          [
-            text('Glimmers', '微光 (Glimmers)', '微光 (Glimmers)'),
-            text('Semi-Premium', '半付费/通用流通币', '半付費/通用流通幣'),
-            text(
-              'Maintenance compensations (100 in 10.15, 500+500 in 1.1), story milestones, shop',
-              '维护补偿邮件（10.15发放100，1.1发放1000）、主线里程碑、充值',
-              '維護補償郵件（10.15發放100，1.1發放1000）、主線里程碑、儲值'
-            ),
-            text(
-              'Monthly pass, premium Aniipods, limited-time stamina replenishment',
-              '月卡订购、限定捕获道具、高难攻坚必备资源',
-              '月卡訂購、限定捕獲道具、高難攻堅必備資源'
-            ),
-          ],
-          [
-            text('Sparkling Cube', '闪光魔方 (Sparkling Cube)', '閃光魔方 (Sparkling Cube)'),
-            text('Ultra-Rare Consumable', '极度稀有消耗品', '極度稀有消耗品'),
-            text(
-              'Major version compensations, exclusive milestone rewards',
-              '大版本维护补偿、重大活动最终奖励',
-              '大版本維護補償、重大活動最終獎勵'
-            ),
-            text(
-              'Egg Heist eggs (1% Shadow rate) or wild Perfect potential encounters',
-              '抢蛋大作战稀有蛋（1%暗影概率）或野外极品潜能遭遇',
-              '搶蛋大作戰稀有蛋（1%暗影機率）或野外極品潛能遭遇'
-            ),
-          ],
-          [
-            text('Stellarys Starine', '星石 (Stellarys Starine)', '星石 (Stellarys Starine)'),
-            text('End-Game Progression', '高难进阶材料', '高難進階材料'),
-            text(
-              'Egg Heist Chaos difficulty (boosted in 1.0.3629693.0), high-tier Sanctum bosses',
-              '抢蛋大作战混沌难度（1.0.3629693.0提高掉落）、高层圣所Boss',
-              '搶蛋大作戰混沌難度（1.0.3629693.0提高掉落）、高層聖所Boss'
-            ),
-            text(
-              'Late-game equipment crafting, advanced Innate Potential breakthroughs',
-              '终局神装打造、伊莫先天潜力深度洗练突破',
-              '終局神裝打造、伊莫先天潛力深度洗練突破'
-            ),
-          ],
-          [
-            text(
-              'Harvest Moon Points',
-              '月之点数 (Harvest Moon Points)',
-              '月之點數 (Harvest Moon Points)'
-            ),
-            text('Seasonal Event Token', '赛季限时代币', '賽季限時計幣'),
-            text(
-              'Homeland crop harvest (boosted for Moondew Radish & Waxing Moon Pepper)',
-              '家园变异作物产出、丰收季日常任务',
-              '家園變異作物產出、豐收季日常任務'
-            ),
-            text(
-              'Limited-time furniture blueprints, Batlock Holmes cosmetics, rare seeds',
-              '限定家具图纸、Batlock Holmes 外观配件、稀缺种子',
-              '限定家具圖紙、Batlock Holmes 外觀配件、稀缺種子'
-            ),
-          ],
-          [
-            text('Standard Gold', '通用金币 (Gold)', '通用金幣 (Gold)'),
-            text('Basic In-Game Soft Currency', '基础游戏金币', '基礎遊戲金幣'),
-            text(
-              'World exploration, selling excess farmed goods, quest bounties',
-              '大世界探索采集、出售冗余农产品、日常悬赏',
-              '大世界探索採集、出售冗餘農產品、日常懸賞'
-            ),
-            text(
-              'RV basic upgrades, common seed purchases, standard crafting costs',
-              '房车基础设施升级、基础农资采购、日常制造费',
-              '房車基礎設施升級、基礎農資採購、日常製造費'
-            ),
-          ],
+          [text('Egg Heist egg', 'Egg Heist 蛋', 'Egg Heist 蛋'), '99%', '0%', '1%'],
+          [text('Other egg', '非 Egg Heist 蛋', '非 Egg Heist 蛋'), '99%', '1%', '0%'],
         ],
       },
       {
+        t: 'p',
+        c: text(
+          'These are Sparkling style outcomes for the specified cube and egg combination. A 1% chance is not a guaranteed Shadow result and does not establish a species, stat tier or optimal spending strategy. Verify the exact item and target before confirming use.',
+          '这些概率对应指定魔方与蛋组合的 Sparkling 样式结果。1% 不代表暗影保底，也不能据此保证物种、潜力档位或最优消费策略。确认使用前请核对道具与目标。',
+          '這些機率對應指定魔方與蛋組合的 Sparkling 樣式結果。1% 不代表暗影保底，也不能據此保證物種、潛力檔位或最佳消費策略。確認使用前請核對道具與目標。'
+        ),
+      },
+      {
         t: 'h',
         c: text(
-          'What is the optimal spending priority for Glimmers?',
-          '微光（Glimmers）的最佳消费优先级是什么？',
-          '微光（Glimmers）的最佳消費優先級是什麼？'
+          'How should I compare shop purchases?',
+          '如何比较商店购买选项？',
+          '如何比較商店購買選項？'
         ),
       },
       {
         t: 'p',
         c: text(
-          'For free-to-play and low-spending players, Glimmers are finite and should be guarded carefully. The optimal usage order is: (1) Unlocking the monthly pass or key progression tracks that return Glimmers over time; (2) Stockpiling for limited-edition Legendary Aniipods when targeting rare species; (3) Only using on cosmetics like the Batlock Holmes set if your progression roster is already complete.',
-          '对于零氪与轻度玩家，微光是极具价值的通用货币。最佳消耗顺序为：(1) 投资高回报的月度通行证与返利里程碑；(2) 储备用于限定传说级 Aniipod 捕获道具，以备野外遭遇极罕见稀有种；(3) 仅在主力阵容与功能宠完全成型后，再考虑购买 Batlock Holmes 等纯外观时装。',
-          '對於零課與輕度玩家，微光是極具價值的通用貨幣。最佳消耗順序為：(1) 投資高回報的月度通行證與返利里程碑；(2) 儲備用於限定傳說級 Aniipod 捕獲道具，以備野外遭遇極罕見稀有種；(3) 僅在主力陣容與功能寵完全成型後，再考慮購買 Batlock Holmes 等純外觀時裝。'
-        ),
-      },
-      {
-        t: 'h',
-        c: text(
-          'When is it worth using a Sparkling Cube?',
-          '什么时候使用闪光魔方（Sparkling Cube）最划算？',
-          '什麼時候使用閃光魔方（Sparkling Cube）最划算？'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'Never consume a Sparkling Cube on standard Stage 1 wild creatures. According to official probability disclosures, using a Sparkling Cube on an Egg Heist egg provides a 1% chance for the exclusive Shadow Sparkling style and guarantees at least Normal Sparkling. Alternatively, use it during rare Prismana encounters or confirmed Perfect Innate Potential catches to lock in peak tier attributes.',
-          '绝对不要对大世界随处可见的 1 阶基础伊莫使用闪光魔方。根据官方公布的概率矩阵，闪光魔方在抢蛋大作战（Egg Heist）获得的特殊蛋上使用时，拥有独占的 1% 极稀有“暗影闪耀（Shadow Sparkling）”样式保底。此外，遇到野外高阶 Prismana 或先天潜力评级极高的目标时使用，能最大化词条收益。',
-          '絕對不要對大世界隨處可見的 1 階基礎伊莫使用閃光魔方。根據官方公布的機率矩陣，閃光魔方在搶蛋大作戰（Egg Heist）獲得的特殊蛋上使用時，擁有獨佔的 1% 極稀有「暗影閃耀（Shadow Sparkling）」樣式保底。此外，遇到野外高階 Prismana 或先天潛力評級極高的目標時使用，能最大化詞條收益。'
-        ),
-      },
-      {
-        t: 'h',
-        c: text(
-          'Which shop purchases and currency exchanges should you avoid?',
-          '哪些商店购买与代币兑换行为应当坚决避免？',
-          '哪些商店購買與代幣兌換行為應當堅決避免？'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Do not spend Glimmers on common raw resources (wood, common stone, basic seeds) that can be gathered freely in the open world.',
-          '坚决不要用微光直接购买木材、石头、基础作物种子等可在野外免费大批量采集的基础材料。',
-          '堅決不要用微光直接購買木材、石頭、基礎作物種子等可在野外免費大批量採集的美觀基礎材料。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Avoid purchasing furniture store duplicates before checking Homeland crafting recipes, saving your Harvest Moon Points for limited blueprints.',
-          '在家具商店购买成品前，先确认图纸是否可在家园自制，优先保留点数兑换限时绝版图纸。',
-          '在家具商店購買成品前，先確認圖紙是否可在家園自製，優先保留點數兌換限時絕版圖紙。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Avoid purchasing multiple stamina resets before RV Level 15, as lower-level dungeons yield significantly less Starine and high-grade materials.',
-          '在房车等级达到 15 级前，避免重氪购买多次体力刷新，低等级副本掉落的星石与高阶素材转化率过低。',
-          '在房車等級達到 15 級前，避免重課購買多次體力刷新，低等級副本掉落的星石與高階素材轉化率過低。'
+          'Compare the displayed currency, price, purchase limit, expiry and item effect with your own goal. The registered sources do not establish monthly-pass returns, stamina-reset efficiency, Starine crafting uses or permanent item exclusivity, so this page does not rank those purchases.',
+          '按自己的目标比较界面显示的币种、价格、限购、有效期与道具效果。已登记来源未确认月卡回报、体力刷新效率、Starine 制造用途或物品永久绝版，因此本页不对这些购买作排名。',
+          '按自己的目標比較介面顯示的幣種、價格、限購、有效期與道具效果。已登記來源未確認月卡回報、體力刷新效率、Starine 製造用途或物品永久絕版，因此本頁不對這些購買作排名。'
         ),
       },
       {
         t: 'quote',
         c: text(
-          'Source: Official Steam announcements for Version 1.1, patch 1.0.3629693.0, patch 1.0.3732728.0, and official probability disclosures. Exchange values verified against live store data.',
-          '来源：官方 1.1 版本更新公告、1.0.3629693.0 补丁、1.0.3732728.0 补丁及官方概率公示。代币比率基于当前游戏实测。',
-          '來源：官方 1.1 版本更新公告、1.0.3629693.0 補丁、1.0.3732728.0 補丁及官方機率公示。代幣比率基於目前遊戲實測。'
+          'Sources: official September 23 and October 15 announcements and the official probability disclosure. Shop values and individual reward delivery have not been independently tested.',
+          '来源：官方 9 月 23 日与 10 月 15 日公告及官方概率公示。未独立实测商店价格或个别账号奖励到账。',
+          '來源：官方 9 月 23 日與 10 月 15 日公告及官方機率公示。未獨立實測商店價格或個別帳號獎勵到帳。'
         ),
       },
     ],
@@ -1772,155 +1545,93 @@ function currenciesGuide(locale: string): LaunchGuide {
 }
 
 function prismanaPotentialGuide(locale: string): LaunchGuide {
-  const en = locale === 'en';
-  const traditional = locale === 'zh-Hant';
-  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
-    en ? englishText : traditional ? traditionalText : simplified;
-
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return {
     title: text(
-      'Aniimo Prismana, Sparkling Hues & Innate Potential Guide',
-      'Aniimo 虹彩形态（Prismana）、异色（Sparkling Hue）与先天潜力洗练指南',
-      'Aniimo 虹彩形態（Prismana）、異色（Sparkling Hue）與先天潛力洗練指南'
+      'Aniimo Prismana, Sparkling Hues & Potential: Facts',
+      'Aniimo Prismana、闪光色彩与潜能：已知信息',
+      'Aniimo Prismana、閃光色彩與潛能：已知資訊'
     ),
     subtitle: text(
-      'How morphology, Prismana Flow variants, Sparkling Hues, and Innate Potential tiers interact when building end-game Aniimo.',
-      '澄清“抓到 Prismana 即满潜力”误区，详解形态变体、闪光色彩编号、先天潜力评级与洗练资源最佳投入时机。',
-      '澄清「抓到 Prismana 即滿潛力」誤區，詳解形態變體、閃光色彩編號、先天潛力評級與洗練資源最佳投入時機。'
+      'Separate official morphology records, Sparkling style probabilities and planned Hue and Irisalis Potential changes.',
+      '区分官方形态记录、Sparkling 样式概率，以及色彩切换与 Irisalis 潜能调整计划。',
+      '區分官方形態記錄、Sparkling 樣式機率，以及色彩切換與 Irisalis 潛能調整計畫。'
     ),
-    tag: text('Endgame & Breeding', '进阶与养成', '進階與養成'),
+    tag: text('Forms & Potential', '形态与潜能', '形態與潛能'),
     lead: text(
-      'Catching a rare Prismana form does not guarantee perfect combat stats. This guide demystifies the distinction between morphology forms, cosmetic Sparkling Hues, and Innate Potential stat tiers, incorporating developer clarifications from Dev Dispatch Vol. 1.',
-      '在野外捕获到罕见的虹彩形态（Prismana）并不等于直接获得满值战斗属性。本指南系统梳理形态变体（Morphology）、闪光色彩（Sparkling Hue）与先天潜力（Innate Potential）三者的独立机制，结合官方 Dev Dispatch 公告为终局极品伊莫培养提供指引。',
-      '在野外捕獲到罕見的虹彩形態（Prismana）並不等於直接獲得滿值戰鬥屬性。本指南系統梳理形態變體（Morphology）、閃光色彩（Sparkling Hue）與先天潛力（Innate Potential）三者的獨立機制，結合官方 Dev Dispatch 公告為終局極品伊莫培養提供指引。'
+      'A Prismana Form label in the official Wiki does not establish maximum stats or a breeding outcome. Dev Dispatch Vol. 1 announces specific Hue and Irisalis changes; it is not a complete Potential distribution or upgrade guide.',
+      '官方 Wiki 的 Prismana Form 标签不能证明满属性或繁育结果。Dev Dispatch Vol. 1 公布了特定色彩与 Irisalis 调整计划，并非完整潜能分布或养成指南。',
+      '官方 Wiki 的 Prismana Form 標籤不能證明滿屬性或繁育結果。Dev Dispatch Vol. 1 公布了特定色彩與 Irisalis 調整計畫，並非完整潛能分布或養成指南。'
     ),
     body: [
+      ...roadmapChecksBlocks(locale),
       {
         t: 'h',
         c: text(
-          'Does catching a Prismana Aniimo guarantee perfect stats?',
-          '捕捉到虹彩形态（Prismana）伊莫是否必定满属性？',
-          '捕捉到虹彩形態（Prismana）伊莫是否必定滿屬性？'
+          'Does Prismana guarantee perfect Potential?',
+          'Prismana 能保证满潜能吗？',
+          'Prismana 能保證滿潛能嗎？'
         ),
       },
       {
         t: 'p',
         c: text(
-          'No. A widespread misconception in the community is that Prismana forms automatically roll maximum combat potential. In official mechanics, Prismana is an alternate morphological variant featuring a unique skin, special color palette, and distinct spawn conditions via Prismana Flow. Its Innate Potential values are rolled independently under normal distribution rules.',
-          '明确否认。玩家社区中最普遍的误区是认为只要捉到 Prismana 就等于毕业。在官方底层设定中，Prismana 属于独立的“形态变体（Morphology）”，拥有专属立绘配色与大世界“虹彩之潮（Prismana Flow）”刷新机制，但其“先天潜力（Innate Potential）”依然遵循普通的随机区间，野生抓获并不保证全满。',
-          '明確否認。玩家社群中最普遍的誤區是認為只要捉到 Prismana 就等於畢業。在官方底層設定中，Prismana 屬於獨立的「形態變體（Morphology）」，擁有專屬立繪配色與大世界「虹彩之潮（Prismana Flow）」刷新機制，但其「先天潛力（Innate Potential）」依然遵循普通的隨機區間，野生抓獲並不保證全滿。'
+          'No such guarantee is established by the registered Wiki snapshot. It records morphology labels, not a complete stat distribution, fixed-form rule or universal Potential tier system. Check the individual in-game record rather than inferring combat strength from appearance.',
+          '已登记的 Wiki 快照没有提供这种保证；它记录形态标签，未公布完整属性分布、形态固定规则或通用潜能档位体系。请核对游戏内个体数据，不能从外观推断战斗强度。',
+          '已登記的 Wiki 快照沒有提供這種保證；它記錄形態標籤，未公布完整屬性分布、形態固定規則或通用潛能檔位體系。請核對遊戲內個體資料，不能從外觀推斷戰鬥強度。'
         ),
       },
       {
         t: 'h',
         c: text(
-          'What is the difference between Prismana, Sparkling Styles, and Sparkling Hues?',
-          'Prismana、闪光样式与闪光色彩编号有何区别？',
-          'Prismana、閃光樣式與閃光色彩編號有何區別？'
+          'What Hue change was announced?',
+          '官方公布了哪项色彩调整？',
+          '官方公布了哪項色彩調整？'
+        ),
+      },
+      {
+        t: 'p',
+        c: text(
+          'Dev Dispatch Vol. 1 plans free switching between Sparkling Hues already unlocked for a Sparkling Prismana Aniimo, including its original Prismana Hue. This is not a promise that any desired new Hue can be selected or that the feature is already live.',
+          'Dev Dispatch Vol. 1 计划允许 Sparkling Prismana 伊莫在已解锁色彩之间自由切换，包括原版 Prismana Hue。这不代表可以任意选择尚未解锁的新色彩，也不证明功能已经实装。',
+          'Dev Dispatch Vol. 1 計畫允許 Sparkling Prismana 伊莫在已解鎖色彩之間自由切換，包括原版 Prismana Hue。這不代表可以任意選擇尚未解鎖的新色彩，也不證明功能已經實裝。'
+        ),
+      },
+      {
+        t: 'h',
+        c: text(
+          'Which Irisalis Potential values were announced?',
+          'Irisalis 公布了哪些潜能值？',
+          'Irisalis 公布了哪些潛能值？'
         ),
       },
       {
         t: 'table',
-        head: text(
-          ['System', 'Category', 'Key Mechanism', 'Customization / Reroll Status'],
-          ['系统维度', '分类层级', '核心运作机制', '重随 / 自定义状态'],
-          ['系統維度', '分類層級', '核心運作機制', '重隨 / 自訂狀態']
-        ),
+        head: [text('Stat', '属性', '屬性'), text('Planned value', '计划值', '計畫值')],
         rows: [
-          [
-            text('Prismana Form', '虹彩形态 (Prismana)', '虹彩形態 (Prismana)'),
-            text('Morphological Variant', '基础形态变体', '基礎形態變體'),
-            text(
-              'Unique model & color scheme; distinct field spawn points',
-              '专属外观与大世界特化刷新点',
-              '專屬外觀與大世界特化刷新點'
-            ),
-            text('Fixed once captured or hatched', '固定形态不可随意切换', '固定形態不可隨意切換'),
-          ],
-          [
-            text('Sparkling Style', '闪光样式 (Sparkling Style)', '閃光樣式 (Sparkling Style)'),
-            text('Visual Particle Aura', '视觉光效光晕', '視覺光效光暈'),
-            text(
-              'Normal, Dazzling, or Shadow (Egg Heist exclusive 1% rate)',
-              '普通闪光、炫彩闪光、暗影闪光（抢蛋独占1%）',
-              '普通閃光、炫彩閃光、暗影閃光（搶蛋獨佔1%）'
-            ),
-            text(
-              'Determined upon cube usage or egg hatch',
-              '由捕获魔方类型或孵蛋判定决定',
-              '由捕獲魔方類型或孵蛋判定決定'
-            ),
-          ],
-          [
-            text('Sparkling Hue', '闪光色调编号 (Sparkling Hue)', '闪光色调编号 (Sparkling Hue)'),
-            text('Color Tint Tier', '光晕色彩微调', '光暈色彩微調'),
-            text(
-              'Types I through X, plus rare Prismana Hue',
-              '色调编号 I 至 X 档位及稀有虹彩色调',
-              '色調編號 I 至 X 檔位及稀有虹彩色調'
-            ),
-            text(
-              'Dev Dispatch Vol. 1 announced planned Hue reroll feature',
-              '官方已公布支持闪光色调重随功能计划',
-              '官方已公布支援閃光色調重隨功能計畫'
-            ),
-          ],
+          ['ATK', '10'],
+          ['REGEN', '10'],
+          ['HP', '5'],
+          ['BREAK', '5'],
+          ['M.DEF', '5'],
+          ['P.DEF', '5'],
         ],
-      },
-      {
-        t: 'h',
-        c: text(
-          'How do Innate Potential tiers and combat safeguards work?',
-          '先天潜力档位与战斗属性保底机制是什么？',
-          '先天潛力檔位與戰鬥屬性保底機制是什麼？'
-        ),
       },
       {
         t: 'p',
         c: text(
-          "Innate Potential represents an Aniimo's stat ceiling across ATK, DEF, HP, and specialized attributes, graded as Normal, Elite, and Perfect. Crucially, as clarified in the October 13 developer feedback, non-DPS Aniimo feature a low-ATK damage safeguard based on Level (or BREAK for Break-role Aniimo). Below this safeguard threshold, stacking displayed ATK does not produce immediate damage gains. Players should build Break stats on Break-role Aniimo rather than blindly chasing flat ATK.",
-          '先天潜力决定了伊莫在攻击、防御、生命及特化属性上的成长上限，通常划分为普通（Normal）、卓越（Elite）与完美（Perfect）档位。特别需要注意的是：官方 10月13日 明确指出，非输出定位伊莫存在“低攻击伤害保底”，由等级或 BREAK 属性补足；若低于保底阈值，盲目堆砌面板攻击值并不能提升实战伤害。因此对于破防手，应优先拉满 BREAK 潜力而非无脑堆面板攻击。',
-          '先天潛力決定了伊莫在攻擊、防禦、生命及特化屬性上的成長上限，通常劃分為普通（Normal）、卓越（Elite）與完美（Perfect）檔位。特別需要注意的是：官方 10月13日 明確指出，非輸出定位伊莫存在「低攻擊傷害保底」，由等級或 BREAK 屬性補足；若低於保底閾值，盲目堆砌面板攻擊值並不能提升實戰傷害。因此對於破防手，應優先拉滿 BREAK 潛力而非無腦堆面板攻擊。'
-        ),
-      },
-      {
-        t: 'h',
-        c: text(
-          'How should you invest resources when building a top-tier Aniimo?',
-          '培养极品终局伊莫的最佳资源投入步骤是什么？',
-          '培養極品終局伊莫的最佳資源投入步驟是什麼？'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Inspect Potential First: Always check the Innate Potential ratings immediately after capture before spending valuable Stellarys Starine or evolution materials.',
-          '抓捕后先验潜力：捕捉后第一时间查看潜力评级，确定关键属性达到 Elite 或 Perfect 后再消耗珍贵的星石与突破材料。',
-          '抓捕後先驗潛力：捕捉後第一時間查看潛力評級，確定關鍵屬性達到 Elite 或 Perfect 後再消耗珍貴的星石與突破材料。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Reserve Sparkling Cubes: Save Sparkling Cubes for high-tier egg hatches or confirmed Perfect encounters to leverage the probability boost on recommended attributes.',
-          '保留闪光魔方：将稀有的闪光魔方留在抢蛋高难蛋孵化或捕捉高阶目标时使用，以触发推荐潜力的专属概率加成。',
-          '保留閃光魔方：將稀有的閃光魔方留在搶蛋高難蛋孵化或捕捉高階目標時使用，以觸發推薦潛力的專屬機率加成。'
-        ),
-      },
-      {
-        t: 'li',
-        c: text(
-          'Wait for Official Hue Rerolls: If you obtain a Prismana with a less desirable Hue number, avoid discarding it—Dev Dispatch Vol. 1 confirmed that upcoming updates will allow Hue rerolling while preserving the Prismana identity.',
-          '保留优质胚子待重随：若抓到外观稀有但闪光色调编号一般的虹彩伊莫，切勿轻易分解；官方已明确将实装色调重随并保留原版虹彩色调。',
-          '保留優質胚子待重隨：若抓到外觀稀有但閃光色調編號一般的虹彩伊莫，切勿輕易分解；官方已明確將實裝色調重隨並保留原版虹彩色調。'
+          'The announcement plans to replace random Irisalis Potential with those fixed values and convert excess Potential into Starcryst Essence. Exact conversion rules and amounts require the version notice and in-game mail; do not apply this Irisalis-specific plan to every Aniimo.',
+          '公告计划将 Irisalis 随机潜能改为上述固定值，并将超出部分转为 Starcryst Essence。具体换算规则与数量以版本公告和游戏内邮件为准；不能将 Irisalis 专属计划推广到所有伊莫。',
+          '公告計畫將 Irisalis 隨機潛能改為上述固定值，並將超出部分轉為 Starcryst Essence。具體換算規則與數量以版本公告和遊戲內郵件為準；不能將 Irisalis 專屬計畫推廣到所有伊莫。'
         ),
       },
       {
         t: 'quote',
         c: text(
-          'Source: Official Wiki snapshots, probability disclosure formulas, and Dev Dispatch Vol. 1. Potential safeguards and damage thresholds reflect official developer communications.',
-          '来源：官方 Wiki 快照、官方概率公示及 Dev Dispatch Vol. 1 开发者答疑。伤害保底与潜能机制依据官方发布说明整理。',
-          '來源：官方 Wiki 快照、官方機率公示及 Dev Dispatch Vol. 1 開發者答疑。傷害保底與潛能機制依據官方發布說明整理。'
+          'Sources: official Wiki morphology snapshot and Dev Dispatch Vol. 1. No independent breeding, Potential reroll or current-client feature test is claimed.',
+          '来源：官方 Wiki 形态快照与 Dev Dispatch Vol. 1；本站未独立实测繁育、潜能洗练或当前客户端的计划功能。',
+          '來源：官方 Wiki 形態快照與 Dev Dispatch Vol. 1；本站未獨立實測繁育、潛能洗練或目前客戶端的計畫功能。'
         ),
       },
     ],
@@ -1928,149 +1639,38 @@ function prismanaPotentialGuide(locale: string): LaunchGuide {
 }
 
 function controllerOptimizationGuide(locale: string): LaunchGuide {
-  const en = locale === 'en';
-  const traditional = locale === 'zh-Hant';
-  const text = <T>(englishText: T, simplified: T, traditionalText: T): T =>
-    en ? englishText : traditional ? traditionalText : simplified;
-
+  const guide = controllerGuide(locale);
+  const text = (en: string, hans: string, hant: string) =>
+    locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return {
+    ...guide,
     title: text(
-      'Aniimo Controller Setup & Steam Deck / PC Performance Guide',
-      'Aniimo Xbox 手柄映射与 Steam Deck / PC 画质与卡顿优化指引',
-      'Aniimo Xbox 手柄映射與 Steam Deck / PC 畫質與卡頓優化指引'
+      'Aniimo Controller & Steam Deck Troubleshooting',
+      'Aniimo 手柄与 Steam Deck 排查指南',
+      'Aniimo 手柄與 Steam Deck 排查指南'
     ),
     subtitle: text(
-      'Step-by-step optimization for Xbox controllers, PC input responsiveness, Steam Deck Proton settings, and black screen fixes.',
-      '排查 Xbox 与 PC 手柄无反应与双重输入、配置 Steam Deck 掌机最佳 Proton 兼容层，以及解决 DX11/12 黑屏与帧生成崩溃。',
-      '排查 Xbox 與 PC 手柄無反應與雙重輸入、配置 Steam Deck 掌機最佳 Proton 相容層，以及解決 DX11/12 黑屏與畫格生成崩潰。'
-    ),
-    tag: text('Settings & Hardware', '手柄与性能', '手柄與效能'),
-    lead: text(
-      'Navigating Aniimo with a gamepad or handheld PC can feel unoptimized without proper settings. Drawing on official FAQ troubleshooting and patch 1.0.3732728.0 controller fixes, this guide provides tested configurations for Xbox gamepads, Steam Deck, and PC stability.',
-      '在主机、PC 手柄或掌机上游玩《伊莫》时，默认设置可能会导致输入迟钝、UI 操作生硬或画质掉帧。本指南结合官方首发 FAQ、1.0.3535596 及 1.0.3732728.0 最新手柄补丁，提供经过验证的手柄映射调优、Steam Deck 锁帧与防崩溃设置。',
-      '在主機、PC 手柄或掌機上遊玩《伊莫》時，預設設定可能會導致輸入遲鈍、UI 操作生硬或畫質掉格。本指南結合官方首發 FAQ、1.0.3535596 及 1.0.3732728.0 最新手柄補丁，提供經過驗證的手柄映射調優、Steam Deck 鎖格與防崩潰設定。'
+      'Official controller troubleshooting and a community Proton workaround; Steam Deck performance settings remain untested.',
+      '官方手柄排查与社区 Proton 临时办法；Steam Deck 性能设置尚未实测。',
+      '官方手柄排查與社群 Proton 臨時辦法；Steam Deck 效能設定尚未實測。'
     ),
     body: [
+      ...october15PatchBlocks(locale, 'aniimo-language-controller-support'),
+      ...guide.body,
       {
         t: 'h',
         c: text(
-          'How do I fix Xbox and PC controller unresponsiveness or double input?',
-          'Xbox 与 PC 手柄无响应或双重输入如何排查？',
-          'Xbox 與 PC 手柄無回應或雙重輸入如何排查？'
+          'Are there tested Steam Deck frame-rate, TDP or battery targets?',
+          '有实测的 Steam Deck 帧率、TDP 或续航目标吗？',
+          '有實測的 Steam Deck 畫格率、TDP 或續航目標嗎？'
         ),
       },
       {
         t: 'p',
         c: text(
-          'Aniimo features native gamepad support on Windows. A frequent issue where controllers fail to respond or cause double-inputs in menus stems from Steam Input conflicting with the game\'s native drivers. In Steam Library, right-click Aniimo > Properties > Controller, and set "Override for Aniimo" to Disable Steam Input, then restart the client.',
-          '《伊莫》PC 客户端本身具备原生手柄支持。玩家最常遇到的“按键无反应”或“菜单光标跳格（双重输入）”，主要是由于 Steam Input 驱动与游戏原生手柄驱动发生冲突所致。解决方法：在 Steam 库中右键 Aniimo > 属性 > 控制器，在覆盖设置中选择“禁用 Steam Input”，然后重启游戏即可恢复原生丝滑操作。',
-          '《伊莫》PC 客戶端本身具備原生手柄支援。玩家最常遇到的「按鍵無反應」或「選單游標跳格（雙重輸入）」，主要是由於 Steam Input 驅動與遊戲原生手柄驅動發生衝突所致。解決方法：在 Steam 庫中右鍵 Aniimo > 屬性 > 控制器，在覆蓋設定中選擇「停用 Steam Input」，然後重啟遊戲即可恢復原生絲滑操作。'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'Additionally, patch 1.0.3732728.0 resolved several controller-specific glitches: it added "Select All" functionality for batch acceleration in Homeland, and fixed a focus bug where using a Sparkling Sigil could accidentally target the wrong creature.',
-          '此外，官方 1.0.3732728.0 补丁修复了多项手柄交互问题：为家园生产批量加速增加了“全选（Select All）”手柄快捷键，并修正了此前可能导致闪光印记（Sparkling Sigil）锁定错误目标的手柄焦点异常。',
-          '此外，官方 1.0.3732728.0 補丁修復了多項手柄互動問題：為家園生產批次加速增加了「全選（Select All）」手柄快捷鍵，並修正了此前可能導致閃光印記（Sparkling Sigil）鎖定錯誤目標的手柄焦點異常。'
-        ),
-      },
-      {
-        t: 'h',
-        c: text(
-          'What are the best Steam Deck settings for Aniimo?',
-          'Steam Deck 掌机的最佳运行与画质设置是什么？',
-          'Steam Deck 掌機的最佳運行與畫質設定是什麼？'
-        ),
-      },
-      {
-        t: 'table',
-        head: text(
-          ['Setting Option', 'Recommended Value', 'Performance Rationale'],
-          ['设置选项', '推荐设定值', '优化原理与依据'],
-          ['設定選項', '推薦設定值', '優化原理與依據']
-        ),
-        rows: [
-          [
-            text('Proton Compatibility', 'Proton 兼容层', 'Proton 相容層'),
-            text(
-              'Proton 10.0.0-4 (or Experimental)',
-              'Proton 10.0.0-4（或 Experimental）',
-              'Proton 10.0.0-4（或 Experimental）'
-            ),
-            text(
-              'Official developer FAQ republished community solution',
-              '官方首发 FAQ 采纳的社区有效方案',
-              '官方首發 FAQ 採納的社群有效方案'
-            ),
-          ],
-          [
-            text('Frame Rate Limit', '锁帧与刷新率', '鎖格與重新整理頻率'),
-            text(
-              '40Hz / 40 FPS (or 45Hz / 45 FPS)',
-              '40Hz / 40帧（或 45Hz / 45帧）',
-              '40Hz / 40格（或 45Hz / 45格）'
-            ),
-            text(
-              'Prevents thermal throttling, stabilizes frame times in Idyll',
-              '平滑帧时间，显著抑制风扇噪音与掌机过热',
-              '平滑格時間，顯著抑制風扇噪音與掌機過熱'
-            ),
-          ],
-          [
-            text('Graphics Quality Preset', '游戏画质预设', '遊戲畫質預設'),
-            text(
-              'Performance (or Medium with Low Shadows)',
-              '性能模式（或中画质 + 低阴影）',
-              '效能模式（或中畫質 + 低陰影）'
-            ),
-            text(
-              'Balances visual clarity with 2.5h+ battery longevity',
-              '兼顾屏幕视觉清晰度与 2.5 小时以上续航',
-              '兼顧螢幕視覺清晰度與 2.5 小時以上續航'
-            ),
-          ],
-          [
-            text('TDP Limit', 'TDP 功耗限制', 'TDP 功耗限制'),
-            text('11W - 12W', '11W - 12W', '11W - 12W'),
-            text(
-              'Maintains full GPU clocks without battery drain spikes',
-              '防止开阔大世界突发高负载掉电',
-              '防止開闊大世界突發高負載掉電'
-            ),
-          ],
-        ],
-      },
-      {
-        t: 'h',
-        c: text(
-          'How do I resolve PC launch crashes, black screens, and eye red-glow?',
-          'PC 端启动黑屏、闪退与红光异常如何解决？',
-          'PC 端啟動黑屏、閃退與紅光異常如何解決？'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'According to official patch notes 1.0.3535596.0 and 1.0.3544783.0, PC players encountering black screens or crashes should: (1) Update graphics drivers to the latest version; (2) Switch between DirectX 11 and DirectX 12 in launcher options; (3) Crucially, disable DLSS and Frame Generation on the login screen, as pre-loading tensor pipelines can cause unhandled crashes on specific GPUs.',
-          '根据官方 1.0.3535596.0 与 1.0.3544783.0 补丁指导：遇到登录黑屏或闪退时，优先执行：(1) 将显卡驱动升级至最新版本；(2) 在启动项或设置中切换 DX11 与 DX12 测试；(3) 特别注意在登录界面关闭 DLSS 与帧生成（Frame Generation），部分显卡在登录阶段加载张量管线易导致偶发崩溃。',
-          '根據官方 1.0.3535596.0 與 1.0.3544783.0 補丁指導：遇到登入黑屏或閃退時，優先執行：(1) 將顯示卡驅動升級至最新版本；(2) 在啟動項或設定中切換 DX11 與 DX12 測試；(3) 特別注意在登入畫面關閉 DLSS 與畫格生成（Frame Generation），部分顯示卡在登入階段載入張量管線易導致偶發崩潰。'
-        ),
-      },
-      {
-        t: 'p',
-        c: text(
-          'If you see abnormal red lighting around character eyes or screen borders, switch the Graphics Quality preset to Performance mode or lower Global Illumination to minimum as recommended by Pawprint Studio.',
-          '若在画面中观察到角色眼睛或边缘异常红光，请将画质预设切换为“性能（Performance）”模式，或将全局光照（Global Illumination）调至最低，此为官方确认的渲染异常临时解法。',
-          '若在畫面中觀察到角色眼睛或邊緣異常紅光，請將畫質預設切換為「效能（Performance）」模式，或將全域光照（Global Illumination）調至最低，此為官方確認的渲染異常臨時解法。'
-        ),
-      },
-      {
-        t: 'quote',
-        c: text(
-          'Source: Official Steam Launch FAQ, patch notes v1.0.3535596.0, v1.0.3544783.0, and v1.0.3732728.0. Controller and handheld suggestions reflect verified platform troubleshooting.',
-          '来源：官方 Steam 首发 FAQ、1.0.3535596.0、1.0.3544783.0 及 1.0.3732728.0 补丁公告。手柄与掌机设置经实际验证。',
-          '來源：官方 Steam 首發 FAQ、1.0.3535596.0、1.0.3544783.0 及 1.0.3732728.0 補丁公告。手柄與掌機設定經實際驗證。'
+          'AniimoDex has no reproducible Steam Deck benchmark for these settings. The cited FAQ does not establish 40/45 FPS, 11–12 W, a 2.5-hour battery result or an Experimental Proton recommendation. Keep device model, game version and test conditions with any measured result; no universal performance profile is confirmed here.',
+          '本站没有可复现的 Steam Deck 参数测试。所引 FAQ 未确认 40/45 FPS、11–12 W、2.5 小时续航或 Experimental Proton 推荐。实测结果需附设备型号、游戏版本及测试条件；本页没有确认通用性能配置。',
+          '本站沒有可重現的 Steam Deck 參數測試。所引 FAQ 未確認 40/45 FPS、11–12 W、2.5 小時續航或 Experimental Proton 推薦。實測結果需附裝置型號、遊戲版本及測試條件；本頁沒有確認通用效能設定。'
         ),
       },
     ],
