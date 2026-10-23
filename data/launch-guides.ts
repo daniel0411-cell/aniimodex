@@ -1,7 +1,9 @@
+import { getAccessGuide } from './access-guides';
+
 export type LaunchGuideBlock =
   { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'table'; head: string[]; rows: string[][] };
 
-type LaunchGuide = {
+export type LaunchGuide = {
   title: string;
   subtitle: string;
   tag: string;
@@ -3172,6 +3174,8 @@ function october15PatchBlocks(locale: string, slug: string): LaunchGuideBlock[] 
 }
 
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
+  const accessGuide = getAccessGuide(locale, slug);
+  if (accessGuide) return accessGuide;
   const guide = english[slug];
   if (!guide) return undefined;
   const localizedGuide = localized(locale, guide);

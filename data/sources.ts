@@ -13,6 +13,13 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-access-routes-2026-10-23',
+    url: 'https://www.aniimo.com/',
+    title: 'Aniimo official download routes - October 23 observation',
+    accessedAt: '2026-10-23',
+    evidence: 'English official website visibly links PC Launcher, Steam 4126040, PS5 concept 10018491, Xbox 9pk8phlcqdf6, Epic aniimo-759396, App Store 6759098797 and Google Play com.x.aniimos. Steam visibly offers the free base game and lists September 15, Windows 10 minimum and 40 GB storage. The international App Store link redirected to the China store home page in this browser; it did not verify app availability. PlayStation navigation timed out. No installation, server uptime, universal regional availability or cross-save test was performed. The older source records retain their original check dates.',
+  },
+  {
     id: 'aniimo-steam-patch-1-0-3732728-2026-10-15',
     url: 'https://steamcommunity.com/games/4126040/announcements/detail/1846651706678228',
     title: 'Aniimo Official Steam Patch Notes - v1.0.3732728.0',

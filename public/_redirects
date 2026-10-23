@@ -3,6 +3,32 @@
 # 根路径：重定向到默认 locale（localePrefix: 'always'）
 /  /en/  308
 
+# Consolidated access guides: both slash variants, before the legacy wildcard.
+/en/guide/aniimo-ps5  /en/guide/aniimo-platforms/  301
+/en/guide/aniimo-ps5/  /en/guide/aniimo-platforms/  301
+/zh-Hans/guide/aniimo-ps5  /zh-Hans/guide/aniimo-platforms/  301
+/zh-Hans/guide/aniimo-ps5/  /zh-Hans/guide/aniimo-platforms/  301
+/zh-Hant/guide/aniimo-ps5  /zh-Hant/guide/aniimo-platforms/  301
+/zh-Hant/guide/aniimo-ps5/  /zh-Hant/guide/aniimo-platforms/  301
+/en/guide/aniimo-nintendo-switch  /en/guide/aniimo-platforms/  301
+/en/guide/aniimo-nintendo-switch/  /en/guide/aniimo-platforms/  301
+/zh-Hans/guide/aniimo-nintendo-switch  /zh-Hans/guide/aniimo-platforms/  301
+/zh-Hans/guide/aniimo-nintendo-switch/  /zh-Hans/guide/aniimo-platforms/  301
+/zh-Hant/guide/aniimo-nintendo-switch  /zh-Hant/guide/aniimo-platforms/  301
+/zh-Hant/guide/aniimo-nintendo-switch/  /zh-Hant/guide/aniimo-platforms/  301
+/en/guide/aniimo-launch-time-preload  /en/guide/aniimo-release-date/  301
+/en/guide/aniimo-launch-time-preload/  /en/guide/aniimo-release-date/  301
+/zh-Hans/guide/aniimo-launch-time-preload  /zh-Hans/guide/aniimo-release-date/  301
+/zh-Hans/guide/aniimo-launch-time-preload/  /zh-Hans/guide/aniimo-release-date/  301
+/zh-Hant/guide/aniimo-launch-time-preload  /zh-Hant/guide/aniimo-release-date/  301
+/zh-Hant/guide/aniimo-launch-time-preload/  /zh-Hant/guide/aniimo-release-date/  301
+/guide/aniimo-ps5  /en/guide/aniimo-platforms/  301
+/guide/aniimo-ps5/  /en/guide/aniimo-platforms/  301
+/guide/aniimo-nintendo-switch  /en/guide/aniimo-platforms/  301
+/guide/aniimo-nintendo-switch/  /en/guide/aniimo-platforms/  301
+/guide/aniimo-launch-time-preload  /en/guide/aniimo-release-date/  301
+/guide/aniimo-launch-time-preload/  /en/guide/aniimo-release-date/  301
+
 # 旧路由迁移（多语言后所有路径带 locale 前缀）：
 # 无 locale 前缀的旧路径 301 重定向到默认语言（en）版本，保护既有收录
 /twine  /en/tools/twine/  301

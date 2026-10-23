@@ -14,6 +14,7 @@ import { getOfficialAniimoDetail, isSuspiciousOfficialDescription, type Official
 import { formKind, type FormKind } from '@/data/forms';
 import { flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
+import SnapshotNotice from '@/components/dex/SnapshotNotice';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
@@ -257,7 +258,7 @@ export default async function DexDetailPage({ params }: PageProps) {
               &ldquo;{aniimo.flavorText}&rdquo;
             </p>
           )}
-          <div className="mt-5 border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-xs leading-5 text-emerald-950">{t('officialScope')}</div>
+          <SnapshotNotice locale={locale} name={aniimo.enName} />
           <div className="mt-4 border-t border-ink-border pt-3 text-xs text-text-muted">
             <span className="font-semibold text-text-secondary">{t('dataStatus')}</span> · {t('lastVerified', { date: '2026-08-30' })}
           </div>

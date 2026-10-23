@@ -17,6 +17,8 @@ import { getAniimoByNumber } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import ElementGuideDirectory from '@/components/guide/ElementGuideDirectory';
 import PublishedDataGuide from '@/components/guide/PublishedDataGuide';
+import OfficialDownloadLinks from '@/components/guide/OfficialDownloadLinks';
+import SnapshotNotice from '@/components/dex/SnapshotNotice';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -325,8 +327,10 @@ export default async function GuidePostPage({
           </div>
           {sources.length > 0 && (
             <div className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm text-emerald-950">
-              <strong>{t('verifiedOfficial')}</strong>
-              <span className="ml-2">{t('lastVerified', { date: sourceCheckedAt || post.date })}</span>
+              <strong>{['aniimo-platforms', 'how-to-download-aniimo', 'aniimo-release-date'].includes(post.slug)
+                ? locale === 'en' ? 'Download routes checked October 23; historical sources dated below' : locale === 'zh-Hant' ? '下載入口於 10 月 23 日核對；歷史來源日期見下方' : '下载入口于 10 月 23 日核对；历史来源日期见下方'
+                : t('verifiedOfficial')}</strong>
+              {!['aniimo-platforms', 'how-to-download-aniimo', 'aniimo-release-date'].includes(post.slug) && <span className="ml-2">{t('lastVerified', { date: sourceCheckedAt || post.date })}</span>}
             </div>
           )}
           {post.slug === 'aniimo-pre-registration' && (
@@ -350,6 +354,9 @@ export default async function GuidePostPage({
           )}
           <p className="mt-3 text-base leading-relaxed text-text-primary">{lead}</p>
         </header>
+
+        {['aniimo-platforms', 'how-to-download-aniimo'].includes(post.slug) && <OfficialDownloadLinks locale={locale} />}
+        {post.dataTopic && <SnapshotNotice locale={locale} />}
 
         <div className="pt-2">{renderedBody}</div>
 
@@ -447,7 +454,7 @@ export default async function GuidePostPage({
           <div className="grid gap-4 sm:grid-cols-2">
             {post.relatedSlugs.map((relSlug) => {
               const rel = getGuidePost(relSlug);
-              if (!rel) return null;
+              if (!rel || rel.published === false) return null;
               const relatedLaunchGuide = getLaunchGuide(locale, rel.slug);
               return (
                 <Link key={relSlug} href={`/guide/${relSlug}`} className="group">

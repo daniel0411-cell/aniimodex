@@ -11,6 +11,7 @@ function loadTs(path) {
   const module = { exports: {} };
   new Function('require', 'module', 'exports', outputText)(
     (id) => {
+      if (path === 'data/launch-guides.ts' && id === './access-guides') return loadTs('data/access-guides.ts');
       assert.equal(id, '@/data/element-matchups');
       return loadTs('data/element-matchups.ts');
     },

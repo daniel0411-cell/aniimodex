@@ -13,6 +13,7 @@ import {
   ROLES,
 } from '@/lib/aniimo-ui';
 import ElementIcon from '@/components/ui/ElementIcons';
+import SnapshotNotice from '@/components/dex/SnapshotNotice';
 import type { AniimoEntry, Element, Role } from '@/types/aniimo';
 import { cn } from '@/lib/utils';
 
@@ -217,9 +218,7 @@ export default function DexPage() {
           </select>
         </label>
 
-        <div className="border-l-4 border-secondary bg-emerald-50 px-3 py-2 text-xs leading-5 text-emerald-950">
-          {td('officialScope')}
-        </div>
+        <SnapshotNotice locale={locale} />
 
         {/* 元素筛选（图标按钮） */}
         <div className="flex flex-wrap items-center gap-2">

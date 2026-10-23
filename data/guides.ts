@@ -70,17 +70,20 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-release-date',
+    updatedAt: '2026-10-23',
     date: '2026-09-16',
     readMinutes: 4,
-    relatedSlugs: ['what-is-aniimo', 'aniimo-platforms', 'is-aniimo-free-to-play'],
-    sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040'],
+    relatedSlugs: ['how-to-download-aniimo', 'aniimo-platforms', 'aniimo-mobile'],
+    sourceIds: ['aniimo-playstation-10018491', 'aniimo-steam-4126040', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-access-routes-2026-10-23'],
   },
   {
     slug: 'aniimo-platforms',
+    updatedAt: '2026-10-23',
     date: '2026-09-29',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-mobile', 'aniimo-nintendo-switch', 'aniimo-crossplay-cross-save'],
+    relatedSlugs: ['how-to-download-aniimo', 'aniimo-mobile', 'aniimo-crossplay-cross-save'],
     sourceIds: [
+      'aniimo-access-routes-2026-10-23',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
@@ -110,10 +113,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'how-to-download-aniimo',
+    updatedAt: '2026-10-23',
     date: '2026-09-23',
     readMinutes: 5,
-    relatedSlugs: ['aniimo-platforms', 'aniimo-pre-registration'],
+    relatedSlugs: ['aniimo-system-requirements', 'aniimo-progress-account-safety', 'aniimo-launch-checklist-known-issues', 'aniimo-mobile'],
     sourceIds: [
+      'aniimo-access-routes-2026-10-23',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
@@ -141,6 +146,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-ps5',
+    published: false,
     date: '2026-09-15',
     readMinutes: 4,
     relatedSlugs: ['aniimo-release-date', 'aniimo-platforms', 'how-to-download-aniimo'],
@@ -166,6 +172,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-nintendo-switch',
+    published: false,
     date: '2026-09-29',
     readMinutes: 3,
     relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save', 'aniimo-launch-time-preload'],
@@ -288,6 +295,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-time-preload',
+    published: false,
     date: '2026-10-15',
     readMinutes: 5,
     relatedSlugs: [
@@ -593,7 +601,8 @@ export const guidePosts: GuidePost[] = [
 
 /** 按 slug 查找文章元数据 */
 export function getGuidePost(slug: string): GuidePost | undefined {
-  return guidePosts.find((p) => p.slug === slug);
+  const post = guidePosts.find((p) => p.slug === slug);
+  return post ? resolveRelatedGuides(post) : undefined;
 }
 
 /** 全部文章 slug（供 generateStaticParams 使用） */
@@ -602,5 +611,16 @@ export function getAllGuideSlugs(): string[] {
 }
 
 export function getPublishedGuidePosts(): GuidePost[] {
-  return guidePosts.filter((post) => post.published !== false);
+  return guidePosts.filter((post) => post.published !== false).map(resolveRelatedGuides);
+}
+
+function resolveRelatedGuides(post: GuidePost): GuidePost {
+  const merged: Record<string, string> = {
+    'aniimo-ps5': 'aniimo-platforms',
+    'aniimo-nintendo-switch': 'aniimo-platforms',
+    'aniimo-launch-time-preload': 'aniimo-release-date',
+  };
+  return { ...post, relatedSlugs: post.relatedSlugs
+    ? [...new Set(post.relatedSlugs.map((slug) => merged[slug] ?? slug))].filter((slug) => slug !== post.slug)
+    : undefined };
 }

@@ -21,8 +21,8 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     assert(crossplay.includes(`/guide/${slug}/`), `${locale}: crossplay missing ${slug}`);
   }
 
-  const launch = visible(read(locale, 'guide/aniimo-launch-time-preload'));
-  assert(launch.includes(locale === 'en' ? 'Historical search status' : locale === 'zh-Hant' ? '歷史搜尋狀態' : '历史搜索状态'), `${locale}: launch page missing historical status`);
+  const launch = visible(read(locale, 'guide/aniimo-release-date'));
+  assert(launch.includes(locale === 'en' ? 'Do old preload times still matter?' : locale === 'zh-Hant' ? '現在還需要等預載嗎？' : '现在还需要等预载吗？'), `${locale}: consolidated release page missing preload answer`);
 }
 
 console.log('Bing recovery checks passed across all three locales.');
