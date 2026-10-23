@@ -33,7 +33,7 @@ function DexCard({ aniimo }: { aniimo: AniimoEntry }) {
     >
       <div className="flex items-center justify-between px-3 pt-3">
         <span className="font-mono text-[11px] font-semibold text-text-muted">
-          #{aniimo.number}
+          #{aniimo.officialNumber ?? aniimo.number}
         </span>
         <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -115,13 +115,14 @@ export default function DexPage() {
     }
     if (stage) list = list.filter((a) => a.officialStage === stage);
     if (q) {
-      list = searchAniimos(q);
+      const matches = new Set(searchAniimos(q).map((entry) => entry.number));
+      list = list.filter((entry) => matches.has(entry.number));
     }
     return [...list].sort((a, b) => {
       if (sort === 'name') return a.name.localeCompare(b.name);
-      if (sort === 'element') return (a.officialElements?.[0] ?? '').localeCompare(b.officialElements?.[0] ?? '') || a.number.localeCompare(b.number);
-      if (sort === 'stage') return (a.officialStage ?? '').localeCompare(b.officialStage ?? '') || a.number.localeCompare(b.number);
-      return a.number.localeCompare(b.number);
+      if (sort === 'element') return (a.officialElements?.[0] ?? '').localeCompare(b.officialElements?.[0] ?? '') || Number(a.officialNumber ?? a.number) - Number(b.officialNumber ?? b.number);
+      if (sort === 'stage') return (a.officialStage ?? '').localeCompare(b.officialStage ?? '') || Number(a.officialNumber ?? a.number) - Number(b.officialNumber ?? b.number);
+      return Number(a.officialNumber ?? a.number) - Number(b.officialNumber ?? b.number);
     });
   }, [element, role, stage, q, sort]);
 
@@ -362,7 +363,7 @@ export default function DexPage() {
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{td('featuredDetailsDescription')}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {getAllAniimos().filter((item) => FEATURED_DETAIL_NUMBERS.includes(item.number)).map((item) => (
-            <Link key={item.number} href={`/dex/${item.number}`} className="rounded border border-ink-border bg-white px-3 py-2 text-sm font-semibold text-text-secondary hover:border-primary-light hover:text-primary-light">#{item.number} {item.enName}</Link>
+            <Link key={item.number} href={`/dex/${item.number}`} className="rounded border border-ink-border bg-white px-3 py-2 text-sm font-semibold text-text-secondary hover:border-primary-light hover:text-primary-light">#{item.officialNumber ?? item.number} {item.enName}</Link>
           ))}
         </div>
       </section>

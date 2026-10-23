@@ -25,6 +25,7 @@ export interface TwineLookupOption {
 
 export interface TwineLookupEntry {
   number: string;
+  officialNumber?: string;
   name: string;
   enName: string;
   element: Element;
@@ -163,7 +164,7 @@ export default function TwineLookup({
                   className="group flex items-start gap-3 rounded-md border border-ink-border bg-ink-card p-4 transition-all hover:border-primary-light hover:shadow-card"
                 >
                   <span className="shrink-0 pt-0.5 text-sm font-semibold text-text-muted">
-                    #{entry.number}
+                    #{entry.officialNumber ?? entry.number}
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">

@@ -32,7 +32,7 @@ export const mobilityIndex: MobilityGroup[] = allMobilityNames
       const aniimo = aniimoByNumber.get(number);
       if (aniimo) members.push(aniimo);
     }
-    members.sort((a, b) => Number(a.number) - Number(b.number));
+    members.sort((a, b) => Number(a.officialNumber ?? a.number) - Number(b.officialNumber ?? b.number));
     return { name, description: meta.description, iconUrl: meta.iconUrl, members };
   })
   .filter((group) => group.members.length > 0)

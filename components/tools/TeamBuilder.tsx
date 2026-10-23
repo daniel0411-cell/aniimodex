@@ -90,7 +90,7 @@ export default function TeamBuilder() {
         return false;
       }
       if (query) {
-        const matchNumber = aniimo.number.toLowerCase().includes(query);
+        const matchNumber = (aniimo.officialNumber ?? aniimo.number).toLowerCase().includes(query);
         const matchName = aniimo.name.toLowerCase().includes(query);
         const matchEn = aniimo.enName.toLowerCase().includes(query);
         if (!matchNumber && !matchName && !matchEn) return false;
@@ -348,12 +348,12 @@ export default function TeamBuilder() {
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center font-mono text-xs text-text-muted">
-                      #{aniimo.number}
+                      #{aniimo.officialNumber ?? aniimo.number}
                     </div>
                   )}
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="font-mono text-xs text-text-muted">#{aniimo.number}</div>
+                  <div className="font-mono text-xs text-text-muted">#{aniimo.officialNumber ?? aniimo.number}</div>
                   <h3 className="truncate font-bold text-text-primary">{getDisplayName(aniimo)}</h3>
                   <div className="mt-1 flex flex-wrap gap-1">
                     {(aniimo.officialElements ?? [aniimo.element]).map((el) => (
@@ -751,7 +751,7 @@ export default function TeamBuilder() {
                             />
                           ) : (
                             <div className="flex h-full w-full items-center justify-center font-mono text-[10px] text-text-muted">
-                              #{aniimo.number}
+                              #{aniimo.officialNumber ?? aniimo.number}
                             </div>
                           )}
                         </div>
@@ -761,7 +761,7 @@ export default function TeamBuilder() {
                               {getDisplayName(aniimo)}
                             </span>
                             <span className="font-mono text-xs text-text-muted">
-                              #{aniimo.number}
+                              #{aniimo.officialNumber ?? aniimo.number}
                             </span>
                           </div>
                           <div className="mt-1 flex flex-wrap gap-1">

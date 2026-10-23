@@ -3,7 +3,7 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { getPublishedGuidePosts } from '@/data/guides';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
-import detailsSnapshot from '@/data/official-wiki-details.json';
+import detailsSnapshot from '@/data/current-wiki-details.json';
 import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
@@ -118,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = STATIC_ROUTES.flatMap((route) =>
     buildLocalizedUrls(
       route.path,
-      route.lastModified,
+      ['/', '/dex/', '/tools/', '/evolutions/', '/locations/', '/abilities/', '/tools/team-builder/', '/tools/type-chart/'].includes(route.path) ? '2026-10-23' : route.lastModified,
       route.priority,
       route.changefreq ?? 'monthly'
     )
@@ -132,13 +132,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((aniimo) => priorityDexNumbers.has(aniimo.number))
     .map((aniimo) => ({
       url: `${SITE_URL}/en/dex/${aniimo.number}/`,
-      lastModified: SEARCH_METADATA_UPDATED,
+      lastModified: '2026-10-23',
       changeFrequency: 'weekly' as const,
       priority: 0.75,
       alternates: { languages: localizedLanguagesForPath(`/dex/${aniimo.number}/`) },
     }));
   const elementUrls = ELEMENTS.flatMap((element) =>
-    buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, LAST_PUBLISHED, 0.8, 'weekly')
+    buildLocalizedUrls(`/elements/${element.toLowerCase()}/`, '2026-10-23', 0.8, 'weekly')
   );
   return [...staticUrls, ...guideUrls, ...dexUrls, ...elementUrls];
 }

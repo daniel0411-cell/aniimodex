@@ -53,9 +53,9 @@ export const verifiedClaims: VerifiedClaim[] = [
     claim:
       'The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.',
     status: 'official',
-    checkedAt: '2026-09-18',
+    checkedAt: '2026-10-23',
     sourceIds: [
-      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-probabilities-2026-09-16',
     ],
   },

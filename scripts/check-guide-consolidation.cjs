@@ -72,7 +72,8 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     dex.includes('https://wiki.aniimo.com/item/061/basic-form'),
     'Name mapping must not use the legacy number'
   );
-  assert(dex.includes('2026-08-30'));
+  assert(dex.includes('2026-10-23'));
+  assert(read('dex/092').includes('2026-08-30'), 'Archived entry must retain its historical date');
   for (const slug of ['aniimo-roles-explained', 'aniimo-evolution-system'])
     assert(read(`guide/${slug}`).includes('10') && read(`guide/${slug}`).includes('23'));
 }

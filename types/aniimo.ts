@@ -139,8 +139,11 @@ export interface AniimoForm {
 
 /** 完整伊莫数据结构 */
 export interface AniimoEntry {
-  /** 图鉴编号（3 位字符串，如 '001'） */
+  /** Stable local route key; use officialNumber for the current display number. */
   number: string;
+  /** Current official number; the local route key stays stable across renumbering. */
+  officialNumber?: string;
+  archived?: boolean;
   /** 中文名 */
   name: string;
   /** 英文名 */

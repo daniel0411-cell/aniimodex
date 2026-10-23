@@ -1,14 +1,15 @@
-import detailsSnapshot from '@/data/official-wiki-details.json';
+import detailsSnapshot from '@/data/current-wiki-details.json';
 import { getAllAniimos } from '@/lib/aniimo';
 import { mobilityIndex } from '@/lib/mobility';
 import type { OfficialAniimoDetail, OfficialEvolutionNode } from '@/data/aniimo-details';
+import { isSuspiciousOfficialDescription } from '@/data/aniimo-details';
 import type { AniimoEntry, Element } from '@/types/aniimo';
 
 const details = detailsSnapshot.details as OfficialAniimoDetail[];
 const aniimoByNumber = new Map(getAllAniimos().map((aniimo) => [aniimo.number, aniimo]));
 
 export const evolutionFamilies = Array.from(
-  new Map(details.map((detail) => [detail.evolution.name, detail.evolution])).values()
+  new Map(details.filter((detail) => detail.evolutionPublished !== false).map((detail) => [detail.evolution.name, detail.evolution])).values()
 );
 
 export const habitatGroups = Array.from(
@@ -44,9 +45,12 @@ function groupOfficialSkills(field: 'traits' | 'skills') {
       if (!group.members.some((member) => member.number === aniimo.number)) {
         group.members.push(aniimo);
       }
-      if (!group.description && skill.description) group.description = skill.description;
       groups.set(skill.name, group);
     }
+  }
+  for (const [name, group] of groups) {
+    const descriptions = new Set(details.flatMap((detail) => detail[field].filter((skill) => skill.name === name).map((skill) => skill.description)));
+    if (descriptions.size > 1 || isSuspiciousOfficialDescription(group.description)) group.description = undefined;
   }
   return [...groups.entries()].sort(
     (a, b) => b[1].members.length - a[1].members.length || a[0].localeCompare(b[0])

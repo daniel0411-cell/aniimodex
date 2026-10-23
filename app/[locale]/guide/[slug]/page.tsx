@@ -13,7 +13,7 @@ import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
 import { getLaunchGuide, getPracticalSupportBlocks } from '@/data/launch-guides';
 import { formIndex } from '@/data/forms';
-import { getAniimoByNumber } from '@/lib/aniimo';
+import { getAniimoByNumber, getAniimoByName } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import ElementGuideDirectory from '@/components/guide/ElementGuideDirectory';
 import PublishedDataGuide from '@/components/guide/PublishedDataGuide';
@@ -272,8 +272,8 @@ export default async function GuidePostPage({
                 <tr key={ri} className="border-t border-ink-border">
                   {row.map((cell, ci) => (
                     <td key={ci} className="px-4 py-2 text-text-primary">
-                      {post.slug === 'aniimo-launch-watchlist' && ci === 0 && /^#\d{3}$/.test(cell) ? (
-                        <Link href={`/dex/${cell.slice(1)}`} className="font-semibold text-primary-light hover:underline">{cell}</Link>
+                      {post.slug === 'aniimo-launch-watchlist' && ci === 0 && /^#\d+$/.test(cell) && getAniimoByName(row[1]) ? (
+                        <Link href={`/dex/${getAniimoByName(row[1])!.number}`} className="font-semibold text-primary-light hover:underline">{cell}</Link>
                       ) : cell}
                     </td>
                   ))}

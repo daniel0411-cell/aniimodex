@@ -4,6 +4,7 @@ import type { AniimoEntry } from '@/types/aniimo';
 
 /** Compare published labels, without inferring strength from them. */
 export function getDexComparisons(current: AniimoEntry) {
+  if (current.archived) return [];
   const detail = getOfficialAniimoDetail(current.number);
   return getAllAniimos()
     .filter((entry) => entry.number !== current.number)
@@ -15,6 +16,6 @@ export function getDexComparisons(current: AniimoEntry) {
       return { entry, detail: candidate, sharedElements, sameRole, sharedHabitats };
     })
     .filter((item) => item.sameRole || item.sharedElements.length > 0)
-    .sort((a, b) => Number(b.sameRole) - Number(a.sameRole) || b.sharedElements.length - a.sharedElements.length || b.sharedHabitats.length - a.sharedHabitats.length || Number(a.entry.number) - Number(b.entry.number))
+    .sort((a, b) => Number(b.sameRole) - Number(a.sameRole) || b.sharedElements.length - a.sharedElements.length || b.sharedHabitats.length - a.sharedHabitats.length || Number(a.entry.officialNumber) - Number(b.entry.officialNumber))
     .slice(0, 4);
 }

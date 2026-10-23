@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { ELEMENTS } from '@/lib/aniimo-ui';
 import { filterByElement, getAllAniimos } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
-import snapshot from '@/data/official-wiki-snapshot.json';
+import snapshot from '@/data/current-wiki-snapshot.json';
 
 const copy = {
   en: {
@@ -96,7 +96,7 @@ export default async function ElementGuideDirectory({ locale }: { locale: string
         <ul className="mt-3 divide-y divide-ink-border">
           {dualEntries.map((entry) => (
             <li key={entry.number} className="flex flex-wrap justify-between gap-2 py-3 text-sm">
-              <Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light hover:underline">#{entry.number} {entry.name}</Link>
+              <Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light hover:underline">#{entry.officialNumber ?? entry.number} {entry.name}</Link>
               <span>{entry.officialElements!.map((element) => t(element)).join(' / ')}</span>
             </li>
           ))}

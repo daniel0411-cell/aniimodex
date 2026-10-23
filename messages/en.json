@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - Official-Source Aniimo Database & Tools",
-    "defaultDescription": "Browse 92 official-source Aniimo entries with elements, evolution families, habitats, mobility abilities, traits, skills and verified guides."
+    "defaultDescription": "Browse 86 official-source Aniimo entries with elements, evolution families, habitats, mobility abilities, traits, skills and verified guides."
   },
   "nav": {
     "home": "Home",
@@ -24,13 +24,13 @@
   "home": {
     "heroBadge": "Official-source Aniimo database",
     "heroTitleGradient": "- Your Aniimo Companion",
-    "heroSubtitle": "Search 92 official Aniimo entries with evolution families, habitats, forms, mobility abilities, traits and combat skills.",
+    "heroSubtitle": "Search 86 official Aniimo entries with evolution families, habitats, forms, mobility abilities, traits and combat skills.",
     "searchPlaceholder": "Search Aniimo by name, number or keyword…",
     "recommended": "Recommended",
     "exploreDex": "Explore the dex",
     "verificationLabel": "Source status",
     "verificationTitle": "Official-source database",
-    "verificationDescription": "92 Aniimo entries include verified names, artwork, elements, evolution, habitats and skills. Numeric stats and catch conditions await official confirmation.",
+    "verificationDescription": "86 current Basic Form records include six official attributes, skills and published exploration fields. Exact encounter conditions and growth formulas are not established by these values.",
     "officialSource": "View official source",
     "officialGuidesLabel": "Official-source guides",
     "officialGuidesTitle": "Answers to the most searched Aniimo questions",
@@ -75,7 +75,7 @@
         "status": "Verified"
       },
       "pending": {
-        "label": "Numeric stats and catch conditions",
+        "label": "HP, BREAK, ATK, M.DEF, P.DEF and REGEN",
         "status": "Pending"
       }
     },
@@ -91,7 +91,7 @@
     "readGuide": "Read the guide",
     "latestUpdateLabel": "Latest update",
     "latestUpdateTitle": "Official Wiki detail coverage expanded",
-    "latestUpdateDescription": "Added evolution trees, habitats, forms, mobility, traits and skills across 92 indexed Aniimo.",
+    "latestUpdateDescription": "Added evolution trees, habitats, forms, mobility, traits and skills across 86 indexed Aniimo.",
     "viewUpdate": "View update",
     "launchStatus": "Launch status",
     "pcLaunch": "PC and Xbox released",
@@ -108,7 +108,7 @@
     "quickLinks": {
       "dex": {
         "title": "Dex",
-        "desc": "Browse 92 entries imported from the official Aniimo Wiki"
+        "desc": "Browse 86 entries imported from the official Aniimo Wiki"
       },
       "twine": {
         "title": "Twine Lookup",
@@ -367,9 +367,9 @@
     "backToGuides": "Back to Guide"
   },
   "dex": {
-    "title": "Aniimo Dex: All 92 Creatures, Forms & Evolutions",
-    "metaDescription": "Browse all 92 official-source Aniimo by name, number, element, role or stage. Check evolution families, habitats, forms, mobility, traits and skills.",
-    "intro": "Find all 92 official-source Aniimo in one searchable dex. Filter by name, number, element, role or stage, then open an entry to check its evolution family, habitat, forms, mobility, traits and skills.",
+    "title": "Aniimo Dex: All 86 Creatures, Forms & Evolutions",
+    "metaDescription": "Browse all 86 official-source Aniimo by name, number, element, role or stage. Check evolution families, habitats, forms, mobility, traits and skills.",
+    "intro": "Find all 86 official-source Aniimo in one searchable dex. Filter by name, number, element, role or stage, then open an entry to check its evolution family, habitat, forms, mobility, traits and skills.",
     "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
@@ -392,11 +392,11 @@
     "unverified": "Reviewing",
     "officialBasic": "Official basics",
     "searchLabel": "Search the official index",
-    "officialScope": "Official Wiki coverage: number, English name, artwork, description, element, role, stage, evolution, habitats, forms, mobility, traits and skills. Numeric stats and catch conditions remain withheld.",
+    "officialScope": "86 current Basic Form records include six official attributes, skills and published exploration fields. Exact encounter conditions and growth formulas are not established by these values.",
     "definitionTitle": "What is the Aniimo Dex?",
-    "definition": "AniimoDex is an unofficial, official-source companion that indexes 92 Aniimo currently published by the official Wiki. Each entry separates confirmed identity and gameplay fields from numeric stats or catch conditions that remain unpublished.",
+    "definition": "AniimoDex is an unofficial companion covering 86 current official Basic Form entries. Compare published attributes, skills and exploration options; alternate-form values and exact encounters need separate verification.",
     "browseTitle": "Browse the Aniimo database",
-    "browseDescription": "This unofficial Aniimo wiki companion indexes 92 official Wiki entries. Filter the dex by element or combat role, then continue to evolution, habitat, mobility and matchup references.",
+    "browseDescription": "This unofficial Aniimo wiki companion indexes 86 official Wiki entries. Filter the dex by element or combat role, then continue to evolution, habitat, mobility and matchup references.",
     "browseElements": "Browse by element",
     "elementDirectory": "Aniimo",
     "browseRoles": "Browse by role",
@@ -441,20 +441,24 @@
     "mobilityTitle": "Six abilities shared by the most indexed entries",
     "mobilityScope": "Abilities are ordered by their number of listed users, then by name. Compare the element coverage and open a candidate to read its exact ability description. This is a list of alternative users, not a ranking of ability strength. Examples use ascending Dex number.",
     "mobilityNext": "Look up all users and ability descriptions",
-    "snapshotNote": "Computed from the official Wiki snapshot checked on 2026-08-30. Forms are not counted separately; missing records do not prove absence in the live game. Area and ability names preserve the source wording.",
+    "snapshotNote": "Computed from the official Wiki snapshot checked on 2026-10-23. Forms are not counted separately; missing records do not prove absence in the live game. Area and ability names preserve the source wording.",
     "group": "Published group",
     "count": "Dex entries",
     "elements": "Element coverage",
     "examples": "Open entries"
   },
   "dexDetail": {
+    "descriptionIncomplete": "The source description contains unresolved placeholders or an ambiguous value. Check the linked official page; no effect amount is inferred here.",
+    "attributesTitle": "Official Basic Form attributes",
+    "attributesScope": "HP, BREAK, ATK, M.DEF, P.DEF and REGEN are the values displayed by the Wiki for Basic Form. They are not level-adjusted battle stats or a damage ranking; alternate forms and growth formulas are not included.",
+    "evolutionUnresolved": "The official evolution chart includes image nodes that could not all be matched to the current directory. This family is withheld until identities can be verified; it does not mean this Aniimo has no evolution.",
     "metaTitle": "{name} #{number}: Evolution, Skills & Wiki Data",
     "stageLabel": "Stage",
     "habitatsUnlisted": "The imported Wiki record does not list a habitat. This does not establish that this Aniimo has no habitat or cannot be encountered.",
     "mobilityUnlisted": "The imported Wiki record does not list a mobility ability. Absence from this snapshot is not proof that no ability exists.",
     "notListed": "Not listed",
     "comparisonTitle": "Compare published roles and exploration options",
-    "comparisonScope": "Candidates prioritize the same published role, then shared elements and habitats; ties use Dex number. Compare habitats and mobility below before opening their skills. These labels do not establish combat strength. All fields use the 2026-08-30 Wiki snapshot; not listed means missing data.",
+    "comparisonScope": "Candidates prioritize the same published role, then shared elements and habitats; ties use Dex number. Compare habitats and mobility below before opening their skills. These labels do not establish combat strength. All fields use the 2026-10-23 Wiki snapshot; not listed means missing data.",
     "comparisonAniimo": "Aniimo",
     "comparisonElements": "Elements",
     "comparisonRole": "Role",
@@ -496,14 +500,14 @@
       "prismana": "Prismana form",
       "region": "Region form"
     },
-    "formsNote": "Form names are reproduced from the official Wiki index. AniimoDex does not publish stat differences between forms, because the official sources do not.",
+    "formsNote": "Form links come from the current official page. This site imports Basic Form values only; open another form on the Wiki to check its own attributes and skills.",
     "formsReadMore": "How Aniimo forms and sparkling styles work",
     "reviewing": "Under review",
     "visualPending": "Official visual pending",
     "draftData": "Community draft data",
     "draftDataHint": "Stats, evolution and potential are unverified and collapsed by default.",
     "officialBasic": "Official Wiki basics",
-    "officialScope": "Number, name, artwork, description, element, role, stage, evolution, habitats, forms, mobility, traits and skills were imported from the official Aniimo Wiki. Numeric stats and catch conditions remain withheld.",
+    "officialScope": "86 current Basic Form records include six official attributes, skills and published exploration fields. Exact encounter conditions and growth formulas are not established by these values.",
     "stageUnlisted": "Stage not listed",
     "officialEvolution": "Evolution",
     "officialHabitats": "Habitats",
@@ -526,8 +530,8 @@
     "title": "Aniimo Tools: Type Chart, Twine & Catch Calculator",
     "subtitle": "Use Aniimo tools to check element matchups, find creatures by Twine mobility ability and estimate catch chances from the published probability formula.",
     "databaseTitle": "Continue in the Aniimo database",
-    "databaseDesc": "Move from a tool result to the full 92-entry dex, evolution families, habitats or mobility directory.",
-    "browseDex": "Browse all 92 Aniimo",
+    "databaseDesc": "Move from a tool result to the full 86-entry dex, evolution families, habitats or mobility directory.",
+    "browseDex": "Browse all 86 Aniimo",
     "browseEvolutions": "Compare evolution families",
     "browseLocations": "Check Aniimo habitats",
     "browseAbilities": "Browse mobility abilities",
@@ -1555,7 +1559,7 @@
           },
           {
             "t": "p",
-            "c": "Element labels are verified official data, and 13 of the 92 indexed Aniimo carry more than one element. The matchup multipliers in the type chart tool, however, are a community-compiled reference rather than official data, so use element labels to check that your team covers different elements rather than to assume a guaranteed counter."
+            "c": "Element labels are verified official data, and 8 of the 86 indexed Aniimo carry more than one element. The matchup multipliers in the type chart tool, however, are a community-compiled reference rather than official data, so use element labels to check that your team covers different elements rather than to assume a guaranteed counter."
           },
           {
             "t": "table",
@@ -1577,7 +1581,7 @@
           },
           {
             "t": "p",
-            "c": "Mobility is the field ability used for traversal or environmental interaction, and 48 of the 92 indexed Aniimo publish one, across 19 distinct ability names. These descriptions can help you compare field functions, but the source does not map them to specific required routes or locations."
+            "c": "Mobility is the field ability used for traversal or environmental interaction, and 50 of the 86 indexed Aniimo publish one, across 19 distinct ability names. These descriptions can help you compare field functions, but the source does not map them to specific required routes or locations."
           },
           {
             "t": "h",
@@ -1630,7 +1634,7 @@
               [
                 "Prismana",
                 "Official Wiki morphology field",
-                "21 of 92 indexed Aniimo list a Prismana Form; its gameplay effects are not defined in the registered official source"
+                "25 of 86 current entries link a Prismana Form. Open that official form to check its own values; this site's Basic Form snapshot cannot establish what changes between forms."
               ],
               [
                 "Sparkling",
@@ -1650,31 +1654,84 @@
           },
           {
             "t": "p",
-            "c": "The official Wiki detail snapshot records a morphology list for each Aniimo. Across the 92 indexed Aniimo, 19 distinct form names appear, and they fall into three groups: every entry has a Basic Form, 21 entries also have a Prismana Form, and the rest are named after a region or a weather state."
+            "c": "On October 23, 2026, the 86 Basic Form pages linked 18 distinct form names: Basic Form for all 86, Prismana Form for 25, and 16 other form names. This is an index of available links, not a verification of alternate-form effects."
           },
           {
             "t": "table",
             "head": ["Form", "Indexed Aniimo"],
             "rows": [
-              ["Basic Form", "92"],
-              ["Prismana Form", "21"],
-              ["Highland Form", "15"],
-              ["Mountain Woods Form", "12"],
-              ["Umbrabow Form", "12"],
-              ["Snowfield Form", "11"],
-              ["Sea of Flowers Form", "9"],
-              ["Nighttime Form", "9"],
-              ["Rainstorm Form", "7"],
-              ["Beach Form", "6"],
-              ["Forest Form", "6"],
-              ["Mountain Form", "6"],
-              ["Plateau Form", "4"],
-              ["Thunderstorm Form", "2"],
-              ["Grassland Form", "2"],
-              ["Cloudmist Form", "2"],
-              ["Mudflat Form", "2"],
-              ["Bay Form", "2"],
-              ["Towerwood Form", "2"]
+              [
+                "Basic Form",
+                "86"
+              ],
+              [
+                "Prismana Form",
+                "25"
+              ],
+              [
+                "Highland Form",
+                "15"
+              ],
+              [
+                "Mountain Woods Form",
+                "12"
+              ],
+              [
+                "Snowfield Form",
+                "11"
+              ],
+              [
+                "Nighttime Form",
+                "9"
+              ],
+              [
+                "Sea of Flowers Form",
+                "9"
+              ],
+              [
+                "Beach Form",
+                "6"
+              ],
+              [
+                "Forest Form",
+                "6"
+              ],
+              [
+                "Mountain Form",
+                "6"
+              ],
+              [
+                "Plateau Form",
+                "4"
+              ],
+              [
+                "Rainstorm Form",
+                "4"
+              ],
+              [
+                "Thunderstorm Form",
+                "3"
+              ],
+              [
+                "Bay Form",
+                "2"
+              ],
+              [
+                "Cloudmist Form",
+                "2"
+              ],
+              [
+                "Grassland Form",
+                "2"
+              ],
+              [
+                "Mudflat Form",
+                "2"
+              ],
+              [
+                "Towerwood Form",
+                "2"
+              ]
             ]
           },
           {
@@ -1683,7 +1740,7 @@
           },
           {
             "t": "p",
-            "c": "Prismana Form is the official name used in the morphology list, and 21 of the 92 indexed Aniimo publish one. Community coverage describes Prismana as changing an Aniimo's element rather than its stats, but the official Wiki sources used here do not say what a Prismana Form changes, so AniimoDex keeps that statement at community level."
+            "c": "25 of 86 current entries link a Prismana Form. Open that official form to check its own values; this site's Basic Form snapshot cannot establish what changes between forms."
           },
           {
             "t": "h",
@@ -1703,7 +1760,7 @@
           },
           {
             "t": "p",
-            "c": "The remaining 17 form names are tied to a place or a weather state, such as Highland Form, Snowfield Form, Sea of Flowers Form, Rainstorm Form and Nighttime Form. The official index records the names only and does not publish what differs between them."
+            "c": "The 16 other form names include terrain and weather names. Each links to an official form page; their values are outside this Basic Form import."
           },
           {
             "t": "h",
@@ -1770,7 +1827,7 @@
           },
           {
             "t": "p",
-            "c": "The official sources used by AniimoDex do not publish per-form stats, elements, roles or abilities. The Dex therefore lists each form name with its category instead of filling the gaps with estimated numbers."
+            "c": "Form links come from the current official page. This site imports Basic Form values only; open another form on the Wiki to check its own attributes and skills."
           },
           {
             "t": "quote",
@@ -2004,7 +2061,7 @@
         "title": "Official Aniimo Dex Coverage: What AniimoDex Has Verified",
         "subtitle": "A field-by-field status report for the official Aniimo Wiki snapshot used by AniimoDex.",
         "tag": "Data status",
-        "lead": "AniimoDex currently tracks 92 numbered entries from the official Aniimo Wiki snapshot checked on August 30, 2026. Only fields present in that snapshot are published as verified.",
+        "lead": "The October 23, 2026 snapshot covers 86 current English Basic Form pages. Twelve unmatched records from August remain historical pages and are excluded from current directories and comparisons.",
         "body": [
           {
             "t": "h",
@@ -2018,7 +2075,7 @@
               ["Description, element, role and stage", "Verified from official Wiki data"],
               ["Evolution, habitats and forms", "Verified from official Wiki detail pages"],
               ["Mobility, traits and skills", "Verified from official Wiki detail pages"],
-              ["Numeric stats and catch conditions", "Not published as verified yet"]
+              ["HP, BREAK, ATK, M.DEF, P.DEF and REGEN", "Published on all 86 Basic Form pages; no growth or damage formula inferred"]
             ]
           },
           {
@@ -2027,7 +2084,7 @@
           },
           {
             "t": "p",
-            "c": "Element and role filters use official Wiki fields, including dual-element entries. Evolution, habitats, forms, mobility, traits and skills now appear on each detail page. Numeric stats and exact catch conditions remain withheld."
+            "c": "Search and sort use current official numbers while existing local URLs stay stable. Compare six Basic Form attributes, skill Type/Cost/Power, roles, habitats and mobility. Alternate-form values, exact encounters and six unresolved evolution trees are outside the verified scope."
           },
           {
             "t": "h",
@@ -2273,7 +2330,7 @@
             "rows": [
               ["Release, platforms and download", "Official-source guides live"],
               [
-                "92-entry Aniimo index",
+                "86-entry Aniimo index",
                 "Number, name, artwork, description, element, role and stage live"
               ],
               ["Twine, catching and multiplayer overviews", "Official mechanics only"],
@@ -2405,7 +2462,7 @@
     "evolutions": {
       "title": "Aniimo Evolutions: Complete Evolution Lines & Branches",
       "description": "Browse every official-source Aniimo evolution family and branching line. Family links are confirmed; required levels, items and quests remain unpublished.",
-      "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked August 30, 2026.",
+      "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked October 23, 2026.",
       "family": "evolution family",
       "definition": "The current official-source snapshot maps {members} Aniimo names across {families} evolution families. Family links are confirmed; levels, items and quest requirements are not inferred.",
       "stats": {
@@ -2464,7 +2521,7 @@
       "metaTitle": "{element} Aniimo List and Dex",
       "metaDescription": "Browse every officially listed {element} Aniimo with published roles, Dex entries, evolution-family links, habitats, forms and source status. Element labels do not imply rankings or matchup strength.",
       "description": "Browse {count} Aniimo carrying the official {element} element label, then compare roles and open each verified Dex entry.",
-      "sourceNote": "Element labels and membership come from the official Aniimo Wiki index snapshot checked August 30, 2026.",
+      "sourceNote": "Element labels and membership come from the official Aniimo Wiki index snapshot checked October 23, 2026.",
       "dexTitle": "Official {element} Aniimo list",
       "count": "{count} Aniimo",
       "rolesTitle": "Published combat roles",
@@ -2476,7 +2533,7 @@
       "browseMobility": "Browse all mobility abilities",
       "nonePublished": "None published in the current official snapshot.",
       "missingTitle": "{element} has no published entries yet",
-      "missingBody": "This element exists in the Aniimo element system, but none of the 92 Aniimo in the official Wiki snapshot checked August 30, 2026 carries it. The element is kept and labelled here instead of being removed.",
+      "missingBody": "This element exists in the Aniimo element system, but none of the 86 Aniimo in the official Wiki snapshot checked October 23, 2026 carries it. The element is kept and labelled here instead of being removed.",
       "scopeTitle": "What this element page confirms",
       "scopeDescription": "This page confirms which indexed Aniimo carry the {element} label. It does not infer rankings, builds, resistances or unpublished secondary types.",
       "browseDex": "Browse the full Aniimo Dex",

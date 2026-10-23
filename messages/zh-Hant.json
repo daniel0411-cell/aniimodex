@@ -2,7 +2,7 @@
   "meta": {
     "siteName": "AniimoDex",
     "defaultTitle": "AniimoDex - 伊莫圖鑑、Twine 反查與元素剋制工具",
-    "defaultDescription": "瀏覽 92 條官方來源伊莫圖鑑，以及元素、進化家族、棲息地、移動能力、特性、技能和已核驗攻略。"
+    "defaultDescription": "瀏覽 86 條官方來源伊莫圖鑑，以及元素、進化家族、棲息地、移動能力、特性、技能和已核驗攻略。"
   },
   "nav": {
     "home": "首頁",
@@ -24,13 +24,13 @@
   "home": {
     "heroBadge": "基於官方來源的伊莫資料庫",
     "heroTitleGradient": "- 伊莫圖鑑與工具",
-    "heroSubtitle": "搜尋 92 筆官方伊莫圖鑑，查看進化家族、棲息地、型態、移動能力、特性與戰鬥技能。",
+    "heroSubtitle": "搜尋 86 筆官方伊莫圖鑑，查看進化家族、棲息地、型態、移動能力、特性與戰鬥技能。",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋伊莫…",
     "recommended": "推薦工具",
     "exploreDex": "探索圖鑑",
     "verificationLabel": "資料狀態",
     "verificationTitle": "官方來源資料庫",
-    "verificationDescription": "92 筆伊莫圖鑑已核驗名稱、圖片、元素、進化、棲息地與技能；數值屬性和捕獲條件等待官方確認。",
+    "verificationDescription": "86 個目前基礎形態已核驗六項屬性、技能和已公布的探索欄位；這些數值不等於準確遭遇條件或成長公式。",
     "officialSource": "查看官方來源",
     "officialGuidesLabel": "官方來源攻略",
     "officialGuidesTitle": "解答使用者最常搜尋的 Aniimo 問題",
@@ -75,7 +75,7 @@
         "status": "已核驗"
       },
       "pending": {
-        "label": "數值屬性與捕獲條件",
+        "label": "HP、BREAK、ATK、M.DEF、P.DEF、REGEN",
         "status": "待確認"
       }
     },
@@ -91,7 +91,7 @@
     "readGuide": "閱讀攻略",
     "latestUpdateLabel": "最新更新",
     "latestUpdateTitle": "官方 Wiki 詳細資料涵蓋範圍擴大",
-    "latestUpdateDescription": "已為 92 筆伊莫圖鑑補充進化樹、棲息地、型態、移動能力、特性與技能。",
+    "latestUpdateDescription": "已為 86 筆伊莫圖鑑補充進化樹、棲息地、型態、移動能力、特性與技能。",
     "viewUpdate": "查看更新",
     "launchStatus": "上線狀態",
     "pcLaunch": "PC 與 Xbox 已發行",
@@ -108,7 +108,7 @@
     "quickLinks": {
       "dex": {
         "title": "圖鑑庫",
-        "desc": "瀏覽從官方 Aniimo Wiki 整理的 92 筆伊莫圖鑑"
+        "desc": "瀏覽從官方 Aniimo Wiki 整理的 86 筆伊莫圖鑑"
       },
       "twine": {
         "title": "Twine 反查",
@@ -367,9 +367,9 @@
     "backToGuides": "返回攻略"
   },
   "dex": {
-    "title": "伊莫圖鑑：92 隻伊莫、進化與能力",
-    "intro": "在可搜尋圖鑑中查找全部 92 隻官方來源伊莫。依名稱、編號、元素、定位或階段篩選，再進入詳情查看進化家族、棲息地、型態、移動能力、特性與技能。",
-    "metaDescription": "瀏覽官方來源的 92 隻伊莫，依名稱、編號、元素、定位或階段篩選，查看進化家族、棲息地、型態、移動能力、特性與技能。",
+    "title": "伊莫圖鑑：86 隻伊莫、進化與能力",
+    "intro": "在可搜尋圖鑑中查找全部 86 隻官方來源伊莫。依名稱、編號、元素、定位或階段篩選，再進入詳情查看進化家族、棲息地、型態、移動能力、特性與技能。",
+    "metaDescription": "瀏覽官方來源的 86 隻伊莫，依名稱、編號、元素、定位或階段篩選，查看進化家族、棲息地、型態、移動能力、特性與技能。",
     "subtitle": "{filtered} / {total} 筆官方 Wiki 圖鑑",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋…",
     "filterElement": "元素",
@@ -392,11 +392,11 @@
     "unverified": "核驗中",
     "officialBasic": "官方基礎資料",
     "searchLabel": "搜尋官方圖鑑",
-    "officialScope": "官方 Wiki 已涵蓋編號、英文名、圖片、描述、元素、定位、階段、進化、棲息地、型態、移動能力、特性與技能；數值屬性和捕獲條件仍暫不公開。",
+    "officialScope": "86 個目前基礎形態已核驗六項屬性、技能和已公布的探索欄位；這些數值不等於準確遭遇條件或成長公式。",
     "definitionTitle": "Aniimo 伊莫圖鑑是什麼？",
-    "definition": "AniimoDex 是非官方、以官方來源為基礎的資料站，目前收錄官方 Wiki 公布的 92 筆伊莫資料。每個條目會區分已確認的身份與玩法欄位，以及尚未公開的數值屬性和捕獲條件。",
+    "definition": "AniimoDex 是非官方資料站，覆蓋 86 個目前官方基礎形態，可比較公開屬性、技能與探索能力；其他形態數值和準確遭遇條件需另行核驗。",
     "browseTitle": "瀏覽伊莫資料庫",
-    "browseDescription": "這份非官方伊莫 Wiki 輔助圖鑑收錄 92 筆官方 Wiki 資料。可按元素或戰鬥定位篩選，並繼續查看進化、棲息地、移動能力和元素剋制。",
+    "browseDescription": "這份非官方伊莫 Wiki 輔助圖鑑收錄 86 筆官方 Wiki 資料。可按元素或戰鬥定位篩選，並繼續查看進化、棲息地、移動能力和元素剋制。",
     "browseElements": "按元素瀏覽",
     "elementDirectory": "伊莫",
     "browseRoles": "按定位瀏覽",
@@ -441,20 +441,24 @@
     "mobilityTitle": "已收錄使用者最多的六種機動能力",
     "mobilityScope": "能力先按公開使用者數量、再按名稱排序。比較元素涵蓋範圍後，進入候選條目閱讀具體能力說明。這是替代使用者清單，不是能力強度排名。實例按圖鑑編號排列。",
     "mobilityNext": "查詢全部使用者與能力說明",
-    "snapshotNote": "根據 2026-08-30 核驗的官方 Wiki 快照計算。形態不另計數，資料缺失不代表目前遊戲中不存在。區域和能力名稱保留來源原文。",
+    "snapshotNote": "根據 2026-10-23 核驗的官方 Wiki 快照計算。形態不另計數，資料缺失不代表目前遊戲中不存在。區域和能力名稱保留來源原文。",
     "group": "公開分類",
     "count": "圖鑑條目",
     "elements": "元素涵蓋範圍",
     "examples": "查看條目"
   },
   "dexDetail": {
+    "descriptionIncomplete": "來源描述含有未替換的佔位符或含義不明的數值，請核對本頁連結的官方條目；本站不推斷具體效果。",
+    "attributesTitle": "官方基礎形態屬性",
+    "attributesScope": "HP、BREAK、ATK、M.DEF、P.DEF、REGEN 為 Wiki 基礎形態頁面顯示值，不是按等級換算的實戰面板，也不是傷害排名；未納入其他形態和成長公式。",
+    "evolutionUnresolved": "官方進化圖中有圖片節點尚未全部匹配到目前目錄，暫不展示這組關係，避免誤認身份；這不代表該伊莫無法進化。",
     "metaTitle": "{name} #{number}：進化、技能與圖鑑資料",
     "stageLabel": "階段",
     "habitatsUnlisted": "匯入的 Wiki 紀錄未列出棲息地。這不代表該伊莫沒有棲息地或無法遇見。",
     "mobilityUnlisted": "匯入的 Wiki 紀錄未列出機動能力。快照中缺少資料，不代表遊戲中確認沒有該能力。",
     "notListed": "資料未列出",
     "comparisonTitle": "比較已公開的定位與探索能力",
-    "comparisonScope": "優先選取相同公開定位，再按共有元素、棲息地排序；相同條件按圖鑑編號排列。先比較棲息地與機動能力，再進入詳情查看技能。這些標籤不能證明戰鬥強度。欄位均取自 2026-08-30 Wiki 快照，「資料未列出」表示資料缺失。",
+    "comparisonScope": "優先選取相同公開定位，再按共有元素、棲息地排序；相同條件按圖鑑編號排列。先比較棲息地與機動能力，再進入詳情查看技能。這些標籤不能證明戰鬥強度。欄位均取自 2026-10-23 Wiki 快照，「資料未列出」表示資料缺失。",
     "comparisonAniimo": "伊莫",
     "comparisonElements": "元素",
     "comparisonRole": "定位",
@@ -496,14 +500,14 @@
       "prismana": "虹彩形態",
       "region": "區域形態"
     },
-    "formsNote": "形態名稱為官方 Wiki 索引原文。官方來源沒有公布各形態之間的數值差異，因此本站也不公布。",
+    "formsNote": "形態連結來自目前官方頁面。本站僅匯入基礎形態數值，其他形態的屬性與技能請進入對應官方頁面核對。",
     "formsReadMore": "伊莫形態與閃耀樣式說明",
     "reviewing": "核驗中",
     "visualPending": "官方形象待確認",
     "draftData": "社群草稿資料",
     "draftDataHint": "屬性、進化和潛力尚未核驗，預設摺疊顯示。",
     "officialBasic": "官方 Wiki 基礎資料",
-    "officialScope": "編號、名稱、圖片、描述、元素、定位、階段、進化、棲息地、型態、移動能力、特性與技能均來自官方 Aniimo Wiki；數值屬性和捕獲條件仍暫不公開。",
+    "officialScope": "86 個目前基礎形態已核驗六項屬性、技能和已公布的探索欄位；這些數值不等於準確遭遇條件或成長公式。",
     "stageUnlisted": "官方未標示階段",
     "officialEvolution": "進化路線",
     "officialHabitats": "棲息地",
@@ -524,8 +528,8 @@
     "title": "Aniimo 伊莫工具：元素剋制、Twine 反查與捕捉率計算",
     "subtitle": "查詢伊莫元素剋制、按 Twine 移動能力反查伊莫，並依已公布機率公式估算捕捉率。",
     "databaseTitle": "繼續查看伊莫資料庫",
-    "databaseDesc": "從工具結果繼續查看 92 筆圖鑑、進化家族、棲息地與移動能力目錄。",
-    "browseDex": "瀏覽全部 92 隻伊莫",
+    "databaseDesc": "從工具結果繼續查看 86 筆圖鑑、進化家族、棲息地與移動能力目錄。",
+    "browseDex": "瀏覽全部 86 隻伊莫",
     "browseEvolutions": "比較進化家族",
     "browseLocations": "查看伊莫棲息地",
     "browseAbilities": "瀏覽移動能力",
@@ -1213,7 +1217,7 @@
           },
           {
             "t": "p",
-            "c": "元素標籤是可核驗的官方資料，92 隻索引伊莫中有 13 隻帶有不止一個元素。但剋制矩陣工具中的倍率屬於社群整理的參考而非官方資料，因此請用元素標籤檢查隊伍的元素涵蓋，而不是據此假定某個元素必然剋制。"
+            "c": "元素標籤是可核驗的官方資料，86 隻索引伊莫中有 8 隻帶有不止一個元素。但剋制矩陣工具中的倍率屬於社群整理的參考而非官方資料，因此請用元素標籤檢查隊伍的元素涵蓋，而不是據此假定某個元素必然剋制。"
           },
           {
             "t": "table",
@@ -1235,7 +1239,7 @@
           },
           {
             "t": "p",
-            "c": "移動能力用於場景移動或環境互動。92 隻索引伊莫中有 48 隻公布了移動能力，共 19 個不同名稱。這些描述可用於比較場地功能，但來源沒有將它們對應到具體的必經路線或地點。"
+            "c": "移動能力用於場景移動或環境互動。86 隻索引伊莫中有 50 隻公布了移動能力，共 19 個不同名稱。這些描述可用於比較場地功能，但來源沒有將它們對應到具體的必經路線或地點。"
           },
           {
             "t": "h",
@@ -1288,7 +1292,7 @@
               [
                 "Prismana（虹彩）",
                 "官方 Wiki 形態欄位",
-                "92 隻索引伊莫中有 21 隻列出 Prismana Form；已登記官方來源沒有定義其玩法效果"
+                "目前 86 個條目中有 25 個連結 Prismana Form。其具體屬性與技能請進入對應官方形態頁面核對；本站的基礎形態快照不能證明形態之間改變了什麼。"
               ],
               [
                 "閃耀（Sparkling）",
@@ -1304,31 +1308,84 @@
           },
           {
             "t": "p",
-            "c": "官方 Wiki 詳情快照為每隻伊莫記錄一份形態清單。92 筆索引裡共出現 19 個不同形態名，可分三類：每隻都帶「基礎形態」（Basic Form），21 隻另外帶「虹彩形態」（Prismana Form），其餘以地貌或天氣命名。"
+            "c": "2026 年 10 月 23 日核對的 86 個基礎形態頁面共連結 18 個形態名：全部 86 個均有 Basic Form，25 個有 Prismana Form，另有 16 個形態名。這裡統計的是已列出的連結，不代表已核驗其他形態效果。"
           },
           {
             "t": "table",
             "head": ["形態", "索引中的伊莫數"],
             "rows": [
-              ["Basic Form 基礎形態", "92"],
-              ["Prismana Form 虹彩形態", "21"],
-              ["Highland Form", "15"],
-              ["Mountain Woods Form", "12"],
-              ["Umbrabow Form", "12"],
-              ["Snowfield Form", "11"],
-              ["Sea of Flowers Form", "9"],
-              ["Nighttime Form", "9"],
-              ["Rainstorm Form", "7"],
-              ["Beach Form", "6"],
-              ["Forest Form", "6"],
-              ["Mountain Form", "6"],
-              ["Plateau Form", "4"],
-              ["Thunderstorm Form", "2"],
-              ["Grassland Form", "2"],
-              ["Cloudmist Form", "2"],
-              ["Mudflat Form", "2"],
-              ["Bay Form", "2"],
-              ["Towerwood Form", "2"]
+              [
+                "Basic Form",
+                "86"
+              ],
+              [
+                "Prismana Form",
+                "25"
+              ],
+              [
+                "Highland Form",
+                "15"
+              ],
+              [
+                "Mountain Woods Form",
+                "12"
+              ],
+              [
+                "Snowfield Form",
+                "11"
+              ],
+              [
+                "Nighttime Form",
+                "9"
+              ],
+              [
+                "Sea of Flowers Form",
+                "9"
+              ],
+              [
+                "Beach Form",
+                "6"
+              ],
+              [
+                "Forest Form",
+                "6"
+              ],
+              [
+                "Mountain Form",
+                "6"
+              ],
+              [
+                "Plateau Form",
+                "4"
+              ],
+              [
+                "Rainstorm Form",
+                "4"
+              ],
+              [
+                "Thunderstorm Form",
+                "3"
+              ],
+              [
+                "Bay Form",
+                "2"
+              ],
+              [
+                "Cloudmist Form",
+                "2"
+              ],
+              [
+                "Grassland Form",
+                "2"
+              ],
+              [
+                "Mudflat Form",
+                "2"
+              ],
+              [
+                "Towerwood Form",
+                "2"
+              ]
             ]
           },
           {
@@ -1337,7 +1394,7 @@
           },
           {
             "t": "p",
-            "c": "Prismana Form 是官方形態清單裡的名稱，92 隻索引伊莫中有 21 隻公布了它。社群資料稱虹彩形態改變的是伊莫元素而不是數值，但本站引用的官方 Wiki 來源並未說明它改變了什麼，因此 AniimoDex 只把該說法標為社群級。"
+            "c": "目前 86 個條目中有 25 個連結 Prismana Form。其具體屬性與技能請進入對應官方形態頁面核對；本站的基礎形態快照不能證明形態之間改變了什麼。"
           },
           {
             "t": "h",
@@ -1357,7 +1414,7 @@
           },
           {
             "t": "p",
-            "c": "其餘 17 個形態名與地點或天氣綁定，例如 Highland Form、Snowfield Form、Sea of Flowers Form、Rainstorm Form、Nighttime Form。官方索引只記錄了名稱，沒有公布它們之間的差異在哪。"
+            "c": "其餘 16 個形態名包含地貌與天氣名稱，各有官方形態頁面連結；其數值不在這次基礎形態匯入範圍內。"
           },
           {
             "t": "h",
@@ -1424,7 +1481,7 @@
           },
           {
             "t": "p",
-            "c": "AniimoDex 引用的官方來源沒有公布各形態的屬性、元素、定位或能力，因此圖鑑只列出形態名稱與分類，不用估算數值填空。"
+            "c": "形態連結來自目前官方頁面。本站僅匯入基礎形態數值，其他形態的屬性與技能請進入對應官方頁面核對。"
           },
           {
             "t": "quote",
@@ -1925,7 +1982,7 @@
         "title": "Aniimo 官方圖鑑覆蓋：AniimoDex 已核驗哪些欄位",
         "subtitle": "公開說明 AniimoDex 使用的官方 Wiki 快照和逐欄位核驗狀態。",
         "tag": "資料狀態",
-        "lead": "AniimoDex 目前收錄 2026 年 8 月 30 日官方 Aniimo Wiki 快照中的 92 條編號記錄，只將快照中明確存在的欄位標為已核驗。",
+        "lead": "2026 年 10 月 23 日快照覆蓋 86 個目前英文基礎形態頁面。8 月快照中有 12 個條目無法匹配目前身份，保留為歷史頁，不參與目前目錄和比較。",
         "body": [
           {
             "t": "h",
@@ -1939,7 +1996,7 @@
               ["描述、元素、定位與階段", "來自官方 Wiki 資料"],
               ["進化、棲息地與型態", "來自官方 Wiki 詳情頁"],
               ["移動能力、特性與技能", "來自官方 Wiki 詳情頁"],
-              ["數值屬性與捕獲條件", "尚未作為已核驗資料發布"]
+              ["HP、BREAK、ATK、M.DEF、P.DEF、REGEN", "86 個基礎形態頁面均公布；不據此推導成長或傷害公式"]
             ]
           },
           {
@@ -1948,7 +2005,7 @@
           },
           {
             "t": "p",
-            "c": "元素與定位篩選支援雙元素伊莫。每個詳情頁現在還會顯示官方進化、棲息地、型態、移動能力、特性與技能；數值屬性和準確捕獲條件仍暫不公開。"
+            "c": "搜尋和排序採用目前官方編號，既有本地網址保持穩定。可比較六項基礎形態屬性、技能 Type/Cost/Power、定位、棲息地和移動能力。其他形態數值、準確遭遇條件及六組身份未匹配完整的進化圖不在已核驗範圍內。"
           },
           {
             "t": "h",
@@ -2150,7 +2207,7 @@
             "head": ["內容", "狀態"],
             "rows": [
               ["上線、平台與下載", "官方來源頁面已發布"],
-              ["92 條伊莫圖鑑", "編號、名稱、圖片、描述、元素、定位與階段已發布"],
+              ["86 條伊莫圖鑑", "編號、名稱、圖片、描述、元素、定位與階段已發布"],
               ["Twine、捕獲和多人概覽", "只包含官方已公布機制"],
               ["上線時間與相容性", "已確認資訊和未知項分開標示"]
             ]
@@ -2280,7 +2337,7 @@
     "evolutions": {
       "title": "Aniimo 伊莫進化圖鑑：全部家族與分支",
       "description": "瀏覽官方來源的全部伊莫進化家族和分支路線。家族關係已確認；所需等級、道具與任務尚未公布。",
-      "sourceNote": "進化關係來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 詳情快照。",
+      "sourceNote": "進化關係來自 2026 年 10 月 23 日核驗的官方 Aniimo Wiki 詳情快照。",
       "family": "進化家族",
       "definition": "目前官方來源快照將 {members} 個伊莫名稱映射到 {families} 個進化家族。家族關係已確認；等級、道具和任務條件不會被推斷。",
       "stats": {
@@ -2310,7 +2367,7 @@
       "metaTitle": "{element}系伊莫列表與圖鑑",
       "metaDescription": "瀏覽官方列出的全部{element}系伊莫、已公布定位、圖鑑資料、進化家族、棲息地和型態資訊，並查看來源狀態；元素標籤不代表強度排名或剋制結論。",
       "description": "瀏覽帶有官方{element}元素標籤的{count}隻伊莫，比較定位並開啟每個已核驗圖鑑條目。",
-      "sourceNote": "元素標籤與成員來自 2026 年 8 月 30 日核驗的官方 Aniimo Wiki 索引快照。",
+      "sourceNote": "元素標籤與成員來自 2026 年 10 月 23 日核驗的官方 Aniimo Wiki 索引快照。",
       "dexTitle": "官方{element}系伊莫列表",
       "count": "{count}隻伊莫",
       "rolesTitle": "官方戰鬥定位",
@@ -2322,7 +2379,7 @@
       "browseMobility": "瀏覽全部移動能力",
       "nonePublished": "目前官方快照未公布。",
       "missingTitle": "「{element}」暫無已公布條目",
-      "missingBody": "該元素存在於 Aniimo 的元素體系中，但在 2026 年 8 月 30 日核驗的官方 Wiki 快照裡，92 隻伊莫沒有任何一隻帶有該元素。此處保留該元素並如實標註，而不是直接刪除。",
+      "missingBody": "該元素存在於 Aniimo 的元素體系中，但在 2026 年 10 月 23 日核驗的官方 Wiki 快照裡，86 隻伊莫沒有任何一隻帶有該元素。此處保留該元素並如實標註，而不是直接刪除。",
       "scopeTitle": "本元素頁確認的範圍",
       "scopeDescription": "本頁確認哪些圖鑑伊莫帶有{element}標籤，不推斷強度排名、配裝、抗性或未公布的副屬性。",
       "browseDex": "瀏覽完整伊莫圖鑑",

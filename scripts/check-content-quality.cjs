@@ -19,20 +19,46 @@ function load(path) {
   return module.exports;
 }
 
-const { getAllAniimos, getAniimoByNumber } = load('lib/aniimo.ts');
+const { getAllAniimos, getAllRouteAniimos, getAniimoByNumber, searchAniimos } = load('lib/aniimo.ts');
 const { getDexComparisons } = load('lib/dex-comparison.ts');
+const { isSuspiciousOfficialDescription } = load('data/aniimo-details.ts');
+assert(isSuspiciousOfficialDescription('Deals {0}% extra damage.'));
+assert(isSuspiciousOfficialDescription('Increases BREAK by 0.'));
+assert(!isSuspiciousOfficialDescription('Triggers every 0.5s for 15s.'));
 const { habitatGroups, mobilityGroups, evolutionFamilies, flattenEvolution } = load('data/aniimo-collections.ts');
 const entries = getAllAniimos();
-const detailRecords = load('data/official-wiki-details.json').details;
+const detailRecords = load('data/current-wiki-details.json').details;
 const comparisons = getDexComparisons(getAniimoByNumber('004'));
-assert.equal(comparisons[0].entry.number, '062', 'Inferlupa should prioritize a shared-role, shared-element candidate');
+assert.ok(comparisons[0].sameRole && comparisons[0].sharedElements.length, 'Inferlupa should prioritize a shared-role, shared-element candidate');
 assert.ok(comparisons.every((item) => item.entry.number !== '004'));
 assert.equal(new Set(comparisons.map((item) => item.entry.number)).size, comparisons.length);
 assert.deepEqual(getDexComparisons({ ...getAniimoByNumber('001'), officialRole: undefined, officialElements: [] }), [], 'Missing labels must not match every other missing label');
+const legacy = load('data/official-wiki-snapshot.json').entries;
+const currentIndex = load('data/wiki-current-index.ts').currentWikiIndex;
+assert.equal(entries.length, 86);
+assert.equal(getAllRouteAniimos().length, 98);
+assert.equal(new Set(getAllRouteAniimos().map(e => e.number)).size, 98);
+for (const [number, name] of currentIndex) {
+  const entry = entries.find(e => e.enName === name);
+  assert.equal(entry?.officialNumber, number, `${name}: wrong current number`);
+  const previous = legacy.find(e => e.name === name);
+  if (previous) assert.equal(entry.number, previous.number, `${name}: changed stable URL`);
+  assert(searchAniimos(number).some(e => e.enName === name));
+}
+for (const archived of getAllRouteAniimos().filter(e => e.archived)) {
+  assert.deepEqual(getDexComparisons(archived), []);
+  assert(!entries.some(e => e.number === archived.number));
+}
 
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const messages = load(`messages/${locale}.json`);
-  const read = (path) => readFileSync(resolve(root, 'out', locale, path, 'index.html'), 'utf8');
+  const read = (path) => readFileSync(resolve(root, 'out', locale, path, 'index.html'), 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+  for (const archived of getAllRouteAniimos().filter(e => e.archived)) {
+    const html = read(`dex/${archived.number}`);
+    assert(html.includes('2026-08-30'));
+    assert(!html.includes(messages.dexDetail.comparisonTitle));
+    assert(!html.includes(messages.dexDetail.attributesTitle));
+  }
   for (const entry of entries) {
     const html = read(`dex/${entry.number}`);
     assert.ok(html.includes(messages.dexDetail.comparisonTitle), `${locale}/${entry.number}: missing comparison`);
@@ -40,6 +66,12 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
       assert.ok(html.includes(`id="${target}"`), `${locale}/${entry.number}: broken #${target}`);
     }
     const detail = detailRecords.find((item) => item.number === entry.number);
+    assert.equal(detail.attributes.length, 6);
+    assert(html.includes(messages.dexDetail.attributesTitle));
+    if (!detail.evolutionPublished) assert(html.includes(messages.dexDetail.evolutionUnresolved));
+    assert(html.includes('2026-10-23'));
+    assert(html.includes(`https://wiki.aniimo.com/item/${entry.officialNumber}/basic-form`));
+    if ([...detail.skills, ...detail.traits].some(skill => isSuspiciousOfficialDescription(skill.description))) assert(html.includes(messages.dexDetail.descriptionIncomplete));
     if (!detail.habitats.length) assert.ok(html.includes(messages.dexDetail.habitatsUnlisted));
     if (!detail.mobility.length) assert.ok(html.includes(messages.dexDetail.mobilityUnlisted));
     assert.ok(html.includes(`?aniimo=${entry.number}`), `${locale}/${entry.number}: lost lookup context`);
@@ -77,4 +109,4 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     }
   }
 }
-console.log('Content quality checks passed: 276 Dex pages, 12 guide tables, missing data, deep links, comparisons and derived counts.');
+console.log('Content quality checks passed: 86 current identities, 98 stable routes, 258 current Dex pages, guide tables, attributes, missing data and comparisons.');

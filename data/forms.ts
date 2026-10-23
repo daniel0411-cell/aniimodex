@@ -1,12 +1,12 @@
 // ============================================================================
 // 官方形态（morphology）派生层
 // ----------------------------------------------------------------------------
-// 唯一数据源：data/official-wiki-details.json 的 detail.morphologyList（{ wikiId, name }[]）。
+// 唯一数据源：data/current-wiki-details.json 的 detail.morphologyList（{ wikiId, name }[]）。
 //
-// 官方索引里实际出现 19 个形态名，可归为三类：
-//   · Basic Form            基础形态（92 条全部拥有）
-//   · Prismana Form         虹彩形态（21 条拥有）
-//   · 其余 17 个             区域形态（以地貌/天气命名，如 Highland Form / Snowfield Form）
+// 官方索引里实际出现 18 个形态名，可归为三类：
+//   · Basic Form            基础形态（86 条全部拥有）
+//   · Prismana Form         虹彩形态（25 条拥有）
+//   · 其余 16 个             区域形态（以地貌/天气命名，如 Highland Form / Snowfield Form）
 //
 // ⚠️ 官方形态名是专有名词，本层不做任何中文硬编码映射；
 //    需要本地化时由 UI 只翻译「分类名」，形态名保持官方原文。
@@ -15,7 +15,7 @@
 //    与形态（morphology）不是同一套字段，不要混用。
 // ============================================================================
 
-import detailsSnapshot from '@/data/official-wiki-details.json';
+import detailsSnapshot from '@/data/current-wiki-details.json';
 import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 
 const details = detailsSnapshot.details as OfficialAniimoDetail[];

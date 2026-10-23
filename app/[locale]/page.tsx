@@ -317,7 +317,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   {aniimo.name}
                 </p>
                 <p className={`${index === 0 ? 'mt-2 text-xs' : 'text-[10px]'} text-text-muted`}>
-                  #{aniimo.number} ·{' '}
+                  #{aniimo.officialNumber ?? aniimo.number} ·{' '}
                   {aniimo.officialElements?.map((element) => t(`elements.${element}`)).join(' / ')}
                 </p>
                 {index === 0 && (

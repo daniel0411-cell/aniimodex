@@ -112,7 +112,7 @@ export default function TypeChartPage() {
           {t('selectAniimo')}
           <select value={aniimoNumber} onChange={(event) => setAniimoNumber(event.target.value)} className="mt-1 h-11 w-full rounded-md border border-ink-border bg-white px-3 text-sm sm:max-w-md">
             <option value="">{t('selectAniimoPlaceholder')}</option>
-            {getAllAniimos().map((aniimo) => <option key={aniimo.number} value={aniimo.number}>#{aniimo.number} {aniimo.name} ({aniimo.enName})</option>)}
+            {getAllAniimos().map((aniimo) => <option key={aniimo.number} value={aniimo.number}>#{aniimo.officialNumber ?? aniimo.number} {aniimo.name} ({aniimo.enName})</option>)}
           </select>
         </label>
         {selectedAniimo && selectedElements.length > 0 && (

@@ -19,6 +19,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'getting-started',
+    updatedAt: '2026-10-23',
     element: '风',
     date: '2026-09-20',
     readMinutes: 8,
@@ -42,7 +43,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-epic-759396',
-      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-probabilities-2026-09-16',
     ],
   },
@@ -287,11 +288,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'official-aniimo-dex-status',
+    updatedAt: '2026-10-23',
     date: '2026-08-30',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-launch-coverage-status'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23'],
   },
   {
     slug: 'aniimo-launch-time-preload',
@@ -392,7 +394,7 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: ['official-aniimo-dex-status', 'aniimo-launch-time-preload'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-official-wiki-index-2026-08-30'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-official-wiki-basic-2026-10-23'],
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
@@ -447,7 +449,7 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/twine'],
     relatedSlugs: ['aniimo-mobility-abilities', 'aniimo-roles-explained', 'aniimo-twine-explained'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30', 'aniimo-steam-dev-feedback-2026-10-13'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23', 'aniimo-steam-dev-feedback-2026-10-13'],
   },
   {
     slug: 'aniimo-launch-watchlist',
@@ -456,7 +458,7 @@ export const guidePosts: GuidePost[] = [
     readMinutes: 3,
     relatedToolHrefs: ['/dex', '/tools/twine'],
     relatedSlugs: ['official-aniimo-dex-status', 'aniimo-choose-by-mobility-role'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23'],
   },
   {
     slug: 'aniimo-team-composition',
@@ -469,13 +471,14 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
     ],
     sourceIds: [
-      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-dev-feedback-2026-10-13',
     ],
   },
   {
     slug: 'aniimo-forms-explained',
+    updatedAt: '2026-10-23',
     date: '2026-10-11',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -489,7 +492,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-launch-checklist-known-issues',
     ],
     sourceIds: [
-      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
@@ -553,7 +556,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-dev-dispatch-roadmap',
     ],
     sourceIds: [
-      'aniimo-official-wiki-index-2026-08-30',
+      'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-probabilities-2026-09-16',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
@@ -595,7 +598,7 @@ export const guidePosts: GuidePost[] = [
     relatedToolHrefs:
       slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
     relatedSlugs: ['official-aniimo-dex-status'],
-    sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23'],
   })),
 ];
 

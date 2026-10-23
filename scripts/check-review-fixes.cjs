@@ -4,16 +4,17 @@ const { resolve } = require('node:path');
 const ts = require('typescript');
 
 function loadTs(path) {
+  if (path.endsWith('.json')) return JSON.parse(readFileSync(resolve(__dirname, '..', path), 'utf8'));
   const source = readFileSync(resolve(__dirname, '..', path), 'utf8');
   const { outputText } = ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2017 },
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2017, esModuleInterop: true },
   });
   const module = { exports: {} };
   new Function('require', 'module', 'exports', outputText)(
     (id) => {
       if (path === 'data/launch-guides.ts' && id === './access-guides') return loadTs('data/access-guides.ts');
-      assert.equal(id, '@/data/element-matchups');
-      return loadTs('data/element-matchups.ts');
+      assert.ok(id.startsWith('@/'), `Unexpected import: ${id}`);
+      return loadTs(`${id.slice(2)}${id.endsWith('.json') ? '' : '.ts'}`);
     },
     module,
     module.exports

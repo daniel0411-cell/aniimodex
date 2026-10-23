@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-const snapshot = JSON.parse(readFileSync('data/official-wiki-snapshot.json', 'utf8'));
+const snapshot = JSON.parse(readFileSync('data/current-wiki-snapshot.json', 'utf8'));
 const sitemap = readFileSync('out/sitemap.xml', 'utf8');
 const redirects = readFileSync('out/_redirects', 'utf8');
 const elements = ['Light', 'Fire', 'Ice', 'Dark', 'Lightning', 'Grass', 'Water', 'Earth', 'Wind'];
@@ -53,9 +53,17 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const watchlist = visible(readFileSync(`out/${locale}/guide/aniimo-launch-watchlist/index.html`, 'utf8'));
   const watchlistTable = watchlist.match(/<table\b[^>]*>(.*?)<\/table>/s)?.[1];
   assert(watchlistTable, `${locale}: missing watchlist table`);
-  for (const number of ['003', '009', '019', '012', '029', '043', '001', '007', '022', '024', '035', '080']) {
-    assert(watchlistTable.includes(`href="/${locale}/dex/${number}/"`), `${locale}: watchlist entry ${number} is not linked`);
+  const watchlistRows = [...watchlistTable.matchAll(/<tr\b[^>]*>(.*?)<\/tr>/gs)].slice(1);
+  assert.equal(watchlistRows.length, 12);
+  const linkedNumbers = [];
+  for (const [html, row] of watchlistRows) {
+    const number = row.match(/href="\/[^/]+\/dex\/([^/]+)\//)?.[1];
+    const entry = snapshot.entries.find(entry => entry.number === number);
+    assert(entry && row.includes(entry.name), `${locale}: wrong watchlist identity`);
+    assert(row.replace(/<!--.*?-->/g, '').includes(`#${entry.officialNumber}`));
+    linkedNumbers.push(number);
   }
+  assert.equal(new Set(linkedNumbers).size, 12, 'Watchlist must not duplicate entries');
 }
 
 console.log('Index recovery checks passed: legacy redirects, localized element data and links, canonical URLs and honest update dates.');

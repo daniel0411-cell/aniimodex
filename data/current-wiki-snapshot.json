@@ -1,0 +1,1219 @@
+{
+  "source": "https://wiki.aniimo.com/",
+  "checkedAt": "2026-10-23",
+  "scope": "English basic-form pages; form links are indexed, alternate-form values are not imported.",
+  "entries": [
+    {
+      "number": "001",
+      "officialNumber": "001",
+      "officialId": "10051",
+      "name": "Emberpup",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10051.png",
+      "description": "The lively creatures like to follow Flameruffs around. Once the smoldering fur starts to burn, they thrive.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "001/basic-form"
+    },
+    {
+      "number": "002",
+      "officialNumber": "002",
+      "officialId": "10052",
+      "name": "Flameruff",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10052.png",
+      "description": "Pack creatures that prize loyalty and unity, these hunters maintain focused, calm eyes that mask their fiery hearts.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "002/basic-form"
+    },
+    {
+      "number": "003",
+      "officialNumber": "003",
+      "officialId": "10053",
+      "name": "Scorchhowl",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10053.png",
+      "description": "The scorch marks on their bodies are proof of victories in battle. They seek strong opponents to dominate.",
+      "stage": "Nova",
+      "role": "DPS",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "003/basic-form"
+    },
+    {
+      "number": "004",
+      "officialNumber": "004",
+      "officialId": "10055",
+      "name": "Inferlupa",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10055.png",
+      "description": "A Flameruff who challenged the strong and lost, absorbing the souls of companions who fell with equal bitterness. It is driven by the desire for revenge.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Fire",
+        "Dark"
+      ],
+      "wikiPageId": "004/basic-form"
+    },
+    {
+      "number": "005",
+      "officialNumber": "005",
+      "officialId": "10011",
+      "name": "Celestis",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10011.png",
+      "description": "They love food! When they search the forest for food, the glowing stars on their heads are often mistaken for comets. They like hoarding food, adorning their nest with it.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "005/basic-form"
+    },
+    {
+      "number": "006",
+      "officialNumber": "006",
+      "officialId": "10012",
+      "name": "Stellarys",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10012.png",
+      "description": "They prefer solitude and often move through the night. With their starry, cloak-like forms, they resemble mysterious mages and can teleport using psychic energy.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "006/basic-form"
+    },
+    {
+      "number": "007",
+      "officialNumber": "007",
+      "officialId": "10181",
+      "name": "Chirpi",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10181.png",
+      "description": "They often hover at low altitudes, paying attention to every movement on the beach and causing a ruckus.",
+      "stage": "Lumin",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "007/basic-form"
+    },
+    {
+      "number": "008",
+      "officialNumber": "008",
+      "officialId": "10184",
+      "name": "Tromber",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10184.png",
+      "description": "They like having fun and producing rhythmic music, so don't be surprised to see a grand symphony.",
+      "stage": "Nova",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "008/basic-form"
+    },
+    {
+      "number": "009",
+      "officialNumber": "009",
+      "officialId": "10185",
+      "name": "Cornet",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10185.png",
+      "description": "They can produce loud, piercing noises that resonate throughout the entire beach just to draw attention.",
+      "stage": "Nova",
+      "role": "DPS",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "009/basic-form"
+    },
+    {
+      "number": "010",
+      "officialNumber": "010",
+      "officialId": "10187",
+      "name": "Tubster",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10187.png",
+      "description": "Creates deep, tuba-like sounds that match its steady, friendly character.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "010/basic-form"
+    },
+    {
+      "number": "011",
+      "officialNumber": "011",
+      "officialId": "10211",
+      "name": "Iris",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10211.png",
+      "description": "Iris possesses an extremely lightweight body, often lifted by the wind. It then either slowly spirals downward using the resistance from its petal skirt, or simply allows itself to be carried away by the wind.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "011/basic-form"
+    },
+    {
+      "number": "012",
+      "officialNumber": "012",
+      "officialId": "10212",
+      "name": "Irisal",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10212.png",
+      "description": "Devoted to the art of dance, they constantly hone their craft, hoping to share the pure joy and energy of movement.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "012/basic-form"
+    },
+    {
+      "number": "014",
+      "officialNumber": "013",
+      "officialId": "10041",
+      "name": "Skippy",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10041.png",
+      "description": "They like to hide underwater and observe their surroundings using a lotus leaf as a strikingly ineffective disguise.",
+      "stage": "Lumin",
+      "role": "Heal",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "013/basic-form"
+    },
+    {
+      "number": "015",
+      "officialNumber": "014",
+      "officialId": "10042",
+      "name": "Pranky",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10042.png",
+      "description": "They like to stay cool and moist. That's what the layer of film over their bodies is for.",
+      "stage": "Gamma",
+      "role": "Heal",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "014/basic-form"
+    },
+    {
+      "number": "016",
+      "officialNumber": "015",
+      "officialId": "10043",
+      "name": "Glacy",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10043.png",
+      "description": "They are elegant and kind Aniimo that always take care of weaker ones, and freeze anyone who crosses them in ice.",
+      "stage": "Nova",
+      "role": "Heal",
+      "elements": [
+        "Water",
+        "Ice"
+      ],
+      "wikiPageId": "015/basic-form"
+    },
+    {
+      "number": "017",
+      "officialNumber": "016",
+      "officialId": "10045",
+      "name": "Leafy",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10045.png",
+      "description": "They live among lotus flowers and use their lotus leaf tails to conceal their face and show off their elegant nature.",
+      "stage": "Nova",
+      "role": "Regen",
+      "elements": [
+        "Grass",
+        "Water"
+      ],
+      "wikiPageId": "016/basic-form"
+    },
+    {
+      "number": "018",
+      "officialNumber": "017",
+      "officialId": "10261",
+      "name": "Nimbi",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10261.png",
+      "description": "Don't be surprised to see them floating in the clouds in small groups above the grasslands.",
+      "stage": "Lumin",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "017/basic-form"
+    },
+    {
+      "number": "019",
+      "officialNumber": "018",
+      "officialId": "10262",
+      "name": "Turbo",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10262.png",
+      "description": "They like to sleep hidden in the clouds, because with the presence of wind pressure and static electricity, the fluffy wool easily attracts things carried by the winds.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "018/basic-form"
+    },
+    {
+      "number": "020",
+      "officialNumber": "019",
+      "officialId": "10263",
+      "name": "Dreaple",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10263.png",
+      "description": "Their fur that has absorbed dream energy presents a mesmerizing illusion of colors. When the fur is used as a pillow, Pathfinders sink into sweet dreams.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "019/basic-form"
+    },
+    {
+      "number": "021",
+      "officialNumber": "020",
+      "officialId": "10201",
+      "name": "Hummin",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10201.png",
+      "description": "They live on the grassland in groups, they like burrowing for nutrients, and they love singing off-key together!",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "020/basic-form"
+    },
+    {
+      "number": "022",
+      "officialNumber": "021",
+      "officialId": "10203",
+      "name": "Witchin",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10203.png",
+      "description": "They make bizarre noises to drive intruders to madness, lower their defenses and even cause them to pass out.",
+      "stage": "Gamma",
+      "role": "Regen",
+      "elements": [
+        "Dark",
+        "Grass"
+      ],
+      "wikiPageId": "021/basic-form"
+    },
+    {
+      "number": "023",
+      "officialNumber": "022",
+      "officialId": "10207",
+      "name": "Tuckin",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10207.png",
+      "description": "They need to absorb nutrients from the soil through their roots to maintain vitality and hate leaving the ground.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "022/basic-form"
+    },
+    {
+      "number": "wiki-023",
+      "officialNumber": "023",
+      "officialId": "10161",
+      "name": "Budclaw",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10161.png",
+      "description": "Mating for life, they're always found in pairs. The heartbloom atop their shells indicates their state of happiness.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Earth",
+        "Grass"
+      ],
+      "wikiPageId": "023/basic-form"
+    },
+    {
+      "number": "025",
+      "officialNumber": "024",
+      "officialId": "10162",
+      "name": "Shrubclaw",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10162.png",
+      "description": "The lush plants that cover their shells convert sunlight into nutrients, so they don't even need to eat on sunny days.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Earth",
+        "Grass"
+      ],
+      "wikiPageId": "024/basic-form"
+    },
+    {
+      "number": "026",
+      "officialNumber": "025",
+      "officialId": "10163",
+      "name": "Geoclaw",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10163.png",
+      "description": "They live in caves, feed on minerals, and use their beautifully crystallized shells to lure prey.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Ice"
+      ],
+      "wikiPageId": "025/basic-form"
+    },
+    {
+      "number": "027",
+      "officialNumber": "026",
+      "officialId": "10331",
+      "name": "Sparki",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10331.png",
+      "description": "Though they look like fire, those flames are only flowing energy. They give off no heat at all—in fact, they absorb heat from their surroundings. Sometimes they use this to disguise themselves as campfires and play tricks on others.",
+      "stage": "Lumin",
+      "role": "Regen",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "026/basic-form"
+    },
+    {
+      "number": "028",
+      "officialNumber": "027",
+      "officialId": "10333",
+      "name": "Flamerion",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10333.png",
+      "description": "They only come out at night and their bodies are made of gaseous energy and can split as they want!",
+      "stage": "Gamma",
+      "role": "Regen",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "027/basic-form"
+    },
+    {
+      "number": "029",
+      "officialNumber": "028",
+      "officialId": "10231",
+      "name": "Flutternym",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10231.png",
+      "description": "They are timid and hide whenever they sense danger, but the fluorescent scales they shake off always give them away.",
+      "stage": "Lumin",
+      "role": "Heal",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "028/basic-form"
+    },
+    {
+      "number": "030",
+      "officialNumber": "029",
+      "officialId": "10232",
+      "name": "Gracewing",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10232.png",
+      "description": "Lone wanderers. They create illusions by shedding scales from their wings when threats approach.",
+      "stage": "Gamma",
+      "role": "Heal",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "029/basic-form"
+    },
+    {
+      "number": "032",
+      "officialNumber": "031",
+      "officialId": "10441",
+      "name": "Eko",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10441.png",
+      "description": "With their big ears perked up, they are extremely sensitive to sound. They won't miss any movement that catches their attention, near or far.",
+      "stage": "Unknown",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "031/basic-form"
+    },
+    {
+      "number": "033",
+      "officialNumber": "032",
+      "officialId": "10443",
+      "name": "Eklue",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10443.png",
+      "description": "Curious and eager to search for traces and track targets. The ring on their tail amplifies ultrasound, allowing them to easily detect cloaked creatures.",
+      "stage": "Unknown",
+      "role": "Support",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "032/basic-form"
+    },
+    {
+      "number": "034",
+      "officialNumber": "033",
+      "officialId": "10321",
+      "name": "Budsquire",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10321.png",
+      "description": "The timid crybabies can also rise up against enemies when cornered. The buds on their heads will blossom as they do so.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "033/basic-form"
+    },
+    {
+      "number": "035",
+      "officialNumber": "034",
+      "officialId": "10323",
+      "name": "Thornblade",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10323.png",
+      "description": "The swords made from thorny stems are drawn only when it's time to protect their pack against enemies.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "034/basic-form"
+    },
+    {
+      "number": "036",
+      "officialNumber": "035",
+      "officialId": "10324",
+      "name": "Melloblum",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10324.png",
+      "description": "To quell disputes, they scatter fragrant petals, causing those who touch them to feel happiness and crush their fighting spirit.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "035/basic-form"
+    },
+    {
+      "number": "037",
+      "officialNumber": "036",
+      "officialId": "10471",
+      "name": "Pomegg",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10471.png",
+      "description": "They retreat into their shells to rest, often getting mistaken for eggs. They fear battle but love a crowd, dancing with grass pompoms to cheer others on.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "036/basic-form"
+    },
+    {
+      "number": "039",
+      "officialNumber": "037",
+      "officialId": "10475",
+      "name": "Pomawk",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10475.png",
+      "description": "Their towering manes display their wild nature, while their feral roars reveal their true colors. Their tails are built to store sound waves, releasing a sonic boom when they strike an opponent.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Grass"
+      ],
+      "wikiPageId": "037/basic-form"
+    },
+    {
+      "number": "040",
+      "officialNumber": "038",
+      "officialId": "10351",
+      "name": "Dewy",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10351.png",
+      "description": "As partners to perfumers, they store and ferment nectar within their bodies, transforming it into perfume ingredients.",
+      "stage": "Lumin",
+      "role": "Support",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "038/basic-form"
+    },
+    {
+      "number": "041",
+      "officialNumber": "039",
+      "officialId": "10352",
+      "name": "Fragrancier",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10352.png",
+      "description": "They're picky about odors, so they harvest and store various nectar within them to craft unique perfume ingredients.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "039/basic-form"
+    },
+    {
+      "number": "042",
+      "officialNumber": "040",
+      "officialId": "10031",
+      "name": "Wisptis",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10031.png",
+      "description": "If the only way to evolve is to defeat other Wisptises, then there is no other choice but to keep their claws sharp.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "040/basic-form"
+    },
+    {
+      "number": "043",
+      "officialNumber": "041",
+      "officialId": "10032",
+      "name": "Ignitis",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10032.png",
+      "description": "They sharpen their blades and wait for the perfect moment, hiding in the shadows as they toy with their prey. As cold-blooded assassins, they seek to end every fight in a single strike.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "041/basic-form"
+    },
+    {
+      "number": "045",
+      "officialNumber": "042",
+      "officialId": "10131",
+      "name": "Bonesky",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10131.png",
+      "description": "An energetic pup with a pair of big ears. The ice-bone bow tie on its chest is its favorite toy. It hates Emberpups that don’t respect personal space.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Ice"
+      ],
+      "wikiPageId": "042/basic-form"
+    },
+    {
+      "number": "046",
+      "officialNumber": "043",
+      "officialId": "10132",
+      "name": "Fenrier",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10132.png",
+      "description": "Resisting gentle pets that might soften its resolve, it leads pack hunts with its ice blade.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Ice"
+      ],
+      "wikiPageId": "043/basic-form"
+    },
+    {
+      "number": "047",
+      "officialNumber": "044",
+      "officialId": "10133",
+      "name": "Glynsera",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10133.png",
+      "description": "Proud and confident warriors, the chilling blades in its mouth send shivers down its enemies’ spines.",
+      "stage": "Nova",
+      "role": "DPS",
+      "elements": [
+        "Ice"
+      ],
+      "wikiPageId": "044/basic-form"
+    },
+    {
+      "number": "048",
+      "officialNumber": "045",
+      "officialId": "10221",
+      "name": "Bolty",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10221.png",
+      "description": "They live among the trees. When they attack, golden sparks flash from their tails with crackling electric sounds. Agile and quick on their feet, they are very difficult to catch.",
+      "stage": "Unknown",
+      "role": "Break",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "045/basic-form"
+    },
+    {
+      "number": "049",
+      "officialNumber": "046",
+      "officialId": "10222",
+      "name": "Blazen",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10222.png",
+      "description": "They use their special fur to capture charged particles in the air to produce and store electricity.",
+      "stage": "Unknown",
+      "role": "Break",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "046/basic-form"
+    },
+    {
+      "number": "wiki-047",
+      "officialNumber": "047",
+      "officialId": "10511",
+      "name": "Squarrel",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10511.png",
+      "description": "Squarrel has a large, fist-shaped tail. When its greasy tail fur is rubbed even slightly, it can burst into flames. Anyone who eyes its stockpiled pinecones will get a taste of its scorching fire fists.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "047/basic-form"
+    },
+    {
+      "number": "wiki-048",
+      "officialNumber": "048",
+      "officialId": "10512",
+      "name": "Squashel",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10512.png",
+      "description": "Squashel has twin fist-like tails, giving its power a super-boost. Pinecones thrown with that force strike like cannonballs — not to be underestimated.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "048/basic-form"
+    },
+    {
+      "number": "050",
+      "officialNumber": "049",
+      "officialId": "10171",
+      "name": "Susuta",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10171.png",
+      "description": "They dig around to search for gifts to give to their crushes, but their wooing always fails because they are so shy.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "049/basic-form"
+    },
+    {
+      "number": "051",
+      "officialNumber": "050",
+      "officialId": "10172",
+      "name": "Popota",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10172.png",
+      "description": "They select shells and make them into shovels. It's said that they produce pink bubbles when they see someone they love.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "050/basic-form"
+    },
+    {
+      "number": "052",
+      "officialNumber": "051",
+      "officialId": "10173",
+      "name": "Piopiota",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10173.png",
+      "description": "Narcissistic little creatures who spend a large amount of time grooming their fur and striking the perfect pose.",
+      "stage": "Nova",
+      "role": "Support",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "051/basic-form"
+    },
+    {
+      "number": "053",
+      "officialNumber": "052",
+      "officialId": "10174",
+      "name": "Panpanta",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10174.png",
+      "description": "They are strong and powerful, but they'd rather stay in their nests and decorate than show off their muscles.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "052/basic-form"
+    },
+    {
+      "number": "054",
+      "officialNumber": "053",
+      "officialId": "10191",
+      "name": "Shelly",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10191.png",
+      "description": "Conceals itself among beach shells using its soft appendages to hold shells in place. Remains sealed during daylight.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "053/basic-form"
+    },
+    {
+      "number": "055",
+      "officialNumber": "054",
+      "officialId": "10192",
+      "name": "Sheldon",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10192.png",
+      "description": "Lying on their shells, they face the night sky, falling into a deep dream woven by the stars.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "054/basic-form"
+    },
+    {
+      "number": "056",
+      "officialNumber": "055",
+      "officialId": "10194",
+      "name": "Sherro",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10194.png",
+      "description": "They turn the shells that once covered them into swords and shields to protect fragile Shellies along the coastline.",
+      "stage": "Nova",
+      "role": "DPS",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "055/basic-form"
+    },
+    {
+      "number": "057",
+      "officialNumber": "056",
+      "officialId": "10451",
+      "name": "Baleetle",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10451.png",
+      "description": "They never go anywhere without their stone balls. The constant rolling makes the balls rounder, but there's something else about it...",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "056/basic-form"
+    },
+    {
+      "number": "058",
+      "officialNumber": "057",
+      "officialId": "10453",
+      "name": "Waleetle",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10453.png",
+      "description": "They move backwards like their kin, but in a much fancier way.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "057/basic-form"
+    },
+    {
+      "number": "059",
+      "officialNumber": "058",
+      "officialId": "10454",
+      "name": "Bouldus",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10454.png",
+      "description": "A stone ball that had stayed with Baleetle day and night. It gained consciousness after a rough bump, tired of being controlled, it swallowed Baleetle and could finally move by its own will.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "058/basic-form"
+    },
+    {
+      "number": "060",
+      "officialNumber": "059",
+      "officialId": "10291",
+      "name": "Fentuft",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10291.png",
+      "description": "They always wear a signature smile and invite other Aniimo to play. Though they sometimes cause trouble due to mischief and greed, they are always forgiven.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "059/basic-form"
+    },
+    {
+      "number": "061",
+      "officialNumber": "060",
+      "officialId": "10293",
+      "name": "Fenmane",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10293.png",
+      "description": "Using the excellent conductivity of their fur, they condense the power of lightning to extend their wings, dashing to dispel the haze and brighten their mood.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "060/basic-form"
+    },
+    {
+      "number": "062",
+      "officialNumber": "061",
+      "officialId": "10021",
+      "name": "Helmut",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10021.png",
+      "description": "That tough helmet keeps its squishy body safe, while those extendable mouth-claws help it hunt.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "061/basic-form"
+    },
+    {
+      "number": "063",
+      "officialNumber": "062",
+      "officialId": "10026",
+      "name": "Pawney",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10026.png",
+      "description": "Armed with a broken sword and armor, blessed with courage and might, it defends its friends and challenges its foes.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "062/basic-form"
+    },
+    {
+      "number": "064",
+      "officialNumber": "063",
+      "officialId": "10027",
+      "name": "Rookey",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10027.png",
+      "description": "Despite its imposing size, it is timid and avoids conflict. It finds its courage when friends need protection.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "063/basic-form"
+    },
+    {
+      "number": "065",
+      "officialNumber": "064",
+      "officialId": "10024",
+      "name": "Jawling",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10024.png",
+      "description": "Loves to bite everything it sees. Its flexible jaw can open extremely wide. It shows affection through gentle nibbles.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "064/basic-form"
+    },
+    {
+      "number": "066",
+      "officialNumber": "065",
+      "officialId": "10022",
+      "name": "Helmwhelp",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10022.png",
+      "description": "A fledgling concealing weakness under its helmet, dreaming of becoming strong enough to soar freely.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "065/basic-form"
+    },
+    {
+      "number": "067",
+      "officialNumber": "066",
+      "officialId": "10023",
+      "name": "Helgon",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10023.png",
+      "description": "Covered in hard armor, they look like tall statues when they stand still, as if standing guard over ancient treasures.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "066/basic-form"
+    },
+    {
+      "number": "068",
+      "officialNumber": "067",
+      "officialId": "10025",
+      "name": "Infergon",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10025.png",
+      "description": "Covered in armor forged by flames, the fire they breathe in fury can melt almost everything.",
+      "stage": "Nova",
+      "role": "DPS",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "067/basic-form"
+    },
+    {
+      "number": "069",
+      "officialNumber": "068",
+      "officialId": "10501",
+      "name": "Cubbo",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10501.png",
+      "description": "They spend the day sleepwalking. If woken up, they instantly become violent and lose control. Once they exhaust their energy, they fall back asleep like a baby.",
+      "stage": "Lumin",
+      "role": "DPS",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "068/basic-form"
+    },
+    {
+      "number": "070",
+      "officialNumber": "069",
+      "officialId": "10503",
+      "name": "Grizbo",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10503.png",
+      "description": "They hide constant endurance and restraint beneath a gentle exterior. However, if provoked or hungry, they lose control and fall into a frenzy.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "069/basic-form"
+    },
+    {
+      "number": "071",
+      "officialNumber": "070",
+      "officialId": "10281",
+      "name": "Pebbling",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10281.png",
+      "description": "They are natural geologists who like eating all kinds of minerals. And what they eat determines how they grow.",
+      "stage": "Lumin",
+      "role": "Break",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "070/basic-form"
+    },
+    {
+      "number": "072",
+      "officialNumber": "071",
+      "officialId": "10282",
+      "name": "Lavazar",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10282.png",
+      "description": "They use hard claws to crush crystals and eat them to store heat, causing fiery red patterns to appear on their body. Though small, they can continuously spew high-heat flame streams from their mouth.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Fire",
+        "Earth"
+      ],
+      "wikiPageId": "071/basic-form"
+    },
+    {
+      "number": "073",
+      "officialNumber": "072",
+      "officialId": "10283",
+      "name": "Magmarex",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10283.png",
+      "description": "Scorching crystals grow on their body like solidified lava. If the stored heat erupts, it can melt everything in their path.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Fire",
+        "Earth"
+      ],
+      "wikiPageId": "072/basic-form"
+    },
+    {
+      "number": "074",
+      "officialNumber": "073",
+      "officialId": "10284",
+      "name": "Geodeback",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10284.png",
+      "description": "The minerals they eat will grow back on them with refined energy stored inside.",
+      "stage": "Gamma",
+      "role": "Break",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "073/basic-form"
+    },
+    {
+      "number": "075",
+      "officialNumber": "074",
+      "officialId": "10285",
+      "name": "Minespine",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10285.png",
+      "description": "Wherever crystal minerals are found, so are they. Their hard spines serve both as protection and as storage for energy.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "074/basic-form"
+    },
+    {
+      "number": "076",
+      "officialNumber": "075",
+      "officialId": "10431",
+      "name": "Cozite",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10431.png",
+      "description": "Cozites build their shells bit by bit with mud. When in danger, they spray smoke from the top hole to cover the surroundings and hide themselves.",
+      "stage": "Lumin",
+      "role": "Support",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "075/basic-form"
+    },
+    {
+      "number": "077",
+      "officialNumber": "076",
+      "officialId": "10433",
+      "name": "Bailite",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10433.png",
+      "description": "Bailites' anatomy allows independent rotation of their upper and lower bodies. This means they can observe surroundings flexibly, ready to transform into turrets to repel opponents.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Earth"
+      ],
+      "wikiPageId": "076/basic-form"
+    },
+    {
+      "number": "078",
+      "officialNumber": "077",
+      "officialId": "10141",
+      "name": "Bulbly",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10141.png",
+      "description": "Their first reaction to everything is to escape, and their bulb-like organs indicate whether they are healthy.",
+      "stage": "Lumin",
+      "role": "Support",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "077/basic-form"
+    },
+    {
+      "number": "079",
+      "officialNumber": "078",
+      "officialId": "10142",
+      "name": "Veilfloat",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10142.png",
+      "description": "A light-dependent creature that glows when night falls, keeping its light on even while sleeping.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "078/basic-form"
+    },
+    {
+      "number": "080",
+      "officialNumber": "079",
+      "officialId": "10143",
+      "name": "Luminelle",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10143.png",
+      "description": "Changes its glow to match its mood while its tentacles create mesmerizing patterns and deliver shocking attacks.",
+      "stage": "Nova",
+      "role": "Support",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "079/basic-form"
+    },
+    {
+      "number": "081",
+      "officialNumber": "080",
+      "officialId": "10481",
+      "name": "Fahloo",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10481.png",
+      "description": "They rub the oil on their bodies to create a thick foam. This foam cleans and protects them, though they sometimes slip on it by accident.",
+      "stage": "Lumin",
+      "role": "Regen",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "080/basic-form"
+    },
+    {
+      "number": "082",
+      "officialNumber": "081",
+      "officialId": "10483",
+      "name": "Erlath",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10483.png",
+      "description": "Their feathers constantly secrete oil, creating various bubbles with just a little friction. They naturally use the softest, densest foam to protect the Fahloos on their backs.",
+      "stage": "Gamma",
+      "role": "Regen",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "081/basic-form"
+    },
+    {
+      "number": "083",
+      "officialNumber": "082",
+      "officialId": "10122",
+      "name": "Besauce",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10122.png",
+      "description": "Always trying to find beats to drown out its persistent heartbeat, Besauce loves to groove to the music.",
+      "stage": "Unknown",
+      "role": "Regen",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "082/basic-form"
+    },
+    {
+      "number": "038",
+      "officialNumber": "10002",
+      "officialId": "10474",
+      "name": "Dazmand",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10474.png",
+      "description": "They have flexible limbs and love to show off their flashy kicks to anyone watching. They wear their shed skin over their heads like a cool hood.",
+      "stage": "Gamma",
+      "role": "Support",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "10002/basic-form"
+    },
+    {
+      "number": "044",
+      "officialNumber": "10003",
+      "officialId": "10033",
+      "name": "Fulmintis",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10033.png",
+      "description": "Evolved from a Wisptis with broken forelimbs absorbing the power of lightning. The reshaped reverse blades are incredibly sharp and flash with dazzling electric light.",
+      "stage": "Gamma",
+      "role": "DPS",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "10003/basic-form"
+    },
+    {
+      "number": "wiki-11001",
+      "officialNumber": "11001",
+      "officialId": "69993",
+      "name": "Little Fire Spirit",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_69993.png",
+      "description": "Little Fire Spirits from another world can draw energy from the interactions of other creatures. The livelier and more joyful the gathering, the more energized they become.",
+      "stage": "Unknown",
+      "role": "Support",
+      "elements": [
+        "Fire"
+      ],
+      "wikiPageId": "11001/basic-form"
+    },
+    {
+      "number": "wiki-99996",
+      "officialNumber": "99996",
+      "officialId": "10371",
+      "name": "Lunara",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10371.png",
+      "description": "Their eyes shimmer with the deep blue light of the moon, and mysterious patterns appear when they wield their power.",
+      "stage": "Unknown",
+      "role": "DPS",
+      "elements": [
+        "Light"
+      ],
+      "wikiPageId": "99996/basic-form"
+    },
+    {
+      "number": "wiki-99998",
+      "officialNumber": "99998",
+      "officialId": "10361",
+      "name": "Helion",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10361.png",
+      "description": "Enthusiastic and confident, they always stand up for their friends at critical moments, displaying amazing power.",
+      "stage": "Unknown",
+      "role": "DPS",
+      "elements": [
+        "Light"
+      ],
+      "wikiPageId": "99998/basic-form"
+    }
+  ]
+}

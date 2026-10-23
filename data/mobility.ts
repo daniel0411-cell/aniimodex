@@ -1,18 +1,18 @@
 // ============================================================================
 // Aniimo 移动能力（mobility）派生层
 // ----------------------------------------------------------------------------
-// 唯一数据源：data/official-wiki-details.json 的 detail.mobility（OfficialSkill[]）。
+// 唯一数据源：data/current-wiki-details.json 的 detail.mobility（OfficialSkill[]）。
 //
 // 重要说明：
-// 官方只公布英文能力名（Hustle / Take Off / Cloudwalk …），92 条详情里实际出现
-// 19 个不同取值，且只有 48 条带有该字段。因此本站原样保留英文专名，
+// 官方只公布英文能力名（Hustle / Take Off / Cloudwalk …），86 条详情里实际出现
+// 19 个不同取值，且只有 50 条带有该字段。因此本站原样保留英文专名，
 // 不在数据层做任何中文硬编码映射；中文短名与说明统一放在 messages 的
 // mobilityNames.* / mobilityDescriptions.*，由 UI 按语言取用。
 //
 // 本文件只依赖 JSON，不依赖 data/aniimos.ts，避免与 lib/aniimo 形成循环引用。
 // ============================================================================
 
-import detailsSnapshot from '@/data/official-wiki-details.json';
+import detailsSnapshot from '@/data/current-wiki-details.json';
 import type { OfficialAniimoDetail, OfficialSkill } from '@/data/aniimo-details';
 
 const details = detailsSnapshot.details as OfficialAniimoDetail[];

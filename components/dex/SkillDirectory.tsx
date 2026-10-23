@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 interface DirectoryGroup {
   name: string;
   description?: string;
-  members: { number: string; name: string }[];
+  members: { number: string; officialNumber?: string; name: string }[];
 }
 
 export default function SkillDirectory({
@@ -65,7 +65,7 @@ export default function SkillDirectory({
                     href={`/dex/${member.number}`}
                     className="rounded border border-ink-border bg-white px-2 py-1 text-xs text-text-primary hover:border-primary-light"
                   >
-                    #{member.number} {member.name}
+                    #{member.officialNumber ?? member.number} {member.name}
                   </Link>
                 ))}
               </div>

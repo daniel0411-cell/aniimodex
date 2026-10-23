@@ -13,6 +13,13 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-official-wiki-basic-2026-10-23',
+    url: 'https://wiki.aniimo.com/',
+    title: 'Official Aniimo Wiki - 86 Basic Form records',
+    accessedAt: '2026-10-23',
+    evidence: 'Rendered English Basic Form pages checked for all 86 directory entries: identity, artwork, elements, roles, six attributes, skills and their Type/Cost/Power parameters, traits, published habitats and mobility. Alternate forms are linked, not imported. Evolution image identities are resolved only against indexed artwork; six unresolved trees are excluded from family comparisons. Existing local routes are preserved by exact English name, never by changed official number.',
+  },
+  {
     id: 'aniimo-access-routes-2026-10-23',
     url: 'https://www.aniimo.com/',
     title: 'Aniimo official download routes - October 23 observation',

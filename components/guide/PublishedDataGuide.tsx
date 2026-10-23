@@ -36,7 +36,7 @@ export default async function PublishedDataGuide({ locale, topic }: { locale: st
           <th scope="row" className="px-3 py-3">{label}</th>
           <td className="px-3 py-3 tabular-nums">{members.length}</td>
           <td className="px-3 py-3">{Array.from(new Set(members.flatMap((entry) => entry.officialElements ?? []))).map((element) => tr(`elements.${element}`)).join(' / ')}</td>
-          <td className="px-3 py-3"><ul className="space-y-2">{members.slice(0, topic === 'evolution' ? members.length : 3).map((entry) => <li key={entry.number}><Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light hover:underline">#{entry.number} {locale === 'en' ? entry.enName : entry.name}</Link></li>)}</ul></td>
+          <td className="px-3 py-3"><ul className="space-y-2">{members.slice(0, topic === 'evolution' ? members.length : 3).map((entry) => <li key={entry.number}><Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light hover:underline">#{entry.officialNumber ?? entry.number} {locale === 'en' ? entry.enName : entry.name}</Link></li>)}</ul></td>
         </tr>)}</tbody>
       </table>
     </div>

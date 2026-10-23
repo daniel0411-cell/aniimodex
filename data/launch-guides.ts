@@ -1,4 +1,6 @@
 import { getAccessGuide } from './access-guides';
+import { getAllAniimos } from '@/lib/aniimo';
+import { getOfficialAniimoDetail } from '@/data/aniimo-details';
 
 export type LaunchGuideBlock =
   { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'table'; head: string[]; rows: string[][] };
@@ -11,20 +13,11 @@ export type LaunchGuide = {
   body: LaunchGuideBlock[];
 };
 
-const commonWatchlist = [
-  ['#003', 'Emberpup', 'Hustle, skills, forms and evolution'],
-  ['#009', 'Chirpi', 'Take Off, branches and skills'],
-  ['#019', 'Nimbi', 'Cloudwalk, forms, skills and branches'],
-  ['#012', 'Iris', 'Blooming and multiple forms'],
-  ['#029', 'Flutternym', 'Habitats, skills and forms'],
-  ['#043', 'Wisptis', 'Cloak, skills, forms and branches'],
-  ['#001', 'Emberpup', 'Habitats, Hustle and family data'],
-  ['#007', 'Chirpi', 'Habitats and branching evolution'],
-  ['#022', 'Hummin', 'Luminous Seed, skills and forms'],
-  ['#024', 'Budclaw', 'Tunnel, habitats, forms and branches'],
-  ['#035', 'Thornblade', 'Skills, habitat and Budsquire evolution family'],
-  ['#080', 'Bulbly', 'Glow, skills and forms'],
-];
+const commonWatchlist = getAllAniimos().map((entry) => {
+  const detail = getOfficialAniimoDetail(entry.number)!;
+  return { entry, detail, coverage: [detail.habitats.length, detail.mobility.length, detail.traits.length, detail.skills.length, detail.morphologyList.length, detail.evolutionPublished ? 1 : 0].filter(Boolean).length };
+}).sort((a, b) => b.coverage - a.coverage || Number(a.entry.officialNumber) - Number(b.entry.officialNumber)).slice(0, 12)
+  .map(({ entry, detail }) => [`#${entry.officialNumber}`, entry.enName, [...detail.mobility.map((ability) => ability.name), ...detail.habitats].join(' / ')]);
 
 const english: Record<string, LaunchGuide> = {
   'aniimo-language-controller-support': controllerGuide('en'),
@@ -1023,7 +1016,7 @@ const english: Record<string, LaunchGuide> = {
       { t: 'h', c: 'How this watchlist is selected' },
       {
         t: 'p',
-        c: 'AniimoDex counts published habitats, mobility, traits, skills, forms and evolution branches. It does not use hidden combat scores or community tier claims.',
+        c: 'The October 23 Basic Form snapshot is sorted by the number of populated field groups: habitats, mobility, traits, skills, form links and fully resolved evolution. Ties use current official number. The first 12 are shown with their mobility and habitats to help choose which entries to inspect; this measures information coverage, not combat value.',
       },
       { t: 'h', c: 'Launch watchlist' },
       { t: 'table', head: ['Dex', 'Family', 'Published reason'], rows: commonWatchlist },

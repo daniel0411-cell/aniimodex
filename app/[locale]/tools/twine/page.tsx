@@ -23,6 +23,7 @@ export default async function TwinePage({ params }: { params: Promise<{ locale: 
 
   const entries: TwineLookupEntry[] = aniimos.map((aniimo) => ({
     number: aniimo.number,
+    officialNumber: aniimo.officialNumber,
     name: aniimo.name,
     enName: aniimo.enName,
     element: aniimo.element,

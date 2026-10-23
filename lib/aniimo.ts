@@ -2,20 +2,24 @@
 // Aniimo 数据访问工具函数
 // ============================================================================
 
-import aniimos from '@/data/aniimos';
+import aniimos, { routeAniimos } from '@/data/aniimos';
 import { ELEMENTS } from '@/lib/aniimo-ui';
 import type { AniimoEntry, Element } from '@/types/aniimo';
 
 /** 获取全部伊莫（按编号升序） */
 export function getAllAniimos(): AniimoEntry[] {
-  return [...aniimos].sort((a, b) => Number(a.number) - Number(b.number));
+  return [...aniimos].sort((a, b) => Number(a.officialNumber ?? a.number) - Number(b.officialNumber ?? b.number));
 }
+
+export function getAllRouteAniimos(): AniimoEntry[] { return routeAniimos; }
 
 /** 按编号查询（支持 '001'、'1' 等格式，不区分前导零） */
 export function getAniimoByNumber(num: string): AniimoEntry | undefined {
+  const exact = routeAniimos.find((entry) => entry.number === num);
+  if (exact) return exact;
   const normalized = Number(num);
   if (Number.isNaN(normalized)) return undefined;
-  return aniimos.find((a) => Number(a.number) === normalized);
+  return routeAniimos.find((a) => Number(a.number) === normalized);
 }
 
 /** 按名称查询（支持中文名 / 英文名，不区分大小写） */
@@ -35,9 +39,7 @@ export function filterByElement(element: Element): AniimoEntry[] {
 /**
  * 官方索引中暂时没有任何条目的元素。
  *
- * 例：Light 存在于 Aniimo 的元素体系中，但 2026-08-30 的官方 Wiki 快照里
- * 92 条记录无一携带该元素。此时应如实标注「官方索引暂缺数据」，
- * 而不是把该元素从类型定义或克制表里删掉。
+ * 缺少条目的元素仍保留在体系和克制表中；仅对当前快照标注缺少资料。
  */
 export function getElementsWithoutPublishedEntries(): Element[] {
   const published = new Set<string>();
@@ -56,7 +58,7 @@ export function searchAniimos(query: string): AniimoEntry[] {
 
   return aniimos.filter((a) => {
     // 编号精确 / 前缀匹配（同时兼容去前导零：输入 "1" 可命中 001、010、011…）
-    const num = a.number;
+    const num = a.officialNumber ?? a.number;
     if (isNumberQuery) {
       const stripped = num.replace(/^0+/, '');
       if (num === q || num.startsWith(q) || stripped === q || stripped.startsWith(q)) return true;

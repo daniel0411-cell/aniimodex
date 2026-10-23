@@ -1,4 +1,5 @@
 import snapshot from '@/data/official-wiki-snapshot.json';
+import currentSnapshot from '@/data/current-wiki-snapshot.json';
 import { mobilityByNumber } from '@/data/mobility';
 import type { AniimoEntry, EvolutionStage, Personality, PersonalityBonus } from '@/types/aniimo';
 
@@ -20,8 +21,12 @@ function unknownPersonality(): Record<Personality, PersonalityBonus> {
   };
 }
 
-const aniimos: AniimoEntry[] = snapshot.entries.map((record) => ({
+const currentNames = new Set(currentSnapshot.entries.map((entry) => entry.name));
+const records = [...currentSnapshot.entries.map((entry) => ({ ...entry, archived: false })), ...snapshot.entries.filter((entry) => !currentNames.has(entry.name)).map((entry) => ({ ...entry, officialNumber: undefined, archived: true }))];
+const allEntries: AniimoEntry[] = records.map((record) => ({
   number: record.number,
+  officialNumber: record.officialNumber,
+  archived: record.archived,
   name: record.name,
   enName: record.name,
   officialWikiId: record.officialId,
@@ -47,9 +52,11 @@ const aniimos: AniimoEntry[] = snapshot.entries.map((record) => ({
   personality: unknownPersonality(),
   forms: [],
   dataSource: 'official',
-  sourceIds: [SOURCE_ID],
+  sourceIds: [record.archived ? SOURCE_ID : 'aniimo-official-wiki-basic-2026-10-23'],
   note:
-    'Number, English name, artwork, description, elements, role and stage come from the official Wiki index snapshot. Mobility names come from the official Wiki detail snapshot and are empty when the official record publishes none.',
+    'Current Basic Form data and resolved evolution stages use the October 23 rendered Wiki snapshot; archived records retain the August evidence. Empty fields mean missing evidence.',
 }));
 
-export default aniimos;
+export const archivedAniimos = allEntries.filter((entry) => entry.archived);
+export const routeAniimos = allEntries;
+export default allEntries.filter((entry) => !entry.archived);
