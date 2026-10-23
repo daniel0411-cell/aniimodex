@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
 
 export interface PolicySection {
   heading: string;
@@ -7,7 +8,7 @@ export interface PolicySection {
   items?: string[];
 }
 
-export default function PolicyPage({
+export default async function PolicyPage({
   title,
   intro,
   updated,
@@ -20,6 +21,7 @@ export default function PolicyPage({
   sections: PolicySection[];
   children?: ReactNode;
 }) {
+  const t = await getTranslations('footer');
   return (
     <article className="mx-auto max-w-3xl space-y-8 pb-10">
       <header className="border-b border-ink-border pb-6">
@@ -42,10 +44,11 @@ export default function PolicyPage({
       ))}
       {children}
       <nav className="flex flex-wrap gap-x-5 gap-y-2 border-t border-ink-border pt-6 text-sm font-semibold text-primary-light">
-        <Link href="/about">About</Link>
-        <Link href="/privacy">Privacy</Link>
-        <Link href="/terms">Terms &amp; copyright</Link>
-        <Link href="/guide/how-we-verify">How we verify</Link>
+        <Link href="/about">{t('about')}</Link>
+        <Link href="/contact">{t('contact')}</Link>
+        <Link href="/privacy">{t('privacy')}</Link>
+        <Link href="/terms">{t('terms')}</Link>
+        <Link href="/guide/how-we-verify">{t('verification')}</Link>
       </nav>
     </article>
   );

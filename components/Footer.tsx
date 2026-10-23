@@ -21,6 +21,7 @@ export default async function Footer() {
 
           <nav aria-label={t('legalNav')} className="flex max-w-xl flex-wrap gap-x-5 gap-y-3 text-sm">
             <Link href="/about" className="text-text-secondary hover:text-primary-light">{t('about')}</Link>
+            <Link href="/contact" className="text-text-secondary hover:text-primary-light">{t('contact')}</Link>
             <Link href="/privacy" className="text-text-secondary hover:text-primary-light">{t('privacy')}</Link>
             <Link href="/terms" className="text-text-secondary hover:text-primary-light">{t('terms')}</Link>
             <Link href="/guide/how-we-verify" className="text-text-secondary hover:text-primary-light">{t('verification')}</Link>

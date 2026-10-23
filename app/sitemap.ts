@@ -77,13 +77,17 @@ const STATIC_ROUTES: {
     priority: 0.85,
     changefreq: 'weekly',
   },
-  { path: '/tools/catch/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  { path: '/tools/catch/', lastModified: '2026-10-24', priority: 0.85, changefreq: 'weekly' },
   {
     path: '/tools/team-builder/',
     lastModified: '2026-10-16',
     priority: 0.85,
     changefreq: 'weekly',
   },
+  { path: '/about/', lastModified: '2026-09-23', priority: 0.6, changefreq: 'monthly' },
+  { path: '/contact/', lastModified: '2026-10-24', priority: 0.6, changefreq: 'monthly' },
+  { path: '/privacy/', lastModified: '2026-09-23', priority: 0.5, changefreq: 'monthly' },
+  { path: '/terms/', lastModified: '2026-09-23', priority: 0.5, changefreq: 'monthly' },
 ];
 
 // 为单个（无 locale 的）路径生成所有 locale 的 URL + hreflang alternates

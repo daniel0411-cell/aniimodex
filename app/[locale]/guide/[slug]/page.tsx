@@ -419,6 +419,26 @@ export default async function GuidePostPage({
             </ul>
           </section>
         )}
+
+        <section className="mt-8 border-t border-ink-border pt-5">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary font-bold text-white shadow-sm">
+              AD
+            </div>
+            <div>
+              <h2 className="text-sm font-semibold text-text-primary">{t('authorTitle')}</h2>
+              <p className="text-xs text-text-muted">{t('authorSubtitle')}</p>
+            </div>
+          </div>
+          <p className="mt-3 text-xs leading-5 text-text-secondary">
+            {t('authorBio')}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-4 border-t border-ink-border pt-3 text-xs font-semibold text-primary-light">
+            <Link href="/guide/how-we-verify">{t('howWeVerify')} →</Link>
+            <Link href="/about">{meta('siteName')} →</Link>
+            <Link href="/contact">{locale === 'en' ? 'Contact Editorial' : locale === 'zh-Hant' ? '聯絡編輯部' : '联系编辑部'} →</Link>
+          </div>
+        </section>
       </article>
       {outline.length > 0 && (
         <aside className="lg:sticky lg:top-20">

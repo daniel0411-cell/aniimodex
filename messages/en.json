@@ -127,10 +127,11 @@
   "footer": {
     "disclaimer": "© {year} AniimoDex · Unofficial fan resource. Game names, artwork and trademarks belong to their respective owners.",
     "legalNav": "Site information and policies",
-    "about": "About & contact",
+    "about": "About",
     "privacy": "Privacy",
     "terms": "Terms & copyright",
-    "verification": "How we verify"
+    "verification": "How we verify",
+    "contact": "Contact"
   },
   "legal": {
     "about": {
@@ -300,6 +301,36 @@
           "heading": "Changes and contact",
           "paragraphs": [
             "We may revise these terms when the site, law or service providers change. Continued use after publication of an update means the revised terms apply. Questions may be sent to privacy@aniimodex.com; rights-holder notices should be sent to copyright@aniimodex.com."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact AniimoDex",
+      "intro": "Questions, factual corrections and tool feedback can be sent through the contact channels already listed on this site. AniimoDex is an independent, unofficial fan resource.",
+      "updated": "Last updated: October 24, 2026",
+      "sections": [
+        {
+          "heading": "Questions and corrections",
+          "paragraphs": [
+            "For general site enquiries, data corrections or privacy questions, use privacy@aniimodex.com."
+          ],
+          "items": [
+            "Include the affected page URL and Aniimo name or tool settings.",
+            "Explain the discrepancy and include an official source link when available.",
+            "Do not send passwords, account access codes or unrelated personal information."
+          ]
+        },
+        {
+          "heading": "Copyright and trademark requests",
+          "paragraphs": [
+            "Rights holders can contact copyright@aniimodex.com. Include the affected URL, the work concerned, your authority to act and the requested correction or removal."
+          ]
+        },
+        {
+          "heading": "How corrections are recorded",
+          "paragraphs": [
+            "Reports need to be checked against relevant evidence. Material corrections should identify their source and date on the affected page. No response time or live-game testing is promised."
           ]
         }
       ]
@@ -681,8 +712,8 @@
   },
   "catchTool": {
     "title": "Aniimo Catch Rate Calculator",
-    "subtitle": "Estimate a catch chance from the officially published Aniimo probability formula.",
-    "sourceNote": "Every coefficient on this page comes from the official Aniimo probability disclosure checked on 2026-09-18. The result is still an estimate based on the conditions you select because per-species template rates are not published.",
+    "subtitle": "Review published catch factors and inspect the September 18 historical calculator.",
+    "sourceNote": "Rechecked October 24, 2026: the current official disclosure uses a separate boss formula (6% × cube), no longer lists the tower row or numerical status table, and describes backstrike differently. The calculator below still uses the September 18 snapshot and is retained for historical comparison only. Its defeated-target, status and backstrike results must not be treated as current probabilities.",
     "templateCaveatTitle": "What this estimate cannot know",
     "templateCaveatBody": "The official disclosure states that the base rate is decided by each Aniimo template and is not derived from level. Those per-species template rates are not published, so this calculator estimates from the region stage and evolution stage you select instead of claiming an exact species value.",
     "scenarioLabel": "Scenario",
@@ -741,20 +772,47 @@
     "breakdownBackstrike": "Backstrike coefficient",
     "breakdownStatus": "Status coefficient",
     "doubleCheckNote": "A standard cube on a normal target is resolved as two separate checks, each using the square root of the final rate. The combined chance still equals the final rate shown here.",
-    "strategyTitle": "How to improve the odds",
+    "strategyTitle": "How to compare the published catch factors",
     "strategyBackstrike": "Attack from behind outside battle with a standard cube to add the 1.5x backstrike coefficient.",
     "strategyHp": "Lower the target's HP before throwing: the coefficient is 2x at 0% HP but only 0.8x at full HP.",
     "strategyStatus": "Apply a status effect. Deep sleep, nectar gathering and some special stuns reach a 100x coefficient.",
     "strategyLevel": "The level difference matters a lot: 11 levels above your character drops the coefficient to 0.8x, and 15 or more drops it to 0.1x.",
     "strategyCube": "A stronger cube multiplies everything: advanced is 1.5x, and swift, tracking and super cubes are 2x.",
-    "officialStatus": "Official formula",
+    "officialStatus": "Historical formula",
     "referenceTitle": "Official coefficient reference",
     "referenceBody": "These are the published values the calculator uses. You choose the region stage and evolution stage yourself, because the per-species template rate is not part of the disclosure.",
     "refLevelHeader": "Level difference",
     "refCoefficientHeader": "Coefficient",
     "openDex": "Open Dex entry",
     "browseLocations": "Browse habitats",
-    "readGuide": "Read the catching guide"
+    "readGuide": "Read the catching guide",
+    "historicalModel": "Historical calculator and coefficients — September 18, 2026",
+    "strategyIntro": "The following points use the official disclosure observed on October 24. They explain what can be compared without claiming field tests, a universally optimal sequence or guaranteed resource savings.",
+    "strategyBreakTitle": "1. Check status stacking before multiplying",
+    "strategyBreakDesc": "The current disclosure says to use the lowest status coefficient if any penalty is present; otherwise use the highest. It does not publish numerical coefficients for individual statuses. A BREAK ×2 claim or multiplying every status together is not supported by this page.",
+    "strategyHpTitle": "2. Compare listed HP rows, not a 20% target",
+    "strategyHpDesc": "For in-battle calculations, the table lists 100% HP at ×0.8, 50% at ×1.1, 10% at ×1.26 and 5% at ×1.65; it also lists 0% at ×2. There is no 20% row or stated 20% cap. These rows alone do not establish a safe or optimal action sequence.",
+    "strategyCubeTitle": "3. Separate ordinary targets from bosses",
+    "strategyCubeDesc": "For an ordinary in-battle target with a 28% base rate, level coefficient 1, no player bonus and neutral status, an advanced cube at full HP gives 28% × 1.5 × 0.8 = 33.6%. At 50% HP it gives 46.2%. This is an illustrative calculation, not a species prediction. Bosses instead use the separate 6% × cube formula.",
+    "faqTitle": "Frequently Asked Questions about Catching",
+    "faq": {
+      "breakVsHp": {
+        "q": "Does BREAK double the final catch probability?",
+        "a": "The current disclosure does not list an individual BREAK coefficient. Status stacking uses one selected coefficient, and scripted story encounters can force success or failure. The historical calculator's status values do not establish current BREAK effects."
+      },
+      "hpLimit": {
+        "q": "Is 20% HP a published bonus cap?",
+        "a": "No. The current table lists 0%, 5%, 10%, 50%, 80%, 90% and 100%, with no 20% entry. Do not infer an interpolation rule or a 20% optimum from these rows."
+      },
+      "backstrike": {
+        "q": "Does backstrike also apply in battle?",
+        "a": "The current formula includes backstrike outside battle and uses HP instead in battle. It lists backstrike at ×1.5 and excludes the big white ball. This differs from the older calculator's standard-cube-only restriction."
+      },
+      "uncatchable": {
+        "q": "Can a formula override a scripted encounter?",
+        "a": "No. The official disclosure states that some story encounters force success or failure in BREAK, backstrike or out-of-battle states. It does not support treating alert or leaving as a zero-probability state."
+      }
+    }
   },
   "guide": {
     "title": "Aniimo Guides: Download, Crossplay, Beginner Help & Systems",
@@ -2456,7 +2514,10 @@
         }
       }
     },
-    "relatedArticles": "Related guides"
+    "relatedArticles": "Related guides",
+    "authorTitle": "AniimoDex editorial notes",
+    "authorSubtitle": "Sources, scope and corrections",
+    "authorBio": "This site organizes published Wiki records and formula disclosures into guides and lookup tools. Source links and dates describe the evidence used; they do not establish live-game testing. Missing or conflicting evidence remains labelled, and corrections can be reported through the contact page."
   },
   "collections": {
     "evolutions": {

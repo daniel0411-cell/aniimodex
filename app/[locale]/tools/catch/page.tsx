@@ -94,11 +94,13 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
           >
             {CATCH_FORMULA_SOURCE.title} ↗
           </a>{' '}
-          · {tr('verification.checkedOn', { date: CATCH_FORMULA_SOURCE.accessedAt })}
+          · {tr('verification.checkedOn', { date: '2026-10-24' })}
         </p>
       </section>
 
-      <CatchCalculator />
+      <details className="space-y-6 border-y border-amber-200 bg-amber-50 p-4">
+        <summary className="cursor-pointer font-semibold text-amber-900">{t('historicalModel')}</summary>
+        <CatchCalculator />
 
       {/* 官方系数对照表：便于逐项核验，也把「官方数值」与「估算输入」区分开 */}
       <section className="space-y-5 border-t border-ink-border pt-6">
@@ -220,6 +222,45 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
           </div>
           <p className="mt-3 text-xs leading-5 text-text-muted">{t('statusRuleNote')}</p>
         </div>
+      </section>
+
+      </details>
+
+      {/* 实战捕获策略与资源节约指南 */}
+      <section className="space-y-4 border-t border-ink-border pt-8">
+        <div>
+          <h2 className="text-xl font-bold text-text-primary">{t('strategyTitle')}</h2>
+          <p className="mt-2 text-sm leading-6 text-text-secondary">{t('strategyIntro')}</p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="border-l border-ink-border pl-4">
+            <h3 className="font-semibold text-text-primary">{t('strategyBreakTitle')}</h3>
+            <p className="mt-2 text-xs leading-5 text-text-secondary">{t('strategyBreakDesc')}</p>
+          </div>
+          <div className="border-l border-ink-border pl-4">
+            <h3 className="font-semibold text-text-primary">{t('strategyHpTitle')}</h3>
+            <p className="mt-2 text-xs leading-5 text-text-secondary">{t('strategyHpDesc')}</p>
+          </div>
+          <div className="border-l border-ink-border pl-4">
+            <h3 className="font-semibold text-text-primary">{t('strategyCubeTitle')}</h3>
+            <p className="mt-2 text-xs leading-5 text-text-secondary">{t('strategyCubeDesc')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 常见捕获机制 FAQ */}
+      <section className="space-y-4 border-t border-ink-border pt-8">
+        <h2 className="text-xl font-bold text-text-primary">{t('faqTitle')}</h2>
+        {(['breakVsHp', 'hpLimit', 'backstrike', 'uncatchable'] as const).map((key) => (
+          <details key={key} className="border-b border-ink-border pb-4" open={key === 'breakVsHp'}>
+            <summary className="cursor-pointer font-semibold text-text-primary hover:text-primary-light">
+              {t(`faq.${key}.q`)}
+            </summary>
+            <p className="mt-2 text-sm leading-6 text-text-secondary">
+              {t(`faq.${key}.a`)}
+            </p>
+          </details>
+        ))}
       </section>
 
       <nav className="flex flex-wrap gap-x-5 gap-y-2 border-t border-ink-border pt-4 text-sm font-semibold text-primary-light">
