@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getAllAniimos, getAniimoByNumber } from '@/lib/aniimo';
+import { getAllAniimos, getAniimoByNumber, getAniimoByName } from '@/lib/aniimo';
+import { getDexComparisons } from '@/lib/dex-comparison';
 import { ELEMENT_BADGE_CLASSES, ROLE_BADGE_CLASSES, ROLE_ICONS } from '@/lib/aniimo-ui';
 import { cn } from '@/lib/utils';
 import { Link } from '@/i18n/navigation';
@@ -27,16 +28,17 @@ const FORM_KIND_CLASSES: Record<FormKind, string> = {
   region: 'border-emerald-300 bg-emerald-50 text-emerald-700',
 };
 
-function EvolutionTree({ node }: { node: OfficialEvolutionNode }) {
+function EvolutionTree({ node, locale, stageLabel }: { node: OfficialEvolutionNode; locale: string; stageLabel: string }) {
+  const entry = getAniimoByName(node.name);
   return (
     <div>
       <div className="inline-flex items-center gap-2 rounded border border-ink-border bg-white px-3 py-2 text-sm">
-        <span className="font-semibold text-text-primary">{node.name}</span>
-        {node.stage > 0 && <span className="text-xs text-text-muted">Stage {node.stage}</span>}
+        {entry ? <Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light">{locale === 'en' ? entry.enName : entry.name}</Link> : <span className="font-semibold text-text-primary">{node.name}</span>}
+        {node.stage > 0 && <span className="text-xs text-text-muted">{stageLabel} {node.stage}</span>}
       </div>
       {node.children.length > 0 && (
         <div className="ml-4 mt-2 space-y-2 border-l-2 border-ink-border pl-4">
-          {node.children.map((child) => <EvolutionTree key={`${child.name}-${child.stage}`} node={child} />)}
+          {node.children.map((child) => <EvolutionTree key={`${child.name}-${child.stage}`} node={child} locale={locale} stageLabel={stageLabel} />)}
         </div>
       )}
     </div>
@@ -85,7 +87,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
-  const title = `${displayName} #${aniimo.number}: Evolution, Skills & Location`;
+  const title = t('metaTitle', { name: displayName, number: aniimo.number });
   const elements = aniimo.officialElements?.map((element) => td(`elementNames.${element}`)).join(', ');
   const role = aniimo.officialRole ? td(`roleNames.${aniimo.officialRole}`) : '';
   const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;
@@ -145,11 +147,7 @@ export default async function DexDetailPage({ params }: PageProps) {
     const candidate = getOfficialAniimoDetail(entry.number);
     return entry.number !== aniimo.number && !familyNames.has(entry.enName) && candidate?.habitats.some((habitat) => detail?.habitats.includes(habitat));
   }).slice(0, 8);
-  const similarAniimos = allAniimos.filter((entry) =>
-    entry.number !== aniimo.number &&
-    !familyNames.has(entry.enName) &&
-    (entry.officialRole === aniimo.officialRole || entry.officialElements?.some((element) => aniimo.officialElements?.includes(element)))
-  ).slice(0, 8);
+  const comparisons = getDexComparisons(aniimo);
 
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
@@ -235,7 +233,6 @@ export default async function DexDetailPage({ params }: PageProps) {
           </div>
           <h1 className="mt-3 text-3xl font-bold text-text-primary sm:text-4xl">{aniimo.name}</h1>
           <p className="mt-1 text-text-secondary">{aniimo.enName}</p>
-          {aniimo.number === '069' && <p className="mt-2 text-sm font-medium text-primary-light">{locale === 'en' ? 'Also searched as “Aniimo Cubbo” and “Cubbo Aniimo”.' : locale === 'zh-Hant' ? '玩家也會搜尋「Aniimo Cubbo」與「Cubbo Aniimo」。' : '玩家也会搜索“Aniimo Cubbo”和“Cubbo Aniimo”。'}</p>}
           <div className="mt-4 flex flex-wrap gap-2">
             {aniimo.officialElements?.map((element) => (
               <Link key={element} href={`/elements/${element.toLowerCase()}`} className={cn('rounded border px-2.5 py-1 text-xs', ELEMENT_BADGE_CLASSES[element])}>
@@ -255,7 +252,7 @@ export default async function DexDetailPage({ params }: PageProps) {
             {aniimo.description}
           </p>
           {/* 英文图鉴简介（flavor text） */}
-          {aniimo.flavorText && (
+          {aniimo.flavorText && aniimo.flavorText !== aniimo.description && (
             <p className="mt-2 max-w-xl text-sm italic text-text-muted">
               &ldquo;{aniimo.flavorText}&rdquo;
             </p>
@@ -264,7 +261,7 @@ export default async function DexDetailPage({ params }: PageProps) {
           <div className="mt-4 border-t border-ink-border pt-3 text-xs text-text-muted">
             <span className="font-semibold text-text-secondary">{t('dataStatus')}</span> · {t('lastVerified', { date: '2026-08-30' })}
           </div>
-          {detail && <dl className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 border-t border-ink-border pt-4 text-xs"><div><dt className="text-text-muted">{t('officialEvolution')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.evolution.name}</dd></div><div><dt className="text-text-muted">{t('officialHabitats')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.habitats.length}</dd></div><div><dt className="text-text-muted">{t('officialForms')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.morphologyList.length}</dd></div><div><dt className="text-text-muted">{t('officialMobility')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.mobility.length}</dd></div></dl>}
+          {detail && <dl className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 border-t border-ink-border pt-4 text-xs"><div><dt className="text-text-muted">{t('officialEvolution')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.evolution.name}</dd></div><div><dt className="text-text-muted">{t('officialHabitats')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.habitats.length || t('notListed')}</dd></div><div><dt className="text-text-muted">{t('officialForms')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.morphologyList.length || t('notListed')}</dd></div><div><dt className="text-text-muted">{t('officialMobility')}</dt><dd className="mt-1 font-semibold text-text-primary">{detail.mobility.length || t('notListed')}</dd></div></dl>}
           {(aniimo.sourceIds ?? [])
             .map((sourceId) => sourceById.get(sourceId))
             .filter(Boolean)
@@ -282,12 +279,12 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a><a href="#forms">{t('officialForms')}</a><a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
+      {detail && <nav className="flex gap-4 overflow-x-auto border-b border-ink-border pb-3 text-sm font-semibold text-primary-light"><a href="#evolution">{t('officialEvolution')}</a><a href="#habitats">{t('officialHabitats')}</a>{detail.morphologyList.length > 0 && <a href="#forms">{t('officialForms')}</a>}<a href="#mobility">{t('officialMobility')}</a><a href="#traits">{t('officialTraits')}</a><a href="#skills">{t('officialSkills')}</a></nav>}
 
       <section className="border-t border-ink-border pt-5">
         <h2 className="text-lg font-bold text-text-primary">{t('continueExploring')}</h2>
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-primary-light">
-          {aniimo.officialElements?.map((element) => <Link key={element} href={`/tools/type-chart?defender=${element.toLowerCase()}`}>{t('checkMatchup', { element: tr(`elements.${element}`) })} →</Link>)}
+          <Link href={`/tools/type-chart?aniimo=${aniimo.number}`}>{t('checkMatchup', { element: aniimo.officialElements?.map((element) => tr(`elements.${element}`)).join(' / ') ?? '' })} →</Link>
           <Link href="/locations">{t('checkHabitats')} →</Link>
           <Link href="/evolutions">{t('checkEvolution')} →</Link>
           <Link href="/abilities">{t('checkMobility')} →</Link>
@@ -300,12 +297,13 @@ export default async function DexDetailPage({ params }: PageProps) {
           <div className="space-y-8">
             <section id="evolution" className="scroll-mt-24">
               <h2 className="mb-4 text-xl font-bold text-text-primary">{t('officialEvolution')}</h2>
-              <EvolutionTree node={detail.evolution} />
+              <EvolutionTree node={detail.evolution} locale={locale} stageLabel={t('stageLabel')} />
             </section>
 
-            {detail.habitats.length > 0 && (
+            {(
               <section id="habitats" className="scroll-mt-24">
                 <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialHabitats')}</h2>
+                {detail.habitats.length === 0 && <p className="text-sm leading-6 text-text-secondary">{t('habitatsUnlisted')}</p>}
                 <div className="flex flex-wrap gap-2">
                   {detail.habitats.map((habitat) => (
                     <span key={habitat} className="rounded border border-ink-border bg-white px-2.5 py-1 text-xs text-text-secondary">
@@ -342,10 +340,11 @@ export default async function DexDetailPage({ params }: PageProps) {
           </div>
 
           <div className="space-y-8">
-            {detail.mobility.length > 0 && (
+            {(
               <section id="mobility" className="scroll-mt-24">
                 <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialMobility')}</h2>
                 <SkillList skills={detail.mobility} />
+                {detail.mobility.length === 0 && <p className="text-sm leading-6 text-text-secondary">{t('mobilityUnlisted')}</p>}
               </section>
             )}
             <section id="traits" className="scroll-mt-24">
@@ -360,7 +359,24 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       )}
 
-      {(familyAniimos.length > 0 || habitatAniimos.length > 0 || similarAniimos.length > 0) && <section className="space-y-6 border-t border-ink-border pt-6"><div><h2 className="text-xl font-bold text-text-primary">{t('related')}</h2><p className="mt-2 text-sm text-text-secondary">{t('relatedReason')}</p></div>{familyAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedFamily')}</h3><AniimoLinkList aniimos={familyAniimos} /></div>}{habitatAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedHabitat')}</h3><AniimoLinkList aniimos={habitatAniimos} /></div>}{similarAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedElementRole')}</h3><AniimoLinkList aniimos={similarAniimos} /></div>}</section>}
+      {comparisons.length > 0 && <section className="border-t border-ink-border pt-6">
+        <h2 className="text-xl font-bold text-text-primary">{t('comparisonTitle')}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">{t('comparisonScope')}</p>
+        <div className="mt-4 overflow-x-auto" role="region" aria-label={t('comparisonTitle')} tabIndex={0}>
+          <table className="w-full min-w-[620px] text-left text-sm">
+            <thead className="border-b border-ink-border text-xs text-text-secondary"><tr>{['comparisonAniimo', 'comparisonElements', 'comparisonRole', 'officialHabitats', 'officialMobility'].map((key) => <th key={key} scope="col" className="px-3 py-2">{t(key)}</th>)}</tr></thead>
+            <tbody>{[{ entry: aniimo, detail }, ...comparisons].map(({ entry, detail: comparedDetail }) => <tr key={entry.number} className={cn('border-b border-ink-border align-top', entry.number === aniimo.number && 'bg-sky-50')}>
+              <th scope="row" className="px-3 py-3 font-semibold"><Link href={`/dex/${entry.number}`} className="text-primary-light">#{entry.number} {locale === 'en' ? entry.enName : entry.name}</Link></th>
+              <td className="px-3 py-3">{entry.officialElements?.map((element) => tr(`elements.${element}`)).join(' / ') || t('notListed')}</td>
+              <td className="px-3 py-3">{entry.officialRole ? tr(`roles.${entry.officialRole}`) : t('notListed')}</td>
+              <td className="px-3 py-3">{comparedDetail?.habitats.join(', ') || t('notListed')}</td>
+              <td className="px-3 py-3">{comparedDetail?.mobility.map((ability) => ability.name).join(', ') || t('notListed')}</td>
+            </tr>)}</tbody>
+          </table>
+        </div>
+      </section>}
+
+      {(familyAniimos.length > 0 || habitatAniimos.length > 0) && <section className="space-y-6 border-t border-ink-border pt-6"><div><h2 className="text-xl font-bold text-text-primary">{t('related')}</h2><p className="mt-2 text-sm text-text-secondary">{t('relatedReason')}</p></div>{familyAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedFamily')}</h3><AniimoLinkList aniimos={familyAniimos} /></div>}{habitatAniimos.length > 0 && <div><h3 className="font-semibold text-text-primary">{t('relatedHabitat')}</h3><AniimoLinkList aniimos={habitatAniimos} /></div>}</section>}
 
       {/* 相关工具与延伸阅读 */}
       <section className="rounded-lg border border-ink-border bg-ink-card p-5">

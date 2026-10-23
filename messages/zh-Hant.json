@@ -428,7 +428,36 @@
       "Regen": "再生定位"
     }
   },
+  "publishedDataGuide": {
+    "rolesTitle": "比較五種已公開定位",
+    "rolesScope": "每個編號按其公開定位計一次。元素涵蓋範圍幫助尋找同定位的替代成員，不衡量傷害或配隊強度。實例按圖鑑編號排列。",
+    "rolesNext": "在隊伍構築器中比較成員",
+    "evolutionTitle": "哪些公開進化家族存在分支？",
+    "evolutionScope": "下列家族在某個階段擁有多個後繼節點。連結包含起始形態在內的所有已收錄家族成員；它們屬於分支樹，不是一條連續進化順序。這份快照不能確定進化等級、道具或分支觸發條件。",
+    "evolutionNext": "查看完整進化樹",
+    "habitatsTitle": "收錄條目最多的六個棲息地",
+    "habitatsScope": "區域先按關聯編號數量、再按名稱排序。可按元素涵蓋範圍縮小收集範圍；同一區域不代表相同刷新點或遭遇率。實例按圖鑑編號排列。",
+    "habitatsNext": "瀏覽全部公開棲息地",
+    "mobilityTitle": "已收錄使用者最多的六種機動能力",
+    "mobilityScope": "能力先按公開使用者數量、再按名稱排序。比較元素涵蓋範圍後，進入候選條目閱讀具體能力說明。這是替代使用者清單，不是能力強度排名。實例按圖鑑編號排列。",
+    "mobilityNext": "查詢全部使用者與能力說明",
+    "snapshotNote": "根據 2026-08-30 核驗的官方 Wiki 快照計算。形態不另計數，資料缺失不代表目前遊戲中不存在。區域和能力名稱保留來源原文。",
+    "group": "公開分類",
+    "count": "圖鑑條目",
+    "elements": "元素涵蓋範圍",
+    "examples": "查看條目"
+  },
   "dexDetail": {
+    "metaTitle": "{name} #{number}：進化、技能與圖鑑資料",
+    "stageLabel": "階段",
+    "habitatsUnlisted": "匯入的 Wiki 紀錄未列出棲息地。這不代表該伊莫沒有棲息地或無法遇見。",
+    "mobilityUnlisted": "匯入的 Wiki 紀錄未列出機動能力。快照中缺少資料，不代表遊戲中確認沒有該能力。",
+    "notListed": "資料未列出",
+    "comparisonTitle": "比較已公開的定位與探索能力",
+    "comparisonScope": "優先選取相同公開定位，再按共有元素、棲息地排序；相同條件按圖鑑編號排列。先比較棲息地與機動能力，再進入詳情查看技能。這些標籤不能證明戰鬥強度。欄位均取自 2026-08-30 Wiki 快照，「資料未列出」表示資料缺失。",
+    "comparisonAniimo": "伊莫",
+    "comparisonElements": "元素",
+    "comparisonRole": "定位",
     "notFound": "未找到該伊莫",
     "baseStats": "基礎屬性",
     "evolution": "進化路線",
@@ -441,7 +470,7 @@
     "forms": "型態",
     "potential": "個體潛力",
     "related": "相關伊莫",
-    "relatedReason": "根據官方進化家族、共同棲息地或共同移動能力關聯。",
+    "relatedReason": "按匯入 Wiki 快照中的進化樹或共同棲息地關聯。",
     "relatedFamily": "進化家族",
     "relatedHabitat": "同棲息地的其他伊莫",
     "relatedElementRole": "相同元素或戰鬥定位",
@@ -514,6 +543,7 @@
     "teamBuilderTags": ["配隊模擬", "機動雷達", "協同分析"]
   },
   "teamBuilder": {
+    "disputedMatchupNote": "冰攻擊風的關係存在爭議。涉及風防守方的冰系弱點計算已略去，因此「未發現共有弱點」不代表所有關係均已明確。",
     "title": "Aniimo 隊伍機動與屬性協同模擬器",
     "subtitle": "自由配置 4 人伊莫編隊，一鍵評估大世界機動能力探索覆蓋、全隊攻防剋制盲區、共享弱點預警與 BREAK 戰鬥破防配比。",
     "slot": "槽位 {num}",
@@ -583,6 +613,9 @@
     "abilityGuideTitle": "按移動能力瀏覽伊莫"
   },
   "typeChartTool": {
+    "disputedNote": "現有社群資料中，冰攻擊風的關係尚無一致結論。問號儲存格不提供確定倍率，也不參與數值排名。",
+    "disputedResult": "{attacker}攻擊{defender}：存在爭議，暫無可靠倍率。",
+    "excludedDisputed": "冰系因對風的關係存在爭議，已從此排名略去。其餘順序僅為社群模型下的部分比較。",
     "title": "Aniimo 伊莫元素剋制表：9 種元素與剋制查詢",
     "subtitle": "查詢全部 9 種元素的攻防關係、1.6x / 1x / 0.625x 倍率，或選擇一隻伊莫反查參考剋制元素。",
     "sourceStatusTitle": "這張伊莫元素表中哪些是官方資料？",
@@ -722,7 +755,7 @@
     "subtitle": "基於官方來源整理伊莫下載、行動版與平台狀態、跨平台邊界、進化資料、捕捉機制、限時活動和已知問題攻略。",
     "relatedTools": "相關工具",
     "relatedDesc": "搭配以下工具，規劃你的探索與隊伍：",
-    "browseDex": "瀏覽完整圖鑑，查看屬性與出沒地點",
+    "browseDex": "比較公開元素、定位、技能與棲息地",
     "browseTwine": "使用 Twine 反查，依能力查找伊莫",
     "browseTypeChart": "查看元素剋制表，了解相剋關係",
     "browseCatch": "使用捕捉估算器，提前準備資源",

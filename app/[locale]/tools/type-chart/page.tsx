@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { Element } from '@/types/aniimo';
 import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
-import { effectiveness } from '@/lib/type-chart';
+import { effectiveness, bestAttackers } from '@/lib/type-chart';
 import { getAllAniimos, getElementsWithoutPublishedEntries } from '@/lib/aniimo';
 import { ELEMENT_MATCHUPS_CLAIM_ID, RESISTED, SUPER_EFFECTIVE } from '@/data/element-matchups';
 import {
@@ -47,7 +47,10 @@ export default function TypeChartPage() {
   const elementsWithoutEntries = useMemo(() => getElementsWithoutPublishedEntries(), []);
 
   useEffect(() => {
-    const defender = new URLSearchParams(window.location.search).get('defender');
+    const query = new URLSearchParams(window.location.search);
+    const entry = getAllAniimos().find((aniimo) => aniimo.number === query.get('aniimo'));
+    if (entry) setAniimoNumber(entry.number);
+    const defender = query.get('defender');
     const match = ELEMENTS.find((element) => element.toLowerCase() === defender?.toLowerCase());
     if (match) setDefendEl(match);
   }, []);
@@ -59,8 +62,12 @@ export default function TypeChartPage() {
   const selectedAniimo = getAllAniimos().find((aniimo) => aniimo.number === aniimoNumber);
   const selectedElements = selectedAniimo?.officialElements ?? [];
   const selectedCounters = selectedElements.length > 0
-    ? ELEMENTS.map((element) => ({ element, value: selectedElements.reduce((total, defender) => total * effectiveness(element, defender), 1) })).sort((a, b) => b.value - a.value)
+    ? bestAttackers(selectedElements)
     : [];
+  const selectedValue = attackEl && defendEl ? effectiveness(attackEl, defendEl) : null;
+  const disputedResult = attackEl && defendEl && selectedValue === null
+    ? t('disputedResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl) })
+    : null;
 
   // 图例
   const legend: { value: number; labelKey: string }[] = [
@@ -91,6 +98,7 @@ export default function TypeChartPage() {
           </span>
         </div>
         <p className="mt-1">{t('sourceStatusDescription')}</p>
+        <p className="mt-2">{t('disputedNote')}</p>
         <p className="mt-2 text-xs">
           {matchupClaimText}
           {matchupClaim ? ` · ${tr('verification.checkedOn', { date: matchupClaim.checkedAt })}` : ''}
@@ -114,6 +122,7 @@ export default function TypeChartPage() {
               {selectedCounters.slice(0, 4).map(({ element, value }) => <Link key={element} href={`/elements/${element.toLowerCase()}`} className={cn('rounded border px-2.5 py-1 text-xs font-semibold', value > 1 ? 'border-red-300 bg-red-100 text-red-700' : 'border-ink-border bg-white text-text-secondary')}>{ELEMENT_ICONS[element]} {elLabel(element)} {value}x</Link>)}
             </div>
             <p className="mt-2 text-xs text-text-muted">{t('lookupReferenceNote')}</p>
+            {selectedElements.includes('Wind') && <p className="mt-2 text-xs text-amber-800">{t('excludedDisputed')}</p>}
           </div>
         )}
       </section>
@@ -132,7 +141,7 @@ export default function TypeChartPage() {
           </select>
         </label>
         <div className="border-l-4 border-primary bg-sky-50 px-4 py-3 text-sm text-text-primary">
-          {attackEl && defendEl ? t('mobileResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl), value: effectiveness(attackEl, defendEl) }) : t('mobilePrompt')}
+          {attackEl && defendEl ? disputedResult ?? t('mobileResult', { attacker: elLabel(attackEl), defender: elLabel(defendEl), value: selectedValue! }) : t('mobilePrompt')}
         </div>
       </div>
 
@@ -219,15 +228,15 @@ export default function TypeChartPage() {
                     return (
                       <td key={def} className="p-1">
                         <div
-                          title={`${elLabel(atk)} ${t('attackText')} ${elLabel(def)}: ${value}x`}
+                          title={value === null ? t('disputedResult', { attacker: elLabel(atk), defender: elLabel(def) }) : `${elLabel(atk)} ${t('attackText')} ${elLabel(def)}: ${value}x`}
                           className={cn(
                             'flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-xs transition-all sm:h-12 sm:w-12',
-                            MULTIPLIER_STYLE[effectiveness(atk, def)],
+                            value === null ? 'bg-amber-100 text-amber-900 border-amber-400' : MULTIPLIER_STYLE[value],
                             highlighted && 'ring-2 ring-primary/70',
                             !highlighted && 'opacity-80 hover:opacity-100'
                           )}
                         >
-                          {effectiveness(atk, def)}
+                          {value ?? '?'}
                         </div>
                       </td>
                     );
@@ -243,10 +252,10 @@ export default function TypeChartPage() {
       <div className="rounded-xl border border-ink-border bg-ink-card px-5 py-4 text-sm text-text-secondary">
         {attackEl && defendEl ? (
           <p>
-            {t.rich('multiplierOf', {
+            {disputedResult ?? t('mobileResult', {
               attacker: elLabel(attackEl),
               defender: elLabel(defendEl),
-              value: effectiveness(attackEl, defendEl),
+              value: selectedValue!,
             })}
           </p>
         ) : attackEl ? (

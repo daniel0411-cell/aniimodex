@@ -165,7 +165,8 @@ export default function TeamBuilder() {
       const victims: AniimoEntry[] = [];
       for (const aniimo of assignedAniimos) {
         const defenderElements = aniimo.officialElements ?? [aniimo.element];
-        const isWeak = combinedEffectiveness(attackingEl, defenderElements) > 1;
+        const multiplier = combinedEffectiveness(attackingEl, defenderElements);
+        const isWeak = multiplier !== null && multiplier > 1;
         if (isWeak) {
           victims.push(aniimo);
         }
@@ -473,6 +474,7 @@ export default function TeamBuilder() {
               <p className="mt-1 text-xs text-text-secondary sm:text-sm">
                 {t('elementSynergySubtitle')}
               </p>
+              {assignedAniimos.some((aniimo) => aniimo.officialElements?.includes('Wind')) && <p className="mt-2 text-xs text-amber-800">{t('disputedMatchupNote')}</p>}
             </div>
 
             {/* 进攻覆盖 */}

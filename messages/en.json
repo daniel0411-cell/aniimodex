@@ -428,7 +428,36 @@
       "Regen": "Regenerator"
     }
   },
+  "publishedDataGuide": {
+    "rolesTitle": "Compare the five published roles",
+    "rolesScope": "Each numbered entry counts once under its published role. Element coverage helps find alternatives within a role; it does not measure damage or team viability. Examples use ascending Dex number.",
+    "rolesNext": "Compare a party in the team builder",
+    "evolutionTitle": "Which published families branch?",
+    "evolutionScope": "These trees contain more than one child at a stage. The links include every indexed family member, including the starting form; they are alternatives in a tree, not a single sequence. Evolution levels, items and branch triggers are not established by this snapshot.",
+    "evolutionNext": "Open the full evolution trees",
+    "habitatsTitle": "Six habitats with the most indexed entries",
+    "habitatsScope": "Areas are ordered by the number of numbered entries associated with them, then by name. Use element coverage to narrow a collection search. A shared area does not establish a shared spawn point or encounter rate. Examples use ascending Dex number.",
+    "habitatsNext": "Browse every published habitat",
+    "mobilityTitle": "Six abilities shared by the most indexed entries",
+    "mobilityScope": "Abilities are ordered by their number of listed users, then by name. Compare the element coverage and open a candidate to read its exact ability description. This is a list of alternative users, not a ranking of ability strength. Examples use ascending Dex number.",
+    "mobilityNext": "Look up all users and ability descriptions",
+    "snapshotNote": "Computed from the official Wiki snapshot checked on 2026-08-30. Forms are not counted separately; missing records do not prove absence in the live game. Area and ability names preserve the source wording.",
+    "group": "Published group",
+    "count": "Dex entries",
+    "elements": "Element coverage",
+    "examples": "Open entries"
+  },
   "dexDetail": {
+    "metaTitle": "{name} #{number}: Evolution, Skills & Wiki Data",
+    "stageLabel": "Stage",
+    "habitatsUnlisted": "The imported Wiki record does not list a habitat. This does not establish that this Aniimo has no habitat or cannot be encountered.",
+    "mobilityUnlisted": "The imported Wiki record does not list a mobility ability. Absence from this snapshot is not proof that no ability exists.",
+    "notListed": "Not listed",
+    "comparisonTitle": "Compare published roles and exploration options",
+    "comparisonScope": "Candidates prioritize the same published role, then shared elements and habitats; ties use Dex number. Compare habitats and mobility below before opening their skills. These labels do not establish combat strength. All fields use the 2026-08-30 Wiki snapshot; not listed means missing data.",
+    "comparisonAniimo": "Aniimo",
+    "comparisonElements": "Elements",
+    "comparisonRole": "Role",
     "notFound": "Aniimo not found",
     "baseStats": "Base Stats",
     "evolution": "Evolution",
@@ -441,7 +470,7 @@
     "forms": "Forms",
     "potential": "Potential",
     "related": "Related Aniimo",
-    "relatedReason": "Officially related by evolution family, shared habitat or shared mobility ability.",
+    "relatedReason": "Entries linked by the published evolution tree or a shared habitat in the imported Wiki snapshot.",
     "relatedFamily": "Evolution family",
     "relatedHabitat": "Other Aniimo in the same habitats",
     "relatedElementRole": "Same element or combat role",
@@ -516,6 +545,7 @@
     "teamBuilderTags": ["Synergy", "Team Builder", "Calculator"]
   },
   "teamBuilder": {
+    "disputedMatchupNote": "Ice attacking Wind is disputed. Ice weakness calculations involving a Wind defender are omitted, so no shared weakness found does not mean all matchups are known.",
     "title": "Aniimo Team & Twine Synergy Builder",
     "subtitle": "Build your 4-member party, evaluate open-world Twine mobility coverage, element matchups, shared weaknesses, and BREAK role balance.",
     "slot": "Slot {num}",
@@ -585,6 +615,9 @@
     "abilityGuideTitle": "Browse Aniimo by mobility ability"
   },
   "typeChartTool": {
+    "disputedNote": "Ice attacking Wind is unresolved in the stored community reference. The ? cell has no confirmed multiplier and is excluded from numerical rankings.",
+    "disputedResult": "{attacker} attacking {defender}: disputed; no reliable multiplier is available.",
+    "excludedDisputed": "Ice is omitted from this ranking because its interaction with Wind is disputed. The remaining order is only a partial community-model comparison.",
     "title": "Aniimo Type Chart: Weaknesses, Counters & Matchups",
     "subtitle": "Check all 9 Aniimo elements, weaknesses, counters and attack-versus-defense matchups, or select an Aniimo to find its strongest reference attackers.",
     "sourceStatusTitle": "What is official in this Aniimo type chart?",
@@ -724,7 +757,7 @@
     "subtitle": "Source-checked Aniimo guides for official downloads, mobile and platform status, crossplay boundaries, evolution data, catching mechanics, live events and known issues.",
     "relatedTools": "Related Tools",
     "relatedDesc": "Combine these tools to plan your exploration and team:",
-    "browseDex": "Browse the full dex for stats and locations",
+    "browseDex": "Compare published elements, roles, skills and habitats",
     "browseTwine": "Use the Twine lookup to find Aniimo by ability",
     "browseTypeChart": "Check the type chart for matchups",
     "browseCatch": "Use the catch estimator to prepare resources",

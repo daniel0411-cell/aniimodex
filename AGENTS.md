@@ -1,5 +1,15 @@
 # Repository Instructions
 
+## Content Quality Before Page Count
+
+For all future content, SEO, data and tool work, apply
+`docs/content-quality-standard.md`. Start with the visitor's concrete task and
+the evidence that can answer it. A source link, translation, word count or a
+working template alone is not sufficient added value. Prefer useful comparison,
+curation and task completion over more URLs. Do not fabricate tests, experience,
+mechanics or freshness. Preserve uncertainty in both prose and calculations.
+Record scope, evidence, validation and remaining gaps in a project checkpoint.
+
 ## Check Freshness Before Changes or Audits
 
 Before modifying or auditing site content, code, data, translations, or SEO,

@@ -582,8 +582,8 @@ export const guidePosts: GuidePost[] = [
     slug,
     dataTopic,
     date: '2026-08-31',
-    ...(dataTopic === 'elements' ? { updatedAt: '2026-10-23' } : {}),
-    readMinutes: dataTopic === 'elements' ? 3 : 5,
+    updatedAt: '2026-10-23',
+    readMinutes: 3,
     relatedToolHrefs:
       slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
     relatedSlugs: ['official-aniimo-dex-status'],

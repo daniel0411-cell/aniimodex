@@ -4,6 +4,10 @@ This file is an implementation guardrail, not a claim that AdSense approval is g
 
 ## Before applying
 
+- Apply `content-quality-standard.md` and review the latest dated quality audit.
+- Verify that sampled pages finish their promised task; a source list alone is
+  not evidence of substantial added value.
+
 - Verify `privacy@aniimodex.com` and `copyright@aniimodex.com` receive mail.
 - Keep About, Privacy, Terms and How We Verify linked from every page.
 - Do not add an `ads.txt` publisher record until the real AdSense publisher ID is known.

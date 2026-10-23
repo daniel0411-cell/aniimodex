@@ -16,6 +16,7 @@ import { formIndex } from '@/data/forms';
 import { getAniimoByNumber } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import ElementGuideDirectory from '@/components/guide/ElementGuideDirectory';
+import PublishedDataGuide from '@/components/guide/PublishedDataGuide';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -100,6 +101,7 @@ export default async function GuidePostPage({
   const tg = await getTranslations('guide');
   const tb = await getTranslations('breadcrumb');
   const meta = await getTranslations('meta');
+  const dataGuide = await getTranslations('publishedDataGuide');
   const siteName = meta('siteName');
 
   if (!post || post.published === false) notFound();
@@ -126,8 +128,11 @@ export default async function GuidePostPage({
     ''
   );
   const outline = body
-    .map((block, index) => block.t === 'h' || block.t === 'h3' ? { index, label: block.c, level: block.t } : null)
+    .map((block, index) => block.t === 'h' || block.t === 'h3' ? { index, id: `section-${index}`, label: block.c, level: block.t } : null)
     .filter((item) => item !== null);
+  if (post.dataTopic && post.dataTopic !== 'elements') {
+    outline.push({ index: body.length, id: 'published-data', label: dataGuide(`${post.dataTopic}Title`), level: 'h' });
+  }
   const faqItems = body.flatMap((block, index) => {
     if ((block.t !== 'h' && block.t !== 'h3') || !block.c.endsWith('?')) return [];
     const answer = body[index + 1];
@@ -349,6 +354,7 @@ export default async function GuidePostPage({
         <div className="pt-2">{renderedBody}</div>
 
         {post.dataTopic === 'elements' && <ElementGuideDirectory locale={locale} />}
+        {post.dataTopic && post.dataTopic !== 'elements' && <PublishedDataGuide locale={locale} topic={post.dataTopic} />}
 
         {post.slug === 'aniimo-forms-explained' && (
           <section className="mt-8 border-t border-ink-border pt-6">
@@ -409,8 +415,8 @@ export default async function GuidePostPage({
       </article>
       {outline.length > 0 && (
         <aside className="lg:sticky lg:top-20">
-          <details className="border-y border-ink-border py-3 lg:hidden"><summary className="cursor-pointer text-sm font-semibold text-text-primary">{t('tableOfContents')}</summary><nav className="mt-3 space-y-2">{outline.map((item) => <a key={item.index} href={`#section-${item.index}`} className="block text-sm text-primary-light">{item.label}</a>)}</nav></details>
-          <nav className="hidden border-t border-ink-border lg:block"><p className="py-3 text-sm font-semibold text-text-primary">{t('tableOfContents')}</p>{outline.map((item) => <a key={item.index} href={`#section-${item.index}`} className={`block border-t border-ink-border py-2 text-xs text-text-secondary hover:text-primary-light ${item.level === 'h3' ? 'pl-3' : ''}`}>{item.label}</a>)}</nav>
+          <details className="border-y border-ink-border py-3 lg:hidden"><summary className="cursor-pointer text-sm font-semibold text-text-primary">{t('tableOfContents')}</summary><nav className="mt-3 space-y-2">{outline.map((item) => <a key={item.index} href={`#${item.id}`} className="block text-sm text-primary-light">{item.label}</a>)}</nav></details>
+          <nav className="hidden border-t border-ink-border lg:block"><p className="py-3 text-sm font-semibold text-text-primary">{t('tableOfContents')}</p>{outline.map((item) => <a key={item.index} href={`#${item.id}`} className={`block border-t border-ink-border py-2 text-xs text-text-secondary hover:text-primary-light ${item.level === 'h3' ? 'pl-3' : ''}`}>{item.label}</a>)}</nav>
         </aside>
       )}
       </div>

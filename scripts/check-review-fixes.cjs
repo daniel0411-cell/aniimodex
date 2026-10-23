@@ -20,7 +20,11 @@ function loadTs(path) {
   return module.exports;
 }
 
-const { combinedEffectiveness, bestAttackers } = loadTs('lib/type-chart.ts');
+const { effectiveness, combinedEffectiveness, bestAttackers } = loadTs('lib/type-chart.ts');
+assert.equal(effectiveness('Ice', 'Wind'), null);
+assert.equal(combinedEffectiveness('Ice', ['Wind', 'Water']), null);
+assert.equal(bestAttackers(['Wind', 'Water']).some((a) => a.element === 'Ice'), false);
+assert.equal(effectiveness('Wind', 'Ice'), 1);
 assert.equal(combinedEffectiveness('Fire', ['Grass', 'Water']), 1);
 assert.equal(combinedEffectiveness('Water', ['Water']), 0.625);
 assert.ok(Math.abs(combinedEffectiveness('Water', ['Fire', 'Earth']) - 2.56) < 1e-10);
