@@ -14,6 +14,12 @@
 /tools/*  /en/tools/:splat  301
 /guide  /en/guide/  301
 /guide/*  /en/guide/:splat  301
+/abilities  /en/abilities/  301
+/abilities/  /en/abilities/  301
+/evolutions  /en/evolutions/  301
+/evolutions/  /en/evolutions/  301
+/locations  /en/locations/  301
+/locations/  /en/locations/  301
 
 # 无 trailing slash 的目录访问重定向到带斜杠版本（与 next.config trailingSlash 一致）
 /en/dex  /en/dex/  308

@@ -15,6 +15,7 @@ import { getLaunchGuide, getPracticalSupportBlocks } from '@/data/launch-guides'
 import { formIndex } from '@/data/forms';
 import { getAniimoByNumber } from '@/lib/aniimo';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
+import ElementGuideDirectory from '@/components/guide/ElementGuideDirectory';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -74,6 +75,7 @@ export async function generateMetadata({
       title,
       description,
       publishedTime: post.date,
+      modifiedTime: post.updatedAt ?? post.date,
       images: post.image ? [{ url: `${SITE_URL}${post.image}` }] : undefined,
     },
     twitter: {
@@ -153,7 +155,7 @@ export default async function GuidePostPage({
         headline: title,
         description: subtitle,
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updatedAt ?? post.date,
         inLanguage: locale,
         image: post.image ? [`${SITE_URL}${post.image}`] : undefined,
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,
@@ -263,7 +265,9 @@ export default async function GuidePostPage({
                 <tr key={ri} className="border-t border-ink-border">
                   {row.map((cell, ci) => (
                     <td key={ci} className="px-4 py-2 text-text-primary">
-                      {cell}
+                      {post.slug === 'aniimo-launch-watchlist' && ci === 0 && /^#\d{3}$/.test(cell) ? (
+                        <Link href={`/dex/${cell.slice(1)}`} className="font-semibold text-primary-light hover:underline">{cell}</Link>
+                      ) : cell}
                     </td>
                   ))}
                 </tr>
@@ -308,7 +312,7 @@ export default async function GuidePostPage({
           <h1 className="text-2xl font-bold text-text-primary sm:text-3xl">{title}</h1>
           <p className="text-base text-text-muted">{subtitle}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-muted">
-            <span>{t('pageUpdated', { date: post.date })}</span>
+            <span>{t('pageUpdated', { date: post.updatedAt ?? post.date })}</span>
             {sourceCheckedAt && <span>{t('sourceChecked', { date: sourceCheckedAt })}</span>}
             <span>
               {post.readMinutes} {t('minRead')}
@@ -317,7 +321,7 @@ export default async function GuidePostPage({
           {sources.length > 0 && (
             <div className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm text-emerald-950">
               <strong>{t('verifiedOfficial')}</strong>
-              <span className="ml-2">{t('lastVerified', { date: post.date })}</span>
+              <span className="ml-2">{t('lastVerified', { date: sourceCheckedAt || post.date })}</span>
             </div>
           )}
           {post.slug === 'aniimo-pre-registration' && (
@@ -343,6 +347,8 @@ export default async function GuidePostPage({
         </header>
 
         <div className="pt-2">{renderedBody}</div>
+
+        {post.dataTopic === 'elements' && <ElementGuideDirectory locale={locale} />}
 
         {post.slug === 'aniimo-forms-explained' && (
           <section className="mt-8 border-t border-ink-border pt-6">

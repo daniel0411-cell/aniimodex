@@ -444,7 +444,8 @@ export const guidePosts: GuidePost[] = [
   {
     slug: 'aniimo-launch-watchlist',
     date: '2026-09-16',
-    readMinutes: 7,
+    updatedAt: '2026-10-23',
+    readMinutes: 3,
     relatedToolHrefs: ['/dex', '/tools/twine'],
     relatedSlugs: ['official-aniimo-dex-status', 'aniimo-choose-by-mobility-role'],
     sourceIds: ['aniimo-official-wiki-index-2026-08-30'],
@@ -581,7 +582,8 @@ export const guidePosts: GuidePost[] = [
     slug,
     dataTopic,
     date: '2026-08-31',
-    readMinutes: 5,
+    ...(dataTopic === 'elements' ? { updatedAt: '2026-10-23' } : {}),
+    readMinutes: dataTopic === 'elements' ? 3 : 5,
     relatedToolHrefs:
       slug === 'aniimo-elements-explained' ? ['/dex', '/tools/type-chart'] : ['/dex'],
     relatedSlugs: ['official-aniimo-dex-status'],

@@ -125,7 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const guideUrls = getPublishedGuidePosts()
     .filter((post) => post.sourceIds?.length)
-    .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.date, 0.8, 'weekly'));
+    .flatMap((post) => buildLocalizedUrls(`/guide/${post.slug}/`, post.updatedAt ?? post.date, 0.8, 'weekly'));
   // Keep all Dex pages crawlable, but submit only the strongest English entries
   // while Google evaluates this new site's large multilingual detail set.
   const dexUrls = getAllAniimos()

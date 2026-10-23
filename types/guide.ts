@@ -11,6 +11,8 @@ export interface GuidePost {
   element?: Element;
   /** 发布日期（ISO 字符串） */
   date: string;
+  /** 最近实质内容更新日期；不替代原始发布日期或来源核验日期 */
+  updatedAt?: string;
   /** 明确设为 false 时不在指南中心公开展示 */
   published?: boolean;
   /** 预估阅读时长（分钟） */
