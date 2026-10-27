@@ -51,12 +51,12 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'forms-and-sparkling-styles',
     claim:
-      'The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.',
+      'The Wiki snapshot distinguishes Basic, Prismana and region-named forms. The October 27 probability observation separately lists Sparkling types I-X and Dazzling/Shadow outcomes by item and obtaining method; these are not morphology or stat probabilities.',
     status: 'official',
-    checkedAt: '2026-10-23',
+    checkedAt: '2026-10-27',
     sourceIds: [
       'aniimo-official-wiki-basic-2026-10-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
     ],
   },
   {

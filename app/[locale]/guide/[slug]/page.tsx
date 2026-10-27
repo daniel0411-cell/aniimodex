@@ -42,6 +42,7 @@ export function generateStaticParams() {
 /** 文章正文块类型 */
 type Block =
   | { t: 'p' | 'h' | 'h3' | 'li' | 'quote'; c: string }
+  | { t: 'link'; c: string; href: string }
   | { t: 'table'; head: string[]; rows: string[][] };
 
 export async function generateMetadata({
@@ -122,7 +123,7 @@ export default async function GuidePostPage({
       ] as Block[])
     : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
   const practicalBlocks = getPracticalSupportBlocks(locale, post.slug);
-  const body = ['getting-started', 'is-aniimo-free-to-play'].includes(post.slug)
+  const body = ['getting-started', 'is-aniimo-free-to-play', 'aniimo-catching-guide'].includes(post.slug)
     ? [...originalBody, ...practicalBlocks]
     : [...practicalBlocks, ...originalBody];
   const sources = (post.sourceIds ?? [])
@@ -242,6 +243,12 @@ export default async function GuidePostPage({
           {block.c}
         </h3>
       );
+    } else if (block.t === 'link') {
+      renderedBody.push(
+        <p key={i} className="my-3 text-sm font-semibold text-primary-light">
+          <Link href={block.href} className="underline underline-offset-4">{block.c} →</Link>
+        </p>
+      );
     } else if (block.t === 'p') {
       renderedBody.push(
         <p key={i} className="my-4 leading-relaxed text-text-primary">
@@ -259,7 +266,7 @@ export default async function GuidePostPage({
       );
     } else if (block.t === 'table') {
       renderedBody.push(
-        <div key={i} className="my-4 overflow-x-auto rounded-lg border border-ink-border">
+        <div key={i} className="my-4 overflow-x-auto rounded-lg border border-ink-border" role="region" aria-label={block.head.join(' / ')} tabIndex={0}>
           <table className="w-full min-w-[480px] border-collapse text-sm">
             <thead>
               <tr className="bg-ink-card">
@@ -416,7 +423,7 @@ export default async function GuidePostPage({
                   >
                     {source.title} ↗
                   </a>
-                  <p className="mt-1 text-xs leading-5 text-text-muted">{source.evidence}</p>
+                  <p className="mt-1 text-xs leading-5 text-text-muted">{t('sourceChecked', { date: source.accessedAt })}</p>
                 </li>
               ))}
             </ul>

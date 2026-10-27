@@ -3,7 +3,7 @@ import { getAllAniimos } from '@/lib/aniimo';
 import { getOfficialAniimoDetail } from '@/data/aniimo-details';
 
 export type LaunchGuideBlock =
-  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'table'; head: string[]; rows: string[][] };
+  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'table'; head: string[]; rows: string[][] };
 
 export type LaunchGuide = {
   title: string;

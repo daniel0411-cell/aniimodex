@@ -380,7 +380,7 @@
       "announced-platforms": "The official site links PS5, Xbox, Steam, iOS, Google Play and Epic Games Store.",
       "global-launch-date": "Aniimo launched on PC and console on September 16, 2026 at 10:00 UTC+8.",
       "ios-launch-date": "Aniimo is available for iPhone and iPad in the China App Store; other storefronts may differ.",
-      "forms-and-sparkling-styles": "The official Wiki detail snapshot publishes three kinds of morphology entries (Basic Form, Prismana Form and region-named forms). The official probability disclosure separately publishes a sparkling style table with three styles and the rate of each per obtaining method.",
+      "forms-and-sparkling-styles": "The Wiki snapshot distinguishes Basic, Prismana and region-named forms. The October 27 probability observation separately lists Sparkling types I-X and Dazzling/Shadow outcomes by item and obtaining method; these are not morphology or stat probabilities.",
       "prismana-changes-element": "A Prismana form changes an Aniimo element rather than its stats.",
       "android-release-status": "The official US Google Play listing for Aniimo showed an Install action on September 22, 2026; availability can still vary by region, account and device.",
       "mobile-shared-launch-date": "Aniimo mobile is available in the China iOS and US Android storefronts checked; other regions may differ.",
@@ -573,7 +573,7 @@
     "typeChartDesc": "9×9 elemental multiplier table: check offensive and defensive matchups at a glance.",
     "typeChartTags": ["Matrix", "Matchup"],
     "catchTitle": "Catch Rate Calculator",
-    "catchDesc": "Estimate a catch chance from the official probability formula, with every coefficient shown.",
+    "catchDesc": "Compare conditional catch models and see which required inputs remain unknown.",
     "catchTags": ["Official formula", "Calculator"],
     "teamBuilderTitle": "Team & Twine Synergy Builder",
     "teamBuilderDesc": "Build your 4-member party, check field mobility coverage, element attack/defense counters, and BREAK balance.",
@@ -863,54 +863,105 @@
     },
     "posts": {
       "getting-started": {
-        "title": "Aniimo Beginner Guide: 8 Decisions to Make Before You Spend Resources",
-        "subtitle": "A source-checked starting checklist for downloads, team roles, catching, evolution and multiplayer.",
+        "title": "Aniimo Beginner Guide: From Official Download to Your First Capture Plan",
+        "subtitle": "Choose a download, protect your account, shortlist an Aniimo and prepare a capture with a clear result at each step.",
         "tag": "Beginner guide",
-        "lead": "Start with decisions that can be checked against official data: use an official download, separate exploration abilities from combat roles, improve known catch factors and verify an evolution before committing resources. This guide does not invent a best starter, leveling route or spending priority.",
+        "lead": "Work through these five tasks in order, or jump to the step you need. Each task ends with something you can check before committing resources; this is a source-based planning checklist, not a tested leveling route.",
         "body": [
-          { "t": "h", "c": "1. Check your platform, region and account first" },
           {
-            "t": "p",
-            "c": "Use the official Aniimo website or the verified Steam, PlayStation, Xbox and Epic listings. Store availability, mobile timing and account features can vary by platform and region, so confirm the live button before downloading or paying."
-          },
-          { "t": "h", "c": "2. Confirm PC requirements before installing" },
-          {
-            "t": "p",
-            "c": "The Epic Games Store publishes official minimum and recommended Windows specifications, including CPU, memory, GPU, DirectX and storage. Compare those requirements with your device instead of relying on an unverified compatibility list."
-          },
-          { "t": "h", "c": "3. Do not choose a starter from an unsupported tier list" },
-          {
-            "t": "p",
-            "c": "The official Wiki publishes element, role, stage and mobility fields, but those labels do not prove which Aniimo is strongest. Choose by the activity you need: damage, break, support, sustain, healing or an exploration ability."
-          },
-          { "t": "h", "c": "4. Treat combat role and exploration ability separately" },
-          {
-            "t": "p",
-            "c": "A role describes a combat function, while mobility and Twine fields help with traversal or interaction. Check both fields in the Dex before building a team around one label."
-          },
-          { "t": "h", "c": "5. Improve only the catch factors that are confirmed" },
-          {
-            "t": "p",
-            "c": "The official formula confirms that cube type, level difference, target HP, a valid backstrike and special status can change catch probability. AniimoDex does not assign a precise species percentage when the required template base rate is unpublished."
-          },
-          { "t": "h", "c": "6. Verify the evolution family before spending" },
-          {
-            "t": "p",
-            "c": "AniimoDex can show evolution-family relationships from the official index. Exact level, quest, item and resource requirements are not assumed unless an official source or reproducible test confirms them."
-          },
-          { "t": "h", "c": "7. Separate multiplayer from cross-save" },
-          {
-            "t": "p",
-            "c": "Steam confirms multiplayer, online co-op and cross-platform multiplayer, but that does not by itself confirm every platform pairing or cross-save behavior. Check the crossplay guide before planning progress across devices."
-          },
-          { "t": "h", "c": "8. Be precise about rare forms" },
-          {
-            "t": "p",
-            "c": "The official probability disclosure publishes Sparkling-related rates and the official data identifies form information where available. Community claims about Umbral eggs, guaranteed outcomes or evolution behavior remain unconfirmed until independently verified."
+            "t": "h",
+            "c": "1. Choose an official installer and record the account"
           },
           {
-            "t": "quote",
-            "c": "Still under verification: an optimal leveling path, home-base priority, Nurture guarantees, Egg Heist efficiency routes and a universal best team. Use community discussion to discover questions, not as proof of an answer."
+            "t": "p",
+            "c": "Open the download guide below and choose your platform. On the destination store, check the publisher, device requirements and availability for your account region before installing. The site does not host an installer. Before changing devices, privately record the Aniimo UID, linked email and region/server of the character you want to keep."
+          },
+          {
+            "t": "link",
+            "c": "Choose a download route",
+            "href": "/guide/how-to-download-aniimo"
+          },
+          {
+            "t": "p",
+            "c": "Done when: you have a compatible official download and can identify the correct character/account. If progress appears missing, stop before unlinking or making a replacement character; follow the account-safety checklist instead. Cross-platform multiplayer is not proof that a save or purchase transfers."
+          },
+          {
+            "t": "link",
+            "c": "Missing progress or switching devices",
+            "href": "/guide/aniimo-progress-account-safety"
+          },
+          {
+            "t": "h",
+            "c": "2. Build a shortlist for one task, not a universal ranking"
+          },
+          {
+            "t": "p",
+            "c": "Decide whether you need a combat function or an exploration ability. In the Dex, use the published role and element fields to narrow combat candidates. For exploration, start in the ability directory, open a matching creature and compare its mobility description with the alternatives on its detail page. Skill labels do not prove damage output or a best starter."
+          },
+          {
+            "t": "link",
+            "c": "Find a published exploration ability",
+            "href": "/abilities"
+          },
+          {
+            "t": "link",
+            "c": "Compare roles and creature records",
+            "href": "/dex"
+          },
+          {
+            "t": "p",
+            "c": "Done when: you can name the task, the candidate and the source field that makes it relevant. If the detail says not listed, choose a documented alternative or verify in the game before spending; missing data is not evidence that an ability is absent."
+          },
+          {
+            "t": "h",
+            "c": "3. Separate a capture plan from a probability guess"
+          },
+          {
+            "t": "p",
+            "c": "Identify an ordinary field target, an ordinary battle target or a boss before comparing cubes. Field calculations include backstrike; battle calculations use the listed HP row instead. Bosses use 6% × cube only. Check that the target is catchable and no story rule forces the outcome."
+          },
+          {
+            "t": "link",
+            "c": "Work through the capture examples",
+            "href": "/guide/aniimo-catching-guide"
+          },
+          {
+            "t": "p",
+            "c": "Done when: you know which formula applies and which inputs are still unknown. A blank player bonus is not 0%; an active status with no published coefficient is not ×1. Keep the result unknown rather than using an unsupported percentage to justify spending a rare cube."
+          },
+          {
+            "t": "h",
+            "c": "4. Check an evolution relationship before committing resources"
+          },
+          {
+            "t": "p",
+            "c": "Find your Aniimo in the evolution directory and open its detail page. Note whether the tree has one child or multiple branches, then check the actual evolution requirements in your client. The directory is a family lookup, not a list of confirmed level, item or quest requirements."
+          },
+          {
+            "t": "link",
+            "c": "Look up the evolution family",
+            "href": "/evolutions"
+          },
+          {
+            "t": "p",
+            "c": "Done when: the target branch and the in-game resource requirement are both clear. If the tree is unresolved, use the linked official entry and leave the condition undecided; do not spend based on a similarly named creature."
+          },
+          {
+            "t": "h",
+            "c": "5. Keep a useful record when a step fails"
+          },
+          {
+            "t": "p",
+            "c": "For a login, controller, crash or capture problem, record platform/device, client version, region/server, the exact message and the steps that reproduce it. Compare the symptom with the dated official fix, then retest after updating and restarting. A patch mentioning one symptom does not prove every similar failure is fixed."
+          },
+          {
+            "t": "link",
+            "c": "Match your symptom to the troubleshooting guide",
+            "href": "/guide/aniimo-launch-checklist-known-issues"
+          },
+          {
+            "t": "p",
+            "c": "Done when: the problem is resolved or you have a reproducible report for official support. Keep credentials and account identifiers private; do not post passwords, recovery codes or full logs publicly."
           }
         ]
       },
@@ -1473,87 +1524,128 @@
         ]
       },
       "aniimo-catching-guide": {
-        "title": "How to Catch Aniimo: Aniipods, Traps and Spawn Conditions",
-        "subtitle": "An official-source guide to the catching mechanics confirmed so far.",
+        "title": "How to Catch Aniimo: Field, Battle and Boss Capture Guide",
+        "subtitle": "Choose the correct formula, compare cube and HP changes, and identify the inputs needed for a conditional catch estimate.",
         "tag": "Gameplay",
-        "lead": "Official store descriptions confirm that players use Aniipods, traps and timing to catch Aniimo, while environment, weather, phenomena and time of day affect appearances.",
+        "lead": "Start by separating ordinary targets from bosses. The October 27 official disclosure uses different formulas; the examples below show what changes a result and when a numerical answer is not supported.",
         "body": [
           {
             "t": "h",
-            "c": "How does catching work in Aniimo?"
+            "c": "1. Choose the formula for the encounter"
           },
           {
             "t": "p",
-            "c": "Players explore habitats, encounter Aniimo and use Aniipods to catch them. Official text also mentions setting traps and choosing the right timing."
-          },
-          {
-            "t": "h",
-            "c": "What affects where Aniimo appear?"
-          },
-          {
-            "t": "li",
-            "c": "Environment and habitat"
-          },
-          {
-            "t": "li",
-            "c": "Weather"
-          },
-          {
-            "t": "li",
-            "c": "Special phenomena"
-          },
-          {
-            "t": "li",
-            "c": "Time of day"
-          },
-          {
-            "t": "h",
-            "c": "How is the Aniimo catch rate calculated?"
-          },
-          {
-            "t": "p",
-            "c": "The official probability disclosure now publishes separate formulas for out-of-combat, in-combat and defeated targets. Published factors include the regional base rate, character catch bonus, cube type, level difference, target HP, backstrike and status effects."
-          },
-          {
-            "t": "h",
-            "c": "What catch bonuses are officially confirmed?"
-          },
-          {
-            "t": "p",
-            "c": "Examples include Advanced Cubes at ×1.5, several higher cubes at ×2, a valid out-of-combat backstrike at ×1.5, BREAK at ×1.5 and ordinary sleep or stun at ×2. Some states force success or make a target impossible to catch."
-          },
-          {
-            "t": "quote",
-            "c": "A per-creature percentage still requires that Aniimo's configured base-rate group and current encounter conditions. AniimoDex does not guess an unmapped template rate."
-          },
-          {
-            "t": "h",
-            "c": "Three official-coefficient examples"
+            "c": "The official disclosure observed on October 27 separates ordinary field targets, ordinary battle targets and bosses. Check target eligibility and any forced story outcome first; a formula cannot override a scripted failure."
           },
           {
             "t": "table",
             "head": [
-              "Scenario",
-              "Published factors",
-              "Relative multiplier before the unknown base rate"
+              "Target",
+              "Formula",
+              "Do not add"
             ],
             "rows": [
               [
-                "Out-of-battle standard cube with a valid backstrike",
-                "Standard cube 1x; backstrike 1.5x",
-                "1.5x"
+                "Ordinary · outside battle",
+                "Base × cube × level × backstrike × status",
+                "HP coefficient"
               ],
-              ["In battle at 0% HP with ordinary sleep", "HP 2x; ordinary sleep 2x", "4x"],
               [
-                "Target is 15 or more levels above the character",
-                "Level coefficient 0.1x",
-                "0.1x before other factors"
+                "Ordinary · in battle",
+                "Base × cube × level × HP × status",
+                "Backstrike coefficient"
+              ],
+              [
+                "Boss",
+                "6% × cube",
+                "Ordinary level, HP, backstrike or status factors"
+              ]
+            ]
+          },
+          {
+            "t": "h",
+            "c": "2. Record the inputs before using the calculator"
+          },
+          {
+            "t": "li",
+            "c": "For an ordinary target, select a region/evolution row explicitly as a model assumption, then enter the player bonus from the Leyline Tree or region badges. A known 0% is valid; a blank value means unknown."
+          },
+          {
+            "t": "li",
+            "c": "Record both levels and the exact cube. In battle choose a listed HP row; outside battle apply a confirmed backstrike only when the cube permits it. The big white ball excludes backstrike."
+          },
+          {
+            "t": "li",
+            "c": "For an active status, the source gives a selection rule but no individual numeric table. Do not reuse old BREAK or sleep multipliers. Select neutral ×1 only as an explicit no-bonus/no-penalty assumption."
+          },
+          {
+            "t": "link",
+            "c": "Enter the confirmed inputs in the calculator",
+            "href": "/tools/catch"
+          },
+          {
+            "t": "h",
+            "c": "3. Compare one change at a time"
+          },
+          {
+            "t": "p",
+            "c": "For the ordinary-target examples below, assume base 28%, equal levels, player bonus 0%, neutral status and an eligible target with no scripted override. These are conditional calculations, not measured species rates."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Comparison",
+              "Arithmetic",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Field · advanced cube, no backstrike",
+                "28% × 1.5",
+                "42%"
+              ],
+              [
+                "Same field model, with backstrike",
+                "28% × 1.5 × 1.5",
+                "63%"
+              ],
+              [
+                "Battle · advanced cube, full HP",
+                "28% × 1.5 × 0.8",
+                "33.6%"
+              ],
+              [
+                "Same battle model, at 50% HP",
+                "28% × 1.5 × 1.1",
+                "46.2%"
+              ],
+              [
+                "Eligible boss · advanced cube",
+                "6% × 1.5",
+                "9%"
               ]
             ]
           },
           {
             "t": "p",
-            "c": "These examples compare published modifiers only. They are not final catch percentages because the Aniimo template base rate, region stage, evolution stage, cube and any other active factors must also be known."
+            "c": "The 50% HP example is 12.6 percentage points above the full-HP example under identical assumptions. It does not establish the safest action sequence or a 20% HP optimum. If any required ordinary-target input is unknown, the calculator leaves the final result undetermined."
+          },
+          {
+            "t": "h",
+            "c": "4. Separate a failed throw from missing encounter information"
+          },
+          {
+            "t": "p",
+            "c": "A listed habitat narrows an area, not an exact spawn point, weather requirement or timer. Use the location directory to find associated records and inspect the linked official entry before following a route. A failed throw is not enough evidence to infer a hidden multiplier."
+          },
+          {
+            "t": "link",
+            "c": "Look up published habitat records",
+            "href": "/locations"
+          },
+          {
+            "t": "p",
+            "c": "If the client reports a restriction or a repeated capture error, save the exact message, client version, target, location and reproduction steps. Use the dated troubleshooting advice below; do not assume a guaranteed workaround."
           }
         ]
       },

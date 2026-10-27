@@ -35,16 +35,17 @@ export const guidePosts: GuidePost[] = [
       'aniimo-holo-battle-interlink',
       'aniimo-prismana-event-tracker',
     ],
-    image: '/images/guides/getting-started.jpg',
-    imageAlt: 'A young trainer with a flame-bird companion starting their adventure',
     sourceIds: [
+      'aniimo-access-routes-2026-10-23',
+      'aniimo-steam-launch-faq-2026-09-16',
+      'aniimo-official-support-center',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-epic-759396',
       'aniimo-official-wiki-basic-2026-10-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-catch-disclosure-2026-10-27',
     ],
   },
   {
@@ -111,7 +112,7 @@ export const guidePosts: GuidePost[] = [
     date: '2026-08-30',
     readMinutes: 6,
     relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-probabilities-2026-09-16', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-sparkling-disclosure-2026-10-27', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
   },
   {
     slug: 'how-to-download-aniimo',
@@ -169,7 +170,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-google-play',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-catch-disclosure-2026-10-27',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
     ],
   },
   {
@@ -190,6 +192,8 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-catching-guide',
+    updatedAt: '2026-10-27',
+    relatedToolHrefs: ['/tools/catch'],
     date: '2026-10-14',
     readMinutes: 5,
     relatedSlugs: [
@@ -199,7 +203,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-playstation-10018491',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-catch-disclosure-2026-10-27',
       'aniimo-steam-patch-1-0-3616231-2026-09-29',
       'aniimo-official-support-center',
     ],
@@ -225,7 +229,7 @@ export const guidePosts: GuidePost[] = [
     sourceIds: [
       'aniimo-steam-dev-feedback-2026-10-13',
       'aniimo-xbox-9pk8phlcqdf6',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
       'aniimo-steam-patch-1-0-3732728-2026-10-15',
@@ -475,7 +479,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-official-wiki-basic-2026-10-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-catch-disclosure-2026-10-27',
       'aniimo-steam-dev-feedback-2026-10-13',
     ],
   },
@@ -496,7 +500,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-official-wiki-basic-2026-10-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
   },
@@ -543,7 +547,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-steam-update-1-1-2026-09-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
       'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
@@ -562,7 +566,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-official-wiki-basic-2026-10-23',
-      'aniimo-official-probabilities-2026-09-16',
+      'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
   },

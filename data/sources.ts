@@ -188,7 +188,7 @@ export const sources: SourceReference[] = [
   {
     id: 'aniimo-official-probabilities-2026-09-16',
     url: 'https://www.aniimo.com/zh-tw/formula-multipliers',
-    title: 'Aniimo Official Probability Disclosure',
+    title: 'Aniimo Official Probability Disclosure - historical September snapshot',
     accessedAt: '2026-09-18',
     evidence:
       'The official disclosure publishes the three catch scenarios (outside battle, in battle and defeated target), the region-stage base rate table for evolution stages 1-3, the level-difference, cube, HP, backstrike and special-status coefficients, the min/max status stacking rule, the two-square-root resolution for a standard cube on a normal target, and additional drop and sparkling-style tables. It also states that the base rate is decided by each Aniimo template and is not derived from level, which means per-species template rates are not published.',
@@ -200,6 +200,14 @@ export const sources: SourceReference[] = [
     accessedAt: '2026-10-27',
     evidence:
       'The rendered disclosure separates outside-battle, in-battle and boss formulas. Bosses use 6% times cube coefficient. It lists five region rows, nine cube entries, level and discrete HP factors, and backstrike at 1.5 excluding the big white ball. It describes minimum/maximum status selection but does not list individual status numbers. Scripted encounters may force success or failure. This is an observation date, not a published revision date; the September snapshot is retained separately.',
+  },
+  {
+    id: 'aniimo-official-sparkling-disclosure-2026-10-27',
+    url: 'https://www.aniimo.com/zh-tw/formula-multipliers',
+    title: 'Aniimo Official Sparkling Style Disclosure - October 27 observation',
+    accessedAt: '2026-10-27',
+    evidence:
+      'The current rendered Sparkling table lists types I-X at 9.9% each (99% combined). For a Sparkling Cube on an Egg Heist egg, Dazzling is 0% and Shadow is 1%; for a world target or a non-Egg-Heist egg, Dazzling is 1% and Shadow is 0%. These are item-and-method-specific style outcomes, not species, hatch or stat probabilities. Observation date, not a publication date.',
   },
   {
     id: 'aniimo-type-chart-community-2026-09',
