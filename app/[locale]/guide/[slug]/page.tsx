@@ -121,7 +121,10 @@ export default async function GuidePostPage({
         { t: 'p', c: tg(`dataTopics.${post.dataTopic}.${key}.content`) },
       ] as Block[])
     : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
-  const body = [...getPracticalSupportBlocks(locale, post.slug), ...originalBody];
+  const practicalBlocks = getPracticalSupportBlocks(locale, post.slug);
+  const body = ['getting-started', 'is-aniimo-free-to-play'].includes(post.slug)
+    ? [...originalBody, ...practicalBlocks]
+    : [...practicalBlocks, ...originalBody];
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);

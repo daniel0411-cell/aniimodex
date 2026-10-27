@@ -30,6 +30,32 @@
 /guide/aniimo-launch-time-preload/  /en/guide/aniimo-release-date/  301
 
 # 旧路由迁移（多语言后所有路径带 locale 前缀）：
+# Consolidated task guides, before the unlocalized guide wildcard.
+/en/guide/aniimo-face-data-import  /en/guide/getting-started/  301
+/en/guide/aniimo-face-data-import/  /en/guide/getting-started/  301
+/zh-Hans/guide/aniimo-face-data-import  /zh-Hans/guide/getting-started/  301
+/zh-Hans/guide/aniimo-face-data-import/  /zh-Hans/guide/getting-started/  301
+/zh-Hant/guide/aniimo-face-data-import  /zh-Hant/guide/getting-started/  301
+/zh-Hant/guide/aniimo-face-data-import/  /zh-Hant/guide/getting-started/  301
+/guide/aniimo-face-data-import  /en/guide/getting-started/  301
+/guide/aniimo-face-data-import/  /en/guide/getting-started/  301
+/en/guide/aniimo-currencies-and-shops  /en/guide/is-aniimo-free-to-play/  301
+/en/guide/aniimo-currencies-and-shops/  /en/guide/is-aniimo-free-to-play/  301
+/zh-Hans/guide/aniimo-currencies-and-shops  /zh-Hans/guide/is-aniimo-free-to-play/  301
+/zh-Hans/guide/aniimo-currencies-and-shops/  /zh-Hans/guide/is-aniimo-free-to-play/  301
+/zh-Hant/guide/aniimo-currencies-and-shops  /zh-Hant/guide/is-aniimo-free-to-play/  301
+/zh-Hant/guide/aniimo-currencies-and-shops/  /zh-Hant/guide/is-aniimo-free-to-play/  301
+/guide/aniimo-currencies-and-shops  /en/guide/is-aniimo-free-to-play/  301
+/guide/aniimo-currencies-and-shops/  /en/guide/is-aniimo-free-to-play/  301
+/en/guide/aniimo-controller-steam-deck-optimization  /en/guide/aniimo-language-controller-support/  301
+/en/guide/aniimo-controller-steam-deck-optimization/  /en/guide/aniimo-language-controller-support/  301
+/zh-Hans/guide/aniimo-controller-steam-deck-optimization  /zh-Hans/guide/aniimo-language-controller-support/  301
+/zh-Hans/guide/aniimo-controller-steam-deck-optimization/  /zh-Hans/guide/aniimo-language-controller-support/  301
+/zh-Hant/guide/aniimo-controller-steam-deck-optimization  /zh-Hant/guide/aniimo-language-controller-support/  301
+/zh-Hant/guide/aniimo-controller-steam-deck-optimization/  /zh-Hant/guide/aniimo-language-controller-support/  301
+/guide/aniimo-controller-steam-deck-optimization  /en/guide/aniimo-language-controller-support/  301
+/guide/aniimo-controller-steam-deck-optimization/  /en/guide/aniimo-language-controller-support/  301
+
 # 无 locale 前缀的旧路径 301 重定向到默认语言（en）版本，保护既有收录
 /twine  /en/tools/twine/  301
 /twine/*  /en/tools/twine/:splat  301

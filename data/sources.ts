@@ -194,6 +194,14 @@ export const sources: SourceReference[] = [
       'The official disclosure publishes the three catch scenarios (outside battle, in battle and defeated target), the region-stage base rate table for evolution stages 1-3, the level-difference, cube, HP, backstrike and special-status coefficients, the min/max status stacking rule, the two-square-root resolution for a standard cube on a normal target, and additional drop and sparkling-style tables. It also states that the base rate is decided by each Aniimo template and is not derived from level, which means per-species template rates are not published.',
   },
   {
+    id: 'aniimo-official-catch-disclosure-2026-10-27',
+    url: 'https://www.aniimo.com/zh-tw/formula-multipliers',
+    title: 'Aniimo Official Probability Disclosure - October 27 observation',
+    accessedAt: '2026-10-27',
+    evidence:
+      'The rendered disclosure separates outside-battle, in-battle and boss formulas. Bosses use 6% times cube coefficient. It lists five region rows, nine cube entries, level and discrete HP factors, and backstrike at 1.5 excluding the big white ball. It describes minimum/maximum status selection but does not list individual status numbers. Scripted encounters may force success or failure. This is an observation date, not a published revision date; the September snapshot is retained separately.',
+  },
+  {
     id: 'aniimo-type-chart-community-2026-09',
     url: 'https://aniimobook.app/type-chart/',
     title: 'Aniimo Type Chart (community-compiled) - The Aniimo Book',

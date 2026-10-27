@@ -87,7 +87,6 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         'aniimo-catching-guide',
         'aniimo-twine-explained',
         'aniimo-multiplayer',
-        'aniimo-face-data-import',
         'what-is-aniimo',
       ],
     },

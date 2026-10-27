@@ -77,7 +77,7 @@ const STATIC_ROUTES: {
     priority: 0.85,
     changefreq: 'weekly',
   },
-  { path: '/tools/catch/', lastModified: '2026-10-24', priority: 0.85, changefreq: 'weekly' },
+  { path: '/tools/catch/', lastModified: '2026-10-27', priority: 0.85, changefreq: 'weekly' },
   {
     path: '/tools/team-builder/',
     lastModified: '2026-10-16',

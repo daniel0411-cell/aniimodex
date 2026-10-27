@@ -1400,9 +1400,9 @@ function harvestGatheringGuide(locale: string): LaunchGuide {
     ),
     tag: text('Home & Event', '家园与活动', '家園與活動'),
     lead: text(
-      'As of October 16, Harvest Gathering stage 3 has not opened. The official schedule starts October 20 in Europe and the Americas and October 21 in Asia-Pacific. Patch 1.0.3732728.0 separately introduces the limited-time Home Season crop bonus.',
-      '截至 10 月 16 日，丰收聚会第三阶段尚未开放。官方排期为欧美 10 月 20 日、亚太 10 月 21 日；1.0.3732728.0 补丁已另行公布家园赛季限时作物增益。',
-      '截至 10 月 16 日，豐收聚會第三階段尚未開放。官方排期為歐美 10 月 20 日、亞太 10 月 21 日；1.0.3732728.0 補丁已另外公布家園賽季限時作物增益。'
+      'The announced October 20–21 opening dates are now past. This page preserves the October 15 Harvest Gathering schedule and crop-bonus notice; it does not establish whether the event or bonus is still available. Check the current in-game event panel before planting for rewards or buying task furniture.',
+      '公告中的 10 月 20–21 日开放日期已过。本页保留 10 月 15 日丰收聚会排期与作物增益记录，不代表活动或增益目前仍然有效。为奖励种植或购买任务家具前，请先查看游戏内当前活动面板。',
+      '公告中的 10 月 20–21 日開放日期已過。本頁保留 10 月 15 日豐收聚會排期與作物增益記錄，不代表活動或增益目前仍然有效。為獎勵種植或購買任務家具前，請先查看遊戲內目前活動面板。'
     ),
     body: [
       ...october15PatchBlocks(locale, 'aniimo-rv-homeland-guide'),
@@ -3175,6 +3175,9 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
   const patch = october15PatchBlocks(locale, slug);
   const feedback = octoberFeedbackBlocks(locale, slug);
   const result = { ...localizedGuide, body: [...patch, ...feedback, ...localizedGuide.body] };
+  if (slug === 'aniimo-language-controller-support') {
+    result.body.push(...controllerOptimizationGuide(locale).body.slice(-2));
+  }
   if (locale === 'en') return result;
   const traditional = locale === 'zh-Hant';
   const additions: Partial<Record<string, LaunchGuideBlock[]>> = {
@@ -3298,6 +3301,15 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
 export function getPracticalSupportBlocks(locale: string, slug: string): LaunchGuideBlock[] {
   const text = (en: string, hans: string, hant: string) =>
     locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  if (slug === 'is-aniimo-free-to-play') return currenciesGuide(locale).body;
+  if (slug === 'getting-started') return [
+    { t: 'h', c: text('Can I import a character appearance preset?', '可以导入角色外观预设吗？', '可以匯入角色外觀預設嗎？') },
+    { t: 'p', c: text(
+      'The sources used here do not establish a face-code format or cross-platform import workflow. Before replacing an appearance, keep a screenshot, check Import/Share/Preset options in the official client and confirm the region and version match. Do not run external preset executables or modified clients. A step-by-step import procedure is not verified here.',
+      '本页来源尚未确认捏脸码格式或跨平台导入流程。替换外观前保留截图，在官方客户端检查 Import/Share/Preset 选项，并核对地区与版本是否一致。不要运行第三方预设程序或修改版客户端；本站尚未核验逐步导入流程。',
+      '本頁來源尚未確認捏臉碼格式或跨平台匯入流程。替換外觀前保留截圖，在官方客戶端檢查 Import/Share/Preset 選項，並核對地區與版本是否一致。不要執行第三方預設程式或修改版客戶端；本站尚未核驗逐步匯入流程。'
+    ) },
+  ];
   const entries: Record<string, [string, string]> = {
     'aniimo-launch-checklist-known-issues': [
       text(

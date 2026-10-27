@@ -9,48 +9,7 @@ import {
   HP_COEFFICIENTS,
   LEVEL_COEFFICIENTS,
   REGION_RATES,
-  STATUS_COEFFICIENTS,
 } from '@/data/catch-formula';
-
-/**
- * 捕获率计算器（服务端外壳）。
- *
- * 页面上的每一个系数都来自官方《機率公示》：
- *   来源 URL 与抓取日期见 data/catch-formula.ts 的 CATCH_FORMULA_SOURCE。
- * 官方未公开「每种伊莫的模板基础率」，因此计算器只能按玩家选择的
- * 「区域阶段 × 进化阶段」给出区间估算，页面上必须如实标注这一点。
- */
-
-const REGION_LABEL_KEYS: Record<string, string> = {
-  standard: 'regionStandard',
-  earlyMid: 'regionEarlyMid',
-  mid: 'regionMid',
-  midLate: 'regionMidLate',
-  late: 'regionLate',
-  tower: 'regionTower',
-};
-
-const CUBE_LABEL_KEYS: Record<string, string> = {
-  standard: 'cubeStandard',
-  advanced: 'cubeAdvanced',
-  fast: 'cubeFast',
-  remote: 'cubeRemote',
-  remoteMass: 'cubeRemoteMass',
-  ultimate: 'cubeUltimate',
-  sparkling: 'cubeSparkling',
-};
-
-const STATUS_LABEL_KEYS: Record<string, string> = {
-  break: 'statusBreak',
-  breakBonus: 'statusBreakBonus',
-  common: 'statusCommon',
-  specialStun: 'statusSpecialStun',
-  hundredX: 'statusHundredX',
-  invisible: 'statusInvisible',
-  alert: 'statusAlert',
-  leaving: 'statusLeaving',
-  uncatchable: 'statusUncatchable',
-};
 
 function formatCoefficient(value: number | 'guaranteed'): string {
   if (value === 'guaranteed') return '—';
@@ -67,7 +26,7 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
   const levelRows = [
     { label: `≤${LEVEL_COEFFICIENTS[LEVEL_COEFFICIENTS.length - 1].minDiff - 1}`, coefficient: 1 },
     ...LEVEL_COEFFICIENTS.map((row) => ({
-      label: `≥${row.minDiff}`,
+      label: row.minDiff === 15 ? '≥15' : `${row.minDiff}`,
       coefficient: row.coefficient,
     })),
   ];
@@ -94,13 +53,11 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
           >
             {CATCH_FORMULA_SOURCE.title} ↗
           </a>{' '}
-          · {tr('verification.checkedOn', { date: '2026-10-24' })}
+          · {tr('verification.checkedOn', { date: CATCH_FORMULA_SOURCE.accessedAt })}
         </p>
       </section>
 
-      <details className="space-y-6 border-y border-amber-200 bg-amber-50 p-4">
-        <summary className="cursor-pointer font-semibold text-amber-900">{t('historicalModel')}</summary>
-        <CatchCalculator />
+      <CatchCalculator />
 
       {/* 官方系数对照表：便于逐项核验，也把「官方数值」与「估算输入」区分开 */}
       <section className="space-y-5 border-t border-ink-border pt-6">
@@ -125,7 +82,7 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
               <tbody className="divide-y divide-ink-border">
                 {REGION_RATES.map((row) => (
                   <tr key={row.id}>
-                    <td className="py-1.5 text-text-secondary">{t(REGION_LABEL_KEYS[row.id])}</td>
+                    <td className="py-1.5 text-text-secondary">{t(`current.regions.${row.id}`)}</td>
                     {row.rates.map((rate, index) => (
                       <td key={index} className="py-1.5 text-right font-mono text-text-primary">
                         {Math.round(rate * 100)}%
@@ -167,7 +124,7 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
               <tbody className="divide-y divide-ink-border">
                 {CUBES.map((row) => (
                   <tr key={row.id}>
-                    <td className="py-1.5 text-text-secondary">{t(CUBE_LABEL_KEYS[row.id])}</td>
+                    <td className="py-1.5 text-text-secondary">{t(`current.cubes.${row.id}`)}</td>
                     <td className="py-1.5 text-right font-mono text-text-primary">
                       {row.coefficient === 'guaranteed'
                         ? t('resultGuaranteed')
@@ -207,24 +164,10 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
         {/* 特殊状态 */}
         <div className="border border-ink-border bg-white p-4">
           <h3 className="text-sm font-semibold text-text-primary">{t('breakdownStatus')}</h3>
-          <div className="mt-2 grid gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
-            {STATUS_COEFFICIENTS.map((row) => (
-              <div
-                key={row.id}
-                className="flex items-center justify-between gap-3 border-t border-ink-border py-1.5 text-sm"
-              >
-                <span className="text-text-secondary">{t(STATUS_LABEL_KEYS[row.id])}</span>
-                <span className="shrink-0 font-mono text-text-primary">
-                  {formatCoefficient(row.coefficient)}
-                </span>
-              </div>
-            ))}
-          </div>
+          <p className="mt-2 text-sm leading-6 text-text-secondary">{t('current.statusNote')}</p>
           <p className="mt-3 text-xs leading-5 text-text-muted">{t('statusRuleNote')}</p>
         </div>
       </section>
-
-      </details>
 
       {/* 实战捕获策略与资源节约指南 */}
       <section className="space-y-4 border-t border-ink-border pt-8">
@@ -256,9 +199,7 @@ export default async function CatchPage({ params }: { params: Promise<{ locale: 
             <summary className="cursor-pointer font-semibold text-text-primary hover:text-primary-light">
               {t(`faq.${key}.q`)}
             </summary>
-            <p className="mt-2 text-sm leading-6 text-text-secondary">
-              {t(`faq.${key}.a`)}
-            </p>
+            <p className="mt-2 text-sm leading-6 text-text-secondary">{t(`faq.${key}.a`)}</p>
           </details>
         ))}
       </section>

@@ -19,7 +19,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'getting-started',
-    updatedAt: '2026-10-23',
+    updatedAt: '2026-10-27',
     element: '风',
     date: '2026-09-20',
     readMinutes: 8,
@@ -107,10 +107,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'is-aniimo-free-to-play',
+    updatedAt: '2026-10-27',
     date: '2026-08-30',
-    readMinutes: 4,
+    readMinutes: 6,
     relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-probabilities-2026-09-16', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
   },
   {
     slug: 'how-to-download-aniimo',
@@ -360,6 +361,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-face-data-import',
+    published: false,
     date: '2026-09-16',
     readMinutes: 4,
     relatedSlugs: [
@@ -371,6 +373,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-language-controller-support',
+    updatedAt: '2026-10-27',
     date: '2026-10-16',
     readMinutes: 5,
     relatedSlugs: [
@@ -512,6 +515,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-harvest-gathering-farm-guide',
+    updatedAt: '2026-10-27',
     element: '草',
     date: '2026-10-16',
     readMinutes: 6,
@@ -526,6 +530,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-currencies-and-shops',
+    published: false,
     element: '光',
     date: '2026-10-16',
     readMinutes: 6,
@@ -563,6 +568,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-controller-steam-deck-optimization',
+    published: false,
     element: '风',
     date: '2026-10-16',
     readMinutes: 6,
@@ -622,6 +628,9 @@ function resolveRelatedGuides(post: GuidePost): GuidePost {
     'aniimo-ps5': 'aniimo-platforms',
     'aniimo-nintendo-switch': 'aniimo-platforms',
     'aniimo-launch-time-preload': 'aniimo-release-date',
+    'aniimo-face-data-import': 'getting-started',
+    'aniimo-currencies-and-shops': 'is-aniimo-free-to-play',
+    'aniimo-controller-steam-deck-optimization': 'aniimo-language-controller-support',
   };
   return { ...post, relatedSlugs: post.relatedSlugs
     ? [...new Set(post.relatedSlugs.map((slug) => merged[slug] ?? slug))].filter((slug) => slug !== post.slug)

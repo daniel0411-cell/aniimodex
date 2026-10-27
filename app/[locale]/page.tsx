@@ -392,14 +392,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       />
       <section className="border-b border-ink-border py-5">
         <h2 className="text-lg font-bold text-text-primary">
-          {locale === 'en' ? 'October 15 patch and Harvest Gathering times' : locale === 'zh-Hant' ? '10 月 15 日：補丁與豐收集會時間' : '10 月 15 日：补丁与丰收集会时间'}
+          {locale === 'en' ? 'Patch archive: October 15' : locale === 'zh-Hant' ? '歷史補丁：10 月 15 日' : '历史补丁：10 月 15 日'}
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
           {locale === 'en'
-            ? 'Official patch 1.0.3732728.0 fixes documented Egg Heist, Home, controller and console issues. Harvest Gathering stage 3 begins October 20 in Europe and the Americas, and October 21 in Asia-Pacific. Batlock Holmes availability starts October 16 at 10:00 in each listed regional time zone. Restart the client after this no-downtime resource update.'
+            ? 'Patch 1.0.3732728.0 recorded Egg Heist, Home, controller and console fixes, a Harvest Gathering opening schedule for October 20–21 and a Batlock Holmes shop release for October 16. These dates are past; this archive does not confirm current event access, shop stock or unresolved bugs. Use the guides below for dated evidence and troubleshooting.'
             : locale === 'zh-Hant'
-              ? '官方 1.0.3732728.0 補丁修正 Egg Heist、Home、手柄與主機問題。Harvest Gathering 第三階段於 10 月 20 日在歐美開始、10 月 21 日在亞太開始；Batlock Holmes 依各區所列時區於 10 月 16 日 10:00 開放。不停服資源更新後需重新啟動客戶端。'
-              : '官方 1.0.3732728.0 补丁修复 Egg Heist、Home、手柄与主机问题。Harvest Gathering 第三阶段于 10 月 20 日在欧美开始、10 月 21 日在亚太开始；Batlock Holmes 按各区所列时区于 10 月 16 日 10:00 开放。不停服资源更新后需重启客户端。'}
+              ? '1.0.3732728.0 補丁記錄了 Egg Heist、Home、手柄與主機修正，並公布豐收聚會 10 月 20–21 日開放排期、Batlock Holmes 10 月 16 日商店上架排期。上述日期已過；歷史記錄不確認目前活動入口、商店庫存或尚存問題。下方攻略提供帶日期的依據與排查步驟。'
+              : '1.0.3732728.0 补丁记录了 Egg Heist、Home、手柄与主机修复，并公布丰收聚会 10 月 20–21 日开放排期、Batlock Holmes 10 月 16 日商店上架排期。上述日期已过；历史记录不确认当前活动入口、商店库存或尚存问题。下方攻略提供带日期的依据与排查步骤。'}
         </p>
         <nav className="mt-3 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-light" aria-label={locale === 'en' ? 'Activity and support guides' : locale === 'zh-Hant' ? '活動與支援攻略' : '活动与支持攻略'}>
           <Link href="/guide/aniimo-egg-heist">{locale === 'en' ? 'Egg Heist official answers' : 'Egg Heist 官方答疑'} →</Link>

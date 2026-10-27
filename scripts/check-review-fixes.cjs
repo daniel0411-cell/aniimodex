@@ -35,7 +35,8 @@ assert.equal(bestAttackers(['Grass', 'Water']).find((a) => a.element === 'Fire')
 const { getLaunchGuide } = loadTs('data/launch-guides.ts');
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const farm = getLaunchGuide(locale, 'aniimo-harvest-gathering-farm-guide');
-  assert.match(farm.lead, /has not opened|尚未开|尚未開/);
+  assert.match(farm.lead, /dates are now past|日期已过|日期已過/);
+  assert.doesNotMatch(farm.lead, /has not opened|尚未开放|尚未開放/);
   assert.doesNotMatch(JSON.stringify(farm), /exactly 2 Round Tables|2张圆桌|2張圓桌/);
   const hardware = getLaunchGuide(locale, 'aniimo-controller-steam-deck-optimization');
   assert.match(hardware.subtitle, /untested|尚未实测|尚未實測/);

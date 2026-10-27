@@ -27,7 +27,15 @@ const merged = {
   'aniimo-ps5': 'aniimo-platforms',
   'aniimo-nintendo-switch': 'aniimo-platforms',
   'aniimo-launch-time-preload': 'aniimo-release-date',
+  'aniimo-face-data-import': 'getting-started',
+  'aniimo-currencies-and-shops': 'is-aniimo-free-to-play',
+  'aniimo-controller-steam-deck-optimization': 'aniimo-language-controller-support',
 };
+for (const [old, destination] of Object.entries(merged)) {
+  for (const slash of ['', '/']) assert(redirects.some(([from, to, status]) =>
+    from === `/guide/${old}${slash}` && to === `/en/guide/${destination}/` && status === '301'
+  ), `Missing unlocalized redirect: ${old}${slash}`);
+}
 for (const path of readdirSync('out', { recursive: true }).filter((path) => path.endsWith('.html'))) {
   const html = readFileSync(`out/${path}`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
   for (const old of Object.keys(merged)) assert(!new RegExp(`href="/[^" ]*/guide/${old}/?"`).test(html), `${path}: internal link still uses retired guide ${old}`);
@@ -65,6 +73,18 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     assert(html.includes('2026-10-23'));
   }
   const release = read('guide/aniimo-release-date');
+  assert(read('guide/getting-started').includes('Import/Share/Preset'));
+  const spending = read('guide/is-aniimo-free-to-play');
+  for (const term of ['100 Glimmers', 'Harvest Moon Points', '99%']) assert(spending.includes(term));
+  const headingZero = spending.indexOf('id="section-0"');
+  assert(headingZero >= 0 && headingZero < spending.indexOf('100 Glimmers'), 'Answer the price question before historical rewards');
+  const controller = read('guide/aniimo-language-controller-support');
+  for (const term of ['Steam Input', 'Proton 10.0.0-4', '40/45 FPS']) assert(controller.includes(term));
+  for (const slug of ['getting-started', 'is-aniimo-free-to-play', 'aniimo-language-controller-support', 'aniimo-harvest-gathering-farm-guide']) {
+    assert(read(`guide/${slug}`).includes('2026-10-27'), `${locale}/${slug}: missing substantive update date`);
+  }
+  const home = read('');
+  assert(home.includes(locale === 'en' ? 'Patch archive: October 15' : locale === 'zh-Hant' ? '歷史補丁：10 月 15 日' : '历史补丁：10 月 15 日'));
   assert(release.includes('2026-09-15 19:00'));
   assert(!release.includes('wait for the listed mobile release'));
   const dex = read('dex/062');

@@ -116,9 +116,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'catch-formula',
     claim:
-      'The official probability disclosure publishes the catch formula for all three scenarios plus the region-stage base rate table and the level, cube, HP, backstrike and status coefficients. Per-species template base rates are not published.',
+      'The current disclosure separates field, battle and boss formulas, including boss base rate 6%, five region rows and cube, level, HP and backstrike factors. Individual status coefficients are not listed; unknown inputs prevent an ordinary-target numeric result.',
     status: 'official',
-    checkedAt: '2026-09-16',
-    sourceIds: ['aniimo-official-probabilities-2026-09-16'],
+    checkedAt: '2026-10-27',
+    sourceIds: ['aniimo-official-catch-disclosure-2026-10-27'],
   },
 ];
