@@ -26,6 +26,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     assert(html.includes('1846651706678228'), `${locale}/${slug}: missing October 15 source`);
   }
   const events = readFileSync(`out/${locale}/guide/aniimo-prismana-event-tracker/index.html`, 'utf8');
-  assert(events.includes(locale === 'en' ? 'windows have both ended' : locale === 'zh-Hant' ? '公告窗口均已結束' : '公告窗口均已结束'), `${locale}: stale event lead`);
+  assert(events.includes('Pouchwisp') && events.includes('2026-11-02'), `${locale}: missing replacement November schedule`);
+  assert(!events.includes('No replacement event has been verified here'), `${locale}: obsolete no-replacement claim`);
 }
 console.log('October feedback checks passed for all three locales.');

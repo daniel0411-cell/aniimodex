@@ -398,9 +398,9 @@
     "backToGuides": "Back to Guide"
   },
   "dex": {
-    "title": "Aniimo Dex: All 86 Creatures, Forms & Evolutions",
-    "metaDescription": "Browse all 86 official-source Aniimo by name, number, element, role or stage. Check evolution families, habitats, forms, mobility, traits and skills.",
-    "intro": "Find all 86 official-source Aniimo in one searchable dex. Filter by name, number, element, role or stage, then open an entry to check its evolution family, habitat, forms, mobility, traits and skills.",
+    "title": "Aniimo Dex: 86 Indexed Basic Form Records",
+    "metaDescription": "Search 86 Basic Form records from the October 23, 2026 Wiki snapshot. Compare attributes, skills, evolution and habitats; S1 Part 2 additions are not yet fully indexed.",
+    "intro": "Search the 86 Basic Form records imported from the October 23, 2026 official Wiki snapshot. Filter by name, number, element, role or stage, then compare published attributes and skills. This is not a complete current-game roster: S1 Part 2 additions and alternate-form values are not yet fully indexed.",
     "subtitle": "{filtered} / {total} official Wiki entries",
     "searchPlaceholder": "Search by name, number or keyword…",
     "filterElement": "Element",
@@ -479,6 +479,9 @@
     "examples": "Open entries"
   },
   "dexDetail": {
+    "readingNotesTitle": "Before you choose: triggers and trade-offs",
+    "readingNotesScope": "AniimoDex interpretation of the Basic Form record checked {date}. These notes connect published conditions to a decision; they are not live-game tests or build rankings. Editorial update: October 28, 2026.",
+    "readingNotesEvidence": "Read the underlying record",
     "descriptionIncomplete": "The source description contains unresolved placeholders or an ambiguous value. Check the linked official page; no effect amount is inferred here.",
     "attributesTitle": "Official Basic Form attributes",
     "attributesScope": "HP, BREAK, ATK, M.DEF, P.DEF and REGEN are the values displayed by the Wiki for Basic Form. They are not level-adjusted battle stats or a damage ranking; alternate forms and growth formulas are not included.",
@@ -561,8 +564,8 @@
     "title": "Aniimo Tools: Type Chart, Twine & Catch Calculator",
     "subtitle": "Use Aniimo tools to check element matchups, find creatures by Twine mobility ability and estimate catch chances from the published probability formula.",
     "databaseTitle": "Continue in the Aniimo database",
-    "databaseDesc": "Move from a tool result to the full 86-entry dex, evolution families, habitats or mobility directory.",
-    "browseDex": "Browse all 86 Aniimo",
+    "databaseDesc": "Move from a tool result to the 86 indexed Basic Form records, evolution families, habitats or mobility directory.",
+    "browseDex": "Browse 86 indexed records",
     "browseEvolutions": "Compare evolution families",
     "browseLocations": "Check Aniimo habitats",
     "browseAbilities": "Browse mobility abilities",
@@ -1107,7 +1110,12 @@
           },
           {
             "t": "p",
-            "c": "Official store text says players catch Aniimo with Aniipods, can set traps and must time catches. Creatures may appear according to environment, weather, phenomena and time of day. The official probability disclosure now publishes catch formulas and modifiers, while per-creature base templates still require mapping."
+            "c": "Official store text describes catching with Aniipods and timing a throw. The October 27 disclosure observation separates ordinary field targets, ordinary battle targets and bosses. Start with the encounter type; an ordinary-target estimate also needs an explicit base-rate assumption and known modifiers. A creature name alone is not enough to produce a supported percentage."
+          },
+          {
+            "t": "link",
+            "c": "Choose the encounter formula and compare worked examples",
+            "href": "/guide/aniimo-catching-guide"
           },
           {
             "t": "h",
@@ -1135,7 +1143,12 @@
           },
           {
             "t": "quote",
-            "c": "This overview separates verified official features from dex stats, type multipliers and per-creature catch templates that remain under review."
+            "c": "The Dex now includes six published attributes for 86 Basic Form records from the October 23 Wiki snapshot. These values are not level-adjusted battle stats or proof of a best build. Element matchup tools use separately labelled community data; catch estimates use the official conditional formulas. Missing growth, form or encounter details remain unknown."
+          },
+          {
+            "t": "link",
+            "c": "Compare published attributes, abilities and evidence gaps",
+            "href": "/dex"
           }
         ]
       },
@@ -1772,9 +1785,9 @@
       },
       "aniimo-forms-explained": {
         "title": "Aniimo Prismana, Umbral and Sparkling Forms Explained",
-        "subtitle": "What official sources confirm about Prismana and Sparkling styles, and what remains unverified about Umbral eggs.",
+        "subtitle": "Distinguish Wiki morphology, Sparkling styles, individual Hue unlocks and the Umbral eggs named in S1 Part 2.",
         "tag": "Forms",
-        "lead": "Prismana, Sparkling and Umbral are active player searches, but they are not interchangeable labels. The official Wiki indexes Prismana as a morphology entry, the probability disclosure publishes Sparkling styles, and the registered official data does not yet define Umbral eggs or their evolution rules.",
+        "lead": "Prismana, Sparkling and Umbral are not interchangeable labels. The Wiki indexes Prismana morphology, the probability disclosure publishes Sparkling styles, and the S1 Part 2 announcement names Umbral enemies and eggs in Egg Heist. Identify the system before spending a form or hue item.",
         "body": [
           {
             "t": "h",
@@ -1796,8 +1809,8 @@
               ],
               [
                 "Umbral",
-                "Not defined in the registered official fields",
-                "Egg source, hatch result and evolution behavior remain unverified"
+                "Named in the S1 Part 2 Egg Heist announcement",
+                "The fair PVP Giga-Egg guarantees an Umbral Egg; this does not establish a complete species pool or evolution inheritance"
               ]
             ]
           },
@@ -1901,7 +1914,7 @@
           },
           {
             "t": "p",
-            "c": "Umbral is a current community search term, but it does not appear as a morphology category or Sparkling style in the official datasets registered for this page. AniimoDex therefore cannot yet confirm where an Umbral Egg comes from, whether its hatch is random, what a Sparkling Cube changes, or whether Umbral status survives evolution."
+            "c": "The October 29 update names Umbral enemies and eggs in Egg Heist. Fair PVP winners receive a Giga-Egg guaranteeing an Umbral Egg with a small chance of a Prismana Egg. Newly obtained Umbral Aniimo Eggs after the update can hatch Whisperwake Aniimo. This does not establish a complete hatch pool, species odds or evolution inheritance."
           },
           {
             "t": "quote",
@@ -1964,7 +1977,12 @@
           },
           {
             "t": "p",
-            "c": "The October 1 Dev Dispatch announced switching among unlocked Hues, including the original Prismana Hue, and future use of Legendary Aniipods on existing Sparkling Aniimo. These are developer plans, not a verified live workflow on this page. Check a dated patch or current-client evidence before spending an item; see the linked Dev Dispatch guide for the evidence boundary."
+            "c": "The October 1 plan mentioned the original Prismana Hue. The October 29 update now lists Hue Swap using Credits for hues unlocked on the same individual, and Sparkling Original, an initial color with Sparkling effects available to any Sparkling Aniimo. Unlocks are not shared across individuals. Legendary Aniipod replacement does not change Acquired Potential and excludes Irisalis, Helion and Lunara. These are announcement rules, not a live-client test."
+          },
+          {
+            "t": "link",
+            "href": "/guide/aniimo-prismana-potential-breeding-guide",
+            "c": "Compare hue, form and growth items before spending"
           },
           {
             "t": "h",
@@ -1984,7 +2002,7 @@
           },
           {
             "t": "quote",
-            "c": "Use Prismana for an official morphology entry, Sparkling for the separately published style system, and Umbral only as an unverified community term until stronger evidence is available."
+            "c": "Use Prismana for an official morphology entry and Sparkling for the separately published style system. The Part 2 announcement uses Umbral for Egg Heist enemies and eggs; that does not make it an interchangeable morphology or Sparkling label."
           }
         ]
       },

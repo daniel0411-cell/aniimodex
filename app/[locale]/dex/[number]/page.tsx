@@ -15,6 +15,7 @@ import { formKind, type FormKind } from '@/data/forms';
 import { flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import SnapshotNotice from '@/components/dex/SnapshotNotice';
+import { dexReadingNotes } from '@/data/dex-reading-notes';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
@@ -151,6 +152,7 @@ export default async function DexDetailPage({ params }: PageProps) {
     return !aniimo.archived && entry.number !== aniimo.number && !familyNames.has(entry.enName) && candidate?.habitats.some((habitat) => detail?.habitats.includes(habitat));
   }).slice(0, 8);
   const comparisons = getDexComparisons(aniimo);
+  const readingNotes = aniimo.archived ? undefined : dexReadingNotes[aniimo.number]?.[locale];
 
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
 
@@ -281,6 +283,16 @@ export default async function DexDetailPage({ params }: PageProps) {
             ))}
         </div>
       </header>
+
+      {readingNotes && <section aria-labelledby="reading-notes-title" className="border-y border-ink-border py-5">
+        <h2 id="reading-notes-title" className="text-xl font-bold text-text-primary">{t('readingNotesTitle')}</h2>
+        <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23' })}</p>
+        <div className="mt-4 space-y-5">{readingNotes.map((note) => <div key={note.question}>
+          <h3 className="font-semibold text-text-primary">{note.question}</h3>
+          <p className="mt-2 text-sm leading-6 text-text-secondary">{note.answer}</p>
+          <a href={`#${note.section}`} className="mt-2 inline-block text-sm font-semibold text-primary-light underline underline-offset-4">{t('readingNotesEvidence')} → {t(`official${note.section[0].toUpperCase()}${note.section.slice(1)}`)}</a>
+        </div>)}</div>
+      </section>}
 
       {!!detail?.attributes?.length && <section aria-labelledby="attributes-title" className="border-y border-ink-border py-5">
         <h2 id="attributes-title" className="text-xl font-bold text-text-primary">{t('attributesTitle')}</h2>

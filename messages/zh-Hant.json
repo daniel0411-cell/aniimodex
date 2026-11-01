@@ -398,9 +398,9 @@
     "backToGuides": "返回攻略"
   },
   "dex": {
-    "title": "伊莫圖鑑：86 隻伊莫、進化與能力",
-    "intro": "在可搜尋圖鑑中查找全部 86 隻官方來源伊莫。依名稱、編號、元素、定位或階段篩選，再進入詳情查看進化家族、棲息地、型態、移動能力、特性與技能。",
-    "metaDescription": "瀏覽官方來源的 86 隻伊莫，依名稱、編號、元素、定位或階段篩選，查看進化家族、棲息地、型態、移動能力、特性與技能。",
+    "title": "伊莫圖鑑：已索引的86條基礎形態紀錄",
+    "intro": "搜尋2026年10月23日官方 Wiki 快照匯入的86條基礎形態紀錄，依名稱、編號、元素、定位或階段篩選，再比較公開屬性與技能。這不是目前遊戲的完整名單：S1 後半段新增內容與其他形態數值尚未完整納入。",
+    "metaDescription": "查找2026年10月23日 Wiki 快照的86條基礎形態紀錄，比較屬性、技能、進化與棲息地；S1 後半段新增內容尚未完整索引。",
     "subtitle": "{filtered} / {total} 筆官方 Wiki 圖鑑",
     "searchPlaceholder": "按名稱、編號或關鍵字搜尋…",
     "filterElement": "元素",
@@ -479,6 +479,9 @@
     "examples": "查看條目"
   },
   "dexDetail": {
+    "readingNotesTitle": "選擇前先看：觸發條件與取捨",
+    "readingNotesScope": "AniimoDex 對 {date} 核驗的基礎形態紀錄所作解讀，將公開條件與選擇依據連結起來，不代表遊戲實測或配裝排名。解讀更新：2026年10月28日。",
+    "readingNotesEvidence": "查看對應原始紀錄",
     "descriptionIncomplete": "來源描述含有未替換的佔位符或含義不明的數值，請核對本頁連結的官方條目；本站不推斷具體效果。",
     "attributesTitle": "官方基礎形態屬性",
     "attributesScope": "HP、BREAK、ATK、M.DEF、P.DEF、REGEN 為 Wiki 基礎形態頁面顯示值，不是按等級換算的實戰面板，也不是傷害排名；未納入其他形態和成長公式。",
@@ -560,7 +563,7 @@
     "subtitle": "查詢伊莫元素剋制、按 Twine 移動能力反查伊莫，並依已公布機率公式估算捕捉率。",
     "databaseTitle": "繼續查看伊莫資料庫",
     "databaseDesc": "從工具結果繼續查看 86 筆圖鑑、進化家族、棲息地與移動能力目錄。",
-    "browseDex": "瀏覽全部 86 隻伊莫",
+    "browseDex": "瀏覽已索引的86條紀錄",
     "browseEvolutions": "比較進化家族",
     "browseLocations": "查看伊莫棲息地",
     "browseAbilities": "瀏覽移動能力",
@@ -1097,7 +1100,12 @@
           },
           {
             "t": "p",
-            "c": "官方商店說明玩家使用 Aniipod 捕捉伊莫，也可以設置陷阱並把握時機。伊莫會根據環境、天氣、現象和時段出現；官方機率公示已公布捕捉公式與修正倍率，但單隻伊莫的基礎機率模板仍需逐項映射。"
+            "c": "官方商店說明玩家使用 Aniipod 並把握投擲時機。10月27日觀察的官方公示區分普通目標戰鬥外、戰鬥中與頭目公式。應先確認遭遇類型；普通目標估算還需要明確的基礎機率假設與已知修正項，僅憑伊莫名字不能得出有依據的百分比。"
+          },
+          {
+            "t": "link",
+            "c": "選擇遭遇公式並對照演算範例",
+            "href": "/guide/aniimo-catching-guide"
           },
           {
             "t": "h",
@@ -1117,7 +1125,12 @@
           },
           {
             "t": "quote",
-            "c": "本页只整理已核驗的官方玩法；图鉴数值、元素倍率和捕获機率仍在核驗中。"
+            "c": "圖鑑已收錄10月23日 Wiki 快照中86條基礎形態紀錄的六項公開屬性。這些值不是按等級換算的實戰面板，也不能證明最優配裝。元素工具使用另行標註的社群剋制資料，捕獲估算使用官方條件公式；未公開的成長、形態或遭遇細節仍保留為未知。"
+          },
+          {
+            "t": "link",
+            "c": "比較公開屬性、能力與資料缺口",
+            "href": "/dex"
           }
         ]
       },
@@ -1389,9 +1402,9 @@
       },
       "aniimo-forms-explained": {
         "title": "Aniimo 伊莫 Prismana、Umbral 與閃耀形態說明",
-        "subtitle": "官方對 Prismana 與閃耀樣式確認了什麼，Umbral 蛋又有哪些仍未核驗。",
+        "subtitle": "區分 Wiki 形態、Sparkling 樣式、個體色彩解鎖與 S1 後半段公告中的 Umbral 蛋。",
         "tag": "形態",
-        "lead": "Prismana、閃耀和 Umbral 都是玩家正在搜尋的詞，但它們不是可互換的標籤。官方 Wiki 把 Prismana 列為形態條目，機率公示單獨公布閃耀樣式，而已登記官方資料尚未定義 Umbral 蛋及其進化規則。",
+        "lead": "Prismana、Sparkling 與 Umbral 不是可互換的標籤。Wiki 登記 Prismana 形態，機率公示列 Sparkling 樣式，S1 後半段公告則在 Egg Heist 中使用 Umbral 敵人與蛋的名稱。消耗變形或換色道具前，先識別對應系統。",
         "body": [
           {
             "t": "h",
@@ -1411,7 +1424,7 @@
                 "官方機率公示",
                 "已公布特定取得方式下普通、炫之與影之樣式的機率"
               ],
-              ["Umbral", "已登記官方欄位未定義", "蛋的來源、孵化結果和進化後的變化仍未核驗"]
+              ["Umbral", "S1 後半段 Egg Heist 公告使用的名稱", "公平 PVP 的 Giga-Egg 保證 Umbral Egg，但未確認完整物種池或進化繼承"]
             ]
           },
           {
@@ -1514,7 +1527,7 @@
           },
           {
             "t": "p",
-            "c": "Umbral 是目前的社群搜尋詞，但它沒有出現在本頁已登記官方資料的形態分類或閃耀樣式中。因此 AniimoDex 目前不能確認 Umbral 蛋從哪裡取得、孵化結果是否隨機、閃耀立方會改變什麼，以及 Umbral 狀態進化後是否保留。"
+            "c": "10月29日更新在 Egg Heist 中列出 Umbral 敵人與蛋。公平 PVP 勝者獲得 Giga-Egg，保證 Umbral Egg 並有小機率 Prismana Egg；更新後新獲得的 Umbral Aniimo Egg 可孵出 Whisperwake 伊莫。這不等於完整孵化池、逐物種機率或進化繼承規則已公布。"
           },
           {
             "t": "quote",
@@ -1577,7 +1590,12 @@
           },
           {
             "t": "p",
-            "c": "10 月 1 日開發者答疑宣布計畫支援切換已解鎖色彩，包括原始 Prismana Hue，並計畫讓傳說 Aniipod 用於已有閃耀伊莫。這是開發計畫，不是本頁已核驗的目前操作流程。消耗道具前先確認帶日期補丁或目前客戶端證據；詳見相關開發者答疑頁。"
+            "c": "10月1日計畫曾提到原始 Prismana Hue；10月29日更新現已列出 Hue Swap，消耗 Credits 切換同一個體已解鎖色彩，以及任意 Sparkling 伊莫可獲得的初始閃光配色 Sparkling Original。色彩不跨個體共享。傳說 Aniipod 替換不改變 Acquired Potential，且不能用於 Irisalis、Helion、Lunara。這裡是公告規則整理，未做客戶端實測。"
+          },
+          {
+            "t": "link",
+            "href": "/guide/aniimo-prismana-potential-breeding-guide",
+            "c": "消耗前比較色彩、形態與養成道具"
           },
           {
             "t": "h",
@@ -1597,7 +1615,7 @@
           },
           {
             "t": "quote",
-            "c": "Prismana 僅指官方形態條目，閃耀僅指單獨公布的樣式系統；在更強證據出現前，Umbral 仍只作為待核驗的社群用語。"
+            "c": "Prismana 對應官方形態條目，Sparkling 對應單獨公布的樣式系統。後半段公告在 Egg Heist 中使用 Umbral 敵人與蛋的名稱，不代表它可與形態或閃光標籤互換。"
           }
         ]
       },

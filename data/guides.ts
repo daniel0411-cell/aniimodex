@@ -96,6 +96,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'what-is-aniimo',
+    updatedAt: '2026-10-28',
     date: '2026-09-15',
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
@@ -104,6 +105,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-official-home-2026-08-28',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
+      'aniimo-official-wiki-basic-2026-10-23',
+      'aniimo-official-catch-disclosure-2026-10-27',
     ],
   },
   {
@@ -217,6 +220,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
+    updatedAt: '2026-11-01',
     date: '2026-10-16',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -228,6 +232,8 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-steam-dev-feedback-2026-10-13',
+      'aniimo-s1-part-two-2026-10-27',
+      'aniimo-patch-1-1-3857679-2026-10-30',
       'aniimo-xbox-9pk8phlcqdf6',
       'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-update-1-1-2026-09-23',
@@ -266,6 +272,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
+    updatedAt: '2026-11-01',
     date: '2026-10-13',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
@@ -275,7 +282,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',
@@ -405,6 +412,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
+    updatedAt: '2026-11-01',
     date: '2026-10-16',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -417,6 +425,9 @@ export const guidePosts: GuidePost[] = [
       'aniimo-language-controller-support',
     ],
     sourceIds: [
+      'aniimo-patch-1-1-3857679-2026-10-30',
+      'aniimo-s1-part-two-known-issues-2026-11-01',
+      'aniimo-s1-part-two-2026-10-27',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-4126040',
       'aniimo-playstation-10018491',
@@ -433,6 +444,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-version-1-1-update',
+    updatedAt: '2026-11-01',
     date: '2026-10-11',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -446,6 +458,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-s1-part-two-2026-10-27',
       'aniimo-steam-patch-1-0-3616231-2026-09-29',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
     ],
@@ -485,7 +498,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-forms-explained',
-    updatedAt: '2026-10-23',
+    updatedAt: '2026-11-01',
     date: '2026-10-11',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -500,12 +513,14 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-official-wiki-basic-2026-10-23',
+      'aniimo-s1-part-two-2026-10-27',
       'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
     ],
   },
   {
     slug: 'aniimo-dev-dispatch-roadmap',
+    updatedAt: '2026-11-01',
     date: '2026-10-13',
     readMinutes: 7,
     relatedToolHrefs: ['/dex'],
@@ -515,7 +530,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-mobile',
       'aniimo-launch-checklist-known-issues',
     ],
-    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13'],
+    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-harvest-gathering-farm-guide',
@@ -554,6 +569,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-potential-breeding-guide',
+    updatedAt: '2026-11-01',
     element: '暗',
     date: '2026-10-16',
     readMinutes: 7,
@@ -568,6 +584,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
+      'aniimo-s1-part-two-2026-10-27',
     ],
   },
   {

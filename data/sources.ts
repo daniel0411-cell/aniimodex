@@ -13,6 +13,27 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-s1-part-two-2026-10-27',
+    url: 'https://steamcommunity.com/games/4126040/announcements/detail/687520329382238609',
+    title: 'Aniimo S1 Departure with the Wind Part 2 - October 29 update',
+    accessedAt: '2026-11-01',
+    evidence: 'Official Steam news API body published October 27 schedules the October 29 update. It names the four Whisperwake areas, 51 new Aniimo, Vein Abundance Student II requirement and November 2-December 7 Prismana rotation for Pouchwisp, Royalby, Jeburst and Glameep. Each server has its own stated fixed UTC offset. Photo rules distinguish form, location and distinct Sparkling Types; no spawn coordinates or precise encounter probability are established. This is announcement evidence, not a live-client test.',
+  },
+  {
+    id: 'aniimo-patch-1-1-3857679-2026-10-30',
+    url: 'https://steamcommunity.com/games/4126040/announcements/detail/686395063661496366',
+    title: 'Aniimo Official Patch v1.1.3857679.0 - October 30 fixes',
+    accessedAt: '2026-11-01',
+    evidence: 'Official Steam news API lists specific fixes for Waterfall Climb, Touch the mysterious mechanism, Dewple Waterfall Form progression, Gachapus photo recognition, mobile chests, form models, hue switching and Xbox PC settings, plus cutscene audio improvements. It does not establish a universal performance fix or independently verified gameplay behavior.',
+  },
+  {
+    id: 'aniimo-s1-part-two-known-issues-2026-11-01',
+    url: 'https://steamcommunity.com/app/4126040/discussions/0/562546073917327130/',
+    title: 'Aniimo official S1 Part 2 known issues and fixes - November 1 observation',
+    accessedAt: '2026-11-01',
+    evidence: 'Developer-pinned thread includes loading hotfix and specific freeze, black-screen, invisible-character and other fixes, alongside retained older Known Issues text. It requests device, region and reproduction evidence through official private support, including aniimo_support@aniimo.com. Duplicate old/new entries do not establish universal resolution or continuing failure. Player comments are not treated as official facts.',
+  },
+  {
     id: 'aniimo-official-wiki-basic-2026-10-23',
     url: 'https://wiki.aniimo.com/',
     title: 'Official Aniimo Wiki - 86 Basic Form records',

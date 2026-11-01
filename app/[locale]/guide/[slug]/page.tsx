@@ -19,6 +19,7 @@ import ElementGuideDirectory from '@/components/guide/ElementGuideDirectory';
 import PublishedDataGuide from '@/components/guide/PublishedDataGuide';
 import OfficialDownloadLinks from '@/components/guide/OfficialDownloadLinks';
 import SnapshotNotice from '@/components/dex/SnapshotNotice';
+import PrismanaSchedule from '@/components/guide/PrismanaSchedule';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -42,6 +43,7 @@ export function generateStaticParams() {
 /** 文章正文块类型 */
 type Block =
   | { t: 'p' | 'h' | 'h3' | 'li' | 'quote'; c: string }
+  | { t: 'prismanaSchedule' }
   | { t: 'link'; c: string; href: string }
   | { t: 'table'; head: string[]; rows: string[][] };
 
@@ -123,7 +125,7 @@ export default async function GuidePostPage({
       ] as Block[])
     : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
   const practicalBlocks = getPracticalSupportBlocks(locale, post.slug);
-  const body = ['getting-started', 'is-aniimo-free-to-play', 'aniimo-catching-guide'].includes(post.slug)
+  const body = ['getting-started', 'is-aniimo-free-to-play', 'aniimo-catching-guide', 'aniimo-launch-checklist-known-issues', 'aniimo-egg-heist'].includes(post.slug)
     ? [...originalBody, ...practicalBlocks]
     : [...practicalBlocks, ...originalBody];
   const sources = (post.sourceIds ?? [])
@@ -243,6 +245,8 @@ export default async function GuidePostPage({
           {block.c}
         </h3>
       );
+    } else if (block.t === 'prismanaSchedule') {
+      renderedBody.push(<PrismanaSchedule key={i} locale={locale} />);
     } else if (block.t === 'link') {
       renderedBody.push(
         <p key={i} className="my-3 text-sm font-semibold text-primary-light">

@@ -1,9 +1,10 @@
 import { getAccessGuide } from './access-guides';
+import { getPartTwoGuide } from '@/data/part-two-guides';
 import { getAllAniimos } from '@/lib/aniimo';
 import { getOfficialAniimoDetail } from '@/data/aniimo-details';
 
 export type LaunchGuideBlock =
-  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'table'; head: string[]; rows: string[][] };
+  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'prismanaSchedule' } | { t: 'table'; head: string[]; rows: string[][] };
 
 export type LaunchGuide = {
   title: string;
@@ -1368,19 +1369,20 @@ function roadmapChecksBlocks(locale: string): LaunchGuideBlock[] {
     {
       t: 'h',
       c: en
-        ? 'How do I tell an announced change from a live fix?'
+        ? 'October 29 update versus the historical October 1 plan'
         : traditional
-          ? '如何區分已公布計畫與已實裝修正？'
-          : '如何区分已公布计划与已实装修复？',
+          ? '10月29日更新與10月1日歷史計畫'
+          : '10月29日更新与10月1日历史计划',
     },
     {
       t: 'p',
       c: en
-        ? 'Dev Dispatch Vol. 1 is an October 1 plan and support announcement, not a patch-installation record. Until a dated patch or reproducible current-client test confirms delivery, keep Hue switching, fixed Irisalis Potential and Legendary Aniipod reuse labeled planned. Record the version before spending a consumable or expecting compensation; no conversion amount or guaranteed mobile performance gain is established here.'
+        ? 'Checked November 1: the October 29 update now lists Hue Swap for Credits and Legendary Aniipod replacement, with individual unlocks, unchanged Acquired Potential and exclusions for Irisalis, Helion and Lunara. Use the linked item guide for those current rules. The tables below preserve what Dev Dispatch Vol. 1 planned on October 1, not current implementation status. That later notice does not prove every Irisalis compensation or mobile-performance plan has shipped.'
         : traditional
-          ? '10 月 1 日 Dev Dispatch Vol. 1 是計畫與客服公告，不是補丁安裝記錄。未有帶日期補丁或可重現的目前客戶端實測前，色彩切換、Irisalis 固定潛能與傳說 Aniipod 再使用仍標為計畫中。消耗道具或期待補償前記錄版本；本頁未確認換算數量或手機效能提升保證。'
-          : '10 月 1 日 Dev Dispatch Vol. 1 是计划与客服公告，不是补丁安装记录。未有带日期补丁或可复现的当前客户端实测前，色彩切换、Irisalis 固定潜能与传奇 Aniipod 再使用仍标为计划中。消耗道具或期待补偿前记录版本；本页未确认换算数量或手机性能提升保证。',
+          ? '11月1日核對：10月29日更新現已列出消耗 Credits 的 Hue Swap 與傳說 Aniipod 替換，並明定個體解鎖、不改變 Acquired Potential，以及排除 Irisalis、Helion、Lunara。這些現行公告規則請見道具指南。下表保留10月1日 Dev Dispatch Vol. 1 當時的計畫，不是目前實裝狀態；後續公告也不代表所有 Irisalis 補償或手機效能計畫均已交付。'
+          : '11月1日核对：10月29日更新现已列出消耗 Credits 的 Hue Swap 与传奇 Aniipod 替换，并明定个体解锁、不改变 Acquired Potential，以及排除 Irisalis、Helion、Lunara。这些现行公告规则请见道具指南。下表保留10月1日 Dev Dispatch Vol. 1 当时的计划，不是当前实装状态；后续公告也不代表所有 Irisalis 补偿或手机性能计划均已交付。',
     },
+    { t: 'link', href: '/guide/aniimo-prismana-potential-breeding-guide', c: en ? 'Current hue and growth item decision table' : traditional ? '目前色彩與養成道具選擇表' : '当前色彩与养成道具选择表' },
   ];
 }
 
@@ -3167,6 +3169,10 @@ function october15PatchBlocks(locale: string, slug: string): LaunchGuideBlock[] 
 }
 
 export function getLaunchGuide(locale: string, slug: string): LaunchGuide | undefined {
+  const partTwoGuide = getPartTwoGuide(locale, slug);
+  if (partTwoGuide) return slug === 'aniimo-launch-checklist-known-issues'
+    ? { ...partTwoGuide, body: [...partTwoGuide.body, ...supportFaqBlocks(locale)] }
+    : partTwoGuide;
   const accessGuide = getAccessGuide(locale, slug);
   if (accessGuide) return accessGuide;
   const guide = english[slug];
