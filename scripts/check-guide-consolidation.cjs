@@ -30,6 +30,7 @@ const merged = {
   'aniimo-face-data-import': 'getting-started',
   'aniimo-currencies-and-shops': 'is-aniimo-free-to-play',
   'aniimo-controller-steam-deck-optimization': 'aniimo-language-controller-support',
+  'aniimo-launch-coverage-status': 'official-aniimo-dex-status',
 };
 for (const [old, destination] of Object.entries(merged)) {
   for (const slash of ['', '/']) assert(redirects.some(([from, to, status]) =>

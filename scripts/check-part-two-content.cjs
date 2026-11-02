@@ -36,6 +36,38 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const term of ['v1.1.3857679.0', 'Waterfall Climb', 'Touch the mysterious mechanism', 'Dewple', 'Gachapus', 'Variable Rate Shading', 'aniimo_support@aniimo.com', '562546073917327130', '2026-11-01', 'Steam Input', 'error107', 'Outpost']) assert(issues.includes(term), `${locale}: missing ${term}`);
   assert(issues.indexOf('Waterfall Climb') < issues.indexOf('Outpost'), `${locale}: current issue must precede historical recovery`);
   assert(!issues.includes('noindex'));
+  const twine = read(locale, 'guide/aniimo-twine-explained');
+  const homeGuide = read(locale, 'guide/aniimo-rv-homeland-guide');
+  const interlink = read(locale, 'guide/aniimo-holo-battle-interlink');
+  const coverage = read(locale, 'guide/official-aniimo-dex-status');
+  for (const [page, terms] of [
+    [twine, ['Hustle', 'Take Off', 'Cloudwalk', 'Floaty Bubble', 'Star Glide', '2026-10-23']],
+    [homeGuide, ['Magical Wonder Night', 'Act Seven: Festivals of Astra', 'Moonbeam Wheat', 'Home Coin', 'Wonder Sugar Crystal', 'Magic Pumpkin', 'Memory Lanternfruit', 'Glow Scooter']],
+    [interlink, ['Trailblazer I', 'AI', '687520329382238609']],
+    [coverage, ['86', '12', '2026-10-23', 'S1']],
+  ]) {
+    for (const term of terms) assert(page.includes(term), `${locale}: missing refreshed answer ${term}`);
+    assert(page.includes('2026-11-02'));
+    assert(!page.includes('noindex'));
+    for (const [, href] of page.matchAll(/href="(\/(?:en|zh-Hans|zh-Hant)\/[^"#?]+)"/g)) {
+      assert(require('node:fs').existsSync(`out${href}index.html`), `broken refreshed guide link ${href}`);
+    }
+  }
+  for (const term of ['any selected ability', '任意一项', '任意一項']) {
+    if (locale === (term === 'any selected ability' ? 'en' : term === '任意一项' ? 'zh-Hans' : 'zh-Hant')) assert(twine.includes(term));
+  }
+  assert(!twine.includes('Community dex mappings remain under review'));
+  assert(homeGuide.indexOf('Magical Wonder Night') < homeGuide.indexOf('1.0.3732728.0'));
+  assert(interlink.includes(locale === 'en' ? 'claimed manually' : locale === 'zh-Hans' ? '手动领取' : '手動領取'));
+  assert(!interlink.includes('Confirm Trailblazer I is unlocked and the UTC+8 weekly window is open'));
+  const home = read(locale, '');
+  const messagesForHome = require(`../messages/${locale}.json`);
+  assert(home.includes(messagesForHome.home.dataUpdatedDate));
+  assert(!/Checked September 14, 2026|2026 年 9 月 14 日核验|2026 年 9 月 14 日核驗/.test(home));
+  for (const slug of ['aniimo-version-1-1-update', 'aniimo-egg-heist', 'aniimo-prismana-potential-breeding-guide']) {
+    assert(home.indexOf(`href="/${locale}/guide/${slug}/"`) < home.indexOf('href="/' + locale + '/guide/aniimo-release-date/"'), `${locale}: current task hidden below launch navigation`);
+  }
+  assert(home.includes(messagesForHome.home.latestUpdateTitle));
   const growth = read(locale, 'guide/aniimo-version-1-1-update');
   const egg = read(locale, 'guide/aniimo-egg-heist');
   const items = read(locale, 'guide/aniimo-prismana-potential-breeding-guide');

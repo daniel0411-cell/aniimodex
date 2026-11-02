@@ -1,7 +1,107 @@
 import type { LaunchGuide } from '@/data/launch-guides';
+import { mobilityIndex } from '@/lib/mobility';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  if (slug === 'aniimo-twine-explained') return {
+    title: t('Aniimo Twine: Choose an Ability and Find Its Users', '伊莫 Twine：按探索能力寻找可用伊莫', '伊莫 Twine：按探索能力尋找可用伊莫'),
+    subtitle: t('Turn an exploration need into a shortlist using the published mobility records, then inspect the individual ability.', '从探索需求出发，用已公布的移动能力对应表筛选，再核对个体能力说明。', '從探索需求出發，用已公布的移動能力對應表篩選，再核對個體能力說明。'),
+    tag: 'Twine',
+    lead: t('Twine lets a Pathfinder become a collected Aniimo and use its abilities. To find a candidate for a route, start with the required action, not the creature’s element or combat skill name. The October 23 snapshot already contains official ability-to-creature mappings within its 86 Basic Form records; it is not a complete current-game list.', 'Twine 让玩家变为已收集伊莫并使用其能力。为路线选候选时，先明确需要的操作，不凭元素或战斗技能名称判断。10月23日的86个基础形态快照内已有官方能力对应关系，但并非当前游戏完整名单。', 'Twine 讓玩家變為已收集伊莫並使用其能力。為路線選候選時，先明確需要的操作，不憑元素或戰鬥技能名稱判斷。10月23日的86個基礎形態快照內已有官方能力對應關係，但並非目前遊戲完整名單。'),
+    body: [
+      { t: 'h', c: t('1. Check a published ability before choosing', '1. 先看已公布能力，再选候选', '1. 先看已公布能力，再選候選') },
+      { t: 'p', c: t('The examples below select four named abilities to compare different exploration actions; they are not a strength ranking or an exhaustive category list. Members and counts come from the same index as the ability directory and Twine lookup.', '下表选取四项具名能力，便于比较不同探索操作，不是强度排名或完整分类。成员和数量与能力目录、Twine 反查共用同一索引。', '下表選取四項具名能力，便於比較不同探索操作，不是強度排名或完整分類。成員和數量與能力目錄、Twine 反查共用同一索引。') },
+      { t: 'table', head: [t('Ability', '能力', '能力'), t('Indexed members', '已索引成员数', '已索引成員數'), t('Examples: first three by official number', '示例：按官方编号取前3个', '範例：按官方編號取前3個')], rows: ['Hustle', 'Take Off', 'Cloudwalk', 'Floaty Bubble'].flatMap(name => {
+        const group = mobilityIndex.find(group => group.name === name);
+        return group ? [[name, String(group.members.length), group.members.slice(0, 3).map(member => member.enName).join(' / ')]] : [];
+      }) },
+      { t: 'link', href: '/tools/twine', c: t('Choose abilities and view every matching indexed Aniimo', '选择能力，查看所有匹配的已索引伊莫', '選擇能力，查看所有符合的已索引伊莫') },
+      { t: 'h', c: t('2. Use the lookup without confusing any-match and all-match', '2. 区分匹配任一能力与同时满足', '2. 區分符合任一能力與同時滿足') },
+      { t: 'li', c: t('Select one named ability. Open a matching creature to read the mobility description and the published habitats before planning capture.', '先选一项具名能力，打开匹配个体，阅读移动能力说明与已公布栖息地后再规划捕获。', '先選一項具名能力，開啟符合個體，閱讀移動能力說明與已公布棲息地後再規劃捕獲。') },
+      { t: 'li', c: t('Selecting several abilities returns creatures matching any selected ability. It does not promise one creature has them all. For a multi-action route, inspect each candidate or compare a party in the team tool.', '多选返回具备任意一项所选能力的伊莫，不代表同一个体同时具备全部能力。多操作路线应逐个核对，或在组队工具比较全队覆盖。', '多選返回具備任意一項所選能力的伊莫，不代表同一個體同時具備全部能力。多操作路線應逐個核對，或在組隊工具比較全隊涵蓋範圍。') },
+      { t: 'li', c: t('An empty selection resets the lookup to all indexed entries; it is not a filter for missing mobility data. A missing field does not prove the ability is absent in the live game.', '不选能力会重置为所有已索引条目，不是筛选缺少移动能力的伊莫。字段为空不证明当前游戏没有该能力。', '不選能力會重設為所有已索引條目，不是篩選缺少移動能力的伊莫。欄位為空不證明目前遊戲沒有該能力。') },
+      { t: 'link', href: '/tools/team-builder', c: t('Compare which party members cover different actions', '比较不同队员分别覆盖哪些操作', '比較不同隊員分別涵蓋哪些操作') },
+      { t: 'h', c: t('3. Check the action, not a similar-sounding combat skill', '3. 核对操作，不只看相似技能名', '3. 核對操作，不只看相似技能名') },
+      { t: 'p', c: t('Hustle spends stamina for movement speed; it does not establish flight or swimming. Celestis has a combat skill named Star Glide, but its imported mobility field is empty: that name alone does not prove exploration gliding. Neither a habitat name nor a mobility label supplies coordinates, unlock requirements or guaranteed terrain access.', 'Hustle 是消耗体力提高移速，不能据此确认飞行或游泳。Celestis 虽有战斗技能 Star Glide，但导入的移动能力为空，名称本身不能证明探索滑翔。栖息地或移动能力标签也不能给出坐标、解锁条件或保证通过某种地形。', 'Hustle 是消耗體力提高移速，不能據此確認飛行或游泳。Celestis 雖有戰鬥技能 Star Glide，但匯入的移動能力為空，名稱本身不能證明探索滑翔。棲息地或移動能力標籤也不能給出座標、解鎖條件或保證通過某種地形。') },
+      { t: 'link', href: '/dex/005', c: t('Inspect Celestis: combat skills versus mobility evidence', '查看 Celestis：区分战斗技能与移动证据', '查看 Celestis：區分戰鬥技能與移動證據') },
+      { t: 'link', href: '/abilities', c: t('Read the ability directory and its snapshot scope', '查看能力目录及快照范围', '查看能力目錄及快照範圍') },
+      { t: 'quote', c: t('Editorial update: November 2, 2026. Mapping evidence remains the October 23 Wiki snapshot. No traversal route or unlock sequence was playtested here.', '编辑更新：2026年11月2日。对应关系仍依据10月23日 Wiki 快照，未实测地形路线或解锁顺序。', '編輯更新：2026年11月2日。對應關係仍依據10月23日 Wiki 快照，未實測地形路線或解鎖順序。') },
+    ],
+  };
+  if (slug === 'official-aniimo-dex-status') return {
+    title: t('AniimoDex Coverage: Available Answers and Data Limits', 'AniimoDex 资料覆盖：可用答案与数据边界', 'AniimoDex 資料涵蓋：可用答案與資料邊界'),
+    subtitle: t('Find the right database, tool or guide, and distinguish snapshot values from current announcements and unknowns.', '找到对应图鉴、工具或攻略，区分快照数值、当前公告与尚未确认的信息。', '找到對應圖鑑、工具或攻略，區分快照數值、目前公告與尚未確認的資訊。'),
+    tag: t('Data coverage', '资料覆盖', '資料涵蓋'),
+    lead: t('Choose the question you need answered below. The database contains 86 October 23 Basic Form records; selected guides cover the October 29 S1 Part 2 announcement. Updating a guide does not refresh every species record. Twelve unmatched August records remain explicitly historical and are excluded from current directories and comparisons.', '按下表选择问题。图鉴有10月23日的86个基础形态记录；部分攻略已整理10月29日 S1 后半段公告。攻略更新不等于每个物种数据同步刷新。12条8月未匹配记录明确标为历史，并排除在当前目录与比较之外。', '按下表選擇問題。圖鑑有10月23日的86個基礎形態紀錄；部分攻略已整理10月29日 S1 後半段公告。攻略更新不等於每個物種資料同步重新整理。12條8月未符合紀錄明確標為歷史，並排除在目前目錄與比較之外。'),
+    body: [
+      { t: 'h', c: t('1. What can I do now?', '1. 现在可以完成什么？', '1. 現在可以完成什麼？') },
+      { t: 'table', head: [t('Question', '问题', '問題'), t('Available answer', '可用答案', '可用答案'), t('Boundary', '边界', '邊界')], rows: [
+        [t('Compare creatures', '比较伊莫', '比較伊莫'), t('Six attributes, skill Type/Cost/Power, roles and linked families on 86 records.', '86条记录的六项属性、技能 Type／Cost／Power、定位与关联家族。', '86條紀錄的六項屬性、技能 Type／Cost／Power、定位與關聯家族。'), t('Basic Form snapshot, not level-adjusted stats or a complete Part 2 roster.', '基础形态快照，不是等级换算数值或完整后半段名单。', '基礎形態快照，不是等級換算數值或完整後半段名單。')],
+        [t('Find an exploration ability', '寻找探索能力', '尋找探索能力'), t('Ability-to-creature lookup, habitat groups and party mobility coverage.', '能力对应反查、栖息地分组与全队移动能力覆盖。', '能力對應反查、棲息地分組與全隊移動能力涵蓋。'), t('Missing fields are unknown; no guaranteed spawn coordinates.', '字段缺失表示未知，不保证出现坐标。', '欄位缺失表示未知，不保證出現座標。')],
+        [t('Estimate capture', '估算捕获', '估算捕獲'), t('October 27 disclosure: field, battle and boss models with explicit assumptions.', '10月27日公示：野外、战斗与 Boss 的条件模型。', '10月27日公示：野外、戰鬥與 Boss 的條件模型。'), t('Unknown required inputs block a numeric result; not a measured species success rate.', '必要输入未知时不输出数字，不是物种实测成功率。', '必要輸入未知時不輸出數字，不是物種實測成功率。')],
+        [t('Plan Part 2 activities', '规划后半段活动', '規劃後半段活動'), t('Server-specific rotation calendar, growth gates and mode/item comparisons.', '分服轮换表、成长门槛与模式／道具对照。', '分服輪換表、成長門檻與模式／道具對照。'), t('Announcement evidence, not live server monitoring or gameplay tests.', '依据公告，不是实时服务器监控或玩法实测。', '依據公告，不是即時伺服器監控或玩法實測。')],
+      ] },
+      { t: 'link', href: '/dex', c: t('Search and compare the indexed Basic Form records', '检索与比较已索引基础形态', '檢索與比較已索引基礎形態') },
+      { t: 'link', href: '/tools/twine', c: t('Find a creature by the ability you need', '按需要的能力寻找候选', '按需要的能力尋找候選') },
+      { t: 'link', href: '/guide/aniimo-catching-guide', c: t('Compare capture assumptions with worked examples', '通过具体例子比较捕获条件', '透過具體範例比較捕獲條件') },
+      { t: 'link', href: '/guide/aniimo-prismana-event-tracker', c: t('Choose the correct server calendar', '选择对应服务器排期', '選擇對應伺服器排期') },
+      { t: 'h', c: t('2. What remains outside this coverage?', '2. 哪些仍不在覆盖范围内？', '2. 哪些仍不在涵蓋範圍內？') },
+      { t: 'p', c: t('Part 2 additions and alternate-form attributes are not fully indexed. Six unresolved evolution trees are withheld rather than guessed. A Wiki habitat is not a verified encounter route; form names do not establish stat changes, breeding recipes or an optimal team. The community element chart keeps disputed cells unknown and excludes affected numeric comparisons.', '后半段新增伊莫与其他形态数值尚未完整索引；6棵未完全匹配的进化树不猜测发布。Wiki 栖息地不是已实测遭遇路线；形态名称不能证明数值变化、繁育配方或最优队伍。社区元素表对有争议格子保留未知，并排除受影响的数值比较。', '後半段新增伊莫與其他形態數值尚未完整索引；6棵未完全符合的進化樹不猜測發布。Wiki 棲息地不是已實測遭遇路線；形態名稱不能證明數值變化、繁育配方或最佳隊伍。社群元素表對有爭議格子保留未知，並排除受影響的數值比較。') },
+      { t: 'link', href: '/guide/aniimo-version-1-1-update', c: t('Use the sourced growth checklist without assuming the whole Dex is updated', '使用有依据的成长清单，并区分图鉴覆盖', '使用有依據的成長清單，並區分圖鑑涵蓋') },
+      { t: 'h', c: t('3. How do I check a claim or report a correction?', '3. 如何核对结论或反馈更正？', '3. 如何核對結論或回報更正？') },
+      { t: 'p', c: t('Read the individual page’s source dates and named scope. Editorial dates mark material page changes; they do not relabel an older snapshot as today’s data. Corrections should include the affected page, the disputed claim and a relevant official notice or reproducible record. A tested recommendation requires its game version and observations, not a source badge alone.', '查看具体页面的来源日期和范围。编辑日期表示页面有实质修改，不会把旧快照改称当天数据。反馈请附页面、争议结论与对应官方公告或可复现记录。实测推荐需要版本与观察记录，不能只靠来源标记。', '查看具體頁面的來源日期和範圍。編輯日期表示頁面有實質修改，不會把舊快照改稱當天資料。回報請附頁面、爭議結論與對應官方公告或可重現紀錄。實測推薦需要版本與觀察紀錄，不能只靠來源標記。') },
+      { t: 'link', href: '/guide/how-we-verify', c: t('Check evidence labels and the verification method', '查看证据标注与核验方法', '查看證據標註與核驗方法') },
+      { t: 'link', href: '/contact', c: t('Send a factual correction', '反馈事实更正', '回報事實更正') },
+      { t: 'quote', c: t('Coverage guide updated November 2, 2026. Use the linked pages for available answers and check each source date; current-game species and form coverage remains incomplete.', '资料覆盖页更新于2026年11月2日。请通过对应链接查找答案并核对来源日期；当前游戏物种与形态资料仍未完整覆盖。', '資料涵蓋頁更新於2026年11月2日。請透過對應連結查找答案並核對來源日期；目前遊戲物種與形態資料仍未完整涵蓋。') },
+    ],
+  };
+  if (slug === 'aniimo-rv-homeland-guide') return {
+    title: t('Aniimo Home: Magical Wonder Night Entry & Season Changes', '伊莫家园：Magical Wonder Night 入口与换季清单', '伊莫家園：Magical Wonder Night 入口與換季清單'),
+    subtitle: t('Check RV level, the tutorial quest, old-currency conversion and blueprint changes before planting or exchanging.', '种植或兑换前，核对房车等级、教程任务、旧货币转换与蓝图变化。', '種植或兌換前，核對房車等級、教學任務、舊貨幣轉換與藍圖變化。'),
+    tag: t('Home season', '家园换季', '家園換季'),
+    lead: t('The October 29 update replaces Harvest Moon Festival with Magical Wonder Night. Start by checking RV level 10 and Act Seven: Festivals of Astra. Do not plan current purchases around the old October 20–21 Harvest Gathering schedule or assume old seeds still plant normally.', '10月29日更新将丰收季切换为 Magical Wonder Night。先核对房车10级与 Act Seven: Festivals of Astra；当前兑换不应沿用10月20–21日丰收聚会排期，也不能假设旧种子仍可正常种植。', '10月29日更新將豐收季切換為 Magical Wonder Night。先核對房車10級與 Act Seven: Festivals of Astra；目前兌換不應沿用10月20–21日豐收聚會排期，也不能假設舊種子仍可正常種植。'),
+    body: [
+      { t: 'h', c: t('1. Confirm access and your server clock', '1. 核对入口与服务器时间', '1. 核對入口與伺服器時間') },
+      { t: 'p', c: t('The announced requirement is RV level 10 plus completion of Act Seven: Festivals of Astra. The season runs after the update to December 10 at 03:59, using Europe UTC+0, Americas UTC-4 and APAC UTC+8 respectively. Check the current in-game panel for amendments; an unlocked season does not mean every later-stage event is already open.', '公告要求房车10级，并完成 Act Seven: Festivals of Astra。赛季从更新后至12月10日03:59，分别使用欧洲 UTC+0、美洲 UTC-4、亚太 UTC+8。变更以所在服当前面板为准；赛季已开不代表所有阶段活动同时开放。', '公告要求房車10級，並完成 Act Seven: Festivals of Astra。賽季從更新後至12月10日03:59，分別使用歐洲 UTC+0、美洲 UTC-4、亞太 UTC+8。變更以所在服目前面板為準；賽季已開不代表所有階段活動同時開放。') },
+      { t: 'h', c: t('2. Identify what changed before spending', '2. 消耗前区分换季变化', '2. 消耗前區分換季變化') },
+      { t: 'table', head: [t('Item / goal', '物品／目标', '物品／目標'), t('Announced change', '公告变化', '公告變化'), t('Practical check', '实际核对', '實際核對')], rows: [
+        ['Moonbeam Wheat / Moondew Radish Seeds / Waxing Moon Pepper Seeds', t('Converted to Home Coin after the season change.', '换季后转换为 Home Coin。', '換季後轉換為 Home Coin。'), t('Check converted inventory before treating a missing old seed as lost progress. No conversion ratio is established here.', '先查转换后库存，再判断旧种子是否丢失；本页未确认换算比例。', '先查轉換後庫存，再判斷舊種子是否遺失；本頁未確認換算比例。')],
+        ['Waxing Moondew', t('Converted to Wonder Sugar Crystal.', '转换为 Wonder Sugar Crystal。', '轉換為 Wonder Sugar Crystal。'), t('Compare the new exchange material, not the old crop currency.', '核对新兑换材料，不沿用旧作物货币。', '核對新兌換材料，不沿用舊作物貨幣。')],
+        ['Harvest Moon Set', t('Removed from the season shop; a future return is announced without a date.', '从赛季商店移除；公告会在未来回归，未给日期。', '從賽季商店移除；公告會在未來回歸，未給日期。'), t('Do not describe it as permanently exclusive or currently purchasable.', '不能称为永久绝版或当前可买。', '不能稱為永久絕版或目前可買。')],
+        ['Magic Pumpkin / Memory Lanternfruit', t('New magical crops with mutated forms for the Index.', '新魔法作物，可发现变异形态点亮索引。', '新魔法作物，可發現變異形態點亮索引。'), t('Check current crop tasks; old mutation bonuses are not automatically carried over.', '对照当前作物任务，不能默认旧变异增益延续。', '對照目前作物任務，不能預設舊變異增益延續。')],
+        ['Wonder Dailies / Nighttime Gathering / Pumpkin God’s Thank-You Gift', t('Open gradually with season stages.', '按赛季阶段逐步开放。', '按賽季階段逐步開放。'), t('Read the stage lock and timer before treating an unavailable entry as a bug.', '先看阶段锁与倒计时，再判断无入口是否故障。', '先看階段鎖與倒數計時，再判斷無入口是否故障。')],
+      ] },
+      { t: 'h', c: t('3. Separate building changes from season requirements', '3. 区分建造更新与赛季门槛', '3. 區分建造更新與賽季門檻') },
+      { t: 'p', c: t('The update adds RV levels, a three-story structure, full skin replacement, weather, full Home blueprint application and blueprint-code sharing. This does not publish every roof limit, material quantity or a best production layout. Inspect a blueprint’s required furniture and the displayed cost before acquiring items. Glow Scooter is a separate RV level 20 reward, used from Social Panel - Vehicles; it is not the level 10 season-entry requirement.', '更新增加房车等级、三层结构、整车换肤、天气、完整家园蓝图应用与蓝图码分享，但没有给出全部屋顶限制、材料数量或最优生产布局。使用蓝图前核对所需家具与界面费用。Glow Scooter 是单独的房车20级奖励，在 Social Panel - Vehicles 使用，不是10级赛季入口条件。', '更新增加房車等級、三層結構、整車換膚、天氣、完整家園藍圖套用與藍圖碼分享，但沒有給出全部屋頂限制、材料數量或最佳生產佈局。使用藍圖前核對所需家具與介面費用。Glow Scooter 是單獨的房車20級獎勵，在 Social Panel - Vehicles 使用，不是10級賽季入口條件。') },
+      { t: 'h', c: t('4. Missing items or an unavailable activity?', '4. 物品缺失或活动没入口？', '4. 物品缺失或活動沒入口？') },
+      { t: 'p', c: t('Record client version, server, RV level, completed tutorial and the exact missing item or stage. Compare the conversion table and stage timer first. For missing models, leave and re-enter Home once, then capture the layout and report the symptom; do not delete buildings or buy replacements just to test a guess.', '记录版本、服务器、房车等级、教程完成情况与准确缺失物品或阶段。先对照转换表和阶段计时。模型缺失可离开再进入家园一次，仍异常则截图布局并反馈；不要为试错删除建筑或重复购买。', '記錄版本、伺服器、房車等級、教學完成情況與準確缺失物品或階段。先對照轉換表和階段計時。模型缺失可離開再進入家園一次，仍異常則截圖佈局並回報；不要為試錯刪除建築或重複購買。') },
+      { t: 'link', href: '/guide/aniimo-launch-checklist-known-issues', c: t('Match a symptom to a dated fix or official support', '按症状查看带日期修复与官方支持', '按症狀查看帶日期修正與官方支援') },
+      { t: 'link', href: '/guide/aniimo-harvest-gathering-farm-guide', c: t('Historical Harvest Gathering schedule and its limits', '历史丰收聚会排期与适用边界', '歷史豐收聚會排期與適用邊界') },
+      { t: 'quote', c: t('Reviewed November 2, 2026 against the October 27 announcement for October 29. October 15 v1.0.3732728.0 is historical and does not establish current crop bonuses. No planting loop, blueprint purchase or conversion payout was playtested.', '2026年11月2日核对10月27日发布的10月29日公告。10月15日 v1.0.3732728.0 是历史依据，不能确认当前作物增益。未实测种植循环、蓝图购买或转换到账。', '2026年11月2日核對10月27日發布的10月29日公告。10月15日 v1.0.3732728.0 是歷史依據，不能確認目前作物增益。未實測種植循環、藍圖購買或轉換到帳。') },
+    ],
+  };
+  if (slug === 'aniimo-holo-battle-interlink') return {
+    title: t('Aniimo Holo-Battle Interlink: Pick a Route & Claim Stars', '伊莫 Holo-Battle Interlink：选路线与领取星级奖励', '伊莫 Holo-Battle Interlink：選路線與領取星級獎勵'),
+    subtitle: t('Use the Part 2 independent routes, solo/team options and manual reward checks without inventing a best lineup.', '按后半段独立路线、单人／组队入口与手动领奖规则规划周常。', '按後半段獨立路線、單人／組隊入口與手動領獎規則規劃週常。'),
+    tag: t('Weekly mode', '每周模式', '每週模式'),
+    lead: t('After October 29, left, middle and right paths are independent gameplay instances. Choose the path you need, inspect its current mechanics, and claim the phase’s star rewards manually. The older four-player summary alone no longer describes every entry option.', '10月29日后，左、中、右路为独立玩法副本。先选需要的路线、阅读当期机制，完成后手动领取本期星级奖励；旧版四人合作概述不能完整代表现有入口。', '10月29日後，左、中、右路為獨立玩法副本。先選需要的路線、閱讀當期機制，完成後手動領取本期星級獎勵；舊版四人合作概述不能完整代表現有入口。'),
+    body: [
+      { t: 'h', c: t('1. Check weekly access before forming a party', '1. 组队前核对开放条件', '1. 組隊前核對開放條件') },
+      { t: 'p', c: t('Trailblazer I remains the announced title requirement. The October 29 notice lists Thursday 04:00 to the following Monday 03:59. This segment does not explicitly label separate server timezones; verify the timer in your server interface instead of assuming UTC+8 applies worldwide.', '公告条件仍为 Trailblazer I；10月29日公告列每周四04:00至下周一03:59。该段未明确逐服时区，请核对所在服界面倒计时，不把 UTC+8 套用到全球。', '公告條件仍為 Trailblazer I；10月29日公告列每週四04:00至下週一03:59。該段未明確逐服時區，請核對所在服介面倒數計時，不把 UTC+8 套用到全球。') },
+      { t: 'h', c: t('2. Match the path to the job', '2. 按目标选择路线', '2. 按目標選擇路線') },
+      { t: 'table', head: [t('Before / after a run', '开打前／结束后', '開打前／結束後'), t('Part 2 rule', '后半段规则', '後半段規則'), t('Action', '操作检查', '操作檢查')], rows: [
+        [t('Choose a path', '选择路线', '選擇路線'), t('Left, middle and right are independent; each supports matching, team or solo entry.', '左、中、右路独立，可分别匹配、组队或单人进入。', '左、中、右路獨立，可分別配對、組隊或單人進入。'), t('Confirm the selected path with teammates, rather than assuming one queue covers all three.', '与队友核对选中路线，不假设一次排队涵盖三路。', '與隊友核對選中路線，不假設一次排隊涵蓋三路。')],
+        [t('Read the encounter', '阅读遭遇机制', '閱讀遭遇機制'), t('New Alphas and environmental effects, adjusted phase buffs and reset season buffs.', '新增 Alpha 与环境效果、调整本期增益并重置赛季增益。', '新增 Alpha 與環境效果、調整本期增益並重設賽季增益。'), t('Read the current panel before reusing an old lineup or buff plan.', '沿用旧队伍或增益方案前，先读当前面板。', '沿用舊隊伍或增益方案前，先讀目前面板。')],
+        [t('Check star progress', '查看星级进度', '查看星級進度'), t('Each path retains its own highest star rating; extra stars and total-star rewards were updated.', '各路分别记录最高星级，并新增额外星级、更新总星奖励。', '各路分別記錄最高星級，並新增額外星級、更新總星獎勵。'), t('Compare the missing stars per path with the current milestone, not an older fixed reward table.', '对照各路缺星与当前里程碑，不沿用旧固定奖励表。', '對照各路缺星與目前里程碑，不沿用舊固定獎勵表。')],
+        [t('Claim rewards', '领取奖励', '領取獎勵'), t('Each phase’s star rewards must now be claimed manually.', '本期星级奖励现在需要手动领取。', '本期星級獎勵現在需要手動領取。'), t('Open the reward panel after improving stars; completion alone does not confirm delivery.', '提升星级后打开领奖面板，完成挑战不等于已到账。', '提升星級後開啟領獎面板，完成挑戰不等於已到帳。')],
+      ] },
+      { t: 'h', c: t('3. A teammate left or rewards look missing?', '3. 队友离开或奖励似乎缺失？', '3. 隊友離開或獎勵似乎缺失？') },
+      { t: 'p', c: t('The new notice adds AI assistance when someone leaves during preparation; it does not promise every mid-battle disconnect is replaced. For a reward report, record the path, phase, highest stars and manual-claim screen. Check the selected route and claim state before assuming a lost reward.', '新公告说明准备阶段有人离开时加入 AI 协助，不保证所有战斗中断线都会补位。反馈奖励问题时记录路线、本期、最高星级与手动领取界面；先核对路线和领取状态，再判断是否丢失。', '新公告說明準備階段有人離開時加入 AI 協助，不保證所有戰鬥中斷線都會補位。回報獎勵問題時記錄路線、本期、最高星級與手動領取介面；先核對路線和領取狀態，再判斷是否遺失。') },
+      { t: 'link', href: '/guide/aniimo-team-composition', c: t('Compare published roles and mobility without a fabricated best build', '按已公布定位与移动能力比较队伍', '按已公布定位與移動能力比較隊伍') },
+      { t: 'link', href: '/guide/aniimo-launch-checklist-known-issues', c: t('Report a reproducible current-version issue', '反馈可复现的当前版本问题', '回報可重現的目前版本問題') },
+      { t: 'quote', c: t('Reviewed November 2, 2026 using the October 27 announcement for October 29. No live-cycle Alpha list, numeric milestone payouts, optimal party or combat route was tested. September rules remain historical source context, not proof of every current option.', '2026年11月2日核对10月27日发布的10月29日公告。未实测当期 Alpha 名单、具体里程碑奖励、最优队伍或战斗路线。9月规则只作历史来源，不代表现有全部选项。', '2026年11月2日核對10月27日發布的10月29日公告。未實測當期 Alpha 名單、具體里程碑獎勵、最佳隊伍或戰鬥路線。9月規則只作歷史來源，不代表現有全部選項。') },
+    ],
+  };
   if (slug === 'aniimo-version-1-1-update') return {
     title: t('Aniimo S1 Part 2: Whisperwake Unlock & Level 60–70 Checklist', '伊莫 S1 后半段：Whisperwake 解锁与60–70级成长清单', '伊莫 S1 後半段：Whisperwake 解鎖與60–70級成長清單'),
     subtitle: t('Find the next progression gate: island story, title assessment, Ascension or Resonance Star Up.', '区分岛屿剧情、称号考核、Ascension 与 Resonance Star Up，找到下一步成长条件。', '區分島嶼劇情、稱號考核、Ascension 與 Resonance Star Up，找到下一步成長條件。'),

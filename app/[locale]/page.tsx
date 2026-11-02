@@ -59,9 +59,9 @@ const guideImages: Record<(typeof guideSlugs)[number], string> = {
   'aniimo-crossplay-cross-save': '/images/guides/game-info.jpg',
 };
 const launchFeatureSlugs = [
-  'aniimo-launch-checklist-known-issues',
-  'how-to-download-aniimo',
-  'is-aniimo-a-gacha-game',
+  'aniimo-version-1-1-update',
+  'aniimo-egg-heist',
+  'aniimo-prismana-potential-breeding-guide',
 ] as const;
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -210,6 +210,32 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+      <section>
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+          <div>
+            <p className="text-xs font-semibold uppercase text-emerald-700">S1 Part 2</p>
+            <h2 className="mt-1 text-2xl font-bold text-text-primary">
+              {locale === 'en' ? 'Choose your next progression or item decision' : locale === 'zh-Hant' ? '找到下一步成長與道具選擇' : '找到下一步成长与道具选择'}
+            </h2>
+          </div>
+          <Link href="/guide/aniimo-prismana-event-tracker" className="text-sm font-semibold text-primary-light">
+            {th('latestUpdateTitle')} →
+          </Link>
+        </div>
+        <div className="grid gap-3 md:grid-cols-3">
+          {launchFeatureSlugs.map((slug) => {
+            const guide = getLaunchGuide(locale, slug);
+            return (
+              <Link key={slug} href={`/guide/${slug}`} className="border-t-4 border-secondary bg-emerald-50 p-5">
+                <span className="text-xs font-semibold uppercase text-emerald-700">{guide?.tag ?? t(`guide.posts.${slug}.tag`)}</span>
+                <h3 className="mt-2 text-lg font-bold text-text-primary">{guide?.title ?? t(`guide.posts.${slug}.title`)}</h3>
+                <p className="mt-2 text-sm leading-6 text-text-secondary">{guide?.subtitle ?? t(`guide.posts.${slug}.subtitle`)}</p>
+                <span className="mt-4 inline-flex text-sm font-semibold text-primary-light">{th('readGuide')} →</span>
+              </Link>
+            );
+          })}
         </div>
       </section>
       <section>
@@ -390,10 +416,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           platforms: th('launchTasks.platforms'),
         }}
       />
-      <section className="border-b border-ink-border py-5">
-        <h2 className="text-lg font-bold text-text-primary">
+      <details className="border-b border-ink-border py-5">
+        <summary className="cursor-pointer text-lg font-bold text-text-primary">
           {locale === 'en' ? 'Patch archive: October 15' : locale === 'zh-Hant' ? '歷史補丁：10 月 15 日' : '历史补丁：10 月 15 日'}
-        </h2>
+        </summary>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">
           {locale === 'en'
             ? 'Patch 1.0.3732728.0 recorded Egg Heist, Home, controller and console fixes, a Harvest Gathering opening schedule for October 20–21 and a Batlock Holmes shop release for October 16. These dates are past; this archive does not confirm current event access, shop stock or unresolved bugs. Use the guides below for dated evidence and troubleshooting.'
@@ -408,44 +434,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Link href="/guide/aniimo-language-controller-support">{locale === 'en' ? 'Controller and Steam Deck help' : locale === 'zh-Hant' ? '手柄與 Steam Deck 排查' : '手柄与 Steam Deck 排查'} →</Link>
           <Link href="/guide/aniimo-progress-account-safety">{locale === 'en' ? 'Account and progress help' : locale === 'zh-Hant' ? '帳號與進度處理' : '账号与进度处理'} →</Link>
         </nav>
-      </section>
-      <section className="border-y border-emerald-200 bg-emerald-50 px-5 py-7 sm:px-8">
-        <div className="mb-5">
-          <p className="text-xs font-semibold uppercase text-emerald-700">Launch guides</p>
-          <h2 className="mt-1 text-2xl font-bold text-text-primary">
-            {locale === 'en'
-              ? 'Start with verified launch information'
-              : locale === 'zh-Hant'
-                ? '從已核驗的首發資料開始'
-                : '从已核验的首发资料开始'}
-          </h2>
-        </div>
-        <div className="grid gap-3 md:grid-cols-3">
-          {launchFeatureSlugs.map((slug) => {
-            const guide = getLaunchGuide(locale, slug);
-            return (
-              <Link
-                key={slug}
-                href={`/guide/${slug}`}
-                className="border-t-4 border-secondary bg-white p-5"
-              >
-                <span className="text-xs font-semibold uppercase text-emerald-700">
-                  {guide?.tag ?? t(`guide.posts.${slug}.tag`)}
-                </span>
-                <h3 className="mt-2 text-lg font-bold text-text-primary">
-                  {guide?.title ?? t(`guide.posts.${slug}.title`)}
-                </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-6 text-text-secondary">
-                  {guide?.subtitle ?? t(`guide.posts.${slug}.subtitle`)}
-                </p>
-                <span className="mt-4 inline-flex text-sm font-semibold text-primary-light">
-                  {th('readGuide')} →
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
+      </details>
       <section className="border-t-4 border-secondary bg-emerald-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
         <div>
           <p className="text-xs font-semibold uppercase text-emerald-700">
@@ -457,7 +446,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </p>
         </div>
         <Link
-          href="/guide/official-aniimo-dex-status"
+          href="/guide/aniimo-prismana-event-tracker"
           className="mt-4 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0"
         >
           {th('viewUpdate')} →

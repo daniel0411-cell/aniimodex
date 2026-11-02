@@ -31,6 +31,14 @@
 
 # 旧路由迁移（多语言后所有路径带 locale 前缀）：
 # Consolidated task guides, before the unlocalized guide wildcard.
+/en/guide/aniimo-launch-coverage-status  /en/guide/official-aniimo-dex-status/  301
+/en/guide/aniimo-launch-coverage-status/  /en/guide/official-aniimo-dex-status/  301
+/zh-Hans/guide/aniimo-launch-coverage-status  /zh-Hans/guide/official-aniimo-dex-status/  301
+/zh-Hans/guide/aniimo-launch-coverage-status/  /zh-Hans/guide/official-aniimo-dex-status/  301
+/zh-Hant/guide/aniimo-launch-coverage-status  /zh-Hant/guide/official-aniimo-dex-status/  301
+/zh-Hant/guide/aniimo-launch-coverage-status/  /zh-Hant/guide/official-aniimo-dex-status/  301
+/guide/aniimo-launch-coverage-status  /en/guide/official-aniimo-dex-status/  301
+/guide/aniimo-launch-coverage-status/  /en/guide/official-aniimo-dex-status/  301
 /en/guide/aniimo-face-data-import  /en/guide/getting-started/  301
 /en/guide/aniimo-face-data-import/  /en/guide/getting-started/  301
 /zh-Hans/guide/aniimo-face-data-import  /zh-Hans/guide/getting-started/  301

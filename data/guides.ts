@@ -187,11 +187,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-twine-explained',
+    updatedAt: '2026-11-02',
     date: '2026-08-30',
     readMinutes: 5,
     relatedToolHrefs: ['/tools/twine'],
     relatedSlugs: ['what-is-aniimo', 'aniimo-catching-guide'],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-playstation-10018491'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-playstation-10018491', 'aniimo-official-wiki-basic-2026-10-23'],
   },
   {
     slug: 'aniimo-catching-guide',
@@ -243,6 +244,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-rv-homeland-guide',
+    updatedAt: '2026-11-02',
     date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
@@ -254,12 +256,14 @@ export const guidePosts: GuidePost[] = [
     sourceIds: [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-update-1-1-2026-09-23',
+      'aniimo-s1-part-two-2026-10-27',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
       'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {
     slug: 'aniimo-holo-battle-interlink',
+    updatedAt: '2026-11-02',
     date: '2026-09-28',
     readMinutes: 6,
     relatedSlugs: [
@@ -268,7 +272,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-team-composition',
       'aniimo-version-1-1-update',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-prismana-event-tracker',
@@ -300,12 +304,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'official-aniimo-dex-status',
-    updatedAt: '2026-10-23',
+    updatedAt: '2026-11-02',
     date: '2026-08-30',
     readMinutes: 5,
-    relatedToolHrefs: ['/dex'],
-    relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-launch-coverage-status'],
-    sourceIds: ['aniimo-official-wiki-basic-2026-10-23'],
+    relatedToolHrefs: ['/dex', '/tools/twine', '/tools/catch'],
+    relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-prismana-event-tracker'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23', 'aniimo-official-catch-disclosure-2026-10-27', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-launch-time-preload',
@@ -404,6 +408,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-coverage-status',
+    published: false,
     date: '2026-09-21',
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
@@ -652,6 +657,7 @@ function resolveRelatedGuides(post: GuidePost): GuidePost {
     'aniimo-face-data-import': 'getting-started',
     'aniimo-currencies-and-shops': 'is-aniimo-free-to-play',
     'aniimo-controller-steam-deck-optimization': 'aniimo-language-controller-support',
+    'aniimo-launch-coverage-status': 'official-aniimo-dex-status',
   };
   return { ...post, relatedSlugs: post.relatedSlugs
     ? [...new Set(post.relatedSlugs.map((slug) => merged[slug] ?? slug))].filter((slug) => slug !== post.slug)

@@ -112,7 +112,6 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         'aniimo-choose-by-mobility-role',
         'aniimo-launch-watchlist',
         'official-aniimo-dex-status',
-        'aniimo-launch-coverage-status',
       ],
     },
   ];
