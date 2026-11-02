@@ -135,6 +135,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-mobile',
+    updatedAt: '2026-11-02',
     date: '2026-09-29',
     readMinutes: 5,
     relatedSlugs: [
@@ -214,10 +215,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-multiplayer',
+    updatedAt: '2026-11-02',
     date: '2026-09-20',
     readMinutes: 5,
     relatedSlugs: ['aniimo-egg-heist', 'aniimo-crossplay-cross-save', 'aniimo-platforms'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-s1-part-two-2026-10-27', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-egg-heist',
@@ -297,10 +299,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-system-requirements',
+    updatedAt: '2026-11-02',
     date: '2026-09-16',
     readMinutes: 4,
     relatedSlugs: ['aniimo-platforms', 'aniimo-crossplay-cross-save'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-epic-759396'],
+    sourceIds: ['aniimo-steam-4126040', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-epic-759396', 'aniimo-access-routes-2026-10-23'],
   },
   {
     slug: 'official-aniimo-dex-status',
@@ -356,6 +359,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-progress-account-safety',
+    updatedAt: '2026-11-02',
     date: '2026-10-11',
     readMinutes: 6,
     relatedSlugs: [
@@ -470,6 +474,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-choose-by-mobility-role',
+    updatedAt: '2026-11-02',
     date: '2026-10-13',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/twine'],
@@ -487,6 +492,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-team-composition',
+    updatedAt: '2026-11-02',
     date: '2026-10-14',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/abilities', '/tools/type-chart', '/tools/catch'],
@@ -525,7 +531,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-dev-dispatch-roadmap',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-02',
     date: '2026-10-13',
     readMinutes: 7,
     relatedToolHrefs: ['/dex'],

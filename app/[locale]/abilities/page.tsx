@@ -41,12 +41,12 @@ export default async function AbilitiesPage({ params }: { params: Promise<{ loca
       </section>
       <section className="border-t border-ink-border pt-8">
         <h2 className="text-xl font-bold text-text-primary">{t('traitsTitle')}</h2>
-        <p className="mb-4 mt-2 text-sm text-text-secondary">{t('traitsDescription')}</p>
+        <p className="mb-4 mt-2 text-sm text-text-secondary">{t('traitsDescription', { count: traitGroups.length })}</p>
         <SkillDirectory groups={traitGroups.map(([name, group]) => ({ name, ...group }))} labels={{ search: t('searchTraits'), empty: t('empty'), count: t('count', { count: '{count}' }), initial: t('initial', { count: 24 }) }} />
       </section>
       <section className="border-t border-ink-border pt-8">
         <h2 className="text-xl font-bold text-text-primary">{t('skillsTitle')}</h2>
-        <p className="mb-4 mt-2 text-sm text-text-secondary">{t('skillsDescription')}</p>
+        <p className="mb-4 mt-2 text-sm text-text-secondary">{t('skillsDescription', { count: combatSkillGroups.length })}</p>
         <SkillDirectory groups={combatSkillGroups.map(([name, group]) => ({ name, ...group }))} labels={{ search: t('searchSkills'), empty: t('empty'), count: t('count', { count: '{count}' }), initial: t('initial', { count: 24 }) }} />
       </section>
       <section className="border-t border-ink-border pt-8">

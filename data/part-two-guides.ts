@@ -1,8 +1,79 @@
 import type { LaunchGuide } from '@/data/launch-guides';
 import { mobilityIndex } from '@/lib/mobility';
+import { getAllAniimos } from '@/lib/aniimo';
+import { ELEMENTS } from '@/lib/aniimo-ui';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  if (slug === 'aniimo-team-composition') {
+    const entries = getAllAniimos();
+    const covered = entries.filter(entry => entry.mobility.length > 0).length;
+    return {
+      title: t('Aniimo Team Composition: Compare Roles and Exploration Tasks', '伊莫队伍搭配：按定位与探索任务比较候选', '伊莫隊伍搭配：按定位與探索任務比較候選'),
+      subtitle: t('Shortlist a documented ability, compare roles and elements, then check what the four-slot planning tool can establish.', '先找明确能力，再比较定位与元素，并核对四槽规划工具的结果范围。', '先找明確能力，再比較定位與元素，並核對四槽規劃工具的結果範圍。'),
+      tag: t('Team planning', '队伍规划', '隊伍規劃'),
+      lead: t(`Start with a task rather than the highest ATK. These counts use ${entries.length} Basic Form records from October 23; they describe the indexed roster, not a full current-game census or tested best team.`, `先确定任务，不只比较 ATK。以下统计来自10月23日的${entries.length}条基础形态记录，描述的是已索引范围，不是当前完整名单或实测最优队伍。`, `先確定任務，不只比較 ATK。以下統計來自10月23日的${entries.length}條基礎形態紀錄，描述的是已索引範圍，不是目前完整名單或實測最佳隊伍。`),
+      body: [
+        { t: 'h', c: t('1. Compare published roles without turning counts into rankings', '1. 比较已公布定位，不把人数当强度', '1. 比較已公布定位，不把人數當強度') },
+        { t: 'table', head: [t('Role', '定位', '定位'), t('Indexed records', '已索引数', '已索引數')], rows: ['DPS', 'Break', 'Support', 'Regen', 'Heal'].map(role => [role, String(entries.filter(entry => entry.officialRole === role).length)]) },
+        { t: 'p', c: t('A Support label alone does not prove healing; a Break label does not publish stagger speed or a capture bonus. Read the individual skills and their trigger conditions. The October 13 developer explanation warns against judging non-DPS damage by displayed ATK alone; it does not supply a complete current damage formula.', 'Support 标签不等于必定能治疗，Break 标签也没有给出破防速度或捕获加成。需要查看个体技能及触发条件。10月13日开发者说明提示不能仅按显示 ATK 判断非 DPS 伤害，但没有提供完整现行伤害公式。', 'Support 標籤不等於必定能治療，Break 標籤也沒有給出破防速度或捕獲加成。需要查看個體技能及觸發條件。10月13日開發者說明提示不能僅按顯示 ATK 判斷非 DPS 傷害，但沒有提供完整現行傷害公式。') },
+        { t: 'link', href: '/guide/aniimo-roles-explained', c: t('Open examples for each role', '查看各定位的具体候选', '查看各定位的具體候選') },
+        { t: 'h', c: t('2. Compare elements using the same snapshot', '2. 使用同一快照比较元素', '2. 使用同一快照比較元素') },
+        { t: 'table', head: [t('Element', '元素', '元素'), t('Indexed records', '已索引数', '已索引數')], rows: ELEMENTS.map(element => [element, String(entries.filter(entry => entry.officialElements?.includes(element)).length)]) },
+        { t: 'p', c: t('Dual-element records count in both element rows, but only once in the role table. Element labels are official; the separate matchup matrix is a community model with disputed cells. Its coverage score does not establish damage, survival or an optimal party.', '双元素记录在两个元素行中各计一次，定位表则每条只计一次。元素标签来自官方；独立克制表是含争议格子的社区模型，其覆盖率不能证明伤害、生存或最优队伍。', '雙元素紀錄在兩個元素行中各計一次，定位表則每條只計一次。元素標籤來自官方；獨立剋制表是含爭議格子的社群模型，其涵蓋率不能證明傷害、生存或最佳隊伍。') },
+        { t: 'h', c: t('3. Choose a specific action before filling the party', '3. 填队伍前先明确具体操作', '3. 填隊伍前先明確具體操作') },
+        { t: 'p', c: t(`${covered} of ${entries.length} indexed records list mobility across ${mobilityIndex.length} names. For flight, inspect Tromber's Take Off or Turbo's Cloudwalk; for underground interaction, inspect Budclaw's Tunnel. These are documented alternatives, not guarantees that every route is accessible. Missing mobility data means unknown.`, `${entries.length}条记录中${covered}条记载移动能力，共${mobilityIndex.length}个名称。飞行可核对 Tromber 的 Take Off 或 Turbo 的 Cloudwalk；地下交互可核对 Budclaw 的 Tunnel。这些是有记录的候选，不保证所有路线可通行；缺少移动能力数据表示未知。`, `${entries.length}條紀錄中${covered}條記載移動能力，共${mobilityIndex.length}個名稱。飛行可核對 Tromber 的 Take Off 或 Turbo 的 Cloudwalk；地下互動可核對 Budclaw 的 Tunnel。這些是有紀錄的候選，不保證所有路線可通行；缺少移動能力資料表示未知。`) },
+        { t: 'link', href: '/tools/twine', c: t('Find the documented users of the needed ability', '反查所需能力的已记录使用者', '反查所需能力的已紀錄使用者') },
+        { t: 'link', href: '/tools/team-builder', c: t('Compare four candidates in the party planner', '在四槽队伍工具比较候选', '在四槽隊伍工具比較候選') },
+        { t: 'li', c: t('Apply an example to inspect four members, then replace one candidate and compare the changed ability and role coverage. Examples demonstrate the tool, not a tested combat recommendation or a universal party-size rule.', '可先载入四人示例，再替换一个候选，比较能力与定位覆盖变化。示例用于比较工具，不是战斗实测推荐，也不是所有模式的队伍人数规定。', '可先載入四人範例，再替換一個候選，比較能力與定位涵蓋變化。範例用於比較工具，不是戰鬥實測推薦，也不是所有模式的隊伍人數規定。') },
+        { t: 'h', c: t('4. Keep capture planning separate from role labels', '4. 捕获规划与定位标签分开判断', '4. 捕獲規劃與定位標籤分開判斷') },
+        { t: 'p', c: t('The October 27 disclosure separates ordinary field, ordinary battle and boss formulas. It does not list individual active-status coefficients. Do not assign a fixed BREAK multiplier from a role label; unknown required inputs must leave the estimate undetermined. Choose the encounter and compare one known change at a time.', '10月27日公示区分普通野外、普通战斗与 Boss 公式，没有列出各个活跃状态的具体系数。不能从 Break 定位推断固定 BREAK 倍率；必要输入未知时结果应保持未确定。先选遭遇类型，再逐项比较已知变化。', '10月27日公示區分普通野外、普通戰鬥與 Boss 公式，沒有列出各個活躍狀態的具體係數。不能從 Break 定位推斷固定 BREAK 倍率；必要輸入未知時結果應保持未確定。先選遭遇類型，再逐項比較已知變化。') },
+        { t: 'link', href: '/guide/aniimo-catching-guide', c: t('Use the conditional capture examples', '查看有明确条件的捕获例子', '查看有明確條件的捕獲範例') },
+        { t: 'quote', c: t('Editorial update November 2, 2026; roster snapshot October 23 and capture disclosure October 27. No combat rotation, best build or capture team was playtested.', '编辑更新于2026年11月2日；名单快照为10月23日，捕获公示为10月27日。未实测战斗循环、最优配装或捕获队伍。', '編輯更新於2026年11月2日；名單快照為10月23日，捕獲公示為10月27日。未實測戰鬥循環、最佳配裝或捕獲隊伍。') },
+      ],
+    };
+  }
+  if (slug === 'aniimo-choose-by-mobility-role') return {
+    title: t('Choose Aniimo by Mobility Ability and Combat Role', '按移动能力与战斗定位选择伊莫', '按移動能力與戰鬥定位選擇伊莫'),
+    subtitle: t('Find actual users of an ability instead of assigning one family member’s ability to the whole family.', '核对能力的实际使用者，避免把个体能力套用到整个家族。', '核對能力的實際使用者，避免把個體能力套用到整個家族。'),
+    tag: t('Selection guide', '候选选择', '候選選擇'),
+    lead: t('Start with a named action, then inspect a specific creature. The examples below use the October 23 Basic Form index and show up to three documented users per ability in official-number order.', '先明确具名操作，再查看具体个体。下表使用10月23日基础形态索引，按官方编号为每项能力展示最多3名已记载使用者。', '先明確具名操作，再查看具體個體。下表使用10月23日基礎形態索引，按官方編號為每項能力展示最多3名已記載使用者。'),
+    body: [
+      { t: 'h', c: t('1. Choose an actual ability user', '1. 选择确实记载能力的个体', '1. 選擇確實記載能力的個體') },
+      { t: 'table', head: [t('Ability', '能力', '能力'), t('Documented examples', '已记载的个体示例', '已記載的個體範例')], rows: ['Hustle', 'Take Off', 'Cloudwalk', 'Cloak', 'Tunnel', 'Glow'].flatMap(name => {
+        const group = mobilityIndex.find(group => group.name === name);
+        return group ? [[name, group.members.slice(0, 3).map(member => `#${member.officialNumber} ${member.enName}`).join(' / ')]] : [];
+      }) },
+      { t: 'p', c: t('A family label is not an ability shared by every stage. Nimbi lists Puff Up, while Turbo lists Cloudwalk. Take Off is documented for Tromber, Cornet and Fragrancier, not for basic Chirpi in this snapshot. A blank Chirpi mobility field remains unknown rather than proving absence in the live game.', '家族标签不代表每个阶段共享能力。Nimbi 记载 Puff Up，Turbo 才记载 Cloudwalk。此快照中 Take Off 对应 Tromber、Cornet 和 Fragrancier，不是基础 Chirpi；Chirpi 移动字段为空表示未知，不能证明当前游戏没有能力。', '家族標籤不代表每個階段共享能力。Nimbi 記載 Puff Up，Turbo 才記載 Cloudwalk。此快照中 Take Off 對應 Tromber、Cornet 和 Fragrancier，不是基礎 Chirpi；Chirpi 移動欄位為空表示未知，不能證明目前遊戲沒有能力。') },
+      { t: 'link', href: '/dex/008', c: t('Inspect Tromber and Take Off', '查看 Tromber 的 Take Off', '查看 Tromber 的 Take Off') },
+      { t: 'link', href: '/dex/019', c: t('Inspect Turbo and Cloudwalk', '查看 Turbo 的 Cloudwalk', '查看 Turbo 的 Cloudwalk') },
+      { t: 'link', href: '/tools/twine', c: t('Find all indexed users of another ability', '反查其他能力的全部已索引使用者', '反查其他能力的全部已索引使用者') },
+      { t: 'h', c: t('2. Compare combat function separately', '2. 单独比较战斗功能', '2. 單獨比較戰鬥功能') },
+      { t: 'p', c: t('A published DPS, Break, Support, Regen or Heal label narrows the task, not the strength. Read each skill’s target, cost and trigger before comparing candidates. ATK, a family name or the number of skills alone does not establish damage, a best build or a verified rotation.', 'DPS、Break、Support、Regen、Heal 定位用于缩小任务范围，不是强度结论。比较候选前查看每项技能的目标、消耗与触发条件；仅凭 ATK、家族名或技能数量不能得出伤害、最优配装或实测循环。', 'DPS、Break、Support、Regen、Heal 定位用於縮小任務範圍，不是強度結論。比較候選前查看每項技能的目標、消耗與觸發條件；僅憑 ATK、家族名或技能數量不能得出傷害、最佳配裝或實測循環。') },
+      { t: 'link', href: '/guide/aniimo-team-composition', c: t('Compare current indexed role counts and party tasks', '比较当前已索引定位统计与组队任务', '比較目前已索引定位統計與組隊任務') },
+      { t: 'quote', c: t('Edited November 2, 2026 using the October 23 snapshot. No terrain route or combat performance was playtested.', '2026年11月2日编辑，依据10月23日快照；未实测地形路线或战斗表现。', '2026年11月2日編輯，依據10月23日快照；未實測地形路線或戰鬥表現。') },
+    ],
+  };
+  if (slug === 'aniimo-multiplayer') return {
+    title: t('Aniimo Multiplayer: Choose Co-op, Fair PVP or PVE / Chaos', '伊莫多人玩法：合作、公平 PVP 与 PVE／混沌怎么选', '伊莫多人玩法：合作、公平 PVP 與 PVE／混沌怎麼選'),
+    subtitle: t('Compare the announced mode gates and preparation rules, then open the relevant current guide.', '比较公告中的玩法门槛与准备规则，再进入对应现行攻略。', '比較公告中的玩法門檻與準備規則，再進入對應現行攻略。'),
+    tag: t('Multiplayer', '多人玩法', '多人玩法'),
+    lead: t('Choose the activity before forming a party. The October 29 announcement separates fair PVP from PVE / Chaos and lets each Holo-Battle path support solo, team or matching. A general co-op storefront label does not establish every mode’s party size or platform pairing.', '先选玩法，再组队。10月29日公告区分公平 PVP 与 PVE／混沌，并让 Holo-Battle 各路支持单人、组队或匹配。商店笼统的合作标签不能说明每种模式的人数或平台配对。', '先選玩法，再組隊。10月29日公告區分公平 PVP 與 PVE／混沌，並讓 Holo-Battle 各路支援單人、組隊或配對。商店籠統的合作標籤不能說明每種模式的人數或平台配對。'),
+    body: [
+      { t: 'h', c: t('Which activity matches my goal?', '哪种玩法符合我的目标？', '哪種玩法符合我的目標？') },
+      { t: 'table', head: [t('Goal / mode', '目标／模式', '目標／模式'), t('Entry check', '入口检查', '入口檢查'), t('Preparation decision', '准备判断', '準備判斷')], rows: [
+        ['Egg Heist · fair PVP', t('Level 50 + Rising Egg Scout; announced 18:00–24:00 daily, verify your server timer.', '50级＋Rising Egg Scout；公告每日18:00–24:00，核对所在服计时。', '50級＋Rising Egg Scout；公告每日18:00–24:00，核對所在服計時。'), t('Three competing teams, adjusted deployed stats, no carried items or configured equipment loadout. Final Giga-Egg Twine ownership decides the win.', '三队竞争，出战数值调整，不携带物品或配置装备；最后 Giga-Egg Twine 归属决定胜利。', '三隊競爭，出戰數值調整，不攜帶物品或配置裝備；最後 Giga-Egg Twine 歸屬決定勝利。')],
+        ['Egg Heist · PVE / Chaos', t('Check the current difficulty. September Chaos rules list Elite Egg Seeker Tier IV + Chaos Ticket.', '先看当前难度；9月混沌规则列 Elite Egg Seeker Tier IV＋Chaos Ticket。', '先看目前難度；9月混沌規則列 Elite Egg Seeker Tier IV＋Chaos Ticket。'), t('Use that difficulty’s combat and recovery rules; do not apply fair PVP stat and equipment restrictions to it.', '按对应难度准备战斗与恢复，不套用公平 PVP 的数值和装备限制。', '按對應難度準備戰鬥與恢復，不套用公平 PVP 的數值和裝備限制。')],
+        ['Holo-Battle Interlink', t('Trailblazer I; Thursday 04:00–Monday 03:59, check the server interface.', 'Trailblazer I；周四04:00至周一03:59，以所在服界面核对。', 'Trailblazer I；週四04:00至週一03:59，以所在服介面核對。'), t('Independent left/middle/right paths with solo, team or matching. Inspect the selected path and manually claim star rewards.', '左中右路独立，各可单人、组队或匹配；核对所选路线，手动领星级奖励。', '左中右路獨立，各可單人、組隊或配對；核對所選路線，手動領星級獎勵。')],
+      ] },
+      { t: 'link', href: '/guide/aniimo-egg-heist', c: t('Compare Egg Heist rules and post-update egg delivery', '比较 Egg Heist 规则与更新后的蛋发放', '比較 Egg Heist 規則與更新後的蛋發放') },
+      { t: 'link', href: '/guide/aniimo-holo-battle-interlink', c: t('Check the weekly path and reward workflow', '核对周常路线与领奖流程', '核對週常路線與領獎流程') },
+      { t: 'h', c: t('Can my friends join from another platform?', '朋友使用其他平台能一起玩吗？', '朋友使用其他平台能一起玩嗎？') },
+      { t: 'p', c: t('Steam lists cross-platform multiplayer, but these sources do not provide every supported platform pairing or a complete save/purchase transfer policy. Confirm activity, region, server, client version and the actual invitation screen with your friends. A four-slot planning tool is not proof of four-player support for every activity.', 'Steam 列出跨平台多人，但这些来源没有给出全部平台配对或完整存档／付费内容转移规则。与朋友核对玩法、地区、服务器、客户端版本和实际邀请界面。四槽规划工具不能证明所有活动都支持四人。', 'Steam 列出跨平台多人，但這些來源沒有給出全部平台配對或完整存檔／付費內容轉移規則。與朋友核對玩法、地區、伺服器、用戶端版本和實際邀請介面。四槽規劃工具不能證明所有活動都支援四人。') },
+      { t: 'link', href: '/guide/aniimo-crossplay-cross-save', c: t('Check platform pairing and account-transfer boundaries', '查看平台配对与账号转移的证据范围', '查看平台配對與帳號轉移的證據範圍') },
+      { t: 'quote', c: t('Reviewed November 2 using the October 29 update announcement and dated September mode rules. No queue times, live matchmaking availability or best team is measured here.', '11月2日按10月29日更新公告与带日期的9月模式规则整理。未测量排队耗时、实时匹配开放或最优队伍。', '11月2日按10月29日更新公告與帶日期的9月模式規則整理。未測量排隊耗時、即時配對開放或最佳隊伍。') },
+    ],
+  };
   if (slug === 'aniimo-twine-explained') return {
     title: t('Aniimo Twine: Choose an Ability and Find Its Users', '伊莫 Twine：按探索能力寻找可用伊莫', '伊莫 Twine：按探索能力尋找可用伊莫'),
     subtitle: t('Turn an exploration need into a shortlist using the published mobility records, then inspect the individual ability.', '从探索需求出发，用已公布的移动能力对应表筛选，再核对个体能力说明。', '從探索需求出發，用已公布的移動能力對應表篩選，再核對個體能力說明。'),

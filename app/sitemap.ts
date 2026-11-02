@@ -54,7 +54,7 @@ const STATIC_ROUTES: {
   },
   {
     path: '/guide/how-we-verify/',
-    lastModified: LAST_PUBLISHED,
+    lastModified: '2026-11-02',
     priority: 0.7,
     changefreq: 'monthly',
   },
@@ -67,7 +67,7 @@ const STATIC_ROUTES: {
   { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
   {
     path: '/abilities/',
-    lastModified: SEARCH_METADATA_UPDATED,
+    lastModified: '2026-11-02',
     priority: 0.8,
     changefreq: 'weekly',
   },
@@ -80,7 +80,7 @@ const STATIC_ROUTES: {
   { path: '/tools/catch/', lastModified: '2026-10-27', priority: 0.85, changefreq: 'weekly' },
   {
     path: '/tools/team-builder/',
-    lastModified: '2026-10-16',
+    lastModified: '2026-11-02',
     priority: 0.85,
     changefreq: 'weekly',
   },
@@ -122,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = STATIC_ROUTES.flatMap((route) =>
     buildLocalizedUrls(
       route.path,
-      ['/', '/dex/', '/tools/', '/evolutions/', '/locations/', '/abilities/', '/tools/team-builder/', '/tools/type-chart/'].includes(route.path) ? '2026-10-23' : route.lastModified,
+      ['/dex/', '/tools/', '/evolutions/', '/locations/', '/tools/type-chart/'].includes(route.path) ? '2026-10-23' : route.lastModified,
       route.priority,
       route.changefreq ?? 'monthly'
     )

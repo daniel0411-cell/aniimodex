@@ -14,11 +14,15 @@ const { calculateCatchRate } = load('data/catch-formula.ts');
 const read = (locale, slug) => readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8')
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
 const posts = getPublishedGuidePosts();
+const snapshotEntries = require('../data/current-wiki-snapshot.json').entries;
+const snapshotDetails = require('../data/current-wiki-details.json').details;
+const sitemap = readFileSync('out/sitemap.xml', 'utf8');
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const messages = JSON.parse(readFileSync(`messages/${locale}.json`, 'utf8'));
   for (const post of posts) {
     assert(!post.sourceIds.includes('aniimo-official-probabilities-2026-09-16'), `${post.slug}: historical catch source reused`);
     const html = read(locale, post.slug);
+    assert(!/BREAK state adds a x1\.5|break catch bonus reaches x3/.test(html), `${locale}/${post.slug}: obsolete capture coefficient`);
     for (const id of post.sourceIds) {
       const source = sourceById.get(id);
       assert(source, id);
@@ -50,6 +54,31 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const term of ['42%', '63%', '33.6%', '46.2%', '9%', '12.6']) assert(catching.includes(term));
   assert(catching.indexOf('id="section-0"') < catching.indexOf('Cannot catch the Alpha in the current state'));
   assert(!/defeated targets|BREAK at ×1.5|ordinary sleep.*×2|目标死亡时|目標死亡時|普通睡眠.*×2/.test(catching));
+  const team = read(locale, 'aniimo-team-composition');
+  for (const role of ['DPS', 'Break', 'Support', 'Regen', 'Heal']) {
+    const count = snapshotEntries.filter(entry => entry.role === role).length;
+    assert(new RegExp(`<td[^>]*>${role}</td>\\s*<td[^>]*>${count}</td>`).test(team), `${locale}: stale role count ${role}`);
+  }
+  for (const element of ['Light', 'Fire', 'Ice', 'Dark', 'Lightning', 'Grass', 'Water', 'Earth', 'Wind']) {
+    const count = snapshotEntries.filter(entry => entry.elements.includes(element)).length;
+    assert(new RegExp(`<td[^>]*>${element}</td>\\s*<td[^>]*>${count}</td>`).test(team), `${locale}: stale element count ${element}`);
+  }
+  const abilities = readFileSync(`out/${locale}/abilities/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+  for (const [field, key] of [['traits', 'traitsDescription'], ['skills', 'skillsDescription']]) {
+    const count = new Set(snapshotDetails.flatMap(detail => detail[field].map(skill => skill.name))).size;
+    assert(abilities.includes(messages.collections.abilities[key].replace('{count}', count)), `${locale}: inconsistent directory count`);
+  }
+  for (const path of ['', 'tools/team-builder/', 'abilities/', 'guide/how-we-verify/']) {
+    const block = sitemap.split('<url>').find(block => block.includes(`<loc>https://aniimodex.com/${locale}/${path}</loc>`));
+    assert(block?.includes('<lastmod>2026-11-02</lastmod>'), `${locale}/${path}: edit date overridden`);
+  }
+  const multiplayer = read(locale, 'aniimo-multiplayer');
+  for (const term of ['Rising Egg Scout', 'Chaos Ticket', 'Holo-Battle', 'Trailblazer I']) assert(multiplayer.includes(term));
+  const requirements = read(locale, 'aniimo-system-requirements');
+  for (const term of ['30 GB', '40 GB', '2026-09-16', '2026-10-23']) assert(requirements.includes(term));
+  for (const slug of ['aniimo-mobile', 'aniimo-progress-account-safety', 'aniimo-dev-dispatch-roadmap']) {
+    assert(!/Last official-source check: October 4|官方[来來]源最后核[验驗]：2026 年 10 月 4 日|官方來源最後核驗：2026 年 10 月 4 日/.test(read(locale, slug)), `${locale}/${slug}: historical date presented as page check`);
+  }
 }
 const input = { scenario: 'field', regionId: 'standard', targetStage: 3, useRegionRate: true,
   playerLevel: 1, aniimoLevel: 1, playerBonus: 0, cubeId: 'advanced', hpPercent: 100,

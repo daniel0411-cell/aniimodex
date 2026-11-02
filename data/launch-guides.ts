@@ -210,7 +210,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: October 4, 2026. This guide avoids claiming that a particular action restores progress, because recovery depends on the affected account and official support verification.',
+        c: 'Historical recovery and relink notices checked October 4, 2026; the launch FAQ was rechecked October 11. These dates apply to the named sources, not live recovery outcomes or a guarantee that a particular action restores progress.',
       },
     ],
   },
@@ -584,7 +584,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: October 4, 2026. Mobile is officially launched; storefront and device availability must still be checked locally.',
+        c: 'Historical mobile and relink notices checked October 4, 2026; the September 23 launch notice was rechecked October 11. Storefront and device availability must still be checked locally.',
       },
     ],
   },
@@ -596,7 +596,7 @@ const english: Record<string, LaunchGuide> = {
     lead: 'Aniimo Dev Dispatch Vol. 1 addresses several heavily reported player problems. These are official announced changes and support procedures, but the notice does not prove that every planned gameplay change is already active in the current client.',
     body: [
       ...roadmapChecksBlocks('en'),
-      { t: 'h', c: 'Official announcement status' },
+      { t: 'h', c: 'October 1 plans and later announcement status' },
       {
         t: 'table',
         head: ['Topic', 'What the developer announced', 'Current evidence boundary'],
@@ -604,7 +604,7 @@ const english: Record<string, LaunchGuide> = {
           [
             'Sparkling Hues',
             'Players will be able to switch among unlocked Hues, including the original Prismana Hue',
-            'Planned; no implementation date published',
+            'October 29 announcement now lists Hue Swap for Credits; unlocks remain individual-specific.',
           ],
           [
             'Irisalis Potential',
@@ -619,7 +619,7 @@ const english: Record<string, LaunchGuide> = {
           [
             'Legendary Aniipods',
             'Planned to work on an existing Sparkling Aniimo, replace its original Aniipod and grant the exclusive effect',
-            'Planned; no implementation date published',
+            'October 29 announcement now lists replacement; Acquired Potential unchanged; Irisalis, Helion and Lunara excluded.',
           ],
           [
             'Mobile performance',
@@ -669,7 +669,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'quote',
-        c: 'Last official-source check: October 4, 2026. This page records the October 1 Dev Dispatch as an official announcement. Planned changes remain labeled planned until their live implementation is independently verified.',
+        c: 'October 1 Dev Dispatch checked October 4, 2026; the October 29 update announcement was checked November 1. Later announcement rules above are distinguished from unresolved plans. No live-client implementation or compensation delivery was tested.',
       },
     ],
   },
@@ -1877,7 +1877,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Aniimo Dev Dispatch Vol. 1 回應了多個玩家集中反映的問題。這些是官方公布的計畫和支援流程，但公告本身不代表每項遊戲改動已在目前客戶端生效。',
           body: [
             ...roadmapChecksBlocks(locale),
-            { t: 'h', c: '官方公布狀態' },
+            { t: 'h', c: '10月1日計畫與後續公告狀態' },
             {
               t: 'table',
               head: ['主題', '開發者公布內容', '目前證據邊界'],
@@ -1885,7 +1885,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 [
                   '閃耀色彩',
                   '可在已解鎖色彩間切換，包括原始 Prismana Hue',
-                  '規劃中；未公布實裝日期',
+                  '10月29日公告已列消耗 Credits 的 Hue Swap；解鎖仍限個體。',
                 ],
                 ['Irisalis 潛能', '未來改為固定潛能值', '規劃中；尚未獨立確認目前客戶端已生效'],
                 [
@@ -1896,7 +1896,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 [
                   '傳說 Aniipod',
                   '規劃可用於既有 Sparkling Aniimo，取代原 Aniipod 並給予專屬效果',
-                  '規劃中；未公布實裝日期',
+                  '10月29日公告已列替換；不改變 Acquired Potential；排除 Irisalis、Helion、Lunara。',
                 ],
                 ['手機效能', '專門團隊處理卡頓與過熱', '未公布 ETA、裝置清單或量測結果'],
                 ['客服', '正在改善團隊、系統與流程', '未承諾回覆時間'],
@@ -1929,7 +1929,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: '重綁流程不等於官方確認通用跨平台存檔、購買或貨幣轉移。' },
             {
               t: 'quote',
-              c: '官方來源最後核驗：2026 年 10 月 4 日。本頁記錄 10 月 1 日開發者答疑；規劃中的改動會保持「規劃中」標示，直到可獨立核驗已實裝。',
+              c: '10月1日開發者答疑於2026年10月4日核對；10月29日更新公告於11月1日核對。上文區分後續公告規則與未確認計畫，未實測客戶端實裝或補償到帳。',
             },
           ],
         }
@@ -1941,7 +1941,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
           lead: 'Aniimo Dev Dispatch Vol. 1 回应了多个玩家集中反馈的问题。这些是官方公布的计划和支持流程，但公告本身不代表每项游戏改动已在当前客户端生效。',
           body: [
             ...roadmapChecksBlocks(locale),
-            { t: 'h', c: '官方公布状态' },
+            { t: 'h', c: '10月1日计划与后续公告状态' },
             {
               t: 'table',
               head: ['主题', '开发者公布内容', '当前证据边界'],
@@ -1949,7 +1949,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 [
                   '闪耀色彩',
                   '可在已解锁色彩间切换，包括原始 Prismana Hue',
-                  '计划中；未公布实装日期',
+                  '10月29日公告已列消耗 Credits 的 Hue Swap；解锁仍限个体。',
                 ],
                 ['Irisalis 潜能', '未来改为固定潜能值', '计划中；尚未独立确认当前客户端已生效'],
                 [
@@ -1960,7 +1960,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
                 [
                   '传奇 Aniipod',
                   '计划可用于现有 Sparkling Aniimo，替换原 Aniipod 并给予专属效果',
-                  '计划中；未公布实装日期',
+                  '10月29日公告已列替换；不改变 Acquired Potential；排除 Irisalis、Helion、Lunara。',
                 ],
                 ['手机性能', '专门团队处理卡顿与过热', '未公布 ETA、设备清单或测量结果'],
                 ['客服', '正在改善团队、系统与流程', '未承诺回复时间'],
@@ -1993,7 +1993,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
             { t: 'li', c: '重绑流程不等于官方确认通用跨平台存档、购买或货币转移。' },
             {
               t: 'quote',
-              c: '官方来源最后核验：2026 年 10 月 4 日。本页记录 10 月 1 日开发者答疑；计划中的改动会保持“计划中”标示，直到可独立核验已实装。',
+              c: '10月1日开发者答疑于2026年10月4日核对；10月29日更新公告于11月1日核对。上文区分后续公告规则与未确认计划，未实测客户端实装或补偿到账。',
             },
           ],
         };
@@ -3297,8 +3297,8 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
                 ? '歷史補丁與重綁公告核驗記錄：2026 年 10 月 4 日；本次新增的首發 FAQ 於 10 月 11 日重新核對。'
                 : '历史补丁与重绑公告核验记录：2026 年 10 月 4 日；本次新增的首发 FAQ 于 10 月 11 日重新核对。'
               : traditional
-                ? '官方來源最後核驗：2026 年 10 月 4 日。'
-                : '官方来源最后核验：2026 年 10 月 4 日。',
+                ? '上述歷史公告核對於2026年10月4日；其他來源的核對日期見各段與來源清單。'
+                : '上述历史公告核对于2026年10月4日；其他来源的核对日期见各段与来源清单。',
       },
     ],
   };
@@ -3307,6 +3307,15 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
 export function getPracticalSupportBlocks(locale: string, slug: string): LaunchGuideBlock[] {
   const text = (en: string, hans: string, hant: string) =>
     locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  if (slug === 'aniimo-system-requirements') return [
+    { t: 'h', c: text('Which storage figure applies to my client?', '哪个存储要求对应我的客户端？', '哪個儲存需求對應我的用戶端？') },
+    { t: 'table', head: [text('Listing / check date', '商店／核对日期', '商店／核對日期'), text('Listed free space', '列出的可用空间', '列出的可用空間'), text('How to use it', '如何使用', '如何使用')], rows: [
+      ['Epic · 2026-09-16', '30 GB / SSD', text('Historical minimum/recommended tables below; SSD is specified for recommended.', '下方为历史最低／推荐配置；SSD 属推荐配置。', '下方為歷史最低／建議規格；SSD 屬建議規格。')],
+      ['Steam · 2026-10-23', '40 GB', text('Observed Steam free-space requirement; recheck your current store before installing.', '当次 Steam 可用空间要求；安装前核对当前商店。', '當次 Steam 可用空間需求；安裝前核對目前商店。')],
+    ] },
+    { t: 'p', c: text('Different storefronts and observation dates do not establish one universal current size. Neither row measures the network download, patch workspace or final installed size. Keep extra update space according to the client prompt; no additional numeric allowance is verified here.', '商店与观察日期不同，不能据此得出统一的当前体积。两行都不是实测下载量、补丁临时空间或最终安装体积。按客户端提示预留更新空间；本页未确认额外空间的具体数字。', '商店與觀察日期不同，不能據此得出統一的目前體積。兩行都不是實測下載量、補丁暫存空間或最終安裝體積。按用戶端提示預留更新空間；本頁未確認額外空間的具體數字。') },
+    { t: 'link', href: '/guide/how-to-download-aniimo', c: text('Choose the official client and diagnose an installation failure', '选择官方客户端并排查安装失败', '選擇官方用戶端並排查安裝失敗') },
+  ];
   if (slug === 'is-aniimo-free-to-play') return currenciesGuide(locale).body;
   if (slug === 'getting-started') return [
     { t: 'h', c: text('Can I import a character appearance preset?', '可以导入角色外观预设吗？', '可以匯入角色外觀預設嗎？') },

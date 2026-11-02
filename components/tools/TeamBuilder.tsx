@@ -9,7 +9,7 @@
 // 3. 战斗定位（Roles）：来自官方 Wiki 战斗分类与 10.13 BREAK 保底机制。
 // ============================================================================
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { getAllAniimos } from '@/lib/aniimo';
@@ -68,6 +68,16 @@ export default function TeamBuilder() {
   // 4 个槽位
   const [team, setTeam] = useState<(AniimoEntry | null)[]>([null, null, null, null]);
   const [activeSlotIndex, setActiveSlotIndex] = useState<number | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    if (activeSlotIndex === null) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    dialog.showModal();
+    dialog.querySelector('input')?.focus();
+    return () => dialog.close();
+  }, [activeSlotIndex]);
 
   // 弹窗内的筛选状态
   const [searchQuery, setSearchQuery] = useState('');
@@ -212,6 +222,11 @@ export default function TeamBuilder() {
   }, [assignedAniimos]);
 
   // 槽位操作
+  const closePicker = () => {
+    dialogRef.current?.close();
+    setActiveSlotIndex(null);
+  };
+
   const handleAssignAniimo = (aniimo: AniimoEntry) => {
     if (activeSlotIndex === null) return;
     setTeam((prev) => {
@@ -219,7 +234,7 @@ export default function TeamBuilder() {
       next[activeSlotIndex] = aniimo;
       return next;
     });
-    setActiveSlotIndex(null);
+    closePicker();
   };
 
   const handleRemoveSlot = (index: number) => {
@@ -235,11 +250,10 @@ export default function TeamBuilder() {
   };
 
   // 预设快捷套用
-  const applyPreset = (numbers: string[]) => {
-    const presetAniimos = numbers.map((num) => allAniimos.find((a) => a.number === num) ?? null);
-    while (presetAniimos.length < 4) presetAniimos.push(null);
-    setTeam(presetAniimos.slice(0, 4));
-  };
+  const presets = [
+    { label: t('presetExplorer'), members: ['001', '008', '018', '024'] },
+    { label: t('presetChaos'), members: ['024', '003', '018', '012'] },
+  ].map((preset) => ({ ...preset, entries: preset.members.map((number) => allAniimos.find((entry) => entry.officialNumber === number)) }));
 
   return (
     <div className="space-y-8">
@@ -249,20 +263,15 @@ export default function TeamBuilder() {
           <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
             {t('presetsTitle')}:
           </span>
-          <button
+          {presets.map((preset) => <button
+            key={preset.label}
             type="button"
-            onClick={() => applyPreset(['001', '007', '019', '024'])}
-            className="rounded border border-ink-border bg-white px-3 py-1 text-xs font-medium text-text-secondary transition-colors hover:border-primary-light hover:text-primary-light shadow-sm"
+            disabled={preset.entries.some((entry) => !entry)}
+            onClick={() => setTeam(preset.entries.map((entry) => entry ?? null))}
+            className="rounded border border-ink-border bg-white px-3 py-1 text-xs font-medium text-text-secondary transition-colors hover:border-primary-light hover:text-primary-light shadow-sm disabled:opacity-50"
           >
-            🧭 {t('presetExplorer')} (#001, #007, #019, #024)
-          </button>
-          <button
-            type="button"
-            onClick={() => applyPreset(['024', '003', '019', '012'])}
-            className="rounded border border-ink-border bg-white px-3 py-1 text-xs font-medium text-text-secondary transition-colors hover:border-primary-light hover:text-primary-light shadow-sm"
-          >
-            ⚔️ {t('presetChaos')} (#024, #003, #019, #012)
-          </button>
+            {preset.label} ({preset.entries.map((entry) => `#${entry?.officialNumber ?? '?'}`).join(', ')})
+          </button>)}
         </div>
         {assignedAniimos.length > 0 && (
           <button
@@ -624,20 +633,35 @@ export default function TeamBuilder() {
 
       {/* 选择伊莫的模态弹窗 */}
       {activeSlotIndex !== null && (
-        <div
+        <dialog
+          ref={dialogRef}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm animate-fade-in"
-          role="dialog"
-          aria-modal="true"
+          style={{ width: '100%', maxWidth: 'none', height: '100%', maxHeight: 'none', margin: 0 }}
+          aria-labelledby="team-picker-title"
+          onCancel={(event) => { event.preventDefault(); closePicker(); }}
+          onKeyDown={(event) => {
+            if (event.key !== 'Tab') return;
+            const controls = event.currentTarget.querySelectorAll<HTMLElement>('button:not([disabled]), input');
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+              event.preventDefault();
+              last?.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+              event.preventDefault();
+              first?.focus();
+            }
+          }}
         >
           <div className="flex max-h-[85vh] w-full max-w-2xl flex-col rounded-lg bg-white shadow-xl border border-ink-border">
             {/* 弹窗头部 */}
             <div className="flex items-center justify-between border-b border-ink-border p-4">
-              <h3 className="font-bold text-text-primary">
+              <h3 id="team-picker-title" className="font-bold text-text-primary">
                 {t('selectAniimo', { num: activeSlotIndex + 1 })}
               </h3>
               <button
                 type="button"
-                onClick={() => setActiveSlotIndex(null)}
+                onClick={closePicker}
                 className="rounded p-1 text-text-muted hover:bg-ink-soft hover:text-text-primary"
                 aria-label={t('close')}
               >
@@ -653,7 +677,6 @@ export default function TeamBuilder() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('searchPlaceholder')}
                 className="w-full rounded-md border border-ink-border bg-white px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
-                autoFocus
               />
 
               {/* 元素筛选 */}
@@ -800,7 +823,7 @@ export default function TeamBuilder() {
               )}
             </div>
           </div>
-        </div>
+        </dialog>
       )}
     </div>
   );

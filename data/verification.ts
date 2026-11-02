@@ -61,9 +61,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'prismana-changes-element',
-    claim: 'A Prismana form changes an Aniimo element rather than its stats.',
-    status: 'community',
-    checkedAt: '2026-09-18',
+    claim: 'Prismana links identify alternate forms; their element and attribute changes are not established by this Basic Form snapshot.',
+    status: 'unknown',
+    checkedAt: '2026-10-23',
     sourceIds: [],
   },
   {
@@ -84,9 +84,9 @@ export const verifiedClaims: VerifiedClaim[] = [
   },
   {
     id: 'mobile-cross-progression',
-    claim: 'Aniimo mobile shares progress with the PC and console versions.',
-    status: 'community',
-    checkedAt: '2026-09-18',
+    claim: 'A complete PC, console and mobile save or purchase-transfer policy is not established by the registered sources; cross-platform multiplayer alone does not confirm it.',
+    status: 'unknown',
+    checkedAt: '2026-10-23',
     sourceIds: [],
   },
   {
@@ -100,10 +100,10 @@ export const verifiedClaims: VerifiedClaim[] = [
   {
     id: 'dex-001-020',
     claim:
-      'Current Aniimo names, numbers, stats, elements, roles, evolutions and spawn conditions.',
-    status: 'unknown',
-    checkedAt: '2026-08-28',
-    sourceIds: [],
+      'The October 23 snapshot indexes 86 Basic Form records with names, official numbers, six attributes, elements, roles and published detail fields. Alternate-form values and complete encounter conditions are outside this import; six unresolved evolution trees remain withheld.',
+    status: 'official',
+    checkedAt: '2026-10-23',
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23'],
   },
   {
     id: 'element-matchups',
