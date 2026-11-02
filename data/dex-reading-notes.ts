@@ -1,6 +1,57 @@
 // Curated interpretations of the October 23 Basic Form snapshot, not gameplay tests.
 type ReadingNote = { question: string; answer: string; section: 'skills' | 'traits' | 'evolution' | 'mobility' };
 export const dexReadingNotes: Record<string, Record<string, ReadingNote[]>> = {
+  '008': {
+    en: [
+      { question: 'Does Take Off make flight a safe default?', answer: 'Take Off enters a Flying state to evade attacks from ground enemies, but the same description says incoming damage increases while airborne. Check which attacks the encounter actually uses before staying aloft. This is not evidence of invulnerability, unlimited flight or a route that can cross every gap.', section: 'mobility' },
+      { question: 'Who receives the Band Member EP benefit?', answer: 'On an Aniimo switch in battle, Band Member restores 20 EP to the next Chirpi family member switched in, at most once every 20s. The family condition matters: it is not a 20 EP refund to any teammate or on every skill cast. Check the intended next member before planning around the switch.', section: 'traits' },
+      { question: 'Leaf Tornado, Tornado or Water Tornado?', answer: 'All three descriptions pull enemies toward a vortex. Leaf Tornado adds a puddle-absorption condition for extra damage; Water Tornado deducts 4 Energy per hit from the target. The plain Tornado description does not list either extra effect. Choose the effect to inspect rather than treating listed Power as proof of a better option or assuming a puddle is always present.', section: 'skills' },
+    ],
+    'zh-Hans': [
+      { question: 'Take Off 能让空中状态一直安全吗？', answer: 'Take Off 进入 Flying 状态以躲避地面敌人的攻击，但同一描述也说明滞空时承受伤害增加。持续留在空中前，先核对当前遭遇实际使用哪些攻击；这不能证明无敌、无限飞行或所有地形都能通过。', section: 'mobility' },
+      { question: 'Band Member 的 EP 收益给谁？', answer: '战斗中切换伊莫时，Band Member 为下一个切入的 Chirpi 家族成员恢复20 EP，最多每20秒触发一次。关键是家族与切换条件，不是任意队友都返还20 EP，也不是每次施放技能都触发。规划切换前，先核对下一位成员。', section: 'traits' },
+      { question: 'Leaf Tornado、Tornado 和 Water Tornado 怎么比较？', answer: '三者都描述把敌人拉向漩涡中心。Leaf Tornado 的额外伤害要求吸收附近水洼；Water Tornado 则每次命中扣除目标4 Energy，普通 Tornado 没有列出这两种附加效果。先选择需要核对的功能，不能只按 Power 判断优劣，也不能假设场上必有水洼。', section: 'skills' },
+    ],
+    'zh-Hant': [
+      { question: 'Take Off 能讓空中狀態一直安全嗎？', answer: 'Take Off 進入 Flying 狀態以躲避地面敵人的攻擊，但同一描述也說明滯空時承受傷害增加。持續留在空中前，先核對目前遭遇實際使用哪些攻擊；這不能證明無敵、無限飛行或所有地形都能通過。', section: 'mobility' },
+      { question: 'Band Member 的 EP 收益給誰？', answer: '戰鬥中切換伊莫時，Band Member 為下一個切入的 Chirpi 家族成員恢復20 EP，最多每20秒觸發一次。關鍵是家族與切換條件，不是任意隊友都返還20 EP，也不是每次施放技能都觸發。規劃切換前，先核對下一位成員。', section: 'traits' },
+      { question: 'Leaf Tornado、Tornado 和 Water Tornado 怎麼比較？', answer: '三者都描述把敵人拉向漩渦中心。Leaf Tornado 的額外傷害要求吸收附近水窪；Water Tornado 則每次命中扣除目標4 Energy，普通 Tornado 沒有列出這兩種附加效果。先選擇需要核對的功能，不能只按 Power 判斷優劣，也不能假設場上必有水窪。', section: 'skills' },
+    ],
+  },
+  '019': {
+    en: [
+      { question: 'When is Shrouded in Mist available?', answer: 'The trait enters Shrouded in Mist after 4 basic attacks; casting a skill consumes the state to enhance that skill. Check whether the state is active before the intended cast. The wording does not establish that every cast is enhanced, that the counter survives switching, or that a timed rotation is guaranteed.', section: 'traits' },
+      { question: 'What changes for Cloud Shield under Mist?', answer: 'The ordinary shield lists absorption up to 15% max HP and 15% lower stamina consumption for 20s. Under Shrouded in Mist, the description instead lists 18% absorption and 18% lower stamina consumption for 30s. This changes a defensive window, not a permanent HP increase; the snapshot does not establish stacking or refresh rules.', section: 'skills' },
+      { question: 'Is Cloudwalk the same as Tromber’s Take Off?', answer: 'Cloudwalk says it floats freely among clouds. Take Off separately names a Flying state and increased incoming damage while airborne. Do not transfer that combat-state tradeoff to Cloudwalk from the animation or family name. Inspect the actual mobility description for your task; no flight duration, stamina budget or verified terrain route is supplied here.', section: 'mobility' },
+    ],
+    'zh-Hans': [
+      { question: '什么时候能使用 Shrouded in Mist？', answer: '特性在4次普攻后进入 Shrouded in Mist，施放技能会消耗该状态来强化该技能。准备使用目标技能前，应先确认状态已生效；描述不能证明每次技能都强化、切换后计数保留或固定时间循环必定成立。', section: 'traits' },
+      { question: 'Cloud Shield 在雾中状态下有什么变化？', answer: '普通护盾列出最多吸收15%最大 HP 的伤害，并降低15%体力消耗，持续20秒；Shrouded in Mist 下改为18%吸收、降低18%体力消耗，持续30秒。这是防护窗口变化，不是永久增加 HP；快照没有确认叠加或刷新规则。', section: 'skills' },
+      { question: 'Cloudwalk 与 Tromber 的 Take Off 相同吗？', answer: 'Cloudwalk 只描述在云层间自由漂浮；Take Off 则明确列出 Flying 状态和滞空承伤增加。不能因为动作或家族名称就把后者的战斗状态代价套到 Cloudwalk。应按实际移动说明判断任务；这里没有确认飞行时长、体力预算或可复现的地形路线。', section: 'mobility' },
+    ],
+    'zh-Hant': [
+      { question: '什麼時候能使用 Shrouded in Mist？', answer: '特性在4次普攻後進入 Shrouded in Mist，施放技能會消耗該狀態來強化該技能。準備使用目標技能前，應先確認狀態已生效；描述不能證明每次技能都強化、切換後計數保留或固定時間循環必定成立。', section: 'traits' },
+      { question: 'Cloud Shield 在霧中狀態下有什麼變化？', answer: '普通護盾列出最多吸收15%最大 HP 的傷害，並降低15%體力消耗，持續20秒；Shrouded in Mist 下改為18%吸收、降低18%體力消耗，持續30秒。這是防護窗口變化，不是永久增加 HP；快照沒有確認疊加或刷新規則。', section: 'skills' },
+      { question: 'Cloudwalk 與 Tromber 的 Take Off 相同嗎？', answer: 'Cloudwalk 只描述在雲層間自由漂浮；Take Off 則明確列出 Flying 狀態和滯空承傷增加。不能因為動作或家族名稱就把後者的戰鬥狀態代價套到 Cloudwalk。應按實際移動說明判斷任務；這裡沒有確認飛行時長、體力預算或可重現的地形路線。', section: 'mobility' },
+    ],
+  },
+  '020': {
+    en: [
+      { question: 'Why are Nightmare duration and control duration different?', answer: 'Counting Sheep lets the next skill apply 1 Drowsiness stack every 10s; 3 stacks cause Nightmare for 20s. The same trait lists only 3s of movement/skill control and says damage removes the control effect. A 20s Nightmare label therefore does not establish a 20s stun, nor prove how other debuffs behave after the control breaks.', section: 'traits' },
+      { question: 'What should I inspect before Nightmare Devourer?', answer: 'The skill first restores 5% HP to this Aniimo and nearby allies, then absorbs nearby Nightmare statuses. Each absorbed status increases healing by 2%, up to 3 stacks. Check whether suitable nearby statuses exist rather than treating the maximum as the default. A Support label alone would not establish this healing effect; the individual skill text does.', section: 'skills' },
+      { question: 'Can I inherit Turbo’s mobility or location from the family?', answer: 'The Nimbi tree places Dreaple and Turbo on separate branches. Turbo lists Cloudwalk and Nimbus Fields; Dreaple lists neither mobility nor a habitat in this snapshot. The shared family confirms a relationship, not the same ability or a confirmed Dreaple spawn. Use the current official entry before committing to a location search.', section: 'evolution' },
+    ],
+    'zh-Hans': [
+      { question: '为什么 Nightmare 持续时间不等于控制时间？', answer: 'Counting Sheep 每10秒让下一个技能施加1层 Drowsiness，3层触发持续20秒的 Nightmare。同一特性只列出3秒的移动与施技控制，并说明受到伤害会解除控制。因此20秒 Nightmare 不等于20秒眩晕，也不能由此确认控制解除后其他减益的行为。', section: 'traits' },
+      { question: '使用 Nightmare Devourer 前该核对什么？', answer: '技能先为自身与附近队友恢复5% HP，再吸收附近的 Nightmare；每吸收一个状态提高2%治疗，最多3层。应先确认附近是否有符合条件的状态，不把上限当作默认治疗量。Support 标签本身不能证明治疗能力，具体技能描述才提供这项依据。', section: 'skills' },
+      { question: '能从同家族推断 Turbo 的移动能力或地点吗？', answer: 'Nimbi 进化树把 Dreaple 与 Turbo 列为不同分支。Turbo 记载 Cloudwalk 与 Nimbus Fields，Dreaple 在此快照却没有移动能力或栖息地字段。共享家族只能确认关系，不能确认同能力或 Dreaple 出现点；投入地点搜索前先核对当前官方条目。', section: 'evolution' },
+    ],
+    'zh-Hant': [
+      { question: '為什麼 Nightmare 持續時間不等於控制時間？', answer: 'Counting Sheep 每10秒讓下一個技能施加1層 Drowsiness，3層觸發持續20秒的 Nightmare。同一特性只列出3秒的移動與施技控制，並說明受到傷害會解除控制。因此20秒 Nightmare 不等於20秒暈眩，也不能由此確認控制解除後其他減益的行為。', section: 'traits' },
+      { question: '使用 Nightmare Devourer 前該核對什麼？', answer: '技能先為自身與附近隊友恢復5% HP，再吸收附近的 Nightmare；每吸收一個狀態提高2%治療，最多3層。應先確認附近是否有符合條件的狀態，不把上限當作預設治療量。Support 標籤本身不能證明治療能力，具體技能描述才提供這項依據。', section: 'skills' },
+      { question: '能從同家族推斷 Turbo 的移動能力或地點嗎？', answer: 'Nimbi 進化樹把 Dreaple 與 Turbo 列為不同分支。Turbo 記載 Cloudwalk 與 Nimbus Fields，Dreaple 在此快照卻沒有移動能力或棲息地欄位。共享家族只能確認關係，不能確認同能力或 Dreaple 出現點；投入地點搜尋前先核對目前官方條目。', section: 'evolution' },
+    ],
+  },
   '001': {
     en: [
       { question: 'Fire Kick or Pebble Kick: what changes after a dodge?', answer: 'Both descriptions condition their extra effect on successfully dodging an attack. Fire Kick lists a 20% damage increase for 20s; Pebble Kick instead applies Lockdown for 8s. Choose which effect you need to inspect, then confirm the dodge trigger in your client. Their listed Power values alone do not establish a better damage option.', section: 'skills' },

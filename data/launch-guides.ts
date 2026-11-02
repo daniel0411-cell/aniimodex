@@ -2,6 +2,7 @@ import { getAccessGuide } from './access-guides';
 import { getPartTwoGuide } from '@/data/part-two-guides';
 import { getAllAniimos } from '@/lib/aniimo';
 import { getOfficialAniimoDetail } from '@/data/aniimo-details';
+import { sourceById } from '@/data/sources';
 
 export type LaunchGuideBlock =
   { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'prismanaSchedule' } | { t: 'table'; head: string[]; rows: string[][] };
@@ -582,6 +583,7 @@ const english: Record<string, LaunchGuide> = {
         t: 'p',
         c: 'Dev Dispatch Vol. 1 says a dedicated team is working on mobile lag and overheating. The announcement does not publish an ETA, supported-device list or measured performance result, so this is an acknowledged workstream rather than a verified fix.',
       },
+      { t: 'link', href: sourceById.get('aniimo-steam-dev-dispatch-1-2026-10-01')!.url, c: 'Read the October 1 developer Q&A on mobile performance' },
       {
         t: 'quote',
         c: 'Historical mobile and relink notices checked October 4, 2026; the September 23 launch notice was rechecked October 11. Storefront and device availability must still be checked locally.',
@@ -3248,6 +3250,7 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
           ? '開發者答疑表示已有專門團隊處理手機卡頓與過熱，但未公布 ETA、支援裝置清單或效能測試結果，因此這是已確認的工作方向，不是已驗證完成的修正。'
           : '开发者答疑表示已有专门团队处理手机卡顿与过热，但未公布 ETA、支持设备清单或性能测试结果，因此这是已确认的工作方向，不是已验证完成的修复。',
       },
+      { t: 'link', href: sourceById.get('aniimo-steam-dev-dispatch-1-2026-10-01')!.url, c: traditional ? '查看10月1日開發者答疑的手機效能說明' : '查看10月1日开发者答疑的手机性能说明' },
     ],
     'aniimo-launch-checklist-known-issues': [
       {

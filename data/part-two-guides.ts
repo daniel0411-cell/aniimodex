@@ -2,9 +2,29 @@ import type { LaunchGuide } from '@/data/launch-guides';
 import { mobilityIndex } from '@/lib/mobility';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
+import { sourceById } from '@/data/sources';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  if (slug === 'aniimo-pre-registration') return {
+    title: t('Aniimo Launch Rewards: Check Eligibility Before Claiming', '伊莫首发奖励：领取前核对资格与历史记录', '伊莫首發獎勵：領取前核對資格與歷史紀錄'),
+    subtitle: t('Separate the September reward display from a current account entitlement, then choose the appropriate official next step.', '区分9月奖励展示与当前账号资格，再选择对应的官方下一步。', '區分9月獎勵展示與目前帳號資格，再選擇對應的官方下一步。'),
+    tag: t('Launch rewards', '首发奖励', '首發獎勵'),
+    lead: t('Pre-registration is not the current route into the launched game. This page preserves the official website observation from September 26, 2026; it does not confirm that the same rewards remain claimable today.', '游戏已上线，预约不是当前进入游戏的途径。本页保留2026年9月26日的官网观察，不确认当时展示的奖励现在仍可领取。', '遊戲已上線，預約不是目前進入遊戲的途徑。本頁保留2026年9月26日的官網觀察，不確認當時展示的獎勵現在仍可領取。'),
+    body: [
+      { t: 'h', c: t('What did the September website observation establish?', '9月官网观察能确认什么？', '9月官網觀察能確認什麼？') },
+      { t: 'p', c: t('The September 26 record lists four completed pre-registration milestones and launch benefits including a selected rare Shiny Aniimo, capture items, a limited Aniimo egg and four outfits. These are historical display categories, not a universal claim deadline or a guarantee that every account receives every item.', '9月26日记录列出四个已完成的预约里程碑，以及自选稀有 Shiny 伊莫、捕获道具、限定伊莫蛋和四套服装等首发福利。这些是历史展示类别，不是统一领取期限，也不保证每个账号都能获得每项道具。', '9月26日紀錄列出四個已完成的預約里程碑，以及自選稀有 Shiny 伊莫、捕獲道具、限定伊莫蛋和四套服裝等首發福利。這些是歷史展示類別，不是統一領取期限，也不保證每個帳號都能獲得每項道具。') },
+      { t: 'h', c: t('Which next step matches my situation?', '哪种下一步符合我的情况？', '哪種下一步符合我的情況？') },
+      { t: 'table', head: [t('Situation', '情况', '情況'), t('Check before acting', '操作前核对', '操作前核對')], rows: [
+        [t('Not installed yet', '尚未安装', '尚未安裝'), t('Use the official download guide; a pre-registration counter is not an installer or a claim button.', '使用官方下载指南；预约计数不是安装包或领取按钮。', '使用官方下載指南；預約計數不是安裝包或領取按鈕。')],
+        [t('Looking for a launch reward', '寻找首发奖励', '尋找首發獎勵'), t('Use the intended account, region and server. Check current event terms and mail for the exact reward, deadline and required opening steps.', '使用目标账号、地区和服务器，按当前活动条款与邮件核对具体奖励、截止时间及前置步骤。', '使用目標帳號、地區和伺服器，按目前活動條款與郵件核對具體獎勵、截止時間及前置步驟。')],
+        [t('Reward missing despite matching terms', '符合条款但奖励未到账', '符合條款但獎勵未到帳'), t('Keep the campaign name and screenshots. Send account identifiers only through official private support; this site cannot verify entitlement or deliver rewards.', '保留活动名称与截图，仅通过官方私密支持渠道提供账号信息；本站不能核验资格或发放奖励。', '保留活動名稱與截圖，僅透過官方私密支援管道提供帳號資訊；本站不能核驗資格或發放獎勵。')],
+      ] },
+      { t: 'link', href: '/guide/how-to-download-aniimo', c: t('Choose a current official download route', '选择当前官方下载入口', '選擇目前官方下載入口') },
+      { t: 'link', href: sourceById.get('aniimo-official-support-center')!.url, c: t('Open official support for a reward discrepancy', '奖励不符时联系官方支持', '獎勵不符時聯絡官方支援') },
+      { t: 'quote', c: t('Editorial update November 2, 2026; the website reward observation remains dated September 26. No current universal eligibility, code, deadline or account delivery has been verified.', '编辑更新于2026年11月2日；官网奖励观察仍为9月26日。未核验当前统一资格、兑换码、截止时间或个别账号到账。', '編輯更新於2026年11月2日；官網獎勵觀察仍為9月26日。未核驗目前統一資格、兌換碼、截止時間或個別帳號到帳。') },
+    ],
+  };
   if (slug === 'aniimo-team-composition') {
     const entries = getAllAniimos();
     const covered = entries.filter(entry => entry.mobility.length > 0).length;
@@ -253,6 +273,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     body: [
       { t: 'h', c: t('1. Select your server and rotation', '1. 选择服务器与轮换', '1. 選擇伺服器與輪換') },
       { t: 'prismanaSchedule' },
+      { t: 'h', c: t('Where can I check the featured form?', '在哪里核对本期指定形态？', '在哪裡核對本期指定形態？') },
+      { t: 'p', c: t('Pouchwisp, Royalby and Jeburst do not have current entries in this site’s October 23 Basic Form import. Glameep has an August historical record only. Use the announcement for the named Prismana target and area pair; do not substitute a Basic Form record or the old Glameep skills for current Prismana values.', '本站10月23日基础形态导入尚无 Pouchwisp、Royalby、Jeburst 的当前条目；Glameep 仅有8月历史记录。请按公告核对具名 Prismana 目标与对应区域，不把基础形态记录或旧 Glameep 技能当作当前 Prismana 数值。', '本站10月23日基礎形態匯入尚無 Pouchwisp、Royalby、Jeburst 的目前條目；Glameep 僅有8月歷史紀錄。請按公告核對具名 Prismana 目標與對應區域，不把基礎形態紀錄或舊 Glameep 技能當作目前 Prismana 數值。') },
+      { t: 'link', href: sourceById.get('aniimo-s1-part-two-2026-10-27')!.url, c: t('Open the official Part 2 announcement for featured forms and areas', '在官方后半段公告核对指定形态与区域', '在官方後半段公告核對指定形態與區域') },
+      { t: 'link', href: '/dex/089', c: t('Glameep: historical record only, not current Prismana attributes', 'Glameep：仅为历史记录，不是当前 Prismana 属性', 'Glameep：僅為歷史紀錄，不是目前 Prismana 屬性') },
+      { t: 'link', href: '/guide/aniimo-forms-explained', c: t('Distinguish form identity from Sparkling appearance', '区分形态身份与 Sparkling 外观', '區分形態身分與 Sparkling 外觀') },
       { t: 'p', c: t('The first four windows feature one Prismana Form each. November 30 to December 7 repeats all four together in their corresponding area pairs. The two areas on a row are listed alternatives, not an instruction to visit both or a guaranteed spawn point. Americas uses the announcement\'s UTC-4 offset; do not silently substitute your local daylight-saving rules.', '前四期各对应一种 Prismana 形态，11月30日至12月7日四者在各自对应区域同时出现。同行两个区域是公告列出的地点，不代表必须都去，也不保证固定刷新点。美洲服保留公告 UTC-4，不能自行套用设备所在地的夏令时规则。', '前四期各對應一種 Prismana 形態，11月30日至12月7日四者在各自對應區域同時出現。同列兩個區域是公告列出的地點，不代表必須都去，也不保證固定刷新點。美洲服保留公告 UTC-4，不能自行套用裝置所在地的夏令時間規則。') },
       { t: 'h', c: t('2. Check the entry requirement before travelling', '2. 出发前核对参与条件', '2. 出發前核對參與條件') },
       { t: 'li', c: t('Reach Student II for Vein Abundance. Its overall window is October 30 04:00 to December 7 03:59 in each announced server timezone.', 'Vein Abundance 要求 Student II；整体活动窗口为各服公告时区10月30日04:00至12月7日03:59。', 'Vein Abundance 要求 Student II；整體活動窗口為各服公告時區10月30日04:00至12月7日03:59。') },

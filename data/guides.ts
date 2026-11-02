@@ -96,12 +96,13 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'what-is-aniimo',
-    updatedAt: '2026-10-28',
+    updatedAt: '2026-11-02',
     date: '2026-09-15',
     readMinutes: 6,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: ['aniimo-release-date', 'aniimo-platforms'],
     sourceIds: [
+      'aniimo-steam-4126040',
       'aniimo-official-home-2026-08-28',
       'aniimo-playstation-10018491',
       'aniimo-xbox-9pk8phlcqdf6',
@@ -144,6 +145,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-launch-checklist-known-issues',
     ],
     sourceIds: [
+      'aniimo-steam-dev-dispatch-1-2026-10-01',
       'aniimo-official-home-2026-08-28',
       'aniimo-app-store-6759098797',
       'aniimo-app-store-cn-6768584375',
@@ -278,7 +280,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-02',
     date: '2026-10-13',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
@@ -292,10 +294,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-pre-registration',
+    updatedAt: '2026-11-02',
     date: '2026-09-26',
     readMinutes: 5,
     relatedSlugs: ['aniimo-mobile', 'how-to-download-aniimo', 'aniimo-launch-time-preload'],
-    sourceIds: ['aniimo-official-home-2026-08-28'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-official-support-center'],
   },
   {
     slug: 'aniimo-system-requirements',

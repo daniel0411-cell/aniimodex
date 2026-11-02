@@ -9,7 +9,6 @@ import type { OfficialAniimoDetail } from '@/data/aniimo-details';
 // 站点根地址：优先读环境变量，默认使用正式域名 aniimodex.com
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const LAST_PUBLISHED = '2026-10-04';
-const SEARCH_METADATA_UPDATED = '2026-10-06';
 
 const FEATURED_DEX_NUMBERS = new Set(['001', '002', '005', '007', '011']);
 const details = detailsSnapshot.details as OfficialAniimoDetail[];
@@ -60,11 +59,11 @@ const STATIC_ROUTES: {
   },
   {
     path: '/evolutions/',
-    lastModified: SEARCH_METADATA_UPDATED,
+    lastModified: '2026-11-02',
     priority: 0.85,
     changefreq: 'weekly',
   },
-  { path: '/locations/', lastModified: LAST_PUBLISHED, priority: 0.85, changefreq: 'weekly' },
+  { path: '/locations/', lastModified: '2026-11-02', priority: 0.85, changefreq: 'weekly' },
   {
     path: '/abilities/',
     lastModified: '2026-11-02',
@@ -122,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = STATIC_ROUTES.flatMap((route) =>
     buildLocalizedUrls(
       route.path,
-      ['/dex/', '/tools/', '/evolutions/', '/locations/', '/tools/type-chart/'].includes(route.path) ? '2026-10-23' : route.lastModified,
+      ['/dex/', '/tools/', '/tools/type-chart/'].includes(route.path) ? '2026-10-23' : route.lastModified,
       route.priority,
       route.changefreq ?? 'monthly'
     )
@@ -136,7 +135,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((aniimo) => priorityDexNumbers.has(aniimo.number))
     .map((aniimo) => ({
       url: `${SITE_URL}/en/dex/${aniimo.number}/`,
-      lastModified: '2026-10-23',
+      lastModified: '2026-11-02',
       changeFrequency: 'weekly' as const,
       priority: 0.75,
       alternates: { languages: localizedLanguagesForPath(`/dex/${aniimo.number}/`) },

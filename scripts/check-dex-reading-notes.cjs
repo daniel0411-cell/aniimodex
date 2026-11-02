@@ -12,6 +12,11 @@ const text = (number) => JSON.stringify(details.find((entry) => entry.number ===
 for (const term of ['Scorching Flames', '25%', 'Fire Kick', '20% for 20s', 'Pebble Kick', '8s', 'Hustle']) assert(text('001').includes(term), term);
 for (const term of ['8 basic attacks', 'next skill', 'basic attack damage', 'up to 9 hits', '45%', '5 times', '7 times']) assert(text('004').includes(term), term);
 for (const term of ['Grand Sorcerer', 'For 5s', '6 Might', 'same target 3 times', '10% for 10s']) assert(text('005').includes(term), term);
+for (const term of ['Take Off', 'more DMG while airborne', '20 EP', 'Chirpi family', 'every 20s', 'puddles', 'deducts 4 Energy']) assert(text('008').includes(term), term);
+for (const term of ['4 basic attacks', 'consumes this state', 'Cloudwalk', 'Cloud Shield', '15% max HP', '18% max HP', '30s']) assert(text('019').includes(term), term);
+for (const term of ['Counting Sheep', 'Every 10s', '3 stacks', '20s', 'for 3s', 'removes the control effect', 'Restores 5% HP', 'by 2%', 'up to 3 stacks']) assert(text('020').includes(term), term);
+assert.equal(details.find((entry) => entry.number === '020').mobility.length, 0);
+assert.equal(details.find((entry) => entry.number === '020').habitats.length, 0);
 assert.equal(details.find((entry) => entry.number === '004').habitats.length, 0);
 assert.equal(details.find((entry) => entry.number === '005').mobility.length, 0);
 assert.equal(details.length, 86);
@@ -37,7 +42,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   }
   assert(!read(`${locale}/dex/002`).includes('id="reading-notes-title"'));
   const overview = read(`${locale}/guide/what-is-aniimo`);
-  assert(overview.includes('2026-10-28'));
+  assert(overview.includes('2026-11-02'));
   assert(overview.includes('86'));
   for (const block of messages.guide.posts['what-is-aniimo'].body.filter((block) => block.t === 'link')) {
     assert(overview.includes(`href="/${locale}${block.href}/"`));

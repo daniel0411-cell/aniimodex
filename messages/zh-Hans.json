@@ -480,9 +480,9 @@
   },
   "dexDetail": {
     "readingNotesTitle": "选择前先看：触发条件与取舍",
-    "readingNotesScope": "AniimoDex 对 {date} 核验的基础形态记录所作解读，将公开条件与选择依据联系起来，不代表游戏实测或配装排名。解读更新：2026年10月28日。",
+    "readingNotesScope": "AniimoDex 对 {date} 核验的基础形态记录所作解读，将公开条件与选择依据联系起来，不代表游戏实测或配装排名。解读更新：2026年11月2日。",
     "readingNotesEvidence": "查看对应原始记录",
-    "descriptionIncomplete": "来源描述含有未替换的占位符或含义不明的数值，请核对本页链接的官方条目；本站不推断具体效果。",
+    "descriptionIncomplete": "来源描述含有异常格式、未替换的占位符或含义不明的数值，请核对本页链接的官方条目；本站不推断具体效果。",
     "attributesTitle": "官方基础形态属性",
     "attributesScope": "HP、BREAK、ATK、M.DEF、P.DEF、REGEN 为 Wiki 基础形态页面显示值，不是按等级换算的实战面板，也不是伤害排名；未纳入其他形态和成长公式。",
     "evolutionUnresolved": "官方进化图中有图片节点尚未全部匹配到当前目录，暂不展示这组关系，避免误认身份；这不代表该伊莫无法进化。",
@@ -534,7 +534,11 @@
       "prismana": "虹彩形态",
       "region": "区域形态"
     },
-    "formsNote": "形态链接来自当前官方页面。本站仅导入基础形态数值，其他形态的属性与技能请进入对应官方页面核对。",
+    "formsNote": "形态链接依据2026年10月23日核验的官方页面快照。本站仅导入基础形态数值，其他形态的属性与技能请进入对应官方页面核对。",
+    "historicalFormsNote": "这些形态名称属于2026年8月30日快照，尚未按当前 Wiki 重新核验；历史记录中列出某形态，不能证明其当前可用状态或数值。",
+    "historicalRecord": "历史 Wiki 记录 · 8月30日",
+    "historicalNumber": "历史编号 #{number}",
+    "historicalMetaTitle": "{name}：历史 Wiki 记录",
     "formsReadMore": "伊莫形态与闪耀样式说明",
     "reviewing": "核验中",
     "visualPending": "官方形象待确认",
@@ -2533,11 +2537,13 @@
   },
   "collections": {
     "evolutions": {
-      "title": "Aniimo 伊莫进化图鉴：全部家族与分支",
-      "description": "浏览官方来源的全部伊莫进化家族和分支路线。家族关系已确认；所需等级、道具与任务尚未公布。",
+      "title": "Aniimo 伊莫进化家族：已公布的关系树与分支",
+      "description": "比较10月23日基础形态快照中的已公布进化树。未解决的记录单独列出；不推断所需等级、道具或任务。",
       "sourceNote": "进化关系来自 2026 年 10 月 23 日核验的官方 Aniimo Wiki 详情快照。",
       "family": "进化家族",
       "definition": "当前官方来源快照将 {members} 个伊莫名称映射到 {families} 个进化家族。家族关系已确认；等级、道具和任务条件不会被推断。",
+      "unresolvedTitle": "哪些条目未纳入进化树？",
+      "unresolvedDescription": "进化树覆盖 {total} 条已索引基础形态记录中的 {mapped} 条。下列 {count} 条进化数据尚未解决，因此未纳入树中，不代表确认没有进化；本目录也不是当前游戏的完整名单。",
       "stats": {
         "families": "已公布进化家族",
         "branching": "拥有多个直接分支的家族",
@@ -2594,7 +2600,7 @@
       "directoryTitle": "伊莫地图与栖息地目录",
       "summary": "官方元素：{elements} · 涵盖 {families} 个进化家族",
       "howToTitle": "如何使用伊莫地图目录",
-      "howToDescription": "选择官方栖息地查看对应伊莫，再进入图鉴核对进化、元素、定位、形态与移动能力。这是可检索的地点目录，并非互动坐标地图。",
+      "howToDescription": "在目录选择栖息地可跳到对应伊莫列表，再进入图鉴核对进化、元素、定位、形态与移动能力。本页按地区浏览，并非互动坐标地图。",
       "faq": {
         "map": {
           "question": "AniimoDex 有互动伊莫地图吗？",
@@ -2621,7 +2627,7 @@
       "stats": { "mobility": "移动能力", "traits": "被动特性", "skills": "战斗技能名" },
       "mobilityTitle": "移动与探索能力",
       "traitsTitle": "被动特性",
-      "traitsDescription": "搜索 {count} 个已公布特性名称与对应伊莫。只有官方快照提供时才展示说明。",
+      "traitsDescription": "搜索 {count} 个已公布特性名称与对应伊莫。存在差异或格式异常的来源说明在此省略，可打开个体记录核对证据。",
       "skillsTitle": "战斗技能",
       "skillsDescription": "搜索 {count} 个已公布技能名称与对应伊莫。技能名不能证明伤害、冷却或强度排名。",
       "searchTraits": "搜索特性或伊莫名称",

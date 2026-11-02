@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getAllAniimos, getAllRouteAniimos, getAniimoByNumber, getAniimoByName } from '@/lib/aniimo';
+import { getAllAniimos, getAllRouteAniimos, getAniimoByNumber } from '@/lib/aniimo';
 import { getDexComparisons } from '@/lib/dex-comparison';
 import { ELEMENT_BADGE_CLASSES, ROLE_BADGE_CLASSES, ROLE_ICONS } from '@/lib/aniimo-ui';
 import { cn } from '@/lib/utils';
@@ -10,12 +10,13 @@ import { Link } from '@/i18n/navigation';
 import { localizedLanguages } from '@/lib/i18n-metadata';
 import { locales } from '@/i18n/routing';
 import { sourceById } from '@/data/sources';
-import { getOfficialAniimoDetail, isSuspiciousOfficialDescription, type OfficialEvolutionNode, type OfficialSkill } from '@/data/aniimo-details';
+import { getOfficialAniimoDetail, isSuspiciousOfficialDescription, type OfficialSkill } from '@/data/aniimo-details';
 import { formKind, type FormKind } from '@/data/forms';
 import { flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import SnapshotNotice from '@/components/dex/SnapshotNotice';
 import { dexReadingNotes } from '@/data/dex-reading-notes';
+import EvolutionTree from '@/components/dex/EvolutionTree';
 
 interface PageProps {
   params: Promise<{ locale: string; number: string }>;
@@ -29,23 +30,6 @@ const FORM_KIND_CLASSES: Record<FormKind, string> = {
   prismana: 'border-violet-300 bg-violet-50 text-violet-700',
   region: 'border-emerald-300 bg-emerald-50 text-emerald-700',
 };
-
-function EvolutionTree({ node, locale, stageLabel }: { node: OfficialEvolutionNode; locale: string; stageLabel: string }) {
-  const entry = getAniimoByName(node.name);
-  return (
-    <div>
-      <div className="inline-flex items-center gap-2 rounded border border-ink-border bg-white px-3 py-2 text-sm">
-        {entry ? <Link href={`/dex/${entry.number}`} className="font-semibold text-primary-light">{locale === 'en' ? entry.enName : entry.name}</Link> : <span className="font-semibold text-text-primary">{node.name}</span>}
-        {node.stage > 0 && <span className="text-xs text-text-muted">{stageLabel} {node.stage}</span>}
-      </div>
-      {node.children.length > 0 && (
-        <div className="ml-4 mt-2 space-y-2 border-l-2 border-ink-border pl-4">
-          {node.children.map((child) => <EvolutionTree key={`${child.name}-${child.stage}`} node={child} locale={locale} stageLabel={stageLabel} />)}
-        </div>
-      )}
-    </div>
-  );
-}
 
 function SkillList({ skills, incompleteLabel }: { skills: OfficialSkill[]; incompleteLabel: string }) {
   return (
@@ -91,7 +75,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const displayName = locale === 'en' ? aniimo.enName : aniimo.name;
-  const title = t('metaTitle', { name: displayName, number: aniimo.officialNumber ?? aniimo.number });
+  const title = aniimo.archived ? t('historicalMetaTitle', { name: displayName }) : t('metaTitle', { name: displayName, number: aniimo.officialNumber ?? aniimo.number });
   const elements = aniimo.officialElements?.map((element) => td(`elementNames.${element}`)).join(', ');
   const role = aniimo.officialRole ? td(`roleNames.${aniimo.officialRole}`) : '';
   const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;
@@ -229,11 +213,10 @@ export default async function DexDetailPage({ params }: PageProps) {
         <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
           <div className="flex items-center gap-3">
             <span className="font-mono text-xs font-semibold text-text-muted">
-              #{aniimo.officialNumber ?? aniimo.number}
+              {aniimo.archived ? t('historicalNumber', { number: aniimo.number }) : `#${aniimo.officialNumber ?? aniimo.number}`}
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 text-[11px] font-semibold text-emerald-800">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              {t('officialBasic')}
+            <span className={cn('inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold', aniimo.archived ? 'bg-amber-100 text-amber-900' : 'bg-emerald-100 text-emerald-800')}>
+              {t(aniimo.archived ? 'historicalRecord' : 'officialBasic')}
             </span>
           </div>
           <h1 className="mt-3 text-3xl font-bold text-text-primary sm:text-4xl">{aniimo.name}</h1>
@@ -352,7 +335,7 @@ export default async function DexDetailPage({ params }: PageProps) {
                     );
                   })}
                 </ul>
-                <p className="mt-2 text-xs leading-5 text-text-muted">{t('formsNote')}</p>
+                <p className="mt-2 text-xs leading-5 text-text-muted">{t(aniimo.archived ? 'historicalFormsNote' : 'formsNote')}</p>
                 <Link href="/guide/aniimo-forms-explained" className="mt-2 inline-flex text-sm font-semibold text-primary-light">
                   {t('formsReadMore')} →
                 </Link>

@@ -480,9 +480,9 @@
   },
   "dexDetail": {
     "readingNotesTitle": "Before you choose: triggers and trade-offs",
-    "readingNotesScope": "AniimoDex interpretation of the Basic Form record checked {date}. These notes connect published conditions to a decision; they are not live-game tests or build rankings. Editorial update: October 28, 2026.",
+    "readingNotesScope": "AniimoDex interpretation of the Basic Form record checked {date}. These notes connect published conditions to a decision; they are not live-game tests or build rankings. Editorial update: November 2, 2026.",
     "readingNotesEvidence": "Read the underlying record",
-    "descriptionIncomplete": "The source description contains unresolved placeholders or an ambiguous value. Check the linked official page; no effect amount is inferred here.",
+    "descriptionIncomplete": "The source description contains unresolved formatting, placeholders or an ambiguous value. Check the linked official page; no effect amount is inferred here.",
     "attributesTitle": "Official Basic Form attributes",
     "attributesScope": "HP, BREAK, ATK, M.DEF, P.DEF and REGEN are the values displayed by the Wiki for Basic Form. They are not level-adjusted battle stats or a damage ranking; alternate forms and growth formulas are not included.",
     "evolutionUnresolved": "The official evolution chart includes image nodes that could not all be matched to the current directory. This family is withheld until identities can be verified; it does not mean this Aniimo has no evolution.",
@@ -534,7 +534,11 @@
       "prismana": "Prismana form",
       "region": "Region form"
     },
-    "formsNote": "Form links come from the current official page. This site imports Basic Form values only; open another form on the Wiki to check its own attributes and skills.",
+    "formsNote": "Form links use the official page snapshot checked October 23, 2026. This site imports Basic Form values only; open another form on the Wiki to check its own attributes and skills.",
+    "historicalFormsNote": "These form names belong to the August 30, 2026 snapshot and have not been revalidated against the current Wiki. A listed historical form is not evidence of current availability or values.",
+    "historicalRecord": "Historical Wiki record · August 30",
+    "historicalNumber": "Historical number #{number}",
+    "historicalMetaTitle": "{name}: Historical Wiki Record",
     "formsReadMore": "How Aniimo forms and sparkling styles work",
     "reviewing": "Under review",
     "visualPending": "Official visual pending",
@@ -2634,11 +2638,13 @@
   },
   "collections": {
     "evolutions": {
-      "title": "Aniimo Evolutions: Complete Evolution Lines & Branches",
-      "description": "Browse every official-source Aniimo evolution family and branching line. Family links are confirmed; required levels, items and quests remain unpublished.",
+      "title": "Aniimo Evolution Families: Published Trees & Branches",
+      "description": "Compare the published evolution trees from the October 23 Basic Form snapshot. Unresolved records are listed separately; levels, items and quests are not inferred.",
       "sourceNote": "Evolution relationships are generated from the official Aniimo Wiki detail snapshot checked October 23, 2026.",
       "family": "evolution family",
       "definition": "The current official-source snapshot maps {members} Aniimo names across {families} evolution families. Family links are confirmed; levels, items and quest requirements are not inferred.",
+      "unresolvedTitle": "Which records are outside these trees?",
+      "unresolvedDescription": "These trees cover {mapped} of {total} indexed Basic Form records. The {count} records below have unresolved evolution data and are excluded from the trees, not confirmed to have no evolutions. This is not the complete current-game roster.",
       "stats": {
         "families": "Published evolution families",
         "branching": "Families with multiple direct branches",
@@ -2671,7 +2677,7 @@
       "directoryTitle": "Aniimo map and habitat directory",
       "summary": "Published elements: {elements} · {families} evolution families represented",
       "howToTitle": "How to use this Aniimo map directory",
-      "howToDescription": "Choose an official habitat to see its listed Aniimo, then open a dex entry for evolution, elements, roles, forms and mobility. This is a searchable location directory rather than an interactive coordinate map.",
+      "howToDescription": "Choose a habitat in the directory to jump to its listed Aniimo, then open a dex entry for evolution, elements, roles, forms and mobility. This page supports browsing by area; it is not an interactive coordinate map.",
       "faq": {
         "map": {
           "question": "Does AniimoDex have an interactive Aniimo map?",
@@ -2726,7 +2732,7 @@
       },
       "mobilityTitle": "Movement and exploration abilities",
       "traitsTitle": "Passive traits",
-      "traitsDescription": "Search {count} published trait names and their mapped Aniimo. Descriptions are reproduced only where the official snapshot provides them.",
+      "traitsDescription": "Search {count} published trait names and their mapped Aniimo. Differing or malformed source descriptions are omitted here; open an individual record to check its evidence.",
       "skillsTitle": "Combat skills",
       "skillsDescription": "Search {count} published skill names and their mapped Aniimo. Names do not establish damage, cooldown or tier ranking.",
       "searchTraits": "Search traits or Aniimo names",
