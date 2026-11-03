@@ -242,10 +242,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug === 'aniimo-prismana-potential-breeding-guide') return {
     title: t('Aniimo Hue & Growth Items: What Changes Potential?', '伊莫色彩与养成道具：哪些操作影响潜能？', '伊莫色彩與養成道具：哪些操作影響潛能？'),
-    subtitle: t('Choose Hue Swap, Pigment, Legendary Aniipod, Prismana Orb or growth materials by the result you need.', '按目标区分 Hue Swap、Pigment、传奇 Aniipod、Prismana Orb 与成长材料。', '按目標區分 Hue Swap、Pigment、傳說 Aniipod、Prismana Orb 與成長材料。'),
+    subtitle: t('Check your target before spending: unlocked hues, random Pigment, excluded Legendary Aniipod targets and unchanged Acquired Potential.', '消耗前按目标核对：个体已解锁色彩、随机 Pigment、传奇球排除对象与不变的 Acquired Potential。', '消耗前按目標核對：個體已解鎖色彩、隨機 Pigment、傳說球排除對象與不變的 Acquired Potential。'),
     tag: t('Item decisions', '道具选择', '道具選擇'),
     lead: t('Choose the result first: a different unlocked hue, a new random hue, an exclusive pod effect, a form change or growth progression. These are separate systems. The October 29 update expressly says replacing a Legendary Aniipod does not change Acquired Potential.', '先确定目标：切换已解锁色彩、随机开新色、获得专属球效果、转换形态，还是推进养成。这些属于不同系统；10月29日更新明确说，替换传奇 Aniipod 不改变 Acquired Potential。', '先確定目標：切換已解鎖色彩、隨機開新色、獲得專屬球效果、轉換形態，還是推進養成。這些屬於不同系統；10月29日更新明確說，替換傳說 Aniipod 不改變 Acquired Potential。'),
     body: [
+      { t: 'sparklingDecision' },
       { t: 'h', c: t('1. Match the action to the desired result', '1. 按目标选操作', '1. 按目標選操作') },
       { t: 'table', head: [t('Goal / action', '目标／操作', '目標／操作'), t('Cost or condition', '消耗或条件', '消耗或條件'), t('Limit to check before confirming', '确认前核对限制', '確認前核對限制')], rows: [
         ['Hue Swap', t('Credits; an unlocked hue on this same individual.', 'Credits；该个体已解锁色彩。', 'Credits；該個體已解鎖色彩。'), t('Unlocks are individual-specific, not shared by the species. Compare unlocked previews before rerolling.', '解锁只对同一个体有效，不在同物种间共享；先查已解锁预览，再决定是否重洗。', '解鎖只對同一個體有效，不在同物種間共享；先查已解鎖預覽，再決定是否重洗。')],
@@ -262,7 +263,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
       { t: 'p', c: t('Prismana morphology, Sparkling style and an individual’s Potential are different records. A form label alone does not prove perfect stats or a breeding outcome. The adjusted orb description preserves Acquired Potential, Mutation and Personality; it does not promise an upgrade to perfect values. No complete breeding recipe or universal best spending order is established here.', 'Prismana 形态、Sparkling 样式和个体潜能是不同记录，单凭形态标签不能保证满属性或繁育结果。调整后的球说明保留 Acquired Potential、Mutation、Personality，并不承诺提升到满值。本站没有确认完整繁育配方或通用最优消费顺序。', 'Prismana 形態、Sparkling 樣式和個體潛能是不同紀錄，單憑形態標籤不能保證滿屬性或繁育結果。調整後的球說明保留 Acquired Potential、Mutation、Personality，並不承諾提升到滿值。本站沒有確認完整繁育配方或通用最佳消費順序。') },
       { t: 'link', href: '/guide/aniimo-forms-explained', c: t('Identify morphology before comparing Sparkling styles', '先识别形态，再比较 Sparkling 样式', '先識別形態，再比較 Sparkling 樣式') },
       { t: 'link', href: '/guide/aniimo-version-1-1-update', c: t('Level cap blocked? Use the 60–70 progression checklist', '等级上限卡住？查看60–70级成长清单', '等級上限卡住？查看60–70級成長清單') },
-      { t: 'quote', c: t('Official October 27 announcement for the October 29 update, checked November 1, 2026. This supersedes October 1 plans only for the features expressly listed. No purchase prices, random hue distribution or live-client test is claimed.', '10月27日发布的10月29日更新公告，2026年11月1日核对；仅对明确列出的功能替代10月1日计划状态。未核验购买价格、随机色分布或客户端实测。', '10月27日發布的10月29日更新公告，2026年11月1日核對；僅對明確列出的功能替代10月1日計畫狀態。未核驗購買價格、隨機色分布或客戶端實測。') },
+      { t: 'quote', c: t('Official October 27 announcement for the October 29 update, rechecked November 3, 2026. This supersedes October 1 plans only for the features expressly listed. No purchase prices, random hue distribution or live-client test is claimed.', '10月27日发布的10月29日更新公告，2026年11月3日重新核对；仅对明确列出的功能替代10月1日计划状态。未核验购买价格、随机色分布或客户端实测。', '10月27日發布的10月29日更新公告，2026年11月3日重新核對；僅對明確列出的功能替代10月1日計畫狀態。未核驗購買價格、隨機色分布或客戶端實測。') },
     ],
   };
   if (slug === 'aniimo-prismana-event-tracker') return {

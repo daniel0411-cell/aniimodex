@@ -583,7 +583,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-potential-breeding-guide',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-03',
     element: '暗',
     date: '2026-10-16',
     readMinutes: 7,

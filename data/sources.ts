@@ -16,8 +16,8 @@ export const sources: SourceReference[] = [
     id: 'aniimo-s1-part-two-2026-10-27',
     url: 'https://steamcommunity.com/games/4126040/announcements/detail/687520329382238609',
     title: 'Aniimo S1 Departure with the Wind Part 2 - October 29 update',
-    accessedAt: '2026-11-01',
-    evidence: 'Official Steam news API body published October 27 schedules the October 29 update. It names the four Whisperwake areas, 51 new Aniimo, Vein Abundance Student II requirement and November 2-December 7 Prismana rotation for Pouchwisp, Royalby, Jeburst and Glameep. Each server has its own stated fixed UTC offset. Photo rules distinguish form, location and distinct Sparkling Types; no spawn coordinates or precise encounter probability are established. This is announcement evidence, not a live-client test.',
+    accessedAt: '2026-11-03',
+    evidence: 'Official Steam news API body published October 27 schedules the October 29 update. It names the four Whisperwake areas, 51 new Aniimo, Vein Abundance Student II requirement and November 2-December 7 Prismana rotation for Pouchwisp, Royalby, Jeburst and Glameep. Each server has its own stated fixed UTC offset. Photo rules distinguish form, location and distinct Sparkling Types; no spawn coordinates or precise encounter probability are established. Sparkling Hue and Growth System sections rechecked November 3: individual-specific unlocks, Credits for Hue Swap, duplicate reroll returns 2 Sigil, Legendary Aniipod replacement preserves Acquired Potential and excludes Irisalis/Helion/Lunara, and the adjusted Prismana Orb retains Acquired Potential/Mutation/Personality. This is announcement evidence, not a live-client test.',
   },
   {
     id: 'aniimo-patch-1-1-3857679-2026-10-30',

@@ -5,7 +5,7 @@ import { getOfficialAniimoDetail } from '@/data/aniimo-details';
 import { sourceById } from '@/data/sources';
 
 export type LaunchGuideBlock =
-  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'prismanaSchedule' } | { t: 'table'; head: string[]; rows: string[][] };
+  { t: 'p' | 'h' | 'li' | 'quote'; c: string } | { t: 'link'; c: string; href: string } | { t: 'prismanaSchedule' | 'sparklingDecision' } | { t: 'table'; head: string[]; rows: string[][] };
 
 export type LaunchGuide = {
   title: string;

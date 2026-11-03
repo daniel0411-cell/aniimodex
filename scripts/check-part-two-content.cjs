@@ -79,7 +79,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     [forms, ['Hue Swap', 'Sparkling Original', 'Giga-Egg']],
   ]) {
     for (const term of terms) assert(page.includes(term), `${locale}: missing decision fact ${term}`);
-    assert(page.includes('687520329382238609') && page.includes('2026-11-01'));
+    assert(page.includes('687520329382238609') && page.includes('2026-11-03'));
     assert(!page.includes('noindex'));
   }
   assert(egg.indexOf('Giga-Egg') < egg.indexOf('Erlath'), `${locale}: current mode before historical advice`);
