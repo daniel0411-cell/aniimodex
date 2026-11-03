@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sparklingDecision, sparklingDecisionCopy, sparklingDecisionDetail, type SparklingGoal, type Confirmation, type PodSpecies } from '@/data/sparkling-decision';
 
 export default function SparklingDecision({ locale, sourceUrl }: { locale: string; sourceUrl: string }) {
@@ -10,10 +10,13 @@ export default function SparklingDecision({ locale, sourceUrl }: { locale: strin
   const [sparkling, setSparkling] = useState<Confirmation>('unknown');
   const [hue, setHue] = useState<Confirmation>('unknown');
   const [species, setSpecies] = useState<PodSpecies>('unknown');
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   const result = sparklingDecision(goal, sparkling, hue, species);
   const selectClass = 'mt-2 block min-h-11 w-full min-w-0 rounded border border-ink-border bg-white px-2 py-2 text-sm';
   return <section aria-labelledby="sparkling-decision-title" className="my-5 space-y-4 rounded border border-ink-border p-4 sm:p-5" data-testid="sparkling-decision">
     <h3 id="sparkling-decision-title" className="text-lg font-semibold">{t('Before spending: check the operation', '消耗道具前：核对操作', '消耗道具前：核對操作')}</h3>
+    <fieldset disabled={!ready} className="space-y-4">
     <label className="block text-sm font-semibold">
       {t('Desired result', '目标结果', '目標結果')}
       <select value={goal} onChange={event => setGoal(event.target.value as SparklingGoal)} className={selectClass}>
@@ -45,6 +48,7 @@ export default function SparklingDecision({ locale, sourceUrl }: { locale: strin
         <option value="other">{t('Another confirmed species', '已确认是其他物种', '已確認是其他物種')}</option>
       </select>
     </label>}
+    </fieldset>
     <div role="status" aria-live="polite" aria-atomic="true" className="min-h-36 border-l-4 border-primary bg-ink-card px-4 py-3" data-result={result}>
       <p className="font-semibold">{sparklingDecisionCopy[result][language]}</p>
       <p className="mt-2 text-sm leading-6 text-text-secondary">{sparklingDecisionDetail[result][language]}</p>

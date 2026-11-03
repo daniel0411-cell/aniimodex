@@ -70,6 +70,8 @@ No advertised feature is labelled a combat simulator or guaranteed improvement.
   result text, valid outline anchors and no document horizontal overflow.
 - With JavaScript disabled, the item comparison table and core conditions
   remain readable in every locale.
+- Controls stay disabled until hydration finishes, avoiding a selection made
+  before event handlers are ready; the complete static comparison stays readable.
 - Mobile and desktop screenshots were visually inspected. Browser sessions
   close in finally; user Chrome is unused.
 

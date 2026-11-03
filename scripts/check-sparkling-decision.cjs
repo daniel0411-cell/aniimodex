@@ -38,6 +38,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
   assert.equal((html.match(/data-testid="sparkling-decision"/g) || []).length, 1);
   assert(html.includes('data-result="choose"') && html.includes('aria-live="polite"'));
+  assert(html.includes('<fieldset disabled=""'), 'Controls must wait for interactive hydration');
   assert(html.includes('2026-11-03') && html.includes('687520329382238609'));
   assert(html.indexOf('data-testid="sparkling-decision"') < html.indexOf('<table'));
   assert(html.includes('<table') && html.includes('Acquired Potential') && html.includes('Sparkling Sigil'));
