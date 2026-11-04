@@ -248,7 +248,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-rv-homeland-guide',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-03',
     date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
@@ -456,7 +456,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-version-1-1-update',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-03',
     date: '2026-10-11',
     readMinutes: 7,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -548,7 +548,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-harvest-gathering-farm-guide',
-    updatedAt: '2026-10-27',
+    updatedAt: '2026-11-03',
     element: '草',
     date: '2026-10-16',
     readMinutes: 6,
@@ -559,7 +559,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-launch-checklist-known-issues',
       'getting-started',
     ],
-    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
+    sourceIds: ['aniimo-official-home-2026-08-28', 'aniimo-steam-patch-1-0-3732728-2026-10-15', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-currencies-and-shops',

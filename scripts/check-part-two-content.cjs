@@ -47,7 +47,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     [coverage, ['86', '12', '2026-10-23', 'S1']],
   ]) {
     for (const term of terms) assert(page.includes(term), `${locale}: missing refreshed answer ${term}`);
-    assert(page.includes('2026-11-02'));
+    assert(page.includes(page === homeGuide ? '2026-11-03' : '2026-11-02'));
     assert(!page.includes('noindex'));
     for (const [, href] of page.matchAll(/href="(\/(?:en|zh-Hans|zh-Hant)\/[^"#?]+)"/g)) {
       assert(require('node:fs').existsSync(`out${href}index.html`), `broken refreshed guide link ${href}`);
@@ -69,6 +69,25 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   }
   assert(home.includes(messagesForHome.home.latestUpdateTitle));
   const growth = read(locale, 'guide/aniimo-version-1-1-update');
+  const harvest = read(locale, 'guide/aniimo-harvest-gathering-farm-guide');
+  const branchHeadings = {
+    en: ['Start here: which goal is blocked?', 'Start here: entry missing, activity locked or old items gone?', 'Looking for the current Home season?', 'Historical October schedule and crop notice'],
+    'zh-Hans': ['先定位：你卡在哪个目标？', '先定位：没有入口、活动锁定，还是旧物品不见了？', '在找当前家园活动？', '10月历史排期与作物公告'],
+    'zh-Hant': ['先定位：你卡在哪個目標？', '先定位：沒有入口、活動鎖定，還是舊物品不見了？', '在找目前家園活動？', '10月歷史排期與作物公告'],
+  }[locale];
+  assert(growth.includes(branchHeadings[0]) && homeGuide.includes(branchHeadings[1]));
+  const harvestLink = harvest.indexOf(`href="/${locale}/guide/aniimo-rv-homeland-guide/"`, harvest.indexOf(branchHeadings[2]));
+  assert(harvestLink > 0 && harvestLink < harvest.lastIndexOf(branchHeadings[3]), `${locale}: current Home link must precede historical schedule`);
+  for (const page of [growth, homeGuide, harvest]) {
+    assert(page.includes('687520329382238609'));
+    assert(page.includes('2026-11-03'));
+  }
+  for (const slug of ['aniimo-version-1-1-update', 'aniimo-rv-homeland-guide', 'aniimo-harvest-gathering-farm-guide']) {
+    const raw = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
+    const article = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
+    assert.equal(article?.dateModified, '2026-11-03');
+  }
   const egg = read(locale, 'guide/aniimo-egg-heist');
   const items = read(locale, 'guide/aniimo-prismana-potential-breeding-guide');
   const forms = read(locale, 'guide/aniimo-forms-explained');

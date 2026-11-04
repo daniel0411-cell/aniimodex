@@ -1393,14 +1393,14 @@ function harvestGatheringGuide(locale: string): LaunchGuide {
     locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return {
     title: text(
-      'Aniimo Harvest Gathering: Schedule & Crop Bonuses',
-      'Aniimo 丰收聚会：开放时间与作物增益',
-      'Aniimo 豐收聚會：開放時間與作物增益'
+      'Aniimo Harvest Gathering: Historical Schedule & Current Home Guide',
+      '伊莫丰收聚会：历史排期与当前家园指南',
+      '伊莫豐收聚會：歷史排期與目前家園指南'
     ),
     subtitle: text(
-      'Official October 15 crop bonuses and the October 20–21 Harvest Gathering opening schedule, with regional time zones.',
-      '整理官方 10 月 15 日作物增益与 10 月 20–21 日丰收聚会开放排期，区分各区时区。',
-      '整理官方 10 月 15 日作物增益與 10 月 20–21 日豐收聚會開放排期，區分各區時區。'
+      'Find the current Home season first; October crop bonuses and opening dates remain historical records.',
+      '先找到当前家园赛季入口；10月作物增益与开放日期仅作历史记录。',
+      '先找到目前家園賽季入口；10月作物增益與開放日期僅作歷史紀錄。'
     ),
     tag: text('Home & Event', '家园与活动', '家園與活動'),
     lead: text(
@@ -1409,6 +1409,10 @@ function harvestGatheringGuide(locale: string): LaunchGuide {
       '公告中的 10 月 20–21 日開放日期已過。本頁保留 10 月 15 日豐收聚會排期與作物增益記錄，不代表活動或增益目前仍然有效。為獎勵種植或購買任務家具前，請先查看遊戲內目前活動面板。'
     ),
     body: [
+      { t: 'h', c: text('Looking for the current Home season?', '在找当前家园活动？', '在找目前家園活動？') },
+      { t: 'p', c: text('The October 29 season update replaces Harvest Moon Festival with Magical Wonder Night. For current entry requirements, old-item conversion and stage locks, use the Home guide below. Do not buy furniture or plant crops based on this historical opening schedule.', '10月29日换季公告将 Harvest Moon Festival 切换为 Magical Wonder Night。当前入口条件、旧物品转换与阶段锁请查看下方家园指南；不要按本页历史排期购买家具或安排种植。', '10月29日換季公告將 Harvest Moon Festival 切換為 Magical Wonder Night。目前入口條件、舊物品轉換與階段鎖請查看下方家園指南；不要按本頁歷史排期購買家具或安排種植。') },
+      { t: 'link', href: '/guide/aniimo-rv-homeland-guide', c: text('Current Home season: entry checks and old-item destinations', '当前家园赛季：入口检查与旧物品去向', '目前家園賽季：入口檢查與舊物品去向') },
+      { t: 'h', c: text('Historical October schedule and crop notice', '10月历史排期与作物公告', '10月歷史排期與作物公告') },
       ...october15PatchBlocks(locale, 'aniimo-rv-homeland-guide'),
       {
         t: 'h',
