@@ -3,9 +3,11 @@ import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 
 export interface PolicySection {
+  id?: string;
   heading: string;
   paragraphs?: string[];
   items?: string[];
+  links?: { label: string; href: string }[];
 }
 
 export default async function PolicyPage({
@@ -30,7 +32,7 @@ export default async function PolicyPage({
         <p className="mt-3 text-xs text-text-muted">{updated}</p>
       </header>
       {sections.map((section) => (
-        <section key={section.heading} className="border-t border-ink-border pt-6 first:border-0 first:pt-0">
+        <section id={section.id} key={section.heading} className="scroll-mt-24 border-t border-ink-border pt-6 first:border-0 first:pt-0">
           <h2 className="text-xl font-bold text-text-primary">{section.heading}</h2>
           {section.paragraphs?.map((paragraph) => (
             <p key={paragraph} className="mt-3 leading-7 text-text-secondary">{paragraph}</p>
@@ -38,6 +40,15 @@ export default async function PolicyPage({
           {section.items && (
             <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-text-secondary">
               {section.items.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          )}
+          {section.links && (
+            <ul className="mt-3 space-y-2 leading-7 text-primary-light">
+              {section.links.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="break-words underline underline-offset-4" rel={link.href.startsWith('https://') ? 'noreferrer' : undefined}>{link.label}</a>
+                </li>
+              ))}
             </ul>
           )}
         </section>

@@ -49,13 +49,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2321309842883439"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="flex min-h-screen flex-col bg-ink text-text-primary">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />

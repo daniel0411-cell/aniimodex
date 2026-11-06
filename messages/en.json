@@ -129,6 +129,7 @@
     "legalNav": "Site information and policies",
     "about": "About",
     "privacy": "Privacy",
+    "privacyChoices": "Privacy choices",
     "terms": "Terms & copyright",
     "verification": "How we verify",
     "contact": "Contact"
@@ -182,35 +183,55 @@
     "privacy": {
       "title": "Privacy Policy",
       "intro": "This policy explains what AniimoDex may collect, why it is used, how advertising and cookies may work, and the choices available to visitors.",
-      "updated": "Effective and last updated: September 23, 2026",
+      "updated": "Effective and last updated: November 6, 2026",
       "sections": [
+        {
+          "heading": "Current advertising and measurement status",
+          "paragraphs": [
+            "Ad serving is paused. This version does not load the Google AdSense advertising script, initialize advertising units or include optional analytics tags. Approval of an AdSense account does not itself enable advertising on this site. We have not activated an advertising consent dialog in this version because advertising is paused; there are no site advertising preferences to accept or withdraw at present.",
+            "The sections below distinguish current site operation from the controls required before any future advertising launch. Necessary delivery and security processing still occurs when you visit."
+          ]
+        },
         {
           "heading": "Information processed when you visit",
           "paragraphs": [
-            "Our hosting and security providers may process standard request information such as IP address, browser and device type, requested URL, approximate region, timestamps and security signals. We use this information to deliver the site, prevent abuse, diagnose failures and understand aggregate performance. AniimoDex does not require an account and does not intentionally collect names, passwords, payment details or game credentials."
+            "Cloudflare provides our website hosting and delivery. Hosting and security services may process IP address, browser and device type, requested URL, approximate region, timestamps and security signals to deliver the site, prevent abuse and diagnose failures. Some game images load directly from the publisher's content delivery network, worldx-website-cdn.aniimo.com; that provider receives the network information needed to deliver those images. AniimoDex does not require an account or ask for game credentials or payment details. If you contact us by email, we receive your email address and the information you choose to send.",
+            "Where European data protection law applies, we rely on our legitimate interests in providing and securing this reference service and responding to enquiries, subject to your rights and interests, and on legal obligations where applicable. Future optional processing that requires consent must rely on that consent. You may object to processing based on legitimate interests."
           ]
         },
         {
           "heading": "Cookies, local storage and advertising",
           "paragraphs": [
-            "The site may use essential storage for language or interface preferences. If Google AdSense or another advertising service is enabled, advertising partners may use cookies, device identifiers or similar technologies to serve, measure and limit ads. Google may use advertising cookies to show ads based on visits to this and other sites where permitted by law."
+            "Necessary functions such as remembering a language choice or protecting the site may use cookies or similar storage. The current version does not initialize advertising storage or optional analytics. Blocking necessary cookies in your browser may affect preferences or security checks.",
+            "If advertising is enabled in a later version, third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this website or other websites. Google's advertising cookies enable Google and its partners to serve ads based on visits to this site and other sites on the Internet. The privacy policy and consent controls must be updated for the actual vendors and purposes before that launch."
           ],
           "items": [
-            "Google's advertising technology information: policies.google.com/technologies/ads",
-            "Google ad personalization controls: adssettings.google.com",
             "You can also restrict cookies through your browser settings"
+          ],
+          "links": [
+            { "label": "Google: how advertising technologies use information", "href": "https://policies.google.com/technologies/ads" },
+            { "label": "Google My Ad Center: personalized advertising choices", "href": "https://myadcenter.google.com/" },
+            { "label": "Cloudflare privacy policy", "href": "https://www.cloudflare.com/privacypolicy/" }
           ]
         },
         {
           "heading": "Consent in the EEA, United Kingdom and Switzerland",
           "paragraphs": [
-            "Where required, non-essential advertising and measurement storage will not be used until a visitor makes a choice through a Google-certified consent management platform. Visitors will be able to accept, reject or manage available purposes and vendors, and revisit that choice. Contextual or limited ads may be used where appropriate."
+            "Advertising is currently paused for visitors in every region. Before serving personalized Google ads to visitors in the European Economic Area (the EU, Iceland, Liechtenstein and Norway), the United Kingdom or Switzerland, we will use a Google-certified consent management platform integrated with the IAB Transparency and Consent Framework. It must provide choices to consent, refuse consent and manage applicable purposes and vendors, with a way to revisit or withdraw consent.",
+            "Where consent is required, optional advertising storage and processing must not begin without it. Continuing to browse is not consent. Non-personalized advertising is not automatically exempt from cookie consent requirements. An advertising request must stay blocked if the required choice or valid consent signal is unavailable."
+          ]
+        },
+        {
+          "heading": "United States and other regional choices",
+          "paragraphs": [
+            "US state privacy rights and obligations depend on the applicable law and the operator's circumstances. Before a future advertising launch, we will assess applicable requirements for notices, opt-outs from sale, sharing or targeted advertising, and recognized browser opt-out signals such as Global Privacy Control. Where required, those choices must be connected to the advertising providers' data processing controls. A European consent dialog alone does not implement all regional requirements.",
+            "In the current version we do not enable advertising data collection or sell or share personal information for targeted advertising. Necessary hosting, security and direct image delivery still process request information. Visitors in other regions can use the contact below to ask about applicable privacy rights."
           ]
         },
         {
           "heading": "How information is shared",
           "paragraphs": [
-            "Information may be processed by infrastructure, security, analytics, consent and advertising providers only to operate, protect, measure or fund the site. These providers act under their own terms or processing obligations. We do not sell personal information in the ordinary meaning of selling data for money. We may disclose information when legally required or necessary to protect users, the site or the public."
+            "Current recipients include hosting and security providers, the publisher's image delivery provider when an external image is requested, and email services when you contact us. They process information under their own terms and applicable processing obligations. Advertising, analytics and consent providers are not active integrations in this version. We may disclose information when legally required or necessary to protect users, the site or the public."
           ]
         },
         {
@@ -220,14 +241,20 @@
           ]
         },
         {
+          "id": "privacy-choices",
           "heading": "Your choices and requests",
           "paragraphs": [
-            "Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, or withdraw consent. Email privacy@aniimodex.com with the request and the country or region whose law applies. We may need reasonable verification and may retain information when legally required."
+            "Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, request data portability, or withdraw consent without affecting prior lawful processing. Email privacy@aniimodex.com with the request and the country or region whose law applies. We may need reasonable verification and may retain information when legally required. Where applicable, you may complain to your local data protection authority."
           ],
           "items": [
             "Do not send game credentials, identity documents or payment information unless specifically and lawfully requested",
-            "Browser controls and the consent interface can be used to manage cookies",
-            "Google advertising choices can be managed at adssettings.google.com"
+            "Use browser settings to inspect, block or delete site cookies; this may reset preferences or affect security checks",
+            "Advertising is paused, so there is no active advertising consent dialog or site advertising preference to change. A future launch must provide a working way to revisit the required choices",
+            "Changing Google account ad settings does not replace consent choices on individual websites"
+          ],
+          "links": [
+            { "label": "Contact AniimoDex about privacy", "href": "mailto:privacy@aniimodex.com" },
+            { "label": "Google My Ad Center", "href": "https://myadcenter.google.com/" }
           ]
         },
         {
