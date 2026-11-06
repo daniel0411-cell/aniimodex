@@ -659,7 +659,7 @@ const english: Record<string, LaunchGuide> = {
       },
       {
         t: 'li',
-        c: 'Do not self-unlink, overwrite a character or create replacement progress first.',
+        c: 'For a wrong UID or missing progress, do not use unlink as a trial recovery step, overwrite the character or create replacement progress. See the November 5 Steam/Epic entry above for intentional unlink.',
       },
       {
         t: 'li',
@@ -1301,6 +1301,26 @@ function controllerGuide(locale: string): LaunchGuide {
   };
 }
 
+function novemberAccountBlocks(locale: string, slug: string): LaunchGuideBlock[] {
+  const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const blocks: LaunchGuideBlock[] = [
+    { t: 'h', c: t('November 5: Steam/Epic unlink versus account recovery', '11月5日：区分 Steam／Epic 解绑与账号恢复', '11月5日：區分 Steam／Epic 解除綁定與帳號恢復') },
+    { t: 'p', c: t('Patch v1.1.3880756.0 adds platform-account unlink for Steam and Epic Games under Settings > Account Settings. This confirms an in-game unlink entry for those two platforms, not a tested relink or save-transfer workflow. It does not establish PSN/Xbox self-unlink, shared progress or purchase transfer.', 'v1.1.3880756.0 新增 Steam、Epic Games 平台账号解绑入口：Settings > Account Settings。这确认了两个平台的游戏内解绑功能，不是本站实测过的重绑或存档转移流程，也不能证明 PSN／Xbox 自助解绑、进度共享或购买转移。', 'v1.1.3880756.0 新增 Steam、Epic Games 平台帳號解除綁定入口：Settings > Account Settings。這確認了兩個平台的遊戲內解除綁定功能，不是本站實測過的重新綁定或存檔轉移流程，也不能證明 PSN／Xbox 自助解除綁定、進度共享或購買轉移。') },
+    { t: 'table', head: [t('Your goal', '你的目标', '你的目標'), t('Appropriate route', '对应途径', '對應途徑'), t('Check before proceeding', '操作前核对', '操作前核對')], rows: [
+      [t('Unlink Steam or Epic intentionally', '主动解除 Steam 或 Epic 绑定', '主動解除 Steam 或 Epic 綁定'), 'Settings > Account Settings', t('Privately record platform account, Aniimo UID/email and server. Check that you retain a working intended login and read the current confirmation. The patch gives no complete relink prerequisites, limits or cooldown.', '私下记录平台账号、伊莫 UID／邮箱与服务器；确认仍掌握可用的目标登录方式，并阅读当前确认提示。补丁未给出完整重绑前提、次数限制或冷却时间。', '私下記錄平台帳號、伊莫 UID／信箱與伺服器；確認仍掌握可用的目標登入方式，並閱讀目前確認提示。補丁未給出完整重新綁定前提、次數限制或冷卻時間。')],
+      [t('Wrong UID, missing progress or pending recovery ticket', 'UID 不符、进度缺失或恢复工单处理中', 'UID 不符、進度缺失或恢復工單處理中'), t('Verify original server and character; use official private support for the account discrepancy.', '先核对原服务器与角色，账号差异交由官方私密支持核对。', '先核對原伺服器與角色，帳號差異交由官方私密支援核對。'), t('Do not use unlink as a trial fix or create replacement progress while recovery is unresolved. The older support relink route below is dated context; use support’s current instructions.', '恢复未明时不要用解绑试修，也不要创建替代进度。下方旧客服重绑途径作为带日期背景，以客服当前指引为准。', '恢復未明時不要用解除綁定試修，也不要建立替代進度。下方舊客服重新綁定途徑作為帶日期背景，以客服目前指引為準。')],
+      [t('Move saves or purchases between platforms', '跨平台转移存档或购买', '跨平台轉移存檔或購買'), t('Confirm that specific platform pair and account operation through official documentation or support.', '通过官方文档或支持确认具体平台组合与账号操作。', '透過官方文件或支援確認具體平台組合與帳號操作。'), t('Multiplayer, unlink and cross-save are separate capabilities. Neither a PS5 invitation fix nor the Steam/Epic unlink entry proves save or entitlement transfer.', '多人联机、解绑与跨平台存档是不同能力；PS5 邀请修复或 Steam／Epic 解绑入口均不能证明存档与权益转移。', '多人連線、解除綁定與跨平台存檔是不同能力；PS5 邀請修正或 Steam／Epic 解除綁定入口均不能證明存檔與權益轉移。')],
+    ] },
+    { t: 'link', href: sourceById.get('aniimo-patch-1-1-3880756-2026-11-05')!.url, c: t('Official November 5 account adjustment, checked November 6', '官方11月5日账号调整，11月6日核对', '官方11月5日帳號調整，11月6日核對') },
+    { t: 'h', c: t('Platform background and earlier dated support references', '平台背景与较早的支持记录', '平台背景與較早的支援紀錄') },
+  ];
+  return slug === 'aniimo-progress-account-safety' ? blocks : [
+    blocks[0], blocks[1], blocks[3],
+    { t: 'link', href: '/guide/aniimo-progress-account-safety', c: t('Before unlinking: check login access, UID and the appropriate recovery route', '解绑前：核对登录方式、UID 与对应恢复途径', '解除綁定前：核對登入方式、UID 與對應恢復途徑') },
+    blocks[4],
+  ];
+}
+
 function accountFaqBlocks(locale: string): LaunchGuideBlock[] {
   const en = locale === 'en';
   const traditional = locale === 'zh-Hant';
@@ -1316,10 +1336,10 @@ function accountFaqBlocks(locale: string): LaunchGuideBlock[] {
     {
       t: 'p',
       c: en
-        ? 'Distinguish the Steam account, the linked Aniimo UID/email, and the selected region/server. Before changing anything, privately record all three and the expected character. If the UID is wrong or a character looks absent, stop before creating a replacement or unlinking. The published relink support route is not a self-service account-switching or cross-save workflow.'
+        ? 'Distinguish the Steam account, the linked Aniimo UID/email, and the selected region/server. Before changing anything, privately record all three and the expected character. If the UID is wrong or a character looks absent, stop before creating a replacement or unlinking. The October support relink procedure predates the November 5 Steam/Epic unlink entry above; neither source establishes a complete cross-save workflow.'
         : traditional
-          ? '區分 Steam 帳號、綁定的 Aniimo UID/信箱、所選地區/伺服器。改動前私下記錄三者及預期角色；UID 不符或角色缺失時，不要建立替代角色或自行解除綁定。已公布的客服重綁不是自助切換帳號或跨平台存檔流程。'
-          : '区分 Steam 账号、绑定的 Aniimo UID/邮箱、所选地区/服务器。改动前私下记录三者及预期角色；UID 不符或角色缺失时，不要创建替代角色或自行解绑。已公布的客服重绑不是自助切换账号或跨平台存档流程。',
+          ? '區分 Steam 帳號、綁定的 Aniimo UID/信箱、所選地區/伺服器。改動前私下記錄三者及預期角色；UID 不符或角色缺失時，不要建立替代角色或自行解除綁定。10月客服重新綁定流程早於上方11月5日 Steam／Epic 解除綁定入口，兩者都沒有確立完整跨平台存檔流程。'
+          : '区分 Steam 账号、绑定的 Aniimo UID/邮箱、所选地区/服务器。改动前私下记录三者及预期角色；UID 不符或角色缺失时，不要创建替代角色或自行解绑。10月客服重绑流程早于上方11月5日 Steam／Epic 解绑入口，两者都没有确立完整跨平台存档流程。',
     },
     {
       t: 'h',
@@ -1930,7 +1950,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               t: 'p',
               c: '依官方流程進入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工單需提供平台 ID、目前 UID 與綁定信箱、要解除的 UID，以及該 UID 綁定的平台。',
             },
-            { t: 'li', c: '先不要自行解除綁定、覆蓋角色或建立替代進度。' },
+            { t: 'li', c: 'UID 不符或進度缺失時，不要以解除綁定試修、覆蓋角色或建立替代進度。主動解除綁定請先讀上方11月5日 Steam／Epic 入口說明。' },
             { t: 'li', c: '客服確認前保留截圖與平台收據。' },
             { t: 'li', c: '重綁流程不等於官方確認通用跨平台存檔、購買或貨幣轉移。' },
             {
@@ -1994,7 +2014,7 @@ function localized(locale: string, guide: LaunchGuide): LaunchGuide {
               t: 'p',
               c: '按官方流程进入 Customer Support > Quick Support Links > Account Issues > Steam Relink (PSN/Xbox)。工单需提供平台 ID、当前 UID 与绑定邮箱、要解除的 UID，以及该 UID 绑定的平台。',
             },
-            { t: 'li', c: '先不要自行解除绑定、覆盖角色或创建替代进度。' },
+            { t: 'li', c: 'UID 不符或进度缺失时，不要以解绑试修、覆盖角色或创建替代进度。主动解绑请先读上方11月5日 Steam／Epic 入口说明。' },
             { t: 'li', c: '客服确认前保留截图与平台收据。' },
             { t: 'li', c: '重绑流程不等于官方确认通用跨平台存档、购买或货币转移。' },
             {
@@ -3186,7 +3206,8 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
   const localizedGuide = localized(locale, guide);
   const patch = october15PatchBlocks(locale, slug);
   const feedback = octoberFeedbackBlocks(locale, slug);
-  const result = { ...localizedGuide, body: [...patch, ...feedback, ...localizedGuide.body] };
+  const accountUpdate = ['aniimo-crossplay-cross-save', 'aniimo-progress-account-safety', 'aniimo-dev-dispatch-roadmap'].includes(slug) ? novemberAccountBlocks(locale, slug) : [];
+  const result = { ...localizedGuide, body: [...accountUpdate, ...patch, ...feedback, ...localizedGuide.body] };
   if (slug === 'aniimo-language-controller-support') {
     result.body.push(...controllerOptimizationGuide(locale).body.slice(-2));
   }

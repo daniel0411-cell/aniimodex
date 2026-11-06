@@ -82,7 +82,10 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const controller = read('guide/aniimo-language-controller-support');
   for (const term of ['Steam Input', 'Proton 10.0.0-4', '40/45 FPS']) assert(controller.includes(term));
   for (const slug of ['getting-started', 'is-aniimo-free-to-play', 'aniimo-language-controller-support', 'aniimo-harvest-gathering-farm-guide']) {
-    assert(read(`guide/${slug}`).includes('2026-10-27'), `${locale}/${slug}: missing substantive update date`);
+    const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
+    const article = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
+    assert.equal(article?.dateModified, slug === 'aniimo-harvest-gathering-farm-guide' ? '2026-11-03' : '2026-10-27', `${locale}/${slug}: substantive update date`);
   }
   const home = read('');
   assert(home.includes(locale === 'en' ? 'Patch archive: October 15' : locale === 'zh-Hant' ? '歷史補丁：10 月 15 日' : '历史补丁：10 月 15 日'));

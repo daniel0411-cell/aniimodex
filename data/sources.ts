@@ -13,10 +13,17 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-patch-1-1-3880756-2026-11-05',
+    url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643339992',
+    title: 'Aniimo Official Patch v1.1.3880756.0 - November 5 fixes and adjustments',
+    accessedAt: '2026-11-06',
+    evidence: 'Official Steam news API full body read November 6. Published November 5 at 06:24:15 UTC. Lists specific fixes for Giga-Egg wind interaction, PS5 invitations, Storage Box selection after teleport, evolution buttons, Holo Training Ace, Windchaser Stamps, Gravity Pull, controller mail and emote controls, furniture and Nimbi display. Fixes an unintended climbable water column in The Challenge of Fighting Upstream!, not a universal quest route. Adds Steam/Epic self-unlink under Settings > Account Settings and Season Recipes for level 1 facilities. Does not establish cross-save, console self-unlink, purchase transfer, retroactive rewards, recipe yields or live-client reproduction.',
+  },
+  {
     id: 'aniimo-s1-part-two-2026-10-27',
     url: 'https://steamcommunity.com/games/4126040/announcements/detail/687520329382238609',
     title: 'Aniimo S1 Departure with the Wind Part 2 - October 29 update',
-    accessedAt: '2026-11-03',
+    accessedAt: '2026-11-06',
     evidence: 'Official Steam news API body published October 27 schedules the October 29 update. It names the four Whisperwake areas, 51 new Aniimo, Vein Abundance Student II requirement and November 2-December 7 Prismana rotation for Pouchwisp, Royalby, Jeburst and Glameep. Each server has its own stated fixed UTC offset. Photo rules distinguish form, location and distinct Sparkling Types; no spawn coordinates or precise encounter probability are established. Sparkling Hue and Growth System sections rechecked November 3: individual-specific unlocks, Credits for Hue Swap, duplicate reroll returns 2 Sigil, Legendary Aniipod replacement preserves Acquired Potential and excludes Irisalis/Helion/Lunara, and the adjusted Prismana Orb retains Acquired Potential/Mutation/Personality. This is announcement evidence, not a live-client test.',
   },
   {

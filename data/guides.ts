@@ -225,7 +225,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-06',
     date: '2026-10-16',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -237,6 +237,7 @@ export const guidePosts: GuidePost[] = [
     ],
     sourceIds: [
       'aniimo-steam-dev-feedback-2026-10-13',
+      'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-s1-part-two-2026-10-27',
       'aniimo-patch-1-1-3857679-2026-10-30',
       'aniimo-xbox-9pk8phlcqdf6',
@@ -248,7 +249,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-rv-homeland-guide',
-    updatedAt: '2026-11-03',
+    updatedAt: '2026-11-06',
     date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
@@ -261,13 +262,14 @@ export const guidePosts: GuidePost[] = [
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-s1-part-two-2026-10-27',
+      'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-steam-patch-1-0-3629693-2026-09-30',
       'aniimo-steam-patch-1-0-3732728-2026-10-15',
     ],
   },
   {
     slug: 'aniimo-holo-battle-interlink',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-06',
     date: '2026-09-28',
     readMinutes: 6,
     relatedSlugs: [
@@ -276,11 +278,11 @@ export const guidePosts: GuidePost[] = [
       'aniimo-team-composition',
       'aniimo-version-1-1-update',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27'],
+    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05'],
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-06',
     date: '2026-10-13',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
@@ -339,6 +341,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-crossplay-cross-save',
+    updatedAt: '2026-11-06',
     date: '2026-10-15',
     readMinutes: 5,
     relatedSlugs: [
@@ -358,11 +361,12 @@ export const guidePosts: GuidePost[] = [
       'aniimo-app-store-cn-6768584375',
       'aniimo-google-play',
       'aniimo-steam-dev-dispatch-1-2026-10-01',
+      'aniimo-patch-1-1-3880756-2026-11-05',
     ],
   },
   {
     slug: 'aniimo-progress-account-safety',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-06',
     date: '2026-10-11',
     readMinutes: 6,
     relatedSlugs: [
@@ -372,6 +376,7 @@ export const guidePosts: GuidePost[] = [
       'how-to-download-aniimo',
     ],
     sourceIds: [
+      'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-steam-patch-1-0-3535596-2026-09-17',
       'aniimo-steam-patch-1-0-3544783-2026-09-18',
@@ -424,7 +429,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    updatedAt: '2026-11-01',
+    updatedAt: '2026-11-06',
     date: '2026-10-16',
     readMinutes: 8,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -437,6 +442,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-language-controller-support',
     ],
     sourceIds: [
+      'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-patch-1-1-3857679-2026-10-30',
       'aniimo-s1-part-two-known-issues-2026-11-01',
       'aniimo-s1-part-two-2026-10-27',
@@ -534,7 +540,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-dev-dispatch-roadmap',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-06',
     date: '2026-10-13',
     readMinutes: 7,
     relatedToolHrefs: ['/dex'],
@@ -544,7 +550,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-mobile',
       'aniimo-launch-checklist-known-issues',
     ],
-    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13', 'aniimo-s1-part-two-2026-10-27'],
+    sourceIds: ['aniimo-steam-dev-dispatch-1-2026-10-01', 'aniimo-steam-dev-feedback-2026-10-13', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05'],
   },
   {
     slug: 'aniimo-harvest-gathering-farm-guide',

@@ -47,7 +47,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     [coverage, ['86', '12', '2026-10-23', 'S1']],
   ]) {
     for (const term of terms) assert(page.includes(term), `${locale}: missing refreshed answer ${term}`);
-    assert(page.includes(page === homeGuide ? '2026-11-03' : '2026-11-02'));
+    assert(page.includes([homeGuide, interlink].includes(page) ? '2026-11-06' : '2026-11-02'));
     assert(!page.includes('noindex'));
     for (const [, href] of page.matchAll(/href="(\/(?:en|zh-Hans|zh-Hant)\/[^"#?]+)"/g)) {
       assert(require('node:fs').existsSync(`out${href}index.html`), `broken refreshed guide link ${href}`);
@@ -80,13 +80,13 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(harvestLink > 0 && harvestLink < harvest.lastIndexOf(branchHeadings[3]), `${locale}: current Home link must precede historical schedule`);
   for (const page of [growth, homeGuide, harvest]) {
     assert(page.includes('687520329382238609'));
-    assert(page.includes('2026-11-03'));
+    assert(page.includes(page === homeGuide ? '2026-11-06' : '2026-11-03'));
   }
   for (const slug of ['aniimo-version-1-1-update', 'aniimo-rv-homeland-guide', 'aniimo-harvest-gathering-farm-guide']) {
     const raw = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
     const article = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
       .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
-    assert.equal(article?.dateModified, '2026-11-03');
+    assert.equal(article?.dateModified, slug === 'aniimo-rv-homeland-guide' ? '2026-11-06' : '2026-11-03');
   }
   const egg = read(locale, 'guide/aniimo-egg-heist');
   const items = read(locale, 'guide/aniimo-prismana-potential-breeding-guide');
@@ -98,7 +98,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     [forms, ['Hue Swap', 'Sparkling Original', 'Giga-Egg']],
   ]) {
     for (const term of terms) assert(page.includes(term), `${locale}: missing decision fact ${term}`);
-    assert(page.includes('687520329382238609') && page.includes('2026-11-03'));
+    assert(page.includes('687520329382238609'), `${locale}: missing Part Two evidence`);
     assert(!page.includes('noindex'));
   }
   assert(egg.indexOf('Giga-Egg') < egg.indexOf('Erlath'), `${locale}: current mode before historical advice`);
