@@ -31,6 +31,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(html.includes(`href="/${locale}/privacy/#privacy-choices"`));
   assert(html.includes('https://myadcenter.google.com/'));
   assert(html.includes('https://www.cloudflare.com/privacypolicy/'));
+  assert(html.includes('https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/'));
   assert(html.includes('mailto:privacy@aniimodex.com'));
   assert(html.includes('google-adsense-account'), 'Keep publisher ownership metadata.');
   for (const section of privacy.sections) {

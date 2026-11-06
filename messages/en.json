@@ -188,7 +188,7 @@
         {
           "heading": "Current advertising and measurement status",
           "paragraphs": [
-            "Ad serving is paused. This version does not load the Google AdSense advertising script, initialize advertising units or include optional analytics tags. Approval of an AdSense account does not itself enable advertising on this site. We have not activated an advertising consent dialog in this version because advertising is paused; there are no site advertising preferences to accept or withdraw at present.",
+            "Ad serving is paused. This version does not load the Google AdSense advertising script, initialize advertising units or use advertising analytics tags. The hosting platform separately enables Cloudflare Web Analytics for aggregate traffic and performance measurement, as described below. Approval of an AdSense account does not itself enable advertising on this site. We have not activated an advertising consent dialog in this version because advertising is paused; there are no site advertising preferences to accept or withdraw at present.",
             "The sections below distinguish current site operation from the controls required before any future advertising launch. Necessary delivery and security processing still occurs when you visit."
           ]
         },
@@ -202,7 +202,7 @@
         {
           "heading": "Cookies, local storage and advertising",
           "paragraphs": [
-            "Necessary functions such as remembering a language choice or protecting the site may use cookies or similar storage. The current version does not initialize advertising storage or optional analytics. Blocking necessary cookies in your browser may affect preferences or security checks.",
+            "Necessary functions such as remembering a language choice or protecting the site may use cookies or similar storage. The current version does not initialize advertising storage. The hosting platform injects the Cloudflare Web Analytics beacon to measure visits and page load performance using browser performance information. Cloudflare states that this service does not track individual end users across its customers' Internet properties. This disclosure does not treat analytics as automatically exempt from applicable privacy requirements. Blocking necessary cookies in your browser may affect preferences or security checks.",
             "If advertising is enabled in a later version, third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this website or other websites. Google's advertising cookies enable Google and its partners to serve ads based on visits to this site and other sites on the Internet. The privacy policy and consent controls must be updated for the actual vendors and purposes before that launch."
           ],
           "items": [
@@ -211,7 +211,8 @@
           "links": [
             { "label": "Google: how advertising technologies use information", "href": "https://policies.google.com/technologies/ads" },
             { "label": "Google My Ad Center: personalized advertising choices", "href": "https://myadcenter.google.com/" },
-            { "label": "Cloudflare privacy policy", "href": "https://www.cloudflare.com/privacypolicy/" }
+            { "label": "Cloudflare privacy policy", "href": "https://www.cloudflare.com/privacypolicy/" },
+            { "label": "Cloudflare Web Analytics: data collection", "href": "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/" }
           ]
         },
         {
@@ -231,7 +232,7 @@
         {
           "heading": "How information is shared",
           "paragraphs": [
-            "Current recipients include hosting and security providers, the publisher's image delivery provider when an external image is requested, and email services when you contact us. They process information under their own terms and applicable processing obligations. Advertising, analytics and consent providers are not active integrations in this version. We may disclose information when legally required or necessary to protect users, the site or the public."
+            "Current recipients include Cloudflare for hosting, security and Web Analytics, the publisher's image delivery provider when an external image is requested, and email services when you contact us. They process information under their own terms and applicable processing obligations. Advertising and advertising consent providers are not active integrations in this version. We may disclose information when legally required or necessary to protect users, the site or the public."
           ]
         },
         {

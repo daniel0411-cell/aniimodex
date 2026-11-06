@@ -188,7 +188,7 @@
         {
           "heading": "目前廣告與統計狀態",
           "paragraphs": [
-            "目前暫停廣告投放。本版本不載入 Google AdSense 廣告指令碼、不初始化廣告單元，也未接入非必要統計標籤。AdSense 帳號獲准不等於本站已啟用廣告。由於廣告暫停，本版本沒有啟用廣告同意視窗，目前沒有可接受或撤回的站內廣告偏好。",
+            "目前暫停廣告投放。本版本不載入 Google AdSense 廣告指令碼、不初始化廣告單元，也不使用廣告統計標籤。託管平台另外啟用了 Cloudflare Web Analytics，用於彙總造訪與效能統計，具體見下文。AdSense 帳號獲准不等於本站已啟用廣告。由於廣告暫停，本版本沒有啟用廣告同意視窗，目前沒有可接受或撤回的站內廣告偏好。",
             "下文區分目前網站運作與未來啟用廣告前必須落實的控制措施。造訪本站時，傳送頁面和保障安全所需的資訊處理仍會發生。"
           ]
         },
@@ -202,7 +202,7 @@
         {
           "heading": "Cookie、本地儲存與廣告",
           "paragraphs": [
-            "記錄語言選擇或保護網站等必要功能可能使用 Cookie 或類似儲存。本版本不初始化廣告儲存或非必要統計。在瀏覽器中封鎖必要 Cookie 可能影響偏好記錄或安全檢查。",
+            "記錄語言選擇或保護網站等必要功能可能使用 Cookie 或類似儲存。本版本不初始化廣告儲存。託管平台會注入 Cloudflare Web Analytics 指令碼，使用瀏覽器效能資訊統計造訪及頁面載入表現。Cloudflare 聲明此服務不會跨其客戶的網站追蹤個別終端使用者；本說明不將統計服務視為自動豁免適用隱私要求。在瀏覽器中封鎖必要 Cookie 可能影響偏好記錄或安全檢查。",
             "如果未來啟用廣告，包括 Google 在內的第三方供應商可能使用 Cookie，依據您先前對本站或其他網站的造訪投放廣告。Google 的廣告 Cookie 使 Google 及其合作夥伴能夠依據您對本站及網際網路其他網站的造訪顯示廣告。上線前必須依實際供應商與用途更新隱私權政策和同意控制。"
           ],
           "items": [
@@ -211,7 +211,8 @@
           "links": [
             { "label": "Google：廣告技術如何使用資訊", "href": "https://policies.google.com/technologies/ads" },
             { "label": "Google 我的廣告中心：個人化廣告選擇", "href": "https://myadcenter.google.com/" },
-            { "label": "Cloudflare 隱私權政策", "href": "https://www.cloudflare.com/privacypolicy/" }
+            { "label": "Cloudflare 隱私權政策", "href": "https://www.cloudflare.com/privacypolicy/" },
+            { "label": "Cloudflare Web Analytics：資料蒐集說明", "href": "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/" }
           ]
         },
         {
@@ -231,7 +232,7 @@
         {
           "heading": "資訊如何共享",
           "paragraphs": [
-            "目前接收方包括託管及安全服務商、請求外部圖片時的發行商圖片服務商，以及您聯絡我們時的郵件服務商。他們依據自身條款和適用的資料處理義務處理資訊。本版本沒有啟用廣告、統計或同意平台整合。在法律要求或為保護使用者、網站或公眾所必需時，我們可能揭露資訊。"
+            "目前接收方包括提供託管、安全和 Web Analytics 的 Cloudflare、請求外部圖片時的發行商圖片服務商，以及您聯絡我們時的郵件服務商。他們依據自身條款和適用的資料處理義務處理資訊。本版本沒有啟用廣告或廣告同意平台整合。在法律要求或為保護使用者、網站或公眾所必需時，我們可能揭露資訊。"
           ]
         },
         {

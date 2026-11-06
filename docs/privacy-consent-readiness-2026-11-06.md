@@ -84,3 +84,15 @@ from an actual guide, anchor clearance below the sticky header and linked
 contact/resources. Zero external requests, runtime errors or cookies observed
 in the local production preview. Screenshots visually inspected on mobile and
 desktop. This does not verify hosting-platform injections or a live CMP.
+
+## Production verification follow-up
+
+The first production browser check identified a hosting-injected script from
+static.cloudflareinsights.com/beacon.min.js. It was blocked before execution
+during testing. The no-external-request assertion correctly failed; advertising
+loaders remained absent. Updated all three policies to disclose Cloudflare Web
+Analytics for traffic/performance metrics rather than claim no analytics exists.
+Source verified: https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/
+and the Cloudflare Web Analytics FAQ, November 6. No assumption of blanket
+legal exemption is made. Hosting settings have not been changed. Production
+checks distinguish this disclosed beacon from forbidden advertising requests.

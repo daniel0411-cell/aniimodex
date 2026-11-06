@@ -188,7 +188,7 @@
         {
           "heading": "当前广告与统计状态",
           "paragraphs": [
-            "目前暂停广告投放。本版本不加载 Google AdSense 广告脚本、不初始化广告单元，也未接入非必要统计标签。AdSense 账号获批不等于本站已启用广告。由于广告暂停，本版本没有启用广告同意弹窗，目前没有可接受或撤回的站内广告偏好。",
+            "目前暂停广告投放。本版本不加载 Google AdSense 广告脚本、不初始化广告单元，也不使用广告统计标签。托管平台另外启用了 Cloudflare Web Analytics，用于汇总访问与性能统计，具体见下文。AdSense 账号获批不等于本站已启用广告。由于广告暂停，本版本没有启用广告同意弹窗，目前没有可接受或撤回的站内广告偏好。",
             "下文区分当前站点运作与将来启用广告前必须落实的控制措施。访问本站时，交付页面和保障安全所需的信息处理仍会发生。"
           ]
         },
@@ -202,7 +202,7 @@
         {
           "heading": "Cookie、本地存储与广告",
           "paragraphs": [
-            "记录语言选择或保护站点等必要功能可能使用 Cookie 或类似存储。本版本不初始化广告存储或非必要统计。在浏览器中屏蔽必要 Cookie 可能影响偏好记录或安全检查。",
+            "记录语言选择或保护站点等必要功能可能使用 Cookie 或类似存储。本版本不初始化广告存储。托管平台会注入 Cloudflare Web Analytics 脚本，使用浏览器性能信息统计访问及页面加载表现。Cloudflare 声明此服务不会跨其客户的网站追踪单个终端用户；本说明不将统计服务视为自动豁免适用隐私要求。在浏览器中屏蔽必要 Cookie 可能影响偏好记录或安全检查。",
             "如果以后启用广告，包括 Google 在内的第三方供应商可能使用 Cookie，根据您此前对本站或其他网站的访问投放广告。Google 的广告 Cookie 使 Google 及其合作伙伴能够根据您对本站及互联网其他网站的访问展示广告。上线前必须根据实际供应商与用途更新隐私政策和同意控制。"
           ],
           "items": [
@@ -211,7 +211,8 @@
           "links": [
             { "label": "Google：广告技术如何使用信息", "href": "https://policies.google.com/technologies/ads" },
             { "label": "Google 我的广告中心：个性化广告选择", "href": "https://myadcenter.google.com/" },
-            { "label": "Cloudflare 隐私政策", "href": "https://www.cloudflare.com/privacypolicy/" }
+            { "label": "Cloudflare 隐私政策", "href": "https://www.cloudflare.com/privacypolicy/" },
+            { "label": "Cloudflare Web Analytics：数据采集说明", "href": "https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/" }
           ]
         },
         {
@@ -231,7 +232,7 @@
         {
           "heading": "信息如何共享",
           "paragraphs": [
-            "当前接收方包括托管及安全服务商、请求外部图片时的发行方图片服务商，以及您联系我们时的邮件服务商。他们依据自身条款和适用的数据处理义务处理信息。本版本没有启用广告、统计或同意平台集成。在法律要求或为保护用户、站点或公众所必需时，我们可能披露信息。"
+            "当前接收方包括提供托管、安全和 Web Analytics 的 Cloudflare、请求外部图片时的发行方图片服务商，以及您联系我们时的邮件服务商。他们依据自身条款和适用的数据处理义务处理信息。本版本没有启用广告或广告同意平台集成。在法律要求或为保护用户、站点或公众所必需时，我们可能披露信息。"
           ]
         },
         {
