@@ -284,7 +284,7 @@ export const guidePosts: GuidePost[] = [
     slug: 'aniimo-prismana-event-tracker',
     updatedAt: '2026-11-08',
     date: '2026-10-13',
-    readMinutes: 5,
+    readMinutes: 8,
     relatedToolHrefs: ['/dex'],
     relatedSlugs: [
       'aniimo-forms-explained',
@@ -429,9 +429,9 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    updatedAt: '2026-11-06',
+    updatedAt: '2026-11-08',
     date: '2026-10-16',
-    readMinutes: 8,
+    readMinutes: 11,
     relatedToolHrefs: ['/dex', '/tools/catch'],
     relatedSlugs: [
       'how-to-download-aniimo',
@@ -442,6 +442,8 @@ export const guidePosts: GuidePost[] = [
       'aniimo-language-controller-support',
     ],
     sourceIds: [
+      'aniimo-mobile-qa-2026-11-08',
+      'aniimo-console-qa-2026-11-08',
       'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-patch-1-1-3857679-2026-10-30',
       'aniimo-s1-part-two-known-issues-2026-11-01',

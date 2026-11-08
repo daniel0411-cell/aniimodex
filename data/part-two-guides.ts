@@ -3,6 +3,7 @@ import { mobilityIndex } from '@/lib/mobility';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
 import { sourceById } from '@/data/sources';
+import { getNovemberEventBlocks, getNovemberSupportBlocks } from '@/data/november-guide-updates';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
@@ -292,11 +293,12 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     ],
   };
   if (slug === 'aniimo-prismana-event-tracker') return {
-    title: t('Aniimo Event Schedule: Prismana, Photo & Glamour Star', '伊莫活动排期：Prismana 轮换、摄影与 Glamour Star', '伊莫活動排期：Prismana 輪換、攝影與 Glamour Star'),
-    subtitle: t('Compare server schedules, Student II requirements and reward rules before catching, photographing or entering Glamour Star.', '按分服时间、Student II 条件与领奖规则，区分捕获、摄影和 Glamour Star 参赛。', '按分服時間、Student II 條件與領獎規則，區分捕獲、攝影和 Glamour Star 參賽。'),
+    title: t('Aniimo Events: Go Racing, Fantasy Resonance & Prismana', '伊莫活动：Go 竞速、Fantasy Resonance 与 Prismana', '伊莫活動：Go 競速、Fantasy Resonance 與 Prismana'),
+    subtitle: t('Check November 12 racing, November 20 Jaguaraun quests and Prismana rotation by server, entry gate and reward.', '按服务器、门槛和奖励，准备11月12日竞速、11月20日 Jaguaraun 任务与 Prismana 轮换。', '按伺服器、門檻和獎勵，準備11月12日競速、11月20日 Jaguaraun 任務與 Prismana 輪換。'),
     tag: t('Limited events', '限时活动', '限時活動'),
-    lead: t('The S1 Part 2 announcement replaces the old September rotation: Pouchwisp starts November 2 at 04:00 on each listed server clock. Choose your server below, then check Student II and the named area before planning a visit. These are announced windows, not verified live spawns.', 'S1 后半段公告已有新轮换：Pouchwisp 于各服所列时区11月2日04:00开始。先在下表选择服务器，再核对 Student II 和指定区域。这里整理公告排期，不声称已经实测刷新。', 'S1 後半段公告已有新輪換：Pouchwisp 於各服所列時區11月2日04:00開始。先在下表選擇伺服器，再核對 Student II 和指定區域。這裡整理公告排期，不聲稱已經實測刷新。'),
+    lead: t('Choose the activity before checking its gate: Aniimo Go requires character level 40, Fantasy Resonance requires Student I, and Prismana rotation and photo events require Student II. The October 27 Part 2 announcement was rechecked November 8. Match your server clock and the specific event; these are published windows, not live availability or verified spawns.', '先选活动，再核对门槛：Aniimo Go 要求角色40级，Fantasy Resonance 要求 Student I，Prismana 轮换与摄影要求 Student II。10月27日后半段公告已于11月8日复核。按所在服务器时钟与具体活动准备；这里是公告窗口，不是实时开放或刷新监测。', '先選活動，再核對門檻：Aniimo Go 要求角色40級，Fantasy Resonance 要求 Student I，Prismana 輪換與攝影要求 Student II。10月27日後半段公告已於11月8日複核。按所在伺服器時鐘與具體活動準備；這裡是公告窗口，不是即時開放或刷新監測。'),
     body: [
+      ...getNovemberEventBlocks(locale),
       { t: 'h', c: t('1. Select your server and rotation', '1. 选择服务器与轮换', '1. 選擇伺服器與輪換') },
       { t: 'prismanaSchedule' },
       { t: 'h', c: t('Where can I check the featured form?', '在哪里核对本期指定形态？', '在哪裡核對本期指定形態？') },
@@ -338,11 +340,12 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug !== 'aniimo-launch-checklist-known-issues') return undefined;
   return {
-    title: t('Aniimo Troubleshooting: November 5 Fixes & Version Checks', '伊莫问题排查：11月5日修复与版本核对', '伊莫問題排查：11月5日修正與版本核對'),
-    subtitle: t('Check PS5 invitations, Storage Boxes, achievements and controls against the November 5 patch; keep older quest fixes in their dated scope.', '按11月5日补丁核对 PS5 组队、仓库箱、成就和操作问题，区分旧版任务修复。', '按11月5日補丁核對 PS5 組隊、倉庫箱、成就和操作問題，區分舊版任務修正。'),
+    title: t('Aniimo Troubleshooting: Mobile, Console & Dated Fixes', '伊莫问题排查：手机、主机与带日期修复', '伊莫問題排查：手機、主機與帶日期修正'),
+    subtitle: t('Match mobile downloads, device-specific crashes and console controls to official scope, then check November 5 fixes and future plans separately.', '按官方范围核对手机下载、特定机型崩溃与主机操作，再分别查看11月5日修复和未来计划。', '按官方範圍核對手機下載、特定機型當機與主機操作，再分別查看11月5日修正和未來計畫。'),
     tag: t('Known issues', '问题排查', '問題排查'),
-    lead: t('Reviewed November 6, 2026 against official patch v1.1.3880756.0, published November 5. Match the exact symptom and platform before trying a fix. The October 30 v1.1.3857679.0 fixes and November 1 issue-thread observation remain dated references, not a live list of unresolved faults. These are official patch claims, not independent client tests.', '2026年11月6日核对11月5日发布的官方 v1.1.3880756.0。先匹配准确症状与平台，再排查。10月30日 v1.1.3857679.0 修复与11月1日问题帖观察保留为带日期的记录，不是实时未解决问题清单。以下是官方补丁说明，不是本站独立客户端实测。', '2026年11月6日核對11月5日發布的官方 v1.1.3880756.0。先符合準確症狀與平台，再排查。10月30日 v1.1.3857679.0 修正與11月1日問題帖觀察保留為帶日期的紀錄，不是即時未解決問題清單。以下是官方補丁說明，不是本站獨立客戶端實測。'),
+    lead: t('Start with your platform and exact symptom. The October 27 mobile and console Q&As were checked November 8; official patch v1.1.3880756.0, published November 5, remains checked November 6. October 30 v1.1.3857679.0 and the November 1 issue-thread observation retain their dates. These are official claims and scoped next checks, not independent client tests or a live unresolved-bug list.', '先匹配平台和准确症状。10月27日手机与主机 Q&A 核对于11月8日；11月5日发布的官方 v1.1.3880756.0 仍保留11月6日核验日期。10月30日 v1.1.3857679.0 和11月1日问题帖观察也保留各自日期。下文是官方说明与对应核对步骤，不是独立客户端实测或实时未解决 Bug 清单。', '先符合平台和準確症狀。10月27日手機與主機 Q&A 核對於11月8日；11月5日發布的官方 v1.1.3880756.0 仍保留11月6日核驗日期。10月30日 v1.1.3857679.0 和11月1日問題帖觀察也保留各自日期。下文是官方說明與對應核對步驟，不是獨立客戶端實測或即時未解決 Bug 清單。'),
     body: [
+      ...getNovemberSupportBlocks(locale),
       { t: 'h', c: t('November 5: choose the symptom, not a generic workaround', '11月5日：按症状选择检查项', '11月5日：按症狀選擇檢查項') },
       { t: 'link', href: sourceById.get('aniimo-patch-1-1-3880756-2026-11-05')!.url, c: t('Official v1.1.3880756.0: November 5, checked November 6', '官方 v1.1.3880756.0：11月5日发布，11月6日核对', '官方 v1.1.3880756.0：11月5日發布，11月6日核對') },
       { t: 'table', head: [t('Symptom', '症状', '症狀'), t('What the patch fixes', '补丁修复范围', '補丁修正範圍'), t('Check after updating', '更新后核对', '更新後核對')], rows: [

@@ -32,7 +32,11 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert.equal((events.match(/data-status="unknown"/g) ?? []).length, 5);
   assert(!events.includes('No replacement event has been verified here'));
   assert(!events.includes('noindex'));
+  for (const term of ['Aniimo Go!', 'Fantasy Resonance', 'Lv.40', 'Student I', '2026-11-12 10:00', '2026-11-20 04:00', '2026-12-10 07:59', '2026-12-10 03:59', '100244']) assert(events.includes(term), `${locale}: missing November event fact ${term}`);
   const issues = read(locale, 'guide/aniimo-launch-checklist-known-issues');
+  for (const term of ['Tap Model to Lock Target', 'Swift Egg', 'Xbox PC', 'Season 2', 'PSSR', '100230', '100252']) assert(issues.includes(term), `${locale}: missing platform scope ${term}`);
+  const pending = { en: 'release date unconfirmed', 'zh-Hans': '发布日期未定', 'zh-Hant': '發布日期未定' }[locale];
+  assert(issues.includes(pending), `${locale}: shortcut layout must remain unconfirmed`);
   for (const term of ['v1.1.3857679.0', 'Waterfall Climb', 'Touch the mysterious mechanism', 'Dewple', 'Gachapus', 'Variable Rate Shading', 'aniimo_support@aniimo.com', '562546073917327130', '2026-11-01', 'Steam Input', 'error107', 'Outpost']) assert(issues.includes(term), `${locale}: missing ${term}`);
   assert(issues.indexOf('Waterfall Climb') < issues.indexOf('Outpost'), `${locale}: current issue must precede historical recovery`);
   assert(!issues.includes('noindex'));

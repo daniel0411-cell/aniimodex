@@ -13,11 +13,25 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-mobile-qa-2026-11-08',
+    url: 'https://www.aniimo.com/newslist/detail/100230',
+    title: 'Aniimo Dev Feedback - Mobile Experience Optimization Special Q&A',
+    accessedAt: '2026-11-08',
+    evidence: 'October 27 mobile Q&A rendered and read November 8. Separates Part 2 download/verification, named device and scene fixes, target-lock Settings option and Egg physics sampling compensation from future hair, vegetation, face lighting, performance and control-margin plans. Swift Egg talent independently affects movement. No benchmarks, universal storage allowance, deeper menu path or guarantee of current-client resolution.',
+  },
+  {
+    id: 'aniimo-console-qa-2026-11-08',
+    url: 'https://www.aniimo.com/newslist/detail/100252',
+    title: 'Aniimo Dev Feedback - Console Check-in: What Is Fixed and What Is Next',
+    accessedAt: '2026-11-08',
+    evidence: 'October 27 console Q&A rendered and read November 8. Names specific stability, loading, menu and controller improvements; Xbox PC DX12 is not a console option. Centered shortcut layout date remains unconfirmed. Wwise vibration, adaptive triggers, PS5 Pro VRS/PSSR and Season 2 account unlink are plans with details pending, not proof of delivery. No measured FPS or console self-unlink procedure verified.',
+  },
+  {
     id: 'aniimo-prismana-calendar-2026-11-08',
     url: 'https://www.aniimo.com/newslist/detail/100244',
     title: 'Aniimo S1 Part 2 announcement - Prismana rotation',
     accessedAt: '2026-11-08',
-    evidence: 'October 27 announcement read November 8. November 2-December 7 Prismana windows name Pouchwisp, Royalby, Jeburst and Glameep and their event areas. Student II requirement; server clocks use separately stated UTC+8, UTC+0 and UTC-4 offsets. The announcement does not supply Basic Form attributes, spawn coordinates or encounter probabilities.',
+    evidence: 'October 27 announcement read November 8. November 2-December 7 Prismana windows name Pouchwisp, Royalby, Jeburst and Glameep and their event areas; Student II. Aniimo Go runs November 12 10:00-December 10 07:59 at each server clock, character level 40, solo/multiplayer racing, three tracks with a new track every two weeks, Avatar Frame and raising resources. Per-track dates are not listed. Fantasy Resonance runs November 20 04:00-December 10 03:59, Student I, Jaguaraun photo/skill/catching quests and exclusive offering recipe after all quests. Separate UTC+8, UTC+0 and UTC-4 offsets. No recipe ingredients, full objective sequence, race route, Basic Form attributes, spawn coordinates or encounter probabilities supplied.',
   },
   ...([['022', 'Royalby'], ['008', 'Pouchwisp'], ['028', 'Jeburst'], ['010', 'Glameep']] as const).map(([number, name]) => ({
     id: `aniimo-official-wiki-${name.toLowerCase()}-2026-11-08`,
