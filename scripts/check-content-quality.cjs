@@ -26,6 +26,8 @@ assert(isSuspiciousOfficialDescription('Deals {0}% extra damage.'));
 assert(isSuspiciousOfficialDescription('Increases BREAK by 0.'));
 assert(isSuspiciousOfficialDescription('Increases damage by 12%% for 20s.'));
 assert(!isSuspiciousOfficialDescription('Triggers every 0.5s for 15s.'));
+assert(isSuspiciousOfficialDescription('Restores HP over 6. In Energy Full, healing increases.'));
+assert(!isSuspiciousOfficialDescription('Restores HP over 6s.'));
 const { habitatGroups, mobilityGroups, evolutionFamilies, flattenEvolution } = load('data/aniimo-collections.ts');
 const entries = getAllAniimos();
 const detailRecords = load('data/current-wiki-details.json').details;
@@ -36,9 +38,9 @@ assert.equal(new Set(comparisons.map((item) => item.entry.number)).size, compari
 assert.deepEqual(getDexComparisons({ ...getAniimoByNumber('001'), officialRole: undefined, officialElements: [] }), [], 'Missing labels must not match every other missing label');
 const legacy = load('data/official-wiki-snapshot.json').entries;
 const currentIndex = load('data/wiki-current-index.ts').currentWikiIndex;
-assert.equal(entries.length, 86);
-assert.equal(getAllRouteAniimos().length, 98);
-assert.equal(new Set(getAllRouteAniimos().map(e => e.number)).size, 98);
+assert.equal(entries.length, 90);
+assert.equal(getAllRouteAniimos().length, 101);
+assert.equal(new Set(getAllRouteAniimos().map(e => e.number)).size, 101);
 for (const [number, name] of currentIndex) {
   const entry = entries.find(e => e.enName === name);
   assert.equal(entry?.officialNumber, number, `${name}: wrong current number`);
@@ -73,7 +75,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     assert.equal(detail.attributes.length, 6);
     assert(html.includes(messages.dexDetail.attributesTitle));
     if (!detail.evolutionPublished) assert(html.includes(messages.dexDetail.evolutionUnresolved));
-    assert(html.includes('2026-10-23'));
+    assert(html.includes(detail.checkedAt));
     assert(!html.includes('%%'), `${locale}/${entry.number}: malformed percentage remains visible`);
     assert(html.includes(`https://wiki.aniimo.com/item/${entry.officialNumber}/basic-form`));
     if ([...detail.skills, ...detail.traits].some(skill => isSuspiciousOfficialDescription(skill.description))) assert(html.includes(messages.dexDetail.descriptionIncomplete));
@@ -93,7 +95,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(evolutions.includes(messages.collections.evolutions.unresolvedTitle));
   assert(!evolutions.includes('Complete Evolution Lines'));
   const unresolved = detailRecords.filter((detail) => detail.evolutionPublished === false);
-  assert.equal(unresolved.length, 6);
+  assert.equal(unresolved.length, 10);
   for (const detail of unresolved) assert(evolutions.includes(`/${locale}/dex/${detail.number}/`));
   for (const family of evolutionFamilies) for (const name of flattenEvolution(family)) assert(evolutions.includes(`data-evolution-name="${name}"`));
   const { sourceById } = load('data/sources.ts');
@@ -111,7 +113,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const suffix of ['locations/', 'evolutions/']) {
     const url = `https://aniimodex.com/${locale}/${suffix}`;
     const block = [...readFileSync(resolve(root, 'out/sitemap.xml'), 'utf8').matchAll(/<url>(.*?)<\/url>/gs)].find((match) => match[1].includes(`<loc>${url}</loc>`))?.[1];
-    assert(block?.includes('<lastmod>2026-11-02</lastmod>'));
+    assert(block?.includes('<lastmod>2026-11-08</lastmod>'));
   }
 
   const topics = [
@@ -145,4 +147,4 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     }
   }
 }
-console.log('Content quality checks passed: 86 current identities, 98 stable routes, 258 current Dex pages, guide tables, attributes, missing data and comparisons.');
+console.log('Content quality checks passed: 90 current identities, 101 stable routes, 270 current Dex pages, guide tables, attributes, missing data and comparisons.');

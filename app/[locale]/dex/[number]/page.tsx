@@ -269,7 +269,8 @@ export default async function DexDetailPage({ params }: PageProps) {
 
       {readingNotes && <section aria-labelledby="reading-notes-title" className="border-y border-ink-border py-5">
         <h2 id="reading-notes-title" className="text-xl font-bold text-text-primary">{t('readingNotesTitle')}</h2>
-        <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23' })}</p>
+        <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23', editorialDate: detail?.checkedAt === '2026-11-08' ? '2026-11-08' : '2026-11-02' })}</p>
+        {detail?.checkedAt === '2026-11-08' && <Link href="/guide/aniimo-prismana-event-tracker#prismana-schedule" className="mt-3 inline-flex text-sm font-semibold text-primary-light underline">{locale === 'en' ? 'Prismana event: dates and areas' : locale === 'zh-Hant' ? 'Prismana 活動：日期與區域' : 'Prismana 活动：日期与区域'}</Link>}
         <div className="mt-4 space-y-5">{readingNotes.map((note) => <div key={note.question}>
           <h3 className="font-semibold text-text-primary">{note.question}</h3>
           <p className="mt-2 text-sm leading-6 text-text-secondary">{note.answer}</p>
@@ -335,7 +336,7 @@ export default async function DexDetailPage({ params }: PageProps) {
                     );
                   })}
                 </ul>
-                <p className="mt-2 text-xs leading-5 text-text-muted">{t(aniimo.archived ? 'historicalFormsNote' : 'formsNote')}</p>
+                <p className="mt-2 text-xs leading-5 text-text-muted">{t(aniimo.archived ? 'historicalFormsNote' : 'formsNote', { date: detail.checkedAt ?? '2026-08-30' })}</p>
                 <Link href="/guide/aniimo-forms-explained" className="mt-2 inline-flex text-sm font-semibold text-primary-light">
                   {t('formsReadMore')} →
                 </Link>

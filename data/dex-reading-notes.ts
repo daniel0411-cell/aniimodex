@@ -1,6 +1,74 @@
-// Curated interpretations of the October 23 Basic Form snapshot, not gameplay tests.
-type ReadingNote = { question: string; answer: string; section: 'skills' | 'traits' | 'evolution' | 'mobility' };
+// Curated interpretations of dated Basic Form evidence, not gameplay tests.
+type ReadingNote = { question: string; answer: string; section: 'skills' | 'traits' | 'evolution' | 'mobility' | 'habitats' };
 export const dexReadingNotes: Record<string, Record<string, ReadingNote[]>> = {
+  'wiki-300301-022': {
+    en: [
+      {question: 'Which allies benefit from the healing and domain?', answer: 'Queen’s Blessing names Wind-type allies and scales with 9% of the caster’s Max HP. Royal Pressure needs the switched-in Wind-type Aniimo to use a skill. Check your next ally’s element before planning this support; the text does not establish healing for every element.', section: 'skills'},
+      {question: 'Does a 0.5s interval guarantee repeated damage?', answer: 'Royal Pressure lasts 20s and limits triggers to no more than one per 0.5s. That is a minimum interval between qualifying triggers, not automatic damage every 0.5s. The switch, skill and target-range conditions still matter; this alone cannot establish DPS.', section: 'skills'},
+      {question: 'Is the listed habitat the whole Prismana event area?', answer: 'The Basic Form page lists Wildwater Gorge. The dated Prismana announcement separately lists Wildwater Gorge and Sea of Flowers for November 9–16 on each server clock. Use the event calendar for that form and window; neither source gives an exact spawn coordinate or encounter probability.', section: 'habitats'},
+    ],
+    'zh-Hans': [
+      {question: '治疗和领域收益适用于哪些队友？', answer: 'Queen’s Blessing 指定风系队友，治疗量按施放者最大 HP 的9%计算；Royal Pressure 要求切入的风系伊莫使用技能。安排辅助前先核对下一位队友的元素，不能据此认为所有元素都能获得治疗。', section: 'skills'},
+      {question: '0.5秒间隔代表自动连续伤害吗？', answer: 'Royal Pressure 持续20秒，触发间隔不少于0.5秒。这是符合条件的两次触发之间的最短间隔，不是每0.5秒自动造成伤害。切换、施技和目标范围条件仍需满足，仅凭这些文字不能计算 DPS。', section: 'skills'},
+      {question: '基础栖息地等于整个 Prismana 活动区域吗？', answer: '基础形态页面列出 Wildwater Gorge；Prismana 公告另列11月9日至16日各服务器时钟下的 Wildwater Gorge 和 Sea of Flowers。查活动形态应使用活动日历；两份来源都没有给出精确坐标或遭遇概率。', section: 'habitats'},
+    ],
+    'zh-Hant': [
+      {question: '治療和領域收益適用於哪些隊友？', answer: 'Queen’s Blessing 指定風系隊友，治療量按施放者最大 HP 的9%計算；Royal Pressure 要求切入的風系伊莫使用技能。安排輔助前先核對下一位隊友的元素，不能據此認為所有元素都能獲得治療。', section: 'skills'},
+      {question: '0.5秒間隔代表自動連續傷害嗎？', answer: 'Royal Pressure 持續20秒，觸發間隔不少於0.5秒。這是符合條件的兩次觸發之間的最短間隔，不是每0.5秒自動造成傷害。切換、施技和目標範圍條件仍需滿足，僅憑這些文字不能計算 DPS。', section: 'skills'},
+      {question: '基礎棲息地等於整個 Prismana 活動區域嗎？', answer: '基礎形態頁面列出 Wildwater Gorge；Prismana 公告另列11月9日至16日各伺服器時鐘下的 Wildwater Gorge 和 Sea of Flowers。查活動形態應使用活動日曆；兩份來源都沒有給出精確座標或遭遇機率。', section: 'habitats'},
+    ],
+  },
+  'wiki-300301-008': {
+    en: [
+      {question: 'When does Coin Boost restore Energy?', answer: 'The mark lasts 20s. During that window, the marked target must enter Break or be defeated, then the mark transfers to another nearby target and restores 16 Energy to the applier. The trigger is limited to once every 15s. Check for a nearby transfer target; casting a zero-cost mark alone does not guarantee an immediate refund.', section: 'skills'},
+      {question: 'How does party composition affect the trait?', answer: 'Each Dark-type party member raises the whole party’s Energy Regeneration Rate by 4% during battle. This is a rate benefit conditioned on party elements, not an immediate 4 Energy grant. Compare the intended party before assuming a maximum; the text does not specify a complete stacking model.', section: 'traits'},
+      {question: 'Which control effect fits the encounter?', answer: 'Gold-Siphon Nali pulls targets in a frontal fan and slows them by 20% for 8s. High-Roller Toss instead applies Charm to nearby targets for 3s. Inspect range and control type before choosing; different Power values do not establish which is better for every encounter.', section: 'skills'},
+    ],
+    'zh-Hans': [
+      {question: 'Coin Boost 什么时候回能？', answer: '标记持续20秒，期间被标记目标须进入 Break 或被击败，随后标记转移至附近另一目标，为施加者恢复16 Energy；最多每15秒触发一次。使用前应确认附近有可转移目标，零消耗施加标记本身不代表立即返能。', section: 'skills'},
+      {question: '队伍构成如何影响特性？', answer: '战斗中每位暗系成员使全队 Energy 恢复速率提高4%。这是按队伍元素触发的速率收益，不是立即获得4 Energy。先对照计划中的队伍，不把假设的最大值当默认；文字也没有提供完整叠加模型。', section: 'traits'},
+      {question: '哪种控制效果更符合当前遭遇？', answer: 'Gold-Siphon Nali 拉拢前方扇形内的目标并减速20%，持续8秒；High-Roller Toss 则对附近目标施加3秒 Charm。选择前先比较范围和控制类型，Power 不同不能证明某个技能在所有战斗中更好。', section: 'skills'},
+    ],
+    'zh-Hant': [
+      {question: 'Coin Boost 什麼時候回能？', answer: '標記持續20秒，期間被標記目標須進入 Break 或被擊敗，隨後標記轉移至附近另一目標，為施加者恢復16 Energy；最多每15秒觸發一次。使用前應確認附近有可轉移目標，零消耗施加標記本身不代表立即返能。', section: 'skills'},
+      {question: '隊伍構成如何影響特性？', answer: '戰鬥中每位暗系成員使全隊 Energy 恢復速率提高4%。這是按隊伍元素觸發的速率收益，不是立即獲得4 Energy。先對照計畫中的隊伍，不把假設的最大值當預設；文字也沒有提供完整疊加模型。', section: 'traits'},
+      {question: '哪種控制效果更符合目前遭遇？', answer: 'Gold-Siphon Nali 拉攏前方扇形內的目標並減速20%，持續8秒；High-Roller Toss 則對附近目標施加3秒 Charm。選擇前先比較範圍和控制類型，Power 不同不能證明某個技能在所有戰鬥中更好。', section: 'skills'},
+    ],
+  },
+  'wiki-300301-028': {
+    en: [
+      {question: 'What should follow a skill or Ultimate?', answer: 'Turbo Boost grants one stack after a skill or Ultimate and enhances the next Basic Attack with additional damage and BREAK. Only two stacks can exist. Check stored stacks before another cast; the entry does not prove that repeated skills without Basic Attacks preserve every potential benefit.', section: 'traits'},
+      {question: 'Why compare the three spin skills beyond Power?', answer: 'All three list Cost 10 and Power 15, but Aqua Wing Spin reduces Water resistance by 15% for 20s, Gale-Wing Spin removes 5 Energy, and Darkwing Spin reduces healing received by 70% for 15s. Match the debuff to the encounter rather than ranking identical Power values.', section: 'skills'},
+      {question: 'Does Jet Flight prove a traversal route?', answer: 'Skyward Torrent is an Innate combat skill: Jet Flight lasts up to 8s and also ends after 15 hits received. Pathfinding separately lists Fly Lv.2 and Swim Lv.2 without route or stamina details. Use those records for different questions; the combat state does not verify a waterfall route.', section: 'mobility'},
+    ],
+    'zh-Hans': [
+      {question: '技能或终极技之后应关注什么？', answer: 'Turbo Boost 在技能或终极技后获得1层，强化下一次普攻的伤害与 BREAK，最多储存2层。继续施技前先检查层数；条目不能证明只连续用技能、不接普攻也能保留每次潜在收益。', section: 'traits'},
+      {question: '三个旋转技能为什么不能只看 Power？', answer: '三者都列出消耗10、Power 15，但 Aqua Wing Spin 降低水抗15%持续20秒，Gale-Wing Spin 扣除5 Energy，Darkwing Spin 降低受治疗70%持续15秒。应按遭遇需要选择减益，不能用相同的 Power 排出高低。', section: 'skills'},
+      {question: 'Jet Flight 能证明探索路线可行吗？', answer: 'Skyward Torrent 属于固有战斗技能：Jet Flight 最多持续8秒，受击15次也会结束。Pathfinding 另列 Fly Lv.2 和 Swim Lv.2，但没有路线或体力说明。两种记录回答不同问题，战斗状态不能验证瀑布通行路线。', section: 'mobility'},
+    ],
+    'zh-Hant': [
+      {question: '技能或終極技之後應關注什麼？', answer: 'Turbo Boost 在技能或終極技後獲得1層，強化下一次普攻的傷害與 BREAK，最多儲存2層。繼續施技前先檢查層數；條目不能證明只連續用技能、不接普攻也能保留每次潛在收益。', section: 'traits'},
+      {question: '三個旋轉技能為什麼不能只看 Power？', answer: '三者都列出消耗10、Power 15，但 Aqua Wing Spin 降低水抗15%持續20秒，Gale-Wing Spin 扣除5 Energy，Darkwing Spin 降低受治療70%持續15秒。應按遭遇需要選擇減益，不能用相同的 Power 排出高低。', section: 'skills'},
+      {question: 'Jet Flight 能證明探索路線可行嗎？', answer: 'Skyward Torrent 屬於固有戰鬥技能：Jet Flight 最多持續8秒，受擊15次也會結束。Pathfinding 另列 Fly Lv.2 和 Swim Lv.2，但沒有路線或體力說明。兩種記錄回答不同問題，戰鬥狀態不能驗證瀑布通行路線。', section: 'mobility'},
+    ],
+  },
+  '089': {
+    en: [
+      {question: 'When is the next skill enhanced?', answer: 'Bubble Energy gains 1 every 4s in battle and 3 when skills damage a target; 10 enters Energy Full and enhances the next skill. Check the current state before choosing a support cast. The text does not establish per-hit counting for multi-target attacks or a guaranteed time to fill.', section: 'traits'},
+      {question: 'What changes between the two shield skills?', answer: 'Baa Bubble Wave grants allies along its path a 10s shield based on 7% of the caster’s Max HP, or 14% in Energy Full. Dark Tide Wave Assault instead siphons existing target shields at 50%, or 80% when enhanced. Inspect ally positioning versus enemy shields; the latter is not a guaranteed Max-HP shield.', section: 'skills'},
+      {question: 'Can the healing be converted to healing per second?', answer: 'Ripples of Floating Duckweed lists 12% of the caster’s Max HP and 24% healing on Grass-type Aniimo in Energy Full, but the source ends the duration phrase with “over 6” without a unit. Keep that duration unresolved and do not calculate HPS. The Grass condition also means 24% is not the default for every ally.', section: 'skills'},
+    ],
+    'zh-Hans': [
+      {question: '下一次技能什么时候会强化？', answer: '战斗中 Bubble Energy 每4秒获得1点，技能伤害目标时获得3点；积累10点进入 Energy Full，强化下一次技能。施放辅助前先确认当前状态；文字没有确认多目标攻击按每段计数，也不能得出必定蓄满的时间。', section: 'traits'},
+      {question: '两种护盾技能有什么关键区别？', answer: 'Baa Bubble Wave 为路径上的队友提供持续10秒、相当于施放者最大 HP 7%的护盾，Energy Full 下为14%。Dark Tide Wave Assault 则吸取目标已有护盾的50%，强化后80%。前者要看队友站位，后者要看敌方已有护盾，不能把后者视为保底的最大 HP 护盾。', section: 'skills'},
+      {question: '治疗数值能换算成每秒治疗量吗？', answer: 'Ripples of Floating Duckweed 列出施放者最大 HP 的12%，Energy Full 下对草系伊莫治疗提高至24%，但来源持续时间只写到“over 6”，缺少单位。因此持续时间保持未确认，不计算每秒治疗；24%也受草系条件限制，不是所有队友的默认收益。', section: 'skills'},
+    ],
+    'zh-Hant': [
+      {question: '下一次技能什麼時候會強化？', answer: '戰鬥中 Bubble Energy 每4秒獲得1點，技能傷害目標時獲得3點；累積10點進入 Energy Full，強化下一次技能。施放輔助前先確認目前狀態；文字沒有確認多目標攻擊按每段計數，也不能得出必定蓄滿的時間。', section: 'traits'},
+      {question: '兩種護盾技能有什麼關鍵區別？', answer: 'Baa Bubble Wave 為路徑上的隊友提供持續10秒、相當於施放者最大 HP 7%的護盾，Energy Full 下為14%。Dark Tide Wave Assault 則吸取目標已有護盾的50%，強化後80%。前者要看隊友站位，後者要看敵方已有護盾，不能把後者視為保底的最大 HP 護盾。', section: 'skills'},
+      {question: '治療數值能換算成每秒治療量嗎？', answer: 'Ripples of Floating Duckweed 列出施放者最大 HP 的12%，Energy Full 下對草系伊莫治療提高至24%，但來源持續時間只寫到「over 6」，缺少單位。因此持續時間保持未確認，不計算每秒治療；24%也受草系條件限制，不是所有隊友的預設收益。', section: 'skills'},
+    ],
+  },
   '008': {
     en: [
       { question: 'Does Take Off make flight a safe default?', answer: 'Take Off enters a Flying state to evade attacks from ground enemies, but the same description says incoming damage increases while airborne. Check which attacks the encounter actually uses before staying aloft. This is not evidence of invulnerability, unlimited flight or a route that can cross every gap.', section: 'mobility' },

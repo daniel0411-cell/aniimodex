@@ -1,7 +1,7 @@
 {
   "source": "https://wiki.aniimo.com/",
   "checkedAt": "2026-10-23",
-  "scope": "English basic-form pages; form links are indexed, alternate-form values are not imported.",
+  "scope": "86 English Basic Form records checked October 23, plus four event-linked Basic Form records checked November 8 (per-record dates). Alternate-form links are indexed; their values are not imported. New evolution trees remain unresolved.",
   "entries": [
     {
       "number": "001",
@@ -1214,6 +1214,67 @@
         "Light"
       ],
       "wikiPageId": "99998/basic-form"
+    },
+    {
+      "number": "wiki-300301-022",
+      "officialNumber": "022",
+      "officialId": "10614",
+      "name": "Royalby",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10614.png",
+      "description": "The queen of the swarm and the hive’s highest ruler, she is revered by her kin and lives within the royal nest the workers craft for her, commanding the entire swarm.",
+      "stage": "Nova",
+      "role": "Regen",
+      "elements": [
+        "Wind"
+      ],
+      "wikiPageId": "022/basic-form/300301",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "number": "wiki-300301-008",
+      "officialNumber": "008",
+      "officialId": "10633",
+      "name": "Pouchwisp",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10633.png",
+      "description": "Its body is like a super-springy giant coin pouch, home to a whole swarm of Pennywisps. It may look like it’s generously tossing gold coins everywhere, but it’s really just letting the Pennywisps out to play.",
+      "stage": "Nova",
+      "role": "Regen",
+      "elements": [
+        "Dark"
+      ],
+      "wikiPageId": "008/basic-form/300301",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "number": "wiki-300301-028",
+      "officialNumber": "028",
+      "officialId": "10693",
+      "name": "Jeburst",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10693.png",
+      "description": "The wing membranes sprouting from its forelimbs are airy yet tough. Two well-developed pairs of water storage organs on its wings can jet powerful streams, pushing its body like an arrow to cleave through the water pressure, surge upstream, and vault all the way to the top of the falls.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Water"
+      ],
+      "wikiPageId": "028/basic-form/300301",
+      "checkedAt": "2026-11-08"
+    },
+    {
+      "number": "089",
+      "officialNumber": "010",
+      "officialId": "10583",
+      "name": "Glameep",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10583.png",
+      "description": "Draped in fresh green leaf-feathers, Glameep moves lightly along the lake shore. It adores clear water most of all, especially when that water reflects its own graceful, unhurried beauty.",
+      "stage": "Nova",
+      "role": "Heal",
+      "elements": [
+        "Grass",
+        "Water"
+      ],
+      "wikiPageId": "010/basic-form/300301",
+      "checkedAt": "2026-11-08"
     }
   ]
 }

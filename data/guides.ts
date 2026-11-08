@@ -282,7 +282,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-06',
+    updatedAt: '2026-11-08',
     date: '2026-10-13',
     readMinutes: 5,
     relatedToolHrefs: ['/dex'],
@@ -292,7 +292,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',
@@ -312,12 +312,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'official-aniimo-dex-status',
-    updatedAt: '2026-11-02',
+    updatedAt: '2026-11-08',
     date: '2026-08-30',
     readMinutes: 5,
     relatedToolHrefs: ['/dex', '/tools/twine', '/tools/catch'],
     relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-prismana-event-tracker'],
-    sourceIds: ['aniimo-official-wiki-basic-2026-10-23', 'aniimo-official-catch-disclosure-2026-10-27', 'aniimo-s1-part-two-2026-10-27'],
+    sourceIds: ['aniimo-official-wiki-basic-2026-10-23', 'aniimo-official-wiki-royalby-2026-11-08', 'aniimo-official-wiki-pouchwisp-2026-11-08', 'aniimo-official-wiki-jeburst-2026-11-08', 'aniimo-official-wiki-glameep-2026-11-08', 'aniimo-official-catch-disclosure-2026-10-27', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-launch-time-preload',

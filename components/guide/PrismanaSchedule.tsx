@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { prismanaServers, prismanaWindows, prismanaWindowStatus } from '@/data/prismana-schedule';
 
 export default function PrismanaSchedule({ locale }: { locale: string }) {
@@ -20,7 +21,7 @@ export default function PrismanaSchedule({ locale }: { locale: string }) {
     active: t('Scheduled active', '公告时间内', '公告時間內'),
     ended: t('Ended', '已结束', '已結束'),
   };
-  return <div className="my-4 space-y-3" data-testid="prismana-schedule">
+  return <div id="prismana-schedule" className="my-4 scroll-mt-24 space-y-3" data-testid="prismana-schedule">
     <label className="flex flex-wrap items-center gap-3 text-sm font-semibold">
       {t('Server', '服务器', '伺服器')}
       <select value={serverId} onChange={(event) => setServerId(event.target.value)} className="max-w-full rounded border border-ink-border bg-white px-3 py-2">
@@ -34,11 +35,11 @@ export default function PrismanaSchedule({ locale }: { locale: string }) {
     )}</p>
     <div role="region" aria-label={t('Prismana schedule', 'Prismana 排期', 'Prismana 排期')} tabIndex={0} className="overflow-x-auto border border-ink-border">
       <table className="w-full min-w-[640px] text-left text-sm">
-        <caption className="px-3 py-2 text-left font-semibold">{server.name} · {server.zone} · {t('Source checked November 1, 2026', '来源核对：2026年11月1日', '來源核對：2026年11月1日')}</caption>
+        <caption className="px-3 py-2 text-left font-semibold">{server.name} · {server.zone} · {t('Source checked November 8, 2026', '来源核对：2026年11月8日', '來源核對：2026年11月8日')}</caption>
         <thead><tr className="bg-ink-card">{[t('Window', '时间窗口', '時間窗口'), t('Prismana Form / area', 'Prismana 形态／区域', 'Prismana 形態／區域'), t('Schedule status', '排期状态', '排期狀態')].map((label) => <th key={label} scope="col" className="px-3 py-2">{label}</th>)}</tr></thead>
         <tbody>{prismanaWindows.map((item) => <tr key={item.start} className="border-t border-ink-border align-top">
           <td className="whitespace-nowrap px-3 py-3">{item.start} 04:00<br />{t('to', '至', '至')} {item.end} 03:59</td>
-          <th scope="row" className="px-3 py-3 font-normal"><span className="font-semibold">{item.name}</span><p className="mt-1 text-xs leading-5">{item.region}</p></th>
+          <th scope="row" className="px-3 py-3 font-normal"><span className="font-semibold">{item.name}</span><p className="mt-1 text-xs leading-5">{item.region}</p><div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">{item.name.split(' / ').map((name) => <Link key={name} className="underline underline-offset-4" href={`/${locale}/dex/${({ Pouchwisp: 'wiki-300301-008', Royalby: 'wiki-300301-022', Jeburst: 'wiki-300301-028', Glameep: '089' } as Record<string, string>)[name]}/`}>{name} · {t('Basic Form data', '基础形态资料', '基礎形態資料')}</Link>)}</div></th>
           <td className="whitespace-nowrap px-3 py-3" data-status={prismanaWindowStatus(item.start, item.end, server.offset, now)}>{statusLabels[prismanaWindowStatus(item.start, item.end, server.offset, now)]}</td>
         </tr>)}</tbody>
       </table>

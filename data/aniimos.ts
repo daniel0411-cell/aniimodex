@@ -52,9 +52,9 @@ const allEntries: AniimoEntry[] = records.map((record) => ({
   personality: unknownPersonality(),
   forms: [],
   dataSource: 'official',
-  sourceIds: [record.archived ? SOURCE_ID : 'aniimo-official-wiki-basic-2026-10-23'],
+  sourceIds: [record.archived ? SOURCE_ID : 'checkedAt' in record ? `aniimo-official-wiki-${record.name.toLowerCase()}-2026-11-08` : 'aniimo-official-wiki-basic-2026-10-23'],
   note:
-    'Current Basic Form data and resolved evolution stages use the October 23 rendered Wiki snapshot; archived records retain the August evidence. Empty fields mean missing evidence.',
+    'Basic Form evidence: October 23 roster plus four November 8 event-linked additions, dated per record. Archived records retain August evidence. Empty fields mean missing evidence.',
 }));
 
 export const archivedAniimos = allEntries.filter((entry) => entry.archived);

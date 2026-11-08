@@ -32,6 +32,7 @@ export interface OfficialAniimoDetail {
 export function isSuspiciousOfficialDescription(description?: string): boolean {
   if (!description) return false;
   if (description.includes('%%')) return true;
+  if (/\bover\s+\d+(?:\.\d+)?\.(?:\s|$)/i.test(description)) return true;
   return /\b(?:every|for)\s+[3-9]\d{2,}\s*s\b/i.test(description) || /\b(?:total of|costs?|gains?)\s+(?:EP|HP)\b/i.test(description) || /\{\d+\}/.test(description) || /\bby\s+0(?:%|\.(?!\d)|(?=\s|$))/i.test(description);
 }
 

@@ -87,11 +87,16 @@ export const currentWikiIndex = [
   ['11001', 'Little Fire Spirit'],
   ['99996', 'Lunara'],
   ['99998', 'Helion'],
+  // Separate Wiki route namespace, verified November 8. Numbers overlap the older roster.
+  ['022', 'Royalby', '300301'],
+  ['008', 'Pouchwisp', '300301'],
+  ['028', 'Jeburst', '300301'],
+  ['010', 'Glameep', '300301'],
 ] as const;
 
 export function getCurrentWikiEntry(name: string) {
   const entry = currentWikiIndex.find(([, currentName]) => currentName === name);
   return entry
-    ? { number: entry[0], url: `https://wiki.aniimo.com/item/${entry[0]}/basic-form` }
+    ? { number: entry[0], checkedAt: entry.length === 3 ? '2026-11-08' : '2026-10-23', url: `https://wiki.aniimo.com/item/${entry[0]}/basic-form${entry.length === 3 ? `/${entry[2]}` : ''}` }
     : undefined;
 }

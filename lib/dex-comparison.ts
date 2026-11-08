@@ -16,6 +16,6 @@ export function getDexComparisons(current: AniimoEntry) {
       return { entry, detail: candidate, sharedElements, sameRole, sharedHabitats };
     })
     .filter((item) => item.sameRole || item.sharedElements.length > 0)
-    .sort((a, b) => Number(b.sameRole) - Number(a.sameRole) || b.sharedElements.length - a.sharedElements.length || b.sharedHabitats.length - a.sharedHabitats.length || Number(a.entry.officialNumber) - Number(b.entry.officialNumber))
+    .sort((a, b) => Number(b.sameRole) - Number(a.sameRole) || b.sharedElements.length - a.sharedElements.length || b.sharedHabitats.length - a.sharedHabitats.length || Number(a.entry.officialNumber) - Number(b.entry.officialNumber) || a.entry.number.localeCompare(b.entry.number))
     .slice(0, 4);
 }

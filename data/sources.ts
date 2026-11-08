@@ -13,6 +13,20 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-prismana-calendar-2026-11-08',
+    url: 'https://www.aniimo.com/newslist/detail/100244',
+    title: 'Aniimo S1 Part 2 announcement - Prismana rotation',
+    accessedAt: '2026-11-08',
+    evidence: 'October 27 announcement read November 8. November 2-December 7 Prismana windows name Pouchwisp, Royalby, Jeburst and Glameep and their event areas. Student II requirement; server clocks use separately stated UTC+8, UTC+0 and UTC-4 offsets. The announcement does not supply Basic Form attributes, spawn coordinates or encounter probabilities.',
+  },
+  ...([['022', 'Royalby'], ['008', 'Pouchwisp'], ['028', 'Jeburst'], ['010', 'Glameep']] as const).map(([number, name]) => ({
+    id: `aniimo-official-wiki-${name.toLowerCase()}-2026-11-08`,
+    url: `https://wiki.aniimo.com/item/${number}/basic-form/300301`,
+    title: `Official Aniimo Wiki - ${name} Basic Form`,
+    accessedAt: '2026-11-08',
+    evidence: 'Rendered English Basic Form page: identity, artwork, elements, role, six attributes, habitat, visible Pathfinding/Mobility, traits and both Combat/Innate skill tabs. Nova stage matched by artwork in the evolution chart. Family image identities remain unresolved and are excluded from family comparisons. Separate /300301 route namespace; number alone is not an identity. Alternate-form values, precise encounters, growth formulas and live-client behavior are not verified. Glameep healing text omits a time unit after "over 6"; no duration or healing-per-second calculation is inferred.',
+  })),
+  {
     id: 'aniimo-patch-1-1-3880756-2026-11-05',
     url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643339992',
     title: 'Aniimo Official Patch v1.1.3880756.0 - November 5 fixes and adjustments',

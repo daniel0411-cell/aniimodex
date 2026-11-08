@@ -1,7 +1,7 @@
 {
   "source": "https://wiki.aniimo.com/",
   "checkedAt": "2026-10-23",
-  "scope": "English basic-form pages; form links are indexed, alternate-form values are not imported.",
+  "scope": "86 English Basic Form records checked October 23, plus four event-linked Basic Form records checked November 8 (per-record dates). Alternate-form links are indexed; their values are not imported. New evolution trees remain unresolved.",
   "details": [
     {
       "number": "001",
@@ -14918,6 +14918,761 @@
           "wikiId": "99998/basic-form",
           "name": "Basic Form",
           "url": "https://wiki.aniimo.com/item/99998/basic-form"
+        }
+      ]
+    },
+    {
+      "number": "wiki-300301-022",
+      "wikiId": "022/basic-form/300301",
+      "checkedAt": "2026-11-08",
+      "evolutionPublished": false,
+      "attributes": [
+        {
+          "name": "HP",
+          "value": 104
+        },
+        {
+          "name": "BREAK",
+          "value": 53
+        },
+        {
+          "name": "ATK",
+          "value": 106
+        },
+        {
+          "name": "M.DEF",
+          "value": 73
+        },
+        {
+          "name": "P.DEF",
+          "value": 73
+        },
+        {
+          "name": "REGEN",
+          "value": 115
+        }
+      ],
+      "habitats": [
+        "Wildwater Gorge"
+      ],
+      "evolution": {
+        "name": "Royalby",
+        "stage": 3,
+        "children": []
+      },
+      "mobility": [
+        {
+          "group": "Pathfinding",
+          "name": "Fly Lv.2"
+        }
+      ],
+      "traits": [
+        {
+          "description": "Royalby restores 4 EP when casting a skill. When its own skill damages a target, it restores 2 EP.",
+          "name": "Queen’s Protection",
+          "parameters": []
+        }
+      ],
+      "skills": [
+        {
+          "description": "Restores HP to all allied Wind-type Aniimo. The amount restored equals 9% Max HP of the caster. If [Queen’s Domain] is expanded, it applies to all allies’ Wind-type Aniimo within the domain.",
+          "name": "Queen’s Blessing",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Support"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "0"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Expands [Queen’s Domain]. When the Wind-type Aniimo switched in uses a skill, it triggers the domain, dealing damage to targets within range. The trigger interval is no less than 0.5s, and the domain lasts 20s.",
+          "name": "Royal Pressure",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "5"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Summons a Puffby to move forward. When it reaches the end of the skill path, it drops a Pollen Puff to deal damage and [stun] the target for for 1.5s. Cast the skill again to make it drop the Pollen Puff early.",
+          "name": "Puffby Bomb",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Summons a Puffby to move forward. When it reaches the set distance, Puffby drops a Pollen Puff, dealing damage. In addition, within 20s, the target loses 10 Energy upon Aniimo switch. Cast the skill again to drop the Pollen Puff early.",
+          "name": "Puff Lightshot",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Restores 8 Energy per second and Twines up to 5 targets within 4 meters, reducing their Movement Speed by 35% and draining 8 Energy per second. If a target is still within range after 3 seconds, it takes Damage and is inflicted with [Stun]3 seconds.",
+          "name": "All Shall Bow to the Crown",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "100"
+            }
+          ],
+          "group": "Innate Skills"
+        },
+        {
+          "description": "Wields the power of wind to attack targets from a distance.",
+          "name": "ATK",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "6"
+            }
+          ],
+          "group": "Innate Skills"
+        }
+      ],
+      "morphologyList": [
+        {
+          "name": "Basic Form",
+          "url": "https://wiki.aniimo.com/item/022/basic-form/300301",
+          "wikiId": "022/basic-form/300301"
+        }
+      ]
+    },
+    {
+      "number": "wiki-300301-008",
+      "wikiId": "008/basic-form/300301",
+      "checkedAt": "2026-11-08",
+      "evolutionPublished": false,
+      "attributes": [
+        {
+          "name": "HP",
+          "value": 101
+        },
+        {
+          "name": "BREAK",
+          "value": 50
+        },
+        {
+          "name": "ATK",
+          "value": 110
+        },
+        {
+          "name": "M.DEF",
+          "value": 70
+        },
+        {
+          "name": "P.DEF",
+          "value": 80
+        },
+        {
+          "name": "REGEN",
+          "value": 109
+        }
+      ],
+      "habitats": [
+        "Crescent Bay"
+      ],
+      "evolution": {
+        "name": "Pouchwisp",
+        "stage": 3,
+        "children": []
+      },
+      "mobility": [],
+      "traits": [
+        {
+          "description": "During battle, each Dark-type Aniimo in the party increases the entire party’s Energy Regeneration Rate by 4%.",
+          "name": "The More, the Merrier",
+          "parameters": []
+        }
+      ],
+      "skills": [
+        {
+          "description": "Applies a [Pennywisp Mark] to the target for 20s. If the target is put in the Break state or defeated during that time, its [Pennywisp Mark] transfers to another nearby target and its duration refreshes, restoring 16 Energy to the applier. Can only trigger once every 15s.",
+          "name": "Coin Boost",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Support"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "0"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Throws a giant Coinwisp that explodes on hit, dealing AoE damage. The lower the target’s HP, the higher the damage, with bonus damage capped at 100% of Might.",
+          "name": "Showhand",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "10"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Pulls in targets within a frontal fan-shaped area, then deals AoE damage and reduces their Movement Speed by 20% for 8s.",
+          "name": "Gold-Siphon Nali",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "33"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Throws a giant Pennywisp that explodes on hit, dealing AoE damage and applying [Charm] to nearby targets for 3s.",
+          "name": "High-Roller Toss",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Wields the power of Dark to attack targets at close range.",
+          "name": "Attack",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "6"
+            }
+          ],
+          "group": "Innate Skills"
+        },
+        {
+          "description": "Throws out a Pennywisp to assist team members for 10s. During this time, applies [Pennywisp Mark] to the last target attacked by the team, and makes [Pennywisp Mark] restore an additional 3.2 Energy to the caster every second.",
+          "name": "Golden Patronage",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Support"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "100"
+            }
+          ],
+          "group": "Innate Skills"
+        }
+      ],
+      "morphologyList": [
+        {
+          "name": "Basic Form",
+          "url": "https://wiki.aniimo.com/item/008/basic-form/300301",
+          "wikiId": "008/basic-form/300301"
+        }
+      ]
+    },
+    {
+      "number": "wiki-300301-028",
+      "wikiId": "028/basic-form/300301",
+      "checkedAt": "2026-11-08",
+      "evolutionPublished": false,
+      "attributes": [
+        {
+          "name": "HP",
+          "value": 104
+        },
+        {
+          "name": "BREAK",
+          "value": 106
+        },
+        {
+          "name": "ATK",
+          "value": 88
+        },
+        {
+          "name": "M.DEF",
+          "value": 80
+        },
+        {
+          "name": "P.DEF",
+          "value": 80
+        },
+        {
+          "name": "REGEN",
+          "value": 84
+        }
+      ],
+      "habitats": [
+        "Cloudreach Falls"
+      ],
+      "evolution": {
+        "name": "Jeburst",
+        "stage": 3,
+        "children": []
+      },
+      "mobility": [
+        {
+          "group": "Pathfinding",
+          "name": "Fly Lv.2"
+        },
+        {
+          "group": "Pathfinding",
+          "name": "Swim Lv.2"
+        }
+      ],
+      "traits": [
+        {
+          "description": "Using a skill or Ultimate grants the caster 1 stack of [Turbo Boost], causing the next Basic Attack to deal an additional 120% damage and BREAK. Up to 2 stacks can exist at a time. Upon entering combat, Jeburst gains one Ultimate that costs no resources. This refreshes every 120s.",
+          "name": "Turbo Boost",
+          "parameters": []
+        }
+      ],
+      "skills": [
+        {
+          "description": "Spins to slash surrounding targets and reduce their Water resistance by 15% for 20s.",
+          "name": "Aqua Wing Spin",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "10"
+            },
+            {
+              "label": "Power",
+              "value": "15"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Spins to slash nearby targets. Also reduces the target’s Energy by 5.",
+          "name": "Gale-Wing Spin",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "10"
+            },
+            {
+              "label": "Power",
+              "value": "15"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Spins to slash nearby targets, reducing the healing they receive by 70% for 15s.",
+          "name": "Darkwing Spin",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "10"
+            },
+            {
+              "label": "Power",
+              "value": "15"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Channels water element and slams it into the ground, boosting BREAK Efficiency by 25% for20s.",
+          "name": "Waterfall Pool",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "45"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Launches skyward, then slams into the target with full force to deal one instance of damage. This skill can be activated mid-air.",
+          "name": "Rushing Current Strike",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "60"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Wields the power of water to attack targets at close range.",
+          "name": "ATK",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "6"
+            }
+          ],
+          "group": "Innate Skills"
+        },
+        {
+          "description": "Enters the [Jet Flight] state for 8s. During this time, basic attacks are enhanced, each dealing damage equal to 30 Might. Exits [Jet Flight] when time runs out or after being hit 15 times.",
+          "name": "Skyward Torrent",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "30"
+            }
+          ],
+          "group": "Innate Skills"
+        }
+      ],
+      "morphologyList": [
+        {
+          "name": "Basic Form",
+          "url": "https://wiki.aniimo.com/item/028/basic-form/300301",
+          "wikiId": "028/basic-form/300301"
+        },
+        {
+          "name": "Tempest Form",
+          "url": "https://wiki.aniimo.com/item/028/tempest-form/300301",
+          "wikiId": "028/tempest-form/300301"
+        }
+      ]
+    },
+    {
+      "number": "089",
+      "wikiId": "010/basic-form/300301",
+      "checkedAt": "2026-11-08",
+      "evolutionPublished": false,
+      "attributes": [
+        {
+          "name": "HP",
+          "value": 117
+        },
+        {
+          "name": "BREAK",
+          "value": 50
+        },
+        {
+          "name": "ATK",
+          "value": 100
+        },
+        {
+          "name": "M.DEF",
+          "value": 80
+        },
+        {
+          "name": "P.DEF",
+          "value": 91
+        },
+        {
+          "name": "REGEN",
+          "value": 92
+        }
+      ],
+      "habitats": [
+        "Crescent Bay"
+      ],
+      "evolution": {
+        "name": "Glameep",
+        "stage": 3,
+        "children": []
+      },
+      "mobility": [
+        {
+          "group": "Pathfinding",
+          "name": "Swim Lv.2"
+        },
+        {
+          "name": "Bubble Drift",
+          "description": "Blows a large floating bubble."
+        }
+      ],
+      "traits": [
+        {
+          "description": "After entering battle, restores 1 [Bubble Energy] every 4s, and restores 3 [Bubble Energy] each time your skills damage a target. After storing 10, enters the [Energy Full] state, enhancing your next skill.",
+          "name": "Bubble Energy",
+          "parameters": []
+        }
+      ],
+      "skills": [
+        {
+          "description": "Launches a Grass Orb at the target. On hit, reduces its 8%Grass Resistance for 20s. While in the [Energy Full] state, Grass-type Aniimo in your team deal 15% increased damage for 20s.",
+          "name": "Baa-Baa Leaf Shot",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Launches a bubble wave that deals damage to enemies hit, while also granting allies along its path a Shield worth 7.0% of the caster’s Max HP for 10s. In the [Energy Full] state, the Shield value is increased to 14.0%.",
+          "name": "Baa Bubble Wave",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "50"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Fires a wave of bubbly water, damaging targets hit and siphoning 50% of the Shield value from every target along its path to gain a Shield that lasts 10s. While in the [Energy Full] state, the percentage of Shield siphoned increases to 80%.",
+          "name": "Dark Tide Wave Assault",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "50"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Rides a bubble and releases healing pulses downward, healing all allies within the movable healing area. Restores 12% of the caster’s max HP over 6. In the [Energy Full] state, healing on Grass-type Aniimo is increased to 24%.",
+          "name": "Ripples of Floating Duckweed",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Support"
+            },
+            {
+              "label": "Cost",
+              "value": "15"
+            },
+            {
+              "label": "Power",
+              "value": "0"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Launches a Wind Bomb at the target. On hit, reduces the target’s healing received by 44% for 20s. While in the [Energy Full] state, Grass-type Aniimo in your team deal 15% increased damage for 20s.",
+          "name": "Baa-Baa Wind Bomb",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "20"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "description": "Cleanses all debuffs from allies within range and restores HP to all allies within range. Over 2s, the caster recovers 21% of their max HP.",
+          "name": "Leafwave Bubble",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Support"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "0"
+            }
+          ],
+          "group": "Innate Skills"
+        },
+        {
+          "description": "Wields the power of grass to attack targets from a distance.",
+          "name": "ATK",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Magic"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "6"
+            }
+          ],
+          "group": "Innate Skills"
+        }
+      ],
+      "morphologyList": [
+        {
+          "name": "Basic Form",
+          "url": "https://wiki.aniimo.com/item/010/basic-form/300301",
+          "wikiId": "010/basic-form/300301"
+        },
+        {
+          "name": "Tempest Form",
+          "url": "https://wiki.aniimo.com/item/010/tempest-form/300301",
+          "wikiId": "010/tempest-form/300301"
         }
       ]
     }
