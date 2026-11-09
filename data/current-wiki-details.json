@@ -15675,6 +15675,156 @@
           "wikiId": "010/tempest-form/300301"
         }
       ]
+    },
+    {
+      "number": "wiki-1000-10007",
+      "wikiId": "10007/basic-form/1000",
+      "checkedAt": "2026-11-09",
+      "evolutionPublished": false,
+      "attributes": [
+        {
+          "name": "HP",
+          "value": 110
+        },
+        {
+          "name": "BREAK",
+          "value": 106
+        },
+        {
+          "name": "ATK",
+          "value": 90
+        },
+        {
+          "name": "M.DEF",
+          "value": 72
+        },
+        {
+          "name": "P.DEF",
+          "value": 77
+        },
+        {
+          "name": "REGEN",
+          "value": 85
+        }
+      ],
+      "habitats": [],
+      "evolution": {
+        "name": "Jaguaraun",
+        "stage": 3,
+        "children": []
+      },
+      "mobility": [],
+      "traits": [
+        {
+          "name": "Thundercloud Surge",
+          "description": "Gains Thunderstorm stacks in combat. Each stack increases Basic Attack Speed by 4%, up to 20 stacks. At max Thunderstorm stacks, enters the [Overcharge] state. While Overcharged, every 0.5s, Basic Attacks consume 3 Energy to trigger an extra thundercloud explosion, dealing Basic Attack Damage equal to 200% Might. The [Overcharge] state lasts 10s.",
+          "parameters": []
+        }
+      ],
+      "skills": [
+        {
+          "name": "Blink Strike",
+          "description": "Blinks forward in a dash, dealing damage to targets along the path. When cast in the [Overcharge] state, inflicts [Lockdown] on hit targets for 15s.",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "10"
+            },
+            {
+              "label": "Power",
+              "value": "15"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "name": "Thunder Rush Claw",
+          "description": "Channels lightning energy into the caster’s foreclaws to deal damage to enemies in a large area ahead; can be cast twice in a row. Hitting a target grants 4 stacks of [Thunderstorm]. While in the [Overcharge] state, this skill is treated as Basic Attack Damage.",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "70"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "name": "Thundercloud Surge",
+          "description": "Jaguaraun unleashes its Thundercloud Energy, dealing damage once to nearby targets and strengthening itself. For 10s, Basic Attacks that hit a target grant 1 stack of [Thunderstorm].",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "20"
+            },
+            {
+              "label": "Power",
+              "value": "35"
+            }
+          ],
+          "group": "Combat Skills"
+        },
+        {
+          "name": "ATK",
+          "description": "(BREAK) Wields the power of lightning to attack targets at close range.",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "6"
+            }
+          ],
+          "group": "Innate Skills"
+        },
+        {
+          "name": "Thunder Rush Call",
+          "description": "Absorbs thundercloud energy, then slams the ground to send surging lightning outward, gaining 10 stacks of [Thunderstorm]. Also gains the [Super Armor] state for 5s.",
+          "parameters": [
+            {
+              "label": "Type",
+              "value": "Physical"
+            },
+            {
+              "label": "Cost",
+              "value": "0"
+            },
+            {
+              "label": "Power",
+              "value": "140"
+            }
+          ],
+          "group": "Innate Skills"
+        }
+      ],
+      "morphologyList": [
+        {
+          "name": "Basic Form",
+          "url": "https://wiki.aniimo.com/item/10007/basic-form/1000",
+          "wikiId": "10007/basic-form/1000"
+        }
+      ]
     }
   ],
   "failures": []

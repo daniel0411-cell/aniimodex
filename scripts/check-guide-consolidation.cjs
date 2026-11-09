@@ -10,9 +10,9 @@ new Function(
   }).outputText
 )(moduleState, moduleState.exports);
 const { getCurrentWikiEntry, currentWikiIndex } = moduleState.exports;
-assert.equal(currentWikiIndex.length, 90);
-assert.equal(new Set(currentWikiIndex.map(([, name]) => getCurrentWikiEntry(name).url)).size, 90);
-assert.equal(new Set(currentWikiIndex.map(([, name]) => name)).size, 90);
+assert.equal(currentWikiIndex.length, 91);
+assert.equal(new Set(currentWikiIndex.map(([, name]) => getCurrentWikiEntry(name).url)).size, 91);
+assert.equal(new Set(currentWikiIndex.map(([, name]) => name)).size, 91);
 assert.notEqual(getCurrentWikiEntry('Tromber').url, getCurrentWikiEntry('Pouchwisp').url);
 assert.equal(getCurrentWikiEntry('Pouchwisp').url, 'https://wiki.aniimo.com/item/008/basic-form/300301');
 assert.equal(getCurrentWikiEntry('Iris').number, '011');

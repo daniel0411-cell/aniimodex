@@ -19,7 +19,7 @@ assert.equal(details.find((entry) => entry.number === '020').mobility.length, 0)
 assert.equal(details.find((entry) => entry.number === '020').habitats.length, 0);
 assert.equal(details.find((entry) => entry.number === '004').habitats.length, 0);
 assert.equal(details.find((entry) => entry.number === '005').mobility.length, 0);
-assert.equal(details.length, 90);
+assert.equal(details.length, 91);
 assert(details.every((entry) => entry.attributes.length === 6));
 const read = (path) => readFileSync(`out/${path}/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {

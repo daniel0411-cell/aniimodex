@@ -1275,6 +1275,21 @@
       ],
       "wikiPageId": "010/basic-form/300301",
       "checkedAt": "2026-11-08"
+    },
+    {
+      "number": "wiki-1000-10007",
+      "officialNumber": "10007",
+      "officialId": "10713",
+      "name": "Jaguaraun",
+      "imageUrl": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10713.png",
+      "description": "Jaguaraun’s neck fur is incredibly thick, brimming with abundant Lightning Element. Like a brewing thundercloud, a dark tide churns beneath it. When it sprints, it tears past with the howl of a thunderstorm.",
+      "stage": "Nova",
+      "role": "Break",
+      "elements": [
+        "Lightning"
+      ],
+      "wikiPageId": "10007/basic-form/1000",
+      "checkedAt": "2026-11-09"
     }
   ]
 }

@@ -48,10 +48,10 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     [twine, ['Hustle', 'Take Off', 'Cloudwalk', 'Floaty Bubble', 'Star Glide', '2026-10-23']],
     [homeGuide, ['Magical Wonder Night', 'Act Seven: Festivals of Astra', 'Moonbeam Wheat', 'Home Coin', 'Wonder Sugar Crystal', 'Magic Pumpkin', 'Memory Lanternfruit', 'Glow Scooter']],
     [interlink, ['Trailblazer I', 'AI', '687520329382238609']],
-    [coverage, ['90', '86', '11', 'Royalby', 'S1']],
+    [coverage, ['91', '86', '11', 'Royalby', 'S1']],
   ]) {
     for (const term of terms) assert(page.includes(term), `${locale}: missing refreshed answer ${term}`);
-    assert(page.includes(page === coverage ? '2026-11-08' : [homeGuide, interlink].includes(page) ? '2026-11-06' : '2026-11-02'));
+    assert(page.includes(page === coverage ? '2026-11-09' : [homeGuide, interlink].includes(page) ? '2026-11-06' : '2026-11-02'));
     assert(!page.includes('noindex'));
     for (const [, href] of page.matchAll(/href="(\/(?:en|zh-Hans|zh-Hant)\/[^"#?]+)"/g)) {
       assert(require('node:fs').existsSync(`out${href}index.html`), `broken refreshed guide link ${href}`);
@@ -120,7 +120,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const messages = require(`../messages/${locale}.json`);
   const dex = read(locale, 'dex');
   assert(dex.includes(messages.dex.title));
-  assert(dex.includes('2026') && dex.includes('86') && dex.includes('90') && dex.includes('Royalby'));
+  assert(dex.includes('2026') && dex.includes('86') && dex.includes('91') && dex.includes('Royalby'));
   assert(!dex.includes('All 86 Creatures'));
   assert(!messages.tools.browseDex.includes('all') && !messages.tools.browseDex.includes('全部'));
   assert(read(locale, 'dex/001').includes('S1'));

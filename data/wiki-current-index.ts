@@ -92,11 +92,12 @@ export const currentWikiIndex = [
   ['008', 'Pouchwisp', '300301'],
   ['028', 'Jeburst', '300301'],
   ['010', 'Glameep', '300301'],
+  ['10007', 'Jaguaraun', '1000'],
 ] as const;
 
 export function getCurrentWikiEntry(name: string) {
   const entry = currentWikiIndex.find(([, currentName]) => currentName === name);
   return entry
-    ? { number: entry[0], checkedAt: entry.length === 3 ? '2026-11-08' : '2026-10-23', url: `https://wiki.aniimo.com/item/${entry[0]}/basic-form${entry.length === 3 ? `/${entry[2]}` : ''}` }
+    ? { number: entry[0], checkedAt: entry[1] === 'Jaguaraun' ? '2026-11-09' : entry.length === 3 ? '2026-11-08' : '2026-10-23', url: `https://wiki.aniimo.com/item/${entry[0]}/basic-form${entry.length === 3 ? `/${entry[2]}` : ''}` }
     : undefined;
 }

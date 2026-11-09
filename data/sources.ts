@@ -13,6 +13,20 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-official-wiki-jaguaraun-2026-11-09',
+    url: 'https://wiki.aniimo.com/item/10007/basic-form/1000',
+    title: 'Official Aniimo Wiki - Jaguaraun Basic Form',
+    accessedAt: '2026-11-09',
+    evidence: 'Basic Info, Combat Skills and Innate Skills read November 9. Lightning, Nova, Break; six attributes, Thunderstorm/Overcharge trait and five skills. No published habitat or mobility values captured; full evolution family unresolved. No acquisition route or gameplay testing inferred.',
+  },
+  {
+    id: 'aniimo-november-2-fixes-2026-11-09',
+    url: 'https://www.aniimo.com/newslist/detail/100275',
+    title: 'Aniimo S1 Part 2 issue updates - November 2 fixes',
+    accessedAt: '2026-11-09',
+    evidence: 'October 29 article with dated updates through November 4. November 2 entries cover Whirlbite Prismana collection Topic, High-Speed Cut/Marching Flask distance, distribution, Omega Jeburst interaction range and five Egg Heist issues. Whirlbite Training Reset is promised after a future weekly update, not confirmed delivered. Fix announcements do not prove every current-client reproduction is resolved.',
+  },
+  {
     id: 'aniimo-mobile-qa-2026-11-08',
     url: 'https://www.aniimo.com/newslist/detail/100230',
     title: 'Aniimo Dev Feedback - Mobile Experience Optimization Special Q&A',

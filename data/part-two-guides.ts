@@ -3,7 +3,7 @@ import { mobilityIndex } from '@/lib/mobility';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
 import { sourceById } from '@/data/sources';
-import { getNovemberEventBlocks, getNovemberSupportBlocks } from '@/data/november-guide-updates';
+import { getNovemberEventBlocks, getNovemberSupportBlocks, getNovemberFixBlocks } from '@/data/november-guide-updates';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
@@ -124,11 +124,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     title: t('AniimoDex Coverage: Available Answers and Data Limits', 'AniimoDex 资料覆盖：可用答案与数据边界', 'AniimoDex 資料涵蓋：可用答案與資料邊界'),
     subtitle: t('Find the right database, tool or guide, and distinguish snapshot values from current announcements and unknowns.', '找到对应图鉴、工具或攻略，区分快照数值、当前公告与尚未确认的信息。', '找到對應圖鑑、工具或攻略，區分快照數值、目前公告與尚未確認的資訊。'),
     tag: t('Data coverage', '资料覆盖', '資料涵蓋'),
-    lead: t('Choose the question below. The database has 90 Basic Form records: 86 checked October 23 and Royalby, Pouchwisp, Jeburst and Glameep checked November 8. Glameep retains its earlier URL. Eleven unmatched August records remain historical and are excluded from current comparisons. This is not a complete S1 Part 2 roster.', '按下表选择问题。图鉴有90条基础形态：10月23日核验的86条，以及11月8日核验的 Royalby、Pouchwisp、Jeburst、Glameep。Glameep 保留原网址。11条8月未匹配记录仍为历史资料，不参与当前比较；这不是 S1 后半段完整名单。', '按下表選擇問題。圖鑑有90條基礎形態：10月23日核驗的86條，以及11月8日核驗的 Royalby、Pouchwisp、Jeburst、Glameep。Glameep 保留原網址。11條8月未匹配記錄仍為歷史資料，不參與目前比較；這不是 S1 後半段完整名單。'),
+    lead: t('Choose the question below. The database has 91 Basic Form records: 86 checked October 23 and Royalby, Pouchwisp, Jeburst and Glameep checked November 8, plus Jaguaraun checked November 9. Glameep retains its earlier URL. Eleven unmatched August records remain historical and are excluded from current comparisons. This is not a complete S1 Part 2 roster.', '按下表选择问题。图鉴有91条基础形态：10月23日核验的86条，以及11月8日核验的 Royalby、Pouchwisp、Jeburst、Glameep，以及11月9日核验的 Jaguaraun。Glameep 保留原网址。11条8月未匹配记录仍为历史资料，不参与当前比较；这不是 S1 后半段完整名单。', '按下表選擇問題。圖鑑有91條基礎形態：10月23日核驗的86條，以及11月8日核驗的 Royalby、Pouchwisp、Jeburst、Glameep，以及11月9日核驗的 Jaguaraun。Glameep 保留原網址。11條8月未匹配記錄仍為歷史資料，不參與目前比較；這不是 S1 後半段完整名單。'),
     body: [
       { t: 'h', c: t('1. What can I do now?', '1. 现在可以完成什么？', '1. 現在可以完成什麼？') },
       { t: 'table', head: [t('Question', '问题', '問題'), t('Available answer', '可用答案', '可用答案'), t('Boundary', '边界', '邊界')], rows: [
-        [t('Compare creatures', '比较伊莫', '比較伊莫'), t('Six attributes, skill Type/Cost/Power and roles on 90 records; families only where resolved.', '90条记录的六项属性、技能 Type／Cost／Power 与定位；家族仅展示已解析部分。', '90條記錄的六項屬性、技能 Type／Cost／Power 與定位；家族僅展示已解析部分。'), t('Basic Form snapshot, not level-adjusted stats or a complete Part 2 roster.', '基础形态快照，不是等级换算数值或完整后半段名单。', '基礎形態快照，不是等級換算數值或完整後半段名單。')],
+        [t('Compare creatures', '比较伊莫', '比較伊莫'), t('Six attributes, skill Type/Cost/Power and roles on 91 records; families only where resolved.', '91条记录的六项属性、技能 Type／Cost／Power 与定位；家族仅展示已解析部分。', '91條記錄的六項屬性、技能 Type／Cost／Power 與定位；家族僅展示已解析部分。'), t('Basic Form snapshot, not level-adjusted stats or a complete Part 2 roster.', '基础形态快照，不是等级换算数值或完整后半段名单。', '基礎形態快照，不是等級換算數值或完整後半段名單。')],
         [t('Find an exploration ability', '寻找探索能力', '尋找探索能力'), t('Ability-to-creature lookup, habitat groups and party mobility coverage.', '能力对应反查、栖息地分组与全队移动能力覆盖。', '能力對應反查、棲息地分組與全隊移動能力涵蓋。'), t('Missing fields are unknown; no guaranteed spawn coordinates.', '字段缺失表示未知，不保证出现坐标。', '欄位缺失表示未知，不保證出現座標。')],
         [t('Estimate capture', '估算捕获', '估算捕獲'), t('October 27 disclosure: field, battle and boss models with explicit assumptions.', '10月27日公示：野外、战斗与 Boss 的条件模型。', '10月27日公示：野外、戰鬥與 Boss 的條件模型。'), t('Unknown required inputs block a numeric result; not a measured species success rate.', '必要输入未知时不输出数字，不是物种实测成功率。', '必要輸入未知時不輸出數字，不是物種實測成功率。')],
         [t('Plan Part 2 activities', '规划后半段活动', '規劃後半段活動'), t('Server-specific rotation calendar, growth gates and mode/item comparisons.', '分服轮换表、成长门槛与模式／道具对照。', '分服輪換表、成長門檻與模式／道具對照。'), t('Announcement evidence, not live server monitoring or gameplay tests.', '依据公告，不是实时服务器监控或玩法实测。', '依據公告，不是即時伺服器監控或玩法實測。')],
@@ -248,6 +248,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     tag: 'Egg Heist',
     lead: t('Choose the mode before preparing a loadout. The October 29 fair PVP test has three competing teams and balanced deployed stats; it is different from the existing PVE / Chaos progression. The final Twine owner wins, not necessarily the team that built most activation.', '先选模式，再准备装备。10月29日新增公平 PVP 测试为三队争夺、出战属性平衡调整，与既有 PVE／Chaos 成长玩法不同。最终 Twine 归属决定胜负，不是累计激活最多的队伍必胜。', '先選模式，再準備裝備。10月29日新增公平 PVP 測試為三隊爭奪、出戰屬性平衡調整，與既有 PVE／Chaos 成長玩法不同。最終 Twine 歸屬決定勝負，不是累計啟用最多的隊伍必勝。'),
     body: [
+      ...getNovemberFixBlocks(locale, true),
       { t: 'h', c: t('1. Select the ruleset', '1. 先选规则组', '1. 先選規則組') },
       { t: 'table', head: [t('Mode', '模式', '模式'), t('Entry / preparation', '入口／准备', '入口／準備'), t('Decision', '选择依据', '選擇依據')], rows: [
         [t('Fair PVP test', '公平 PVP 测试', '公平 PVP 測試'), t('Character level 50 + Rising Egg Scout; announced daily 18:00–24:00. The segment does not clearly specify an absolute timezone: check your server panel.', '角色50级＋Rising Egg Scout；公告每天18:00–24:00，该段未明确绝对时区，请查所在服面板。', '角色50級＋Rising Egg Scout；公告每天18:00–24:00，該段未明確絕對時區，請查所在服面板。'), t('No configured equipment loadout or carried items; deployed stats adjusted. Prepare for Twine ownership, not a gear advantage.', '不允许配置装备或带入物品，出战属性会调整；围绕 Twine 归属准备，不能套用装备优势。', '不允許配置裝備或帶入物品，出戰屬性會調整；圍繞 Twine 歸屬準備，不能套用裝備優勢。')],
@@ -346,6 +347,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     lead: t('Start with your platform and exact symptom. The October 27 mobile and console Q&As were checked November 8; official patch v1.1.3880756.0, published November 5, remains checked November 6. October 30 v1.1.3857679.0 and the November 1 issue-thread observation retain their dates. These are official claims and scoped next checks, not independent client tests or a live unresolved-bug list.', '先匹配平台和准确症状。10月27日手机与主机 Q&A 核对于11月8日；11月5日发布的官方 v1.1.3880756.0 仍保留11月6日核验日期。10月30日 v1.1.3857679.0 和11月1日问题帖观察也保留各自日期。下文是官方说明与对应核对步骤，不是独立客户端实测或实时未解决 Bug 清单。', '先符合平台和準確症狀。10月27日手機與主機 Q&A 核對於11月8日；11月5日發布的官方 v1.1.3880756.0 仍保留11月6日核驗日期。10月30日 v1.1.3857679.0 和11月1日問題帖觀察也保留各自日期。下文是官方說明與對應核對步驟，不是獨立客戶端實測或即時未解決 Bug 清單。'),
     body: [
       ...getNovemberSupportBlocks(locale),
+      ...getNovemberFixBlocks(locale),
       { t: 'h', c: t('November 5: choose the symptom, not a generic workaround', '11月5日：按症状选择检查项', '11月5日：按症狀選擇檢查項') },
       { t: 'link', href: sourceById.get('aniimo-patch-1-1-3880756-2026-11-05')!.url, c: t('Official v1.1.3880756.0: November 5, checked November 6', '官方 v1.1.3880756.0：11月5日发布，11月6日核对', '官方 v1.1.3880756.0：11月5日發布，11月6日核對') },
       { t: 'table', head: [t('Symptom', '症状', '症狀'), t('What the patch fixes', '补丁修复范围', '補丁修正範圍'), t('Check after updating', '更新后核对', '更新後核對')], rows: [

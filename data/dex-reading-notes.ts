@@ -1,6 +1,23 @@
 // Curated interpretations of dated Basic Form evidence, not gameplay tests.
 type ReadingNote = { question: string; answer: string; section: 'skills' | 'traits' | 'evolution' | 'mobility' | 'habitats' };
 export const dexReadingNotes: Record<string, Record<string, ReadingNote[]>> = {
+  'wiki-1000-10007': {
+    en: [
+      { question: 'How do you reach Overcharge?', answer: 'Thunderstorm needs 20 stacks for a 10s Overcharge. Thunder Rush Claw grants 4 stacks on a hit; Thunder Rush Call grants 10. The combat skill Thundercloud Surge instead enables Basic Attack hits to grant 1 stack for 10s. Check current stacks and hit conditions; this is not a guaranteed rotation or time to fill.', section: 'traits' },
+      { question: 'Are Overcharged Basic Attacks free?', answer: 'ATK lists Cost 0, but the trait separately charges 3 Energy for qualifying thundercloud explosions at 0.5s intervals during Overcharge. Do not treat the zero-cost ATK as free enhanced damage or turn the interval into guaranteed DPS. Check remaining Energy before planning the window.', section: 'skills' },
+      { question: 'What changes when a skill is cast in Overcharge?', answer: 'Blink Strike adds 15s Lockdown on hit only when cast in Overcharge; Thunder Rush Claw is treated as Basic Attack Damage in that state. Check the state before the cast rather than ranking skills by Power alone. Neither condition establishes a universal best build.', section: 'skills' },
+    ],
+    'zh-Hans': [
+      { question: '如何进入 Overcharge？', answer: 'Thunderstorm 满20层后进入持续10秒的 Overcharge。Thunder Rush Claw 命中获得4层，Thunder Rush Call 获得10层；战斗技能 Thundercloud Surge 则在10秒内让命中的普攻获得1层。先看当前层数与命中条件，不能据此认定必定按固定循环或时间蓄满。', section: 'traits' },
+      { question: '强化普攻不消耗能量吗？', answer: 'ATK 标注 Cost 0，但特性另规定 Overcharge 期间符合条件的雷云爆炸按0.5秒间隔消耗3 Energy。不能把零消耗 ATK 等同于免费强化伤害，也不能把间隔换算成保证 DPS；安排强化窗口前先检查剩余能量。', section: 'skills' },
+      { question: '强化状态下施技有什么变化？', answer: 'Blink Strike 仅在 Overcharge 状态施放时，对命中目标附加15秒 Lockdown；Thunder Rush Claw 在该状态下按普攻伤害处理。比较技能前应核对施放时状态，不能只按 Power 排名，也不能据此推出通用最优配装。', section: 'skills' },
+    ],
+    'zh-Hant': [
+      { question: '如何進入 Overcharge？', answer: 'Thunderstorm 滿20層後進入持續10秒的 Overcharge。Thunder Rush Claw 命中獲得4層，Thunder Rush Call 獲得10層；戰鬥技能 Thundercloud Surge 則在10秒內讓命中的普攻獲得1層。先看目前層數與命中條件，不能據此認定必定按固定循環或時間蓄滿。', section: 'traits' },
+      { question: '強化普攻不消耗能量嗎？', answer: 'ATK 標註 Cost 0，但特性另規定 Overcharge 期間符合條件的雷雲爆炸按0.5秒間隔消耗3 Energy。不能把零消耗 ATK 等同於免費強化傷害，也不能把間隔換算成保證 DPS；安排強化視窗前先檢查剩餘能量。', section: 'skills' },
+      { question: '強化狀態下施技有什麼變化？', answer: 'Blink Strike 僅在 Overcharge 狀態施放時，對命中目標附加15秒 Lockdown；Thunder Rush Claw 在該狀態下按普攻傷害處理。比較技能前應核對施放時狀態，不能只按 Power 排名，也不能據此推出通用最優配裝。', section: 'skills' },
+    ],
+  },
   'wiki-300301-022': {
     en: [
       {question: 'Which allies benefit from the healing and domain?', answer: 'Queen’s Blessing names Wind-type allies and scales with 9% of the caster’s Max HP. Royal Pressure needs the switched-in Wind-type Aniimo to use a skill. Check your next ally’s element before planning this support; the text does not establish healing for every element.', section: 'skills'},

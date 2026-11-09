@@ -44,9 +44,35 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const stale of ['historical record only', 'Glameep 仅有8月历史记录', 'Glameep 僅有8月歷史紀錄']) assert(!eventHtml.includes(stale), 'Event copy must reflect refreshed Glameep');
 }
 const sitemap = readFileSync('out/sitemap.xml', 'utf8');
+const jaguaraun = details.find(d => d.number === 'wiki-1000-10007');
+assert.equal(jaguaraun.checkedAt, '2026-11-09');
+assert.equal(jaguaraun.attributes.reduce((sum, a) => sum + a.value, 0), 540);
+assert.equal(jaguaraun.evolutionPublished, false);
+assert.deepEqual(jaguaraun.habitats, []);
+assert.deepEqual(jaguaraun.mobility, []);
+assert.equal(jaguaraun.skills.length, 5);
+assert(jaguaraun.traits[0].description.includes('consume 3 Energy'));
+for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  const html = read(locale, 'dex/wiki-1000-10007');
+  assert(html.includes('https://wiki.aniimo.com/item/10007/basic-form/1000'));
+  assert(html.includes('2026-11-09'));
+  for (const stale of ['This Basic Form record was checked October 23', '本基础形态记录核验于2026年10月23日', '本基礎形態記錄核驗於2026年10月23日']) assert(!html.includes(stale));
+  assert(html.includes('id="reading-notes-title"'));
+  assert(html.includes('Fantasy Resonance'));
+  assert(read(locale, 'dex').includes(`/${locale}/dex/wiki-1000-10007/`));
+  assert(read(locale, 'guide/aniimo-prismana-event-tracker').includes(`/${locale}/dex/wiki-1000-10007/`));
+  const home = readFileSync(`out/${locale}/index.html`, 'utf8');
+  assert(home.includes(require(`../messages/${locale}.json`).home.latestUpdateTitle));
+  assert(home.includes(`/${locale}/dex/wiki-300301-022/`));
+  const issues = read(locale, 'guide/aniimo-launch-checklist-known-issues');
+  for (const term of ['Whirlbite', 'Marching Flask', 'Training Reset', '100275']) assert(issues.includes(term));
+  const egg = read(locale, 'guide/aniimo-egg-heist');
+  for (const term of ['Blink Chip', 'Lost Sanctum', 'Supreme Elixir', '100275']) assert(egg.includes(term));
+}
+assert([...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].some(([, block]) => block.includes('<loc>https://aniimodex.com/en/dex/wiki-1000-10007/</loc>') && block.includes('<lastmod>2026-11-09</lastmod>')));
 for (const [officialNumber, name] of targets) {
   const number = name === 'Glameep' ? '089' : `wiki-300301-${officialNumber}`;
   const block = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>https://aniimodex.com/en/dex/${number}/</loc>`))?.[1];
   assert(block?.includes('<lastmod>2026-11-08</lastmod>'));
 }
-console.log('Event Dex update passed: four identities, collision preservation, source dates, attributes, both skill groups, missing duration and localized event/directory links.');
+console.log('Event Dex update passed: five identities, collision preservation, dated evidence, missing data, skill groups, localized event links, Royalby navigation and November 2 symptom checks.');

@@ -9,6 +9,7 @@ export function getNovemberEventBlocks(locale: string): LaunchGuideBlock[] {
       ['Fantasy Resonance · Student I', t('Jaguaraun event quests include photos, skill use and catching. Complete all event quests to obtain its exclusive offering recipe.', 'Jaguaraun 活动任务包括摄影、使用技能和捕获；完成全部活动任务后获得其专属供奉配方。', 'Jaguaraun 活動任務包括攝影、使用技能和捕獲；完成全部活動任務後獲得其專屬供奉配方。'), t('Check Student I first, then follow the event quest targets. A recipe reward is not a guaranteed Aniimo or a known material list; the notice gives neither exact ingredients nor a complete target sequence.', '先确认 Student I，再按活动任务指定目标操作。配方奖励不等于直接必得伊莫；公告未给出准确材料或完整目标顺序。', '先確認 Student I，再按活動任務指定目標操作。配方獎勵不等於直接必得伊莫；公告未給出準確材料或完整目標順序。')],
     ] },
     { t: 'h', c: t('Use your server clock for both start and end', '开始与截止都按所在服务器时钟', '開始與截止都按所在伺服器時鐘') },
+    { t: 'link', href: '/dex/wiki-1000-10007', c: t('Jaguaraun: compare Overcharge, stack and Energy conditions before the event', 'Jaguaraun：活动前对照强化状态、叠层与能量条件', 'Jaguaraun：活動前對照強化狀態、疊層與能量條件') },
     { t: 'p', c: t('All dates below are in 2026. These are announced windows, not live availability. The same displayed time on different servers represents different instants. The selector further down controls Prismana rotation only.', '下表日期均为2026年，是公告窗口，不是实时开放监测。不同服务器同样的钟面时间对应不同时刻；下方服务器选择器仅控制 Prismana 轮换表。', '下表日期均為2026年，是公告窗口，不是即時開放監測。不同伺服器同樣的鐘面時間對應不同時刻；下方伺服器選擇器僅控制 Prismana 輪換表。') },
     { t: 'table', head: [t('Server / fixed offset', '服务器／固定偏移', '伺服器／固定偏移'), 'Aniimo Go!', 'Fantasy Resonance'], rows: [
       ['Aniimo-Apac · UTC+8', '2026-11-12 10:00 – 2026-12-10 07:59', '2026-11-20 04:00 – 2026-12-10 03:59'],
@@ -18,6 +19,29 @@ export function getNovemberEventBlocks(locale: string): LaunchGuideBlock[] {
     { t: 'p', c: t('For a UTC+8 clock, Aniimo Go starts November 12 at 10:00 / 18:00 / 22:00 for Apac / Europe / Americas. Fantasy Resonance starts November 20 at 04:00 / 12:00 / 16:00 respectively. The two events also end four hours apart within each server. Do not reuse the Prismana Photo Student II gate or its November 12 04:00 opening for racing.', '换算到北京时间，Aniimo Go 在11月12日分别为亚太10:00、欧洲18:00、美洲22:00开启；Fantasy Resonance 在11月20日分别为04:00、12:00、16:00开启。两项活动在同一服务器的截止时间也相差4小时。竞速不能套用 Prismana Photo 的 Student II 门槛或11月12日04:00开场时间。', '換算到北京時間，Aniimo Go 在11月12日分別為亞太10:00、歐洲18:00、美洲22:00開啟；Fantasy Resonance 在11月20日分別為04:00、12:00、16:00開啟。兩項活動在同一伺服器的截止時間也相差4小時。競速不能套用 Prismana Photo 的 Student II 門檻或11月12日04:00開場時間。') },
     { t: 'link', href: 'https://www.aniimo.com/newslist/detail/100244', c: t('October 27 announcement, checked November 8: event rules and dates', '10月27日公告，11月8日核对：活动规则与日期', '10月27日公告，11月8日核對：活動規則與日期') },
     { t: 'link', href: '/guide/aniimo-launch-checklist-known-issues', c: t('Controls or performance blocking participation? Match your platform and symptom', '操作或性能影响参与？按平台和症状排查', '操作或效能影響參與？按平台和症狀排查') },
+  ];
+}
+
+export function getNovemberFixBlocks(locale: string, eggOnly = false): LaunchGuideBlock[] {
+  const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
+  const eggRows = [
+    ['Giga-Egg', t('Disconnect protection incorrectly made it invulnerable.', '断线保护错误地使其无敌。', '斷線保護錯誤地使其無敵。'), t('Record disconnect/reconnect timing and damage behavior; this does not change victory rules.', '记录断线重连时机与受伤表现；该修复不等于修改胜负规则。', '記錄斷線重連時機與受傷表現；該修正不等於修改勝負規則。')],
+    ['Blink Chip', t('Failed to move the user.', '未能移动使用者。', '未能移動使用者。'), t('Record position and activation result; no universal teleport range is established.', '记录位置和使用结果；没有据此确认通用传送距离。', '記錄位置和使用結果；沒有據此確認通用傳送距離。')],
+    ['Lost Sanctum · Chaos', t('Egg Nests failed to spawn.', 'Egg Nests 未生成。', 'Egg Nests 未生成。'), t('Match both map and difficulty; this does not promise a nest at every location.', '同时匹配地图与难度；不代表每个位置都应有巢。', '同時符合地圖與難度；不代表每個位置都應有巢。')],
+    ['Supreme Elixir · PVP', t('Incorrect behavior after death and respawn.', '死亡复活后的表现错误。', '死亡復活後的表現錯誤。'), t('Record mode, item use and respawn sequence; do not apply this item fix to every ruleset.', '记录模式、物品使用和复活顺序；不能把该物品修复套到所有规则组。', '記錄模式、物品使用和復活順序；不能把該物品修正套到所有規則組。')],
+    [t('Extraction icon', '撤离图标', '撤離圖示'), t('Incorrect icon display.', '图标显示错误。', '圖示顯示錯誤。'), t('Compare the icon with the actual extraction result; an icon fix is not a new reward or extraction rule.', '对照图标与实际撤离结果；显示修复不是新增奖励或撤离规则。', '對照圖示與實際撤離結果；顯示修正不是新增獎勵或撤離規則。')],
+  ];
+  return [
+    { t: 'h', c: t('November 2 fixes: match the exact symptom', '11月2日修复：按具体症状匹配', '11月2日修正：按具體症狀符合') },
+    { t: 'p', c: t('Checked November 9 against the dated November 2 entries. These are announced fixes, not current-client gameplay tests. Update through the official launcher/store, retry the same situation, and keep client version, mode, location and trigger sequence if it persists.', '11月9日核对公告中11月2日的条目。以下是官方宣布的修复，不是现行客户端实机测试。通过官方启动器或商店更新后复测同一场景；若仍复现，保留客户端版本、模式、位置和触发顺序。', '11月9日核對公告中11月2日的條目。以下是官方宣布的修正，不是現行客戶端實機測試。透過官方啟動器或商店更新後複測同一場景；若仍重現，保留客戶端版本、模式、位置和觸發順序。') },
+    { t: 'table', head: [t('Affected case', '适用场景', '適用情境'), t('Official fix scope', '官方修复范围', '官方修正範圍'), t('Next check', '下一步核对', '下一步核對')], rows: eggOnly ? eggRows : [
+      ['Whirlbite · Prismana Topic', t('The “Collect a Prismana Form Aniimo” Topic could not complete.', '“Collect a Prismana Form Aniimo” Topic 无法完成。', '「Collect a Prismana Form Aniimo」Topic 無法完成。'), t('Retry the named collection objective; capture success and Topic completion are separate observations.', '复测具名收集目标；捕获成功与 Topic 完成应分别记录。', '複測具名收集目標；捕獲成功與 Topic 完成應分別記錄。')],
+      ['High-Speed Cut / Marching Flask', t('High-Speed Cut incorrectly changed Marching Flask’s required trigger distance.', 'High-Speed Cut 错误改变 Marching Flask 所需触发距离。', 'High-Speed Cut 錯誤改變 Marching Flask 所需觸發距離。'), t('Record the held item and trigger distance. Whirlbite Training Reset was promised after a future weekly update; delivery is not confirmed by this note.', '记录携带物与触发距离。Whirlbite Training Reset 原文承诺在未来周更后提供，该条不能证明现已开放。', '記錄攜帶物與觸發距離。Whirlbite Training Reset 原文承諾在未來週更後提供，該條不能證明現已開放。')],
+      ['Prismana Whirlbite', t('Nearby distribution adjusted to reduce capture interference.', '调整周边分布以减少捕获干扰。', '調整周邊分布以減少捕獲干擾。'), t('Check nearby interference; no exact route, spawn coordinate or catch-rate increase is published.', '检查周边干扰；未公布精确路线、坐标或捕获率提高。', '檢查周邊干擾；未公布精確路線、座標或捕獲率提高。')],
+      ['Omega Jeburst', t('Interaction range too small in “The Challenge of Fighting Upstream!”', '“The Challenge of Fighting Upstream!” 中互动范围过小。', '「The Challenge of Fighting Upstream!」中互動範圍過小。'), t('Match this challenge and interaction step before treating another failed interaction as the same issue.', '先匹配该挑战与互动步骤，再判断是否属于同一问题。', '先符合該挑戰與互動步驟，再判斷是否屬於同一問題。')],
+    ] },
+    { t: 'link', href: 'https://www.aniimo.com/newslist/detail/100275', c: t('Official issue log: read the November 2 entries', '官方问题日志：查看11月2日条目', '官方問題日誌：查看11月2日條目') },
+    { t: 'link', href: eggOnly ? '/guide/aniimo-launch-checklist-known-issues' : '/guide/aniimo-egg-heist', c: t(eggOnly ? 'Other progression and Whirlbite issues' : 'Egg Heist: five fixes and mode-specific checks', eggOnly ? '其他进度与 Whirlbite 问题' : 'Egg Heist：五项修复与分模式排查', eggOnly ? '其他進度與 Whirlbite 問題' : 'Egg Heist：五項修正與分模式排查') },
   ];
 }
 

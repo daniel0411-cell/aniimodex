@@ -445,12 +445,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {th('latestUpdateDescription')}
           </p>
         </div>
-        <Link
-          href="/guide/aniimo-prismana-event-tracker"
-          className="mt-4 inline-flex shrink-0 text-sm font-semibold text-primary-light sm:mt-0"
-        >
-          {th('viewUpdate')} →
-        </Link>
+        <div className="mt-4 flex shrink-0 flex-col gap-3 sm:mt-0">
+          <Link href="/dex/wiki-300301-022" className="text-sm font-semibold text-primary-light">{locale === 'en' ? 'Royalby skills and habitat' : locale === 'zh-Hant' ? 'Royalby 技能與棲息地' : 'Royalby 技能与栖息地'} →</Link>
+          <Link
+            href="/guide/aniimo-prismana-event-tracker"
+            className="inline-flex text-sm font-semibold text-primary-light"
+          >
+            {th('viewUpdate')} →
+          </Link>
+        </div>
       </section>
       <section>
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">

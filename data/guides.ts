@@ -225,7 +225,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    updatedAt: '2026-11-06',
+    updatedAt: '2026-11-09',
     date: '2026-10-16',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -236,6 +236,7 @@ export const guidePosts: GuidePost[] = [
       'getting-started',
     ],
     sourceIds: [
+      'aniimo-november-2-fixes-2026-11-09',
       'aniimo-steam-dev-feedback-2026-10-13',
       'aniimo-patch-1-1-3880756-2026-11-05',
       'aniimo-s1-part-two-2026-10-27',
@@ -282,7 +283,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-08',
+    updatedAt: '2026-11-09',
     date: '2026-10-13',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -312,12 +313,12 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'official-aniimo-dex-status',
-    updatedAt: '2026-11-08',
+    updatedAt: '2026-11-09',
     date: '2026-08-30',
     readMinutes: 5,
     relatedToolHrefs: ['/dex', '/tools/twine', '/tools/catch'],
     relatedSlugs: ['what-is-aniimo', 'aniimo-twine-explained', 'aniimo-prismana-event-tracker'],
-    sourceIds: ['aniimo-official-wiki-basic-2026-10-23', 'aniimo-official-wiki-royalby-2026-11-08', 'aniimo-official-wiki-pouchwisp-2026-11-08', 'aniimo-official-wiki-jeburst-2026-11-08', 'aniimo-official-wiki-glameep-2026-11-08', 'aniimo-official-catch-disclosure-2026-10-27', 'aniimo-s1-part-two-2026-10-27'],
+    sourceIds: ['aniimo-official-wiki-jaguaraun-2026-11-09', 'aniimo-official-wiki-basic-2026-10-23', 'aniimo-official-wiki-royalby-2026-11-08', 'aniimo-official-wiki-pouchwisp-2026-11-08', 'aniimo-official-wiki-jeburst-2026-11-08', 'aniimo-official-wiki-glameep-2026-11-08', 'aniimo-official-catch-disclosure-2026-10-27', 'aniimo-s1-part-two-2026-10-27'],
   },
   {
     slug: 'aniimo-launch-time-preload',
@@ -429,7 +430,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    updatedAt: '2026-11-08',
+    updatedAt: '2026-11-09',
     date: '2026-10-16',
     readMinutes: 11,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -442,6 +443,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-language-controller-support',
     ],
     sourceIds: [
+      'aniimo-november-2-fixes-2026-11-09',
       'aniimo-mobile-qa-2026-11-08',
       'aniimo-console-qa-2026-11-08',
       'aniimo-patch-1-1-3880756-2026-11-05',

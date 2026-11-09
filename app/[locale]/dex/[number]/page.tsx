@@ -269,7 +269,8 @@ export default async function DexDetailPage({ params }: PageProps) {
 
       {readingNotes && <section aria-labelledby="reading-notes-title" className="border-y border-ink-border py-5">
         <h2 id="reading-notes-title" className="text-xl font-bold text-text-primary">{t('readingNotesTitle')}</h2>
-        <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23', editorialDate: detail?.checkedAt === '2026-11-08' ? '2026-11-08' : '2026-11-02' })}</p>
+        <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23', editorialDate: detail?.checkedAt?.startsWith('2026-11-') ? (detail.checkedAt ?? '2026-11-02') : '2026-11-02' })}</p>
+        {detail?.checkedAt === '2026-11-09' && <Link href="/guide/aniimo-prismana-event-tracker" className="mt-3 inline-flex text-sm font-semibold text-primary-light underline">{locale === 'en' ? 'Fantasy Resonance: dates and recipe reward' : locale === 'zh-Hant' ? 'Fantasy Resonance：日期與配方獎勵' : 'Fantasy Resonance：日期与配方奖励'}</Link>}
         {detail?.checkedAt === '2026-11-08' && <Link href="/guide/aniimo-prismana-event-tracker#prismana-schedule" className="mt-3 inline-flex text-sm font-semibold text-primary-light underline">{locale === 'en' ? 'Prismana event: dates and areas' : locale === 'zh-Hant' ? 'Prismana 活動：日期與區域' : 'Prismana 活动：日期与区域'}</Link>}
         <div className="mt-4 space-y-5">{readingNotes.map((note) => <div key={note.question}>
           <h3 className="font-semibold text-text-primary">{note.question}</h3>
