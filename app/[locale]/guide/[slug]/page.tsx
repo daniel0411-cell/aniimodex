@@ -22,6 +22,7 @@ import SnapshotNotice from '@/components/dex/SnapshotNotice';
 import PrismanaSchedule from '@/components/guide/PrismanaSchedule';
 import SparklingDecision from '@/components/guide/SparklingDecision';
 import SparklingIllustrations from '@/components/guide/SparklingIllustrations';
+import GuideAdPreview from '@/components/guide/GuideAdPreview';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const SUPPORT_GUIDE_SLUGS = new Set([
@@ -460,6 +461,7 @@ export default async function GuidePostPage({
             <Link href="/contact">{locale === 'en' ? 'Contact Editorial' : locale === 'zh-Hant' ? '聯絡編輯部' : '联系编辑部'} →</Link>
           </div>
         </section>
+        <GuideAdPreview locale={locale} slug={post.slug} />
       </article>
       {outline.length > 0 && (
         <aside className="lg:sticky lg:top-20">

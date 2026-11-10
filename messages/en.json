@@ -183,13 +183,14 @@
     "privacy": {
       "title": "Privacy Policy",
       "intro": "This policy explains what AniimoDex may collect, why it is used, how advertising and cookies may work, and the choices available to visitors.",
-      "updated": "Effective and last updated: November 6, 2026",
+      "updated": "Effective and last updated: November 10, 2026",
+      "activeStatus": "Manual Google AdSense display advertising is enabled on three selected guides, with one placement at the end of each article. The AdSense tag also loads Google's regional Privacy & messaging service. Google receives network information when this tag loads, even before an ad unit is initialized. The site waits for known regional signals before initializing units; unknown signals, refusal of required consent, a recognized US opt-out or Global Privacy Control prevent unit initialization. Cloudflare Web Analytics remains enabled separately.",
       "sections": [
         {
           "heading": "Current advertising and measurement status",
           "paragraphs": [
             "Ad serving is paused. This version does not load the Google AdSense advertising script, initialize advertising units or use advertising analytics tags. The hosting platform separately enables Cloudflare Web Analytics for aggregate traffic and performance measurement, as described below. Approval of an AdSense account does not itself enable advertising on this site. We have not activated an advertising consent dialog in this version because advertising is paused; there are no site advertising preferences to accept or withdraw at present.",
-            "The sections below distinguish current site operation from the controls required before any future advertising launch. Necessary delivery and security processing still occurs when you visit."
+            "The status above identifies whether advertising is enabled in this release. The following advertising provisions apply when it is enabled. Necessary delivery, security and hosting analytics processing still occurs when you visit."
           ]
         },
         {
@@ -202,8 +203,8 @@
         {
           "heading": "Cookies, local storage and advertising",
           "paragraphs": [
-            "Necessary functions such as remembering a language choice or protecting the site may use cookies or similar storage. The current version does not initialize advertising storage. The hosting platform injects the Cloudflare Web Analytics beacon to measure visits and page load performance using browser performance information. Cloudflare states that this service does not track individual end users across its customers' Internet properties. This disclosure does not treat analytics as automatically exempt from applicable privacy requirements. Blocking necessary cookies in your browser may affect preferences or security checks.",
-            "If advertising is enabled in a later version, third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this website or other websites. Google's advertising cookies enable Google and its partners to serve ads based on visits to this site and other sites on the Internet. The privacy policy and consent controls must be updated for the actual vendors and purposes before that launch."
+            "Necessary functions such as remembering a language choice or protecting the site may use cookies or similar storage. The hosting platform injects the Cloudflare Web Analytics beacon to measure visits and page load performance using browser performance information. Cloudflare states that this service does not track individual end users across its customers' Internet properties. This disclosure does not treat analytics as automatically exempt from applicable privacy requirements. Blocking necessary cookies in your browser may affect preferences or security checks.",
+            "When advertising is enabled, third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this website or other websites. Google's advertising cookies enable Google and its partners to serve ads based on visits to this site and other sites on the Internet, subject to applicable choices. Google's consent message identifies applicable purposes and vendors and stores your choices."
           ],
           "items": [
             "You can also restrict cookies through your browser settings"
@@ -218,21 +219,21 @@
         {
           "heading": "Consent in the EEA, United Kingdom and Switzerland",
           "paragraphs": [
-            "Advertising is currently paused for visitors in every region. Before serving personalized Google ads to visitors in the European Economic Area (the EU, Iceland, Liechtenstein and Norway), the United Kingdom or Switzerland, we will use a Google-certified consent management platform integrated with the IAB Transparency and Consent Framework. It must provide choices to consent, refuse consent and manage applicable purposes and vendors, with a way to revisit or withdraw consent.",
+            "When advertising is enabled, Google's Privacy & messaging CMP provides the regional consent message for the European Economic Area (the EU, Iceland, Liechtenstein and Norway), the United Kingdom and Switzerland, using the IAB Transparency and Consent Framework. You can consent, refuse or manage purposes and vendors. Use Privacy choices to reopen the applicable European message. If the service is unavailable, this link opens this policy and the contact options; it does not record consent.",
             "Where consent is required, optional advertising storage and processing must not begin without it. Continuing to browse is not consent. Non-personalized advertising is not automatically exempt from cookie consent requirements. An advertising request must stay blocked if the required choice or valid consent signal is unavailable."
           ]
         },
         {
           "heading": "United States and other regional choices",
           "paragraphs": [
-            "US state privacy rights and obligations depend on the applicable law and the operator's circumstances. Before a future advertising launch, we will assess applicable requirements for notices, opt-outs from sale, sharing or targeted advertising, and recognized browser opt-out signals such as Global Privacy Control. Where required, those choices must be connected to the advertising providers' data processing controls. A European consent dialog alone does not implement all regional requirements.",
-            "In the current version we do not enable advertising data collection or sell or share personal information for targeted advertising. Necessary hosting, security and direct image delivery still process request information. Visitors in other regions can use the contact below to ask about applicable privacy rights."
+            "US state privacy rights and obligations depend on the applicable law and the operator's circumstances. When advertising is enabled, eligible US visitors can use Google's Do Not Sell or Share link to opt out of applicable advertising processing. The site retains Google's own regional entrypoint rather than replacing it with a European consent control. After a US choice changes, this document stops initializing units; reload to use the saved choice.",
+            "When the browser exposes Global Privacy Control as enabled, the site does not load the advertising tag or initialize advertising units. A recognized US advertising opt-out also prevents unit initialization. These controls do not remove necessary hosting, security, direct image delivery or Cloudflare Web Analytics processing. Contact us below about other applicable privacy rights."
           ]
         },
         {
           "heading": "How information is shared",
           "paragraphs": [
-            "Current recipients include Cloudflare for hosting, security and Web Analytics, the publisher's image delivery provider when an external image is requested, and email services when you contact us. They process information under their own terms and applicable processing obligations. Advertising and advertising consent providers are not active integrations in this version. We may disclose information when legally required or necessary to protect users, the site or the public."
+            "Recipients include Cloudflare for hosting, security and Web Analytics, the publisher's image delivery provider when an external image is requested, and email services when you contact us. When advertising is enabled, Google and applicable partners identified in its consent message also receive advertising and consent information under applicable choices. Providers process information under their own terms and applicable obligations. We may disclose information when legally required or necessary to protect users, the site or the public."
           ]
         },
         {
@@ -250,7 +251,7 @@
           "items": [
             "Do not send game credentials, identity documents or payment information unless specifically and lawfully requested",
             "Use browser settings to inspect, block or delete site cookies; this may reset preferences or affect security checks",
-            "Advertising is paused, so there is no active advertising consent dialog or site advertising preference to change. A future launch must provide a working way to revisit the required choices",
+            "When advertising is enabled, use Privacy choices for the applicable European consent message or Google's regional Do Not Sell or Share link for US advertising choices. With advertising paused or the service unavailable, contact us using the link below",
             "Changing Google account ad settings does not replace consent choices on individual websites"
           ],
           "links": [

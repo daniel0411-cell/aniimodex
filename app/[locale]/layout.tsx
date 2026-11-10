@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import type { ReactNode } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Advertising from '@/components/Advertising';
 import { locales, routing } from '@/i18n/routing';
 import '../globals.css';
 
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="flex min-h-screen flex-col bg-ink text-text-primary">
+        <Advertising />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 sm:py-8">
