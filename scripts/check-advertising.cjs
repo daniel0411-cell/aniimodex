@@ -44,17 +44,19 @@ function scenario({ hostname = 'aniimodex.com', gpc = false } = {}) {
   const api = window.googlefc;
   return {
     scripts, first, place, window,
+    loadAds() { scripts.find(script => script.src.includes('/adsbygoogle.js'))?.onload(); },
     requests: () => requests, revocations: () => revocations,
     rerun: () => vm.runInContext(source, context),
     ready() { api.callbackQueue.find(item => item.CONSENT_API_READY)?.CONSENT_API_READY(); },
     us(status = 1) { api.usstatesoptout.getInitialUsStatesOptOutStatus = () => status; api.callbackQueue.find(item => item.INITIAL_US_STATES_OPT_OUT_DATA_READY)?.INITIAL_US_STATES_OPT_OUT_DATA_READY(); },
+    dataReady() { api.callbackQueue.find(item => item.CONSENT_DATA_READY)?.CONSENT_DATA_READY(); },
     tcf(data, success = true) { tcf(data, success); },
     gpp(event, success = true) { gpp(event, success); },
     mutate() { mutation([{ type: 'childList' }]); },
     click() {
       const event = { target: { closest() { return {}; } }, button: 0, preventDefault() { this.defaultPrevented = true; } };
       click(event);
-      for (const item of api.callbackQueue.slice(2)) item.CONSENT_API_READY?.();
+      for (const item of api.callbackQueue.slice(3)) item.CONSENT_API_READY?.();
       return event.defaultPrevented;
     },
   };
@@ -66,27 +68,51 @@ for (const options of [{ hostname: 'localhost' }, { hostname: 'preview.pages.dev
 }
 let s = scenario();
 assert.equal(s.scripts.length, 1); assert.equal(s.requests(), 0);
+assert(s.scripts[0].src.includes('fundingchoicesmessages.google.com'));
+assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
 s.rerun(); assert.equal(s.scripts.length, 1);
 s.ready(); s.us(); assert.equal(s.requests(), 0);
 s.tcf({ ...consent, purpose: { consents: {} } }); assert.equal(s.requests(), 0);
 s.tcf(consent, false); assert.equal(s.requests(), 0);
 s.tcf({ ...consent, eventStatus: 'cmpuishown' }); assert.equal(s.requests(), 0);
-s.tcf(consent); assert.equal(s.requests(), 1); assert.equal(s.first.hidden, false);
+s.tcf(consent); assert.equal(s.requests(), 0);
+s.dataReady(); assert.equal(s.requests(), 0); assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
+assert.equal(s.scripts.length, 2); s.loadAds();
+assert.equal(s.requests(), 1); assert.equal(s.first.hidden, false); assert.equal(s.window.adsbygoogle.pauseAdRequests, 0);
 s.mutate(); assert.equal(s.requests(), 1);
 const next = s.place(); s.mutate(); assert.equal(s.requests(), 2);
 next.unit.dataset.adStatus = 'unfilled'; s.mutate(); assert.equal(next.hidden, true);
 assert.equal(s.click(), true); assert.equal(s.revocations(), 1); assert.equal(s.first.unit, null);
+assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
 s.tcf({ ...consent, purpose: { consents: {} } }); s.place(); s.mutate(); assert.equal(s.requests(), 2);
 
 for (const status of [undefined, 0, 3]) {
-  s = scenario(); s.ready(); s.us(status === undefined ? 0 : status); s.tcf(consent); assert.equal(s.requests(), 0);
+  s = scenario(); s.ready(); s.us(status === undefined ? 0 : status); s.dataReady(); s.tcf({cmpStatus:'loaded',gdprApplies:false}); assert.equal(s.requests(), 0);
 }
-s = scenario(); s.ready(); s.us(2); s.tcf({ cmpStatus: 'loaded', gdprApplies: false }); assert.equal(s.requests(), 1);
+s = scenario(); s.ready(); s.us(2); s.dataReady(); s.tcf({ cmpStatus: 'loaded', gdprApplies: false }); assert.equal(s.requests(), 0);
+s.gpp({eventName:'listenerRegistered',pingData:{signalStatus:'not ready'}});
+s.gpp({eventName:'sectionChange',pingData:{signalStatus:'not ready'}}); assert.equal(s.requests(),0);
+s.gpp({eventName:'signalStatus',pingData:{signalStatus:'ready'}}); s.loadAds(); assert.equal(s.requests(),1);
 s.gpp({ eventName: 'sectionChange' }); s.place(); s.mutate(); assert.equal(s.requests(), 1); assert.equal(s.first.unit, null);
-s = scenario(); s.ready(); s.us(); s.scripts[0].onerror(); s.tcf(consent); assert.equal(s.requests(), 0);
-s = scenario(); s.window.__tcfapi = undefined; s.ready(); s.us(); assert.equal(s.requests(), 0);
-s = scenario(); s.window.__gpp = undefined; s.ready(); s.us(2); s.tcf(consent); assert.equal(s.requests(), 0);
-s = scenario(); s.ready(); s.us(); s.tcf({ cmpStatus: 'error', gdprApplies: false }); assert.equal(s.requests(), 0);
+s = scenario(); s.ready(); s.us(); s.dataReady(); s.scripts[0].onerror(); s.tcf(consent); assert.equal(s.requests(), 0);
+s = scenario(); s.window.__tcfapi = undefined; s.ready(); s.us(); s.dataReady(); assert.equal(s.requests(), 0);
+s = scenario(); s.window.__gpp = undefined; s.ready(); s.us(2); s.dataReady(); s.tcf({cmpStatus:'loaded',gdprApplies:false}); assert.equal(s.requests(), 0);
+s = scenario(); s.ready(); s.us(); s.dataReady(); s.tcf({ cmpStatus: 'error', gdprApplies: false }); assert.equal(s.requests(), 0);
+// Real EU messages do not necessarily invoke the US initial callback.
+s = scenario(); s.ready(); s.tcf(consent); s.dataReady(); s.loadAds(); assert.equal(s.requests(),1);
+// Even mixed/debug regional signals must respect an explicit US opt-out.
+s = scenario(); s.ready(); s.us(3); s.tcf(consent); s.dataReady(); assert.equal(s.requests(),0);
+// A provisional false GDPR flag cannot release an ad before CMP data is ready.
+s = scenario(); s.ready(); s.us(); s.tcf({cmpStatus:'loaded',gdprApplies:false}); assert.equal(s.requests(),0);
+s.tcf({...consent,eventStatus:'cmpuishown'}); s.dataReady(); assert.equal(s.requests(),0);
+// Explicitly non-applicable regions need neither consent nor a US GPP signal.
+s = scenario(); s.ready(); s.us(); s.tcf({cmpStatus:'loaded',gdprApplies:false}); s.dataReady(); s.loadAds(); assert.equal(s.requests(),1);
+// Consent may be withdrawn while the advertising library is in flight.
+s = scenario(); s.ready(); s.tcf(consent); s.dataReady(); s.click(); s.loadAds();
+assert.equal(s.requests(),0); assert.equal(s.window.adsbygoogle.pauseAdRequests,1);
+// An advertising-loader error must keep the global request pause engaged.
+s = scenario(); s.ready(); s.tcf(consent); s.dataReady();
+s.scripts[1].onerror(); s.loadAds(); assert.equal(s.requests(),0); assert.equal(s.window.adsbygoogle.pauseAdRequests,1);
 console.log('Advertising checks passed: off-host/GPC, unknown/refused/allowed, duplicate bootstrap, SPA, unfilled, revocation, US updates, missing APIs and loader failure. No network used.');
 
 if (process.argv.includes('--export-enabled')) {

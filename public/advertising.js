@@ -11,9 +11,18 @@
   let euAllowed = false;
   let usAllowed = false;
   let euApplies = false;
+  let consentDataReady = false;
+  let usApplies = false;
+  let usOptedOut = false;
+  let usReady = false;
+  let usWasReady = false;
   let failed = false;
   let usChanged = false;
   let refreshing = false;
+  let adLoaderStarted = false;
+  let adLoaderReady = false;
+  // Google CMP can itself insert an AdSense tag. Pause that tag too.
+  (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   const submitted = new WeakSet();
   const googlefc = window.googlefc = window.googlefc || {};
   googlefc.callbackQueue = googlefc.callbackQueue || [];
@@ -22,7 +31,9 @@
     if (refreshing) return;
     refreshing = true;
     try {
-      const allowed = euAllowed && usAllowed && !failed && !usChanged && navigator.globalPrivacyControl !== true;
+      const regionalAllowed = (euApplies || usAllowed) && !usOptedOut && (!usApplies || (usReady && !usChanged));
+      const allowed = consentDataReady && euAllowed && regionalAllowed && !failed && navigator.globalPrivacyControl !== true;
+      (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = allowed && adLoaderReady ? 0 : 1;
       document.querySelectorAll('[data-guide-ad]').forEach((placement) => {
         const unit = placement.querySelector('ins.adsbygoogle');
         if (!unit) { placement.hidden = true; return; }
@@ -34,6 +45,17 @@
           return;
         }
         if (unit.dataset.adStatus === 'unfilled') { placement.hidden = true; return; }
+        if (!adLoaderStarted) {
+          adLoaderStarted = true;
+          const adLoader = document.createElement('script');
+          adLoader.async = true;
+          adLoader.crossOrigin = 'anonymous';
+          adLoader.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2321309842883439';
+          adLoader.onload = () => { adLoaderReady = true; refresh(); };
+          adLoader.onerror = () => { failed = true; refresh(); };
+          document.head.appendChild(adLoader);
+        }
+        if (!adLoaderReady) { placement.hidden = true; return; }
         placement.hidden = false;
         if (submitted.has(unit) || unit.getBoundingClientRect().width === 0) return;
         submitted.add(unit);
@@ -67,12 +89,15 @@
     }
     if (typeof window.__gpp === 'function') {
       window.__gpp('addEventListener', (event, success) => {
-        // Re-read choices on a fresh document after any US choice change. Do not
-        // reuse Google's explicitly initial-only opt-out result for later ads.
-        if (success !== true || event?.eventName === 'sectionChange' || event?.pingData?.signalStatus === 'not ready') {
+        // Initial sectionChange/not-ready events are normal CMP startup. Only
+        // invalidate the initial opt-out result after signals were first ready.
+        const ready = success === true && event?.pingData?.signalStatus === 'ready';
+        if (usWasReady && (success !== true || event?.eventName === 'sectionChange' || !ready)) {
           usChanged = true;
-          refresh();
         }
+        usReady = ready;
+        if (ready) usWasReady = true;
+        refresh();
       });
     }
   } });
@@ -80,9 +105,17 @@
     const api = googlefc.usstatesoptout;
     const status = api?.getInitialUsStatesOptOutStatus?.();
     const values = api?.InitialUsStatesOptOutStatusEnum;
+    usApplies = !!values && (status === values.NOT_OPTED_OUT || status === values.OPTED_OUT);
+    usOptedOut = !!values && status === values.OPTED_OUT;
     usAllowed = !!values && (status === values.DOES_NOT_APPLY || (
       status === values.NOT_OPTED_OUT && typeof window.__gpp === 'function'
     ));
+    refresh();
+  } });
+  // API_READY can initially report gdprApplies=false before the EU message
+  // opens. DATA_READY prevents that provisional result from releasing a unit.
+  googlefc.callbackQueue.push({ CONSENT_DATA_READY: () => {
+    consentDataReady = true;
     refresh();
   } });
 
@@ -106,8 +139,7 @@
   window.addEventListener('pageshow', refresh);
   const loader = document.createElement('script');
   loader.async = true;
-  loader.crossOrigin = 'anonymous';
-  loader.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2321309842883439';
+  loader.src = 'https://fundingchoicesmessages.google.com/i/pub-2321309842883439?ers=1';
   loader.onerror = () => { failed = true; refresh(); };
   document.head.appendChild(loader);
 })();
