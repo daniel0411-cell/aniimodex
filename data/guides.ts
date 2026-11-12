@@ -251,7 +251,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-rv-homeland-guide',
-    updatedAt: '2026-11-06',
+    updatedAt: '2026-11-12',
     date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
@@ -261,6 +261,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-progress-account-safety',
     ],
     sourceIds: [
+      'aniimo-november-12-update-2026-11-12',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-update-1-1-2026-09-23',
       'aniimo-s1-part-two-2026-10-27',

@@ -3,7 +3,7 @@ import { mobilityIndex } from '@/lib/mobility';
 import { getAllAniimos } from '@/lib/aniimo';
 import { ELEMENTS } from '@/lib/aniimo-ui';
 import { sourceById } from '@/data/sources';
-import { getNovemberEventBlocks, getNovemberSupportBlocks, getNovemberFixBlocks, getNovember12Blocks } from '@/data/november-guide-updates';
+import { getNovemberEventBlocks, getNovemberSupportBlocks, getNovemberFixBlocks, getNovember12Blocks, getNovemberHomeBlocks } from '@/data/november-guide-updates';
 
 export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | undefined {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
@@ -149,10 +149,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug === 'aniimo-rv-homeland-guide') return {
     title: t('Aniimo Home: Magical Wonder Night Entry & Season Changes', '伊莫家园：Magical Wonder Night 入口与换季清单', '伊莫家園：Magical Wonder Night 入口與換季清單'),
-    subtitle: t('Check RV level, the tutorial quest, old-currency conversion and blueprint changes before planting or exchanging.', '种植或兑换前，核对房车等级、教程任务、旧货币转换与蓝图变化。', '種植或兌換前，核對房車等級、教學任務、舊貨幣轉換與藍圖變化。'),
+    subtitle: t('Check November 12 RV fixes, Affinity limits and season entry before rebuilding, repeating activities or spending.', '重建、重复活动或消耗前，核对11月12日房车修复、Affinity 上限与赛季入口。', '重建、重複活動或消耗前，核對11月12日房車修正、Affinity 上限與賽季入口。'),
     tag: t('Home season', '家园换季', '家園換季'),
     lead: t('The October 29 update replaces Harvest Moon Festival with Magical Wonder Night. Start by checking RV level 10 and Act Seven: Festivals of Astra. Do not plan current purchases around the old October 20–21 Harvest Gathering schedule or assume old seeds still plant normally.', '10月29日更新将丰收季切换为 Magical Wonder Night。先核对房车10级与 Act Seven: Festivals of Astra；当前兑换不应沿用10月20–21日丰收聚会排期，也不能假设旧种子仍可正常种植。', '10月29日更新將豐收季切換為 Magical Wonder Night。先核對房車10級與 Act Seven: Festivals of Astra；目前兌換不應沿用10月20–21日豐收聚會排期，也不能假設舊種子仍可正常種植。'),
     body: [
+      ...getNovemberHomeBlocks(locale),
       { t: 'h', c: t('Start here: entry missing, activity locked or old items gone?', '先定位：没有入口、活动锁定，还是旧物品不见了？', '先定位：沒有入口、活動鎖定，還是舊物品不見了？') },
       { t: 'link', href: sourceById.get('aniimo-s1-part-two-2026-10-27')!.url, c: t('Checklist updated November 3: October 29 Home season announcement', '11月3日更新检查流程：查看10月29日家园换季公告', '11月3日更新檢查流程：查看10月29日家園換季公告') },
       { t: 'p', c: t('Follow the row matching your symptom. This is an editorial checklist derived from the announced conditions, not a tested sequence of client buttons. A missing season entry and a later-stage lock need different checks.', '按当前症状选择一行。本表依据公告条件整理，不是已实测的客户端按钮操作顺序；赛季没有入口与后续阶段未开放，要检查的条件不同。', '按目前症狀選擇一列。本表依據公告條件整理，不是已實測的客戶端按鈕操作順序；賽季沒有入口與後續階段未開放，要檢查的條件不同。') },
@@ -170,7 +171,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
         ['Waxing Moondew', t('Converted to Wonder Sugar Crystal.', '转换为 Wonder Sugar Crystal。', '轉換為 Wonder Sugar Crystal。'), t('Compare the new exchange material, not the old crop currency.', '核对新兑换材料，不沿用旧作物货币。', '核對新兌換材料，不沿用舊作物貨幣。')],
         ['Harvest Moon Set', t('Removed from the season shop; a future return is announced without a date.', '从赛季商店移除；公告会在未来回归，未给日期。', '從賽季商店移除；公告會在未來回歸，未給日期。'), t('Do not describe it as permanently exclusive or currently purchasable.', '不能称为永久绝版或当前可买。', '不能稱為永久絕版或目前可買。')],
         ['Magic Pumpkin / Memory Lanternfruit', t('New magical crops with mutated forms for the Index.', '新魔法作物，可发现变异形态点亮索引。', '新魔法作物，可發現變異形態點亮索引。'), t('Check current crop tasks; old mutation bonuses are not automatically carried over.', '对照当前作物任务，不能默认旧变异增益延续。', '對照目前作物任務，不能預設舊變異增益延續。')],
-        ['Wonder Dailies / Nighttime Gathering / Pumpkin God’s Thank-You Gift', t('Open gradually with season stages.', '按赛季阶段逐步开放。', '按賽季階段逐步開放。'), t('Read the stage lock and timer before treating an unavailable entry as a bug.', '先看阶段锁与倒计时，再判断无入口是否故障。', '先看階段鎖與倒數計時，再判斷無入口是否故障。')],
+        ['Wonder Dailies / Nighttime Gathering / Pumpkin God’s Thank-You Gift', t('Originally staged; the November 12 notice moves the second and third phase opening to after the version update.', '原按阶段开放；11月12日公告将第二、三阶段开放调整为版本更新后。', '原按階段開放；11月12日公告將第二、三階段開放調整為版本更新後。'), t('Use the updated panel and entry requirements rather than the original stage countdown when checking a lock.', '排查锁定时，对照更新后的面板与参与条件，不再只依赖原阶段倒计时。', '排查鎖定時，對照更新後的面板與參與條件，不再只依賴原階段倒數計時。')],
       ] },
       { t: 'h', c: t('3. Separate building changes from season requirements', '3. 区分建造更新与赛季门槛', '3. 區分建造更新與賽季門檻') },
       { t: 'p', c: t('November 5 v1.1.3880756.0 now permits level 1 facilities to use Season Recipes and lists fixes for some Home furniture displays. Facility level is not RV level: this change does not replace RV level 10 plus Act Seven season entry. Before upgrading a facility solely for a recipe, check the current recipe, required inputs and displayed output; the patch publishes no production rate or optimal layout. A display fix does not prove missing furniture was reissued.', '11月5日 v1.1.3880756.0 已允许1级设施使用 Season Recipes，并列出部分家园家具显示修复。设施等级不是房车等级，这项调整没有替代房车10级加 Act Seven 的赛季入口条件。为配方单独升级设施前，先看当前配方、所需投入与界面产出；补丁没有公布生产效率或最优布局。显示修复也不能证明缺失家具已补发。', '11月5日 v1.1.3880756.0 已允許1級設施使用 Season Recipes，並列出部分家園家具顯示修正。設施等級不是房車等級，這項調整沒有替代房車10級加 Act Seven 的賽季入口條件。為配方單獨升級設施前，先看目前配方、所需投入與介面產出；補丁沒有公布生產效率或最佳佈局。顯示修正也不能證明缺失家具已補發。') },
