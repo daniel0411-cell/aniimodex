@@ -183,8 +183,8 @@
     "privacy": {
       "title": "Privacy Policy",
       "intro": "This policy explains what AniimoDex may collect, why it is used, how advertising and cookies may work, and the choices available to visitors.",
-      "updated": "Effective and last updated: November 10, 2026",
-      "activeStatus": "Manual Google AdSense display advertising is enabled on three selected guides, with one placement at the end of each article. The AdSense tag also loads Google's regional Privacy & messaging service. Google receives network information when this tag loads, even before an ad unit is initialized. The site waits for known regional signals before initializing units; unknown signals, refusal of required consent, a recognized US opt-out or Global Privacy Control prevent unit initialization. Cloudflare Web Analytics remains enabled separately.",
+      "updated": "Effective and last updated: November 12, 2026",
+      "activeStatus": "Manual Google AdSense advertising remains enabled at the end of three selected guides. The site also supports automatic ads on the homepage, published guides and the Dex, habitat, evolution and ability directories when enabled in AdSense. Tools, Dex detail pages and information/policy pages are excluded from site-initiated ad serving. Google's regional Privacy & messaging service loads separately and receives network information before ad initialization. The site waits for known regional signals before loading and releasing its ad library; unknown signals, refusal of required consent, a recognized US opt-out or Global Privacy Control block ad requests. Consent withdrawal pauses further requests and hides existing ad elements; requests already sent cannot be undone. Cross-page navigation after ad-library loading uses a new document to clear previous placements. Cloudflare Web Analytics remains enabled separately.",
       "sections": [
         {
           "heading": "Current advertising and measurement status",

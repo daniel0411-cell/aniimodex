@@ -52,7 +52,8 @@ window.googlefc={callbackQueue:[{CONSENT_API_READY:()=>{
           const body = extension === '.html' ? fs.readFileSync(file, 'utf8').replace('<head>', '<head><script>' + setup + '</script>') : fs.readFileSync(file);
           return route.fulfill({ contentType, body });
         }
-        return route.fulfill({ contentType: 'text/html', body: `<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>AniimoDex CMP-only verification</title><script>${setup}</script></head><body><h1>AniimoDex CMP verification</h1><a data-privacy-choices href="/en/privacy/#privacy-choices">Privacy choices</a><aside data-guide-ad hidden><ins class="adsbygoogle" style="display:block;height:60px">Inert probe: no publisher or ad slot attributes</ins></aside><script src="/advertising.js" data-aniimo-advertising="live"></script></body></html>` });
+        // Synthetic probe scope only; production privacy pages remain excluded.
+        return route.fulfill({ contentType: 'text/html', body: `<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>AniimoDex CMP-only verification</title><script>${setup}</script></head><body><h1>AniimoDex CMP verification</h1><a data-privacy-choices href="/en/privacy/#privacy-choices">Privacy choices</a><aside data-guide-ad hidden><ins class="adsbygoogle" style="display:block;height:60px">Inert probe: no publisher or ad slot attributes</ins></aside><script src="/advertising.js" data-aniimo-advertising="live" data-auto-ad-paths='["/privacy/"]'></script></body></html>` });
       }
       if (['fundingchoicesmessages.google.com', 'www.gstatic.com', 'fonts.googleapis.com', 'fonts.gstatic.com', 'lh3.googleusercontent.com'].includes(url.hostname)) {
         allowedRequests++;

@@ -5,10 +5,13 @@ const path = require('node:path');
 const vm = require('node:vm');
 const source = fs.readFileSync(path.join(__dirname, '../public/advertising.js'), 'utf8');
 
-function scenario({ hostname = 'aniimodex.com', gpc = false } = {}) {
+function scenario({ hostname = 'aniimodex.com', gpc = false, pathname = '/en/guide/aniimo-rv-homeland-guide/', manual = true, paths } = {}) {
   let tcf, gpp, click, mutation;
   let requests = 0, revocations = 0;
+  let reloads = 0, assigned;
   const scripts = [], placements = [];
+  const attributes = new Set();
+  const location = { hostname, pathname, origin: 'https://aniimodex.com', href: `https://aniimodex.com${pathname}`, reload() { reloads++; }, assign(href) { assigned = href; } };
   const window = {
     adsbygoogle: { push() { requests++; } },
     __tcfapi(command, version, callback) { assert.equal(command, 'addEventListener'); assert.equal(version, 2); tcf = callback; },
@@ -24,13 +27,14 @@ function scenario({ hostname = 'aniimodex.com', gpc = false } = {}) {
     },
   };
   const document = {
-    currentScript: { dataset: { aniimoAdvertising: 'live' } },
-    body: {}, head: { appendChild(script) { scripts.push(script); } },
+    currentScript: { dataset: { aniimoAdvertising: 'live', autoAdPaths: JSON.stringify(paths ?? ['/', '/dex/', '/locations/', '/guide/aniimo-rv-homeland-guide/']) } },
+    documentElement: { setAttribute(name) { attributes.add(name); }, toggleAttribute(name, force) { if (force) attributes.add(name); else attributes.delete(name); } },
+    body: {}, head: { appendChild(script) { if (script.tagName === 'script') scripts.push(script); } },
     querySelectorAll() { return placements; },
-    createElement() { return {}; },
+    createElement(tagName) { return { tagName }; },
     addEventListener(name, callback) { if (name === 'click') click = callback; },
   };
-  const context = vm.createContext({ window, document, location: { hostname }, navigator: { globalPrivacyControl: gpc },
+  const context = vm.createContext({ window, document, location, URL, navigator: { globalPrivacyControl: gpc },
     MutationObserver: class { constructor(callback) { mutation = callback; } observe() {} },
   });
   function place(width = 600) {
@@ -39,11 +43,12 @@ function scenario({ hostname = 'aniimodex.com', gpc = false } = {}) {
     placements.push(placement);
     return placement;
   }
-  const first = place();
+  const first = manual ? place() : null;
   vm.runInContext(source, context);
   const api = window.googlefc;
   return {
-    scripts, first, place, window,
+    scripts, first, place, window, location, attributes,
+    reloads: () => reloads, assigned: () => assigned,
     loadAds() { scripts.find(script => script.src.includes('/adsbygoogle.js'))?.onload(); },
     requests: () => requests, revocations: () => revocations,
     rerun: () => vm.runInContext(source, context),
@@ -53,8 +58,8 @@ function scenario({ hostname = 'aniimodex.com', gpc = false } = {}) {
     tcf(data, success = true) { tcf(data, success); },
     gpp(event, success = true) { gpp(event, success); },
     mutate() { mutation([{ type: 'childList' }]); },
-    click() {
-      const event = { target: { closest() { return {}; } }, button: 0, preventDefault() { this.defaultPrevented = true; } };
+    click(anchor = null, privacy = anchor === null) {
+      const event = { target: { closest(selector) { return selector === 'a[href]' ? anchor : privacy ? {} : null; } }, button: 0, preventDefault() { this.defaultPrevented = true; }, stopPropagation() {} };
       click(event);
       for (const item of api.callbackQueue.slice(3)) item.CONSENT_API_READY?.();
       return event.defaultPrevented;
@@ -115,6 +120,40 @@ s = scenario(); s.ready(); s.tcf(consent); s.dataReady();
 s.scripts[1].onerror(); s.loadAds(); assert.equal(s.requests(),0); assert.equal(s.window.adsbygoogle.pauseAdRequests,1);
 console.log('Advertising checks passed: off-host/GPC, unknown/refused/allowed, duplicate bootstrap, SPA, unfilled, revocation, US updates, missing APIs and loader failure. No network used.');
 
+for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  for (const pathname of [`/${locale}/`, `/${locale}/dex/`, `/${locale}/locations/`]) {
+    s = scenario({ pathname, manual: false }); s.ready(); s.tcf(consent); s.dataReady();
+    assert.equal(s.scripts.length, 2, 'Eligible pages load the library without a manual unit');
+    assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
+    s.loadAds(); assert.equal(s.window.adsbygoogle.pauseAdRequests, 0); assert.equal(s.requests(), 0);
+    assert(!s.attributes.has('data-aniimo-ads-blocked'));
+    s.click(); assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
+    assert(s.attributes.has('data-aniimo-ads-blocked'));
+  }
+  for (const path of ['privacy', 'terms', 'contact', 'about', 'tools', 'tools/catch', 'dex/001', 'guide/not-published', 'guide/how-we-verify']) {
+    s = scenario({ pathname: `/${locale}/${path}/`, manual: false }); s.ready(); s.tcf(consent); s.dataReady();
+    assert.equal(s.scripts.length, 1, `Excluded ${path} must not load the ad library`);
+    assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
+  }
+}
+s = scenario({ manual: false, paths: [] }); s.ready(); s.tcf(consent); s.dataReady();
+assert.equal(s.scripts.length, 1, 'Missing scope must fail closed');
+s = scenario({ manual: false }); s.ready(); s.tcf(consent); s.dataReady(); s.loadAds();
+s.click({ href: 'https://aniimodex.com/en/privacy/#privacy-choices', target: '', hasAttribute() { return false; } }, true);
+assert.equal(s.assigned(), undefined, 'European privacy choices reopen CMP instead of navigating');
+assert.equal(s.revocations(), 1);
+s.tcf(consent);
+s.click({ href: 'https://aniimodex.com/en/privacy/', target: '', hasAttribute() { return false; } });
+assert.equal(s.assigned(), 'https://aniimodex.com/en/privacy/');
+assert.equal(s.window.adsbygoogle.pauseAdRequests, 1);
+s.location.pathname = '/en/privacy/'; s.mutate(); s.mutate();
+assert.equal(s.reloads(), 1, 'Programmatic route changes reload once');
+for (const data of [{ ...consent, purpose: { consents: {} } }, { ...consent, cmpStatus: 'error' }]) {
+  s = scenario({ manual: false }); s.ready(); s.tcf(data); s.dataReady();
+  assert.equal(s.scripts.length, 1, 'No-slot pages must retain consent/error blocking');
+}
+console.log('Auto-ad readiness passed: no-slot loading, three-locale exclusions, consent withdrawal, document navigation and missing scope. No inventory requested.');
+
 if (process.argv.includes('--export-enabled')) {
   const output = path.join(__dirname, '../out');
   const slugs = ['aniimo-prismana-potential-breeding-guide', 'aniimo-rv-homeland-guide', 'aniimo-version-1-1-update'];
@@ -129,6 +168,9 @@ if (process.argv.includes('--export-enabled')) {
         const count = (html.match(/data-ad-slot=/g) || []).length;
         assert.equal(count, expected ? 1 : 0, `Unexpected unit count: ${file}`);
         assert(!html.includes('data-ad-preview'), `Development preview in ${file}`);
+        const flight = [...html.matchAll(/self\.__next_f\.push\((\[.*?\])\)<\/script>/g)]
+          .map((match) => JSON.parse(match[1])[1]).filter((value) => typeof value === 'string').join('');
+        if (flight.includes('aniimo-advertising')) assert(flight.includes('data-auto-ad-paths'), `Missing explicit page scope: ${file}`);
         units += count;
       }
     }

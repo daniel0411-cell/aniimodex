@@ -1,9 +1,10 @@
 import { advertisingEnabled } from '@/lib/advertising';
 import Script from 'next/script';
+import { getPublishedGuidePosts } from '@/data/guides';
 
 export default function Advertising() {
   if (!advertisingEnabled) return null;
-  // One document-level bootstrap survives client-side navigation. Google supplies
-  // the regional messages through its AdSense tag after dashboard publication.
-  return <Script id="aniimo-advertising" src="/advertising.js" strategy="afterInteractive" data-aniimo-advertising="live" />;
+  const paths = ['/', '/dex/', '/locations/', '/evolutions/', '/abilities/',
+    ...getPublishedGuidePosts().map(({ slug }) => `/guide/${slug}/`)];
+  return <Script id="aniimo-advertising" src="/advertising.js" strategy="afterInteractive" data-aniimo-advertising="live" data-auto-ad-paths={JSON.stringify(paths)} />;
 }

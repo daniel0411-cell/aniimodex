@@ -183,8 +183,8 @@
     "privacy": {
       "title": "隱私權政策",
       "intro": "本政策說明 AniimoDex 可能收集的資訊、使用目的、廣告與 Cookie 的運作方式，以及訪客可使用的選擇。",
-      "updated": "生效及最後更新：2026 年 11 月 10 日",
-      "activeStatus": "已在三篇指定攻略啟用 Google AdSense 手動展示廣告，每篇僅在文末設置一個廣告位。AdSense 標籤也會載入 Google 地區隱私訊息服務；即使尚未初始化廣告單元，載入標籤時 Google 也會收到網路資訊。本站在地區訊號明確後才初始化廣告單元；訊號不明、拒絕必要同意、已識別的美國退出選擇或 Global Privacy Control 均會阻止初始化。Cloudflare Web Analytics 另外保持啟用。",
+      "updated": "生效及最後更新：2026 年 11 月 12 日",
+      "activeStatus": "三篇指定攻略文末繼續保留 Google AdSense 手動廣告。本站也支援在 AdSense 後台啟用後，在首頁、已發布攻略及圖鑑、棲息地、進化和能力目錄展示自動廣告；工具、圖鑑詳情及站點資訊和政策頁不在本站主動投放範圍內。Google 地區隱私訊息服務單獨載入，在廣告初始化前也會收到網路資訊。本站在地區訊號明確後才載入並放行廣告庫；訊號不明、拒絕必要同意、已識別的美國退出選擇或 Global Privacy Control 均會阻止廣告請求。撤回同意後暫停後續請求並隱藏已有廣告元素，已傳送請求無法撤銷。廣告庫載入後，跨頁面跳轉使用新文件清除上一頁廣告。Cloudflare Web Analytics 另外保持啟用。",
       "sections": [
         {
           "heading": "目前廣告與統計狀態",
