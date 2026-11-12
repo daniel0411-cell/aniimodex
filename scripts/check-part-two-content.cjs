@@ -32,8 +32,18 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert.equal((events.match(/data-status="unknown"/g) ?? []).length, 5);
   assert(!events.includes('No replacement event has been verified here'));
   assert(!events.includes('noindex'));
-  for (const term of ['Aniimo Go!', 'Fantasy Resonance', 'Lv.40', 'Student I', '2026-11-12 10:00', '2026-11-20 04:00', '2026-12-10 07:59', '2026-12-10 03:59', '100244']) assert(events.includes(term), `${locale}: missing November event fact ${term}`);
+  for (const term of ['Aniimo Dash', 'Fantasy Resonance', 'Lv.40', 'Student I', '2026-11-19 10:00', '2026-11-20 04:00', '2026-12-10 07:59', '2026-12-09 23:59', '2026-12-09 19:59', 'Greenfield Shallows', 'Gullcove Cliffs', 'Redrock Trail', 'Prismana Snapshots', '18:00–24:00', '100298', '100244']) assert(events.includes(term), `${locale}: missing November event fact ${term}`);
+  assert(!events.includes('2026-11-12 10:00'), `${locale}: superseded racing opening`);
+  const photoRules = {
+    en: ['Dazzling Sparkling and Shadow Sparkling do not count toward those five.', 'shared once per phase', 'not at 04:00'],
+    'zh-Hans': ['Dazzling Sparkling 与 Shadow Sparkling 不计入这5种', '每期共享一次', '不是04:00'],
+    'zh-Hant': ['Dazzling Sparkling 與 Shadow Sparkling 不計入這5種', '每期共用一次', '不是04:00'],
+  }[locale];
+  for (const term of photoRules) assert(events.includes(term), `${locale}: photo rule ${term}`);
   const issues = read(locale, 'guide/aniimo-launch-checklist-known-issues');
+  for (const term of ['100298', 'Training Reset', 'Whirlbite', '04:00', 'UTC-4']) assert(issues.includes(term));
+  const eggUpdate = read(locale, 'guide/aniimo-egg-heist');
+  assert(eggUpdate.includes('100298') && eggUpdate.includes('Team Mode'));
   for (const term of ['Tap Model to Lock Target', 'Swift Egg', 'Xbox PC', 'Season 2', 'PSSR', '100230', '100252']) assert(issues.includes(term), `${locale}: missing platform scope ${term}`);
   const pending = { en: 'release date unconfirmed', 'zh-Hans': '发布日期未定', 'zh-Hant': '發布日期未定' }[locale];
   assert(issues.includes(pending), `${locale}: shortcut layout must remain unconfirmed`);
@@ -71,7 +81,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const slug of ['aniimo-version-1-1-update', 'aniimo-egg-heist', 'aniimo-prismana-potential-breeding-guide']) {
     assert(home.indexOf(`href="/${locale}/guide/${slug}/"`) < home.indexOf('href="/' + locale + '/guide/aniimo-release-date/"'), `${locale}: current task hidden below launch navigation`);
   }
-  assert(home.includes(messagesForHome.home.latestUpdateTitle));
+  assert(home.includes(messagesForHome.home.latestUpdateTitle.replaceAll('&', '&amp;')));
   const growth = read(locale, 'guide/aniimo-version-1-1-update');
   const harvest = read(locale, 'guide/aniimo-harvest-gathering-farm-guide');
   const branchHeadings = {

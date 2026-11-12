@@ -121,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = STATIC_ROUTES.flatMap((route) =>
     buildLocalizedUrls(
       route.path,
-      ['/', '/dex/', '/tools/', '/tools/type-chart/', '/tools/team-builder/', '/abilities/', '/locations/', '/evolutions/'].includes(route.path) ? '2026-11-09' : route.lastModified,
+      route.path === '/' ? '2026-11-12' : ['/dex/', '/tools/', '/tools/type-chart/', '/tools/team-builder/', '/abilities/', '/locations/', '/evolutions/'].includes(route.path) ? '2026-11-09' : route.lastModified,
       route.priority,
       route.changefreq ?? 'monthly'
     )

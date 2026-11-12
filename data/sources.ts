@@ -13,6 +13,13 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-november-12-update-2026-11-12',
+    url: 'https://www.aniimo.com/newslist/detail/100298',
+    title: 'Departure with the Wind: Part 2 - November 12 Update Notice (published November 9)',
+    accessedAt: '2026-11-12',
+    evidence: 'Rendered official notice read November 12. Maintenance shares one instant across three offsets. Aniimo Dash replaces the earlier Go preview: track dates November 12/19/26, solo all day, multiplayer 18:00-24:00 up to eight (timezone not explicit in that paragraph), shared end instant. Prismana Snapshots begins after the update, separates five regular types from Dazzling/Shadow rewards. Whirlbite limited reset November 12 04:00-November 27 04:00 per server, pre-balance Basic/Prismana eligibility and progression removal. Mobile margins, iOS storage, console and Egg Heist changes are announcements, not client tests. Compensation eligibility wording refers to Season 2 and is not reinterpreted here.',
+  },
+  {
     id: 'aniimo-official-wiki-jaguaraun-2026-11-09',
     url: 'https://wiki.aniimo.com/item/10007/basic-form/1000',
     title: 'Official Aniimo Wiki - Jaguaraun Basic Form',

@@ -446,6 +446,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </p>
         </div>
         <div className="mt-4 flex shrink-0 flex-col gap-3 sm:mt-0">
+          <Link href="/guide/aniimo-launch-checklist-known-issues" className="text-sm font-semibold text-primary-light">{locale === 'en' ? 'Maintenance and Whirlbite reset' : locale === 'zh-Hant' ? '維護與 Whirlbite 重置' : '维护与 Whirlbite 重置'} →</Link>
           <Link href="/dex/wiki-300301-022" className="text-sm font-semibold text-primary-light">{locale === 'en' ? 'Royalby skills and habitat' : locale === 'zh-Hant' ? 'Royalby 技能與棲息地' : 'Royalby 技能与栖息地'} →</Link>
           <Link
             href="/guide/aniimo-prismana-event-tracker"

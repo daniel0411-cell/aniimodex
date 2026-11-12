@@ -62,7 +62,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(read(locale, 'dex').includes(`/${locale}/dex/wiki-1000-10007/`));
   assert(read(locale, 'guide/aniimo-prismana-event-tracker').includes(`/${locale}/dex/wiki-1000-10007/`));
   const home = readFileSync(`out/${locale}/index.html`, 'utf8');
-  assert(home.includes(require(`../messages/${locale}.json`).home.latestUpdateTitle));
+  assert(home.includes(require(`../messages/${locale}.json`).home.latestUpdateTitle.replaceAll('&', '&amp;')));
   assert(home.includes(`/${locale}/dex/wiki-300301-022/`));
   const issues = read(locale, 'guide/aniimo-launch-checklist-known-issues');
   for (const term of ['Whirlbite', 'Marching Flask', 'Training Reset', '100275']) assert(issues.includes(term));
