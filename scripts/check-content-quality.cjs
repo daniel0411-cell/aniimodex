@@ -113,7 +113,8 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const suffix of ['locations/', 'evolutions/']) {
     const url = `https://aniimodex.com/${locale}/${suffix}`;
     const block = [...readFileSync(resolve(root, 'out/sitemap.xml'), 'utf8').matchAll(/<url>(.*?)<\/url>/gs)].find((match) => match[1].includes(`<loc>${url}</loc>`))?.[1];
-    assert(block?.includes('<lastmod>2026-11-09</lastmod>'));
+    const updatedAt = suffix === 'locations/' ? '2026-11-12' : '2026-11-09';
+    assert(block?.includes(`<lastmod>${updatedAt}</lastmod>`));
   }
 
   const topics = [
