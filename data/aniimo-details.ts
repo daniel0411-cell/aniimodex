@@ -19,6 +19,7 @@ export interface OfficialAniimoDetail {
   number: string;
   wikiId: string;
   checkedAt?: string;
+  habitatsCheckedAt?: string;
   evolutionPublished?: boolean;
   attributes?: { name: string; value: number }[];
   habitats: string[];

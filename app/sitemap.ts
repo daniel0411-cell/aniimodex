@@ -135,7 +135,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((aniimo) => priorityDexNumbers.has(aniimo.number))
     .map((aniimo) => ({
       url: `${SITE_URL}/en/dex/${aniimo.number}/`,
-      lastModified: details.find(detail => detail.number === aniimo.number)?.checkedAt?.startsWith('2026-11-') ? details.find(detail => detail.number === aniimo.number)!.checkedAt : '2026-11-02',
+      lastModified: [details.find(detail => detail.number === aniimo.number)?.checkedAt, details.find(detail => detail.number === aniimo.number)?.habitatsCheckedAt, '2026-11-02'].filter((date): date is string => Boolean(date)).sort().at(-1),
       changeFrequency: 'weekly' as const,
       priority: 0.75,
       alternates: { languages: localizedLanguagesForPath(`/dex/${aniimo.number}/`) },

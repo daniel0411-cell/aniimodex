@@ -309,6 +309,9 @@ export default async function DexDetailPage({ params }: PageProps) {
             {(
               <section id="habitats" className="scroll-mt-24">
                 <h2 className="mb-3 text-xl font-bold text-text-primary">{t('officialHabitats')}</h2>
+                {detail.habitatsCheckedAt && <p className="mb-3 text-xs leading-5 text-text-secondary">
+                  {locale === 'en' ? 'Habitat list checked' : locale === 'zh-Hant' ? '棲息地列表核對' : '栖息地列表核对'}: {detail.habitatsCheckedAt} · <a href={`https://wiki.aniimo.com/item/${detail.wikiId}`} target="_blank" rel="noreferrer" className="underline">{locale === 'en' ? 'Official Wiki' : '官方 Wiki'}</a>
+                </p>}
                 {detail.habitats.length === 0 && <p className="text-sm leading-6 text-text-secondary">{t('habitatsUnlisted')}</p>}
                 <div className="flex flex-wrap gap-2">
                   {detail.habitats.map((habitat) => (

@@ -15,6 +15,8 @@ export default function PrismanaSchedule({ locale }: { locale: string }) {
     return () => clearInterval(timer);
   }, []);
   const server = prismanaServers.find((item) => item.id === serverId)!;
+  const current = prismanaWindows.find((item) => prismanaWindowStatus(item.start, item.end, server.offset, now) === 'active');
+  const next = prismanaWindows.find((item) => prismanaWindowStatus(item.start, item.end, server.offset, now) === 'upcoming');
   const statusLabels = {
     unknown: t('Check server time', '请核对服务器时间', '請核對伺服器時間'),
     upcoming: t('Upcoming', '未开始', '未開始'),
@@ -33,6 +35,16 @@ export default function PrismanaSchedule({ locale }: { locale: string }) {
       '下表按所选服务器时钟显示，不是设备所在时区。状态依据设备时间和公告固定 UTC 偏移计算，不监测服务器或后续排期变更；时钟或排期不一致时请以当前游戏公告为准。',
       '下表按所選伺服器時鐘顯示，不是裝置所在時區。狀態依據裝置時間和公告固定 UTC 偏移計算，不監測伺服器或後續排期變更；時鐘或排期不一致時請以目前遊戲公告為準。'
     )}</p>
+    <dl className="grid gap-4 border-y border-ink-border py-4 sm:grid-cols-2" data-testid="prismana-summary" aria-live="polite">
+      {[
+        { label: t('Current rotation', '当前轮次', '目前輪次'), item: current, empty: t('No active rotation in the published schedule', '公告排期中没有当前轮次', '公告排期中沒有目前輪次') },
+        { label: t('Next rotation', '下一轮', '下一輪'), item: next, empty: t('No later rotation published in this schedule', '此排期未公布更晚轮次', '此排期未公布更晚輪次') },
+      ].map(({ label, item, empty }) => <div key={label} className="min-w-0">
+        <dt className="text-xs text-text-secondary">{label}</dt>
+        <dd className="mt-1 text-sm leading-6">{!Number.isFinite(now) ? statusLabels.unknown : item ? <><strong>{item.name}</strong><p>{item.region}</p><p className="text-xs text-text-secondary">{item.start} 04:00 – {item.end} 03:59 ({server.zone})</p></> : empty}</dd>
+      </div>)}
+    </dl>
+    <p className="text-xs leading-5 text-text-secondary">{t('Rotation availability does not identify the designated target for Prismana Snapshots.', '轮换开放名单不等于 Prismana Snapshots 的指定拍摄目标。', '輪替開放名單不等於 Prismana Snapshots 的指定拍攝目標。')}</p>
     <div role="region" aria-label={t('Prismana schedule', 'Prismana 排期', 'Prismana 排期')} tabIndex={0} className="overflow-x-auto border border-ink-border">
       <table className="w-full min-w-[640px] text-left text-sm">
         <caption className="px-3 py-2 text-left font-semibold">{server.name} · {server.zone} · {t('Source checked November 8, 2026', '来源核对：2026年11月8日', '來源核對：2026年11月8日')}</caption>

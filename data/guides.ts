@@ -272,7 +272,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-holo-battle-interlink',
-    updatedAt: '2026-11-06',
+    updatedAt: '2026-11-12',
     date: '2026-09-28',
     readMinutes: 6,
     relatedSlugs: [
@@ -281,7 +281,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-team-composition',
       'aniimo-version-1-1-update',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05'],
+    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05', 'aniimo-november-12-update-2026-11-12'],
   },
   {
     slug: 'aniimo-prismana-event-tracker',

@@ -5450,7 +5450,9 @@
       "number": "032",
       "wikiId": "031/basic-form",
       "checkedAt": "2026-10-23",
+      "habitatsCheckedAt": "2026-11-12",
       "habitats": [
+        "Cloudreach Falls",
         "Forest of Falling Stars"
       ],
       "evolution": {
@@ -5602,7 +5604,9 @@
       "number": "033",
       "wikiId": "032/basic-form",
       "checkedAt": "2026-10-23",
+      "habitatsCheckedAt": "2026-11-12",
       "habitats": [
+        "Cloudreach Falls",
         "Forest of Falling Stars"
       ],
       "evolution": {
