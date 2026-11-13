@@ -90,7 +90,8 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(read(locale, 'guide/aniimo-prismana-event-tracker').includes(`/${locale}/dex/wiki-1000-10007/`));
   const home = readFileSync(`out/${locale}/index.html`, 'utf8');
   assert(home.includes(require(`../messages/${locale}.json`).home.latestUpdateTitle.replaceAll('&', '&amp;')));
-  assert(home.includes(`/${locale}/dex/wiki-300301-022/`));
+  assert(home.includes(`/${locale}/guide/aniimo-prismana-event-tracker/`));
+  assert(home.includes(`/${locale}/guide/aniimo-launch-checklist-known-issues/`));
   const issues = read(locale, 'guide/aniimo-launch-checklist-known-issues');
   for (const term of ['Whirlbite', 'Marching Flask', 'Training Reset', '100275']) assert(issues.includes(term));
   const egg = read(locale, 'guide/aniimo-egg-heist');
@@ -102,4 +103,4 @@ for (const [officialNumber, name] of targets) {
   const block = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find(match => match[1].includes(`<loc>https://aniimodex.com/en/dex/${number}/</loc>`))?.[1];
   assert(block?.includes('<lastmod>2026-11-08</lastmod>'));
 }
-console.log('Event Dex update passed: five identities, collision preservation, dated evidence, missing data, skill groups, localized event links, Royalby navigation and November 2 symptom checks.');
+console.log('Event Dex update passed: five identities, collision preservation, dated evidence, missing data, skill groups, localized event/reset navigation and November 2 symptom checks.');

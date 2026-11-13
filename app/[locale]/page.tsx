@@ -8,6 +8,7 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getAllAniimos } from '@/lib/aniimo';
 import { evolutionFamilies, habitatGroups, mobilityGroups } from '@/data/aniimo-collections';
 import { getLaunchGuide } from '@/data/launch-guides';
+import { getNovemberPlanningCards } from '@/data/november-planning';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -208,6 +209,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   →
                 </span>
               </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="border-t-4 border-secondary bg-emerald-50 p-5" aria-labelledby="november-plan">
+        <p className="text-xs font-semibold uppercase text-emerald-700">{th('latestUpdateLabel')}</p>
+        <h2 id="november-plan" className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2>
+        <p className="mt-2 max-w-4xl text-sm leading-6 text-text-secondary">{th('latestUpdateDescription')}</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {getNovemberPlanningCards(locale).map(card => (
+            <Link key={card.date} href={card.href} className="border border-emerald-200 bg-white p-4 hover:border-primary-light">
+              <p className="font-mono text-sm font-semibold text-emerald-800">{card.date}</p>
+              <h3 className="mt-2 font-semibold text-text-primary">{card.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-text-secondary">{card.action}</p>
+              <span className="mt-3 inline-block text-sm font-semibold text-primary-light">{th('viewUpdate')} →</span>
             </Link>
           ))}
         </div>
@@ -435,27 +451,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Link href="/guide/aniimo-progress-account-safety">{locale === 'en' ? 'Account and progress help' : locale === 'zh-Hant' ? '帳號與進度處理' : '账号与进度处理'} →</Link>
         </nav>
       </details>
-      <section className="border-t-4 border-secondary bg-emerald-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
-        <div>
-          <p className="text-xs font-semibold uppercase text-emerald-700">
-            {th('latestUpdateLabel')}
-          </p>
-          <h2 className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">
-            {th('latestUpdateDescription')}
-          </p>
-        </div>
-        <div className="mt-4 flex shrink-0 flex-col gap-3 sm:mt-0">
-          <Link href="/guide/aniimo-launch-checklist-known-issues" className="text-sm font-semibold text-primary-light">{locale === 'en' ? 'Maintenance and Whirlbite reset' : locale === 'zh-Hant' ? '維護與 Whirlbite 重置' : '维护与 Whirlbite 重置'} →</Link>
-          <Link href="/dex/wiki-300301-022" className="text-sm font-semibold text-primary-light">{locale === 'en' ? 'Royalby skills and habitat' : locale === 'zh-Hant' ? 'Royalby 技能與棲息地' : 'Royalby 技能与栖息地'} →</Link>
-          <Link
-            href="/guide/aniimo-prismana-event-tracker"
-            className="inline-flex text-sm font-semibold text-primary-light"
-          >
-            {th('viewUpdate')} →
-          </Link>
-        </div>
-      </section>
       <section>
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <div>

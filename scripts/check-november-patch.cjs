@@ -9,7 +9,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     const html = read(slug);
     const article = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
       .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
-    const updated = ['aniimo-launch-checklist-known-issues', 'aniimo-prismana-event-tracker', 'aniimo-egg-heist', 'aniimo-rv-homeland-guide', 'aniimo-holo-battle-interlink'].includes(slug) ? '2026-11-12' : '2026-11-06';
+    const updated = ['aniimo-launch-checklist-known-issues', 'aniimo-prismana-event-tracker'].includes(slug) ? '2026-11-13' : ['aniimo-egg-heist', 'aniimo-rv-homeland-guide', 'aniimo-holo-battle-interlink'].includes(slug) ? '2026-11-12' : '2026-11-06';
     assert.equal(article?.dateModified, updated, `${locale}/${slug} stale modified date`);
     if (slug !== 'aniimo-prismana-event-tracker') assert(text(slug).includes(patch), `${slug}: missing patch citation`);
     for (const [, href] of text(slug).matchAll(/href="(\/(?:en|zh-Hans|zh-Hant)\/[^"#?]+)"/g)) assert(existsSync(`out${href}index.html`), `broken link ${href}`);

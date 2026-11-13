@@ -285,7 +285,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-12',
+    updatedAt: '2026-11-13',
     date: '2026-10-13',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -432,7 +432,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    updatedAt: '2026-11-12',
+    updatedAt: '2026-11-13',
     date: '2026-10-16',
     readMinutes: 11,
     relatedToolHrefs: ['/dex', '/tools/catch'],
