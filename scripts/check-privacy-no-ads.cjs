@@ -5,6 +5,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'out');
 assert(fs.existsSync(output), 'Run npm run build before this check.');
+assert.equal(process.env.ADSENSE_ENABLED, '0', 'Build with ADSENSE_ENABLED=0 before running the no-ad export check.');
 
 let pages = 0;
 function checkPages(directory) {

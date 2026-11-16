@@ -17,6 +17,12 @@ const posts = getPublishedGuidePosts();
 const snapshotEntries = require('../data/current-wiki-snapshot.json').entries;
 const snapshotDetails = require('../data/current-wiki-details.json').details;
 const sitemap = readFileSync('out/sitemap.xml', 'utf8');
+const expectedSitemapDates = {
+  '/': '2026-11-12',
+  '/tools/team-builder/': '2026-11-09',
+  '/abilities/': '2026-11-09',
+  '/guide/how-we-verify/': '2026-11-02',
+};
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const messages = JSON.parse(readFileSync(`messages/${locale}.json`, 'utf8'));
   for (const post of posts) {
@@ -68,9 +74,10 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     const count = new Set(snapshotDetails.flatMap(detail => detail[field].map(skill => skill.name))).size;
     assert(abilities.includes(messages.collections.abilities[key].replace('{count}', count)), `${locale}: inconsistent directory count`);
   }
-  for (const path of ['', 'tools/team-builder/', 'abilities/', 'guide/how-we-verify/']) {
-    const block = sitemap.split('<url>').find(block => block.includes(`<loc>https://aniimodex.com/${locale}/${path}</loc>`));
-    assert(block?.includes('<lastmod>2026-11-02</lastmod>'), `${locale}/${path}: edit date overridden`);
+  for (const [path, expectedDate] of Object.entries(expectedSitemapDates)) {
+    const localePath = path === '/' ? `/${locale}/` : `/${locale}${path}`;
+    const block = sitemap.split('<url>').find(block => block.includes(`<loc>https://aniimodex.com${localePath}</loc>`));
+    assert(block?.includes(`<lastmod>${expectedDate}</lastmod>`), `${locale}/${path}: unexpected sitemap date`);
   }
   const multiplayer = read(locale, 'aniimo-multiplayer');
   for (const term of ['Rising Egg Scout', 'Chaos Ticket', 'Holo-Battle', 'Trailblazer I']) assert(multiplayer.includes(term));
