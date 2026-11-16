@@ -27,6 +27,10 @@ export default async function LocationsPage({ params }: { params: Promise<{ loca
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: t('title'), description: t('description'), url: `${SITE_URL}/${locale}/locations/` }, { '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }] }) }} />
       <header className="border-b border-ink-border pb-6"><h1 className="text-3xl font-bold text-text-primary">{t('title')}</h1><p className="mt-2 max-w-3xl text-text-secondary">{t('description')}</p><p className="mt-3 text-xs text-emerald-700">{t('sourceNote')}</p></header>
       <section className="border-l-4 border-secondary bg-emerald-50 px-5 py-4"><h2 className="font-semibold text-emerald-950">{t('definitionTitle')}</h2><p className="mt-1 max-w-4xl text-sm leading-6 text-emerald-950">{t('definition', { habitats: habitatGroups.length, aniimo: mappedAniimo })}</p></section>
+      <nav className="flex flex-wrap gap-x-5 gap-y-2 border-b border-ink-border pb-5 text-sm font-semibold text-primary-light" aria-label={t('directoryTitle')}>
+        <Link href="/dex">{t('browseDex')} →</Link>
+        <a href="#basic-habitats">{t('basicHabitatsTitle')} ↓</a>
+      </nav>
       <section className="border-b border-ink-border pb-6">
         <a href="#basic-habitats" className="mb-4 inline-block text-sm font-semibold text-primary-light">{t('basicHabitatsTitle')} ↓</a>
         <h2 className="text-xl font-bold text-text-primary">{t('eventTitle')}</h2>

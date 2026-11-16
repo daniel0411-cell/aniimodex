@@ -1053,6 +1053,8 @@
         "subtitle": "查看 PC、PS5、Xbox、Epic、iOS 與 Android 的目前官方狀態，以及尚未確認的 Nintendo Switch 與 Switch 2。",
         "tag": "平台",
         "lead": "Aniimo 可透過官方 PC 啟動器、Steam、PS5、Xbox、Epic 與行動版入口取得。本站核驗的官方來源尚未公布 Nintendo Switch 或 Switch 2；商店、帳號地區與裝置相容性仍可能影響實際可用性。",
+        "answerTitle": "Switch 狀態速覽",
+        "answerBody": "本頁核驗的官方平台入口沒有列出 Nintendo Switch 或 Switch 2。兩者目前都應視為尚未確認；下載或購買前，請以 Aniimo 或任天堂針對你所在地區發布的官方頁面為準。",
         "body": [
           {
             "t": "h",

@@ -377,6 +377,13 @@ export default async function GuidePostPage({
           <p className="mt-3 text-base leading-relaxed text-text-primary">{lead}</p>
         </header>
 
+        {post.slug === 'aniimo-platforms' && (
+          <section className="border-l-4 border-primary bg-sky-50 px-4 py-4 text-sm leading-6 text-sky-950" aria-labelledby="platform-answer">
+            <h2 id="platform-answer" className="font-semibold">{tp('aniimo-platforms.answerTitle')}</h2>
+            <p className="mt-1">{tp('aniimo-platforms.answerBody')}</p>
+          </section>
+        )}
+
         {['aniimo-platforms', 'how-to-download-aniimo'].includes(post.slug) && <OfficialDownloadLinks locale={locale} />}
         {post.dataTopic && <SnapshotNotice locale={locale} />}
 

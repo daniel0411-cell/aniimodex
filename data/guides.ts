@@ -80,9 +80,10 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-platforms',
-    updatedAt: '2026-10-23',
+    updatedAt: '2026-11-16',
     date: '2026-09-29',
     readMinutes: 5,
+    relatedToolHrefs: ['/dex'],
     relatedSlugs: ['how-to-download-aniimo', 'aniimo-mobile', 'aniimo-crossplay-cross-save'],
     sourceIds: [
       'aniimo-access-routes-2026-10-23',
