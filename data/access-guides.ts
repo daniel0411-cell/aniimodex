@@ -11,14 +11,14 @@ export function getAccessGuide(locale: string, slug: string): LaunchGuide | unde
   if (slug === 'aniimo-platforms')
     return {
       title: t(
-        'Aniimo Platforms: PC, PS5, Xbox, Mobile & Switch Status',
-        '伊莫支持哪些平台：PC、PS5、Xbox、手机与 Switch',
-        '伊莫支援哪些平台：PC、PS5、Xbox、手機與 Switch'
+        'Is Aniimo on Nintendo Switch or Switch 2? Platform Status',
+        '伊莫支持 Switch 或 Switch 2 吗？平台状态',
+        '伊莫支援 Switch 或 Switch 2 嗎？平台狀態'
       ),
       subtitle: t(
-        'Choose a supported platform using official routes, then check your region and device before installing.',
-        '按官方入口选择平台，再确认所在地区与设备能否安装。',
-        '依官方入口選擇平台，再確認所在地區與裝置能否安裝。'
+        'Get the direct Switch answer first, then choose an official PC, console or mobile route for your region.',
+        '先查看 Switch 的直接结论，再按地区选择官方 PC、主机或移动端入口。',
+        '先查看 Switch 的直接結論，再依地區選擇官方 PC、主機或行動版入口。'
       ),
       tag: t('Platforms', '平台', '平台'),
       lead: t(
