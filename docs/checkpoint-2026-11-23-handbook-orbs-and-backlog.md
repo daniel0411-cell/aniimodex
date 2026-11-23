@@ -129,3 +129,15 @@ used for release: a single final build ran after all content edits and passed.
 
 Pre-publication fetch succeeded and upstream comparison remained 0/0 at
 `3ada725`. Release outcome is appended after production verification.
+
+## Release outcome
+
+Content commit `06cc13e` pushed to main. Cloudflare Git deployment verified
+through the public browser on November 23: English free-to-play guide contains
+the new handbook comparison; simplified Chinese event tracker shows the
+December 17 local-server deadline; traditional Chinese item guide contains
+the explicit unlocked-form prerequisite; English Egg Heist puts mode rules
+before historical fixes and displays the scoped source label. Public host:
+https://aniimodex.com . This confirms deployed content, not a traffic/indexing
+outcome or gameplay verification. This release note is a documentation-only
+follow-up to the verified content commit.
