@@ -13,6 +13,27 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-event-planning-2026-11-21',
+    url: 'https://www.aniimo.com/newslist/detail/100244',
+    title: 'S1 Part 2 announcement — November 23 rotation and November 27 investigation phases',
+    accessedAt: '2026-11-21',
+    evidence: 'Rendered official announcement read November 21; research recorded in the content-directions checkpoint. Glameep November 23–30 at Crescent Bay/Echoback Landing; four-species rotation November 30–December 7. Photo and ecological phase 3 November 27 04:00–December 4 03:59 per server. Matching forms, existing album photos allowed, own/other/wild accepted, Sim/Sanctum excluded; first ecological target only, double points for first Index unlock. Separate from Snapshots targets. Fantasy Resonance complete quests reward offering recipe, no full quest sequence or ingredients verified.',
+  },
+  {
+    id: 'aniimo-snapshots-dash-2026-11-21',
+    url: 'https://www.aniimo.com/newslist/detail/100298',
+    title: 'November 12 update notice — Snapshots phase 3 and Redrock schedule',
+    accessedAt: '2026-11-21',
+    evidence: 'Rendered notice read November 21, published November 9. Snapshots phase 3 November 23 04:00–November 30 03:59 per server; five different regular Sparkling types, Dazzling/Shadow separate. Redrock after November 26 update with no exact hour; multiplayer special track events unavailable. No phase-3 target list, tested routes or optimal team established.',
+  },
+  {
+    id: 'aniimo-late-november-fixes-2026-11-23',
+    url: 'https://www.aniimo.com/newslist/detail/100275',
+    title: 'Known Issues & Fixes — November 13 and 17 entries (October 29 article)',
+    accessedAt: '2026-11-23',
+    evidence: 'Rendered rolling log read November 23. Latest dated section November 17: Egg Emperor 200-star seasonal collectible choice reward; weekly-limited shop blind box at Egg Emperor, no price or quantity; Giga-Egg jumping restricted and slight attack knockback, object interference remains a future plan. November 13 Home turn-in/refresh/points and furniture fixes, reissue promised later, no proof of delivery. Thundercloud movement fix differs from still-listed failed transformation and disappearing Party. Known issues include Interlink timers, controller markers, cooldown display, Lunara effects and Astra visibility; Astra also appears in the November 12 fixes, so status is not unambiguous. No live-client tests.',
+  },
+  {
     id: 'aniimo-november-12-update-2026-11-12',
     url: 'https://www.aniimo.com/newslist/detail/100298',
     title: 'Departure with the Wind: Part 2 - November 12 Update Notice (published November 9)',

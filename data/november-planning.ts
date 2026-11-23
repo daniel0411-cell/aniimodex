@@ -3,21 +3,15 @@ export function getNovemberPlanningCards(locale: string) {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return [
     {
-      date: '11/16 · 03:59 → 04:00',
-      title: 'Prismana Snapshots · Student II',
-      action: t('Phase 1 ends, then phase 2 starts. Check missing regular types and the separate special reward before switching to the new phase target.', '第一期结束后进入第二期。切换目标前，核对缺少的普通类型与独立的特殊奖励。', '第一期結束後進入第二期。切換目標前，核對缺少的普通類型與獨立的特殊獎勵。'),
+      date: '11/23 → 11/30',
+      title: 'Glameep · Prismana Vein · Student II',
+      action: t('Check Crescent Bay / Echoback Landing for the announced rotation. Snapshots phase 3 is separate: confirm its designated form and missing regular types in the event panel.', '按公告轮换查看 Crescent Bay／Echoback Landing。Snapshots 第三期是另一项活动，请在面板确认指定形态和缺少的普通类型。', '按公告輪換查看 Crescent Bay／Echoback Landing。Snapshots 第三期是另一項活動，請在面板確認指定形態和缺少的普通類型。'),
       href: '/guide/aniimo-prismana-event-tracker',
     },
     {
-      date: '11/19 · 10:00',
-      title: 'Gullcove Cliffs · Lv.40',
-      action: t('Check the track opening before queuing. Solo is all day; multiplayer has a separate daily window. Set your party and buffs before racing.', '排队前核对赛道开放。单人全天，多人另有每日时段；开赛前准备队伍与增益。', '排隊前核對賽道開放。單人全天，多人另有每日時段；開賽前準備隊伍與增益。'),
-      href: '/guide/aniimo-prismana-event-tracker',
-    },
-    {
-      date: '11/20 · 04:00',
-      title: 'Fantasy Resonance · Student I',
-      action: t('Follow the Jaguaraun photo, skill and catching quests. The exclusive offering recipe requires all event quests; ingredients are not yet verified here.', '按 Jaguaraun 活动要求完成摄影、技能与捕获任务。专属供奉配方要求全部活动任务；本站尚未核验配方材料。', '按 Jaguaraun 活動要求完成攝影、技能與捕獲任務。專屬供奉配方要求全部活動任務；本站尚未核驗配方材料。'),
+      date: '11/26',
+      title: 'Redrock Trail · Lv.40',
+      action: t('Scheduled after the version update; exact hour unannounced. Prepare your party and buffs, then check access. Multiplayer special track events are not available under the published rules.', '计划在版本更新后开放，未公布具体时刻。先准备队伍与增益，再确认入口；按已公布规则，多人赛暂不可用特殊赛道事件。', '計畫在版本更新後開放，未公布具體時刻。先準備隊伍與增益，再確認入口；按已公布規則，多人賽暫不可用特殊賽道事件。'),
       href: '/guide/aniimo-prismana-event-tracker',
     },
     {
@@ -25,6 +19,12 @@ export function getNovemberPlanningCards(locale: string) {
       title: t('Whirlbite reset deadline', 'Whirlbite 重置截止', 'Whirlbite 重置截止'),
       action: t('Only pre-balance Basic/Prismana individuals are named. Compare the refunded resources with the progression being removed before choosing to reset.', '仅点名平衡调整前获得的基础／Prismana 个体。决定重置前，对照返还资源与将撤销的成长效果。', '僅點名平衡調整前獲得的基礎／Prismana 個體。決定重置前，對照返還資源與將撤銷的成長效果。'),
       href: '/guide/aniimo-launch-checklist-known-issues',
+    },
+    {
+      date: '11/27 · 04:00 → 12/04 · 03:59',
+      title: t('Photo / ecological phase 3', '摄影／生态调查第三期', '攝影／生態調查第三期'),
+      action: t('Check the new panel targets and forms. Existing album photos can serve Who’s That Aniimo; duplicate ecological targets do not add progress. Fantasy Resonance continues separately until December 10 03:59.', '核对新面板目标及形态。Who’s That Aniimo 可用旧相册照片，生态调查重复目标不增加进度；Fantasy Resonance 另行持续至12月10日03:59。', '核對新面板目標及形態。Who’s That Aniimo 可用舊相簿照片，生態調查重複目標不增加進度；Fantasy Resonance 另行持續至12月10日03:59。'),
+      href: '/guide/aniimo-prismana-event-tracker',
     },
   ];
 }

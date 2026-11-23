@@ -226,7 +226,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-egg-heist',
-    updatedAt: '2026-11-12',
+    updatedAt: '2026-11-23',
     date: '2026-10-16',
     readMinutes: 6,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -237,6 +237,7 @@ export const guidePosts: GuidePost[] = [
       'getting-started',
     ],
     sourceIds: [
+      'aniimo-late-november-fixes-2026-11-23',
       'aniimo-november-12-update-2026-11-12',
       'aniimo-november-2-fixes-2026-11-09',
       'aniimo-steam-dev-feedback-2026-10-13',
@@ -252,7 +253,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-rv-homeland-guide',
-    updatedAt: '2026-11-12',
+    updatedAt: '2026-11-23',
     date: '2026-10-16',
     readMinutes: 6,
     relatedSlugs: [
@@ -262,6 +263,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-progress-account-safety',
     ],
     sourceIds: [
+      'aniimo-late-november-fixes-2026-11-23',
       'aniimo-november-12-update-2026-11-12',
       'aniimo-official-home-2026-08-28',
       'aniimo-steam-update-1-1-2026-09-23',
@@ -286,7 +288,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-13',
+    updatedAt: '2026-11-23',
     date: '2026-10-13',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -296,7 +298,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',
@@ -433,7 +435,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-launch-checklist-known-issues',
-    updatedAt: '2026-11-13',
+    updatedAt: '2026-11-23',
     date: '2026-10-16',
     readMinutes: 11,
     relatedToolHrefs: ['/dex', '/tools/catch'],
@@ -446,6 +448,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-language-controller-support',
     ],
     sourceIds: [
+      'aniimo-late-november-fixes-2026-11-23',
       'aniimo-november-12-update-2026-11-12',
       'aniimo-november-2-fixes-2026-11-09',
       'aniimo-mobile-qa-2026-11-08',

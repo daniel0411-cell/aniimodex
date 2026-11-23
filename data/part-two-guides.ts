@@ -1,3 +1,4 @@
+import { getLateNovemberEggBlocks, getLateNovemberHomeBlocks, getLateNovemberIssueBlocks } from '@/data/november-late-updates';
 import type { LaunchGuide } from '@/data/launch-guides';
 import { mobilityIndex } from '@/lib/mobility';
 import { getAllAniimos } from '@/lib/aniimo';
@@ -149,10 +150,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug === 'aniimo-rv-homeland-guide') return {
     title: t('Aniimo Home: Magical Wonder Night Entry & Season Changes', '伊莫家园：Magical Wonder Night 入口与换季清单', '伊莫家園：Magical Wonder Night 入口與換季清單'),
-    subtitle: t('Check November 12 RV fixes, Affinity limits and season entry before rebuilding, repeating activities or spending.', '重建、重复活动或消耗前，核对11月12日房车修复、Affinity 上限与赛季入口。', '重建、重複活動或消耗前，核對11月12日房車修正、Affinity 上限與賽季入口。'),
+    subtitle: t('Check Nighttime Gathering turn-in, refresh and points fixes, missing furniture, Affinity limits and season entry before spending.', '消耗前核对 Nighttime Gathering 交付、刷新与积分修复、家具丢失、Affinity 上限及赛季入口。', '消耗前核對 Nighttime Gathering 交付、重新整理與積分修正、家具遺失、Affinity 上限及賽季入口。'),
     tag: t('Home season', '家园换季', '家園換季'),
     lead: t('The October 29 update replaces Harvest Moon Festival with Magical Wonder Night. Start by checking RV level 10 and Act Seven: Festivals of Astra. Do not plan current purchases around the old October 20–21 Harvest Gathering schedule or assume old seeds still plant normally.', '10月29日更新将丰收季切换为 Magical Wonder Night。先核对房车10级与 Act Seven: Festivals of Astra；当前兑换不应沿用10月20–21日丰收聚会排期，也不能假设旧种子仍可正常种植。', '10月29日更新將豐收季切換為 Magical Wonder Night。先核對房車10級與 Act Seven: Festivals of Astra；目前兌換不應沿用10月20–21日豐收聚會排期，也不能假設舊種子仍可正常種植。'),
     body: [
+      ...getLateNovemberHomeBlocks(locale),
       ...getNovemberHomeBlocks(locale),
       { t: 'h', c: t('Start here: entry missing, activity locked or old items gone?', '先定位：没有入口、活动锁定，还是旧物品不见了？', '先定位：沒有入口、活動鎖定，還是舊物品不見了？') },
       { t: 'link', href: sourceById.get('aniimo-s1-part-two-2026-10-27')!.url, c: t('Checklist updated November 3: October 29 Home season announcement', '11月3日更新检查流程：查看10月29日家园换季公告', '11月3日更新檢查流程：查看10月29日家園換季公告') },
@@ -247,10 +249,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug === 'aniimo-egg-heist') return {
     title: t('Aniimo Egg Heist: Fair PVP vs PVE / Chaos', '伊莫 Egg Heist：公平 PVP 与 PVE／Chaos 怎么选', '伊莫 Egg Heist：公平 PVP 與 PVE／Chaos 怎麼選'),
-    subtitle: t('Compare entry gates, Giga-Egg victory rules, equipment limits and post-update egg delivery.', '对照参与条件、Giga-Egg 胜负判定、装备限制与更新后蛋的去向。', '對照參與條件、Giga-Egg 勝負判定、裝備限制與更新後蛋的去向。'),
+    subtitle: t('Compare the new collectible choice reward with shop blind boxes, then check mode gates and Giga-Egg changes.', '先对照新增收藏品自选奖励与商店盲盒，再核对模式门槛和 Giga-Egg 调整。', '先對照新增收藏品自選獎勵與商店盲盒，再核對模式門檻和 Giga-Egg 調整。'),
     tag: 'Egg Heist',
     lead: t('Choose the mode before preparing a loadout. The October 29 fair PVP test has three competing teams and balanced deployed stats; it is different from the existing PVE / Chaos progression. The final Twine owner wins, not necessarily the team that built most activation.', '先选模式，再准备装备。10月29日新增公平 PVP 测试为三队争夺、出战属性平衡调整，与既有 PVE／Chaos 成长玩法不同。最终 Twine 归属决定胜负，不是累计激活最多的队伍必胜。', '先選模式，再準備裝備。10月29日新增公平 PVP 測試為三隊爭奪、出戰屬性平衡調整，與既有 PVE／Chaos 成長玩法不同。最終 Twine 歸屬決定勝負，不是累計啟用最多的隊伍必勝。'),
     body: [
+      ...getLateNovemberEggBlocks(locale),
       ...getNovember12Blocks(locale, true),
       ...getNovemberFixBlocks(locale, true),
       { t: 'h', c: t('1. Select the ruleset', '1. 先选规则组', '1. 先選規則組') },
@@ -345,11 +348,12 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
   };
   if (slug !== 'aniimo-launch-checklist-known-issues') return undefined;
   return {
-    title: t('Aniimo November 12 Maintenance, Whirlbite Reset & Fixes', '伊莫11月12日维护、Whirlbite 重置与问题排查', '伊莫11月12日維護、Whirlbite 重置與問題排查'),
-    subtitle: t('Check the maintenance window, Whirlbite reset eligibility and deadline, then match mobile or console symptoms to dated fixes.', '先核对维护窗口、Whirlbite 重置资格与截止，再按手机或主机症状排查。', '先核對維護視窗、Whirlbite 重置資格與截止，再按手機或主機症狀排查。'),
+    title: t('Aniimo Known Issues, November Fixes & Whirlbite Reset', '伊莫近期修复、已知问题与 Whirlbite 重置', '伊莫近期修正、已知問題與 Whirlbite 重置'),
+    subtitle: t('Match current symptoms to November 13/17 updates, then check Whirlbite reset eligibility and its November 27 deadline.', '按症状核对11月13／17日更新，再检查 Whirlbite 重置资格与11月27日截止。', '按症狀核對11月13／17日更新，再檢查 Whirlbite 重置資格與11月27日截止。'),
     tag: t('Known issues', '问题排查', '問題排查'),
-    lead: t('If login fails on November 12, check scheduled maintenance first. Then match your platform and exact symptom. The November 12 update notice was published November 9 and checked November 12; older patches below retain their own evidence dates. Resetting eligible Whirlbite removes corresponding progression effects: read the scope before acting. These are official announcements and scoped next checks, not client tests or a live unresolved-bug list.', '11月12日无法登录时，先核对计划维护，再匹配平台和准确症状。11月12日更新公告发布于11月9日、核对于11月12日；下方旧补丁保留各自核验日期。符合资格的 Whirlbite 重置会撤销对应成长效果，操作前先看范围。这里是官方公告与对应核对步骤，不是客户端实测或实时未解决 Bug 清单。', '11月12日無法登入時，先核對計畫維護，再符合平台和準確症狀。11月12日更新公告發布於11月9日、核對於11月12日；下方舊補丁保留各自核驗日期。符合資格的 Whirlbite 重置會撤銷對應成長效果，操作前先看範圍。這裡是官方公告與對應核對步驟，不是客戶端實測或即時未解決 Bug 清單。'),
+    lead: t('Start with your platform and exact symptom. The rolling log checked November 23 includes November 13/17 changes and still-listed issues. The November 12 update notice was published November 9 and checked November 12; older patches below retain their own evidence dates. Resetting eligible Whirlbite removes corresponding progression effects: read the scope before acting. These are official announcements and scoped next checks, not client tests or a live unresolved-bug list.', '先匹配平台和准确症状。11月23日核验的滚动日志包括11月13／17日调整和仍列已知问题。11月12日更新公告发布于11月9日、核对于11月12日；下方旧补丁保留各自核验日期。符合资格的 Whirlbite 重置会撤销对应成长效果，操作前先看范围。这里是官方公告与对应核对步骤，不是客户端实测或实时未解决 Bug 清单。', '先符合平台和準確症狀。11月23日核驗的滾動日誌包括11月13／17日調整和仍列已知問題。11月12日更新公告發布於11月9日、核對於11月12日；下方舊補丁保留各自核驗日期。符合資格的 Whirlbite 重置會撤銷對應成長效果，操作前先看範圍。這裡是官方公告與對應核對步驟，不是客戶端實測或即時未解決 Bug 清單。'),
     body: [
+      ...getLateNovemberIssueBlocks(locale),
       ...getNovember12Blocks(locale),
       ...getNovemberSupportBlocks(locale),
       ...getNovemberFixBlocks(locale),
