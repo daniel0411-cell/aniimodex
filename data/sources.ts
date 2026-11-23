@@ -90,6 +90,20 @@ export const sources: SourceReference[] = [
     evidence: 'Official Steam news API full body read November 6. Published November 5 at 06:24:15 UTC. Lists specific fixes for Giga-Egg wind interaction, PS5 invitations, Storage Box selection after teleport, evolution buttons, Holo Training Ace, Windchaser Stamps, Gravity Pull, controller mail and emote controls, furniture and Nimbi display. Fixes an unintended climbable water column in The Challenge of Fighting Upstream!, not a universal quest route. Adds Steam/Epic self-unlink under Settings > Account Settings and Season Recipes for level 1 facilities. Does not establish cross-save, console self-unlink, purchase transfer, retroactive rewards, recipe yields or live-client reproduction.',
   },
   {
+    id: 'aniimo-jaguaraun-delay-2026-11-16',
+    url: 'https://x.com/Aniimo_EN/status/2122102376811090146',
+    title: 'Official Aniimo November 16 Resonance Fantasia postponement',
+    accessedAt: '2026-11-23',
+    evidence: 'Official @Aniimo_EN post directly read through browser November 23; displayed November 16 publication date. Explicitly postpones November 20 event to after November 26 update through December 17 03:59 local server time. Raising items promised with details in later in-game mail, not proof of delivery or quantities. Supersedes October 27 event window. Does not provide full quest chain, recipe ingredients or exact opening hour.',
+  },
+  {
+    id: 'aniimo-handbook-orb-2026-11-23',
+    url: 'https://www.aniimo.com/newslist/detail/100244',
+    title: 'Part 2 Companion Handbook and Prismana Orb rules — October 27',
+    accessedAt: '2026-11-23',
+    evidence: 'Official webpage read through browser November 23. Focused scope: Standard/Advanced/Collector handbook rewards, Monday 04:00 weekly reset, no weekly EXP cap, season-series prerequisites, Daily Activity EXP, server-specific handbook deadlines and this handbook egg returning through Home in S3. Adjusted existing Orb explicitly requires unlocked Prismana Form and retains Acquired Potential/Mutation/Personality. Separate regional/global item descriptions do not document every unlock condition. No prices, reward-level EXP curve, full egg pools, other species rerun dates or live-client tests established.',
+  },
+  {
     id: 'aniimo-s1-part-two-2026-10-27',
     url: 'https://steamcommunity.com/games/4126040/announcements/detail/687520329382238609',
     title: 'Aniimo S1 Departure with the Wind Part 2 - October 29 update',

@@ -1,3 +1,4 @@
+import { getOrbBlocks } from './handbook-orb-guidance';
 import { getLateNovemberEggBlocks, getLateNovemberHomeBlocks, getLateNovemberIssueBlocks } from '@/data/november-late-updates';
 import type { LaunchGuide } from '@/data/launch-guides';
 import { mobilityIndex } from '@/lib/mobility';
@@ -253,9 +254,6 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     tag: 'Egg Heist',
     lead: t('Choose the mode before preparing a loadout. The October 29 fair PVP test has three competing teams and balanced deployed stats; it is different from the existing PVE / Chaos progression. The final Twine owner wins, not necessarily the team that built most activation.', '先选模式，再准备装备。10月29日新增公平 PVP 测试为三队争夺、出战属性平衡调整，与既有 PVE／Chaos 成长玩法不同。最终 Twine 归属决定胜负，不是累计激活最多的队伍必胜。', '先選模式，再準備裝備。10月29日新增公平 PVP 測試為三隊爭奪、出戰屬性平衡調整，與既有 PVE／Chaos 成長玩法不同。最終 Twine 歸屬決定勝負，不是累計啟用最多的隊伍必勝。'),
     body: [
-      ...getLateNovemberEggBlocks(locale),
-      ...getNovember12Blocks(locale, true),
-      ...getNovemberFixBlocks(locale, true),
       { t: 'h', c: t('1. Select the ruleset', '1. 先选规则组', '1. 先選規則組') },
       { t: 'table', head: [t('Mode', '模式', '模式'), t('Entry / preparation', '入口／准备', '入口／準備'), t('Decision', '选择依据', '選擇依據')], rows: [
         [t('Fair PVP test', '公平 PVP 测试', '公平 PVP 測試'), t('Character level 50 + Rising Egg Scout; announced daily 18:00–24:00. The segment does not clearly specify an absolute timezone: check your server panel.', '角色50级＋Rising Egg Scout；公告每天18:00–24:00，该段未明确绝对时区，请查所在服面板。', '角色50級＋Rising Egg Scout；公告每天18:00–24:00，該段未明確絕對時區，請查所在服面板。'), t('No configured equipment loadout or carried items; deployed stats adjusted. Prepare for Twine ownership, not a gear advantage.', '不允许配置装备或带入物品，出战属性会调整；围绕 Twine 归属准备，不能套用装备优势。', '不允許配置裝備或帶入物品，出戰屬性會調整；圍繞 Twine 歸屬準備，不能套用裝備優勢。')],
@@ -272,6 +270,10 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
       { t: 'p', c: t('Only newly obtained Mysterious Prismana Egg, Umbral Aniimo Egg and Ruins Aniimo Egg after the update are announced to include Whisperwake Aniimo. Do not assume old stored eggs gained that pool. Settlement eggs go directly to Inventory Warehouse; check the settlement preview and warehouse before looking for mail or reporting a missing reward.', '公告明确是更新后新获得的 Mysterious Prismana Egg、Umbral Aniimo Egg、Ruins Aniimo Egg 可孵出 Whisperwake 伊莫，不能推定旧库存自动扩池。结算蛋直接进入 Inventory Warehouse；先查结算预览和仓库，再查邮件或报告奖励丢失。', '公告明確是更新後新獲得的 Mysterious Prismana Egg、Umbral Aniimo Egg、Ruins Aniimo Egg 可孵出 Whisperwake 伊莫，不能推定舊庫存自動擴池。結算蛋直接進入 Inventory Warehouse；先查結算預覽和倉庫，再查郵件或回報獎勵遺失。') },
       { t: 'link', href: '/guide/aniimo-prismana-potential-breeding-guide', c: t('Egg rewards, Sparkling style and Potential are different decisions', '蛋奖励、Sparkling 样式与潜能是不同选择', '蛋獎勵、Sparkling 樣式與潛能是不同選擇') },
       { t: 'quote', c: t('Checked November 1, 2026 using the October 27 announcement and October 30 patch. No live match, loot sample or optimum team was tested. The following Erlath guidance and Dev Feedback | Oct 13 / October 15 v1.0.3732728.0 references are dated history, not the latest patch.', '2026年11月1日核对10月27日公告与10月30日补丁。未实测对局、掉落样本或最优队伍。下方 Erlath 说明与 Dev Feedback | Oct 13／10月15日 v1.0.3732728.0 是历史记录，不是最新补丁。', '2026年11月1日核對10月27日公告與10月30日補丁。未實測對局、掉落樣本或最佳隊伍。下方 Erlath 說明與 Dev Feedback | Oct 13／10月15日 v1.0.3732728.0 是歷史紀錄，不是最新補丁。') },
+      ...getLateNovemberEggBlocks(locale),
+      { t: 'h', c: t('Dated fixes: match a remaining symptom', '历史修复：按仍存在的症状排查', '歷史修正：按仍存在的症狀排查') },
+      ...getNovember12Blocks(locale, true),
+      ...getNovemberFixBlocks(locale, true),
     ],
   };
   if (slug === 'aniimo-prismana-potential-breeding-guide') return {
@@ -281,12 +283,13 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     lead: t('Choose the result first: a different unlocked hue, a new random hue, an exclusive pod effect, a form change or growth progression. These are separate systems. The October 29 update expressly says replacing a Legendary Aniipod does not change Acquired Potential.', '先确定目标：切换已解锁色彩、随机开新色、获得专属球效果、转换形态，还是推进养成。这些属于不同系统；10月29日更新明确说，替换传奇 Aniipod 不改变 Acquired Potential。', '先確定目標：切換已解鎖色彩、隨機開新色、獲得專屬球效果、轉換形態，還是推進養成。這些屬於不同系統；10月29日更新明確說，替換傳說 Aniipod 不改變 Acquired Potential。'),
     body: [
       { t: 'sparklingDecision' },
+      ...getOrbBlocks(locale),
       { t: 'h', c: t('1. Match the action to the desired result', '1. 按目标选操作', '1. 按目標選操作') },
       { t: 'table', head: [t('Goal / action', '目标／操作', '目標／操作'), t('Cost or condition', '消耗或条件', '消耗或條件'), t('Limit to check before confirming', '确认前核对限制', '確認前核對限制')], rows: [
         ['Hue Swap', t('Credits; an unlocked hue on this same individual.', 'Credits；该个体已解锁色彩。', 'Credits；該個體已解鎖色彩。'), t('Unlocks are individual-specific, not shared by the species. Compare unlocked previews before rerolling.', '解锁只对同一个体有效，不在同物种间共享；先查已解锁预览，再决定是否重洗。', '解鎖只對同一個體有效，不在同物種間共享；先查已解鎖預覽，再決定是否重洗。')],
         ['Hue Reroll / Sparkling Pigment', t('Random hue unlock / reroll.', '随机解锁／重洗色彩。', '隨機解鎖／重洗色彩。'), t('Not a selector for any desired hue. A duplicate returns 2 Sparkling Sigil, not a guaranteed new hue.', '不是任意选色券；重复返回2枚 Sparkling Sigil，不保证新色。', '不是任意選色券；重複返回2枚 Sparkling Sigil，不保證新色。')],
         ['Use Legendary Aniipod', t('Eligible Sparkling Aniimo; replaces its bound Aniipod and grants the exclusive effect.', '符合条件的 Sparkling 伊莫；替换绑定 Aniipod 并赋予专属效果。', '符合條件的 Sparkling 伊莫；替換綁定 Aniipod 並賦予專屬效果。'), t('Acquired Potential does not change. Cannot use on Irisalis, Helion or Lunara.', '不改变 Acquired Potential；不能用于 Irisalis、Helion、Lunara。', '不改變 Acquired Potential；不能用於 Irisalis、Helion、Lunara。')],
-        ['Prismana Orb', t('Form conversion; inspect exact item and eligible target.', '转换形态；核对准确道具及适用目标。', '轉換形態；核對準確道具及適用目標。'), t('The notice lists broadened orb use, a Whisperwake Isles variant and a global orb with overlapping names. Verify the current item description; do not assume every orb is interchangeable.', '公告同时列旧球适用范围扩大、Whisperwake Isles 版与全区域球，名称有重叠；以当前道具说明确认，不能假设全部通用。', '公告同時列舊球適用範圍擴大、Whisperwake Isles 版與全區域球，名稱有重疊；以目前道具說明確認，不能假設全部通用。')],
+        ['Prismana Orb', t('The adjusted existing Orb requires an unlocked Prismana Form; inspect the exact variant.', '原有 Orb 调整后要求已解锁 Prismana 形态；核对具体版本。', '原有 Orb 調整後要求已解鎖 Prismana 形態；核對具體版本。'), t('The notice lists broadened orb use, a Whisperwake Isles variant and a global orb with overlapping names. Verify the current item description; do not assume every orb is interchangeable.', '公告同时列旧球适用范围扩大、Whisperwake Isles 版与全区域球，名称有重叠；以当前道具说明确认，不能假设全部通用。', '公告同時列舊球適用範圍擴大、Whisperwake Isles 版與全區域球，名稱有重疊；以目前道具說明確認，不能假設全部通用。')],
         ['Potential Reset Card', t('Capability Awakening reset after Aniimo exceeds level 60.', '伊莫超过60级后重置 Capability Awakening。', '伊莫超過60級後重置 Capability Awakening。'), t('Not a hue or form-change item, and no guaranteed perfect result is established here.', '不是换色或变形道具，本站没有确认必得满潜结果。', '不是換色或變形道具，本站沒有確認必得滿潛結果。')],
         ['Dewdrop Crystal / Mark of the Strong', t('Resonance Star Up / re-contract a held item, respectively.', '分别用于 Resonance Star Up／重新契约 Held Item。', '分別用於 Resonance Star Up／重新契約 Held Item。'), t('Season Tag allows any-region crystals; Mark of the Strong is now merged across regions. Check the tag and target rather than treating these as cosmetic materials.', 'Season Tag 可用任意区域晶体；Mark of the Strong 已跨区合并。核对标签和目标，不把这些当外观材料。', 'Season Tag 可用任意區域晶體；Mark of the Strong 已跨區合併。核對標籤和目標，不把這些當外觀材料。')],
       ] },
@@ -306,6 +309,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     tag: t('Limited events', '限时活动', '限時活動'),
     lead: t('Aniimo Dash requires Lv.40; Prismana Snapshots and rotation require Student II; Fantasy Resonance requires Student I. The November 12 update notice, published November 9 and checked November 12, replaces the older racing preview and photo opening time. Start after the version update, then use the mode, track and server tables below. These are announced windows, not live availability or verified spawns.', 'Aniimo Dash 要求40级，Prismana Snapshots 与轮换要求 Student II，Fantasy Resonance 要求 Student I。11月9日发布、11月12日核对的更新公告替代旧竞速预告和摄影开场时间。版本更新后，按下方模式、赛道与服务器表准备；这里是公告窗口，不是实时开放或刷新监测。', 'Aniimo Dash 要求40級，Prismana Snapshots 與輪換要求 Student II，Fantasy Resonance 要求 Student I。11月9日發布、11月12日核對的更新公告替代舊競速預告和攝影開場時間。版本更新後，按下方模式、賽道與伺服器表準備；這裡是公告視窗，不是即時開放或刷新監測。'),
     body: [
+      { t: 'link', href: '/guide/is-aniimo-free-to-play', c: t('Hypnyto handbook: free vs Advanced rewards and catch-up checks', 'Hypnyto 手册：免费与进阶奖励、追赶条件核对', 'Hypnyto 手冊：免費與進階獎勵、追趕條件核對') },
       ...getNovemberEventBlocks(locale),
       { t: 'h', c: t('1. Select your server and rotation', '1. 选择服务器与轮换', '1. 選擇伺服器與輪換') },
       { t: 'prismanaSchedule' },

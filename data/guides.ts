@@ -113,11 +113,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'is-aniimo-free-to-play',
-    updatedAt: '2026-10-27',
+    updatedAt: '2026-11-23',
     date: '2026-08-30',
     readMinutes: 6,
     relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
-    sourceIds: ['aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-sparkling-disclosure-2026-10-27', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
+    sourceIds: ['aniimo-handbook-orb-2026-11-23', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-sparkling-disclosure-2026-10-27', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
   },
   {
     slug: 'how-to-download-aniimo',
@@ -298,7 +298,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-jaguaraun-delay-2026-11-16', 'aniimo-handbook-orb-2026-11-23', 'aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',
@@ -600,7 +600,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-potential-breeding-guide',
-    updatedAt: '2026-11-03',
+    updatedAt: '2026-11-23',
     element: '暗',
     date: '2026-10-16',
     readMinutes: 7,
@@ -612,6 +612,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-dev-dispatch-roadmap',
     ],
     sourceIds: [
+      'aniimo-handbook-orb-2026-11-23',
       'aniimo-official-wiki-basic-2026-10-23',
       'aniimo-official-sparkling-disclosure-2026-10-27',
       'aniimo-steam-dev-dispatch-1-2026-10-01',

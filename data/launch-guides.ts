@@ -1,3 +1,4 @@
+import { getHandbookBlocks } from './handbook-orb-guidance';
 import { getAccessGuide } from './access-guides';
 import { getPartTwoGuide } from '@/data/part-two-guides';
 import { getAllAniimos } from '@/lib/aniimo';
@@ -1480,9 +1481,9 @@ function currenciesGuide(locale: string): LaunchGuide {
       'Aniimo 貨幣與獎勵：領取條件與消費核對'
     ),
     subtitle: text(
-      'Check official Glimmer compensation, Harvest Moon Points bonuses and Sparkling Cube style probabilities before spending.',
-      '消费前核对官方 Glimmer 补偿资格、Harvest Moon Points 增益与 Sparkling Cube 样式概率。',
-      '消費前核對官方 Glimmer 補償資格、Harvest Moon Points 增益與 Sparkling Cube 樣式機率。'
+      'Compare Hypnyto handbook rewards and catch-up rules, then check currency eligibility and Sparkling Cube probabilities.',
+      '先对照 Hypnyto 手册奖励与追赶规则，再核对货币领取资格和 Sparkling Cube 概率。',
+      '先對照 Hypnyto 手冊獎勵與追趕規則，再核對貨幣領取資格和 Sparkling Cube 機率。'
     ),
     tag: text('Currencies & Rewards', '货币与奖励', '貨幣與獎勵'),
     lead: text(
@@ -1491,6 +1492,7 @@ function currenciesGuide(locale: string): LaunchGuide {
       '官方公告確認部分獎勵與增益，並未提供完整貨幣兌換表或通用消費排名。使用稀缺資源前，請核對帳號資格、目前商店價格及道具說明。'
     ),
     body: [
+      ...getHandbookBlocks(locale),
       {
         t: 'h',
         c: text(
@@ -3333,6 +3335,7 @@ export function getLaunchGuide(locale: string, slug: string): LaunchGuide | unde
 }
 
 export function getPracticalSupportBlocks(locale: string, slug: string): LaunchGuideBlock[] {
+  if (slug === 'aniimo-forms-explained') return [{ t: 'link', href: '/guide/aniimo-prismana-potential-breeding-guide', c: locale === 'en' ? 'Before using a Prismana Orb: compare unlock requirements and regional variants' : locale === 'zh-Hant' ? '使用 Prismana Orb 前：對照解鎖前置與區域版本' : '使用 Prismana Orb 前：对照解锁前置与区域版本' }];
   const text = (en: string, hans: string, hant: string) =>
     locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   if (slug === 'aniimo-system-requirements') return [

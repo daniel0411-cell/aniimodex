@@ -342,7 +342,7 @@ export default async function GuidePostPage({
           <p className="text-base text-text-muted">{subtitle}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-muted">
             <span>{t('pageUpdated', { date: post.updatedAt ?? post.date })}</span>
-            {sourceCheckedAt && <span>{t('sourceChecked', { date: sourceCheckedAt })}</span>}
+            {sourceCheckedAt && <span>{locale === 'en' ? `Most recent source check: ${sourceCheckedAt}` : locale === 'zh-Hant' ? `最近一次來源查閱：${sourceCheckedAt}` : `最近一次来源查阅：${sourceCheckedAt}`}</span>}
             <span>
               {post.readMinutes} {t('minRead')}
             </span>
@@ -351,8 +351,8 @@ export default async function GuidePostPage({
             <div className="border-l-4 border-secondary bg-emerald-50 px-4 py-3 text-sm text-emerald-950">
               <strong>{['aniimo-platforms', 'how-to-download-aniimo', 'aniimo-release-date'].includes(post.slug)
                 ? locale === 'en' ? 'Download routes checked October 23; historical sources dated below' : locale === 'zh-Hant' ? '下載入口於 10 月 23 日核對；歷史來源日期見下方' : '下载入口于 10 月 23 日核对；历史来源日期见下方'
-                : t('verifiedOfficial')}</strong>
-              {!['aniimo-platforms', 'how-to-download-aniimo', 'aniimo-release-date'].includes(post.slug) && <span className="ml-2">{t('lastVerified', { date: sourceCheckedAt || post.date })}</span>}
+                : locale === 'en' ? 'Official sources and evidence limits' : locale === 'zh-Hant' ? '官方來源與證據範圍' : '官方来源与证据范围'}</strong>
+              {!['aniimo-platforms', 'how-to-download-aniimo', 'aniimo-release-date'].includes(post.slug) && <span className="ml-2">{locale === 'en' ? 'Source dates and unresolved details are listed below; source references do not imply live-game testing.' : locale === 'zh-Hant' ? '各來源日期與未確認細節見下文；引用來源不代表實機測試。' : '各来源日期与未确认细节见下文；引用来源不代表实机测试。'}</span>}
             </div>
           )}
           {post.slug === 'aniimo-pre-registration' && (

@@ -23,7 +23,7 @@ export function getNovemberPlanningCards(locale: string) {
     {
       date: '11/27 · 04:00 → 12/04 · 03:59',
       title: t('Photo / ecological phase 3', '摄影／生态调查第三期', '攝影／生態調查第三期'),
-      action: t('Check the new panel targets and forms. Existing album photos can serve Who’s That Aniimo; duplicate ecological targets do not add progress. Fantasy Resonance continues separately until December 10 03:59.', '核对新面板目标及形态。Who’s That Aniimo 可用旧相册照片，生态调查重复目标不增加进度；Fantasy Resonance 另行持续至12月10日03:59。', '核對新面板目標及形態。Who’s That Aniimo 可用舊相簿照片，生態調查重複目標不增加進度；Fantasy Resonance 另行持續至12月10日03:59。'),
+      action: t('Check the new panel targets and forms. Existing album photos can serve Who’s That Aniimo; duplicate ecological targets do not add progress. Fantasy Resonance is postponed to after the November 26 update, ending December 17 03:59 local server time.', '核对新面板目标及形态。Who’s That Aniimo 可用旧相册照片，生态调查重复目标不增加进度；Fantasy Resonance 延至11月26日更新后，12月17日各服当地时间03:59截止。', '核對新面板目標及形態。Who’s That Aniimo 可用舊相簿照片，生態調查重複目標不增加進度；Fantasy Resonance 延至11月26日更新後，12月17日各服當地時間03:59截止。'),
       href: '/guide/aniimo-prismana-event-tracker',
     },
   ];

@@ -45,12 +45,12 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(html.includes(locale === 'en' ? 'AI-assisted editorial illustrations' : locale === 'zh-Hans' ? 'AI 辅助编辑示意图' : 'AI 輔助編輯示意圖'));
   assert(html.includes('data-result="choose"') && html.includes('aria-live="polite"'));
   assert(html.includes('<fieldset disabled=""'), 'Controls must wait for interactive hydration');
-  assert(html.includes('2026-11-03') && html.includes('687520329382238609'));
+  assert(html.includes('2026-11-23') && html.includes('687520329382238609'));
   assert(html.indexOf('data-testid="sparkling-decision"') < html.indexOf('<table'));
   assert(html.includes('<table') && html.includes('Acquired Potential') && html.includes('Sparkling Sigil'));
   assert(!html.includes('noindex'));
   const sitemap = readFileSync('out/sitemap.xml', 'utf8');
   const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find((m) => m[1].includes(`<loc>https://aniimodex.com/${locale}/guide/${slug}/</loc>`));
-  assert(entry?.[1].includes('<lastmod>2026-11-03</lastmod>'));
+  assert(entry?.[1].includes('<lastmod>2026-11-23</lastmod>'));
 }
 console.log('Sparkling operation checks passed: unknown inputs, exclusions, individual unlocks, preserved Potential and three-locale static fallback.');

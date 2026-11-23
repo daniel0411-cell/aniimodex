@@ -32,7 +32,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert.equal((events.match(/data-status="unknown"/g) ?? []).length, 5);
   assert(!events.includes('No replacement event has been verified here'));
   assert(!events.includes('noindex'));
-  for (const term of ['Aniimo Dash', 'Fantasy Resonance', 'Lv.40', 'Student I', '2026-11-19 10:00', '2026-11-20 04:00', '2026-12-10 07:59', '2026-12-09 23:59', '2026-12-09 19:59', 'Greenfield Shallows', 'Gullcove Cliffs', 'Redrock Trail', 'Prismana Snapshots', '18:00–24:00', '100298', '100244']) assert(events.includes(term), `${locale}: missing November event fact ${term}`);
+  for (const term of ['Aniimo Dash', 'Fantasy Resonance', 'Lv.40', 'Student I', '2026-11-19 10:00', '2026-11-26 update', '2026-12-17 03:59', '2122102376811090146', '2026-12-10 07:59', '2026-12-09 23:59', '2026-12-09 19:59', 'Greenfield Shallows', 'Gullcove Cliffs', 'Redrock Trail', 'Prismana Snapshots', '18:00–24:00', '100298', '100244']) assert(events.includes(term), `${locale}: missing November event fact ${term}`);
   assert(!events.includes('2026-11-12 10:00'), `${locale}: superseded racing opening`);
   const photoRules = {
     en: ['Dazzling Sparkling and Shadow Sparkling do not count toward those five.', 'shared once per phase', 'not at 04:00'],

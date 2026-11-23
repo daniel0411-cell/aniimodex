@@ -87,7 +87,7 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
     const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
     const article = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
       .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
-    assert.equal(article?.dateModified, slug === 'aniimo-harvest-gathering-farm-guide' ? '2026-11-03' : '2026-10-27', `${locale}/${slug}: substantive update date`);
+    assert.equal(article?.dateModified, slug === 'is-aniimo-free-to-play' ? '2026-11-23' : slug === 'aniimo-harvest-gathering-farm-guide' ? '2026-11-03' : '2026-10-27', `${locale}/${slug}: substantive update date`);
   }
   const home = read('');
   assert(home.includes(locale === 'en' ? 'Patch archive: October 15' : locale === 'zh-Hant' ? '歷史補丁：10 月 15 日' : '历史补丁：10 月 15 日'));
