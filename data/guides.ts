@@ -237,6 +237,7 @@ export const guidePosts: GuidePost[] = [
       'getting-started',
     ],
     sourceIds: [
+      'aniimo-weekly-planning-2026-11-23',
       'aniimo-late-november-fixes-2026-11-23',
       'aniimo-november-12-update-2026-11-12',
       'aniimo-november-2-fixes-2026-11-09',
@@ -275,16 +276,16 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-holo-battle-interlink',
-    updatedAt: '2026-11-12',
+    updatedAt: '2026-11-23',
     date: '2026-09-28',
-    readMinutes: 6,
+    readMinutes: 8,
     relatedSlugs: [
       'aniimo-egg-heist',
       'aniimo-multiplayer',
       'aniimo-team-composition',
       'aniimo-version-1-1-update',
     ],
-    sourceIds: ['aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05', 'aniimo-november-12-update-2026-11-12'],
+    sourceIds: ['aniimo-weekly-planning-2026-11-23', 'aniimo-late-november-fixes-2026-11-23', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3880756-2026-11-05', 'aniimo-november-12-update-2026-11-12'],
   },
   {
     slug: 'aniimo-prismana-event-tracker',
@@ -298,7 +299,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-jaguaraun-delay-2026-11-16', 'aniimo-handbook-orb-2026-11-23', 'aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-weekly-planning-2026-11-23', 'aniimo-jaguaraun-delay-2026-11-16', 'aniimo-handbook-orb-2026-11-23', 'aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',

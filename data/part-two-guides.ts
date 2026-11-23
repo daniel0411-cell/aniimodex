@@ -1,3 +1,4 @@
+import { getWeeklyRewardBlocks, getInterlinkTriageBlocks, getEventPreparationBlocks, getCatchUpScopeBlocks, getEggGoalBlocks } from './priority-player-tasks';
 import { getOrbBlocks } from './handbook-orb-guidance';
 import { getLateNovemberEggBlocks, getLateNovemberHomeBlocks, getLateNovemberIssueBlocks } from '@/data/november-late-updates';
 import type { LaunchGuide } from '@/data/launch-guides';
@@ -188,11 +189,12 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     ],
   };
   if (slug === 'aniimo-holo-battle-interlink') return {
-    title: t('Aniimo Holo-Battle Interlink: Pick a Route & Claim Stars', '伊莫 Holo-Battle Interlink：选路线与领取星级奖励', '伊莫 Holo-Battle Interlink：選路線與領取星級獎勵'),
-    subtitle: t('Use the Part 2 independent routes, solo/team options and manual reward checks without inventing a best lineup.', '按后半段独立路线、单人／组队入口与手动领奖规则规划周常。', '按後半段獨立路線、單人／組隊入口與手動領獎規則規劃週常。'),
+    title: t('Aniimo Holo-Battle: Trial Rewards & Interlink Stars', '伊莫 Holo-Battle：Trial 周奖励与 Interlink 星级', '伊莫 Holo-Battle：Trial 週獎勵與 Interlink 星級'),
+    subtitle: t('Separate Sim first-clear, Trial weekly and Training Index rewards, then choose an Interlink path and check manual claims.', '区分 Sim 首通、Trial 每周与 Training Index 奖励，再安排 Interlink 路线和手动领奖。', '區分 Sim 首通、Trial 每週與 Training Index 獎勵，再安排 Interlink 路線和手動領獎。'),
     tag: t('Weekly mode', '每周模式', '每週模式'),
     lead: t('After October 29, left, middle and right paths are independent gameplay instances. Choose the path you need, inspect its current mechanics, and claim the phase’s star rewards manually. The older four-player summary alone no longer describes every entry option.', '10月29日后，左、中、右路为独立玩法副本。先选需要的路线、阅读当期机制，完成后手动领取本期星级奖励；旧版四人合作概述不能完整代表现有入口。', '10月29日後，左、中、右路為獨立玩法副本。先選需要的路線、閱讀當期機制，完成後手動領取本期星級獎勵；舊版四人合作概述不能完整代表現有入口。'),
     body: [
+      ...getWeeklyRewardBlocks(locale),
       { t: 'h', c: t('1. Check weekly access before forming a party', '1. 组队前核对开放条件', '1. 組隊前核對開放條件') },
       { t: 'p', c: t('Trailblazer I remains the announced title requirement. The October 29 notice lists Thursday 04:00 to the following Monday 03:59. This segment does not explicitly label separate server timezones; verify the timer in your server interface instead of assuming UTC+8 applies worldwide.', '公告条件仍为 Trailblazer I；10月29日公告列每周四04:00至下周一03:59。该段未明确逐服时区，请核对所在服界面倒计时，不把 UTC+8 套用到全球。', '公告條件仍為 Trailblazer I；10月29日公告列每週四04:00至下週一03:59。該段未明確逐服時區，請核對所在服介面倒數計時，不把 UTC+8 套用到全球。') },
       { t: 'h', c: t('2. Match the path to the job', '2. 按目标选择路线', '2. 按目標選擇路線') },
@@ -202,6 +204,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
         [t('Check star progress', '查看星级进度', '查看星級進度'), t('Each path retains its own highest star rating; extra stars and total-star rewards were updated.', '各路分别记录最高星级，并新增额外星级、更新总星奖励。', '各路分別記錄最高星級，並新增額外星級、更新總星獎勵。'), t('Compare the missing stars per path with the current milestone, not an older fixed reward table.', '对照各路缺星与当前里程碑，不沿用旧固定奖励表。', '對照各路缺星與目前里程碑，不沿用舊固定獎勵表。')],
         [t('Claim rewards', '领取奖励', '領取獎勵'), t('Each phase’s star rewards must now be claimed manually.', '本期星级奖励现在需要手动领取。', '本期星級獎勵現在需要手動領取。'), t('Open the reward panel after improving stars; completion alone does not confirm delivery.', '提升星级后打开领奖面板，完成挑战不等于已到账。', '提升星級後開啟領獎面板，完成挑戰不等於已到帳。')],
       ] },
+      ...getInterlinkTriageBlocks(locale),
       { t: 'h', c: t('3. A teammate left or rewards look missing?', '3. 队友离开或奖励似乎缺失？', '3. 隊友離開或獎勵似乎缺失？') },
       { t: 'p', c: t('The November 12 update notice, published November 9, announces a fix for Holo-Battle Interlink star rewards that could not be claimed manually under certain circumstances. If stars meet the displayed milestone but claiming fails, check that your server has received the update, then inspect the manual-claim panel and reward balance. If it still fails, record the path, phase, stars and error for support. This is separate from achievement unlocks; the notice does not promise automatic delivery or require a rerun, and we have not verified the fix in the client.', '11月9日发布的11月12日更新公告宣布修复特定情况下 Holo-Battle Interlink 星级奖励无法手动领取的问题。若星数已达到界面里程碑却领取失败，先确认所在服已完成更新，再核对手动领取面板与奖励余额；仍失败时，记录路线、本期、星数和报错反馈客服。这与成就解锁不同；公告未承诺自动补发或要求重打，本站也未实机验证修复。', '11月9日發布的11月12日更新公告宣布修正特定情況下 Holo-Battle Interlink 星級獎勵無法手動領取的問題。若星數已達到介面里程碑卻領取失敗，先確認所在服已完成更新，再核對手動領取面板與獎勵餘額；仍失敗時，記錄路線、本期、星數和錯誤回報客服。這與成就解鎖不同；公告未承諾自動補發或要求重打，本站也未實機驗證修正。') },
       { t: 'link', href: sourceById.get('aniimo-november-12-update-2026-11-12')!.url, c: t('November 12 manual star-reward claim fix', '11月12日星级奖励手动领取修复公告', '11月12日星級獎勵手動領取修正公告') },
@@ -210,7 +213,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
       { t: 'p', c: t('The new notice adds AI assistance when someone leaves during preparation; it does not promise every mid-battle disconnect is replaced. For a reward report, record the path, phase, highest stars and manual-claim screen. Check the selected route and claim state before assuming a lost reward.', '新公告说明准备阶段有人离开时加入 AI 协助，不保证所有战斗中断线都会补位。反馈奖励问题时记录路线、本期、最高星级与手动领取界面；先核对路线和领取状态，再判断是否丢失。', '新公告說明準備階段有人離開時加入 AI 協助，不保證所有戰鬥中斷線都會補位。回報獎勵問題時記錄路線、本期、最高星級與手動領取介面；先核對路線和領取狀態，再判斷是否遺失。') },
       { t: 'link', href: '/guide/aniimo-team-composition', c: t('Compare published roles and mobility without a fabricated best build', '按已公布定位与移动能力比较队伍', '按已公布定位與移動能力比較隊伍') },
       { t: 'link', href: '/guide/aniimo-launch-checklist-known-issues', c: t('Report a reproducible current-version issue', '反馈可复现的当前版本问题', '回報可重現的目前版本問題') },
-      { t: 'quote', c: t('Reviewed November 2, 2026 using the October 27 announcement for October 29. No live-cycle Alpha list, numeric milestone payouts, optimal party or combat route was tested. September rules remain historical source context, not proof of every current option.', '2026年11月2日核对10月27日发布的10月29日公告。未实测当期 Alpha 名单、具体里程碑奖励、最优队伍或战斗路线。9月规则只作历史来源，不代表现有全部选项。', '2026年11月2日核對10月27日發布的10月29日公告。未實測當期 Alpha 名單、具體里程碑獎勵、最佳隊伍或戰鬥路線。9月規則只作歷史來源，不代表現有全部選項。') },
+      { t: 'quote', c: t('Evidence scope: Sim reward categories, Interlink path rules and the rolling timer-issue list were checked against official notices November 23. No live-cycle Alpha list, numeric milestone payouts, optimal party or combat route was tested. September rules remain historical source context, not proof of every current option.', '证据范围：11月23日对照官方公告核对 Sim 奖励类别、Interlink 路线规则及滚动计时问题列表。未实测当期 Alpha 名单、具体里程碑奖励、最优队伍或战斗路线。9月规则只作历史来源，不代表现有全部选项。', '證據範圍：11月23日對照官方公告核對 Sim 獎勵類別、Interlink 路線規則及滾動計時問題清單。未實測當期 Alpha 名單、具體里程碑獎勵、最佳隊伍或戰鬥路線。9月規則只作歷史來源，不代表現有全部選項。') },
     ],
   };
   if (slug === 'aniimo-version-1-1-update') return {
@@ -259,6 +262,7 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
         [t('Fair PVP test', '公平 PVP 测试', '公平 PVP 測試'), t('Character level 50 + Rising Egg Scout; announced daily 18:00–24:00. The segment does not clearly specify an absolute timezone: check your server panel.', '角色50级＋Rising Egg Scout；公告每天18:00–24:00，该段未明确绝对时区，请查所在服面板。', '角色50級＋Rising Egg Scout；公告每天18:00–24:00，該段未明確絕對時區，請查所在服面板。'), t('No configured equipment loadout or carried items; deployed stats adjusted. Prepare for Twine ownership, not a gear advantage.', '不允许配置装备或带入物品，出战属性会调整；围绕 Twine 归属准备，不能套用装备优势。', '不允許配置裝備或帶入物品，出戰屬性會調整；圍繞 Twine 歸屬準備，不能套用裝備優勢。')],
         ['PVE / Chaos', t('Check the current difficulty panel. September 23 rules list Elite Egg Seeker Tier IV + Chaos Ticket for Chaos; these are not the fair PVP entry gate.', '核对当前难度面板。9月23日规则列 Chaos 要求 Elite Egg Seeker Tier IV＋Chaos Ticket，不是公平 PVP 门槛。', '核對目前難度面板。9月23日規則列 Chaos 要求 Elite Egg Seeker Tier IV＋Chaos Ticket，不是公平 PVP 門檻。'), t('Use difficulty-specific combat and recovery rules; higher announced reward chances do not establish exact drop rates or a fastest route.', '按难度处理战斗与恢复；公告奖励概率提高不能推导具体掉率或最快路线。', '按難度處理戰鬥與恢復；公告獎勵機率提高不能推導具體掉率或最快路線。')],
       ] },
+      ...getEggGoalBlocks(locale),
       { t: 'h', c: t('2. Understand the Giga-Egg finish condition', '2. 理解 Giga-Egg 终局判定', '2. 理解 Giga-Egg 終局判定') },
       { t: 'p', c: t('November 5 v1.1.3880756.0 fixes wind affecting the Giga-Egg in unintended ways. Do not reuse an older wind-interaction trick as a verified current strategy. This note publishes no replacement wind mechanic and does not announce a change to the finish condition below.', '11月5日 v1.1.3880756.0 修复风对 Giga-Egg 的非预期影响。不要把旧视频里的风交互技巧直接当作现行有效策略。该条没有公布替代风机制，也没有宣布修改下方终局判定。', '11月5日 v1.1.3880756.0 修正風對 Giga-Egg 的非預期影響。不要把舊影片裡的風互動技巧直接當作現行有效策略。該條沒有公布替代風機制，也沒有宣布修改下方終局判定。') },
       { t: 'link', href: sourceById.get('aniimo-patch-1-1-3880756-2026-11-05')!.url, c: t('Read the November 5 Giga-Egg fix', '查看11月5日 Giga-Egg 修复原文', '查看11月5日 Giga-Egg 修正原文') },
@@ -310,9 +314,11 @@ export function getPartTwoGuide(locale: string, slug: string): LaunchGuide | und
     lead: t('Aniimo Dash requires Lv.40; Prismana Snapshots and rotation require Student II; Fantasy Resonance requires Student I. The November 12 update notice, published November 9 and checked November 12, replaces the older racing preview and photo opening time. Start after the version update, then use the mode, track and server tables below. These are announced windows, not live availability or verified spawns.', 'Aniimo Dash 要求40级，Prismana Snapshots 与轮换要求 Student II，Fantasy Resonance 要求 Student I。11月9日发布、11月12日核对的更新公告替代旧竞速预告和摄影开场时间。版本更新后，按下方模式、赛道与服务器表准备；这里是公告窗口，不是实时开放或刷新监测。', 'Aniimo Dash 要求40級，Prismana Snapshots 與輪換要求 Student II，Fantasy Resonance 要求 Student I。11月9日發布、11月12日核對的更新公告替代舊競速預告和攝影開場時間。版本更新後，按下方模式、賽道與伺服器表準備；這裡是公告視窗，不是即時開放或刷新監測。'),
     body: [
       { t: 'link', href: '/guide/is-aniimo-free-to-play', c: t('Hypnyto handbook: free vs Advanced rewards and catch-up checks', 'Hypnyto 手册：免费与进阶奖励、追赶条件核对', 'Hypnyto 手冊：免費與進階獎勵、追趕條件核對') },
+      ...getEventPreparationBlocks(locale),
       ...getNovemberEventBlocks(locale),
       { t: 'h', c: t('1. Select your server and rotation', '1. 选择服务器与轮换', '1. 選擇伺服器與輪換') },
       { t: 'prismanaSchedule' },
+      ...getCatchUpScopeBlocks(locale),
       { t: 'h', c: t('Where can I check the featured form?', '在哪里核对本期指定形态？', '在哪裡核對本期指定形態？') },
       { t: 'p', c: t('Pouchwisp, Royalby, Jeburst and Glameep now have Basic Form records checked November 8. Use the links in the schedule to compare their published roles, skill conditions and traversal abilities. Use the announcement for the named Prismana target and area pair: Basic Form attributes and habitats do not establish Prismana values or exact spawn points.', 'Pouchwisp、Royalby、Jeburst、Glameep 的基础形态记录已于11月8日核验。可从上表进入详情，比较公开定位、技能条件和移动能力。指定 Prismana 目标与区域仍以公告为准：基础形态属性和栖息地不能证明 Prismana 数值或精确刷新点。', 'Pouchwisp、Royalby、Jeburst、Glameep 的基礎形態記錄已於11月8日核驗。可從上表進入詳情，比較公開定位、技能條件和移動能力。指定 Prismana 目標與區域仍以公告為準：基礎形態屬性和棲息地不能證明 Prismana 數值或精確刷新點。') },
       { t: 'link', href: sourceById.get('aniimo-s1-part-two-2026-10-27')!.url, c: t('Open the official Part 2 announcement for featured forms and areas', '在官方后半段公告核对指定形态与区域', '在官方後半段公告核對指定形態與區域') },

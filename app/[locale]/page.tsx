@@ -217,7 +217,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <p className="text-xs font-semibold uppercase text-emerald-700">{th('latestUpdateLabel')}</p>
         <h2 id="november-plan" className="mt-1 text-xl font-bold text-text-primary">{th('latestUpdateTitle')}</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-text-secondary">{th('latestUpdateDescription')}</p>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {getNovemberPlanningCards(locale).map(card => (
             <Link key={card.date} href={card.href} className="border border-emerald-200 bg-white p-4 hover:border-primary-light">
               <p className="font-mono text-sm font-semibold text-emerald-800">{card.date}</p>

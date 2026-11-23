@@ -13,6 +13,13 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-weekly-planning-2026-11-23',
+    url: 'https://www.aniimo.com/newslist/detail/100244',
+    title: 'Part 2 Holo rewards and late-November event scope — October 27',
+    accessedAt: '2026-11-23',
+    evidence: 'Reread official October 27 notice through browser November 23. Holo Sim adds Dark/Earth/Lightning stages, Trial first-clear and weekly rewards, and Training Index. Interlink paths keep independent highest stars, manual phase claims, Thursday 04:00 to Monday 03:59 without an explicit timezone in that paragraph. Confirms November 27 photo Student II versus ecology Student I gates, form-matched once-only ecology points and double first-survey points for unrecorded Index targets. Confirms November 30–December 7 four-form return and original regions, not concentrated-spawn replay or repeated first-three-Nurture bonuses. Used for editorial task checklists, not a tested optimal route, automatic lower-tier claims, current Alpha lineup or exact reward quantities.',
+  },
+  {
     id: 'aniimo-event-planning-2026-11-21',
     url: 'https://www.aniimo.com/newslist/detail/100244',
     title: 'S1 Part 2 announcement — November 23 rotation and November 27 investigation phases',
