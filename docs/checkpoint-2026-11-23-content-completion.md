@@ -74,3 +74,10 @@ need current game-panel or reproducible evidence. No claim these are done.
 Growth/handbook/form decision aids remain later editorial batches; existing
 Whirlbite checklist and detailed Snapshots rules were retained rather than
 repackaged as new articles.
+
+## Release
+
+Content committed as ba6e034 and pushed to main. Follow-up label correction
+changes the shared homepage planning label from its historical November13
+check date to the November23 plan date, distinct from source observation.
+Git integration deployment is verified from production content after push.
