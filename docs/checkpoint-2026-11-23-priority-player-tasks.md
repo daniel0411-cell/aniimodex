@@ -94,3 +94,18 @@ Validation and publication status are recorded below before release.
 - Release will use the existing Git-triggered production deployment. Production
   visibility must be checked after push; a successful build alone is not proof
   of deployment.
+
+### Production verification
+
+Content commit `3133248` pushed successfully to main. Existing Git-triggered
+production deployment became visible at `https://aniimodex.com` on November 23.
+Verified with the background browser:
+
+- English Holo: new Trial/Interlink title, four reward categories and triage.
+- Simplified event tracker: Student I ecology gate, double first-survey points,
+  and four-form catch-up scope warning.
+- Traditional Egg Heist: goal decision table and Chaos resource-budget row.
+- Simplified homepage: new late-November heading, dedicated catch-up card and
+  separate photo/ecology gates.
+
+This verifies production content visibility, not a traffic or indexing uplift.
