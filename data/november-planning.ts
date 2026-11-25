@@ -3,6 +3,30 @@ export function getNovemberPlanningCards(locale: string) {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return [
     {
+      date: '11/26 · UTC+8 14:00–19:00',
+      title: t('Planned maintenance · all regions', '计划维护 · 全球同一时段', '計畫維護 · 全球同一時段'),
+      action: t('Europe 06–11 UTC+0; Americas 02–07 UTC-4. Finish time can change. Restart after maintenance and check the revised Lv.45/50 story and title handoff.', '欧洲06–11 UTC+0；美洲02–07 UTC-4。结束可能提前或延后；维护后重启，按45／50级剧情与称号交接新要求核对。', '歐洲06–11 UTC+0；美洲02–07 UTC-4。結束可能提前或延後；維護後重啟，按45／50級劇情與稱號交接新要求核對。'),
+      href: '/guide/aniimo-version-1-1-update',
+    },
+    {
+      date: '11/27 · 10:00 → 12/01 · 12:00',
+      title: t('Carnival · free gift · Student I', '嘉年华 · 免费礼包 · Student I', '嘉年華 · 免費禮包 · Student I'),
+      action: t('Server clock. Claim daily rewards and the free Shop > Pack gift. Separate it from paid bundles and Lumin Crystals spent milestones.', '各服时钟。领每日奖励及 Shop > Pack 免费礼包；与付费礼包、Lumin Crystals 累计消耗档位分开看。', '各服時鐘。領每日獎勵及 Shop > Pack 免費禮包；與付費禮包、Lumin Crystals 累計消耗檔位分開看。'),
+      href: '/guide/aniimo-prismana-event-tracker',
+    },
+    {
+      date: '11/26 update → 12/09 · 23:59',
+      title: t('Egg Heist · collectible rate-up', 'Egg Heist · 藏品掉率加成', 'Egg Heist · 藏品掉率加成'),
+      action: t('Team Mode all difficulties: specified common/prized collectible rates +100%. Compare the 200-star missing-item selection with random boxes; no guaranteed missing drop.', 'Team Mode 全难度：指定普通／珍贵藏品掉率＋100%。对照200星补缺自选与随机箱；加成不保证掉缺项。', 'Team Mode 全難度：指定普通／珍貴藏品掉率＋100%。對照200星補缺自選與隨機箱；加成不保證掉缺項。'),
+      href: '/guide/aniimo-egg-heist',
+    },
+    {
+      date: '12/10 · 20:00 UTC+0 = 12/11 · 04:00 UTC+8',
+      title: t('Gracewing · reset decision', 'Gracewing · 重置判断', 'Gracewing · 重置判斷'),
+      action: t('One global deadline, Americas December 10 16:00 UTC-4. Check pre-balance individual eligibility and lost progress before refunding; separate from Whirlbite.', '全球同一截止，美洲12月10日16:00 UTC-4。返还前核对调整前个体资格及撤销成长，不能套用 Whirlbite 时间。', '全球同一截止，美洲12月10日16:00 UTC-4。返還前核對調整前個體資格及撤銷成長，不能套用 Whirlbite 時間。'),
+      href: '/guide/aniimo-launch-checklist-known-issues',
+    },
+    {
       date: '11/23 → 11/30',
       title: 'Glameep · Prismana Vein · Student II',
       action: t('Check Crescent Bay / Echoback Landing for the announced rotation. Snapshots phase 3 is separate: confirm its designated form and missing regular types in the event panel.', '按公告轮换查看 Crescent Bay／Echoback Landing。Snapshots 第三期是另一项活动，请在面板确认指定形态和缺少的普通类型。', '按公告輪換查看 Crescent Bay／Echoback Landing。Snapshots 第三期是另一項活動，請在面板確認指定形態和缺少的普通類型。'),
@@ -29,7 +53,7 @@ export function getNovemberPlanningCards(locale: string) {
     {
       date: '11/26 update → 12/17 · 03:59',
       title: 'Jaguaraun · Student I',
-      action: t('Fantasy Resonance opens after the November 26 update, ending at local server time. Follow actual event targets for the exclusive offering recipe; exact ingredients and opening hour remain unconfirmed.', 'Fantasy Resonance 延至11月26日更新后，按各服当地时间截止。按实际任务取得专属供奉配方，准确材料与开场时刻仍待确认。', 'Fantasy Resonance 延至11月26日更新後，按各服當地時間截止。按實際任務取得專屬供奉配方，準確材料與開場時刻仍待確認。'),
+      action: t('Fantasy Resonance opens after the November 26 update, ending at local server time. Daily 04:00 appearances; Companion catches can count. Finish investigation for the recipe, and designated round tasks for tokens redeemable for past recipes; inspect vendor stock.', 'Fantasy Resonance 延至11月26日更新后，按各服当地时间截止。每日04:00刷新，Companion 捕获可计入。完成调查拿配方，每轮指定任务拿代币兑换往期配方；核对商人实际库存。', 'Fantasy Resonance 延至11月26日更新後，按各服當地時間截止。每日04:00重新整理，Companion 捕獲可計入。完成調查拿配方，每輪指定任務拿代幣兌換往期配方；核對商人實際庫存。'),
       href: '/guide/aniimo-prismana-event-tracker',
     },
     {

@@ -51,6 +51,6 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(!html.includes('noindex'));
   const sitemap = readFileSync('out/sitemap.xml', 'utf8');
   const entry = [...sitemap.matchAll(/<url>(.*?)<\/url>/gs)].find((m) => m[1].includes(`<loc>https://aniimodex.com/${locale}/guide/${slug}/</loc>`));
-  assert(entry?.[1].includes('<lastmod>2026-11-23</lastmod>'));
+  assert(entry?.[1].includes('<lastmod>2026-11-25</lastmod>'));
 }
 console.log('Sparkling operation checks passed: unknown inputs, exclusions, individual unlocks, preserved Potential and three-locale static fallback.');

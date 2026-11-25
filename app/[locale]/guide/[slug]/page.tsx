@@ -1,3 +1,4 @@
+import { getNovember26Blocks } from '@/data/november-26-updates';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -128,9 +129,10 @@ export default async function GuidePostPage({
       ] as Block[])
     : (launchGuide?.body ?? messages.guide.posts[post.slug].body ?? []) as Block[];
   const practicalBlocks = getPracticalSupportBlocks(locale, post.slug);
-  const body = ['getting-started', 'is-aniimo-free-to-play', 'aniimo-catching-guide', 'aniimo-launch-checklist-known-issues', 'aniimo-egg-heist'].includes(post.slug)
+  const previousBody = ['getting-started', 'is-aniimo-free-to-play', 'aniimo-catching-guide', 'aniimo-launch-checklist-known-issues', 'aniimo-egg-heist'].includes(post.slug)
     ? [...originalBody, ...practicalBlocks]
     : [...practicalBlocks, ...originalBody];
+  const body = [...getNovember26Blocks(locale, post.slug), ...previousBody];
   const sources = (post.sourceIds ?? [])
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source !== undefined);

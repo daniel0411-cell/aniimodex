@@ -13,6 +13,20 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-november-26-announcement-2026-11-25',
+    url: 'https://www.aniimo.com/newslist/detail/100312',
+    title: 'November 26 Update Notice (published November 23)',
+    accessedAt: '2026-11-25',
+    evidence: 'Complete rendered announcement read November 25. Planned maintenance, progression/title handoff, starting region/boss levels, Fantasy Resonance, Carnival, Renewal Pigment, Gracewing reset, Dash weeklies, Return to Idyll, Home changes and Team Mode collectible rate-up. Exact scope and separate server/global deadlines recorded in checkpoint-2026-11-25-content-directions.md. Announced changes, not live-client verification; no invented prices, task sequences, routes or catch bonus formula.',
+  },
+  {
+    id: 'aniimo-dev-feedback-2026-11-25',
+    url: 'https://x.com/Aniimo_EN/status/2125409675294494977',
+    title: 'Official Dev Feedback — November 25',
+    accessedAt: '2026-11-25',
+    evidence: 'Nine-question article read November 25. Fair PVP retains standardized Held Items with active core/advanced effects while disabling core skill enhancements. Home Comfort converts to Contribution at 3x; solo personal reward track and four-week window. Missing-collectible selection versus random shop box, later reruns do not establish carryover. Park orders expected 1.1.2; Prismana Hypnyto/Ekrim flight level 3 and report Credits 1200 to 1600 are future plans without exact effective version. No client tests.',
+  },
+  {
     id: 'aniimo-weekly-planning-2026-11-23',
     url: 'https://www.aniimo.com/newslist/detail/100244',
     title: 'Part 2 Holo rewards and late-November event scope — October 27',

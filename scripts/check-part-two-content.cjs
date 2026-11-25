@@ -94,13 +94,13 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(harvestLink > 0 && harvestLink < harvest.lastIndexOf(branchHeadings[3]), `${locale}: current Home link must precede historical schedule`);
   for (const page of [growth, homeGuide, harvest]) {
     assert(page.includes('687520329382238609'));
-    assert(page.includes(page === homeGuide ? '2026-11-06' : '2026-11-03'));
+    assert(page.includes('2026-11-25'));
   }
   for (const slug of ['aniimo-version-1-1-update', 'aniimo-rv-homeland-guide', 'aniimo-harvest-gathering-farm-guide']) {
     const raw = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8');
     const article = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
       .flatMap(match => JSON.parse(match[1])['@graph'] ?? []).find(item => item['@type'] === 'Article');
-    assert.equal(article?.dateModified, slug === 'aniimo-rv-homeland-guide' ? '2026-11-23' : '2026-11-03');
+    assert.equal(article?.dateModified, '2026-11-25');
   }
   const egg = read(locale, 'guide/aniimo-egg-heist');
   const items = read(locale, 'guide/aniimo-prismana-potential-breeding-guide');

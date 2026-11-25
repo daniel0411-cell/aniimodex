@@ -267,6 +267,13 @@ export default async function DexDetailPage({ params }: PageProps) {
         </div>
       </header>
 
+      {aniimo.number === 'wiki-1000-10007' && <section className="rounded-lg border border-emerald-200 bg-emerald-50 p-5" aria-labelledby="jaguaraun-event-title">
+        <h2 id="jaguaraun-event-title" className="text-lg font-bold">{locale === 'en' ? 'Fantasy Resonance: recipe and token checklist' : locale === 'zh-Hant' ? 'Fantasy Resonance：配方與代幣清單' : 'Fantasy Resonance：配方与代币清单'}</h2>
+        <p className="mt-2 text-sm leading-6">{locale === 'en' ? 'November 26 update → December 17, 03:59 each server; Student I. Daily 04:00 appearances, eligible Companion catches count. Complete all investigation tasks for the Offering Recipe; designated round tasks grant one token for a past recipe. Exact ingredients and routes remain unverified.' : locale === 'zh-Hant' ? '計畫11月26日更新後至12月17日各服03:59，Student I。每日04:00重新整理，符合條件的 Companion 捕獲可計入。完成全部調查取得供奉配方，每輪指定任務獲1枚代幣換往期配方；準確材料與路線尚未核驗。' : '计划11月26日更新后至12月17日各服03:59，Student I。每日04:00刷新，符合条件的 Companion 捕获可计入。完成全部调查取得供奉配方，每轮指定任务获1枚代币换往期配方；准确材料与路线尚未核验。'}</p>
+        <Link href="/guide/aniimo-prismana-event-tracker" className="mt-3 block text-sm font-semibold text-primary-light underline">{locale === 'en' ? 'Compare tasks, vendor stock and server deadlines' : locale === 'zh-Hant' ? '對照任務、商人庫存與各服期限' : '对照任务、商人库存与各服期限'} →</Link>
+        <a href="https://www.aniimo.com/newslist/detail/100312" className="mt-2 block text-xs text-primary-light underline">{locale === 'en' ? 'November 23 announcement · checked November 25, 2026' : locale === 'zh-Hant' ? '11月23日公告 · 2026年11月25日核對' : '11月23日公告 · 2026年11月25日核对'}</a>
+      </section>}
+
       {readingNotes && <section aria-labelledby="reading-notes-title" className="border-y border-ink-border py-5">
         <h2 id="reading-notes-title" className="text-xl font-bold text-text-primary">{t('readingNotesTitle')}</h2>
         <p className="mt-2 text-sm leading-6 text-text-secondary">{t('readingNotesScope', { date: detail?.checkedAt ?? '2026-10-23', editorialDate: detail?.checkedAt?.startsWith('2026-11-') ? (detail.checkedAt ?? '2026-11-02') : '2026-11-02' })}</p>
