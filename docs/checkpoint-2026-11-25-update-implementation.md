@@ -78,3 +78,15 @@ release versions remain unverified. Tomorrow's notice is not live access proof.
 - No ad inventory requested during checks; consent/loader unchanged.
 
 Publication result to be recorded after push and production verification.
+
+## Publication result
+
+Before publishing, fetched origin again: still `5839064`, 0/0. Content commit
+`f0fd6ae` pushed to main. Cloudflare Git deployment observed on the formal
+`https://aniimodex.com` domain November25 after the initial old response changed.
+Browser verified English Egg Heist new Held Item rules, scoped collectible
+rate-up and November25 update date; Simplified progression gates and chapter
+handoff; Traditional Carnival gift, Fantasy Token and solo Dash text; English
+Jaguaraun callout; Simplified homepage headline and Gracewing card.
+Temporary viewport override reset. Local preview stopped after verification.
+This verifies published content, not measured indexing/traffic improvement.
