@@ -238,5 +238,125 @@
     "source": "/zh-Hant/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27"
+  },
+  "download-en": {
+    "src": "/images/guides/download-en-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Official download decision flow: choose the store, check device compatibility, then distinguish install errors from missing progress.",
+    "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
+    "source": "/en/guide/how-to-download-aniimo/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "download-zh-Hans": {
+    "src": "/images/guides/download-zh-Hans-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "官方下载排查流程：选择入口、核对设备，再区分安装报错与进度缺失。",
+    "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
+    "source": "/zh-Hans/guide/how-to-download-aniimo/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "download-zh-Hant": {
+    "src": "/images/guides/download-zh-Hant-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "官方下載排查流程：選擇入口、核對裝置，再區分安裝錯誤與進度缺失。",
+    "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
+    "source": "/zh-Hant/guide/how-to-download-aniimo/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "account-en": {
+    "src": "/images/guides/account-en-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Comparison of crossplay, account unlinking and cross-save, with separate evidence limits and account-safety checks.",
+    "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
+    "source": "/en/guide/aniimo-progress-account-safety/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "account-zh-Hans": {
+    "src": "/images/guides/account-zh-Hans-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "对照跨平台联机、账号解绑与存档互通，分别标明证据边界和账号安全检查。",
+    "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
+    "source": "/zh-Hans/guide/aniimo-progress-account-safety/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "account-zh-Hant": {
+    "src": "/images/guides/account-zh-Hant-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "對照跨平台連線、帳號解除綁定與存檔互通，分別標明證據邊界和帳號安全檢查。",
+    "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
+    "source": "/zh-Hant/guide/aniimo-progress-account-safety/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "spending-en": {
+    "src": "/images/guides/spending-en-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Reward and spending checklist: identify the offer, verify eligibility and expiry, then compare costs and effects with your goal.",
+    "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
+    "source": "/en/guide/is-aniimo-free-to-play/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "spending-zh-Hans": {
+    "src": "/images/guides/spending-zh-Hans-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "奖励与消费核对流程：确认项目、核对资格和期限，再按目标比较成本与效果。",
+    "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
+    "source": "/zh-Hans/guide/is-aniimo-free-to-play/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "spending-zh-Hant": {
+    "src": "/images/guides/spending-zh-Hant-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "獎勵與消費核對流程：確認項目、核對資格和期限，再按目標比較成本與效果。",
+    "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
+    "source": "/zh-Hant/guide/is-aniimo-free-to-play/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "monetization-en": {
+    "src": "/images/guides/monetization-en-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Evidence comparison separating free base-game access, random outcomes and the unconfirmed gameplay impact of spending.",
+    "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
+    "source": "/en/guide/is-aniimo-a-gacha-game/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "monetization-zh-Hans": {
+    "src": "/images/guides/monetization-zh-Hans-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "证据对照：区分基础游戏免费、随机获取结果与尚未核实的付费玩法影响。",
+    "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
+    "source": "/zh-Hans/guide/is-aniimo-a-gacha-game/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
+  },
+  "monetization-zh-Hant": {
+    "src": "/images/guides/monetization-zh-Hant-diagram.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "證據對照：區分基礎遊戲免費、隨機獲取結果與尚未核實的付費玩法影響。",
+    "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
+    "source": "/zh-Hant/guide/is-aniimo-a-gacha-game/",
+    "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
+    "observedAt": "2026-11-27"
   }
 }

@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+
+// Prevent edited diagram text or output assets from silently drifting apart.
+const diagramManifest = JSON.parse(readFileSync('assets/editorial-diagrams/manifest.json'));
+const sha256 = p => createHash('sha256').update(readFileSync(p)).digest('hex');
+assert.equal(sha256('assets/editorial-diagrams/content.json'), diagramManifest.contentSha256, 'Regenerate diagrams after editing their content');
+for (const [file, hash] of Object.entries(diagramManifest.files)) assert.equal(sha256(file), hash, `Regenerate/review changed diagram: ${file}`);
 
 const assets = JSON.parse(readFileSync('data/editorial-images.json'));
 const dex = JSON.parse(readFileSync('data/dex-images.json'));

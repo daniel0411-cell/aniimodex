@@ -1,0 +1,372 @@
+{
+  "download": {
+    "slug": "how-to-download-aniimo",
+    "mode": "flow",
+    "en": [
+      "Download: choose, check, diagnose",
+      "Editorial decision guide • not a game interface",
+      [
+        [
+          "1  Choose the official route",
+          [
+            "Use the official website or linked store.",
+            "Keep the account you intend to use."
+          ]
+        ],
+        [
+          "2  Check the target device",
+          [
+            "Confirm product, region and compatibility.",
+            "A store link does not guarantee access."
+          ]
+        ],
+        [
+          "3  Match the problem to the next check",
+          [
+            "Install fails: save the exact client error.",
+            "Progress missing: check login and server.",
+            "Use the relevant official support route."
+          ]
+        ]
+      ],
+      "Read the linked guide for official routes and exceptions."
+    ],
+    "zh-Hans": [
+      "下载：选入口、核对、排查",
+      "本站编辑说明图 · 并非游戏界面",
+      [
+        [
+          "1  选择官方入口",
+          [
+            "从官网或官网链接的商店进入。",
+            "保留准备长期使用的账号。"
+          ]
+        ],
+        [
+          "2  核对目标设备",
+          [
+            "检查产品、地区和设备兼容性。",
+            "有商店链接不代表一定可以安装。"
+          ]
+        ],
+        [
+          "3  按问题选择下一步",
+          [
+            "安装失败：保留客户端完整报错。",
+            "进度缺失：核对登录方式和服务器。",
+            "再使用对应的官方支持渠道。"
+          ]
+        ]
+      ],
+      "官方入口、细节与例外请阅读正文。"
+    ],
+    "zh-Hant": [
+      "下載：選入口、核對、排查",
+      "本站編輯說明圖 · 並非遊戲介面",
+      [
+        [
+          "1  選擇官方入口",
+          [
+            "從官網或官網連結的商店進入。",
+            "保留準備長期使用的帳號。"
+          ]
+        ],
+        [
+          "2  核對目標裝置",
+          [
+            "檢查產品、地區和裝置相容性。",
+            "有商店連結不代表一定可以安裝。"
+          ]
+        ],
+        [
+          "3  按問題選擇下一步",
+          [
+            "安裝失敗：保留用戶端完整錯誤。",
+            "進度缺失：核對登入方式和伺服器。",
+            "再使用對應的官方支援管道。"
+          ]
+        ]
+      ],
+      "官方入口、細節與例外請閱讀正文。"
+    ]
+  },
+  "account": {
+    "slug": "aniimo-progress-account-safety",
+    "mode": "compare",
+    "en": [
+      "Three separate account questions",
+      "Editorial comparison • not a tested transfer procedure",
+      [
+        [
+          "Play together?  Crossplay",
+          [
+            "Multiplayer is listed; check the exact pair.",
+            "This does not establish shared progress."
+          ]
+        ],
+        [
+          "Disconnect a link?  Unlink",
+          [
+            "Steam / Epic unlink entry is documented.",
+            "Keep a working login; read the prompt.",
+            "This does not establish relinking rules."
+          ]
+        ],
+        [
+          "Move progress?  Cross-save",
+          [
+            "A complete transfer policy is unconfirmed.",
+            "Check platform pair, saves and purchases.",
+            "Missing progress: use private support."
+          ]
+        ]
+      ],
+      "Do not unlink as a repair for missing progress. Keep IDs private."
+    ],
+    "zh-Hans": [
+      "三个账号问题，需要分别核对",
+      "本站编辑对照图 · 并非实测存档转移流程",
+      [
+        [
+          "一起玩？跨平台联机",
+          [
+            "已列出联机功能，具体平台组合需核对。",
+            "联机功能本身不能证明进度互通。"
+          ]
+        ],
+        [
+          "断开关联？解绑",
+          [
+            "已记录 Steam / Epic 解绑入口。",
+            "先保留可用登录方式，再读确认提示。",
+            "解绑入口不能证明重新绑定规则。"
+          ]
+        ],
+        [
+          "带走进度？跨平台存档",
+          [
+            "完整转移政策尚未确认。",
+            "分别核对平台组合、存档和购买内容。",
+            "进度缺失时使用官方私密支持渠道。"
+          ]
+        ]
+      ],
+      "不要用解绑修复进度缺失；UID 等账号资料须保密。"
+    ],
+    "zh-Hant": [
+      "三個帳號問題，需要分別核對",
+      "本站編輯對照圖 · 並非實測存檔轉移流程",
+      [
+        [
+          "一起玩？跨平台連線",
+          [
+            "已列出連線功能，具體平台組合需核對。",
+            "連線功能本身不能證明進度互通。"
+          ]
+        ],
+        [
+          "斷開關聯？解除綁定",
+          [
+            "已記錄 Steam / Epic 解除綁定入口。",
+            "先保留可用登入方式，再讀確認提示。",
+            "解除綁定入口不能證明重新綁定規則。"
+          ]
+        ],
+        [
+          "帶走進度？跨平台存檔",
+          [
+            "完整轉移政策尚未確認。",
+            "分別核對平台組合、存檔和購買內容。",
+            "進度缺失時使用官方私密支援管道。"
+          ]
+        ]
+      ],
+      "不要用解除綁定修復進度缺失；UID 等帳號資料須保密。"
+    ]
+  },
+  "spending": {
+    "slug": "is-aniimo-free-to-play",
+    "mode": "flow",
+    "en": [
+      "Before claiming or spending",
+      "Editorial checklist • not a reward or shop screenshot",
+      [
+        [
+          "1  Identify the exact offer",
+          [
+            "Read the item, currency and stated effect.",
+            "An old announcement is not a live offer."
+          ]
+        ],
+        [
+          "2  Check the conditions",
+          [
+            "Verify account eligibility and claim window.",
+            "For purchases: price, limit and expiry."
+          ]
+        ],
+        [
+          "3  Compare with your goal",
+          [
+            "A probability does not guarantee a result.",
+            "Without verified costs and effects,",
+            "there is no defensible best-buy ranking."
+          ]
+        ]
+      ],
+      "Use current in-game terms; this guide has not tested purchases."
+    ],
+    "zh-Hans": [
+      "领取或消费之前，先核对三步",
+      "本站编辑核对图 · 并非领奖或商店截图",
+      [
+        [
+          "1  确认具体奖励或商品",
+          [
+            "阅读道具、所用货币及标明的效果。",
+            "旧公告不代表奖励目前仍然可领。"
+          ]
+        ],
+        [
+          "2  核对条件与期限",
+          [
+            "领取前核对账号资格和领取窗口。",
+            "购买前核对价格、限购和失效时间。"
+          ]
+        ],
+        [
+          "3  对照自己的目标",
+          [
+            "概率不代表保证获得指定结果。",
+            "成本与效果未经核实，",
+            "就不能给出可靠的最优消费排名。"
+          ]
+        ]
+      ],
+      "以当前游戏内条款为准；本站没有实测购买流程。"
+    ],
+    "zh-Hant": [
+      "領取或消費之前，先核對三步",
+      "本站編輯核對圖 · 並非領獎或商店截圖",
+      [
+        [
+          "1  確認具體獎勵或商品",
+          [
+            "閱讀道具、所用貨幣及標明的效果。",
+            "舊公告不代表獎勵目前仍然可領。"
+          ]
+        ],
+        [
+          "2  核對條件與期限",
+          [
+            "領取前核對帳號資格和領取期間。",
+            "購買前核對價格、限購和失效時間。"
+          ]
+        ],
+        [
+          "3  對照自己的目標",
+          [
+            "機率不代表保證獲得指定結果。",
+            "成本與效果未經核實，",
+            "就不能給出可靠的最佳消費排名。"
+          ]
+        ]
+      ],
+      "以目前遊戲內條款為準；本站沒有實測購買流程。"
+    ]
+  },
+  "monetization": {
+    "slug": "is-aniimo-a-gacha-game",
+    "mode": "compare",
+    "en": [
+      "Free, random and pay to win: evidence",
+      "Editorial comparison • three different questions",
+      [
+        [
+          "Free to play: base-game access",
+          [
+            "Storefronts list a free base game",
+            "and disclose in-game purchases."
+          ]
+        ],
+        [
+          "Random outcomes: acquisition rules",
+          [
+            "A disclosed probability describes an outcome.",
+            "It does not establish an item price",
+            "or prove that payment is required."
+          ]
+        ],
+        [
+          "Pay to win: effect of spending",
+          [
+            "Needs verified costs and gameplay impact.",
+            "Registered evidence is insufficient",
+            "for a defensible yes or no."
+          ]
+        ]
+      ],
+      "A marketing label cannot settle all three questions."
+    ],
+    "zh-Hans": [
+      "免费、随机与付费优势：分开看证据",
+      "本站编辑对照图 · 三个不同的问题",
+      [
+        [
+          "免费游玩：基础游戏门槛",
+          [
+            "商店列出基础游戏免费，",
+            "同时披露游戏内购买。"
+          ]
+        ],
+        [
+          "随机结果：具体获取规则",
+          [
+            "公布概率描述的是某种结果。",
+            "它不能单独证明道具价格，",
+            "也不能证明必须付费获取。"
+          ]
+        ],
+        [
+          "付费优势：消费带来的实际影响",
+          [
+            "需要核实成本与玩法影响。",
+            "现有登记证据不足以可靠地",
+            "认定有或没有付费优势。"
+          ]
+        ]
+      ],
+      "营销标签不能代替对三个问题的分别核实。"
+    ],
+    "zh-Hant": [
+      "免費、隨機與付費優勢：分開看證據",
+      "本站編輯對照圖 · 三個不同的問題",
+      [
+        [
+          "免費遊玩：基礎遊戲門檻",
+          [
+            "商店列出基礎遊戲免費，",
+            "同時披露遊戲內購買。"
+          ]
+        ],
+        [
+          "隨機結果：具體獲取規則",
+          [
+            "公布機率描述的是某種結果。",
+            "它不能單獨證明道具價格，",
+            "也不能證明必須付費獲取。"
+          ]
+        ],
+        [
+          "付費優勢：消費帶來的實際影響",
+          [
+            "需要核實成本與玩法影響。",
+            "現有登記證據不足以可靠地",
+            "認定有或沒有付費優勢。"
+          ]
+        ]
+      ],
+      "行銷標籤不能代替對三個問題的分別核實。"
+    ]
+  }
+}

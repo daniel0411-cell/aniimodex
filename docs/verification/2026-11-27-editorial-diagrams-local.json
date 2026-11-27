@@ -1,0 +1,530 @@
+[
+  {
+    "url": "http://localhost:4173/en/guide/how-to-download-aniimo/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-mobile/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-crossplay-cross-save/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-progress-account-safety/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/is-aniimo-free-to-play/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/is-aniimo-a-gacha-game/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-evolution-system/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-rv-homeland-guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/en/guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/en/tools/team-builder/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/dex/001/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/how-to-download-aniimo/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-mobile/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-crossplay-cross-save/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-progress-account-safety/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/is-aniimo-free-to-play/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/is-aniimo-a-gacha-game/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-evolution-system/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-rv-homeland-guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/tools/team-builder/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/dex/001/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/how-to-download-aniimo/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-mobile/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-crossplay-cross-save/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-progress-account-safety/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/is-aniimo-free-to-play/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/is-aniimo-a-gacha-game/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-evolution-system/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-rv-homeland-guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/tools/team-builder/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/dex/001/",
+    "width": 1365,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/en/guide/how-to-download-aniimo/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-mobile/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-crossplay-cross-save/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-progress-account-safety/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/is-aniimo-free-to-play/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/is-aniimo-a-gacha-game/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-evolution-system/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/guide/aniimo-rv-homeland-guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/en/guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/en/tools/team-builder/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/en/dex/001/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/how-to-download-aniimo/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-mobile/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-crossplay-cross-save/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-progress-account-safety/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/is-aniimo-free-to-play/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/is-aniimo-a-gacha-game/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-evolution-system/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/aniimo-rv-homeland-guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/tools/team-builder/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hans/dex/001/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/how-to-download-aniimo/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-mobile/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-crossplay-cross-save/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-progress-account-safety/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/is-aniimo-free-to-play/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/is-aniimo-a-gacha-game/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-evolution-system/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/aniimo-rv-homeland-guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/guide/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/tools/team-builder/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 1
+  },
+  {
+    "url": "http://localhost:4173/zh-Hant/dex/001/",
+    "width": 390,
+    "height": 900,
+    "deviceScaleFactor": 1,
+    "overflow": false,
+    "figures": 0
+  }
+]

@@ -86,3 +86,10 @@ Google primary reference URLs (reference targets, not freshly read this session)
 The absence of a tag alone does not explain a missing search thumbnail. Consider
 crawl access, page relevance, image quality and search presentation separately;
 use actual Search Console evidence if investigating an observed SERP issue.
+
+Original decision diagrams follow `docs/editorial-diagram-evidence.md`: preserve
+editable localized source and generated assets together, label their editorial
+nature, and keep equivalent instructions in HTML. Regenerate after source edits;
+review facts, readable text and clipping in every locale. Missing genuine game
+captures do not justify invented UI or repeated requests to an owner who cannot
+provide them. Record a licensed-source/contributor plan instead.

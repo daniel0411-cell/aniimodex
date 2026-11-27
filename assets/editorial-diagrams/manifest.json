@@ -1,0 +1,29 @@
+{
+  "contentSha256": "318fd23e2f3d014afcc8dca78f15715c3a7284f52efd0c0f66d4b306b935a11c",
+  "files": {
+    "assets/editorial-diagrams/download-en.svg": "1e38f941c34a8f1849fae0eda30b0bb5005bca0e80f04102f3a4688bba7bf4fc",
+    "public/images/guides/download-en-diagram.webp": "628cd22e8747e601792c47e2155e1c6deccc5d4666a4f5f6c787ee325ccbcfbe",
+    "assets/editorial-diagrams/download-zh-Hans.svg": "6be8c855f6cf25c9ce718ceb6b4121b200ba875b6f65862ccff46a5634ff43e9",
+    "public/images/guides/download-zh-Hans-diagram.webp": "9711332b962dd2ad205067f7bac714d1f59c1ad7fffd6a441d5b0643d52e7c7d",
+    "assets/editorial-diagrams/download-zh-Hant.svg": "2952396f2cd27c2ca9ef627e5cb5b0e996a29cf0c4194b60001d48eb7cd1c7c9",
+    "public/images/guides/download-zh-Hant-diagram.webp": "9e416ec8f118db171bfbc5cacc88abfc4fcf74d676bc35b53e89f114cad03a6e",
+    "assets/editorial-diagrams/account-en.svg": "2ad0e1fab1f75bf94b48a497fee01ad9a8f3c9c3ca7f4d62b297bc406f1a7ba4",
+    "public/images/guides/account-en-diagram.webp": "712b8228129d5ab3d128ad96ab73a80dd5382b48947aa6a7a22279f45485ca27",
+    "assets/editorial-diagrams/account-zh-Hans.svg": "903d2ece73fcc2fd691939c7ae618f63447b9daa25bd01c7d24db6a3b7c7456c",
+    "public/images/guides/account-zh-Hans-diagram.webp": "6636d7d3d7408b000af867e094dd1d13f6c8445460b5b250cb17dd66d5504434",
+    "assets/editorial-diagrams/account-zh-Hant.svg": "f3ad01948f10280db5d8020345ad6e58e1e210d9f73087f6141e264870673cf0",
+    "public/images/guides/account-zh-Hant-diagram.webp": "2215b109dc32a89c4f20ba5dd72946dc887240f72a9f157ccf1c581273a1f641",
+    "assets/editorial-diagrams/spending-en.svg": "ba27a19a1d2384ab597da6a77e8eb9f8187678b5a1183ed541e67b974b060141",
+    "public/images/guides/spending-en-diagram.webp": "5b6074e8dfecbfcb2b06f399c3191c2130bbe2a8c5e60751c01bbd3acac25cf2",
+    "assets/editorial-diagrams/spending-zh-Hans.svg": "bd3bc4bd91fc453d9b6eb0aa3489a40af5bda442a5b77ba1ece607646a75df8c",
+    "public/images/guides/spending-zh-Hans-diagram.webp": "10f50760485c838c974f1dc279e867ce1cd53c7669ddfe09113cc972903d1348",
+    "assets/editorial-diagrams/spending-zh-Hant.svg": "25cc6918e60729c66fb334cb1f904636558a7a97e07dd1d53dc92ebbb620f6c6",
+    "public/images/guides/spending-zh-Hant-diagram.webp": "abd1b5ae96c5a659ccd876f978d429f8d9befec35bb5389a7974da2f6829882f",
+    "assets/editorial-diagrams/monetization-en.svg": "95cc645819a2506320d06e9546c52288d937dad347b6d42354e326f755f693cc",
+    "public/images/guides/monetization-en-diagram.webp": "0342390fc792f8ff75086a5168c5651183976b22b1e3fcd0ef6e57ed6a08816e",
+    "assets/editorial-diagrams/monetization-zh-Hans.svg": "68075e40daeb29c25327d1b1f5dd75d9c0ed7eeaad778206d7bbc02199298390",
+    "public/images/guides/monetization-zh-Hans-diagram.webp": "a5301f7203adff37d023e5d7bb335248ea24d229785a17d0b51999c69df6ca40",
+    "assets/editorial-diagrams/monetization-zh-Hant.svg": "07efbd80eff4d1bb0fcbb07009798d07f4be7778935e5849e997259bcc1cfc6e",
+    "public/images/guides/monetization-zh-Hant-diagram.webp": "3323e652f168fab34109aab79f81796067ac91b57eaa117231d8228404a6085f"
+  }
+}

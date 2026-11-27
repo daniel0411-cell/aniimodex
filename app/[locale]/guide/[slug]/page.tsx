@@ -223,7 +223,11 @@ export default async function GuidePostPage({
   const figure = representative && !representative.src.includes('hue-reroll-editorial')
     ? <EditorialFigure key="representative-image" image={representative} locale={locale} /> : null;
   const nextSectionNumber = post.slug === 'aniimo-choose-by-mobility-role' ? '2' : '3';
-  const figureIndex = post.dataTopic ? -1 : body.findIndex(block =>
+  // Decision diagrams follow the first complete section, including its HTML
+  // answer/checklist. Keep existing screenshot placements unchanged.
+  const decisionDiagram = representative?.src.endsWith('-diagram.webp');
+  const sectionIndices = body.flatMap((block, i) => block.t === 'h' ? [i] : []);
+  const figureIndex = decisionDiagram ? (sectionIndices[1] ?? -1) : post.dataTopic ? -1 : body.findIndex(block =>
     block.t === 'h' && new RegExp(`^${nextSectionNumber}[.、]`).test(block.c)
   );
 
