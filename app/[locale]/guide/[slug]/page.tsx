@@ -1,7 +1,7 @@
 import { getNovember26Blocks } from '@/data/november-26-updates';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getGuideImage, getGuidePreviewImage, imageMetadata } from '@/lib/editorial-images';
+import { getGuideImage, getGuideFigureHeading, getGuidePreviewImage, imageMetadata } from '@/lib/editorial-images';
 import EditorialFigure from '@/components/guide/EditorialFigure';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
@@ -228,7 +228,11 @@ export default async function GuidePostPage({
   // answer/checklist. Keep existing screenshot placements unchanged.
   const decisionDiagram = representative?.src.endsWith('-diagram.webp');
   const sectionIndices = body.flatMap((block, i) => block.t === 'h' ? [i] : []);
-  const figureIndex = decisionDiagram ? (sectionIndices[1] ?? -1) : post.dataTopic ? -1 : body.findIndex(block =>
+  const afterHeading = getGuideFigureHeading(slug, locale);
+  const headingIndex = afterHeading ? body.findIndex(block => block.t === 'h' && block.c === afterHeading) : -1;
+  if (afterHeading && headingIndex < 0) throw new Error(`Review image placement: ${slug}/${locale}`);
+  const taskBoundary = sectionIndices.find(index => index > headingIndex) ?? -1;
+  const figureIndex = afterHeading ? taskBoundary : decisionDiagram ? (sectionIndices[1] ?? -1) : post.dataTopic ? -1 : body.findIndex(block =>
     block.t === 'h' && new RegExp(`^${nextSectionNumber}[.、]`).test(block.c)
   );
 
@@ -437,7 +441,7 @@ export default async function GuidePostPage({
 
         {sources.length > 0 && (
           <section className="mt-8 border-t border-ink-border pt-6">
-            <h2 className="text-lg font-bold text-text-primary">{t('officialSources')}</h2>
+            <h2 id="official-sources" className="scroll-mt-24 text-lg font-bold text-text-primary">{t('officialSources')}</h2>
             <ul className="mt-3 space-y-3">
               {sources.map((source) => (
                 <li key={source.id}>

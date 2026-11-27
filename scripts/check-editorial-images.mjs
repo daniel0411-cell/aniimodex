@@ -10,6 +10,13 @@ const sha256 = p => createHash('sha256').update(readFileSync(p)).digest('hex');
 assert.equal(sha256('assets/editorial-diagrams/content.json'), diagramManifest.contentSha256, 'Regenerate diagrams after editing their content');
 for (const [file, hash] of Object.entries(diagramManifest.files)) assert.equal(sha256(file), hash, `Regenerate/review changed diagram: ${file}`);
 
+const taskVisualManifest = JSON.parse(readFileSync('assets/task-visuals/manifest.json'));
+assert.equal(sha256('assets/task-visuals/content.json'), taskVisualManifest.contentSha256, 'Regenerate/review task visuals after content or placement changes');
+assert.equal(sha256('scripts/render-task-visuals.cjs'), taskVisualManifest.rendererSha256, 'Regenerate/review task visuals after renderer changes');
+for (const [file, hash] of Object.entries(taskVisualManifest.files)) assert.equal(sha256(file), hash, `Task visual output drift: ${file}`);
+const taskVisuals = JSON.parse(readFileSync('assets/task-visuals/content.json'));
+assert.equal(new Set(taskVisuals.map(row => row.slug)).size, 19, 'Review the complete 19-task batch');
+
 const assets = JSON.parse(readFileSync('data/editorial-images.json'));
 const dex = JSON.parse(readFileSync('data/dex-images.json'));
 const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
@@ -131,6 +138,23 @@ for (const [, slug, kind] of mapping) for (const locale of ['en', 'zh-Hans', 'zh
     expectedPreviews++;
     assert(html.includes(`property="og:image" content="${site}${a.src}"`), `${slug}/${locale}: wrong preferred asset`);
   }
+}
+// A moved or removed answer must trigger an editorial placement review.
+const escapeHTML = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
+for (const task of taskVisuals) for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  const a = assets[`${task.kind}-${locale}`];
+  const html = readFileSync(`out/${locale}/guide/${task.slug}/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+  const figure = html.indexOf(`data-editorial-image="${a.src}"`);
+  assert(figure >= 0, `${task.slug}/${locale}: missing task figure`);
+  const heading = task.afterHeading?.[locale];
+  if (heading) {
+    const heads = [...html.matchAll(/<h2\b[^>]*>(.*?)<\/h2>/gs)];
+    const target = heads.find(h => h[1] === escapeHTML(heading));
+    assert(target && target.index < figure, `${task.slug}/${locale}: figure precedes its HTML explanation`);
+    const next = heads.find(h => h.index > target.index);
+    assert(!next || figure < next.index, `${task.slug}/${locale}: figure detached from corresponding section`);
+  }
+  assert.equal(a.previewUsage, 'body-only', 'Re-review labelled diagrams before changing preview eligibility');
 }
 assert.equal(illustrated, expectedPreviews, 'Selected preferred guide previews in all locales');
 assert.equal(dexCount, Object.keys(dex).length * 3);

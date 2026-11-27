@@ -12,7 +12,9 @@ export default function EditorialFigure({ image, locale }: { image: EditorialIma
         <p>{image.caption}</p>
         <p className="flex flex-wrap gap-x-5 gap-y-1 text-primary-light">
           <Link href={image.source.replace(/^\/(en|zh-Hans|zh-Hant)/, '')} className="underline underline-offset-4">
-            {locale === 'en' ? 'Open the source page' : locale === 'zh-Hant' ? '開啟來源頁面' : '打开来源页面'} →
+            {image.source.includes('#official-sources')
+              ? (locale === 'en' ? 'Read source dates and scope' : locale === 'zh-Hant' ? '查看來源日期與適用範圍' : '查看来源日期与适用范围')
+              : (locale === 'en' ? 'Open the source page' : locale === 'zh-Hant' ? '開啟來源頁面' : '打开来源页面')} →
           </Link>
           <a href={image.src} className="underline underline-offset-4">{locale === 'en' ? 'View full-size image' : locale === 'zh-Hant' ? '查看原尺寸圖片' : '查看原尺寸图片'}</a>
         </p>

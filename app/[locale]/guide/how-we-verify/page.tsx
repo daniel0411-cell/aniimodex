@@ -8,6 +8,8 @@ import { verifiedClaims } from '@/data/verification';
 import { EVIDENCE_BADGE_CLASSES, EVIDENCE_STATUS_ORDER, getClaimSources } from '@/lib/evidence';
 import { locales } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
+import EditorialFigure from '@/components/guide/EditorialFigure';
+import { getGuideImage } from '@/lib/editorial-images';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 const PATH = '/guide/how-we-verify/';
@@ -31,6 +33,7 @@ export default async function VerificationPage({ params }: { params: Promise<{ l
   setRequestLocale(locale);
   const t = await getTranslations('verification');
   const tr = await getTranslations('breadcrumb');
+  const explanation = getGuideImage('how-we-verify', locale);
 
   // 按证据等级分组；空分组不渲染
   const claimsByStatus = EVIDENCE_STATUS_ORDER.map((status) => ({
@@ -55,6 +58,7 @@ export default async function VerificationPage({ params }: { params: Promise<{ l
         ))}
       </section>
       <p className="text-sm leading-6 text-text-muted">{t('tiersMapping')}</p>
+      {explanation && <EditorialFigure image={explanation} locale={locale} />}
       <section className="space-y-5">
         <div className="space-y-2">
           <h2 className="text-xl font-bold text-text-primary">{t('claimsTitle')}</h2>
@@ -110,7 +114,7 @@ export default async function VerificationPage({ params }: { params: Promise<{ l
         </div>
       </section>
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-text-primary">{t('sourcesTitle')}</h2>
+        <h2 id="official-sources" className="scroll-mt-24 text-xl font-bold text-text-primary">{t('sourcesTitle')}</h2>
         <p className="text-sm leading-6 text-text-secondary">{t('sourcesDescription')}</p>
         <ul className="divide-y divide-ink-border border-y border-ink-border">
           {sources.map((source) => (

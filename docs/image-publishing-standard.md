@@ -108,3 +108,13 @@ nature, and keep equivalent instructions in HTML. Regenerate after source edits;
 review facts, readable text and clipping in every locale. Missing genuine game
 captures do not justify invented UI or repeated requests to an owner who cannot
 provide them. Record a licensed-source/contributor plan instead.
+
+For task-specific diagrams, keep editable source, renderer and output hashes in
+`assets/task-visuals/manifest.json`. Distinguish sequence arrows, independent
+branches, both-required gates, separate categories and time alignment; a shared
+card template alone does not explain a relationship. Put figures after the
+corresponding complete answer using the localized heading mapping. Build checks
+must detect a removed/moved heading or output drift. Recheck every localized
+figure for factual scope, line wrapping and connector meaning after generation.
+See `docs/checkpoint-2026-11-27-remaining-19-images.md` for the 19-task review and
+remaining preferred-image gaps. Diagram coverage is not search-preview coverage.

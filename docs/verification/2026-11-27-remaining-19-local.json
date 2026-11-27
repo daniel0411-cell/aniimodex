@@ -1,0 +1,2873 @@
+{
+  "observedAt": "2026-11-27T10:02:13.293Z",
+  "cases": [
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": false,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            0,
+            0
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ],
+      "recheck": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": false,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            0,
+            0
+          ],
+          "src": "/images/guides/task-release-date-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ],
+      "recheck": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-release-date-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-release-date-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            640,
+            640
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-release-date-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "en",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-en-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-release-date-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "zh-Hans",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-zh-Hans-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-dev-dispatch-roadmap",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-dev-dispatch-roadmap-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-egg-heist",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-egg-heist-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-harvest-gathering-farm-guide",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-harvest-gathering-farm-guide-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-holo-battle-interlink",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-holo-battle-interlink-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-language-controller-support",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-language-controller-support-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-checklist-known-issues",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-checklist-known-issues-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-launch-watchlist",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-launch-watchlist-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-multiplayer",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-multiplayer-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-platforms",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-platforms-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-pre-registration",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-pre-registration-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-prismana-event-tracker",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-prismana-event-tracker-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-release-date",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-release-date-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-rv-homeland-guide",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-rv-homeland-guide-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-system-requirements",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-system-requirements-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "aniimo-version-1-1-update",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-version-1-1-update-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "getting-started",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-getting-started-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "how-we-verify",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-how-we-verify-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "official-aniimo-dex-status",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-official-aniimo-dex-status-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "slug": "what-is-aniimo",
+      "locale": "zh-Hant",
+      "images": [
+        {
+          "alt": true,
+          "complete": true,
+          "display": [
+            343,
+            343
+          ],
+          "natural": [
+            640,
+            640
+          ],
+          "src": "/images/guides/task-what-is-aniimo-zh-Hant-diagram.webp"
+        }
+      ],
+      "overflow": false,
+      "sourceAnchor": true,
+      "viewport": [
+        390,
+        900
+      ]
+    }
+  ]
+}

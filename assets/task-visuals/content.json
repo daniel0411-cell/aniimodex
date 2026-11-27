@@ -1,0 +1,795 @@
+[
+  {
+    "slug": "aniimo-dev-dispatch-roadmap",
+    "kind": "task-dev-dispatch-roadmap",
+    "mode": "timeline",
+    "locales": {
+      "en": [
+        "Read plans by announcement date",
+        [
+          "Oct 1: planned Hue switching",
+          "Oct 29: Hue Swap announced",
+          "Nov 5: Steam / Epic unlink",
+          "Plans ≠ every feature delivered"
+        ],
+        "Dated records; not a live implementation check."
+      ],
+      "zh-Hans": [
+        "按公告日期理解开发计划",
+        [
+          "10月1日：计划切换色调",
+          "10月29日：公告 Hue Swap",
+          "11月5日：Steam / Epic 解绑",
+          "计划不等于全部功能已落地"
+        ],
+        "保留公告日期；不代表已在客户端实测。"
+      ],
+      "zh-Hant": [
+        "按公告日期理解開發計畫",
+        [
+          "10月1日：計畫切換色調",
+          "10月29日：公告 Hue Swap",
+          "11月5日：Steam / Epic 解綁",
+          "計畫不等於全部功能已落地"
+        ],
+        "保留公告日期；不代表已在客戶端實測。"
+      ]
+    },
+    "afterHeading": {
+      "en": "October 29 update versus the historical October 1 plan",
+      "zh-Hans": "10月29日更新与10月1日历史计划",
+      "zh-Hant": "10月29日更新與10月1日歷史計畫"
+    }
+  },
+  {
+    "slug": "aniimo-egg-heist",
+    "kind": "task-egg-heist",
+    "mode": "split",
+    "locales": {
+      "en": [
+        "Choose the ruleset before a loadout",
+        [
+          "Egg Heist",
+          "Fair PVP: standardized stats",
+          "PVE / Chaos: difficulty rules",
+          "Fair PVP: final Twine owner wins"
+        ],
+        "Held Item effects remain in fair PVP; see the table."
+      ],
+      "zh-Hans": [
+        "先选规则，再准备配置",
+        [
+          "夺蛋行动",
+          "公平 PVP：属性标准化",
+          "PVE / 混沌：按难度规则",
+          "公平 PVP：最终共鸣归属决胜"
+        ],
+        "公平 PVP 保留携带物效果；详见正文对照。"
+      ],
+      "zh-Hant": [
+        "先選規則，再準備配置",
+        [
+          "奪蛋行動",
+          "公平 PVP：屬性標準化",
+          "PVE / 混沌：按難度規則",
+          "公平 PVP：最終共鳴歸屬決勝"
+        ],
+        "公平 PVP 保留攜帶物效果；詳見正文對照。"
+      ]
+    },
+    "afterHeading": {
+      "en": "1. Select the ruleset",
+      "zh-Hans": "1. 先选规则组",
+      "zh-Hant": "1. 先選規則組"
+    }
+  },
+  {
+    "slug": "aniimo-harvest-gathering-farm-guide",
+    "kind": "task-harvest-gathering-farm-guide",
+    "mode": "separate",
+    "locales": {
+      "en": [
+        "Keep historical crop bonuses separate",
+        [
+          "October Harvest schedule",
+          "Historical crop bonus notice",
+          "Current Home season panel",
+          "Check current tasks before buying"
+        ],
+        "No verified crop percentage or optimal farm layout."
+      ],
+      "zh-Hans": [
+        "历史作物加成与当前活动分开看",
+        [
+          "10月丰收聚会排期",
+          "历史作物加成公告",
+          "当前家园赛季面板",
+          "购买前核对当前任务"
+        ],
+        "未确认作物加成百分比或最优农场布局。"
+      ],
+      "zh-Hant": [
+        "歷史作物加成與目前活動分開看",
+        [
+          "10月豐收聚會排期",
+          "歷史作物加成公告",
+          "目前家園賽季面板",
+          "購買前核對目前任務"
+        ],
+        "未確認作物加成百分比或最優農場佈局。"
+      ]
+    },
+    "afterHeading": {
+      "en": "Looking for the current Home season?",
+      "zh-Hans": "在找当前家园活动？",
+      "zh-Hant": "在找目前家園活動？"
+    }
+  },
+  {
+    "slug": "aniimo-holo-battle-interlink",
+    "kind": "task-holo-battle-interlink",
+    "mode": "parallel",
+    "locales": {
+      "en": [
+        "Independent paths, then manual claim",
+        [
+          "Left: own best stars",
+          "Middle: own best stars",
+          "Right: own best stars",
+          "Compare milestone → claim manually"
+        ],
+        "Interlink paths; Sim rewards are separate categories."
+      ],
+      "zh-Hans": [
+        "路径星级独立记录，奖励手动领取",
+        [
+          "左路：独立最高星级",
+          "中路：独立最高星级",
+          "右路：独立最高星级",
+          "对照总星里程碑 → 手动领取"
+        ],
+        "这是联动路径关系；模拟战奖励另行区分。"
+      ],
+      "zh-Hant": [
+        "路徑星級獨立記錄，獎勵手動領取",
+        [
+          "左路：獨立最高星級",
+          "中路：獨立最高星級",
+          "右路：獨立最高星級",
+          "對照總星里程碑 → 手動領取"
+        ],
+        "這是聯動路徑關係；模擬戰獎勵另行區分。"
+      ]
+    },
+    "afterHeading": {
+      "en": "2. Match the path to the job",
+      "zh-Hans": "2. 按目标选择路线",
+      "zh-Hant": "2. 按目標選擇路線"
+    }
+  },
+  {
+    "slug": "aniimo-language-controller-support",
+    "kind": "task-language-controller-support",
+    "mode": "flow",
+    "locales": {
+      "en": [
+        "Steam controller: official retry path",
+        [
+          "Steam Library → Aniimo",
+          "Properties → Controller",
+          "Disable Steam Input → restart",
+          "Still fails? Record model + version"
+        ],
+        "Official FAQ workaround; no universal device guarantee."
+      ],
+      "zh-Hans": [
+        "Steam 手柄：官方建议的排查路径",
+        [
+          "Steam 游戏库 → 伊莫",
+          "属性 → 控制器",
+          "禁用 Steam 输入 → 重启",
+          "仍失败？记录型号与版本"
+        ],
+        "官方 FAQ 建议；不保证适用所有设备。"
+      ],
+      "zh-Hant": [
+        "Steam 手把：官方建議的排查路徑",
+        [
+          "Steam 遊戲庫 → 伊莫",
+          "內容 → 控制器",
+          "停用 Steam 輸入 → 重啟",
+          "仍失敗？記錄型號與版本"
+        ],
+        "官方 FAQ 建議；不保證適用所有裝置。"
+      ]
+    },
+    "afterHeading": {
+      "en": "How do I fix a Steam controller that is not working?",
+      "zh-Hans": "Steam 手柄无反应怎么办？",
+      "zh-Hant": "Steam 手柄無反應怎麼辦？"
+    }
+  },
+  {
+    "slug": "aniimo-launch-checklist-known-issues",
+    "kind": "task-launch-checklist-known-issues",
+    "mode": "flow",
+    "locales": {
+      "en": [
+        "Match a symptom, then retry safely",
+        [
+          "Platform + exact failed action",
+          "Match dated patch and scope",
+          "Update → restart → retry action",
+          "Persists? Send a private report"
+        ],
+        "An announced fix is not proof your issue is resolved."
+      ],
+      "zh-Hans": [
+        "先匹配症状，再有针对性地重试",
+        [
+          "平台与具体失败操作",
+          "匹配有日期的补丁与范围",
+          "更新 → 重启 → 重试该操作",
+          "仍失败？向官方私下报告"
+        ],
+        "公告列为修复，不等于你的问题已经解决。"
+      ],
+      "zh-Hant": [
+        "先匹配症狀，再有針對性地重試",
+        [
+          "平台與具體失敗操作",
+          "匹配有日期的更新與範圍",
+          "更新 → 重啟 → 重試該操作",
+          "仍失敗？向官方私下報告"
+        ],
+        "公告列為修復，不等於你的問題已經解決。"
+      ]
+    },
+    "afterHeading": {
+      "en": "1. Record the symptom before changing anything",
+      "zh-Hans": "1. 先记录症状，再改设置",
+      "zh-Hant": "1. 先記錄症狀，再改設定"
+    }
+  },
+  {
+    "slug": "aniimo-launch-watchlist",
+    "kind": "task-launch-watchlist",
+    "mode": "filter",
+    "locales": {
+      "en": [
+        "How the 12-entry shortlist is selected",
+        [
+          "October 23 Basic Form snapshot",
+          "Count six populated field groups",
+          "Tie-break: official number",
+          "First 12 → inspect actual entries"
+        ],
+        "Information coverage, not strength, rarity or a tier list."
+      ],
+      "zh-Hans": [
+        "12个观察条目如何选出",
+        [
+          "10月23日基础形态快照",
+          "统计六组字段的完整程度",
+          "同分按官方编号排序",
+          "取前12个 → 查看具体条目"
+        ],
+        "衡量信息覆盖，不代表强度、稀有度或梯度。"
+      ],
+      "zh-Hant": [
+        "12個觀察條目如何選出",
+        [
+          "10月23日基礎形態快照",
+          "統計六組欄位的完整程度",
+          "同分按官方編號排序",
+          "取前12個 → 查看具體條目"
+        ],
+        "衡量資訊覆蓋，不代表強度、稀有度或梯度。"
+      ]
+    },
+    "afterHeading": {
+      "en": "How this watchlist is selected",
+      "zh-Hans": "How this watchlist is selected",
+      "zh-Hant": "How this watchlist is selected"
+    }
+  },
+  {
+    "slug": "aniimo-multiplayer",
+    "kind": "task-multiplayer",
+    "mode": "parallel",
+    "locales": {
+      "en": [
+        "Three activities, separate entry checks",
+        [
+          "Fair PVP: Lv.50 + title",
+          "PVE / Chaos: difficulty + ticket",
+          "Interlink: Trailblazer I + timer",
+          "Confirm mode, server and invitation"
+        ],
+        "A co-op label does not establish every platform pairing."
+      ],
+      "zh-Hans": [
+        "三类活动，各自核对准入条件",
+        [
+          "公平 PVP：50级与称号",
+          "PVE / 混沌：难度与门票",
+          "联动：称号与开放计时",
+          "确认模式、服务器与邀请"
+        ],
+        "支持联机，不等于确认所有跨平台组合。"
+      ],
+      "zh-Hant": [
+        "三類活動，各自核對准入條件",
+        [
+          "公平 PVP：50級與稱號",
+          "PVE / 混沌：難度與門票",
+          "聯動：稱號與開放計時",
+          "確認模式、伺服器與邀請"
+        ],
+        "支援連線，不等於確認所有跨平台組合。"
+      ]
+    },
+    "afterHeading": {
+      "en": "Which activity matches my goal?",
+      "zh-Hans": "哪种玩法符合我的目标？",
+      "zh-Hant": "哪種玩法符合我的目標？"
+    }
+  },
+  {
+    "slug": "aniimo-platforms",
+    "kind": "task-platforms",
+    "mode": "split",
+    "locales": {
+      "en": [
+        "A store route is the start of a check",
+        [
+          "Your device + account region",
+          "PC / PS5 / Xbox / iOS / Android",
+          "Switch / Switch 2: unconfirmed",
+          "Check official listing + compatibility"
+        ],
+        "Official routes observed October 23; no save-transfer claim."
+      ],
+      "zh-Hans": [
+        "商店入口只是核查的起点",
+        [
+          "你的设备与账号地区",
+          "PC / PS5 / Xbox / iOS / 安卓",
+          "Switch / Switch 2：未确认",
+          "核对官方商店与兼容性"
+        ],
+        "官方入口观察于10月23日；不代表存档互通。"
+      ],
+      "zh-Hant": [
+        "商店入口只是核查的起點",
+        [
+          "你的裝置與帳號地區",
+          "PC / PS5 / Xbox / iOS / Android",
+          "Switch / Switch 2：未確認",
+          "核對官方商店與相容性"
+        ],
+        "官方入口觀察於10月23日；不代表存檔互通。"
+      ]
+    },
+    "afterHeading": {
+      "en": "Which route matches my device?",
+      "zh-Hans": "我的设备应该选哪个入口？",
+      "zh-Hant": "我的裝置應該選哪個入口？"
+    }
+  },
+  {
+    "slug": "aniimo-pre-registration",
+    "kind": "task-pre-registration",
+    "mode": "flow",
+    "locales": {
+      "en": [
+        "Reward display is not account entitlement",
+        [
+          "Historical campaign display",
+          "Check current terms + account",
+          "Match region, deadline and mail",
+          "Missing? Contact official support"
+        ],
+        "No universal claim deadline or reward delivery verified."
+      ],
+      "zh-Hans": [
+        "展示过奖励，不等于账号可领取",
+        [
+          "历史活动奖励展示",
+          "核对当前条款与账号",
+          "对照地区、期限与邮件",
+          "仍缺失？联系官方客服"
+        ],
+        "未确认统一领取期限，也未验证奖励到账。"
+      ],
+      "zh-Hant": [
+        "展示過獎勵，不等於帳號可領取",
+        [
+          "歷史活動獎勵展示",
+          "核對目前條款與帳號",
+          "對照地區、期限與郵件",
+          "仍缺失？聯絡官方客服"
+        ],
+        "未確認統一領取期限，也未驗證獎勵到帳。"
+      ]
+    },
+    "afterHeading": {
+      "en": "Which next step matches my situation?",
+      "zh-Hans": "哪种下一步符合我的情况？",
+      "zh-Hant": "哪種下一步符合我的情況？"
+    }
+  },
+  {
+    "slug": "aniimo-prismana-event-tracker",
+    "kind": "task-prismana-event-tracker",
+    "mode": "parallel",
+    "locales": {
+      "en": [
+        "Carnival claims use separate routes",
+        [
+          "Event page: daily free rewards",
+          "Shop → Pack: free gift box",
+          "Starlight Echoes: spending tiers",
+          "Check each claim state separately"
+        ],
+        "The free box is not confirmed daily; blind box ≠ choice."
+      ],
+      "zh-Hans": [
+        "嘉年华奖励分入口核对",
+        [
+          "活动页：每日免费奖励",
+          "商店 → 礼包：免费礼盒",
+          "星光回响：累计消费档位",
+          "逐项核对各自领取状态"
+        ],
+        "免费礼盒未确认每日刷新；盲盒不等于自选。"
+      ],
+      "zh-Hant": [
+        "嘉年華獎勵分入口核對",
+        [
+          "活動頁：每日免費獎勵",
+          "商店 → 禮包：免費禮盒",
+          "星光迴響：累計消費檔位",
+          "逐項核對各自領取狀態"
+        ],
+        "免費禮盒未確認每日刷新；盲盒不等於自選。"
+      ]
+    },
+    "afterHeading": {
+      "en": "November 27 Carnival: claim free rewards before comparing spending tiers",
+      "zh-Hans": "11月27日嘉年华：先领免费，再看消费档位",
+      "zh-Hant": "11月27日嘉年華：先領免費，再看消費檔位"
+    }
+  },
+  {
+    "slug": "aniimo-release-date",
+    "kind": "task-release-date",
+    "mode": "clock",
+    "locales": {
+      "en": [
+        "One historical launch instant",
+        [
+          "UTC+8: Sep 16, 10:00",
+          "UTC: Sep 16, 02:00",
+          "UTC−4: Sep 15, 22:00",
+          "UTC−7: Sep 15, 19:00"
+        ],
+        "2026 PC / console launch; mobile announced separately."
+      ],
+      "zh-Hans": [
+        "同一历史开服时刻，不同日期",
+        [
+          "UTC+8：9月16日 10:00",
+          "UTC：9月16日 02:00",
+          "UTC−4：9月15日 22:00",
+          "UTC−7：9月15日 19:00"
+        ],
+        "2026年 PC / 主机开服；移动端另行公告。"
+      ],
+      "zh-Hant": [
+        "同一歷史開服時刻，不同日期",
+        [
+          "UTC+8：9月16日 10:00",
+          "UTC：9月16日 02:00",
+          "UTC−4：9月15日 22:00",
+          "UTC−7：9月15日 19:00"
+        ],
+        "2026年 PC / 主機開服；行動版另行公告。"
+      ]
+    },
+    "afterHeading": {
+      "en": "One launch moment, different calendar dates",
+      "zh-Hans": "同一首发时刻，不同日历日期",
+      "zh-Hant": "同一首發時刻，不同行事曆日期"
+    }
+  },
+  {
+    "slug": "aniimo-rv-homeland-guide",
+    "kind": "task-rv-homeland-guide",
+    "mode": "gates",
+    "locales": {
+      "en": [
+        "Home season entry: both checks",
+        [
+          "RV level 10",
+          "Act Seven: Festivals of Astra",
+          "Both season entry checks",
+          "Inspect current season + stage lock"
+        ],
+        "Nov 26 largest-RV unlock at Lv.16 is a separate rule."
+      ],
+      "zh-Hans": [
+        "家园赛季准入：两个条件都核对",
+        [
+          "房车等级10",
+          "Act Seven: Festivals of Astra",
+          "同时核对赛季准入条件",
+          "再看当前赛季与阶段锁定"
+        ],
+        "11月26日最大房车16级解锁是另一条规则。"
+      ],
+      "zh-Hant": [
+        "家園賽季准入：兩個條件都核對",
+        [
+          "房車等級10",
+          "Act Seven: Festivals of Astra",
+          "同時核對賽季准入條件",
+          "再看目前賽季與階段鎖定"
+        ],
+        "11月26日最大房車16級解鎖是另一條規則。"
+      ]
+    },
+    "afterHeading": {
+      "en": "1. Confirm access and your server clock",
+      "zh-Hans": "1. 核对入口与服务器时间",
+      "zh-Hant": "1. 核對入口與伺服器時間"
+    }
+  },
+  {
+    "slug": "aniimo-system-requirements",
+    "kind": "task-system-requirements",
+    "mode": "storage",
+    "locales": {
+      "en": [
+        "Compare store and observation date",
+        [
+          "Epic · Sep 16: 30 GB",
+          "Steam · Oct 23: 40 GB",
+          "Listed free space ≠ download size",
+          "Recheck your chosen client"
+        ],
+        "Scale compares listed free space; not a benchmark."
+      ],
+      "zh-Hans": [
+        "空间要求要连同商店与日期比较",
+        [
+          "Epic · 9月16日：30 GB",
+          "Steam · 10月23日：40 GB",
+          "所需可用空间不等于下载量",
+          "安装前复核所选客户端"
+        ],
+        "长度比较已列可用空间要求；不是性能实测。"
+      ],
+      "zh-Hant": [
+        "空間要求要連同商店與日期比較",
+        [
+          "Epic · 9月16日：30 GB",
+          "Steam · 10月23日：40 GB",
+          "所需可用空間不等於下載量",
+          "安裝前複核所選客戶端"
+        ],
+        "長度比較已列可用空間要求；不是效能實測。"
+      ]
+    },
+    "afterHeading": {
+      "en": "Which storage figure applies to my client?",
+      "zh-Hans": "哪个存储要求对应我的客户端？",
+      "zh-Hant": "哪個儲存需求對應我的用戶端？"
+    }
+  },
+  {
+    "slug": "aniimo-version-1-1-update",
+    "kind": "task-version-1-1-update",
+    "mode": "separate",
+    "locales": {
+      "en": [
+        "Find the blocked system before spending",
+        [
+          "Whisperwake: story requirements",
+          "Map access ≠ every event gate",
+          "60→65: Trailblazer II + Ascension",
+          "65→70: Trailblazer III + growth"
+        ],
+        "These are separate checks, not one mandatory quest chain."
+      ],
+      "zh-Hans": [
+        "先判断被哪套系统卡住",
+        [
+          "群岛准入：主线前置",
+          "地图开放不等于活动已解锁",
+          "60→65：称号 II 与个体突破",
+          "65→70：称号 III 与成长条件"
+        ],
+        "这些是不同检查项，不是一条完整必做任务链。"
+      ],
+      "zh-Hant": [
+        "先判斷被哪套系統卡住",
+        [
+          "群島准入：主線前置",
+          "地圖開放不等於活動已解鎖",
+          "60→65：稱號 II 與個體突破",
+          "65→70：稱號 III 與成長條件"
+        ],
+        "這些是不同檢查項，不是一條完整必做任務鏈。"
+      ]
+    },
+    "afterHeading": {
+      "en": "2. Match the blocked goal to its gate",
+      "zh-Hans": "2. 按目标核对成长门槛",
+      "zh-Hant": "2. 按目標核對成長門檻"
+    }
+  },
+  {
+    "slug": "getting-started",
+    "kind": "task-getting-started",
+    "mode": "flow",
+    "locales": {
+      "en": [
+        "Begin with one concrete player task",
+        [
+          "Official client + correct account",
+          "Choose a combat / exploration task",
+          "Capture: select encounter formula",
+          "Evolution: check branch + requirement"
+        ],
+        "Editorial checklist; not a mandatory in-game quest order."
+      ],
+      "zh-Hans": [
+        "从一个明确的玩家任务开始",
+        [
+          "官方客户端与正确账号",
+          "选一个战斗或探索目标",
+          "捕获：先区分遭遇公式",
+          "进化：核对分支与实际条件"
+        ],
+        "本站建议核查顺序，不是游戏内强制任务顺序。"
+      ],
+      "zh-Hant": [
+        "從一個明確的玩家任務開始",
+        [
+          "官方客戶端與正確帳號",
+          "選一個戰鬥或探索目標",
+          "捕獲：先區分遭遇公式",
+          "進化：核對分支與實際條件"
+        ],
+        "本站建議核查順序，不是遊戲內強制任務順序。"
+      ]
+    },
+    "afterHeading": {
+      "en": "4. Check an evolution relationship before committing resources",
+      "zh-Hans": "4. 投入进化资源前核对关系",
+      "zh-Hant": "4. 投入進化資源前核對關係"
+    }
+  },
+  {
+    "slug": "how-we-verify",
+    "kind": "task-how-we-verify",
+    "mode": "filter",
+    "locales": {
+      "en": [
+        "How evidence becomes a scoped answer",
+        [
+          "Source + observation date",
+          "Identify what it actually establishes",
+          "Keep unknowns and conflicts visible",
+          "Publish answer + boundary + correction"
+        ],
+        "Editorial method; source links alone do not prove testing."
+      ],
+      "zh-Hans": [
+        "证据如何形成有边界的答案",
+        [
+          "来源与观察日期",
+          "判断来源实际证明了什么",
+          "保留未知项与冲突",
+          "发布答案、适用范围与纠错入口"
+        ],
+        "本站编辑方法；有来源链接不代表经过实测。"
+      ],
+      "zh-Hant": [
+        "證據如何形成有邊界的答案",
+        [
+          "來源與觀察日期",
+          "判斷來源實際證明了什麼",
+          "保留未知項與衝突",
+          "發布答案、適用範圍與糾錯入口"
+        ],
+        "本站編輯方法；有來源連結不代表經過實測。"
+      ]
+    }
+  },
+  {
+    "slug": "official-aniimo-dex-status",
+    "kind": "task-official-aniimo-dex-status",
+    "mode": "separate",
+    "locales": {
+      "en": [
+        "Match an answer to its evidence type",
+        [
+          "Dex: dated Basic Form records",
+          "Not a complete current roster",
+          "Events: dated announcements",
+          "Not live server or spawn monitoring"
+        ],
+        "Missing data remains unknown; see each page’s scope."
+      ],
+      "zh-Hans": [
+        "答案必须匹配对应的证据类型",
+        [
+          "图鉴：有日期的基础形态记录",
+          "不代表当前完整阵容",
+          "活动：有日期的官方公告",
+          "不代表实时服务器或刷新监测"
+        ],
+        "缺失数据保留未知；具体范围以各页面为准。"
+      ],
+      "zh-Hant": [
+        "答案必須匹配對應的證據類型",
+        [
+          "圖鑑：有日期的基礎形態記錄",
+          "不代表目前完整陣容",
+          "活動：有日期的官方公告",
+          "不代表即時伺服器或刷新監測"
+        ],
+        "缺失資料保留未知；具體範圍以各頁面為準。"
+      ]
+    },
+    "afterHeading": {
+      "en": "1. What can I do now?",
+      "zh-Hans": "1. 现在可以完成什么？",
+      "zh-Hant": "1. 現在可以完成什麼？"
+    }
+  },
+  {
+    "slug": "what-is-aniimo",
+    "kind": "task-what-is-aniimo",
+    "mode": "cycle",
+    "locales": {
+      "en": [
+        "How the exploration loop connects",
+        [
+          "Explore Idyll",
+          "Catch Aniimo",
+          "Twine with collected creatures",
+          "Use abilities to explore further"
+        ],
+        "Conceptual loop from store descriptions; not game footage."
+      ],
+      "zh-Hans": [
+        "探索循环如何衔接",
+        [
+          "探索伊莫世界",
+          "捕获伊莫",
+          "与已收集伊莫共鸣",
+          "使用能力继续探索"
+        ],
+        "依据商店描述绘制的概念关系，不是游戏画面。"
+      ],
+      "zh-Hant": [
+        "探索循環如何銜接",
+        [
+          "探索伊莫世界",
+          "捕獲伊莫",
+          "與已收集伊莫共鳴",
+          "使用能力繼續探索"
+        ],
+        "依據商店描述繪製的概念關係，不是遊戲畫面。"
+      ]
+    },
+    "afterHeading": {
+      "en": "What does Twine mean in Aniimo?",
+      "zh-Hans": "Aniimo 里的 Twine 是什么？",
+      "zh-Hant": "Aniimo 里的 Twine 是什么？"
+    }
+  }
+]
