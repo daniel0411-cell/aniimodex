@@ -63,3 +63,28 @@ checking its lazy-loaded image. Account desktop and download mobile screenshots
 visually reviewed; image captions and direct-answer-first placement preserved.
 Production acceptance will be recorded after deployment. No active preview deployment URL available;
 existing restrictions unchanged, preview host itself not newly verified.
+
+## Production acceptance
+
+Refetched origin before publication: a749939,0/0. Commit4e850a8 pushed to main;
+existing Cloudflare Git integration deployed it. No duplicate manual deployment.
+New image metadata observed on formal domain2026-11-27 07:55:16UTC
+(15:55 Beijing). Production checks passed:
+
+- Twelve new image files HTTP200, image MIME, native720x720 dimensions and SHA256
+  equal to checked-in assets.
+- Eighteen localized guide pages HTTP200, Article/OG image agreement and large
+  preview permission. Fifteen existing collection/tool metadata regression cases
+  also passed (45 resource/page checks total).
+- Missing URL404 with raw noindex, robots.txt200 Allow:/.
+- Chrome66 live page/viewport cases passed at1365x900 and390x900,DPR1; image decode,
+  no enlargement, no document overflow. Final desktop account diagram and mobile
+  download diagram screenshots visually reviewed.
+- Evidence and screenshots saved under `docs/verification/2026-11-27-editorial-diagrams-*`
+  and `docs/screenshots/2026-11-27-editorial-diagrams-{desktop,mobile}.png`.
+
+Build, SEO, content and ad-consent checks passed; no Google thumbnail selection,
+ranking, traffic or CTR result is implied by successful deployment. Future
+updates must preserve source/rights, uncertainty, native dimensions and HTML
+alternatives, follow the AGENTS-linked image publishing standard and regenerate
+changed diagrams. The owner has no required capture task for this release.

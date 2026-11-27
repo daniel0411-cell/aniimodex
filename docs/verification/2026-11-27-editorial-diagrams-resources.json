@@ -1,0 +1,256 @@
+{
+  "observedAt": "2026-11-27T07:56:11.543Z",
+  "results": [
+    {
+      "key": "download-en",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "download-zh-Hans",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "download-zh-Hant",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "account-en",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "account-zh-Hans",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "account-zh-Hant",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "spending-en",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "spending-zh-Hans",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "spending-zh-Hant",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "monetization-en",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "monetization-zh-Hans",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "key": "monetization-zh-Hant",
+      "status": 200,
+      "width": 720,
+      "height": 720,
+      "sha256Matches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/how-to-download-aniimo/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-mobile/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/how-to-download-aniimo/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-mobile/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/how-to-download-aniimo/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-mobile/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "articleImageMatches": true
+    },
+    {
+      "url": "https://aniimodex.com/en/evolutions/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/en/locations/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/en/abilities/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/en/elements/fire/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/en/tools/team-builder/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/evolutions/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/locations/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/abilities/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/elements/fire/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/tools/team-builder/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/evolutions/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/locations/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/abilities/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/elements/fire/",
+      "status": 200,
+      "topicMetadata": true
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/tools/team-builder/",
+      "status": 200,
+      "topicMetadata": true
+    }
+  ],
+  "missing404Noindex": true,
+  "robotsAllow": true
+}
