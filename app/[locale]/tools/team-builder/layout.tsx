@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    robots: { index: true, follow: true },
+    robots: { 'max-image-preview': 'large', index: true, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}/tools/team-builder/`,
       languages: localizedLanguages('/tools/team-builder/'),
@@ -32,9 +32,9 @@ export async function generateMetadata({
       description,
       images: [
         {
-          url: `${SITE_URL}/og-image.png`,
+          url: `${SITE_URL}/images/site-share.webp`,
           width: 1200,
-          height: 630,
+          height: 624,
           alt: title,
         },
       ],
@@ -43,7 +43,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [`${SITE_URL}/images/site-share.webp`],
     },
   };
 }

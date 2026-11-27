@@ -1,0 +1,512 @@
+{
+  "001": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10051.png",
+    "width": 512,
+    "height": 840
+  },
+  "002": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10052.png",
+    "width": 512,
+    "height": 840
+  },
+  "003": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10053.png",
+    "width": 512,
+    "height": 840
+  },
+  "004": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10055.png",
+    "width": 512,
+    "height": 840
+  },
+  "005": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10011.png",
+    "width": 512,
+    "height": 840
+  },
+  "006": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10012.png",
+    "width": 512,
+    "height": 840
+  },
+  "007": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10181.png",
+    "width": 512,
+    "height": 840
+  },
+  "008": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10184.png",
+    "width": 512,
+    "height": 840
+  },
+  "009": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10185.png",
+    "width": 512,
+    "height": 840
+  },
+  "010": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10187.png",
+    "width": 512,
+    "height": 840
+  },
+  "011": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10211.png",
+    "width": 512,
+    "height": 840
+  },
+  "012": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10212.png",
+    "width": 512,
+    "height": 840
+  },
+  "014": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10041.png",
+    "width": 512,
+    "height": 840
+  },
+  "015": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10042.png",
+    "width": 512,
+    "height": 840
+  },
+  "016": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10043.png",
+    "width": 512,
+    "height": 840
+  },
+  "017": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10045.png",
+    "width": 512,
+    "height": 840
+  },
+  "018": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10261.png",
+    "width": 512,
+    "height": 840
+  },
+  "019": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10262.png",
+    "width": 512,
+    "height": 840
+  },
+  "020": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10263.png",
+    "width": 512,
+    "height": 840
+  },
+  "021": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10201.png",
+    "width": 512,
+    "height": 840
+  },
+  "022": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10203.png",
+    "width": 512,
+    "height": 840
+  },
+  "023": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10207.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-023": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10161.png",
+    "width": 512,
+    "height": 840
+  },
+  "025": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10162.png",
+    "width": 512,
+    "height": 840
+  },
+  "026": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10163.png",
+    "width": 512,
+    "height": 840
+  },
+  "027": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10331.png",
+    "width": 512,
+    "height": 840
+  },
+  "028": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10333.png",
+    "width": 512,
+    "height": 840
+  },
+  "029": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10231.png",
+    "width": 512,
+    "height": 840
+  },
+  "030": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10232.png",
+    "width": 512,
+    "height": 840
+  },
+  "032": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10441.png",
+    "width": 512,
+    "height": 840
+  },
+  "033": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10443.png",
+    "width": 512,
+    "height": 840
+  },
+  "034": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10321.png",
+    "width": 512,
+    "height": 840
+  },
+  "035": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10323.png",
+    "width": 512,
+    "height": 840
+  },
+  "036": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10324.png",
+    "width": 512,
+    "height": 840
+  },
+  "037": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10471.png",
+    "width": 512,
+    "height": 840
+  },
+  "039": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10475.png",
+    "width": 512,
+    "height": 840
+  },
+  "040": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10351.png",
+    "width": 512,
+    "height": 840
+  },
+  "041": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10352.png",
+    "width": 512,
+    "height": 840
+  },
+  "042": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10031.png",
+    "width": 512,
+    "height": 840
+  },
+  "043": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10032.png",
+    "width": 512,
+    "height": 840
+  },
+  "045": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10131.png",
+    "width": 512,
+    "height": 840
+  },
+  "046": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10132.png",
+    "width": 512,
+    "height": 840
+  },
+  "047": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10133.png",
+    "width": 512,
+    "height": 840
+  },
+  "048": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10221.png",
+    "width": 512,
+    "height": 840
+  },
+  "049": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10222.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-047": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10511.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-048": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10512.png",
+    "width": 512,
+    "height": 840
+  },
+  "050": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10171.png",
+    "width": 512,
+    "height": 840
+  },
+  "051": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10172.png",
+    "width": 512,
+    "height": 840
+  },
+  "052": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10173.png",
+    "width": 512,
+    "height": 840
+  },
+  "053": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10174.png",
+    "width": 512,
+    "height": 840
+  },
+  "054": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10191.png",
+    "width": 512,
+    "height": 840
+  },
+  "055": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10192.png",
+    "width": 512,
+    "height": 840
+  },
+  "056": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10194.png",
+    "width": 512,
+    "height": 840
+  },
+  "057": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10451.png",
+    "width": 512,
+    "height": 840
+  },
+  "058": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10453.png",
+    "width": 512,
+    "height": 840
+  },
+  "059": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10454.png",
+    "width": 512,
+    "height": 840
+  },
+  "060": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10291.png",
+    "width": 512,
+    "height": 840
+  },
+  "061": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10293.png",
+    "width": 512,
+    "height": 840
+  },
+  "062": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10021.png",
+    "width": 512,
+    "height": 840
+  },
+  "063": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10026.png",
+    "width": 512,
+    "height": 840
+  },
+  "064": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10027.png",
+    "width": 512,
+    "height": 840
+  },
+  "065": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10024.png",
+    "width": 512,
+    "height": 840
+  },
+  "066": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10022.png",
+    "width": 512,
+    "height": 840
+  },
+  "067": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10023.png",
+    "width": 512,
+    "height": 840
+  },
+  "068": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10025.png",
+    "width": 512,
+    "height": 840
+  },
+  "069": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10501.png",
+    "width": 512,
+    "height": 840
+  },
+  "070": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10503.png",
+    "width": 512,
+    "height": 840
+  },
+  "071": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10281.png",
+    "width": 512,
+    "height": 840
+  },
+  "072": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10282.png",
+    "width": 512,
+    "height": 840
+  },
+  "073": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10283.png",
+    "width": 512,
+    "height": 840
+  },
+  "074": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10284.png",
+    "width": 512,
+    "height": 840
+  },
+  "075": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10285.png",
+    "width": 512,
+    "height": 840
+  },
+  "076": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10431.png",
+    "width": 512,
+    "height": 840
+  },
+  "077": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10433.png",
+    "width": 512,
+    "height": 840
+  },
+  "078": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10141.png",
+    "width": 512,
+    "height": 840
+  },
+  "079": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10142.png",
+    "width": 512,
+    "height": 840
+  },
+  "080": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10143.png",
+    "width": 512,
+    "height": 840
+  },
+  "081": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10481.png",
+    "width": 512,
+    "height": 840
+  },
+  "082": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10483.png",
+    "width": 512,
+    "height": 840
+  },
+  "083": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10122.png",
+    "width": 512,
+    "height": 840
+  },
+  "038": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10474.png",
+    "width": 512,
+    "height": 840
+  },
+  "044": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10033.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-11001": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_69993.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-99996": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10371.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-99998": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10361.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-300301-022": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10614.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-300301-008": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10633.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-300301-028": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10693.png",
+    "width": 512,
+    "height": 840
+  },
+  "089": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10583.png",
+    "width": 512,
+    "height": 840
+  },
+  "wiki-1000-10007": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10713.png",
+    "width": 512,
+    "height": 840
+  },
+  "024": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10161.png",
+    "width": 512,
+    "height": 840
+  },
+  "031": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10233.png",
+    "width": 512,
+    "height": 840
+  },
+  "084": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10381.png",
+    "width": 512,
+    "height": 840
+  },
+  "085": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10383.png",
+    "width": 512,
+    "height": 840
+  },
+  "086": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10461.png",
+    "width": 512,
+    "height": 840
+  },
+  "087": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10463.png",
+    "width": 512,
+    "height": 840
+  },
+  "088": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10581.png",
+    "width": 512,
+    "height": 840
+  },
+  "090": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10621.png",
+    "width": 512,
+    "height": 840
+  },
+  "091": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10623.png",
+    "width": 512,
+    "height": 840
+  },
+  "092": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10421.png",
+    "width": 512,
+    "height": 840
+  },
+  "093": {
+    "url": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10423.png",
+    "width": 512,
+    "height": 840
+  }
+}

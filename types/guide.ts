@@ -21,9 +21,9 @@ export interface GuidePost {
   relatedToolHrefs?: string[];
   /** 相关文章 slug 列表（站内互链） */
   relatedSlugs?: string[];
-  /** 文章横幅图路径（相对于 public） */
+  /** @deprecated Legacy unpublished artwork only. Register published images in data/editorial-images.json. */
   image?: string;
-  /** 图片 alt 文本 */
+  /** @deprecated Use the localized editorial image registry for published alt text. */
   imageAlt?: string;
   /** 支撑页面结论的官方来源 ID */
   sourceIds?: string[];

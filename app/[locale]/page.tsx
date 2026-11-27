@@ -35,13 +35,13 @@ export async function generateMetadata({
       description,
       url: `${SITE_URL}/${locale}/`,
       locale: locale === 'zh-Hant' ? 'zh_TW' : locale === 'zh-Hans' ? 'zh_CN' : 'en_US',
-      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
+      images: [{ url: `${SITE_URL}/images/site-share.webp`, width: 1200, height: 624, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [`${SITE_URL}/images/site-share.webp`],
     },
   };
 }
@@ -53,12 +53,6 @@ const guideSlugs = [
   'is-aniimo-a-gacha-game',
   'aniimo-crossplay-cross-save',
 ] as const;
-const guideImages: Record<(typeof guideSlugs)[number], string> = {
-  'aniimo-launch-checklist-known-issues': '/images/guides/getting-started.jpg',
-  'getting-started': '/images/guides/getting-started.jpg',
-  'is-aniimo-a-gacha-game': '/images/guides/dex-and-shiny.jpg',
-  'aniimo-crossplay-cross-save': '/images/guides/game-info.jpg',
-};
 const launchFeatureSlugs = [
   'aniimo-version-1-1-update',
   'aniimo-egg-heist',
@@ -494,16 +488,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Link>
           <div className="border-t border-ink-border">
             {guideSlugs.map((slug) => (
-              <Link key={slug} href={`/guide/${slug}`} className="grid grid-cols-[4.5rem_1fr] items-center gap-3 border-b border-ink-border py-3">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <Image
-                    src={guideImages[slug]}
-                    alt=""
-                    fill
-                    sizes="72px"
-                    className="object-cover"
-                  />
-                </div>
+              <Link key={slug} href={`/guide/${slug}`} className="block border-b border-ink-border py-3">
                 <div>
                   <span className="text-[10px] font-semibold uppercase text-primary-light">
                     {getLaunchGuide(locale, slug)?.tag ?? t(`guide.posts.${slug}.tag`)}

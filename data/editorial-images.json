@@ -1,0 +1,122 @@
+{
+  "catch-en": {
+    "src": "/images/guides/catch-tool-en.webp",
+    "width": 808,
+    "height": 475,
+    "alt": "AniimoDex calculator showing missing inputs and an undetermined catch result.",
+    "caption": "AniimoDex tool screenshot, November 27, 2026. If eligibility, base-rate assumptions or status are unconfirmed, no percentage is shown. This is not a game screenshot or a measured success rate.",
+    "source": "/en/tools/catch/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "catch-zh-Hans": {
+    "src": "/images/guides/catch-tool-zh-Hans.webp",
+    "width": 808,
+    "height": 475,
+    "alt": "本站捕获计算器显示缺少必要输入，结果为无法确定。",
+    "caption": "AniimoDex 工具截图（2026-11-27）：资格、基础概率假设或状态未确认时，不显示百分比。这不是游戏截图或实测成功率。",
+    "source": "/zh-Hans/tools/catch/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "catch-zh-Hant": {
+    "src": "/images/guides/catch-tool-zh-Hant.webp",
+    "width": 808,
+    "height": 475,
+    "alt": "本站捕獲計算器顯示缺少必要輸入，結果為無法確定。",
+    "caption": "AniimoDex 工具截圖（2026-11-27）：資格、基礎機率假設或狀態未確認時，不顯示百分比。這不是遊戲截圖或實測成功率。",
+    "source": "/zh-Hant/tools/catch/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "twine-en": {
+    "src": "/images/guides/twine-tool-en.webp",
+    "width": 856,
+    "height": 220,
+    "alt": "AniimoDex lookup results for Take Off: Tromber, Cornet and Fragrancier.",
+    "caption": "AniimoDex tool screenshot, November 27, 2026, after selecting Take Off. The current indexed snapshot returns three records. Multiple selected abilities match any selection; missing records are not proof of no ability.",
+    "source": "/en/tools/twine/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "twine-zh-Hans": {
+    "src": "/images/guides/twine-tool-zh-Hans.webp",
+    "width": 856,
+    "height": 220,
+    "alt": "本站反查 Take Off 的结果：Tromber、Cornet 和 Fragrancier。",
+    "caption": "AniimoDex 工具截图（2026-11-27）：选择 Take Off 后，当前索引快照返回三条记录。多选匹配任一已选能力；未公布能力不等于没有能力。",
+    "source": "/zh-Hans/tools/twine/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "twine-zh-Hant": {
+    "src": "/images/guides/twine-tool-zh-Hant.webp",
+    "width": 856,
+    "height": 220,
+    "alt": "本站反查 Take Off 的結果：Tromber、Cornet 和 Fragrancier。",
+    "caption": "AniimoDex 工具截圖（2026-11-27）：選擇 Take Off 後，目前索引快照傳回三筆記錄。多選匹配任一已選能力；未公布能力不等於沒有能力。",
+    "source": "/zh-Hant/tools/twine/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "type-chart-en": {
+    "src": "/images/guides/type-chart-tool-en.webp",
+    "width": 1024,
+    "height": 706,
+    "alt": "AniimoDex reference matrix with attacking elements in rows and defending elements in columns.",
+    "caption": "AniimoDex tool screenshot, November 27, 2026. Read the attacking row against the defending column. The numeric matchup matrix is a community reference, not a confirmed official formula. Use the live tool for readable values and evidence limits.",
+    "source": "/en/tools/type-chart/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "type-chart-zh-Hans": {
+    "src": "/images/guides/type-chart-tool-zh-Hans.webp",
+    "width": 1024,
+    "height": 706,
+    "alt": "本站元素参考矩阵：行是攻击方，列是防御方。",
+    "caption": "AniimoDex 工具截图（2026-11-27）：按攻击行与防御列交叉读取。数值克制矩阵是社区参考，并非已确认的官方公式；请使用交互工具查看清晰数值及证据范围。",
+    "source": "/zh-Hans/tools/type-chart/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "type-chart-zh-Hant": {
+    "src": "/images/guides/type-chart-tool-zh-Hant.webp",
+    "width": 1024,
+    "height": 706,
+    "alt": "本站元素參考矩陣：列是攻擊方，欄是防禦方。",
+    "caption": "AniimoDex 工具截圖（2026-11-27）：依攻擊列與防禦欄交叉讀取。數值克制矩陣是社群參考，並非已確認的官方公式；請使用互動工具查看清晰數值及證據範圍。",
+    "source": "/zh-Hant/tools/type-chart/",
+    "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
+    "observedAt": "2026-11-27"
+  },
+  "sparkling-en": {
+    "src": "/images/guides/hue-reroll-editorial.webp",
+    "width": 768,
+    "height": 512,
+    "alt": "Brush, die and identical color swatches illustrate that a random hue reroll may repeat a color.",
+    "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
+    "source": "docs/sparkling-illustrations-2026-11-03.md",
+    "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
+    "observedAt": "2026-11-03"
+  },
+  "sparkling-zh-Hans": {
+    "src": "/images/guides/hue-reroll-editorial.webp",
+    "width": 768,
+    "height": 512,
+    "alt": "画笔、骰子与相同色卡，表示随机重洗可能重复颜色。",
+    "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
+    "source": "docs/sparkling-illustrations-2026-11-03.md",
+    "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
+    "observedAt": "2026-11-03"
+  },
+  "sparkling-zh-Hant": {
+    "src": "/images/guides/hue-reroll-editorial.webp",
+    "width": 768,
+    "height": 512,
+    "alt": "畫筆、骰子與相同色卡，表示隨機重洗可能重複顏色。",
+    "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
+    "source": "docs/sparkling-illustrations-2026-11-03.md",
+    "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
+    "observedAt": "2026-11-03"
+  }
+}

@@ -30,13 +30,13 @@ export async function generateMetadata({
       url: `${SITE_URL}/${locale}/tools/`,
       title,
       description,
-      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
+      images: [{ url: `${SITE_URL}/images/site-share.webp`, width: 1200, height: 624, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [`${SITE_URL}/images/site-share.webp`],
     },
   };
 }

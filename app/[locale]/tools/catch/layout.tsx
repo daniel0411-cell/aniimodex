@@ -1,3 +1,5 @@
+import assets from '@/data/editorial-images.json';
+import { imageMetadata } from '@/lib/editorial-images';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -16,12 +18,13 @@ export async function generateMetadata({
   const siteName = meta('siteName');
   const title = `${t('title')} | ${siteName}`;
   const description = t('subtitle');
+  const representative = assets[`catch-${locale}` as keyof typeof assets];
 
   return {
     title,
     description,
     // 该页已从占位说明页重建为基于官方公式的计算器，具备可索引的独有内容
-    robots: { index: true, follow: true },
+    robots: { 'max-image-preview': 'large', index: true, follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}/tools/catch/`,
       languages: localizedLanguages('/tools/catch/'),
@@ -31,20 +34,13 @@ export async function generateMetadata({
       url: `${SITE_URL}/${locale}/tools/catch/`,
       title,
       description,
-      images: [
-        {
-          url: `${SITE_URL}/og-image.png`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      images: [imageMetadata(representative)],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [imageMetadata(representative)],
     },
   };
 }

@@ -1,7 +1,8 @@
 import { getNovember26Blocks } from '@/data/november-26-updates';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Image from 'next/image';
+import { getGuideImage, imageMetadata } from '@/lib/editorial-images';
+import EditorialFigure from '@/components/guide/EditorialFigure';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -70,11 +71,12 @@ export async function generateMetadata({
   const title = `${launchGuide?.title ?? t(`${post.slug}.title`)} | ${siteName}`;
   const description = launchGuide?.subtitle ?? t(`${post.slug}.subtitle`);
   const path = `/guide/${slug}/`;
+  const representative = getGuideImage(slug, locale);
 
   return {
     title,
     description,
-    robots: { index: Boolean(post.sourceIds?.length), follow: true },
+    robots: { 'max-image-preview': 'large', index: Boolean(post.sourceIds?.length), follow: true },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
       languages: localizedLanguages(path),
@@ -86,13 +88,13 @@ export async function generateMetadata({
       description,
       publishedTime: post.date,
       modifiedTime: post.updatedAt ?? post.date,
-      images: post.image ? [{ url: `${SITE_URL}${post.image}` }] : undefined,
+      images: representative ? [imageMetadata(representative)] : undefined,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: representative ? 'summary_large_image' : 'summary',
       title,
       description,
-      images: post.image ? [`${SITE_URL}${post.image}`] : undefined,
+      images: representative ? [imageMetadata(representative)] : undefined,
     },
   };
 }
@@ -105,6 +107,7 @@ export default async function GuidePostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const post = getGuidePost(slug);
+  const representative = getGuideImage(slug, locale);
   const t = await getTranslations('guide');
   const tp = await getTranslations('guide.posts');
   const tg = await getTranslations('guide');
@@ -175,7 +178,7 @@ export default async function GuidePostPage({
         datePublished: post.date,
         dateModified: post.updatedAt ?? post.date,
         inLanguage: locale,
-        image: post.image ? [`${SITE_URL}${post.image}`] : undefined,
+        image: representative ? { '@type': 'ImageObject', url: `${SITE_URL}${representative.src}`, width: representative.width, height: representative.height, caption: representative.alt } : undefined,
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,
         publisher: {
           '@type': 'Organization',
@@ -216,6 +219,14 @@ export default async function GuidePostPage({
     ],
   };
 
+  // Keep task instructions ahead of screenshots; insert at the next section boundary.
+  const figure = representative && !representative.src.includes('hue-reroll-editorial')
+    ? <EditorialFigure key="representative-image" image={representative} locale={locale} /> : null;
+  const nextSectionNumber = post.slug === 'aniimo-choose-by-mobility-role' ? '2' : '3';
+  const figureIndex = post.dataTopic ? -1 : body.findIndex(block =>
+    block.t === 'h' && new RegExp(`^${nextSectionNumber}[.、]`).test(block.c)
+  );
+
   // 按段落渲染正文块
   const renderedBody: ReactNode[] = [];
   let listBuffer: string[] = [];
@@ -238,6 +249,7 @@ export default async function GuidePostPage({
       return;
     }
     flushList(`list-${i}`);
+    if (i === figureIndex && figure) renderedBody.push(figure);
     if (block.t === 'h') {
       renderedBody.push(
         <h2 id={`section-${i}`} key={i} className="scroll-mt-24 mb-3 mt-8 text-xl font-bold text-text-primary">
@@ -310,6 +322,7 @@ export default async function GuidePostPage({
     }
   });
   flushList('list-end');
+  if (figureIndex < 0 && figure) renderedBody.push(figure);
 
   return (
     <div className="space-y-6">
@@ -322,19 +335,6 @@ export default async function GuidePostPage({
 
       <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_15rem]">
       <article className="min-w-0">
-        {/* 文章横幅图 */}
-        {post.image && (
-          <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-xl border border-ink-border">
-            <Image
-              src={post.image}
-              alt={post.imageAlt ?? ''}
-              fill
-              sizes="(min-width: 1024px) 100vw, 100vw"
-              className="object-cover"
-              priority
-            />
-          </div>
-        )}
         <header className="space-y-3 border-b border-ink-border pb-6">
           <div className="flex flex-wrap items-center gap-2">
             <Badge label={tag} />

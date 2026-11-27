@@ -58,3 +58,12 @@ Before publishing or pushing completed changes, fetch again and check whether
 the relevant remote branch advanced during the task. Resolve or report new
 differences before proceeding. Push and deployment still require authorization
 from the user's task; this freshness check alone does not authorize either.
+
+## Helpful Images and Search Previews
+
+For content, image, metadata and publishing work, also apply
+`docs/image-publishing-standard.md`. Select truthful, task-relevant visuals;
+record source and usage basis; keep body, social and applicable structured-data
+images consistent. Preserve real dimensions, evidence limits and index controls.
+Run the build-integrated image checks and record desktop/mobile plus production
+verification. Editorial relevance, authenticity and rights require human review.

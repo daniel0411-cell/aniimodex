@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   keywords: ['Aniimo', '伊莫', '图鉴', '精灵', 'Twine 反查', '元素克制', '游戏工具'],
   authors: [{ name: 'AniimoDex' }],
   robots: {
+    'max-image-preview': 'large',
     index: true,
     follow: true,
   },

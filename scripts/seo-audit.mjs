@@ -33,7 +33,7 @@ for (const path of pages) {
   const title = get(/<title>(.*?)<\/title>/s);
   const description = get(/<meta name="description" content="([^"]*)"/);
   const canonical = get(/<link rel="canonical" href="([^"]*)"/);
-  const noindex = /<meta name="robots" content="noindex, follow"/.test(html);
+  const noindex = (get(/<meta name="robots" content="([^"]*)"/) ?? '').split(/,\s*/).includes('noindex');
   const h1Count = (html.match(/<h1\b/g) ?? []).length;
   const hreflangCount = (html.match(/<link rel="alternate" hrefLang=/g) ?? []).length;
 

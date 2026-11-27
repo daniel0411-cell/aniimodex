@@ -1,3 +1,4 @@
+import { getDexImage } from '@/lib/editorial-images';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -81,11 +82,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const stage = aniimo.officialStage === 'Unknown' ? '' : aniimo.officialStage;
   const description = `${aniimo.archived ? 'Historical Wiki record. ' : ''}${td('title')}: ${aniimo.enName} (#${aniimo.officialNumber ?? aniimo.number})${elements ? `, ${elements}` : ''}${role ? `, ${role}` : ''}${stage ? `, ${stage}` : ''}. ${aniimo.description}`;
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
+  const representative = getDexImage(aniimo.number, aniimo.imageUrl);
 
   return {
     title,
     description,
-    robots: { index: true, follow: true },
+    robots: { 'max-image-preview': 'large', index: true, follow: true },
     alternates: {
       canonical: url,
       languages: localizedLanguages(`/dex/${aniimo.number}/`),
@@ -97,20 +99,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'website',
       siteName,
       locale: locale === 'zh-Hant' ? 'zh_TW' : locale === 'zh-Hans' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: `${SITE_URL}/og-image.png`,
-          width: 1200,
-          height: 630,
-          alt: `${aniimo.name} Dex - ${siteName}`,
-        },
-      ],
+      images: representative ? [{ ...representative, alt: displayName }] : [],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: representative ? [{ ...representative, alt: displayName }] : [],
     },
   };
 }
@@ -139,6 +134,7 @@ export default async function DexDetailPage({ params }: PageProps) {
   const readingNotes = aniimo.archived ? undefined : dexReadingNotes[aniimo.number]?.[locale];
 
   const url = `${SITE_URL}/${locale}/dex/${aniimo.number}/`;
+  const representative = getDexImage(aniimo.number, aniimo.imageUrl);
 
   // JSON-LD 结构化数据：WebPage + BreadcrumbList
   const jsonLd = {
@@ -150,6 +146,7 @@ export default async function DexDetailPage({ params }: PageProps) {
         url,
         name: `${aniimo.name} Dex - AniimoDex`,
         description: aniimo.description,
+        primaryImageOfPage: representative ? { '@type': 'ImageObject', ...representative } : undefined,
         isPartOf: { '@id': `${SITE_URL}/#website` },
       },
       {
@@ -208,7 +205,7 @@ export default async function DexDetailPage({ params }: PageProps) {
       {/* 头部 */}
       <header className="grid overflow-hidden rounded-lg border border-ink-border bg-white shadow-card md:grid-cols-[minmax(18rem,0.85fr)_1.15fr]">
         <div className="relative flex min-h-72 items-center justify-center overflow-hidden bg-sky-50 md:min-h-[30rem]">
-          {aniimo.imageUrl && <Image src={aniimo.imageUrl} alt={aniimo.enName} fill sizes="(min-width: 768px) 42vw, 100vw" className="object-contain" priority />}
+          {representative && <Image src={representative.url} alt={aniimo.enName} width={representative.width} height={representative.height} sizes="(min-width: 768px) 42vw, 100vw" className="h-auto max-h-[30rem] w-full object-contain" priority />}
         </div>
         <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
           <div className="flex items-center gap-3">
