@@ -1,18 +1,18 @@
-/** Announced server-clock milestones; this is a dated plan, not live availability. */
+/** November 27 editorial plan from announced windows, not live availability. */
 export function getNovemberPlanningCards(locale: string) {
   const t = (en: string, hans: string, hant: string) => locale === 'en' ? en : locale === 'zh-Hant' ? hant : hans;
   return [
     {
-      date: '11/26 · UTC+8 14:00–19:00',
-      title: t('Planned maintenance · all regions', '计划维护 · 全球同一时段', '計畫維護 · 全球同一時段'),
-      action: t('Europe 06–11 UTC+0; Americas 02–07 UTC-4. Finish time can change. Restart after maintenance and check the revised Lv.45/50 story and title handoff.', '欧洲06–11 UTC+0；美洲02–07 UTC-4。结束可能提前或延后；维护后重启，按45／50级剧情与称号交接新要求核对。', '歐洲06–11 UTC+0；美洲02–07 UTC-4。結束可能提前或延後；維護後重啟，按45／50級劇情與稱號交接新要求核對。'),
-      href: '/guide/aniimo-version-1-1-update',
+      date: '11/27 · 14:00 → 12/01 · 12:00',
+      title: t('Carnival · free gift · Student I', '嘉年华 · 免费礼包 · Student I', '嘉年華 · 免費禮包 · Student I'),
+      action: t('Corrected November 27 against the official notice: starts at 14:00 on each server, not 10:00. Claim event-page daily rewards separately from the free Shop > Pack gift; spending tiers are optional.', '11月27日依官网更正：各服14:00开始，不是10:00。活动页每日奖励与 Shop > Pack 免费礼包分开领取；累计消费档位另算。', '11月27日依官網更正：各服14:00開始，不是10:00。活動頁每日獎勵與 Shop > Pack 免費禮包分開領取；累計消費檔位另算。'),
+      href: '/guide/aniimo-prismana-event-tracker',
     },
     {
-      date: '11/27 · 10:00 → 12/01 · 12:00',
-      title: t('Carnival · free gift · Student I', '嘉年华 · 免费礼包 · Student I', '嘉年華 · 免費禮包 · Student I'),
-      action: t('Server clock. Claim daily rewards and the free Shop > Pack gift. Separate it from paid bundles and Lumin Crystals spent milestones.', '各服时钟。领每日奖励及 Shop > Pack 免费礼包；与付费礼包、Lumin Crystals 累计消耗档位分开看。', '各服時鐘。領每日獎勵及 Shop > Pack 免費禮包；與付費禮包、Lumin Crystals 累計消耗檔位分開看。'),
-      href: '/guide/aniimo-prismana-event-tracker',
+      date: '11/27 · 04:00 → 12/02 · 03:59',
+      title: t('Home Shop · Resource Exchange', '家园商店 · Resource Exchange', '家園商店 · Resource Exchange'),
+      action: t('Server clock. Check the item, currency, price and remaining limit before exchanging. This is separate from the free Carnival gift; the notice does not publish an optimal shopping list.', '各服时钟。兑换前核对物品、货币、价格和剩余限额；与嘉年华免费礼包分开，公告未给最优购买清单。', '各服時鐘。兌換前核對物品、貨幣、價格和剩餘限額；與嘉年華免費禮包分開，公告未給最佳購買清單。'),
+      href: '/guide/aniimo-rv-homeland-guide',
     },
     {
       date: '11/26 update → 12/09 · 23:59',
@@ -33,15 +33,15 @@ export function getNovemberPlanningCards(locale: string) {
       href: '/guide/aniimo-prismana-event-tracker',
     },
     {
-      date: '11/26',
+      date: '11/26 · announced update',
       title: 'Redrock Trail · Lv.40',
-      action: t('Scheduled after the version update; exact hour unannounced. Prepare your party and buffs, then check access. Multiplayer special track events are not available under the published rules.', '计划在版本更新后开放，未公布具体时刻。先准备队伍与增益，再确认入口；按已公布规则，多人赛暂不可用特殊赛道事件。', '計畫在版本更新後開放，未公布具體時刻。先準備隊伍與增益，再確認入口；按已公布規則，多人賽暫不可用特殊賽道事件。'),
+      action: t('The announced November 26 opening is now a past date, not a live-access check. After updating, confirm the Lv.40 entry and try the solo weekly tasks; no fastest route has been tested here.', '公告11月26日开放日期已过去，不代表本站已实测入口。更新后核对40级入口及单人周任务；本站未实测最快路线。', '公告11月26日開放日期已過去，不代表本站已實測入口。更新後核對40級入口及單人週任務；本站未實測最快路線。'),
       href: '/guide/aniimo-prismana-event-tracker',
     },
     {
       date: '11/27 · 04:00',
-      title: t('Whirlbite reset deadline', 'Whirlbite 重置截止', 'Whirlbite 重置截止'),
-      action: t('Only pre-balance Basic/Prismana individuals are named. Compare the refunded resources with the progression being removed before choosing to reset.', '仅点名平衡调整前获得的基础／Prismana 个体。决定重置前，对照返还资源与将撤销的成长效果。', '僅點名平衡調整前獲得的基礎／Prismana 個體。決定重置前，對照返還資源與將撤銷的成長效果。'),
+      title: t('Whirlbite · check your server cutoff', 'Whirlbite · 按服核对截止', 'Whirlbite · 按服核對截止'),
+      action: t('The November 27 04:00 deadline is server-local: 04:00 / 12:00 / 16:00 Beijing for Apac / Europe / Americas. If your window has passed, do not follow the old reset checklist as an available action; no extension is verified.', '11月27日各服04:00截止，换算北京时间亚太04:00／欧洲12:00／美洲16:00。所在服已过期就不要按旧清单继续操作，尚未核验延期。', '11月27日各服04:00截止，換算北京時間亞太04:00／歐洲12:00／美洲16:00。所在服已過期就不要按舊清單繼續操作，尚未核驗延期。'),
       href: '/guide/aniimo-launch-checklist-known-issues',
     },
     {

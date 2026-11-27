@@ -7,7 +7,7 @@ export const november26Topics: Record<string, string[]> = {
   'aniimo-multiplayer': ['fair', 'returning'],
   'aniimo-team-composition': ['fair'],
   'aniimo-egg-heist': ['collectibles', 'fair'],
-  'aniimo-prismana-event-tracker': ['maintenance', 'jaguaraun', 'carnival', 'dash'],
+  'aniimo-prismana-event-tracker': ['carnival', 'jaguaraun', 'dash'],
   'is-aniimo-free-to-play': ['carnival', 'credits'],
   'aniimo-forms-explained': ['pigment'],
   'aniimo-prismana-potential-breeding-guide': ['pigment'],
@@ -79,7 +79,14 @@ export function getNovember26Blocks(locale: string, slug: string): LaunchGuideBl
     ],
     carnival: [
       h("November 27 Carnival: claim free rewards before comparing spending tiers", "11月27日嘉年华：先领免费，再看消费档位", "11月27日嘉年華：先領免費，再看消費檔位"),
-      p("Annual Carnival and Starlight Echoes are scheduled November 27, 10:00–December 1, 12:00 on each server clock, Student I, with a November 26 preview. Claim daily rewards and check Shop > Pack for the free Aniimo Gratitude Gift Box: Collectible Blind Box ×1, Wonder Sugar Crystal ×100 and Vein Essence ×5. A blind box does not promise a missing collectible.", "Annual Carnival 与 Starlight Echoes 计划11月27日10:00至12月1日12:00，各服时钟，要求 Student I；11月26日预告。每日领取奖励，并到 Shop > Pack 查找免费 Aniimo Gratitude Gift Box：藏品盲盒×1、Wonder Sugar Crystal×100、Vein Essence×5。盲盒不保证补缺。", "Annual Carnival 與 Starlight Echoes 計畫11月27日10:00至12月1日12:00，各服時鐘，要求 Student I；11月26日預告。每日領取獎勵，並到 Shop > Pack 查找免費 Aniimo Gratitude Gift Box：藏品盲盒×1、Wonder Sugar Crystal×100、Vein Essence×5。盲盒不保證補缺。"),
+      p("Correction checked November 27: our earlier 10:00 start was incorrect; the official notice currently gives 14:00 on each server. In Beijing time, starts are November 27 14:00 Apac, November 27 22:00 Europe and November 28 02:00 Americas; ends are December 1 12:00 / 20:00 / December 2 00:00 respectively. A preview is not early claim access.", "11月27日核对更正：本站此前10:00写法有误，官网当前为各服14:00。开始换算北京时间：亚太11月27日14:00、欧洲当日22:00、美洲11月28日02:00；截止依次为12月1日12:00／20:00／12月2日00:00。预告不等于可以提前领取。", "11月27日核對更正：本站此前10:00寫法有誤，官網目前為各服14:00。開始換算北京時間：亞太11月27日14:00、歐洲當日22:00、美洲11月28日02:00；截止依序為12月1日12:00／20:00／12月2日00:00。預告不等於可以提前領取。"),
+      table([t("Claim path", "领取入口", "領取入口"), t("Before claiming", "领取前核对", "領取前核對")], [
+        [t("Annual Carnival event page", "Annual Carnival 活动页", "Annual Carnival 活動頁"), t("Check daily appearance discount vouchers and random treasure chests here. Claiming a Shop gift does not replace these daily claims.", "每日查看外观折扣券和随机宝箱等奖励；领过商店礼包不等于领过活动页每日奖励。", "每日查看外觀折扣券和隨機寶箱等獎勵；領過商店禮包不等於領過活動頁每日獎勵。")],
+        ["Shop > Pack", t("Select the free Aniimo Gratitude Gift Box, not a paid bundle. The notice does not say this box refreshes daily; a blind box does not guarantee a missing collectible.", "选择免费 Aniimo Gratitude Gift Box，而非付费礼包；公告未说此礼包每日刷新，盲盒也不保证补缺。", "選擇免費 Aniimo Gratitude Gift Box，而非付費禮包；公告未說此禮包每日重新整理，盲盒也不保證補缺。")],
+        ["Starlight Echoes", t("Requires the displayed cumulative Lumin Crystals spending tier. Logging in or claiming the free pack does not meet that requirement.", "须满足显示的 Lumin Crystals 累计消耗档位；仅登录或领取免费礼包不代表达标。", "須滿足顯示的 Lumin Crystals 累計消耗檔位；僅登入或領取免費禮包不代表達標。")],
+      ]),
+      {t:'link', href:'https://www.aniimo.com/newslist/detail/100312', c:t("Official timing and claim rules — published November 23, rechecked November 27", "时间与领取规则原文——11月23日发布，11月27日复核", "時間與領取規則原文——11月23日發布，11月27日複核")},
+      p("Annual Carnival and Starlight Echoes are scheduled November 27, 14:00–December 1, 12:00 on each server clock, Student I, with a November 26 preview. Claim event-page daily rewards separately and check Shop > Pack for the free Aniimo Gratitude Gift Box: Collectible Blind Box ×1, Wonder Sugar Crystal ×100 and Vein Essence ×5. A blind box does not promise a missing collectible.", "Annual Carnival 与 Starlight Echoes 计划11月27日14:00至12月1日12:00，各服时钟，要求 Student I；11月26日预告。在活动页每日领取奖励，并另到 Shop > Pack 查找免费 Aniimo Gratitude Gift Box：藏品盲盒×1、Wonder Sugar Crystal×100、Vein Essence×5。盲盒不保证补缺。", "Annual Carnival 與 Starlight Echoes 計畫11月27日14:00至12月1日12:00，各服時鐘，要求 Student I；11月26日預告。在活動頁每日領取獎勵，並另到 Shop > Pack 查找免費 Aniimo Gratitude Gift Box：藏品盲盒×1、Wonder Sugar Crystal×100、Vein Essence×5。盲盒不保證補缺。"),
       p("Keep the free pack separate from paid bundles. Starlight Echoes counts cumulative Lumin Crystals spent, not simply topped up. Inspect the actual tiers, eligible spending and bundle contents before purchasing; no verified price comparison or recommended spend is available here.", "免费礼包与付费礼包分开看。Starlight Echoes 按累计消耗 Lumin Crystals 计算，不能把充值直接当消费进度。购买前核对真实档位、计入范围及礼包内容；本站没有已核验的价格对比或推荐消费额。", "免費禮包與付費禮包分開看。Starlight Echoes 按累計消耗 Lumin Crystals 計算，不能把儲值直接當消費進度。購買前核對真實檔位、計入範圍及禮包內容；本站沒有已核驗的價格對比或推薦消費額。"),
     ],
     pigment: [

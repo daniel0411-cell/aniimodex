@@ -42,7 +42,7 @@ const STATIC_ROUTES: {
   priority: number;
   changefreq?: MetadataRoute.Sitemap[number]['changeFrequency'];
 }[] = [
-  { path: '/', lastModified: '2026-11-02', priority: 1.0, changefreq: 'weekly' },
+  { path: '/', lastModified: '2026-11-27', priority: 1.0, changefreq: 'weekly' },
   { path: '/dex/', lastModified: LAST_PUBLISHED, priority: 0.9, changefreq: 'weekly' },
   { path: '/tools/', lastModified: LAST_PUBLISHED, priority: 0.8, changefreq: 'monthly' },
   {

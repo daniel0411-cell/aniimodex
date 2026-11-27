@@ -113,11 +113,11 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'is-aniimo-free-to-play',
-    updatedAt: '2026-11-25',
+    updatedAt: '2026-11-27',
     date: '2026-08-30',
     readMinutes: 6,
     relatedSlugs: ['aniimo-release-date', 'how-to-download-aniimo'],
-    sourceIds: ['aniimo-november-26-announcement-2026-11-25', 'aniimo-dev-feedback-2026-11-25', 'aniimo-handbook-orb-2026-11-23', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-sparkling-disclosure-2026-10-27', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
+    sourceIds: ['aniimo-november-27-event-timing', 'aniimo-november-26-announcement-2026-11-25', 'aniimo-dev-feedback-2026-11-25', 'aniimo-handbook-orb-2026-11-23', 'aniimo-steam-4126040', 'aniimo-playstation-10018491', 'aniimo-xbox-9pk8phlcqdf6', 'aniimo-steam-update-1-1-2026-09-23', 'aniimo-official-sparkling-disclosure-2026-10-27', 'aniimo-steam-patch-1-0-3732728-2026-10-15'],
   },
   {
     slug: 'how-to-download-aniimo',
@@ -289,7 +289,7 @@ export const guidePosts: GuidePost[] = [
   },
   {
     slug: 'aniimo-prismana-event-tracker',
-    updatedAt: '2026-11-25',
+    updatedAt: '2026-11-27',
     date: '2026-10-13',
     readMinutes: 8,
     relatedToolHrefs: ['/dex'],
@@ -299,7 +299,7 @@ export const guidePosts: GuidePost[] = [
       'aniimo-catching-guide',
       'aniimo-holo-battle-interlink',
     ],
-    sourceIds: ['aniimo-november-26-announcement-2026-11-25', 'aniimo-dev-feedback-2026-11-25', 'aniimo-weekly-planning-2026-11-23', 'aniimo-jaguaraun-delay-2026-11-16', 'aniimo-handbook-orb-2026-11-23', 'aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
+    sourceIds: ['aniimo-november-27-photo-ecology', 'aniimo-november-27-event-timing', 'aniimo-november-26-announcement-2026-11-25', 'aniimo-dev-feedback-2026-11-25', 'aniimo-weekly-planning-2026-11-23', 'aniimo-jaguaraun-delay-2026-11-16', 'aniimo-handbook-orb-2026-11-23', 'aniimo-event-planning-2026-11-21', 'aniimo-snapshots-dash-2026-11-21', 'aniimo-november-12-update-2026-11-12', 'aniimo-prismana-calendar-2026-11-08', 'aniimo-s1-part-two-2026-10-27', 'aniimo-patch-1-1-3857679-2026-10-30', 'aniimo-steam-update-1-1-2026-09-23'],
   },
   {
     slug: 'aniimo-pre-registration',

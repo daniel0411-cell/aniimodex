@@ -71,6 +71,20 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   for (const stale of ['historical record only', 'Glameep 仅有8月历史记录', 'Glameep 僅有8月歷史紀錄']) assert(!eventHtml.includes(stale), 'Event copy must reflect refreshed Glameep');
 }
 const sitemap = readFileSync('out/sitemap.xml', 'utf8');
+// Carnival's server-local 14:00 correction must reach both owner guides and
+// the shared homepage plan; retain the different photo/ecology calendar.
+for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  for (const slug of ['aniimo-prismana-event-tracker', 'is-aniimo-free-to-play']) {
+    const html = read(locale, `guide/${slug}`);
+    for (const clock of ['14:00', '22:00', '02:00', '20:00', '00:00']) assert(html.includes(clock), `${locale}/${slug}: missing corrected clock ${clock}`);
+    assert(html.includes('2026-11-27'));
+  }
+  const home = read(locale, '');
+  assert(home.includes('11/27 · 14:00'));
+  assert(!home.includes('11/27 · 10:00'));
+  assert(!home.includes('11/26 · UTC+8 14:00'));
+  assert(home.includes('Resource Exchange'));
+}
 const jaguaraun = details.find(d => d.number === 'wiki-1000-10007');
 assert.equal(jaguaraun.checkedAt, '2026-11-09');
 assert.equal(jaguaraun.attributes.reduce((sum, a) => sum + a.value, 0), 540);

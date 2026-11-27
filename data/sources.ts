@@ -13,6 +13,20 @@ export interface SourceReference {
 
 export const sources: SourceReference[] = [
   {
+    id: 'aniimo-november-27-event-timing',
+    url: 'https://www.aniimo.com/newslist/detail/100312',
+    title: 'Carnival and Home Shop timing — November 23 notice, rechecked November 27',
+    accessedAt: '2026-11-27',
+    evidence: 'Read official server-rendered announcement November 27. Carnival and Starlight Echoes start November 27 14:00 and end December 1 12:00 separately on UTC+8/UTC+0/UTC-4 servers, correcting the site’s earlier 10:00. Student I; event-page daily claims are separate from the free Shop > Pack gift and cumulative spending tiers. Home Shop exchange November 27 04:00–December 2 03:59. Dated excerpts retained in checkpoint-2026-11-27-content-maintenance.md; no client access, prices, shop stock or daily gift refresh verified.',
+  },
+  {
+    id: 'aniimo-november-27-photo-ecology',
+    url: 'https://www.aniimo.com/newslist/detail/100244',
+    title: 'Who’s That Aniimo and ecological phase 3 — October 27 notice, rechecked November 27',
+    accessedAt: '2026-11-27',
+    evidence: 'Read official server-rendered phase sections November 27. Who’s That Aniimo and Idyll Ecological Investigation phase 3 run November 27 04:00–December 4 03:59 on all three announced fixed server offsets. Photo gate Student II, ecology Student I; existing qualifying album submissions, Sim/Sanctum exclusions and first-only survey points remain in the source. This is a different activity calendar from Prismana Snapshots. No actual phase-3 target roster or in-game entry verified.',
+  },
+  {
     id: 'aniimo-november-26-announcement-2026-11-25',
     url: 'https://www.aniimo.com/newslist/detail/100312',
     title: 'November 26 Update Notice (published November 23)',
