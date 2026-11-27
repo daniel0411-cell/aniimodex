@@ -1,0 +1,439 @@
+{
+  "observedAt": "2026-11-27T08:22:32.966Z",
+  "pages": [
+    {
+      "url": "https://aniimodex.com/en/guide/how-to-download-aniimo/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-evolution-system/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-forms-explained/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "preferredImage": "https://aniimodex.com/images/guides/hue-reroll-editorial.webp"
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-team-composition/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/tools/catch/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/tools/twine/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/tools/type-chart/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/en/tools/team-builder/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/how-to-download-aniimo/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-evolution-system/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-forms-explained/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "preferredImage": "https://aniimodex.com/images/guides/hue-reroll-editorial.webp"
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-team-composition/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/tools/catch/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/tools/twine/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/tools/type-chart/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/tools/team-builder/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/how-to-download-aniimo/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-evolution-system/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-forms-explained/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "preferredImage": "https://aniimodex.com/images/guides/hue-reroll-editorial.webp"
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-team-composition/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/tools/catch/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/tools/twine/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/tools/type-chart/",
+      "status": 200,
+      "preferredImage": null
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/tools/team-builder/",
+      "status": 200,
+      "preferredImage": null
+    }
+  ],
+  "assets": [
+    {
+      "src": "/images/guides/catch-tool-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 808,
+      "height": 475
+    },
+    {
+      "src": "/images/guides/twine-tool-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 856,
+      "height": 220
+    },
+    {
+      "src": "/images/guides/catch-tool-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 808,
+      "height": 475
+    },
+    {
+      "src": "/images/guides/catch-tool-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 808,
+      "height": 475
+    },
+    {
+      "src": "/images/guides/twine-tool-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 856,
+      "height": 220
+    },
+    {
+      "src": "/images/guides/twine-tool-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 856,
+      "height": 220
+    },
+    {
+      "src": "/images/guides/type-chart-tool-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1024,
+      "height": 706
+    },
+    {
+      "src": "/images/guides/type-chart-tool-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1024,
+      "height": 706
+    },
+    {
+      "src": "/images/guides/type-chart-tool-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1024,
+      "height": 706
+    },
+    {
+      "src": "/images/guides/evolution-lookup-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 566,
+      "height": 249
+    },
+    {
+      "src": "/images/guides/evolution-lookup-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 566,
+      "height": 249
+    },
+    {
+      "src": "/images/guides/hue-reroll-editorial.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 768,
+      "height": 512
+    },
+    {
+      "src": "/images/guides/evolution-lookup-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 566,
+      "height": 249
+    },
+    {
+      "src": "/images/guides/habitats-lookup-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1152,
+      "height": 198
+    },
+    {
+      "src": "/images/guides/habitats-lookup-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1152,
+      "height": 198
+    },
+    {
+      "src": "/images/guides/habitats-lookup-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 1152,
+      "height": 198
+    },
+    {
+      "src": "/images/guides/forms-lookup-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 448,
+      "height": 256
+    },
+    {
+      "src": "/images/guides/forms-lookup-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 448,
+      "height": 236
+    },
+    {
+      "src": "/images/guides/team-lookup-en.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 752,
+      "height": 418
+    },
+    {
+      "src": "/images/guides/forms-lookup-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 448,
+      "height": 236
+    },
+    {
+      "src": "/images/guides/team-lookup-zh-Hans.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 752,
+      "height": 418
+    },
+    {
+      "src": "/images/guides/team-lookup-zh-Hant.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 752,
+      "height": 418
+    },
+    {
+      "src": "/images/guides/download-zh-Hans-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/download-en-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/download-zh-Hant-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/account-zh-Hant-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/account-zh-Hans-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/account-en-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/spending-en-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/monetization-en-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/spending-zh-Hans-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/spending-zh-Hant-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/monetization-zh-Hans-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "src": "/images/guides/monetization-zh-Hant-diagram.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "hashMatches": true,
+      "width": 720,
+      "height": 720
+    }
+  ],
+  "sitemap": {
+    "status": 200,
+    "urlCount": 211,
+    "imageRecords": 54,
+    "datesAndUrlsMatch": true
+  },
+  "indexControls": {
+    "missing404Noindex": true,
+    "robotsAllow": true
+  }
+}

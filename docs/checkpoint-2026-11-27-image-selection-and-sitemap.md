@@ -83,4 +83,25 @@ pages do not require a forced hero. This work cannot guarantee thumbnails or CTR
 
 ## Production acceptance
 
-Pending the authorized Git-triggered deployment; append actual observations.
+Functional commits 57c87eb and final selection correction da5c10c deployed
+through the existing Cloudflare Git integration. No duplicate manual deployment.
+Observed final formal-host output November 27, 2026, 08:22:32 UTC (16:22 Beijing):
+
+- 30 localized guide/tool pages: HTTP 200, preferred OG/Twitter choices match
+  final registry, body-only assets retained in guides, large preview permission.
+- 34 distinct first-party asset files: HTTP 200, image MIME, SHA256 equal to the
+  locally measured native-dimension files. The 36 registry records include
+  three locale records sharing one Sparkling illustration.
+- Production sitemap: 211 URLs and 54 image records. Non-image XML content
+  equals the built sitemap, including existing URLs, alternates and dates.
+- Missing route: HTTP 404 and noindex. robots.txt allows normal crawling.
+- In-app desktop 1365×900 and phone 390×900, DPR 1: formal guide hub and expanded
+  Team Builder reading example checked, no horizontal overflow. Phone example
+  decoded at native 752×418, displayed 343px wide, with HTML caption and full-size
+  link. Text-led screenshots no longer promoted as preferred images.
+- Screenshots: docs/screenshots/2026-11-27-image-selection-{desktop,mobile}.jpg.
+- HTTP evidence: docs/verification/2026-11-27-image-selection-live.json.
+
+No active preview-deployment URL was available for a new host-level check;
+existing preview restrictions were unchanged. No search-thumbnail selection,
+indexing, ranking or CTR outcome is established by these acceptance checks.
