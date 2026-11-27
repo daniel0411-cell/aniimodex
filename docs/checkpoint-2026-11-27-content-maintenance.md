@@ -122,3 +122,21 @@ Review on an official timing correction or reader report; next scheduled
 content change is the November 30 four-form return, then Carnival's December 1
 12:00 server deadline and Home exchange December 2 03:59. Exact target lists
 need an actual panel or equivalent primary evidence. No automation created.
+
+## Production result
+
+- Retained incoming documentation-only commit 4d8adae before publication.
+  Last pre-push fetch compared 0/0. Content commit 93dbac8 pushed to main.
+- Cloudflare Pages succeeded: deployment
+  0818be7e-69c1-44b2-933b-b8e36715c231. Its dedicated
+  https://0818be7e.aniimodex.pages.dev/en/guide/is-aniimo-free-to-play/
+  returned the corrected start and November 27 date.
+- Formal https://aniimodex.com showed the November 27 plan and 14:00 card.
+  Live browser repeated all six viewport/locale combinations: home-to-event
+  navigation, both claim guides, Home exchange destination, unobscured TOC
+  headings, server selector and contained page width. No page errors.
+- Results saved in docs/verification/2026-11-27-content-maintenance.json;
+  English desktop and Simplified phone screenshots in docs/screenshots/.
+  All non-site requests blocked, no test ad inventory/clicks. Browsers closed.
+- Confirms published reader paths, not gameplay, indexing, CTR, traffic or
+  revenue improvement. No indexing submitted.

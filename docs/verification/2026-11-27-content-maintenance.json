@@ -1,0 +1,63 @@
+{
+  "deployed": true,
+  "results": [
+    {
+      "locale": "en",
+      "width": 390,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    },
+    {
+      "locale": "zh-Hans",
+      "width": 390,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    },
+    {
+      "locale": "zh-Hant",
+      "width": 390,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    },
+    {
+      "locale": "zh-Hans",
+      "width": 1440,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    },
+    {
+      "locale": "zh-Hant",
+      "width": 1440,
+      "homeToEvent": true,
+      "anchorClear": true,
+      "serverSelector": true,
+      "freeClaims": true,
+      "homeExchange": true
+    }
+  ],
+  "blockedExternal": 56,
+  "allowedAdRequests": 0,
+  "contentCommit": "93dbac8603b0e5b2ad9b472afba0181560349bf4",
+  "cloudflareDeployment": "0818be7e-69c1-44b2-933b-b8e36715c231"
+}
