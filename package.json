@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run images:check",
+    "build": "next build && npm run sitemap:images && npm run images:check",
     "lint": "next lint",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:indexnow": "node scripts/submit-indexnow.mjs",
@@ -15,9 +15,10 @@
     "data:sync-wiki-details": "node scripts/sync-official-wiki-details.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "pages:build": "next build && npm run images:check",
+    "pages:build": "next build && npm run sitemap:images && npm run images:check",
     "pages:dev": "npx serve@latest out",
-    "images:check": "node scripts/check-editorial-images.mjs"
+    "sitemap:images": "node scripts/enrich-image-sitemap.mjs",
+    "images:check": "node --test scripts/enrich-image-sitemap.test.mjs && node scripts/check-editorial-images.mjs"
   },
   "dependencies": {
     "next": "^14.2.15",

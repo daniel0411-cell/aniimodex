@@ -1,5 +1,4 @@
-import assets from '@/data/editorial-images.json';
-import { imageMetadata } from '@/lib/editorial-images';
+import { getEditorialPreviewImage, imageMetadata } from '@/lib/editorial-images';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -18,7 +17,7 @@ export async function generateMetadata({
   const siteName = meta('siteName');
   const title = `${t('title')} | ${siteName}`;
   const description = t('subtitle');
-  const representative = assets[`catch-${locale}` as keyof typeof assets];
+  const representative = getEditorialPreviewImage('catch', locale);
 
   return {
     title,
@@ -34,13 +33,13 @@ export async function generateMetadata({
       url: `${SITE_URL}/${locale}/tools/catch/`,
       title,
       description,
-      images: [imageMetadata(representative)],
+      images: representative ? [imageMetadata(representative)] : [],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: representative ? 'summary_large_image' : 'summary',
       title,
       description,
-      images: [imageMetadata(representative)],
+      images: representative ? [imageMetadata(representative)] : [],
     },
   };
 }

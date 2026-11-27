@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { enrichSitemap } from './enrich-image-sitemap.mjs';
 
 // Prevent edited diagram text or output assets from silently drifting apart.
 const diagramManifest = JSON.parse(readFileSync('assets/editorial-diagrams/manifest.json'));
@@ -30,7 +31,8 @@ function dimensions(path) {
 for (const [key, a] of Object.entries(assets)) {
   assert.deepEqual(dimensions(`public${a.src}`), [a.width, a.height], `${key}: false intrinsic dimensions`);
   assert(statSync(`public${a.src}`).size < 160000, `${key}: review image compression`);
-  for (const k of ['alt', 'caption', 'source', 'rights', 'observedAt']) assert(a[k]?.trim(), `${key}: missing ${k}`);
+  assert(['body-only', 'representative'].includes(a.previewUsage), `${key}: missing preview decision`);
+  for (const k of ['alt', 'caption', 'source', 'rights', 'observedAt', 'previewReason']) assert(a[k]?.trim(), `${key}: missing ${k}`);
 }
 const pages = [];
 function walk(dir) { for (const name of readdirSync(dir)) { const p = join(dir, name); if (statSync(p).isDirectory()) walk(p); else if (name.endsWith('.html')) pages.push(p); } }
@@ -55,6 +57,7 @@ for (const path of pages) {
     assert(values('og:title')[0] && html.match(/<title>(.*?)<\/title>/)?.[1].startsWith(values('og:title')[0]), `${path}: unrelated collection share title`);
   }
   const og = values('og:image');
+  for (const a of Object.values(assets).filter(a => a.previewUsage === 'body-only')) assert(!og.includes(`${site}${a.src}`), `${path}: body-only image claimed as preferred preview`);
   const twitter = values('twitter:image');
   if (og.length) {
     assert.deepEqual(twitter, og, `${path}: OG/Twitter disagree`);
@@ -117,9 +120,25 @@ for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   assert(team.includes(`data-editorial-image="${assets[`team-${locale}`].src}"`), `${locale}: missing Team Builder reading example`);
 }
 // Coverage guards catch accidental removal of the integration, not just malformed tags.
-const selected = readFileSync('lib/editorial-images.ts', 'utf8').split('guideImageKinds:')[1].split('};')[0].match(/'[^']+':/g).length;
-assert.equal(illustrated, selected * 3, 'Expected all selected guide tasks in three locales');
+const mapping = [...readFileSync('lib/editorial-images.ts', 'utf8').split('guideImageKinds:')[1].split('};')[0].matchAll(/'([^']+)': '([^']+)'/g)];
+let expectedPreviews = 0;
+for (const [, slug, kind] of mapping) for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  const a = assets[`${kind}-${locale}`];
+  const html = readFileSync(`out/${locale}/guide/${slug}/index.html`, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+  assert(html.includes(`src="${a.src}"`), `${slug}/${locale}: lost useful body illustration`);
+  if (a.previewUsage === 'representative') {
+    expectedPreviews++;
+    assert(html.includes(`property="og:image" content="${site}${a.src}"`), `${slug}/${locale}: wrong preferred asset`);
+  }
+}
+assert.equal(illustrated, expectedPreviews, 'Selected preferred guide previews in all locales');
 assert.equal(dexCount, Object.keys(dex).length * 3);
 for (const p of ['out/404.html', 'out/404/index.html']) if (existsSync(p)) assert(/<meta name="robots" content="noindex/.test(readFileSync(p, 'utf8')), `${p}: preserve noindex`);
 assert(readFileSync('out/robots.txt', 'utf8').includes('Allow: /'), 'Do not block image crawling');
 console.log(`Editorial image checks passed: ${Object.keys(assets).length} records, ${illustrated} guides, ${dexCount} Dex pages; dimensions, body/schema/social alignment, local resources and preview policy.`);
+
+const sitemap = readFileSync('out/sitemap.xml', 'utf8');
+const enriched = enrichSitemap(sitemap, assets, p => readFileSync(`out${p}index.html`, 'utf8'), site);
+assert.equal(enriched.xml, sitemap, 'Image sitemap missing, stale, or includes images not present in canonical body');
+assert(enriched.count > 0, 'Missing image discovery coverage');
+console.log(`Image sitemap checked: ${enriched.count} canonical existing URLs with registered body images.`);

@@ -1,7 +1,7 @@
 import { getNovember26Blocks } from '@/data/november-26-updates';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getGuideImage, imageMetadata } from '@/lib/editorial-images';
+import { getGuideImage, getGuidePreviewImage, imageMetadata } from '@/lib/editorial-images';
 import EditorialFigure from '@/components/guide/EditorialFigure';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
@@ -71,7 +71,7 @@ export async function generateMetadata({
   const title = `${launchGuide?.title ?? t(`${post.slug}.title`)} | ${siteName}`;
   const description = launchGuide?.subtitle ?? t(`${post.slug}.subtitle`);
   const path = `/guide/${slug}/`;
-  const representative = getGuideImage(slug, locale);
+  const representative = getGuidePreviewImage(slug, locale);
 
   return {
     title,
@@ -88,13 +88,13 @@ export async function generateMetadata({
       description,
       publishedTime: post.date,
       modifiedTime: post.updatedAt ?? post.date,
-      images: representative ? [imageMetadata(representative)] : undefined,
+      images: representative ? [imageMetadata(representative)] : [],
     },
     twitter: {
       card: representative ? 'summary_large_image' : 'summary',
       title,
       description,
-      images: representative ? [imageMetadata(representative)] : undefined,
+      images: representative ? [imageMetadata(representative)] : [],
     },
   };
 }
@@ -108,6 +108,7 @@ export default async function GuidePostPage({
   setRequestLocale(locale);
   const post = getGuidePost(slug);
   const representative = getGuideImage(slug, locale);
+  const preview = getGuidePreviewImage(slug, locale);
   const t = await getTranslations('guide');
   const tp = await getTranslations('guide.posts');
   const tg = await getTranslations('guide');
@@ -178,7 +179,7 @@ export default async function GuidePostPage({
         datePublished: post.date,
         dateModified: post.updatedAt ?? post.date,
         inLanguage: locale,
-        image: representative ? { '@type': 'ImageObject', url: `${SITE_URL}${representative.src}`, width: representative.width, height: representative.height, caption: representative.alt } : undefined,
+        image: preview ? { '@type': 'ImageObject', url: `${SITE_URL}${preview.src}`, width: preview.width, height: preview.height, caption: preview.alt } : undefined,
         mainEntityOfPage: `${SITE_URL}/${locale}/guide/${post.slug}/`,
         publisher: {
           '@type': 'Organization',

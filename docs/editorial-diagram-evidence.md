@@ -38,8 +38,11 @@ inconsistency. A matching hash does not prove factual accuracy or visual quality
 Review every locale for readable text, clipping and preserved uncertainty.
 
 Images follow a complete initial HTML answer/checklist section; all essential
-facts remain in readable HTML with source links. Selected images are shared by
-body, article schema, social metadata and guide-hub preview. Native 720x720 WebP;
+facts remain in readable HTML with source links. These text-led images are
+body-only reading aids; they are not preferred OG/Twitter/Article images or
+small guide-hub previews. This corrects the initial selection after verifying
+Google Images guidance on November 27, 2026. An image sitemap entry only assists
+discovery and does not override that editorial distinction. Native 720x720 WebP;
 no upscaling or artificial 1200px expansion. Full-size link remains available.
 
 ## Material gaps and owner support

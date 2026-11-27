@@ -7,7 +7,9 @@
     "caption": "AniimoDex tool screenshot, November 27, 2026. If eligibility, base-rate assumptions or status are unconfirmed, no percentage is shown. This is not a game screenshot or a measured success rate.",
     "source": "/en/tools/catch/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "catch-zh-Hans": {
     "src": "/images/guides/catch-tool-zh-Hans.webp",
@@ -17,7 +19,9 @@
     "caption": "AniimoDex 工具截图（2026-11-27）：资格、基础概率假设或状态未确认时，不显示百分比。这不是游戏截图或实测成功率。",
     "source": "/zh-Hans/tools/catch/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "catch-zh-Hant": {
     "src": "/images/guides/catch-tool-zh-Hant.webp",
@@ -27,7 +31,9 @@
     "caption": "AniimoDex 工具截圖（2026-11-27）：資格、基礎機率假設或狀態未確認時，不顯示百分比。這不是遊戲截圖或實測成功率。",
     "source": "/zh-Hant/tools/catch/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "twine-en": {
     "src": "/images/guides/twine-tool-en.webp",
@@ -37,7 +43,9 @@
     "caption": "AniimoDex tool screenshot, November 27, 2026, after selecting Take Off. The current indexed snapshot returns three records. Multiple selected abilities match any selection; missing records are not proof of no ability.",
     "source": "/en/tools/twine/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "twine-zh-Hans": {
     "src": "/images/guides/twine-tool-zh-Hans.webp",
@@ -47,7 +55,9 @@
     "caption": "AniimoDex 工具截图（2026-11-27）：选择 Take Off 后，当前索引快照返回三条记录。多选匹配任一已选能力；未公布能力不等于没有能力。",
     "source": "/zh-Hans/tools/twine/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "twine-zh-Hant": {
     "src": "/images/guides/twine-tool-zh-Hant.webp",
@@ -57,7 +67,9 @@
     "caption": "AniimoDex 工具截圖（2026-11-27）：選擇 Take Off 後，目前索引快照傳回三筆記錄。多選匹配任一已選能力；未公布能力不等於沒有能力。",
     "source": "/zh-Hant/tools/twine/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "type-chart-en": {
     "src": "/images/guides/type-chart-tool-en.webp",
@@ -67,7 +79,9 @@
     "caption": "AniimoDex tool screenshot, November 27, 2026. Read the attacking row against the defending column. The numeric matchup matrix is a community reference, not a confirmed official formula. Use the live tool for readable values and evidence limits.",
     "source": "/en/tools/type-chart/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "type-chart-zh-Hans": {
     "src": "/images/guides/type-chart-tool-zh-Hans.webp",
@@ -77,7 +91,9 @@
     "caption": "AniimoDex 工具截图（2026-11-27）：按攻击行与防御列交叉读取。数值克制矩阵是社区参考，并非已确认的官方公式；请使用交互工具查看清晰数值及证据范围。",
     "source": "/zh-Hans/tools/type-chart/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "type-chart-zh-Hant": {
     "src": "/images/guides/type-chart-tool-zh-Hant.webp",
@@ -87,7 +103,9 @@
     "caption": "AniimoDex 工具截圖（2026-11-27）：依攻擊列與防禦欄交叉讀取。數值克制矩陣是社群參考，並非已確認的官方公式；請使用互動工具查看清晰數值及證據範圍。",
     "source": "/zh-Hant/tools/type-chart/",
     "rights": "Original AniimoDex UI capture; underlying game names/icons remain their owners’ property. No separate game-art license claimed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Dense fields/table screenshot; useful for interpreting the tool, not selected as a preferred search/share image."
   },
   "sparkling-en": {
     "src": "/images/guides/hue-reroll-editorial.webp",
@@ -97,7 +115,9 @@
     "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
     "source": "docs/sparkling-illustrations-2026-11-03.md",
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
-    "observedAt": "2026-11-03"
+    "observedAt": "2026-11-03",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "sparkling-zh-Hans": {
     "src": "/images/guides/hue-reroll-editorial.webp",
@@ -107,7 +127,9 @@
     "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
     "source": "docs/sparkling-illustrations-2026-11-03.md",
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
-    "observedAt": "2026-11-03"
+    "observedAt": "2026-11-03",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "sparkling-zh-Hant": {
     "src": "/images/guides/hue-reroll-editorial.webp",
@@ -117,7 +139,9 @@
     "caption": "AI-assisted conceptual illustration; not game footage. See the existing localized operation gallery.",
     "source": "docs/sparkling-illustrations-2026-11-03.md",
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
-    "observedAt": "2026-11-03"
+    "observedAt": "2026-11-03",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "evolution-en": {
     "src": "/images/guides/evolution-lookup-en.webp",
@@ -127,7 +151,9 @@
     "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Follow the indented branches from Chirpi to Tromber, Cornet or Tubster. The published tree is not a recipe: stage labels do not establish required level, item or trigger.",
     "source": "/en/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "evolution-zh-Hans": {
     "src": "/images/guides/evolution-lookup-zh-Hans.webp",
@@ -137,7 +163,9 @@
     "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。沿缩进分支查看 Chirpi 对应的 Tromber、Cornet 和 Tubster。公布的关系树不是进化配方；阶段标签不能证明所需等级、道具或触发条件。",
     "source": "/zh-Hans/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "evolution-zh-Hant": {
     "src": "/images/guides/evolution-lookup-zh-Hant.webp",
@@ -147,7 +175,9 @@
     "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。沿縮排分支查看 Chirpi 對應的 Tromber、Cornet 和 Tubster。公布的關係樹不是進化配方；階段標籤不能證明所需等級、道具或觸發條件。",
     "source": "/zh-Hant/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "habitats-en": {
     "src": "/images/guides/habitats-lookup-en.webp",
@@ -157,7 +187,9 @@
     "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Start with the habitat entry, then use its comparison link to filter the Dex. A listed habitat is not an exact coordinate, guaranteed spawn or current event schedule.",
     "source": "/en/locations/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "habitats-zh-Hans": {
     "src": "/images/guides/habitats-lookup-zh-Hans.webp",
@@ -167,7 +199,9 @@
     "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。先找到栖息地，再通过对比链接筛选图鉴。列出栖息地不代表具体坐标、必定刷新或当前活动排期。",
     "source": "/zh-Hans/locations/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "habitats-zh-Hant": {
     "src": "/images/guides/habitats-lookup-zh-Hant.webp",
@@ -177,7 +211,9 @@
     "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。先找到棲息地，再透過比較連結篩選圖鑑。列出棲息地不代表具體座標、必定刷新或目前活動排期。",
     "source": "/zh-Hant/locations/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Very wide text-led lookup screenshot; preserve as a reading example without promoting it as the preferred image."
   },
   "forms-en": {
     "src": "/images/guides/forms-lookup-en.webp",
@@ -187,7 +223,9 @@
     "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Read the form category beside each name before opening its source. Only Basic Form statistics are imported; the screenshot does not establish differences in regional stats, elements or skills.",
     "source": "/en/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "forms-zh-Hans": {
     "src": "/images/guides/forms-lookup-zh-Hans.webp",
@@ -197,7 +235,9 @@
     "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。先看形态名称旁的分类，再打开对应来源。本站仅导入基础形态数值；截图不能证明区域形态的数值、元素或技能差异。",
     "source": "/zh-Hans/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "forms-zh-Hant": {
     "src": "/images/guides/forms-lookup-zh-Hant.webp",
@@ -207,7 +247,9 @@
     "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。先看形態名稱旁的分類，再開啟對應來源。本站僅匯入基礎形態數值；截圖不能證明區域形態的數值、元素或技能差異。",
     "source": "/zh-Hant/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "team-en": {
     "src": "/images/guides/team-lookup-en.webp",
@@ -217,7 +259,9 @@
     "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Example A shows Emberpup, Tromber, Turbo and Shrubclaw. Compare published role and mobility labels; this is a UI example, not a recommended best team, battle test or confirmation of live-game availability.",
     "source": "/en/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "team-zh-Hans": {
     "src": "/images/guides/team-lookup-zh-Hans.webp",
@@ -227,7 +271,9 @@
     "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。示例 A 包含 Emberpup、Tromber、Turbo 和 Shrubclaw。用于对照已公布定位与移动能力，不是最强阵容推荐、战斗实测或当前游戏可用性证明。",
     "source": "/zh-Hans/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "team-zh-Hant": {
     "src": "/images/guides/team-lookup-zh-Hant.webp",
@@ -237,7 +283,9 @@
     "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。範例 A 包含 Emberpup、Tromber、Turbo 和 Shrubclaw。用於對照已公布定位與移動能力，不是最強陣容推薦、戰鬥實測或目前遊戲可用性證明。",
     "source": "/zh-Hant/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "representative",
+    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
   },
   "download-en": {
     "src": "/images/guides/download-en-diagram.webp",
@@ -247,7 +295,9 @@
     "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
     "source": "/en/guide/how-to-download-aniimo/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "download-zh-Hans": {
     "src": "/images/guides/download-zh-Hans-diagram.webp",
@@ -257,7 +307,9 @@
     "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
     "source": "/zh-Hans/guide/how-to-download-aniimo/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "download-zh-Hant": {
     "src": "/images/guides/download-zh-Hant-diagram.webp",
@@ -267,7 +319,9 @@
     "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
     "source": "/zh-Hant/guide/how-to-download-aniimo/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "account-en": {
     "src": "/images/guides/account-en-diagram.webp",
@@ -277,7 +331,9 @@
     "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
     "source": "/en/guide/aniimo-progress-account-safety/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "account-zh-Hans": {
     "src": "/images/guides/account-zh-Hans-diagram.webp",
@@ -287,7 +343,9 @@
     "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
     "source": "/zh-Hans/guide/aniimo-progress-account-safety/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "account-zh-Hant": {
     "src": "/images/guides/account-zh-Hant-diagram.webp",
@@ -297,7 +355,9 @@
     "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
     "source": "/zh-Hant/guide/aniimo-progress-account-safety/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "spending-en": {
     "src": "/images/guides/spending-en-diagram.webp",
@@ -307,7 +367,9 @@
     "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
     "source": "/en/guide/is-aniimo-free-to-play/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "spending-zh-Hans": {
     "src": "/images/guides/spending-zh-Hans-diagram.webp",
@@ -317,7 +379,9 @@
     "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
     "source": "/zh-Hans/guide/is-aniimo-free-to-play/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "spending-zh-Hant": {
     "src": "/images/guides/spending-zh-Hant-diagram.webp",
@@ -327,7 +391,9 @@
     "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
     "source": "/zh-Hant/guide/is-aniimo-free-to-play/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "monetization-en": {
     "src": "/images/guides/monetization-en-diagram.webp",
@@ -337,7 +403,9 @@
     "caption": "Original AniimoDex editorial diagram, November 27, 2026, summarizing the linked guide. It is not game UI, a tested procedure or a new source check. Read the text for evidence dates, exceptions and official links.",
     "source": "/en/guide/is-aniimo-a-gacha-game/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "monetization-zh-Hans": {
     "src": "/images/guides/monetization-zh-Hans-diagram.webp",
@@ -347,7 +415,9 @@
     "caption": "AniimoDex 原创编辑说明图（2026-11-27），归纳所链接攻略。并非游戏界面、实测流程或新的来源核验。证据日期、例外和官方链接见正文。",
     "source": "/zh-Hans/guide/is-aniimo-a-gacha-game/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   },
   "monetization-zh-Hant": {
     "src": "/images/guides/monetization-zh-Hant-diagram.webp",
@@ -357,6 +427,8 @@
     "caption": "AniimoDex 原創編輯說明圖（2026-11-27），歸納所連結攻略。並非遊戲介面、實測流程或新的來源核驗。證據日期、例外和官方連結見正文。",
     "source": "/zh-Hant/guide/is-aniimo-a-gacha-game/",
     "rights": "Original AniimoDex text and vector diagram created for this site; no third-party artwork, game UI or fonts redistributed. Editable source and evidence: assets/editorial-diagrams/content.json; docs/editorial-diagram-evidence.md.",
-    "observedAt": "2026-11-27"
+    "observedAt": "2026-11-27",
+    "previewUsage": "body-only",
+    "previewReason": "Text-led editorial diagram; useful in the article, unsuitable as a preferred search/share image."
   }
 }

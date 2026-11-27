@@ -36,7 +36,11 @@ and which image to display. This policy cannot guarantee a thumbnail or CTR.
 - Hub article previews must reuse the selected article registry asset and link to
   the corresponding article. Leave unsupported tasks as useful text entries; do
   not substitute brand or unrelated art to achieve a visual coverage percentage.
-- Body representative, OG, Twitter and applicable Article/WebPage image must
+- Record `previewUsage` and `previewReason` separately from body usefulness.
+  Text-led diagrams, very wide lookups and dense field/table captures can remain
+  beside an HTML explanation without being preferred search/social images.
+  Avoid text-led images for preferred previews; do not create keyword posters.
+- An eligible body representative, OG, Twitter and applicable Article/WebPage image must
   identify the same content. Use `imageMetadata` and the registry. Avoid generic
   brand art as an individual creature or article representative. Index/landing
   pages may retain an accurate brand share card. No suitable image means omit
@@ -62,7 +66,14 @@ and which image to display. This policy cannot guarantee a thumbnail or CTR.
 
 ## Release acceptance
 
-Both `npm run build` and `npm run pages:build` run `images:check` after export.
+Both `npm run build` and `npm run pages:build` enrich the exported sitemap and
+run `images:check` after export. `node --test scripts/enrich-image-sitemap.test.mjs`
+checks canonical/noindex exclusion, deduplication, XML escaping and idempotence.
+The sitemap extension only adds registered first-party body images on existing
+approved guide and Team Builder URLs. It preserves URL membership and dates.
+A sitemap image is a discovery aid, not a preferred-preview claim: useful
+body-only diagrams can be listed there. Do not copy external CDN art or claim
+control/verification of a third-party CDN.
 It checks file dimensions/budgets/provenance fields, local image existence,
 OG/Twitter agreement, body/structured-data agreement, measured Dex coverage,
 preview permission and 404 noindex. It also rejects unmeasured remote share
@@ -78,7 +89,9 @@ remain effective. After deployment verify formal page HTML and asset HTTP status
 MIME and decoded dimensions; save desktop/mobile screenshots and a checkpoint.
 If live host verification is unavailable, say so and leave that check pending.
 
-Google primary reference URLs (reference targets, not freshly read this session):
+Google primary references (Images and image sitemap verified through browser
+on November 27, 2026; the other links remain reference targets):
+- https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
 - https://developers.google.com/search/docs/appearance/google-images
 - https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
 - https://developers.google.com/search/docs/appearance/structured-data/article

@@ -27,6 +27,14 @@ export function getGuideImage(slug: string, locale: string): EditorialImage | un
   const key = `${guideImageKinds[slug]}-${locale}` as keyof typeof assets;
   return assets[key];
 }
+// Body examples and preferred previews have different editorial requirements.
+export function getEditorialPreviewImage(kind: string, locale: string): EditorialImage | undefined {
+  const image = assets[`${kind}-${locale}` as keyof typeof assets];
+  return image?.previewUsage === 'representative' ? image : undefined;
+}
+export function getGuidePreviewImage(slug: string, locale: string): EditorialImage | undefined {
+  return getEditorialPreviewImage(guideImageKinds[slug], locale);
+}
 export function imageMetadata(image: EditorialImage) {
   return { url: `${SITE_URL}${image.src}`, width: image.width, height: image.height, alt: image.alt };
 }
