@@ -25,7 +25,6 @@ export default async function TeamBuilderPage({ params }: { params: Promise<{ lo
     url: `${SITE_URL}/${locale}/tools/team-builder/`,
     applicationCategory: 'GameApplication',
     operatingSystem: 'All',
-    image: screenshot,
     screenshot,
   };
 

@@ -59,8 +59,8 @@ for (const path of pages) {
   const og = values('og:image');
   for (const a of Object.values(assets).filter(a => a.previewUsage === 'body-only')) assert(!og.includes(`${site}${a.src}`), `${path}: body-only image claimed as preferred preview`);
   const twitter = values('twitter:image');
+  assert.deepEqual(twitter, og, `${path}: OG/Twitter disagree`);
   if (og.length) {
-    assert.deepEqual(twitter, og, `${path}: OG/Twitter disagree`);
     for (const url of og) {
       let size;
       if (url.startsWith(`${site}/`)) {
@@ -94,8 +94,9 @@ for (const path of pages) {
   }
   const app = graphs.find(g => g['@type'] === 'WebApplication' && g.screenshot);
   if (app) {
-    assert.equal(app.screenshot.url, og[0], `${path}: application screenshot/OG mismatch`);
-    assert.equal(app.image.url, og[0], `${path}: application image/OG mismatch`);
+    // A truthful application screenshot describes the interface; it need not
+    // also be promoted as a preferred preview.
+    if (app.image) assert.equal(app.image.url, og[0], `${path}: application image/OG mismatch`);
     assert(imgs.some(im => `${site}${im.src}` === app.screenshot.url), `${path}: missing visible screenshot`);
   }
   const webpage = graphs.find(g => g['@type'] === 'WebPage' && g.primaryImageOfPage);
@@ -110,13 +111,13 @@ for (const path of pages) {
 for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
   const hub = readFileSync(`out/${locale}/guide/index.html`, 'utf8');
   const previews = [...hub.matchAll(/<img\s[^>]*data-guide-preview[^>]*>/g)].map(m => attrs(m[0]));
-  assert(previews.length > 0, `${locale}: missing guide hub previews`);
+  // Zero is valid when none of this hub's tasks have an eligible preview.
   for (const preview of previews) {
     const guide = readFileSync(`out/${locale}/guide/${preview['data-guide-preview']}/index.html`, 'utf8');
     assert(guide.includes(`property="og:image" content="${site}${preview.src}"`), `${locale}: hub/article image mismatch`);
   }
   const team = readFileSync(`out/${locale}/tools/team-builder/index.html`, 'utf8');
-  assert(team.includes(`property="og:image" content="${site}${assets[`team-${locale}`].src}"`), `${locale}: generic Team Builder share image`);
+  assert(!team.includes('property="og:image"'), `${locale}: Team Builder text-led screenshot is body-only`);
   assert(team.includes(`data-editorial-image="${assets[`team-${locale}`].src}"`), `${locale}: missing Team Builder reading example`);
 }
 // Coverage guards catch accidental removal of the integration, not just malformed tags.

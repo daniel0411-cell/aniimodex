@@ -40,6 +40,8 @@ and which image to display. This policy cannot guarantee a thumbnail or CTR.
   Text-led diagrams, very wide lookups and dense field/table captures can remain
   beside an HTML explanation without being preferred search/social images.
   Avoid text-led images for preferred previews; do not create keyword posters.
+  A real WebApplication screenshot can remain as a descriptive `screenshot`
+  property without also becoming its `image`, Article image or OG preview.
 - An eligible body representative, OG, Twitter and applicable Article/WebPage image must
   identify the same content. Use `imageMetadata` and the registry. Avoid generic
   brand art as an individual creature or article representative. Index/landing

@@ -117,7 +117,7 @@
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
     "observedAt": "2026-11-03",
     "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewReason": "Original text-free conceptual color illustration, explicitly labelled as editorial art rather than game UI or verified gameplay."
   },
   "sparkling-zh-Hans": {
     "src": "/images/guides/hue-reroll-editorial.webp",
@@ -129,7 +129,7 @@
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
     "observedAt": "2026-11-03",
     "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewReason": "Original text-free conceptual color illustration, explicitly labelled as editorial art rather than game UI or verified gameplay."
   },
   "sparkling-zh-Hant": {
     "src": "/images/guides/hue-reroll-editorial.webp",
@@ -141,7 +141,7 @@
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
     "observedAt": "2026-11-03",
     "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewReason": "Original text-free conceptual color illustration, explicitly labelled as editorial art rather than game UI or verified gameplay."
   },
   "evolution-en": {
     "src": "/images/guides/evolution-lookup-en.webp",
@@ -152,8 +152,8 @@
     "source": "/en/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "evolution-zh-Hans": {
     "src": "/images/guides/evolution-lookup-zh-Hans.webp",
@@ -164,8 +164,8 @@
     "source": "/zh-Hans/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "evolution-zh-Hant": {
     "src": "/images/guides/evolution-lookup-zh-Hant.webp",
@@ -176,8 +176,8 @@
     "source": "/zh-Hant/evolutions/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "habitats-en": {
     "src": "/images/guides/habitats-lookup-en.webp",
@@ -224,8 +224,8 @@
     "source": "/en/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "forms-zh-Hans": {
     "src": "/images/guides/forms-lookup-zh-Hans.webp",
@@ -236,8 +236,8 @@
     "source": "/zh-Hans/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "forms-zh-Hant": {
     "src": "/images/guides/forms-lookup-zh-Hant.webp",
@@ -248,8 +248,8 @@
     "source": "/zh-Hant/dex/001/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "team-en": {
     "src": "/images/guides/team-lookup-en.webp",
@@ -260,8 +260,8 @@
     "source": "/en/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "team-zh-Hans": {
     "src": "/images/guides/team-lookup-zh-Hans.webp",
@@ -272,8 +272,8 @@
     "source": "/zh-Hans/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "team-zh-Hant": {
     "src": "/images/guides/team-lookup-zh-Hant.webp",
@@ -284,8 +284,8 @@
     "source": "/zh-Hant/tools/team-builder/",
     "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
     "observedAt": "2026-11-27",
-    "previewUsage": "representative",
-    "previewReason": "Reviewed task-relevant creature/relationship visual or clearly disclosed original conceptual illustration."
+    "previewUsage": "body-only",
+    "previewReason": "Text-led relationship tree, form list or member-card UI; retained as a genuine reading example, not a preferred search/share image."
   },
   "download-en": {
     "src": "/images/guides/download-en-diagram.webp",

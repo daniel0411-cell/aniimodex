@@ -3,7 +3,8 @@
 ## Baseline and scope
 
 Fresh origin fetch at task start: clean main 063c193, HEAD/upstream 0/0.
-Re-fetched before publishing: still 0/0 at 063c193. User authorized continuation
+Re-fetched before first publishing: 0/0 at 063c193; final visual
+selection correction also re-fetched at 57c87eb, 0/0. User authorized continuation
 and publishing. Existing body assets and factual content retained; no article,
 evidence-check or sitemap dates refreshed. No game availability claims updated.
 The owner cannot supply gameplay captures; no further request made.
@@ -27,16 +28,17 @@ and tiny hub previews. Kept body figures and HTML alternatives. There is no
 observed Search Console or SERP evidence establishing these tags caused missing
 thumbnails; this is a selection-quality correction, not a diagnosed ranking fix.
 
-All 36 registry assets now record previewUsage and previewReason. Evolution,
-form and team captures retain actual creature/relationship content; disclosed
-Sparkling conceptual art remains an illustration, not gameplay proof. Review
-these again if a clearer relevant authorized non-text alternative becomes
-available. Never promise Google will select any of them.
+All 36 registry assets now record previewUsage and previewReason. Final visual review confirmed evolution and form captures are text-led,
+and team cards also contain substantial interface text. All are body-only.
+The team screenshot property continues to describe the actual application UI,
+separately from preferred image metadata. Disclosed Sparkling conceptual art
+remains a text-free illustration, not gameplay proof. Review it again if a
+clearer relevant authorized alternative becomes available. Never promise Google will select any of them.
 
 ## Delivery
 
 - 17 guide tasks × three locales retain body figures (51 pages).
-- Five guide tasks × three locales retain preferred article images (15 pages).
+- One guide task × three locales retains a preferred article image (3 pages).
 - Existing 306 localized Dex metadata/body/schema alignments preserved.
 - Added image extension to existing sitemap: 54 URLs, 54 image records, drawn
   from registered first-party body assets in 51 guides and three Team Builders.
@@ -60,9 +62,9 @@ OG claims. Rights, relevance and authenticity still require editorial review.
 - npm run images:check: passed, including sitemap regression test.
 - npm run seo:audit: passed, 486 localized pages, 211 sitemap URLs.
 - Content-quality, advertising/privacy and guide-consolidation checks: passed.
-- In-app browser, effective desktop 1365×900 and phone 390×900: 54 route/viewport
+- In-app browser, effective desktop 1365×900 and phone 390×900: 60 route/viewport
   cases across en, zh-Hans, zh-Hant; no document horizontal overflow. Cases cover
-  guide hub, body-only download, evolution, forms, Sparkling, three affected
+  guide hub, body-only download, evolution, forms, Sparkling, four affected
   tools and Dex. Native image dimensions/load verified by build and visible
   representative samples; offscreen lazy thumbnails are not declared broken
   based on an immediate unloaded state. Dex hero observed decoded at 512px.
@@ -72,7 +74,7 @@ OG claims. Rights, relevance and authenticity still require editorial review.
 ## Remaining material gaps
 
 Body figure coverage remains 17 of 36 guide tasks; 19 have no selected body
-asset, and 12 illustrated tasks intentionally have no preferred preview image.
+asset, and 16 illustrated tasks intentionally have no preferred preview image.
 Prioritize genuine event/handbook, RV/homeland/farm, controller/language and
 battle-mode captures only when a willing contributor or clearly licensed official
 source exists. See editorial-diagram-evidence.md for acceptance fields. Do not
