@@ -1,3 +1,6 @@
+import assets from '@/data/editorial-images.json';
+import { imageMetadata } from '@/lib/editorial-images';
+import EditorialFigure from '@/components/guide/EditorialFigure';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { Link } from '@/i18n/navigation';
@@ -12,6 +15,8 @@ export default async function TeamBuilderPage({ params }: { params: Promise<{ lo
   const t = await getTranslations('teamBuilder');
   const tr = await getTranslations();
 
+  const representative = assets[`team-${locale}` as keyof typeof assets];
+  const screenshot = { '@type': 'ImageObject', ...imageMetadata(representative) };
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -20,6 +25,8 @@ export default async function TeamBuilderPage({ params }: { params: Promise<{ lo
     url: `${SITE_URL}/${locale}/tools/team-builder/`,
     applicationCategory: 'GameApplication',
     operatingSystem: 'All',
+    image: screenshot,
+    screenshot,
   };
 
   return (
@@ -41,6 +48,11 @@ export default async function TeamBuilderPage({ params }: { params: Promise<{ lo
       </header>
 
       <TeamBuilder />
+
+      <details className="border-t border-ink-border pt-4">
+        <summary className="cursor-pointer text-sm font-semibold text-primary-light">{locale === 'en' ? 'How to read the member cards: Example A' : locale === 'zh-Hant' ? '如何閱讀成員卡片：範例 A' : '如何阅读成员卡片：示例 A'}</summary>
+        <EditorialFigure image={representative} locale={locale} />
+      </details>
 
       <section className="border-t border-ink-border pt-6">
         <h2 className="text-sm font-bold uppercase tracking-wider text-text-muted">

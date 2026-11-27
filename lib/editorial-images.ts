@@ -5,6 +5,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 export type EditorialImage = (typeof assets)[keyof typeof assets];
 // Only select an image when it helps with this particular visitor task.
 export const guideImageKinds: Record<string, string> = {
+  'aniimo-evolution-system': 'evolution',
+  'aniimo-habitats-locations': 'habitats',
+  'aniimo-forms-explained': 'forms',
+  'aniimo-team-composition': 'team',
+  'aniimo-roles-explained': 'team',
   'aniimo-catching-guide': 'catch',
   'aniimo-twine-explained': 'twine',
   'aniimo-choose-by-mobility-role': 'twine',

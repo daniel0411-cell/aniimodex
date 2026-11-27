@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { localizedLanguages } from '@/lib/i18n-metadata';
+import { collectionMetadata } from '@/lib/collection-metadata';
 import { ELEMENTS, ELEMENT_ICONS } from '@/lib/aniimo-ui';
 import { filterByElement } from '@/lib/aniimo';
 import type { Element } from '@/types/aniimo';
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const tr = await getTranslations({ locale, namespace: 'elements' });
   const name = tr(element);
   const path = `/elements/${slug}/`;
-  return { title: t('metaTitle', { element: name }), description: t('metaDescription', { element: name }), alternates: { canonical: `${SITE_URL}/${locale}${path}`, languages: localizedLanguages(path) } };
+  return collectionMetadata(locale, path, t('metaTitle', { element: name }), t('metaDescription', { element: name }));
 }
 
 export default async function ElementPage({ params }: { params: Promise<{ locale: string; element: string }> }) {

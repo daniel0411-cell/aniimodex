@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { getGuideImage } from '@/lib/editorial-images';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -5,6 +7,15 @@ import { localizedLanguages } from '@/lib/i18n-metadata';
 import { getPublishedGuidePosts } from '@/data/guides';
 import LaunchHub from '@/components/LaunchHub';
 import { getLaunchGuide } from '@/data/launch-guides';
+
+// Reuse the article's selected visual; missing material stays a text entry.
+function GuidePreview({ slug, locale }: { slug: string; locale: string }) {
+  const image = getGuideImage(slug, locale);
+  if (!image) return null;
+  return <Image data-guide-preview={slug} src={image.src} width={image.width} height={image.height}
+    alt={image.alt} loading="lazy" sizes="160px"
+    className="my-2 h-auto w-40 max-w-full rounded border border-ink-border" />;
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 
@@ -194,6 +205,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
                   href={`/guide/${post.slug}`}
                   className="border-t-4 border-primary bg-white p-5 shadow-card"
                 >
+                  <GuidePreview slug={post.slug} locale={locale} />
                   <span className="text-xs font-semibold uppercase text-primary-light">
                     {getLaunchGuide(locale, post.slug)
                       ? getLaunchGuide(locale, post.slug)!.tag
@@ -227,6 +239,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
                     className="grid gap-1 border-b border-ink-border py-3 sm:grid-cols-[1fr_auto] sm:items-center"
                   >
                     <span className="text-sm font-semibold text-text-primary">
+                      <GuidePreview slug={post.slug} locale={locale} />
                       {getLaunchGuide(locale, post.slug)
                         ? getLaunchGuide(locale, post.slug)!.title
                         : tp(`${post.slug}.title`)}

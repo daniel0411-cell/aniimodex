@@ -33,6 +33,9 @@ and which image to display. This policy cannot guarantee a thumbnail or CTR.
   source, rights basis and observation date. Keep detail-image measurements in
   `data/dex-images.json` aligned with the source URL. New/changed CDN images need
   an actual load/dimension check; never guess dimensions.
+- Hub article previews must reuse the selected article registry asset and link to
+  the corresponding article. Leave unsupported tasks as useful text entries; do
+  not substitute brand or unrelated art to achieve a visual coverage percentage.
 - Body representative, OG, Twitter and applicable Article/WebPage image must
   identify the same content. Use `imageMetadata` and the registry. Avoid generic
   brand art as an individual creature or article representative. Index/landing

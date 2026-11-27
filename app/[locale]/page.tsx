@@ -460,17 +460,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
           <Link
             href="/guide/aniimo-crossplay-cross-save"
-            className="group overflow-hidden border-t-4 border-primary bg-white shadow-card sm:grid sm:grid-cols-[0.9fr_1.1fr]"
+            className="group overflow-hidden border-t-4 border-primary bg-white shadow-card"
           >
-            <div className="relative min-h-52">
-              <Image
-                src="/images/guides/game-info.jpg"
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="object-cover transition-transform group-hover:scale-105"
-              />
-            </div>
             <div className="p-6">
               <span className="text-xs font-semibold uppercase text-primary-light">
                 {t('guide.posts.aniimo-crossplay-cross-save.tag')}

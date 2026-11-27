@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { localizedLanguages } from '@/lib/i18n-metadata';
+import { collectionMetadata } from '@/lib/collection-metadata';
 import { combatSkillGroups, mobilityGroups, traitGroups } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import SkillDirectory from '@/components/dex/SkillDirectory';
@@ -11,7 +11,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'collections.abilities' });
-  return { title: t('title'), description: t('description'), alternates: { canonical: `${SITE_URL}/${locale}/abilities/`, languages: localizedLanguages('/abilities/') } };
+  return collectionMetadata(locale, '/abilities/', t('title'), t('description'));
 }
 
 export default async function AbilitiesPage({ params }: { params: Promise<{ locale: string }> }) {

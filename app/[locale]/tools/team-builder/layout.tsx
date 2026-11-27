@@ -1,3 +1,5 @@
+import assets from '@/data/editorial-images.json';
+import { imageMetadata } from '@/lib/editorial-images';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -16,6 +18,7 @@ export async function generateMetadata({
   const siteName = meta('siteName');
   const title = `${t('title')} | ${siteName}`;
   const description = t('subtitle');
+  const representative = assets[`team-${locale}` as keyof typeof assets];
 
   return {
     title,
@@ -30,20 +33,13 @@ export async function generateMetadata({
       url: `${SITE_URL}/${locale}/tools/team-builder/`,
       title,
       description,
-      images: [
-        {
-          url: `${SITE_URL}/images/site-share.webp`,
-          width: 1200,
-          height: 624,
-          alt: title,
-        },
-      ],
+      images: [imageMetadata(representative)],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${SITE_URL}/images/site-share.webp`],
+      images: [imageMetadata(representative)],
     },
   };
 }

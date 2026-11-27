@@ -43,6 +43,10 @@ for (const path of pages) {
   const values = key => meta.filter(a => a.name === key || a.property === key).map(a => a.content);
   const robots = values('robots').join(',');
   if (robots.includes('index') && !robots.includes('noindex') && /out\/(en|zh-Hans|zh-Hant)\//.test(path)) assert(robots.includes('max-image-preview:large'), `${path}: missing large preview policy`);
+  if (/out\/(en|zh-Hans|zh-Hant)\/(evolutions|locations|abilities|elements\/[^/]+)\/index.html$/.test(path)) {
+    assert.equal(values('og:description')[0], values('description')[0], `${path}: inherited unrelated collection description`);
+    assert(values('og:title')[0] && html.match(/<title>(.*?)<\/title>/)?.[1].startsWith(values('og:title')[0]), `${path}: unrelated collection share title`);
+  }
   const og = values('og:image');
   const twitter = values('twitter:image');
   if (og.length) {
@@ -78,6 +82,12 @@ for (const path of pages) {
     assert.equal(Number(body.width), record.width);
     assert.equal(Number(body.height), record.height);
   }
+  const app = graphs.find(g => g['@type'] === 'WebApplication' && g.screenshot);
+  if (app) {
+    assert.equal(app.screenshot.url, og[0], `${path}: application screenshot/OG mismatch`);
+    assert.equal(app.image.url, og[0], `${path}: application image/OG mismatch`);
+    assert(imgs.some(im => `${site}${im.src}` === app.screenshot.url), `${path}: missing visible screenshot`);
+  }
   const webpage = graphs.find(g => g['@type'] === 'WebPage' && g.primaryImageOfPage);
   if (webpage) {
     dexCount++;
@@ -85,6 +95,19 @@ for (const path of pages) {
     const body = imgs.find(im => im.src === og[0]);
     assert(body?.alt && Number(body.width) === webpage.primaryImageOfPage.width && Number(body.height) === webpage.primaryImageOfPage.height, `${path}: Dex body mismatch`);
   }
+}
+// Selected task previews must be truthful links to the same article representative.
+for (const locale of ['en', 'zh-Hans', 'zh-Hant']) {
+  const hub = readFileSync(`out/${locale}/guide/index.html`, 'utf8');
+  const previews = [...hub.matchAll(/<img\s[^>]*data-guide-preview[^>]*>/g)].map(m => attrs(m[0]));
+  assert(previews.length > 0, `${locale}: missing guide hub previews`);
+  for (const preview of previews) {
+    const guide = readFileSync(`out/${locale}/guide/${preview['data-guide-preview']}/index.html`, 'utf8');
+    assert(guide.includes(`property="og:image" content="${site}${preview.src}"`), `${locale}: hub/article image mismatch`);
+  }
+  const team = readFileSync(`out/${locale}/tools/team-builder/index.html`, 'utf8');
+  assert(team.includes(`property="og:image" content="${site}${assets[`team-${locale}`].src}"`), `${locale}: generic Team Builder share image`);
+  assert(team.includes(`data-editorial-image="${assets[`team-${locale}`].src}"`), `${locale}: missing Team Builder reading example`);
 }
 // Coverage guards catch accidental removal of the integration, not just malformed tags.
 const selected = readFileSync('lib/editorial-images.ts', 'utf8').split('guideImageKinds:')[1].split('};')[0].match(/'[^']+':/g).length;

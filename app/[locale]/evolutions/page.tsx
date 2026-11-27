@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { localizedLanguages } from '@/lib/i18n-metadata';
+import { collectionMetadata } from '@/lib/collection-metadata';
 import { getAllAniimos, getAniimoByNumber } from '@/lib/aniimo';
 import { evolutionFamilies, flattenEvolution } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
@@ -13,7 +13,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aniimodex.com';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'collections.evolutions' });
-  return { title: t('title'), description: t('description'), alternates: { canonical: `${SITE_URL}/${locale}/evolutions/`, languages: localizedLanguages('/evolutions/') } };
+  return collectionMetadata(locale, '/evolutions/', t('title'), t('description'));
 }
 
 export default async function EvolutionsPage({ params }: { params: Promise<{ locale: string }> }) {

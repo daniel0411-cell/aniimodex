@@ -118,5 +118,125 @@
     "source": "docs/sparkling-illustrations-2026-11-03.md",
     "rights": "Owner-supplied AI-assisted illustration, editing/publication authorized November 3; see source record.",
     "observedAt": "2026-11-03"
+  },
+  "evolution-en": {
+    "src": "/images/guides/evolution-lookup-en.webp",
+    "width": 566,
+    "height": 249,
+    "alt": "Chirpi branching family in the AniimoDex evolution directory.",
+    "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Follow the indented branches from Chirpi to Tromber, Cornet or Tubster. The published tree is not a recipe: stage labels do not establish required level, item or trigger.",
+    "source": "/en/evolutions/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "evolution-zh-Hans": {
+    "src": "/images/guides/evolution-lookup-zh-Hans.webp",
+    "width": 566,
+    "height": 249,
+    "alt": "本站进化目录中的 Chirpi 分支家族。",
+    "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。沿缩进分支查看 Chirpi 对应的 Tromber、Cornet 和 Tubster。公布的关系树不是进化配方；阶段标签不能证明所需等级、道具或触发条件。",
+    "source": "/zh-Hans/evolutions/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "evolution-zh-Hant": {
+    "src": "/images/guides/evolution-lookup-zh-Hant.webp",
+    "width": 566,
+    "height": 249,
+    "alt": "本站進化目錄中的 Chirpi 分支家族。",
+    "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。沿縮排分支查看 Chirpi 對應的 Tromber、Cornet 和 Tubster。公布的關係樹不是進化配方；階段標籤不能證明所需等級、道具或觸發條件。",
+    "source": "/zh-Hant/evolutions/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "habitats-en": {
+    "src": "/images/guides/habitats-lookup-en.webp",
+    "width": 1152,
+    "height": 198,
+    "alt": "Nimbus Fields habitat entry with a comparison link and twelve indexed Basic Forms.",
+    "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Start with the habitat entry, then use its comparison link to filter the Dex. A listed habitat is not an exact coordinate, guaranteed spawn or current event schedule.",
+    "source": "/en/locations/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "habitats-zh-Hans": {
+    "src": "/images/guides/habitats-lookup-zh-Hans.webp",
+    "width": 1152,
+    "height": 198,
+    "alt": "Nimbus Fields 栖息地条目，包含对比链接和十二个已索引基础形态。",
+    "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。先找到栖息地，再通过对比链接筛选图鉴。列出栖息地不代表具体坐标、必定刷新或当前活动排期。",
+    "source": "/zh-Hans/locations/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "habitats-zh-Hant": {
+    "src": "/images/guides/habitats-lookup-zh-Hant.webp",
+    "width": 1152,
+    "height": 198,
+    "alt": "Nimbus Fields 棲息地條目，包含比較連結和十二個已索引基礎形態。",
+    "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。先找到棲息地，再透過比較連結篩選圖鑑。列出棲息地不代表具體座標、必定刷新或目前活動排期。",
+    "source": "/zh-Hant/locations/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "forms-en": {
+    "src": "/images/guides/forms-lookup-en.webp",
+    "width": 448,
+    "height": 256,
+    "alt": "Emberpup form directory distinguishing Basic Form, Highland Form and Mountain Woods Form.",
+    "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Read the form category beside each name before opening its source. Only Basic Form statistics are imported; the screenshot does not establish differences in regional stats, elements or skills.",
+    "source": "/en/dex/001/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "forms-zh-Hans": {
+    "src": "/images/guides/forms-lookup-zh-Hans.webp",
+    "width": 448,
+    "height": 236,
+    "alt": "Emberpup 形态目录区分 Basic Form、Highland Form 和 Mountain Woods Form。",
+    "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。先看形态名称旁的分类，再打开对应来源。本站仅导入基础形态数值；截图不能证明区域形态的数值、元素或技能差异。",
+    "source": "/zh-Hans/dex/001/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "forms-zh-Hant": {
+    "src": "/images/guides/forms-lookup-zh-Hant.webp",
+    "width": 448,
+    "height": 236,
+    "alt": "Emberpup 形態目錄區分 Basic Form、Highland Form 和 Mountain Woods Form。",
+    "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。先看形態名稱旁的分類，再開啟對應來源。本站僅匯入基礎形態數值；截圖不能證明區域形態的數值、元素或技能差異。",
+    "source": "/zh-Hant/dex/001/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 1200x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "team-en": {
+    "src": "/images/guides/team-lookup-en.webp",
+    "width": 752,
+    "height": 418,
+    "alt": "Team Builder Example A showing four selected members, their elements, roles and mobility labels.",
+    "caption": "AniimoDex website screenshot, November 27, 2026. Not gameplay footage. Example A shows Emberpup, Tromber, Turbo and Shrubclaw. Compare published role and mobility labels; this is a UI example, not a recommended best team, battle test or confirmation of live-game availability.",
+    "source": "/en/tools/team-builder/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "team-zh-Hans": {
+    "src": "/images/guides/team-lookup-zh-Hans.webp",
+    "width": 752,
+    "height": 418,
+    "alt": "本站组队工具示例 A，显示四名成员的元素、定位与移动能力标签。",
+    "caption": "AniimoDex 站内截图（2026-11-27），不是游戏画面。示例 A 包含 Emberpup、Tromber、Turbo 和 Shrubclaw。用于对照已公布定位与移动能力，不是最强阵容推荐、战斗实测或当前游戏可用性证明。",
+    "source": "/zh-Hans/tools/team-builder/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
+  },
+  "team-zh-Hant": {
+    "src": "/images/guides/team-lookup-zh-Hant.webp",
+    "width": 752,
+    "height": 418,
+    "alt": "本站組隊工具範例 A，顯示四名成員的元素、定位與移動能力標籤。",
+    "caption": "AniimoDex 站內截圖（2026-11-27），不是遊戲畫面。範例 A 包含 Emberpup、Tromber、Turbo 和 Shrubclaw。用於對照已公布定位與移動能力，不是最強陣容推薦、戰鬥實測或目前遊戲可用性證明。",
+    "source": "/zh-Hant/tools/team-builder/",
+    "rights": "Original AniimoDex UI capture. Underlying game names/icons remain their owners’ property; no separate game-art reuse license claimed. Public site captured in isolated Chrome, 800x900 DPR1; genuine UI cropped and WebP compressed.",
+    "observedAt": "2026-11-27"
   }
 }

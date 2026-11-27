@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { localizedLanguages } from '@/lib/i18n-metadata';
+import { collectionMetadata } from '@/lib/collection-metadata';
 import { habitatGroups } from '@/data/aniimo-collections';
 import AniimoLinkList from '@/components/dex/AniimoLinkList';
 import { Link } from '@/i18n/navigation';
@@ -13,7 +13,7 @@ const habitatId = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'collections.locations' });
-  return { title: t('title'), description: t('description'), alternates: { canonical: `${SITE_URL}/${locale}/locations/`, languages: localizedLanguages('/locations/') } };
+  return collectionMetadata(locale, '/locations/', t('title'), t('description'));
 }
 
 export default async function LocationsPage({ params }: { params: Promise<{ locale: string }> }) {
