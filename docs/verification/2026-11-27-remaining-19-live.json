@@ -1,0 +1,2023 @@
+{
+  "observedAt": "2026-11-27T10:08:02.460Z",
+  "pages": [
+    {
+      "url": "https://aniimodex.com/en/guide/how-to-download-aniimo/",
+      "status": 200,
+      "image": "/images/guides/download-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-23\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-mobile/",
+      "status": 200,
+      "image": "/images/guides/download-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/how-to-download-aniimo/",
+      "status": 200,
+      "image": "/images/guides/download-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-23\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-mobile/",
+      "status": 200,
+      "image": "/images/guides/download-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/how-to-download-aniimo/",
+      "status": 200,
+      "image": "/images/guides/download-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-23\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-mobile/",
+      "status": 200,
+      "image": "/images/guides/download-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "image": "/images/guides/account-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-15\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "image": "/images/guides/account-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-15\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-crossplay-cross-save/",
+      "status": 200,
+      "image": "/images/guides/account-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-15\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "image": "/images/guides/account-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "image": "/images/guides/account-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-progress-account-safety/",
+      "status": 200,
+      "image": "/images/guides/account-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "image": "/images/guides/spending-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "image": "/images/guides/spending-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "image": "/images/guides/monetization-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-09-20\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "image": "/images/guides/monetization-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-09-20\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/is-aniimo-free-to-play/",
+      "status": 200,
+      "image": "/images/guides/spending-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/is-aniimo-a-gacha-game/",
+      "status": 200,
+      "image": "/images/guides/monetization-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-09-20\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-evolution-system/",
+      "status": 200,
+      "image": "/images/guides/evolution-lookup-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-evolution-system/",
+      "status": 200,
+      "image": "/images/guides/evolution-lookup-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-evolution-system/",
+      "status": 200,
+      "image": "/images/guides/evolution-lookup-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "image": "/images/guides/habitats-lookup-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "image": "/images/guides/habitats-lookup-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-habitats-locations/",
+      "status": 200,
+      "image": "/images/guides/habitats-lookup-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-forms-explained/",
+      "status": 200,
+      "image": "/images/guides/forms-lookup-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-forms-explained/",
+      "status": 200,
+      "image": "/images/guides/forms-lookup-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-forms-explained/",
+      "status": 200,
+      "image": "/images/guides/forms-lookup-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-team-composition/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-team-composition/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-team-composition/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-roles-explained/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-roles-explained/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-roles-explained/",
+      "status": 200,
+      "image": "/images/guides/team-lookup-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-catching-guide/",
+      "status": 200,
+      "image": "/images/guides/catch-tool-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-catching-guide/",
+      "status": 200,
+      "image": "/images/guides/catch-tool-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-catching-guide/",
+      "status": 200,
+      "image": "/images/guides/catch-tool-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-14\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-twine-explained/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-twine-explained/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-twine-explained/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-choose-by-mobility-role/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-choose-by-mobility-role/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-choose-by-mobility-role/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-mobility-abilities/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-mobility-abilities/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-mobility-abilities/",
+      "status": 200,
+      "image": "/images/guides/twine-tool-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-elements-explained/",
+      "status": 200,
+      "image": "/images/guides/type-chart-tool-en.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-elements-explained/",
+      "status": 200,
+      "image": "/images/guides/type-chart-tool-zh-Hans.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-elements-explained/",
+      "status": 200,
+      "image": "/images/guides/type-chart-tool-zh-Hant.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-31\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "image": "/images/guides/hue-reroll-editorial.webp",
+      "preview": "representative",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "image": "/images/guides/hue-reroll-editorial.webp",
+      "preview": "representative",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-dev-dispatch-roadmap/",
+      "status": 200,
+      "image": "/images/guides/task-dev-dispatch-roadmap-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-prismana-potential-breeding-guide/",
+      "status": 200,
+      "image": "/images/guides/hue-reroll-editorial.webp",
+      "preview": "representative",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-dev-dispatch-roadmap/",
+      "status": 200,
+      "image": "/images/guides/task-dev-dispatch-roadmap-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-dev-dispatch-roadmap/",
+      "status": 200,
+      "image": "/images/guides/task-dev-dispatch-roadmap-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-06\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-egg-heist/",
+      "status": 200,
+      "image": "/images/guides/task-egg-heist-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-egg-heist/",
+      "status": 200,
+      "image": "/images/guides/task-egg-heist-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-harvest-gathering-farm-guide/",
+      "status": 200,
+      "image": "/images/guides/task-harvest-gathering-farm-guide-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-harvest-gathering-farm-guide/",
+      "status": 200,
+      "image": "/images/guides/task-harvest-gathering-farm-guide-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-harvest-gathering-farm-guide/",
+      "status": 200,
+      "image": "/images/guides/task-harvest-gathering-farm-guide-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-holo-battle-interlink/",
+      "status": 200,
+      "image": "/images/guides/task-holo-battle-interlink-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-28\"",
+        "\"dateModified\":\"2026-11-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-egg-heist/",
+      "status": 200,
+      "image": "/images/guides/task-egg-heist-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-holo-battle-interlink/",
+      "status": 200,
+      "image": "/images/guides/task-holo-battle-interlink-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-28\"",
+        "\"dateModified\":\"2026-11-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-language-controller-support/",
+      "status": 200,
+      "image": "/images/guides/task-language-controller-support-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-10-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-holo-battle-interlink/",
+      "status": 200,
+      "image": "/images/guides/task-holo-battle-interlink-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-28\"",
+        "\"dateModified\":\"2026-11-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-language-controller-support/",
+      "status": 200,
+      "image": "/images/guides/task-language-controller-support-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-10-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-launch-checklist-known-issues/",
+      "status": 200,
+      "image": "/images/guides/task-launch-checklist-known-issues-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-language-controller-support/",
+      "status": 200,
+      "image": "/images/guides/task-language-controller-support-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-10-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-launch-checklist-known-issues/",
+      "status": 200,
+      "image": "/images/guides/task-launch-checklist-known-issues-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-launch-watchlist/",
+      "status": 200,
+      "image": "/images/guides/task-launch-watchlist-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-launch-watchlist/",
+      "status": 200,
+      "image": "/images/guides/task-launch-watchlist-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-launch-checklist-known-issues/",
+      "status": 200,
+      "image": "/images/guides/task-launch-checklist-known-issues-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-launch-watchlist/",
+      "status": 200,
+      "image": "/images/guides/task-launch-watchlist-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-multiplayer/",
+      "status": 200,
+      "image": "/images/guides/task-multiplayer-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-multiplayer/",
+      "status": 200,
+      "image": "/images/guides/task-multiplayer-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-platforms/",
+      "status": 200,
+      "image": "/images/guides/task-platforms-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-multiplayer/",
+      "status": 200,
+      "image": "/images/guides/task-multiplayer-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-platforms/",
+      "status": 200,
+      "image": "/images/guides/task-platforms-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-platforms/",
+      "status": 200,
+      "image": "/images/guides/task-platforms-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-29\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-pre-registration/",
+      "status": 200,
+      "image": "/images/guides/task-pre-registration-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-26\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-pre-registration/",
+      "status": 200,
+      "image": "/images/guides/task-pre-registration-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-26\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-pre-registration/",
+      "status": 200,
+      "image": "/images/guides/task-pre-registration-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-26\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-prismana-event-tracker/",
+      "status": 200,
+      "image": "/images/guides/task-prismana-event-tracker-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-prismana-event-tracker/",
+      "status": 200,
+      "image": "/images/guides/task-prismana-event-tracker-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-release-date/",
+      "status": 200,
+      "image": "/images/guides/task-release-date-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-prismana-event-tracker/",
+      "status": 200,
+      "image": "/images/guides/task-prismana-event-tracker-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-13\"",
+        "\"dateModified\":\"2026-11-27\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-release-date/",
+      "status": 200,
+      "image": "/images/guides/task-release-date-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-rv-homeland-guide/",
+      "status": 200,
+      "image": "/images/guides/task-rv-homeland-guide-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-rv-homeland-guide/",
+      "status": 200,
+      "image": "/images/guides/task-rv-homeland-guide-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-release-date/",
+      "status": 200,
+      "image": "/images/guides/task-release-date-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-10-23\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-rv-homeland-guide/",
+      "status": 200,
+      "image": "/images/guides/task-rv-homeland-guide-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-16\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-system-requirements/",
+      "status": 200,
+      "image": "/images/guides/task-system-requirements-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/aniimo-version-1-1-update/",
+      "status": 200,
+      "image": "/images/guides/task-version-1-1-update-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-system-requirements/",
+      "status": 200,
+      "image": "/images/guides/task-system-requirements-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-system-requirements/",
+      "status": 200,
+      "image": "/images/guides/task-system-requirements-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-16\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/aniimo-version-1-1-update/",
+      "status": 200,
+      "image": "/images/guides/task-version-1-1-update-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/getting-started/",
+      "status": 200,
+      "image": "/images/guides/task-getting-started-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/aniimo-version-1-1-update/",
+      "status": 200,
+      "image": "/images/guides/task-version-1-1-update-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-10-11\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/getting-started/",
+      "status": 200,
+      "image": "/images/guides/task-getting-started-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/getting-started/",
+      "status": 200,
+      "image": "/images/guides/task-getting-started-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-20\"",
+        "\"dateModified\":\"2026-11-25\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/how-we-verify/",
+      "status": 200,
+      "image": "/images/guides/task-how-we-verify-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": []
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/how-we-verify/",
+      "status": 200,
+      "image": "/images/guides/task-how-we-verify-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": []
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/official-aniimo-dex-status/",
+      "status": 200,
+      "image": "/images/guides/task-official-aniimo-dex-status-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-09\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/how-we-verify/",
+      "status": 200,
+      "image": "/images/guides/task-how-we-verify-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": []
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/official-aniimo-dex-status/",
+      "status": 200,
+      "image": "/images/guides/task-official-aniimo-dex-status-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-09\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/official-aniimo-dex-status/",
+      "status": 200,
+      "image": "/images/guides/task-official-aniimo-dex-status-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-08-30\"",
+        "\"dateModified\":\"2026-11-09\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hant/guide/what-is-aniimo/",
+      "status": 200,
+      "image": "/images/guides/task-what-is-aniimo-zh-Hant-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-15\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/zh-Hans/guide/what-is-aniimo/",
+      "status": 200,
+      "image": "/images/guides/task-what-is-aniimo-zh-Hans-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-15\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    },
+    {
+      "url": "https://aniimodex.com/en/guide/what-is-aniimo/",
+      "status": 200,
+      "image": "/images/guides/task-what-is-aniimo-en-diagram.webp",
+      "preview": "body-only",
+      "articleDates": [
+        "\"datePublished\":\"2026-09-15\"",
+        "\"dateModified\":\"2026-11-02\""
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://aniimodex.com/images/guides/catch-tool-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 808,
+      "height": 475,
+      "bytes": 18988,
+      "sha256": "6e653413f1921a22933b13e2bd3cc87ec1294bd0830fa40bcb49faec5446ae44"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/twine-tool-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 856,
+      "height": 220,
+      "bytes": 7608,
+      "sha256": "8255677a5dc69556e3df299c96b338f7799392e2fe6bb8084f0ed07d7579568d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/catch-tool-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 808,
+      "height": 475,
+      "bytes": 18538,
+      "sha256": "cad781d3ed5507cc417803be87d412d973e022fe4ab46b5f33b7392759a5d02e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/twine-tool-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 856,
+      "height": 220,
+      "bytes": 8296,
+      "sha256": "2c8f34642acb9f2e4e4a6ab7ee0650bf94912bc776f26f26363aefff88e7587d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/twine-tool-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 856,
+      "height": 220,
+      "bytes": 7716,
+      "sha256": "e281f6974f283da1f4bdfe8b0478ae37459c486cf72581c71b6849b9bd48289c"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/catch-tool-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 808,
+      "height": 475,
+      "bytes": 25912,
+      "sha256": "c5933e81212cc4244ca7febd5f0805a57cad8323a29da9e63f526a7f7917cb2c"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/evolution-lookup-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 566,
+      "height": 249,
+      "bytes": 4752,
+      "sha256": "351a352cd879c7518a0176e29e584a91872d278fc2ba847d15a4583f089aec3e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/evolution-lookup-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 566,
+      "height": 249,
+      "bytes": 5236,
+      "sha256": "eea5ef8f828d0811bfe2325a00a4c61a4fc14b1a5e06dcb898fa64128dce6d9d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/type-chart-tool-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "height": 706,
+      "bytes": 27376,
+      "sha256": "a5bda321e1056e85b94df3878ac178d8374796db2cd49309b748f550bc1ae999"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/hue-reroll-editorial.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 22442,
+      "sha256": "11f4cf7d49e4723c7f5e34835ecf4e6b8bdd2aadf5b265ea1f5fbe775b0089b0"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/type-chart-tool-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "height": 706,
+      "bytes": 24900,
+      "sha256": "0daefceba91a7b6fbeb5c6fbf088cdd6d498607b902a1e7861fe1dbc9e6d1730"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/type-chart-tool-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "height": 706,
+      "bytes": 24904,
+      "sha256": "47072f5b6800e9439e4e18be391f0c39bc0cab16653d6b0f20b37103ad98e412"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/evolution-lookup-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 566,
+      "height": 249,
+      "bytes": 4768,
+      "sha256": "ab75c51d4b7ac5e30a91a518d1c71ebfc598d7c3f2e5d92ae87c9f1b533e712e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/habitats-lookup-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1152,
+      "height": 198,
+      "bytes": 16800,
+      "sha256": "613df1fdcb6f8bbf0734475c095b3d28611fe0ad26cd3fa507ef47146b58f313"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/forms-lookup-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 448,
+      "height": 236,
+      "bytes": 11364,
+      "sha256": "f497e72a4ba777b9d51d76a74c57f47606d4c15195b32fa2e9ef3c7aa673ff4d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/habitats-lookup-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1152,
+      "height": 198,
+      "bytes": 16340,
+      "sha256": "72631b2cdf7f9cc65b05fed1c242b8c25eca54eb0dd3af0d12ac5f41105cadbe"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/forms-lookup-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 448,
+      "height": 256,
+      "bytes": 13272,
+      "sha256": "c253d2ee84925e41323687b130d5bf4cf0dcc70f7dff1075bcc53e3f40aa63b3"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/habitats-lookup-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1152,
+      "height": 198,
+      "bytes": 16302,
+      "sha256": "fd5806a03e5ca17da53665b4c1e6e39a1b050fd56d5fd5357a8e4e8fb8239d03"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/forms-lookup-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 448,
+      "height": 236,
+      "bytes": 11456,
+      "sha256": "b6a90421d587fbb487e1d6ced511816a24f14a49b60e08e401a9d30263288a41"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/team-lookup-en.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 752,
+      "height": 418,
+      "bytes": 15912,
+      "sha256": "3689bf12b152175369a0e529c707dbc82a14a06b46275c9684090f51571c382f"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/team-lookup-zh-Hans.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 752,
+      "height": 418,
+      "bytes": 14662,
+      "sha256": "e49fcbb705aa1d6ec6048541ca436c769f7ce56bad016b8d7809f57a22805d38"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/team-lookup-zh-Hant.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 752,
+      "height": 418,
+      "bytes": 14616,
+      "sha256": "f8847c86f6811625f1a275cb32f313be1ab7cdf3da4b9d8a2806e6758735f3fa"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/download-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 48356,
+      "sha256": "628cd22e8747e601792c47e2155e1c6deccc5d4666a4f5f6c787ee325ccbcfbe"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/download-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 42804,
+      "sha256": "9711332b962dd2ad205067f7bac714d1f59c1ad7fffd6a441d5b0643d52e7c7d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/download-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 43396,
+      "sha256": "9e416ec8f118db171bfbc5cacc88abfc4fcf74d676bc35b53e89f114cad03a6e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/account-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 51824,
+      "sha256": "6636d7d3d7408b000af867e094dd1d13f6c8445460b5b250cb17dd66d5504434"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/account-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 51750,
+      "sha256": "712b8228129d5ab3d128ad96ab73a80dd5382b48947aa6a7a22279f45485ca27"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/account-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 56214,
+      "sha256": "2215b109dc32a89c4f20ba5dd72946dc887240f72a9f157ccf1c581273a1f641"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/spending-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 48272,
+      "sha256": "10f50760485c838c974f1dc279e867ce1cd53c7669ddfe09113cc972903d1348"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/spending-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 46374,
+      "sha256": "5b6074e8dfecbfcb2b06f399c3191c2130bbe2a8c5e60751c01bbd3acac25cf2"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/spending-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 49978,
+      "sha256": "abd1b5ae96c5a659ccd876f978d429f8d9befec35bb5389a7974da2f6829882f"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/monetization-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 49868,
+      "sha256": "0342390fc792f8ff75086a5168c5651183976b22b1e3fcd0ef6e57ed6a08816e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/monetization-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 49696,
+      "sha256": "a5301f7203adff37d023e5d7bb335248ea24d229785a17d0b51999c69df6ca40"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/monetization-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 720,
+      "height": 720,
+      "bytes": 52086,
+      "sha256": "3323e652f168fab34109aab79f81796067ac91b57eaa117231d8228404a6085f"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-dev-dispatch-roadmap-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24134,
+      "sha256": "46a7f21ec5c9d5149580b7e4afea133469423dc77d6e8907ff4348adfcf8dd44"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-dev-dispatch-roadmap-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24488,
+      "sha256": "44f680d690cec0fe9c22a139aba4bd32726dd214e5451a29a0b841ad2d677533"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-egg-heist-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23424,
+      "sha256": "ebe971e4b8e2de5c9085b311089f1e36dcd4fd35eef9daf1a36f163e40137101"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-dev-dispatch-roadmap-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24806,
+      "sha256": "cca87fd8f9f21f64768a4cf1f8338abad5c7ef1849f555917d7455ab661f79a5"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-egg-heist-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24400,
+      "sha256": "955a9108f97e502706dcd6346ac466d63bf7526bad0256318a9e46c27198f7b2"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-harvest-gathering-farm-guide-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23556,
+      "sha256": "0318b707d6442b2e0547e87c7689a462b64ef5e8103a2fa3c69cf648e6a09cbd"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-harvest-gathering-farm-guide-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24592,
+      "sha256": "57635b9761e70b15ea7df35b0b391f3a52962ebfd8f839662f8a57a2aabb9be0"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-holo-battle-interlink-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 22556,
+      "sha256": "f58fafc9bf073f8d1fef52b0419e978267ad31ac0987978ccb1f2f1c874e5539"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-harvest-gathering-farm-guide-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23964,
+      "sha256": "77f218026801877af95628b64c9135af9805f8211d307b8a1621c6a4df08897e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-egg-heist-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24040,
+      "sha256": "e74a0e07536726cf35b0a2517d4d244d2d52fec0089c8c0cd9adb0cec79f58cf"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-holo-battle-interlink-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25100,
+      "sha256": "71fd8411bb3648691ad8ddcde68a4e115e733b78391590eb2386cb4171cf1705"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-holo-battle-interlink-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25584,
+      "sha256": "dc757d63e1bcb7b34499d45a29cd7562e17bcdc35dd7023254ecdff271ec6671"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-language-controller-support-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23448,
+      "sha256": "ffec726305260af9e68748ce2b21294978fdf7d5111121fc8fc78621628a3a44"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-checklist-known-issues-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24620,
+      "sha256": "dd29a81f92381239e1befce708f6438895cc24b740339518a3cdd7a72ee9843b"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-language-controller-support-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23930,
+      "sha256": "a7d3088dff69e25c3eac8928ddb2a455c8f8195064df0ed269cdd6fec9bc2ada"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-language-controller-support-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23450,
+      "sha256": "088225cb82e09ebec931d2341e1e982192f0a9bb7106234cde1371b386cc9f81"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-checklist-known-issues-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24852,
+      "sha256": "9fa11f30d868bb26ff11d4fe38c42f2b43fae3c7e5da8a7ace1f150e77854d3c"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-watchlist-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24684,
+      "sha256": "73bb3c7ae96d5b43bcf75958bb683603561a16ea6c2870490faa00f5831b4ff9"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-checklist-known-issues-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26010,
+      "sha256": "70f6796675c91612881c4af4027516edc0ca7376d5ecdda8809019c284852040"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-watchlist-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24904,
+      "sha256": "38c8ccb555e0675401dafd44e63e6f73831dbce98515fdf256151b5512c1bea0"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-launch-watchlist-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24166,
+      "sha256": "6d2885924eb489d86b2bd20c102d09eeb743925a7f32fbcd91fcd503768d30b7"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-multiplayer-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23390,
+      "sha256": "2fe7e5530659d35ff819c24864a82a433aad49cda5a3607e785266f8faf0d97e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-multiplayer-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23584,
+      "sha256": "1260d8deca843533c542f7d949604e4611f089a17ef89155aedbc2de6d75d7b2"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-multiplayer-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25200,
+      "sha256": "74e27c2d8227189df6276a23bc15b67d882c4bcf16d9c0f2b5dcb84d1abde0bb"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-platforms-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26816,
+      "sha256": "671f72a75b1dae246b3f0d9a735ae4df40dfc6965b2acf101f13e709c9d2ff41"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-platforms-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25704,
+      "sha256": "fcf7d51374ed65fc553b9ce5f58bb6e89aca6268db3c0e5cc4009af088e71730"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-pre-registration-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25708,
+      "sha256": "7f3b93865f2b5acd799587111f515032e32bd5842422be50dc9d53cabb55f2aa"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-platforms-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24596,
+      "sha256": "e0309a0e679715ea550db52a8d5466bace6290dd3ed531814b9a6d80d7245ff3"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-pre-registration-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24632,
+      "sha256": "52815a68e74eef565ffc9dee6ba68a38fa36c92f4534f00546f760635bd27875"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-prismana-event-tracker-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24452,
+      "sha256": "45c9915fa89165558ce611ee6cdc6e4d0393fc410e8e79889a2dbabb4ae99a0b"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-pre-registration-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25738,
+      "sha256": "cae8fb7f11940e52427ae9c840d456f2a10ecd6d0add3faa21a437b8594a4f02"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-release-date-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 20912,
+      "sha256": "f4358c2afb720cbcbdf7239a4f3d43e99fd30c1d593524a5b73a875a0fafef78"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-prismana-event-tracker-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24386,
+      "sha256": "6bcfe61e522210ea705ef2b94e0ddde351f334c4d0b89b945c9334f3a0c9059d"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-prismana-event-tracker-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23570,
+      "sha256": "4807323ce46e3baa098fca35fb59637b0b1ee55901c602e95d26ed2e5355b4e4"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-release-date-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 20792,
+      "sha256": "d94abe96ec4469d56729260d7c81a84a15f48c45250ec26727c91d59fa15f36f"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-rv-homeland-guide-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 22382,
+      "sha256": "4e392d5b27f7d37b19544ef30904f4046148912e5da9d1f0e11e16786cd41f92"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-release-date-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 20954,
+      "sha256": "3c9bdbf968edd01e5ef7cd8cd35d5c8ef2c0627a6917e5477139d9a08f363e97"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-rv-homeland-guide-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24416,
+      "sha256": "a8e271d6918492989665f4ccd312d03f7b279e56532e36c92ced633b91212be1"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-rv-homeland-guide-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 23948,
+      "sha256": "adc21cc43681c92cb4260ba7d4e97a153411d637beaef769b72081bc9c554382"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-system-requirements-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24206,
+      "sha256": "53a94026fb6f026f67a7d205320c31eeae90b46e7475e8e1625b55af57a0839c"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-system-requirements-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 22760,
+      "sha256": "dc0b471887829191509ae9f1c94eec9574afa75c379d10edbc4476350eae6cdb"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-version-1-1-update-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26412,
+      "sha256": "668d38696ef3554c6c14c84f10a9893b931fd899451b7c61d350b8d6cf59de43"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-version-1-1-update-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24816,
+      "sha256": "f9ced1e78be41e715309d8ddf6bfd28a2438109b484e3f19fdbed332b547956c"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-system-requirements-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 24608,
+      "sha256": "1970263b44f1bb642d495689fe72ee874ebdc8f351030f538c57f2f3b1d4d638"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-getting-started-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26600,
+      "sha256": "21d7f1c9bd34c896295c0cd8c7df59db24b92f7b4d1d295fcb4791d81f955041"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-getting-started-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25126,
+      "sha256": "a2b2721a4f9fb05b3cb44f746d2e1749f68829828907b591265399c3a876f4c2"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-version-1-1-update-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25940,
+      "sha256": "5bfe6f4f323028a86cd5a10397e63c301f252315b25649bbeed888f437a38a62"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-getting-started-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26272,
+      "sha256": "66b57fa816ba23190b6286b337e2cb1677dbcfa2c4bc2686999e6a701ec34c00"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-how-we-verify-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25106,
+      "sha256": "43460fd1c2fab034ddf67d4926b38dc08280c540859486c12238c01318b41fc5"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-how-we-verify-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26058,
+      "sha256": "d3e5a3c97cb2f9e29dc7bd2b16df3bd3a60e5b429602431cd0bb1f13619f9ea5"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-how-we-verify-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 26964,
+      "sha256": "90d536c500a6a9661fae1f378e6f2fa7f0b9bc9c3c0af28e4bf997dfe3993c3e"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-official-aniimo-dex-status-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 25240,
+      "sha256": "61fa9ed12a41b507e839e601743d7082e3c024cfed7202a9b8475aa96a4b6433"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-official-aniimo-dex-status-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 27392,
+      "sha256": "3d076330b8ed511bbec1b63c1018282a8d93edea097f8ceb1e710f209629ca99"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-what-is-aniimo-en-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 22506,
+      "sha256": "290b8e1b2b4214f3d48795933adb0fa5d81c197a1afbe5aae019ceaf85654722"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-official-aniimo-dex-status-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 27910,
+      "sha256": "f96e3c984cf8f6983bec44fb5d08ad2d3fc9373c46f11856ff87cfa35f2aeb34"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-what-is-aniimo-zh-Hant-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 21832,
+      "sha256": "f906ab40b7c9833535c288dd19f7d2efdab447aedd10557f2eeccf5bf59ed3a0"
+    },
+    {
+      "url": "https://aniimodex.com/images/guides/task-what-is-aniimo-zh-Hans-diagram.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 21534,
+      "sha256": "f7b3bfb204843a2d65bdf7011c095281c750c86d9c2a8d72a345ba46a4dd7ce2"
+    }
+  ],
+  "sitemap": {
+    "status": 200,
+    "urls": 211,
+    "imageRecords": 111,
+    "nonImageContentMatches": true
+  },
+  "controls": {
+    "missing404Noindex": true,
+    "robotsAllow": true
+  },
+  "browser": [
+    {
+      "locale": "en",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 640
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/en/guide/how-we-verify/",
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 640
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/zh-Hans/guide/how-we-verify/",
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 640
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/zh-Hant/guide/how-we-verify/",
+      "viewport": [
+        1365,
+        900
+      ]
+    },
+    {
+      "locale": "en",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 343
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/en/guide/how-we-verify/",
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "locale": "zh-Hans",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 343
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/zh-Hans/guide/how-we-verify/",
+      "viewport": [
+        390,
+        900
+      ]
+    },
+    {
+      "locale": "zh-Hant",
+      "image": [
+        {
+          "complete": true,
+          "natural": [
+            640,
+            640
+          ],
+          "width": 343
+        }
+      ],
+      "overflow": false,
+      "url": "https://aniimodex.com/zh-Hant/guide/how-we-verify/",
+      "viewport": [
+        390,
+        900
+      ]
+    }
+  ]
+}

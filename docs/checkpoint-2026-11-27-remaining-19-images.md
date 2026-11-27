@@ -106,4 +106,28 @@ Local acceptance complete:
 - No data/guides.ts, messages, source records or substantive article dates changed.
 - Pre-publish fetch: origin/main remains 04a3086, HEAD/upstream 0/0.
 
-Production deployment and acceptance pending.
+Production acceptance complete, observed 2026-11-27T10:08:02.460Z:
+
+- Functional commit 4b32c65 pushed to main; existing Cloudflare Git integration
+  published it. No duplicate Wrangler/manual deployment.
+- The first two pushes disconnected before receiving the commit. A fresh fetch
+  confirmed origin had not advanced. A command-scoped HTTP/1.1 upload with a
+  larger post buffer succeeded; no permanent network/global Git changes.
+- 108 localized guide pages HTTP 200 with the expected body image and preferred
+  preview decision. Article dates match the locally built pages.
+- All 91 unique registered first-party files HTTP 200 with image MIME, SHA256
+  equal to native files and actual decoded dimensions equal to the registry.
+  This includes the 57 new task files and 34 existing files.
+- Formal sitemap: 211 URLs / 111 image records; non-image XML content matches
+  the build (including alternates and dates). Robots allows crawling; a missing
+  route returns HTTP 404 and retains noindex.
+- Formal how-we-verify in all three locales at effective 1365×900 and 390×900:
+  decoded native 640×640, displayed at 640px / 343px, no horizontal overflow.
+  System-requirements formal desktop also decoded at 640×640 and no overflow.
+  A navigation timeout still left the requested formal page loaded; fresh DOM
+  inspection confirmed it before continuing. No ad clicks made.
+- Saved proof: docs/verification/2026-11-27-remaining-19-live.json and
+  docs/screenshots/2026-11-27-remaining-19-{desktop,mobile}.jpg.
+- No active preview-host URL available for a new host-level check. Existing
+  preview controls were unchanged; build/index guards passed. These checks do
+  not establish actual Google thumbnail selection, rankings or CTR changes.
