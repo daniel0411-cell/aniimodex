@@ -146,4 +146,33 @@ real platform/download, event and home operation captures from the groups above.
   ad/privacy implementation have no changes. Article update dates preserved.
 - Screenshot evidence and full case inventory: /tmp/aniimo-image-qa/.
 
-Formal-domain HTML, HTTP resource/headers and screenshots pending publication.
+## Published result
+
+Refetched before publishing: main/origin/main still94f4a75, 0/0. Implementation
+commit `4f79a2b` pushed to main. Formal-domain response first showed old content,
+then switched to the new image registry output November27 (HTTP date03:11 UTC).
+Cloudflare Git deployment verified by actual HTML/resources, no Wrangler deploy.
+
+- Formal `https://aniimodex.com`: all 18 selected localized guide pages return
+  matching Article/OG image URLs and large-image permission. Existing substantive
+  modification dates remain intact. Sample Dex, missing-image guide and homepage
+  responses are200 without an X-Robots-Tag noindex restriction.
+- All 11 unique selected image files (nine tool captures, existing reroll and
+  brand WebP) return200/image MIME with SHA256 equal to local accepted files.
+- Formal random missing path returns404 with raw noindex; robots.txt returns200.
+- Official primary CDN image sample returns200/image/png without X-Robots-Tag.
+  CDN robots.txt returns404 NoSuchKey, rather than a disallow rule. All102 main
+  images had separately decoded during initial measurements. This does not prove
+  a successful Googlebot crawl or search thumbnail selection.
+- Live browser QA passed the same78 combinations at1365x900/390x900, DPR1:
+  image decoding, no representative enlargement and no page-width overflow.
+  Desktop/mobile production screenshots visually inspected.
+- Inferred branch alias `main.aniimodex.pages.dev` returns404 with noindex,nofollow;
+  it is not a valid active preview deployment for independent preview acceptance.
+  Preview configuration/_headers were not changed. Obtain an actual preview URL
+  to verify a future preview deploy; do not describe this alias as an active one.
+- Permanent evidence: `docs/verification/2026-11-27-search-images.json`, and
+  `docs/screenshots/2026-11-27-search-images-{desktop,mobile}.png`.
+
+This release improves useful imagery and truthful technical eligibility. It
+establishes no thumbnail guarantee, CTR gain or Google indexing result.
