@@ -88,4 +88,29 @@ Content quality and SEO audit rerun passed. All12 new files together145,480bytes
 individual assets4.7–16.8KB, native dimensions, no upscaling. Team mobile capture
 visually reviewed after two-column adjustment. Article dates and sitemap untouched.
 
-Publication and formal-domain verification pending.
+## Published verification
+
+Refetched origin before publication: fd6c215,0/0. Commit90ece0b pushed to main
+and Cloudflare Git deployment observed on formal domain at2026-11-27 07:25UTC
+(15:25 Beijing). No second/manual Wrangler deployment.
+
+Production checks passed:
+- All12 new image resources HTTP200,image MIME, SHA256 equal to local files,
+  decoded intrinsic dimensions match registry.
+- All15 newly illustrated localized guide pages HTTP200 with matching Article/OG
+  image and max-image-preview:large.
+- Fifteen collection/tool cases: explicit topical OG description equals the HTML
+  description; Team Builder screenshot schema present.
+- Random missing URL returns404 with raw noindex; robots.txt200 with Allow:/.
+- Isolated Chrome production acceptance84 cases, desktop1365x900/phone390x900,
+  DPR1: selected images decode, no enlargement or document overflow. Final
+  production desktop evolution and phone team screenshots visually inspected.
+- Evidence saved in `docs/verification/2026-11-27-site-image-upgrade.json` and
+  `docs/screenshots/2026-11-27-site-image-upgrade-{desktop,mobile}.png`.
+
+Documentation extends the permanent image standard; existing AGENTS reference
+continues to apply. Automated checks cover hub/article and collection text plus
+application screenshot alignment. Relevance/authenticity and usage basis still
+require editorial review. No preview-host restriction changed or active preview
+URL newly verified. No Google image selection, crawl, ranking or CTR outcome is
+claimed. Remaining25 guides are a recorded material gap, not fabricated coverage.
